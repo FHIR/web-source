@@ -1,0 +1,64 @@
+<html><head><title>Terminology Server Log</title></head><body><h2>Terminology Server Log</h2><pre>
+
+</pre><hr/>
+<a name="l1"> </a><h3>1</h3>
+<pre>
+Request: 
+
+POST http://tx.fhir.org/r4/ValueSet/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://www.nubc.org/patient-discharge","code":"01"}},{"name":"valueSetMode","valueString":"CHECK_MEMERSHIP_ONLY"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"valueSet","resource":{"resourceType":"ValueSet","url":"http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition--0","version":"6.1.0","status":"active","compose":{"include":[{"system":"http://www.nubc.org/patient-discharge"}]}}},{"name":"cache-id","valueId":"ad9683bd-3874-4918-8abc-cf2865673a8f"},{"name":"system-version","valueUri":"http://snomed.info/sct|http://snomed.info/sct/731000124108"}]}
+
+
+Response: 
+
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:893
+content-type:application/fhir+json
+date:Fri, 01 Dec 2023 05:16:31 GMT
+last-modified:Fri, 01 Dec 2023 05:16:31 GMT
+pragma:no-cache
+server:nginx
+x-request-id:44-2984742
+
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "x-caused-by-unknown-system","valueCanonical" : "http://www.nubc.org/patient-discharge"},{"name" : "message","valueString" : "The CodeSystem http://www.nubc.org/patient-discharge is unknown; Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition--0|6.1.0"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"severity" : "error","code" : "not-found","details" : {"text" : "The CodeSystem http://www.nubc.org/patient-discharge is unknown"},"location" : ["Coding.system"]},{"severity" : "warning","code" : "not-found","details" : {"text" : "Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition--0|6.1.0"},"location" : ["Coding"]}]}}]}
+
+--- 1 -----------------
+Request: 
+
+POST http://tx.fhir.org/r4/ValueSet/$validate-code? HTTP/1.0
+User-Agent: hapi-fhir-tooling-client
+Accept-Charset: UTF-8
+Accept: application/fhir+json
+Content-Type: application/fhir+json;charset=UTF-8
+
+{"resourceType":"Parameters","parameter":[{"name":"coding","valueCoding":{"system":"http://www.nubc.org/patient-discharge","code":"01"}},{"name":"valueSetMode","valueString":"CHECK_MEMERSHIP_ONLY"},{"name":"default-to-latest-version","valueBoolean":true},{"name":"valueSet","resource":{"resourceType":"ValueSet","url":"http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition--0","version":"6.1.0","status":"active","compose":{"include":[{"system":"http://www.nubc.org/patient-discharge"}]}}},{"name":"cache-id","valueId":"ad9683bd-3874-4918-8abc-cf2865673a8f"},{"name":"system-version","valueUri":"http://snomed.info/sct|http://snomed.info/sct/731000124108"}]}
+
+
+Response: 
+
+200
+access-control-allow-methods:GET, POST, PUT, PATCH, DELETE
+access-control-allow-origin:*
+access-control-expose-headers:Content-Location, Location
+cache-control:public, max-age=600
+connection:keep-alive
+content-length:893
+content-type:application/fhir+json
+date:Fri, 01 Dec 2023 05:16:31 GMT
+last-modified:Fri, 01 Dec 2023 05:16:31 GMT
+pragma:no-cache
+server:nginx
+x-request-id:44-2984742
+
+{"resourceType" : "Parameters","parameter" : [{"name" : "result","valueBoolean" : false},{"name" : "x-caused-by-unknown-system","valueCanonical" : "http://www.nubc.org/patient-discharge"},{"name" : "message","valueString" : "The CodeSystem http://www.nubc.org/patient-discharge is unknown; Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition--0|6.1.0"},{"name" : "issues","resource" : {"resourceType" : "OperationOutcome","issue" : [{"severity" : "error","code" : "not-found","details" : {"text" : "The CodeSystem http://www.nubc.org/patient-discharge is unknown"},"location" : ["Coding.system"]},{"severity" : "warning","code" : "not-found","details" : {"text" : "Unable to check whether the code is in the value set http://hl7.org/fhir/us/core/ValueSet/us-core-discharge-disposition--0|6.1.0"},"location" : ["Coding"]}]}}]}
+</pre></head></html>
