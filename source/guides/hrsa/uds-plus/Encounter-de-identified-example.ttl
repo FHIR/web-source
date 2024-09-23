@@ -1,0 +1,73 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/hrsa/uds-plus/Encounter/de-identified-example> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "de-identified-example"] ; # 
+  fhir:meta [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/instance-name"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "De-Identified Encounter Example" ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/instance-description"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "This is an encounter example for the *US Core Encounter Profile*." ]
+     ] ) ;
+     fhir:lastUpdated [ fhir:v "2022-05-26T11:56:57.250-04:00"^^xsd:dateTime ] ;
+     fhir:profile ( [
+       fhir:v "http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-encounter"^^xsd:anyURI ;
+       fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-encounter>
+     ] )
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-age-extension"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:Quantity ;
+       fhir:value [ fhir:v "36"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "yr" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "a" ]
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "AMB" ] ;
+     fhir:display [ fhir:v "ambulatory" ]
+  ] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.ama-assn.org/go/cpt"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "99202" ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <http://fhir.org/guides/hrsa/uds-plus/Patient/de-identified-example> ;
+     fhir:reference [ fhir:v "Patient/de-identified-example" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2022"^^xsd:gYear ] ;
+     fhir:end [ fhir:v "2022"^^xsd:gYear ]
+  ] ; # 
+  fhir:hospitalization [
+     fhir:dischargeDisposition [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://www.nubc.org/patient-discharge"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "01" ] ;
+         fhir:display [ fhir:v "Discharged to Home" ]
+       ] )
+     ]
+  ] ; # 
+  fhir:location ( [
+     fhir:location [
+       fhir:link <http://fhir.org/guides/hrsa/uds-plus/Location/hospital> ;
+       fhir:reference [ fhir:v "Location/hospital" ] ;
+       fhir:display [ fhir:v "Holy Family Hospital" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

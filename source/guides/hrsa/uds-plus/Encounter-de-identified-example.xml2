@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="de-identified-example"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+      <valueString value="De-Identified Encounter Example"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+      <valueMarkdown value="This is an encounter example for the *US Core Encounter Profile*."/>
+    </extension>
+    <lastUpdated value="2022-05-26T11:56:57.250-04:00"/>
+    <profile value="http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-encounter"/>
+  </meta>
+  <extension url="http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-age-extension">
+    <valueQuantity>
+      <value value="36"/>
+      <unit value="yr"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="a"/>
+    </valueQuantity>
+  </extension>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="AMB"/>
+    <display value="ambulatory"/>
+  </class>
+  <type>
+    <coding>
+      <system value="http://www.ama-assn.org/go/cpt"/>
+      <code value="99202"/>
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/de-identified-example"/>
+  </subject>
+  <period>
+    <start value="2022"/>
+    <end value="2022"/>
+  </period>
+  <hospitalization>
+    <dischargeDisposition>
+      <coding>
+        <system value="http://www.nubc.org/patient-discharge"/>
+        <code value="01"/>
+        <display value="Discharged to Home"/>
+      </coding>
+    </dischargeDisposition>
+  </hospitalization>
+  <location>
+    <location>
+      <reference value="Location/hospital"/>
+      <display value="Holy Family Hospital"/>
+    </location>
+  </location>
+</Encounter>
