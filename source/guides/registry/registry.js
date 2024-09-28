@@ -11,7 +11,7 @@ function escapeHTML(s) {
   return s.replace('//&', '&amp;').replace('//<', '&lt;').replace('/ />', '&gt;');
 }
 
-let url = 'https://raw.githubusercontent.com/FHIR/ig-registry/master/fhir-ig-list.json';
+let url = 'https://fhir.github.io/ig-registry/fhir-ig-list.json';
 
 function buildTable(data) {
   var e = document.getElementById('release-filter');
