@@ -3,28 +3,22 @@
 async function showPlainLanguage(id, ver) {
   var div = document.getElementById('plain-lang-box');
   if (div != null) {
-    var json = await getJson();
-    if (json == null) {
-      div.innerHTML = '<p>No Json</p>';
+    var md = await getText(id);
+    if (md == null) {
+      div.innerHTML = '<p>No MD</p>';
       div.style = "display: none";
     } else {
-      var vl = json[id];
-      if (vl == null) {
-        div.innerHTML = '<p>No IG Entry</p>';
-        div.style = "display: none";
-    } else {
-        var v = vl.versions[ver];
-        if (v == null) {
-          vl = v;
-        }
-        if (vl.status = 'published') {
-          div.style = "background-color: #edfafa; border: 2px solid navy; border-radius: 8px; padding: 5px;";
-          div.innerHTML = header()+processMarkdown(vl.description)+footer();
-        } else {
-          div.innerHTML = '<p>Not published</p>';
-          div.style = "display: none";
-        }
+      if (md.includes("# "+ver)) {
+        md = md.substring(md.indexOf("# "+ver)+ver.length+2);
+      } else {
+        md = md.substring(9);
       }
+      if (md.includes("# ")) {
+        md = md.substring(0, md.indexOf("# "));
+      }
+      md = md.trim();
+      div.style = "background-color: #edfafa; border: 2px solid navy; border-radius: 8px; padding: 5px;";
+      div.innerHTML = header()+processMarkdown(md)+footer();
     }
   }
 }
@@ -45,12 +39,12 @@ function togglePlainLangContent() {
   }
 }
 
-async function getJson() {
-    const url = "/guides/plain-language-descriptions.json";
+async function getText(id) {
+    const url = "/guides/plain-language/"+id+".md";
     try {
         const response = await fetch(url);
         if (response.ok) {
-          return await response.json();
+          return await response.text();
         } else {
           return null;
         }
