@@ -351,6 +351,12 @@ function updateCount(guides) {
 }
 var guides = null;
 
+function sorted(obj) {
+  return Object.keys(obj).sort(function(a, b) {
+    return a.toLowerCase().localeCompare(b.toLowerCase());
+  });
+}
+
 function loadRegistry() {
   fetch(url)
    .then(function(response) { return response.json() })
@@ -375,8 +381,9 @@ function loadRegistry() {
     var releaseOptions = '<select id="release-filter"><option value="any">Any</option><option value="5.0">R5</option><option value="4.3">R4B</option><option value="4.0">R4</option><option value="3.0">R3</option><option value="1.0">R2</option></select>';
     var productOptions = '<select id="product-filter"><option value="any">Any</option><option value="fhir">FHIR</option><option value="cda">CDA</option><option value="v2">V2</option></select>';
 
+    categoryOptions += '<option value="National Base">National Base</option>';
     for (var category in properties.categories) {
-      if (properties.categories.hasOwnProperty(category)) {
+      if (properties.categories.hasOwnProperty(category) && "National Base" != category) {
         categoryOptions += '<option value="' + category + '">' + category + '</option>';
       }
     }
@@ -390,19 +397,34 @@ function loadRegistry() {
     }
     authorityOptions += '</select>';
 
+    countryOptions += '<option value="uv">All</option>';
+    countryOptions += '<option value="eu">European Union</option>';
+    countryOptions += '<option value="us">USA</option>';
+    countryOptions += '<option value="at">Austria (Österreich)</option>';
+    countryOptions += '<option value="au">Australia</option>';
+    countryOptions += '<option value="be">Belgium (België/Belgique)</option>';
+    countryOptions += '<option value="br">Brasil</option>';
+    countryOptions += '<option value="ca">Canada</option>';
+    countryOptions += '<option value="ch">Switzerland (Schweiz/Suisse/Svizzera)</option>';
+    countryOptions += '<option value="de">Germany (Deutschland)</option>';
+    countryOptions += '<option value="dk">Denmark (Danmark)</option>';
+    countryOptions += '<option value="fi">Finland (Suomi)</option>';
+    countryOptions += '<option value="fr">France</option>';
+    countryOptions += '<option value="gb">Great Britain</option>';
+    countryOptions += '<option value="in">India</option>';
+    countryOptions += '<option value="it">Italy (Italia)</option>';
+    countryOptions += '<option value="jp">Japan (日本)</option>';
+    countryOptions += '<option value="kr">Korea (한국)</option>';
+    countryOptions += '<option value="nl">Netherlands (Nederland)</option>';
+    countryOptions += '<option value="no">Norway (Norge)</option>';
+    countryOptions += '<option value="nz">New Zealand</option>';
+    countryOptions += '<option value="se">Sweden (Sverige)</option>';
+    countryOptions += '<option value="tw">Taiwan (台灣)</option>';
+
+    const knownCountries = new Set(['uv', 'eu', 'us', 'at', 'au', 'be', 'br', 'ca', 'ch', 'de', 'dk', 'fi', 'fr', 'gb', 'in', 'it', 'jp', 'kr', 'nl', 'no', 'nz', 'se', 'tw']);
     for (var country in properties.countries) {
       if (properties.countries.hasOwnProperty(country)) {
-        if (country == 'uv')
-          countryOptions += '<option value="' + country + '">All</option>';
-        else if (country == 'us')
-          countryOptions += '<option value="' + country + '">USA</option>';
-        else if (country == 'au')
-          countryOptions += '<option value="' + country + '">Australia</option>';
-        else if (country == 'ch')
-          countryOptions += '<option value="' + country + '">Switzerland</option>';
-        else if (country == 'nl')
-          countryOptions += '<option value="' + country + '">Netherlands</option>';
-        else
+        if (!knownCountries.has(country)) 
           countryOptions += '<option value="' + country + '">' + country.toUpperCase() + '</option>';
       }
     }
@@ -436,11 +458,11 @@ function loadRegistry() {
     filtersHtml += authorityOptions + '</div>';
     filtersHtml += '<div class="form-element"><label for="country-filter">Country</label>';
     filtersHtml += countryOptions + '</div>';
+    filtersHtml += '</div><div id="filters2">';
     filtersHtml += '<div class="form-element"><label for="release-filter">Release</label>';
     filtersHtml += releaseOptions + '</div>';
     filtersHtml += '<div class="form-element"><label for="product-filter">Product</label>';
     filtersHtml += productOptions + '</div>';
-    filtersHtml += '</div><div id="filters2">';
     filtersHtml += '<div class="form-element"><label for="category-filter">Category</label>';
     filtersHtml += categoryOptions + '</div>';
     filtersHtml += '<div class="form-element"><label for="contents-filter">Contents</label>';

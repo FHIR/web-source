@@ -40,7 +40,7 @@ function togglePlainLangContent() {
 }
 
 async function getText(id) {
-    const url = "/guides/plain-language/"+id+".md";
+    const url = "https://raw.githubusercontent.com/HL7/plain-language/refs/heads/main/summaries/"+id+".md";
     try {
         const response = await fetch(url);
         if (response.ok) {

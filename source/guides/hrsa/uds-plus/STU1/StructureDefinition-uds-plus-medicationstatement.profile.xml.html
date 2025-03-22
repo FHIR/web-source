@@ -165,7 +165,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 7" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the HRSA Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+ or uds-plus) FHIR IG (v1.0.1: <a no-external="true" href="https://confluence.hl7.org/display/HL7/HL7+Balloting" title="Standard for Trial-Use">STU</a>1) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a no-external="true" href="http://fhir.org/guides/hrsa/uds-plus/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the HRSA Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+ or uds-plus) FHIR IG (v1.0.1: <a no-external="true" href="https://confluence.hl7.org/display/HL7/HL7+Balloting" title="Standard for Trial-Use">STU</a>1) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a no-external="true" href="/guides/hrsa/uds-plus/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -360,7 +360,16 @@
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
                   <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;The UDS+ profile is based on the MedicationStatement resource and establishes the core elements, extensions, vocabularies and value sets for representing medicationstatement for UDS+ program.&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>
-               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:MedicationStatement.status + MedicationStatement.wasNotTakenStatus=Active + NotTaken=T = Not currently takingStatus=Completed + NotTaken=T = Not taken in the pastStatus=Intended + NotTaken=T = No intention of takingStatus=Active + NotTaken=F = Taking, but not as prescribedStatus=Active + NotTaken=F = TakingStatus=Intended +NotTaken= F = Will be taking (not started)Status=Completed + NotTaken=F = Taken in pastStatus=In Error + NotTaken=N/A = In Error.&quot;/&gt;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:
+MedicationStatement.status + MedicationStatement.wasNotTaken
+Status=Active + NotTaken=T = Not currently taking
+Status=Completed + NotTaken=T = Not taken in the past
+Status=Intended + NotTaken=T = No intention of taking
+Status=Active + NotTaken=F = Taking, but not as prescribed
+Status=Active + NotTaken=F = Taking
+Status=Intended +NotTaken= F = Will be taking (not started)
+Status=Completed + NotTaken=F = Taken in past
+Status=In Error + NotTaken=N/A = In Error.&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;0&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;*&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
@@ -874,7 +883,9 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.definition">definition</a>
                   <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;A code representing the patient or other source's judgment about the state of the medication used that this statement is about.  Generally, this will be active or completed.&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.comment">comment</a>
-               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;MedicationStatement is a statement at a point in time.  The status is only representative at the point when it was asserted.  The value set for MedicationStatement.status contains codes that assert the status of the use of the medication by the patient (for example, stopped or on hold) as well as codes that assert the status of the medication statement itself (for example, entered in error).This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.&quot;/&gt;
+               <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">value</a>=&quot;MedicationStatement is a statement at a point in time.  The status is only representative at the point when it was asserted.  The value set for MedicationStatement.status contains codes that assert the status of the use of the medication by the patient (for example, stopped or on hold) as well as codes that assert the status of the medication statement itself (for example, entered in error).
+
+This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.min">min</a> <a href="http://hl7.org/fhir/R4/datatypes.html#unsignedInt">value</a>=&quot;1&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.max">max</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;1&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#ElementDefinition#ElementDefinition.base">base</a>&gt;
@@ -1872,7 +1883,7 @@ Reference is intended to point to a structure that can potentially be expressed 
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
-
+f="/
       <div class="inner-wrapper">
         <p>
           IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://bphc.hrsa.gov/">HRSA BPHC</a>.  Package fhir.hrsa.uds-plus#1.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 1, 2023 16:16+1100">2023-12-01</span>
