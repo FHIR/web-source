@@ -1,25 +1,22 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.32",
-      "version" : "20220316",
+      "url" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.121",
+      "version" : "20241007",
       "status" : "active",
-      "name" : "GenderIdentity",
-      "title" : "Gender Identity",
-      "description" : "Changed 2021-10-27 to grouping to include unknown and refused to answer. Also removed transgender codes.",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
-        "http://snomed.info/sct"
-      ],
-      "oids" : ["2.16.840.1.113762.1.4.1021.32"],
-      "sources" : ["2.16.840.1.113762.1.4.1021.32"],
+      "name" : "CMSSex",
+      "title" : "CMS Sex",
+      "description" : null,
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113762.1.4.1021.121"],
+      "sources" : ["2.16.840.1.113762.1.4.1021.121"],
       "uses" : {
       },
-      "ValueSet-uds-plus-gender-identity-codes.html" : "Uds Plus Gender Identity Codes"
+      "StructureDefinition-uds-plus-sex-extension.html" : "UDS Plus Sex Extension"
     },
     {
       "url" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1186.8",
-      "version" : "20210622",
+      "version" : "20240625",
       "status" : "active",
       "name" : "CommonSubstancesForAllergyAndIntoleranceDocumentationIncludingRefutations",
       "title" : "Common substances for allergy and intolerance documentation including refutations",
@@ -35,57 +32,29 @@
       "StructureDefinition-uds-plus-allergyintolerance.html" : "De-Identified UDS Plus AllergyIntolerance"
     },
     {
-      "url" : "http://fhir.org/guides/hrsa/uds-plus/ValueSet/uds-plus-birthsex-codes",
-      "version" : "1.1.0",
-      "status" : "active",
-      "name" : "UdsPlusBirthSexCodes",
-      "title" : "Uds Plus Birth Sex Codes",
-      "description" : "The Uds Plus Birth Sex Codes is a set of codes for identifying the birth sex of Patients.",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-uds-plus-birthsex-extension.html" : "UDS Plus Birth Sex Extension"
-    },
-    {
-      "url" : "http://fhir.org/guides/hrsa/uds-plus/ValueSet/uds-plus-gender-identity-codes",
-      "version" : "1.1.0",
-      "status" : "active",
-      "name" : "UdsPlusGenderIdentityCodes",
-      "title" : "Uds Plus Gender Identity Codes",
-      "description" : "The Uds Plus Gender Identity Codes is a 'starter set' of codes for identifying the gender identity of Patients.",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
-        "http://snomed.info/sct"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-uds-plus-gender-identity-extension.html" : "UDS Plus Gender Identity Extension"
-    },
-    {
       "url" : "http://fhir.org/guides/hrsa/uds-plus/ValueSet/uds-plus-insurance-codes",
-      "version" : "1.1.0",
+      "version" : "2.0.0",
       "status" : "active",
       "name" : "UdsPlusInsuranceCodes",
       "title" : "Uds Plus Insurance Codes",
       "description" : "The Uds Plus Insurance Codes is a 'starter set' of codes for identifying the source of the insurance for Patients.",
       "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor|3.0.0",
         "http://fhir.org/guides/hrsa/uds-plus/CodeSystem/uds-plus-insurance-codes"
       ],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-coverage.html" : "DeIdentified UDS Plus Coverage"
+      "StructureDefinition-uds-plus-coverage.html" : "De-Identified UDS Plus Coverage"
     },
     {
       "url" : "http://fhir.org/guides/hrsa/uds-plus/ValueSet/uds-plus-service-delivery-codes",
-      "version" : "1.1.0",
+      "version" : "2.0.0",
       "status" : "active",
       "name" : "UdsPlusServiceDeliveryCodes",
       "title" : "Uds Plus Service Delivery Codes",
       "description" : "The UDS Plus CodeSystem is an 'addition set' of one code to the existing Location Service Delivery Codes value set for UDS+ purposes.",
       "systems" : [
-        "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType",
+        "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
         "http://fhir.org/guides/hrsa/uds-plus/CodeSystem/udsplus-service-delivery-codes"
       ],
       "uses" : {
@@ -93,23 +62,23 @@
       "StructureDefinition-uds-plus-location.html" : "UDS Plus Location"
     },
     {
-      "url" : "http://fhir.org/guides/hrsa/uds-plus/ValueSet/uds-plus-sexual-orientation-codes",
-      "version" : "1.1.0",
+      "url" : "http://fhir.org/guides/hrsa/uds-plus/ValueSet/uds-plus-sex-codes",
+      "version" : "2.0.0",
       "status" : "active",
-      "name" : "UdsPlusSexualOrientationCodes",
-      "title" : "Uds Plus Sexual Orientation Codes",
-      "description" : "The Uds Plus Sexual Orientation Codes is a 'starter set' of codes for identifying the sexual orientation of Patients.",
+      "name" : "UdsPlusSexCodes",
+      "title" : "Uds Plus Sex Codes",
+      "description" : "The Uds Plus Birth Sex Codes is a set of codes for identifying the birth sex of Patients, This ValueSet will deprecated in the future in favor of the CMS Sex codes value set used as part of the uds-plus-sex-extension.",
       "systems" : [
-        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
-        "http://hl7.org/fhir/us/core/ValueSet/us-core-sexual-orientation"
+        "http://snomed.info/sct",
+        "http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender|3.0.0"
       ],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-sexual-orientation-observation.html" : "De-Identified UDS Plus Sexual Orientation"
+      "StructureDefinition-uds-plus-birthsex-extension.html" : "UDS Plus Birth Sex Extension"
     },
     {
       "url" : "http://fhir.org/guides/hrsa/uds-plus/ValueSet/udsplus-agriculture-worker-status",
-      "version" : "1.1.0",
+      "version" : "2.0.0",
       "status" : "active",
       "name" : "UdsPlusAgricultureWorkerStatusCodes",
       "title" : "Uds Plus Agriculture Worker Status Codes",
@@ -123,7 +92,7 @@
     },
     {
       "url" : "http://fhir.org/guides/hrsa/uds-plus/ValueSet/udsplus-housing-status",
-      "version" : "1.1.0",
+      "version" : "2.0.0",
       "status" : "active",
       "name" : "UdsPlusHousingStatusCodes",
       "title" : "Uds Plus Housing Status Codes",
@@ -260,8 +229,22 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-procedure.html" : "De-Identified UDS Plus Procedure",
-      "StructureDefinition-uds-plus-servicerequest.html" : "De-Identified UDS Plus ServiceRequest"
+      "StructureDefinition-uds-plus-servicerequest.html" : "De-Identified UDS Plus ServiceRequest",
+      "StructureDefinition-uds-plus-procedure.html" : "De-Identified UDS Plus Procedure"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ServiceDeliveryLocationRoleType",
+      "title" : "ServiceDeliveryLocationRoleType",
+      "description" : "A role of a place that further classifies the setting (e.g., accident site, road side, work site, community location) in which services are delivered.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-RoleCode"],
+      "oids" : ["2.16.840.1.113883.1.11.17660"],
+      "sources" : ["2.16.840.1.113883.1.11.17660"],
+      "uses" : {
+      },
+      "ValueSet-uds-plus-service-delivery-codes.html" : "Uds Plus Service Delivery Codes"
     }
   ]
 }

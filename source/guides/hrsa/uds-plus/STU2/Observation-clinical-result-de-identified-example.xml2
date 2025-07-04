@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="clinical-result-de-identified-example"/>
+  <meta>
+    <profile value="http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-clinical-result-observation"/>
+  </meta>
+  <extension url="http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-deidentified-instant-extension">
+    <valueDateTime value="2005"/>
+  </extension>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="imaging"/>
+      <display value="Imaging"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="80940-0"/>
+      <display value="DXA Femur-L Z-score BMD"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/de-identified-example"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/de-identified-example"/>
+  </encounter>
+  <effectivePeriod>
+    <end value="2005"/>
+  </effectivePeriod>
+  <performer>
+    <reference value="Practitioner/example"/>
+  </performer>
+  <valueQuantity>
+    <value value="0.05"/>
+    <unit value="Z-Score"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="{Z-Score}"/>
+  </valueQuantity>
+</Observation>

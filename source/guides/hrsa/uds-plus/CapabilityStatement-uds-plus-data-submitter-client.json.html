@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Uds Plus Data Submitter CapabilityStatement - JSON Representation - HRSA 2023 Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+) FHIR IG v1.1.0</title>
+    <title>Uds Plus Data Submitter CapabilityStatement - JSON Representation - HRSA 2024 Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+) FHIR IG v2.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -20,6 +20,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 <link href="assets/css/hrsa.css" rel="stylesheet"/>
 
@@ -47,6 +48,7 @@
     h3,h4,h5,h6{--heading-prefix:"13.3"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <div id="project-nav">
   <a id="hrsa-logo" no-external="true" href="https://hrsa.gov">
     <img height="71" alt="Visit the website" src="hrsa-logo.png"/>
@@ -58,9 +60,9 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">HRSA 2023 Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+) FHIR IG</span>
+          <p><span style="font-size:12pt;font-weight:bold">HRSA 2024 Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+) FHIR IG</span>
             <br/>
-            <span style="display:inline-block;">1.1.0 - STU1 Release 1.1 - Standard for Trial-Use
+            <span style="display:inline-block;">2.0.0 - STU2 Release 1 - Standard for Trial-Use
 
 
 
@@ -161,7 +163,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 8" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">This page is part of the HRSA Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+ or uds-plus) FHIR IG (v1.1.0: <a no-external="true" href="https://confluence.hl7.org/display/HL7/HL7+Balloting" title="Standard for Trial-Use">STU</a>1) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="/guides/hrsa/uds-plus/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">This page is part of the HRSA Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+ or uds-plus) FHIR IG (v2.0.0: <a no-external="true" href="https://confluence.hl7.org/display/HL7/HL7+Balloting" title="Standard for Trial-Use">STU</a>2) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="http://fhir.org/guides/hrsa/uds-plus/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -235,8 +237,7 @@
 
 
 
-  <pre class="json" style="white-space: pre; text-wrap: nowrap;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">
-{
+  <pre class="json" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-json" style="white-space: pre; text-wrap: nowrap;">{
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement">resourceType</a>" : "CapabilityStatement",
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.id">id</a>" : "uds-plus-data-submitter-client",
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.text">text</a>" : {
@@ -244,7 +245,7 @@
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n      &lt;h2&gt;Data Receiver&lt;/h2&gt;\n      &lt;p&gt;(Requirements Definition Capability Statement)&lt;/p&gt;\n      &lt;p&gt;Canonical URL: http://fhir.org/guides/hrsa/uds-plus/CapabilityStatement/uds-plus-data-submitter-client&lt;/p&gt;\n      &lt;p&gt;Published by: &lt;b&gt;HL7 International - Public Health Work Group&lt;/b&gt;\n      &lt;/p&gt;\n      &lt;p&gt;This is a CapabilityStatement that defines the expected capabilities of the Data Submitter actor as a client.  \n      &lt;/p&gt;\n      &lt;h2&gt;General&lt;/h2&gt;\n      &lt;div class=\&quot;table-wrapper\&quot;&gt;\n        &lt;table&gt;\n          &lt;tbody&gt;\n            &lt;tr&gt;\n              &lt;th&gt;FHIR Version:&lt;/th&gt;\n              &lt;td&gt;4.0.1&lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;th&gt;Supported formats:&lt;/th&gt;\n              &lt;td&gt;json&lt;/td&gt;\n            &lt;/tr&gt;\n          &lt;/tbody&gt;\n        &lt;/table&gt;\n      &lt;/div&gt;\n      &lt;h2&gt;REST  behavior&lt;/h2&gt;\n      &lt;p&gt;The primary focus of the Data Submitter actor as a client is to invoke the Group/$export operation identified below and extract the UDS+ data using US Core and QI Core profiles.\n      In certain cases, the Data Submitter MAY have to invoke individual patient api's to extract the necessary UDS+ data when the Data Source does not support Group/$export operation.  \n      data.\n      &lt;/p&gt;\n      &lt;p&gt;\n        &lt;b&gt;Security:&lt;/b&gt;\n      &lt;/p&gt;\n      &lt;p&gt;Implementations must meet the general security requirements documented in FHIR &lt;a href=\&quot;http://hl7.org/fhir/security.html\&quot;&gt;Security guidance&lt;/a&gt;.&lt;/p&gt;\n      &lt;p&gt;In addition the Data Submitter actor as a client needs to meet the security requirements as outlined in the &lt;a href=\&quot;spec.html#smart-on-fhir-backend-services-authorization\&quot;&gt;SMART on FHIR Backend Services Authorization&lt;/a&gt;&lt;/p&gt;\n      \n      &lt;h3&gt;Resource summary&lt;/h3&gt;\n      &lt;div class=\&quot;table-wrapper\&quot;&gt;\n        &lt;table class=\&quot;grid\&quot;&gt;\n          &lt;thead&gt;\n            &lt;tr&gt;\n              &lt;th&gt;Resource&lt;/th&gt;\n              &lt;th&gt;Search&lt;/th&gt;\n              &lt;th&gt;Read&lt;/th&gt;\n              &lt;th&gt;Read Version&lt;/th&gt;\n              &lt;th&gt;Instance History&lt;/th&gt;\n              &lt;th&gt;Resource History&lt;/th&gt;\n              &lt;th&gt;Create&lt;/th&gt;\n              &lt;th&gt;Update&lt;/th&gt;\n              &lt;th&gt;Delete&lt;/th&gt;\n            &lt;/tr&gt;\n          &lt;/thead&gt;\n          &lt;tbody&gt;\n            &lt;tr&gt;\n              &lt;th&gt;UDS+ profiles&lt;/th&gt;\n              &lt;td&gt;\n                &lt;a href=\&quot;#UDS-search-type\&quot; title=\&quot;Search for specific UDS+ Resource instances.\&quot;&gt;SHALL&lt;/a&gt;\n              &lt;/td&gt;\n              &lt;td&gt;\n                &lt;a href=\&quot;#UDS-read\&quot; title=\&quot;Retrieve specific UDS+ Resource instances.\&quot;&gt;SHALL&lt;/a&gt;\n              &lt;/td&gt;\n              &lt;td&gt;\n              &lt;/td&gt;\n              &lt;td&gt;               \n              &lt;/td&gt;\n              &lt;td&gt;\n              &lt;/td&gt;\n              &lt;td&gt;\n              &lt;/td&gt;\n              &lt;td&gt;\n              &lt;/td&gt;\n\t\t\t  &lt;td&gt;\n              &lt;/td&gt;\n            &lt;/tr&gt;\n            \n          &lt;/tbody&gt;\n        &lt;/table&gt;\n      &lt;/div&gt;\n     \n        &lt;h3&gt;FHIR Operations summary&lt;/h3&gt;\n        &lt;p&gt;As a client, the Data Submitter has to be capable of invoking the below operation on the Data Source.&lt;/p&gt;\n      \n      &lt;ul&gt;\n        &lt;li&gt;\n          &lt;a href=\&quot;http://hl7.org/fhir/uv/bulkdata/OperationDefinition-group-export.html\&quot;&gt;Bulk Data Export ([BaseURL]/Group/[Id]/$export)&lt;/a&gt;\n        &lt;/li&gt;\n      &lt;/ul&gt;\n      \n      &lt;p&gt;As a client, the Data Submitter has to be capable of invoking the below operation on the Data Receiver to submit the manifest file.&lt;/p&gt;\n      \n      &lt;ul&gt;\n        &lt;li&gt;\n          &lt;a href=\&quot;OperationDefinition-import.html\&quot;&gt;Bulk Data Import ([BaseURL]/$import)&lt;/a&gt;\n        &lt;/li&gt;\n      &lt;/ul&gt;\n      \n      &lt;br/&gt;\n      &lt;br/&gt;\n      \n      &lt;h3&gt;\n        &lt;a href=\&quot;artifacts.html\&quot;&gt;UDS+ profiles&lt;/a&gt;\n      &lt;/h3&gt;\n      &lt;p&gt;Profiles: All UDS+ profiles\n      &lt;/p&gt;\n      &lt;h4&gt;Interactions&lt;/h4&gt;\n      &lt;div class=\&quot;table-wrapper\&quot;&gt;\n        &lt;table class=\&quot;list\&quot;&gt;\n          &lt;thead&gt;\n            &lt;tr&gt;\n              &lt;th&gt;Name&lt;/th&gt;\n              &lt;th&gt;Description&lt;/th&gt;\n            &lt;/tr&gt;\n          &lt;/thead&gt;\n          &lt;tbody&gt;\n            &lt;tr&gt;\n              &lt;th&gt;\n                &lt;a name=\&quot;UDS-search-type\&quot;&gt;\u00a0&lt;/a&gt;\n                &lt;span&gt;search&lt;/span&gt;\n              &lt;/th&gt;\n              &lt;td&gt;\n                &lt;p&gt;Search for specific UDS+ resource profile instances.&lt;/p&gt;\n              &lt;/td&gt;\n            &lt;/tr&gt;\n            &lt;tr&gt;\n              &lt;th&gt;\n                &lt;a name=\&quot;UDS-read\&quot;&gt;\u00a0&lt;/a&gt;\n                &lt;span&gt;read&lt;/span&gt;\n              &lt;/th&gt;\n              &lt;td&gt;\n                &lt;p&gt;Retrieve specific UDS+ resource profile instances&lt;/p&gt;\n              &lt;/td&gt;\n            &lt;/tr&gt; \n          &lt;/tbody&gt;\n        &lt;/table&gt;\n      &lt;/div&gt;\n      &lt;br/&gt;\n      &lt;br/&gt; \n      \n    \n    &lt;/div&gt;"
   },
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.url">url</a>" : "http://fhir.org/guides/hrsa/uds-plus/CapabilityStatement/uds-plus-data-submitter-client",
-  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.version">version</a>" : "1.1.0",
+  "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.version">version</a>" : "2.0.0",
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.name">name</a>" : "UdsPlusDataSubmitter",
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.title">title</a>" : "Uds Plus Data Submitter CapabilityStatement",
   "<a href="http://hl7.org/fhir/R4/capabilitystatement.html#CapabilityStatement.status">status</a>" : "draft",
@@ -319,7 +320,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://bphc.hrsa.gov/">HRSA BPHC</a>.  Package fhir.hrsa.uds-plus#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 20, 2024 09:30-0400">2024-09-20</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://bphc.hrsa.gov/">HRSA BPHC</a>.  Package fhir.hrsa.uds-plus#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 28, 2025 22:48+1100">2025-03-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -327,7 +328,7 @@
        <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
         | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" aria-label="New Issue" href="https://github.com/drajer-health/uds-plus/issues/new">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" aria-label="Issues" href="https://github.com/drajer-health/uds-plus/issues">Issues</a>
 
-       | <a style="color: var(--footer-hyperlink-text-color)" aria-lable="Version History" target="_blank" href="/guides/hrsa/uds-plus/history.html">Version History</a> |
+       | <a style="color: var(--footer-hyperlink-text-color)" aria-lable="Version History" target="_blank" href="http://fhir.org/guides/hrsa/uds-plus/history.html">Version History</a> |
 
           </span>
         </p>

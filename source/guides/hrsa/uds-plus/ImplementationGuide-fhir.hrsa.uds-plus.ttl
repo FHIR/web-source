@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -10,22 +11,28 @@
   fhir:id [ fhir:v "fhir.hrsa.uds-plus"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide fhir.hrsa.uds-plus</b></p><a name=\"fhir.hrsa.uds-plus\"> </a><a name=\"hcfhir.hrsa.uds-plus\"> </a><a name=\"fhir.hrsa.uds-plus-en-US\"> </a><h2>UdsPlusFhirIg</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/hrsa/uds-plus/ImplementationGuide/fhir.hrsa.uds-plus</pre><div><p>A brief description of what udsplus is about (probably the same text as in your readme)</p>\n</div></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide fhir.hrsa.uds-plus</b></p><a name=\"fhir.hrsa.uds-plus\"> </a><a name=\"hcfhir.hrsa.uds-plus\"> </a><a name=\"fhir.hrsa.uds-plus-en-US\"> </a><h2>UdsPlusFhirIg</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/hrsa/uds-plus/ImplementationGuide/fhir.hrsa.uds-plus</pre><div><p>A brief description of what udsplus is about (probably the same text as in your readme)</p>\n</div></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "trial-use" ]
+     fhir:value [
+       a fhir:code ;
+       fhir:v "trial-use"
+     ]
   ] [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
-     fhir:value [ fhir:v "2"^^xsd:integer ]
+     fhir:value [
+       a fhir:integer ;
+       fhir:v 2
+     ]
   ] ) ; # 
   fhir:url [ fhir:v "http://fhir.org/guides/hrsa/uds-plus/ImplementationGuide/fhir.hrsa.uds-plus"^^xsd:anyURI] ; # 
-  fhir:version [ fhir:v "1.1.0"] ; # 
+  fhir:version [ fhir:v "2.0.0"] ; # 
   fhir:name [ fhir:v "UdsPlusFhirIg"] ; # 
-  fhir:title [ fhir:v "HRSA 2023 Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+) FHIR IG"] ; # 
+  fhir:title [ fhir:v "HRSA 2024 Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+) FHIR IG"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2024-09-20T09:30:38-04:00"^^xsd:dateTime] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-03-28T22:48:43+11:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "HRSA BPHC"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
@@ -47,26 +54,32 @@
      fhir:id [ fhir:v "hl7tx" ] ;
      fhir:extension ( [
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology" ]
+       fhir:value [
+         a fhir:markdown ;
+         fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+       ]
      ] ) ;
      fhir:uri [
        fhir:v "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"^^xsd:anyURI ;
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ] ;
      fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
-     fhir:version [ fhir:v "6.0.2" ]
+     fhir:version [ fhir:v "6.2.0" ]
   ] [
      fhir:id [ fhir:v "hl7ext" ] ;
      fhir:extension ( [
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack" ]
+       fhir:value [
+         a fhir:markdown ;
+         fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+       ]
      ] ) ;
      fhir:uri [
        fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
        fhir:link <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
      ] ;
      fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
-     fhir:version [ fhir:v "5.1.0" ]
+     fhir:version [ fhir:v "5.2.0" ]
   ] [
      fhir:id [ fhir:v "uscoreR4" ] ;
      fhir:uri [
@@ -98,7 +111,7 @@
        fhir:link <http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac>
      ] ;
      fhir:packageId [ fhir:v "us.nlm.vsac" ] ;
-     fhir:version [ fhir:v "0.15.0" ]
+     fhir:version [ fhir:v "0.21.0" ]
   ] [
      fhir:id [ fhir:v "uscdcphinvads" ] ;
      fhir:uri [
@@ -112,857 +125,1427 @@
      fhir:extension ( [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "AdverseEvent/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "AdverseEvent/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "AllergyIntolerance/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "AllergyIntolerance/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation/clinical-result-de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation/clinical-result-de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Condition/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Condition/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Coverage/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Coverage/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Immunization/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Immunization/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "MedicationRequest/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "MedicationRequest/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "MedicationStatement/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "MedicationStatement/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Patient/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Patient/de-identified-smallpop-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient/de-identified-smallpop-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Patient/de-identified-age89-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient/de-identified-age89-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Procedure/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Procedure/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "RelatedPerson/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "RelatedPerson/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ServiceRequest/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ServiceRequest/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation/de-identified-sexual-orientation-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Encounter/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Encounter/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation/de-identified-income-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation/de-identified-income-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation/de-identified-low-income-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation/de-identified-income-with-quantity-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation/de-identified-income-with-quantity-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation/generic-observation-de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation/generic-observation-de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "copyrightyear" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "copyrightyear"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "2023+" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "2023+"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "releaselabel" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "releaselabel"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "STU1 Release 1.1 - Standard for Trial-Use" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "STU2 Release 1 - Standard for Trial-Use"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-expansion-params" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-expansion-params"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "terminology-settings.json" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "terminology-settings.json"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "autoload-resources" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "autoload-resources"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-liquid"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template/liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template/liquid"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-liquid"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "input/liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "input/liquid"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-qa" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-qa"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "temp/qa" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "temp/qa"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-temp" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-temp"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "temp/pages" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "temp/pages"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-output" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-output"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "output" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "output"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-suppressed-warnings" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-suppressed-warnings"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "input/ignoreWarnings.txt"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-history" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "path-history"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "http://fhir.org/guides/hrsa/uds-plus/history.html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "http://fhir.org/guides/hrsa/uds-plus/history.html"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-html"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-page.html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-page.html"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-md" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-md"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-page-md.html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-page-md.html"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-contact" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-contact"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-context" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-context"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-copyright" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-copyright"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-jurisdiction" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-jurisdiction"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-license" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-license"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-publisher" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-publisher"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-version" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-version"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-wg" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "apply-wg"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "active-tables" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "active-tables"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "fmm-definition" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "fmm-definition"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "http://hl7.org/fhir/versions.html#maturity"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "propagate-status" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "propagate-status"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "excludelogbinaryformat" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "excludelogbinaryformat"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "tabbed-snapshots" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "tabbed-snapshots"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "hl7.fhir.uv.tools#0.2.0" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "hl7.fhir.uv.tools.r4#0.4.1"
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "AdverseEvent/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "AdverseEvent/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "AllergyIntolerance/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "AllergyIntolerance/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation/clinical-result-de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation/clinical-result-de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Condition/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Condition/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Coverage/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Coverage/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Immunization/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Immunization/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "MedicationRequest/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "MedicationRequest/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "MedicationStatement/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "MedicationStatement/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Patient/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Patient/de-identified-smallpop-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient/de-identified-smallpop-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Patient/de-identified-age89-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient/de-identified-age89-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Procedure/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Procedure/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "RelatedPerson/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "RelatedPerson/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ServiceRequest/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ServiceRequest/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation/de-identified-sexual-orientation-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Encounter/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Encounter/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation/de-identified-income-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation/de-identified-income-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation/de-identified-low-income-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation/de-identified-income-with-quantity-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation/de-identified-income-with-quantity-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation/de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation/de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "no-narrative" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "no-narrative"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation/generic-observation-de-identified-example" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation/generic-observation-de-identified-example"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "copyrightyear" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "copyrightyear"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "2023+" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "2023+"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "releaselabel" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "releaselabel"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "STU1 Release 1.1 - Standard for Trial-Use" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "STU2 Release 1 - Standard for Trial-Use"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-expansion-params" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-expansion-params"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "terminology-settings.json" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "terminology-settings.json"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "autoload-resources" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "autoload-resources"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-liquid" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-liquid"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template/liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template/liquid"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-liquid" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-liquid"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "input/liquid" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "input/liquid"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-qa" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-qa"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "temp/qa" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "temp/qa"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-temp" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-temp"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "temp/pages" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "temp/pages"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-output" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-output"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "output" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "output"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-suppressed-warnings" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-suppressed-warnings"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "input/ignoreWarnings.txt"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "path-history" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "path-history"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "http://fhir.org/guides/hrsa/uds-plus/history.html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "http://fhir.org/guides/hrsa/uds-plus/history.html"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-html" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "template-html"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-page.html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-page.html"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-md" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "template-md"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "template-page-md.html" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "template-page-md.html"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-contact" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-contact"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-context" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-context"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-copyright" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-copyright"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-jurisdiction" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-jurisdiction"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-license" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-license"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-publisher" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-publisher"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-version" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-version"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "apply-wg" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "apply-wg"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "active-tables" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "active-tables"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "fmm-definition" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "fmm-definition"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "http://hl7.org/fhir/versions.html#maturity"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "propagate-status" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "propagate-status"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "excludelogbinaryformat" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "excludelogbinaryformat"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "tabbed-snapshots" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "tabbed-snapshots"
+         ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "true" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "true"
+         ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] ) ;
      fhir:resource ( [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Patient" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Patient/example> ;
@@ -970,11 +1553,17 @@
        ] ;
        fhir:name [ fhir:v "US Core Patient Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant US Core Patient resource with identifiable information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Practitioner" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Practitioner"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Practitioner/example> ;
@@ -982,11 +1571,17 @@
        ] ;
        fhir:name [ fhir:v "US Core Practitioner Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant US Core Practitioner resource with identifiable information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Location" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Location"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Location/hospital> ;
@@ -994,11 +1589,17 @@
        ] ;
        fhir:name [ fhir:v "US Core Location Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant US Core Location resource with identifiable information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Organization" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Organization/holy-healthcare> ;
@@ -1006,11 +1607,17 @@
        ] ;
        fhir:name [ fhir:v "US Core Healthcare Organization Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant US Core Healthcare Organization resource with identifiable information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Parameters" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Parameters"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Parameters/reporting-parameters-example> ;
@@ -1018,11 +1625,17 @@
        ] ;
        fhir:name [ fhir:v "UDS Plus Reporting Parameters Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS Plus Reporting Parameters resource with de-identifeid information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Parameters" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Parameters"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Parameters/de-identify-data-operation-urls-example> ;
@@ -1030,11 +1643,17 @@
        ] ;
        fhir:name [ fhir:v "UDS Plus Parameters Example for $deidentify operation" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS Plus Parameters resource for sending input and receiving output from $deidentify operation." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "RelatedPerson" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "RelatedPerson"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/RelatedPerson/de-identified-example> ;
@@ -1042,11 +1661,17 @@
        ] ;
        fhir:name [ fhir:v "UDS Plus RelatedPerson Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS Plus Related Person resource with de-identified information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "AdverseEvent" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "AdverseEvent"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/AdverseEvent/de-identified-example> ;
@@ -1054,11 +1679,17 @@
        ] ;
        fhir:name [ fhir:v "UDS Plus AdverseEvent Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS Plus AdverseEvent resource with de-identified information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Observation/clinical-result-de-identified-example> ;
@@ -1066,11 +1697,17 @@
        ] ;
        fhir:name [ fhir:v "UDS Plus ClinicalResult Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS Plus ClincialResult resource profile with de-identified information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "AllergyIntolerance" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "AllergyIntolerance"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/AllergyIntolerance/de-identified-example> ;
@@ -1078,11 +1715,17 @@
        ] ;
        fhir:name [ fhir:v "UDS Plus AllergyIntolerance Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS Plus AllergyIntolerance resource with de-identified information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Coverage" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Coverage"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Coverage/de-identified-example> ;
@@ -1090,11 +1733,17 @@
        ] ;
        fhir:name [ fhir:v "Uds Plus Coverage Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS Plus Coverage resource with de-identified information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Procedure" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Procedure"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Procedure/de-identified-example> ;
@@ -1102,11 +1751,17 @@
        ] ;
        fhir:name [ fhir:v "Uds Plus Procedure Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS Plus Procedure resource with de-identified information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "MedicationRequest" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "MedicationRequest"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/MedicationRequest/de-identified-example> ;
@@ -1114,11 +1769,17 @@
        ] ;
        fhir:name [ fhir:v "Uds Plus MedicationRequest Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS Plus MedicationRequest resource with de-identified information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "MedicationStatement" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "MedicationStatement"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/MedicationStatement/de-identified-example> ;
@@ -1126,11 +1787,17 @@
        ] ;
        fhir:name [ fhir:v "Uds Plus MedicationStatement Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS Plus MedicationStatement resource with de-identified information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Observation/de-identified-income-example> ;
@@ -1138,35 +1805,53 @@
        ] ;
        fhir:name [ fhir:v "Uds Plus Income Observation Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS Plus Observation resource with de-identified income information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://fhir.org/guides/hrsa/uds-plus/Observation/de-identified-low-income-example> ;
+         fhir:reference [ fhir:v "Observation/de-identified-low-income-example" ]
+       ] ;
+       fhir:name [ fhir:v "Uds Plus Low Income Observation Example" ] ;
+       fhir:description [ fhir:v "An Example of a conformant UDS Plus Observation resource with de-identified income information to represent income <= 100%." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Observation/de-identified-income-with-quantity-example> ;
          fhir:reference [ fhir:v "Observation/de-identified-income-with-quantity-example" ]
        ] ;
        fhir:name [ fhir:v "Uds Plus Income Observation Example using Quantity" ] ;
-       fhir:description [ fhir:v "An Example of a conformant UDS Plus Observation resource with de-identified income information showing the usage of Quantity." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:description [ fhir:v "An Example of a conformant UDS Plus Observation resource with de-identified income information showing the usage of Quantity to represent income >= 200%." ] ;
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://fhir.org/guides/hrsa/uds-plus/Observation/de-identified-sexual-orientation-example> ;
-         fhir:reference [ fhir:v "Observation/de-identified-sexual-orientation-example" ]
-       ] ;
-       fhir:name [ fhir:v "Uds Plus Sexual Orientation Observation Example" ] ;
-       fhir:description [ fhir:v "An Example of a conformant UDS Plus Observation resource with de-identified sexual orientation information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ServiceRequest" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ServiceRequest"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/ServiceRequest/de-identified-example> ;
@@ -1174,11 +1859,17 @@
        ] ;
        fhir:name [ fhir:v "Uds Plus ServiceRequest Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS Plus ServiceRequest resource with de-identified information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Immunization" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Immunization"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Immunization/de-identified-example> ;
@@ -1186,11 +1877,17 @@
        ] ;
        fhir:name [ fhir:v "Uds Plus Immunization Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS Plus Immunization resource with de-identified information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Observation/de-identified-example> ;
@@ -1198,11 +1895,17 @@
        ] ;
        fhir:name [ fhir:v "Uds Plus Observation Lab Result Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS Plus Observation resource with de-identified information for a Lab Result." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Organization" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Organization"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Organization/acme-payer> ;
@@ -1210,11 +1913,17 @@
        ] ;
        fhir:name [ fhir:v "US Core Organization Example for a Payer" ] ;
        fhir:description [ fhir:v "An Example of a conformant US Core Organization resource for a Payor entity." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Patient" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Patient/smallpop-example> ;
@@ -1222,11 +1931,17 @@
        ] ;
        fhir:name [ fhir:v "US Core Patient Example of a patient residing in a zip code with small population (<20000 people)" ] ;
        fhir:description [ fhir:v "An Example of a conformant US Core Patient resource with identifiable information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Condition" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Condition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Condition/example> ;
@@ -1234,11 +1949,17 @@
        ] ;
        fhir:name [ fhir:v "US Core Condition Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant US Core Condition resource with identifiable information capturing a Problem List Item." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Encounter" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Encounter"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Encounter/example> ;
@@ -1246,11 +1967,17 @@
        ] ;
        fhir:name [ fhir:v "US Core Encounter Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant US Core Encounter resource with identifiable information capturing a visit." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Parameters" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Parameters"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Parameters/example> ;
@@ -1258,11 +1985,17 @@
        ] ;
        fhir:name [ fhir:v "Example of a Manifest file used for multiple operations in the context of HRSA UDS+ FHIR IG" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS+ Parameters resource representing a manifest file used by the $import and the $de-identify operation." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Patient" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Patient/de-identified-example> ;
@@ -1270,11 +2003,17 @@
        ] ;
        fhir:name [ fhir:v "Uds Plus Patient Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS+ Patient resource which has been de-identified and is based on the US Core Patient small population example resource." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Patient" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Patient/de-identified-smallpop-example> ;
@@ -1282,11 +2021,17 @@
        ] ;
        fhir:name [ fhir:v "Uds Plus Patient Example for a patient residing in a zip code with small population (<20000 people)" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS+ Patient resource which has been de-identified and is based on the US Core Patient example resource." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Patient" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Patient"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Patient/de-identified-age89-example> ;
@@ -1294,11 +2039,17 @@
        ] ;
        fhir:name [ fhir:v "Uds Plus Patient Example for a patient with age (> 89 )" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS+ Patient resource which has been de-identified and is based on the US Core Patient example resource." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Condition" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Condition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Condition/de-identified-example> ;
@@ -1306,11 +2057,17 @@
        ] ;
        fhir:name [ fhir:v "Uds Plus De-Identified Condition Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS+ Condition resource with de-identified information capturing a Problem List Item." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Encounter" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Encounter"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Encounter/de-identified-example> ;
@@ -1318,11 +2075,17 @@
        ] ;
        fhir:name [ fhir:v "Uds Plus De-Identified Encounter Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS+ Encounter resource with de-identified information capturing the visit information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Observation" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "Observation"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/Observation/generic-observation-de-identified-example> ;
@@ -1330,11 +2093,17 @@
        ] ;
        fhir:name [ fhir:v "UDS Plus Generic Observation Example" ] ;
        fhir:description [ fhir:v "An Example of a conformant UDS Plus Observation resource profile with de-identified information." ] ;
-       fhir:example [ fhir:v "true"^^xsd:boolean ]
+       fhir:example [
+         a fhir:boolean ;
+         fhir:v true
+       ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CapabilityStatement" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CapabilityStatement"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/CapabilityStatement/uds-plus-data-receiver-server> ;
@@ -1345,7 +2114,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CapabilityStatement" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CapabilityStatement"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/CapabilityStatement/uds-plus-data-source> ;
@@ -1356,7 +2128,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CapabilityStatement" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CapabilityStatement"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/CapabilityStatement/uds-plus-data-submitter-client> ;
@@ -1367,7 +2142,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CapabilityStatement" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CapabilityStatement"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/CapabilityStatement/uds-plus-trust-service-provider> ;
@@ -1378,7 +2156,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CodeSystem" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/CodeSystem/udsplus-agriculture-worker-status-codes> ;
@@ -1389,7 +2170,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CodeSystem" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/CodeSystem/udsplus-housing-status-codes> ;
@@ -1400,7 +2184,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CodeSystem" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/CodeSystem/uds-plus-insurance-codes> ;
@@ -1411,7 +2198,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "CodeSystem" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "CodeSystem"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/CodeSystem/udsplus-service-delivery-codes> ;
@@ -1422,7 +2212,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "OperationDefinition" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "OperationDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/OperationDefinition/udsplus-de-identify> ;
@@ -1433,7 +2226,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "OperationDefinition" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "OperationDefinition"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/OperationDefinition/import> ;
@@ -1444,7 +2240,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-adverseevent> ;
@@ -1455,7 +2254,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:extension" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-age-extension> ;
@@ -1466,7 +2268,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-allergyintolerance> ;
@@ -1477,18 +2282,24 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:extension" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-birthsex-extension> ;
          fhir:reference [ fhir:v "StructureDefinition/uds-plus-birthsex-extension" ]
        ] ;
        fhir:name [ fhir:v "UDS Plus Birth Sex Extension" ] ;
-       fhir:description [ fhir:v "Indicates the birth sex of the patient" ]
+       fhir:description [ fhir:v "Indicates the Birth sex of the patient, this extension will be deprecated in the future in-lieu of uds-plus-sex-extension" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:extension" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-capitated-member-months-extension> ;
@@ -1499,7 +2310,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-clinical-result-observation> ;
@@ -1510,18 +2324,24 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-coverage> ;
          fhir:reference [ fhir:v "StructureDefinition/uds-plus-coverage" ]
        ] ;
-       fhir:name [ fhir:v "DeIdentified UDS Plus Coverage" ] ;
+       fhir:name [ fhir:v "De-Identified UDS Plus Coverage" ] ;
        fhir:description [ fhir:v "The UDS+ profile establishes the core elements, extensions, vocabularies and value sets for representing Coverage for UDS+ program." ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-deidentify-operation-data-urls-parameter> ;
@@ -1532,7 +2352,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:extension" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-deidentified-instant-extension> ;
@@ -1543,7 +2366,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-diagnosis> ;
@@ -1554,7 +2380,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-encounter> ;
@@ -1565,7 +2394,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:extension" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-ethnicity-extension> ;
@@ -1576,7 +2408,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:extension" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-feeforservice-member-months-extension> ;
@@ -1587,18 +2422,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:extension" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-gender-identity-extension> ;
-         fhir:reference [ fhir:v "StructureDefinition/uds-plus-gender-identity-extension" ]
-       ] ;
-       fhir:name [ fhir:v "UDS Plus Gender Identity Extension" ] ;
-       fhir:description [ fhir:v "Indicates the gender identity of the patient at a specific time" ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:extension" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-housing-status-extension> ;
@@ -1609,7 +2436,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-immunization> ;
@@ -1620,7 +2450,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/de-identified-uds-plus-income-observation> ;
@@ -1631,7 +2464,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-lab-observation> ;
@@ -1642,7 +2478,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-location> ;
@@ -1653,7 +2492,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-medicationrequest> ;
@@ -1664,7 +2506,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-medicationstatement> ;
@@ -1675,7 +2520,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-observation> ;
@@ -1686,7 +2534,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-import-manifest> ;
@@ -1697,7 +2548,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-patient-reporting-parameters> ;
@@ -1708,7 +2562,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/de-identified-uds-plus-patient> ;
@@ -1719,7 +2576,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-procedure> ;
@@ -1730,7 +2590,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:extension" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-race-extension> ;
@@ -1741,7 +2604,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:extension" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-recordedDate-extension> ;
@@ -1752,7 +2618,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/de-identified-uds-plus-relatedperson> ;
@@ -1763,7 +2632,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:resource"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-servicerequest> ;
@@ -1774,18 +2646,24 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:resource" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-sexual-orientation-observation> ;
-         fhir:reference [ fhir:v "StructureDefinition/uds-plus-sexual-orientation-observation" ]
+         fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-sex-extension> ;
+         fhir:reference [ fhir:v "StructureDefinition/uds-plus-sex-extension" ]
        ] ;
-       fhir:name [ fhir:v "De-Identified UDS Plus Sexual Orientation" ] ;
-       fhir:description [ fhir:v "The UDS+ profile is based on the **US Core Sexual Orientation Observation profile and establishes the core elements, extensions, vocabularies and value sets for representing Sexual Orientation for UDS+ program." ]
+       fhir:name [ fhir:v "UDS Plus Sex Extension" ] ;
+       fhir:description [ fhir:v "Indicates the sex of the patient" ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:extension" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/uds-plus-veteran-status-extension> ;
@@ -1796,7 +2674,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "StructureDefinition:extension" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "StructureDefinition:extension"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/StructureDefinition/udsplus-agriculture-worker-status> ;
@@ -1807,7 +2688,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/ValueSet/udsplus-agriculture-worker-status> ;
@@ -1818,29 +2702,24 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
-         fhir:link <http://fhir.org/guides/hrsa/uds-plus/ValueSet/uds-plus-birthsex-codes> ;
-         fhir:reference [ fhir:v "ValueSet/uds-plus-birthsex-codes" ]
+         fhir:link <http://fhir.org/guides/hrsa/uds-plus/ValueSet/uds-plus-sex-codes> ;
+         fhir:reference [ fhir:v "ValueSet/uds-plus-sex-codes" ]
        ] ;
-       fhir:name [ fhir:v "Uds Plus Birth Sex Codes" ] ;
-       fhir:description [ fhir:v "The Uds Plus Birth Sex Codes is a set of codes for identifying the birth sex of Patients." ]
+       fhir:name [ fhir:v "Uds Plus Sex Codes" ] ;
+       fhir:description [ fhir:v "The Uds Plus Birth Sex Codes is a set of codes for identifying the birth sex of Patients, This ValueSet will deprecated in the future in favor of the CMS Sex codes value set used as part of the uds-plus-sex-extension." ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://fhir.org/guides/hrsa/uds-plus/ValueSet/uds-plus-gender-identity-codes> ;
-         fhir:reference [ fhir:v "ValueSet/uds-plus-gender-identity-codes" ]
-       ] ;
-       fhir:name [ fhir:v "Uds Plus Gender Identity Codes" ] ;
-       fhir:description [ fhir:v "The Uds Plus Gender Identity Codes is a 'starter set' of codes for identifying the gender identity of Patients." ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/ValueSet/udsplus-housing-status> ;
@@ -1851,7 +2730,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/ValueSet/uds-plus-insurance-codes> ;
@@ -1862,7 +2744,10 @@
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
+         fhir:value [
+           a fhir:string ;
+           fhir:v "ValueSet"
+         ]
        ] ) ;
        fhir:reference [
          fhir:link <http://fhir.org/guides/hrsa/uds-plus/ValueSet/uds-plus-service-delivery-codes> ;
@@ -1870,159 +2755,265 @@
        ] ;
        fhir:name [ fhir:v "Uds Plus Service Delivery Codes" ] ;
        fhir:description [ fhir:v "The UDS Plus CodeSystem is an 'addition set' of one code to the existing Location Service Delivery Codes value set for UDS+ purposes." ]
-     ] [
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "ValueSet" ]
-       ] ) ;
-       fhir:reference [
-         fhir:link <http://fhir.org/guides/hrsa/uds-plus/ValueSet/uds-plus-sexual-orientation-codes> ;
-         fhir:reference [ fhir:v "ValueSet/uds-plus-sexual-orientation-codes" ]
-       ] ;
-       fhir:name [ fhir:v "Uds Plus Sexual Orientation Codes" ] ;
-       fhir:description [ fhir:v "The Uds Plus Sexual Orientation Codes is a 'starter set' of codes for identifying the sexual orientation of Patients." ]
      ] ) ;
      fhir:page [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "trial-use" ]
+         fhir:value [
+           a fhir:code ;
+           fhir:v "trial-use"
+         ]
        ] [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "toc.html"^^xsd:anyURI ]
+         fhir:value [
+           a fhir:url ;
+           fhir:v "toc.html"^^xsd:anyURI
+         ]
        ] ) ;
-       fhir:name [ fhir:v "toc.html"^^xsd:anyURI ] ;
+       fhir:name [
+         a fhir:url ;
+         fhir:v "toc.html"^^xsd:anyURI
+       ] ;
        fhir:title [ fhir:v "Table of Contents" ] ;
        fhir:generation [ fhir:v "html" ] ;
        fhir:page ( [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "trial-use" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "trial-use"
+           ]
          ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "index.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "index.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "index.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "UDS Plus Home Page" ] ;
          fhir:generation [ fhir:v "html" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "trial-use" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "trial-use"
+           ]
          ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "background.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "background.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "background.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "background.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "Background" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "trial-use" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "trial-use"
+           ]
          ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "spec.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "spec.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "spec.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "spec.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "FHIR API Reporting Specification" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "trial-use" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "trial-use"
+           ]
          ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "implementation.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "implementation.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "implementation.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "implementation.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "Implementation Notes" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "trial-use" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "trial-use"
+           ]
          ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "usecases.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "usecases.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "usecases.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "usecases.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "Use Cases and Workflows" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "trial-use" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "trial-use"
+           ]
          ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "changes.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "changes.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "changes.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "changes.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "Change History" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "trial-use" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "trial-use"
+           ]
          ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "dataelements.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "dataelements.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "dataelements.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "dataelements.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "Data Elements and FHIR Mappings" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "trial-use" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "trial-use"
+           ]
          ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "reportingguidance.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "reportingguidance.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "reportingguidance.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "reportingguidance.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "Reporting Guidance" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "trial-use" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "trial-use"
+           ]
          ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "downloads.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "downloads.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "downloads.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "downloads.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "Useful Downloads" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "trial-use" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "trial-use"
+           ]
          ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "credits.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "credits.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "credits.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "credits.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "Credits" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "trial-use" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "trial-use"
+           ]
          ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "license.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "license.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "license.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "license.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "License" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] [
          fhir:extension ( [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "trial-use" ]
+           fhir:value [
+             a fhir:code ;
+             fhir:v "trial-use"
+           ]
          ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "requestresponseexamples.html"^^xsd:anyURI ]
+           fhir:value [
+             a fhir:url ;
+             fhir:v "requestresponseexamples.html"^^xsd:anyURI
+           ]
          ] ) ;
-         fhir:name [ fhir:v "requestresponseexamples.html"^^xsd:anyURI ] ;
+         fhir:name [
+           a fhir:url ;
+           fhir:v "requestresponseexamples.html"^^xsd:anyURI
+         ] ;
          fhir:title [ fhir:v "RequestResponseExamples" ] ;
          fhir:generation [ fhir:v "markdown" ]
        ] )

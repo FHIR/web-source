@@ -14,12 +14,12 @@
     "valueInteger" : 2
   }],
   "url" : "http://fhir.org/guides/hrsa/uds-plus/ImplementationGuide/fhir.hrsa.uds-plus",
-  "version" : "1.1.0",
+  "version" : "2.0.0",
   "name" : "UdsPlusFhirIg",
-  "title" : "HRSA 2023 Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+) FHIR IG",
+  "title" : "HRSA 2024 Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+) FHIR IG",
   "status" : "active",
   "experimental" : false,
-  "date" : "2024-09-20T09:30:38-04:00",
+  "date" : "2025-03-28T22:48:43+11:00",
   "publisher" : "HRSA BPHC",
   "contact" : [{
     "telecom" : [{
@@ -45,7 +45,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "6.0.2"
+    "version" : "6.2.0"
   },
   {
     "id" : "hl7ext",
@@ -55,7 +55,7 @@
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.1.0"
+    "version" : "5.2.0"
   },
   {
     "id" : "uscoreR4",
@@ -79,7 +79,7 @@
     "id" : "usnlmvsac",
     "uri" : "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac",
     "packageId" : "us.nlm.vsac",
-    "version" : "0.15.0"
+    "version" : "0.21.0"
   },
   {
     "id" : "uscdcphinvads",
@@ -260,17 +260,6 @@
       },
       {
         "url" : "value",
-        "valueString" : "Observation/de-identified-sexual-orientation-example"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "no-narrative"
-      },
-      {
-        "url" : "value",
         "valueString" : "Encounter/de-identified-example"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -283,6 +272,17 @@
       {
         "url" : "value",
         "valueString" : "Observation/de-identified-income-example"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "no-narrative"
+      },
+      {
+        "url" : "value",
+        "valueString" : "Observation/de-identified-low-income-example"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -337,7 +337,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "STU1 Release 1.1 - Standard for Trial-Use"
+        "valueString" : "STU2 Release 1 - Standard for Trial-Use"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -607,7 +607,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools#0.2.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.4.1"
     },
     {
       "extension" : [{
@@ -781,17 +781,6 @@
       },
       {
         "url" : "value",
-        "valueString" : "Observation/de-identified-sexual-orientation-example"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueCode" : "no-narrative"
-      },
-      {
-        "url" : "value",
         "valueString" : "Encounter/de-identified-example"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -804,6 +793,17 @@
       {
         "url" : "value",
         "valueString" : "Observation/de-identified-income-example"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "no-narrative"
+      },
+      {
+        "url" : "value",
+        "valueString" : "Observation/de-identified-low-income-example"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -858,7 +858,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "STU1 Release 1.1 - Standard for Trial-Use"
+        "valueString" : "STU2 Release 1 - Standard for Trial-Use"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -1312,10 +1312,10 @@
         "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Observation/de-identified-income-with-quantity-example"
+        "reference" : "Observation/de-identified-low-income-example"
       },
-      "name" : "Uds Plus Income Observation Example using Quantity",
-      "description" : "An Example of a conformant UDS Plus Observation resource with de-identified income information showing the usage of Quantity.",
+      "name" : "Uds Plus Low Income Observation Example",
+      "description" : "An Example of a conformant UDS Plus Observation resource with de-identified income information to represent income <= 100%.",
       "exampleBoolean" : true
     },
     {
@@ -1324,10 +1324,10 @@
         "valueString" : "Observation"
       }],
       "reference" : {
-        "reference" : "Observation/de-identified-sexual-orientation-example"
+        "reference" : "Observation/de-identified-income-with-quantity-example"
       },
-      "name" : "Uds Plus Sexual Orientation Observation Example",
-      "description" : "An Example of a conformant UDS Plus Observation resource with de-identified sexual orientation information.",
+      "name" : "Uds Plus Income Observation Example using Quantity",
+      "description" : "An Example of a conformant UDS Plus Observation resource with de-identified income information showing the usage of Quantity to represent income >= 200%.",
       "exampleBoolean" : true
     },
     {
@@ -1650,7 +1650,7 @@
         "reference" : "StructureDefinition/uds-plus-birthsex-extension"
       },
       "name" : "UDS Plus Birth Sex Extension",
-      "description" : "Indicates the birth sex of the patient"
+      "description" : "Indicates the Birth sex of the patient, this extension will be deprecated in the future in-lieu of uds-plus-sex-extension"
     },
     {
       "extension" : [{
@@ -1682,7 +1682,7 @@
       "reference" : {
         "reference" : "StructureDefinition/uds-plus-coverage"
       },
-      "name" : "DeIdentified UDS Plus Coverage",
+      "name" : "De-Identified UDS Plus Coverage",
       "description" : "The UDS+ profile establishes the core elements, extensions, vocabularies and value sets for representing Coverage for UDS+ program."
     },
     {
@@ -1750,17 +1750,6 @@
       },
       "name" : "UDS Plus FeeForService Member Months Extension",
       "description" : "Indicates the number of FeeForService member months of the patient for the reporting year"
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:extension"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/uds-plus-gender-identity-extension"
-      },
-      "name" : "UDS Plus Gender Identity Extension",
-      "description" : "Indicates the gender identity of the patient at a specific time"
     },
     {
       "extension" : [{
@@ -1941,13 +1930,13 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/uds-plus-sexual-orientation-observation"
+        "reference" : "StructureDefinition/uds-plus-sex-extension"
       },
-      "name" : "De-Identified UDS Plus Sexual Orientation",
-      "description" : "The UDS+ profile is based on the **US Core Sexual Orientation Observation profile and establishes the core elements, extensions, vocabularies and value sets for representing Sexual Orientation for UDS+ program."
+      "name" : "UDS Plus Sex Extension",
+      "description" : "Indicates the sex of the patient"
     },
     {
       "extension" : [{
@@ -1988,21 +1977,10 @@
         "valueString" : "ValueSet"
       }],
       "reference" : {
-        "reference" : "ValueSet/uds-plus-birthsex-codes"
+        "reference" : "ValueSet/uds-plus-sex-codes"
       },
-      "name" : "Uds Plus Birth Sex Codes",
-      "description" : "The Uds Plus Birth Sex Codes is a set of codes for identifying the birth sex of Patients."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/uds-plus-gender-identity-codes"
-      },
-      "name" : "Uds Plus Gender Identity Codes",
-      "description" : "The Uds Plus Gender Identity Codes is a 'starter set' of codes for identifying the gender identity of Patients."
+      "name" : "Uds Plus Sex Codes",
+      "description" : "The Uds Plus Birth Sex Codes is a set of codes for identifying the birth sex of Patients, This ValueSet will deprecated in the future in favor of the CMS Sex codes value set used as part of the uds-plus-sex-extension."
     },
     {
       "extension" : [{
@@ -2036,17 +2014,6 @@
       },
       "name" : "Uds Plus Service Delivery Codes",
       "description" : "The UDS Plus CodeSystem is an 'addition set' of one code to the existing Location Service Delivery Codes value set for UDS+ purposes."
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/uds-plus-sexual-orientation-codes"
-      },
-      "name" : "Uds Plus Sexual Orientation Codes",
-      "description" : "The Uds Plus Sexual Orientation Codes is a 'starter set' of codes for identifying the sexual orientation of Patients."
     }],
     "page" : {
       "extension" : [{

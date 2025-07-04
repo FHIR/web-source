@@ -1,25 +1,22 @@
 {
   "codeSystems" : [
     {
-      "url" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.32",
-      "version" : "20220316",
+      "url" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.121",
+      "version" : "20241007",
       "status" : "active",
-      "name" : "GenderIdentity",
-      "title" : "Gender Identity",
-      "description" : "Changed 2021-10-27 to grouping to include unknown and refused to answer. Also removed transgender codes.",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
-        "http://snomed.info/sct"
-      ],
-      "oids" : ["2.16.840.1.113762.1.4.1021.32"],
-      "sources" : ["2.16.840.1.113762.1.4.1021.32"],
+      "name" : "CMSSex",
+      "title" : "CMS Sex",
+      "description" : null,
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113762.1.4.1021.121"],
+      "sources" : ["2.16.840.1.113762.1.4.1021.121"],
       "uses" : {
       },
-      "ValueSet-uds-plus-gender-identity-codes.html" : "Uds Plus Gender Identity Codes"
+      "StructureDefinition-uds-plus-sex-extension.html" : "UDS Plus Sex Extension"
     },
     {
       "url" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1186.8",
-      "version" : "20210622",
+      "version" : "20240625",
       "status" : "active",
       "name" : "CommonSubstancesForAllergyAndIntoleranceDocumentationIncludingRefutations",
       "title" : "Common substances for allergy and intolerance documentation including refutations",
@@ -35,57 +32,29 @@
       "StructureDefinition-uds-plus-allergyintolerance.html" : "De-Identified UDS Plus AllergyIntolerance"
     },
     {
-      "url" : "http://fhir.org/guides/hrsa/uds-plus/ValueSet/uds-plus-birthsex-codes",
-      "version" : "1.1.0",
-      "status" : "active",
-      "name" : "UdsPlusBirthSexCodes",
-      "title" : "Uds Plus Birth Sex Codes",
-      "description" : "The Uds Plus Birth Sex Codes is a set of codes for identifying the birth sex of Patients.",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-uds-plus-birthsex-extension.html" : "UDS Plus Birth Sex Extension"
-    },
-    {
-      "url" : "http://fhir.org/guides/hrsa/uds-plus/ValueSet/uds-plus-gender-identity-codes",
-      "version" : "1.1.0",
-      "status" : "active",
-      "name" : "UdsPlusGenderIdentityCodes",
-      "title" : "Uds Plus Gender Identity Codes",
-      "description" : "The Uds Plus Gender Identity Codes is a 'starter set' of codes for identifying the gender identity of Patients.",
-      "systems" : [
-        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
-        "http://snomed.info/sct"
-      ],
-      "uses" : {
-      },
-      "StructureDefinition-uds-plus-gender-identity-extension.html" : "UDS Plus Gender Identity Extension"
-    },
-    {
       "url" : "http://fhir.org/guides/hrsa/uds-plus/ValueSet/uds-plus-insurance-codes",
-      "version" : "1.1.0",
+      "version" : "2.0.0",
       "status" : "active",
       "name" : "UdsPlusInsuranceCodes",
       "title" : "Uds Plus Insurance Codes",
       "description" : "The Uds Plus Insurance Codes is a 'starter set' of codes for identifying the source of the insurance for Patients.",
       "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor|3.0.0",
         "http://fhir.org/guides/hrsa/uds-plus/CodeSystem/uds-plus-insurance-codes"
       ],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-coverage.html" : "DeIdentified UDS Plus Coverage"
+      "StructureDefinition-uds-plus-coverage.html" : "De-Identified UDS Plus Coverage"
     },
     {
       "url" : "http://fhir.org/guides/hrsa/uds-plus/ValueSet/uds-plus-service-delivery-codes",
-      "version" : "1.1.0",
+      "version" : "2.0.0",
       "status" : "active",
       "name" : "UdsPlusServiceDeliveryCodes",
       "title" : "Uds Plus Service Delivery Codes",
       "description" : "The UDS Plus CodeSystem is an 'addition set' of one code to the existing Location Service Delivery Codes value set for UDS+ purposes.",
       "systems" : [
-        "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType",
+        "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
         "http://fhir.org/guides/hrsa/uds-plus/CodeSystem/udsplus-service-delivery-codes"
       ],
       "uses" : {
@@ -93,23 +62,23 @@
       "StructureDefinition-uds-plus-location.html" : "UDS Plus Location"
     },
     {
-      "url" : "http://fhir.org/guides/hrsa/uds-plus/ValueSet/uds-plus-sexual-orientation-codes",
-      "version" : "1.1.0",
+      "url" : "http://fhir.org/guides/hrsa/uds-plus/ValueSet/uds-plus-sex-codes",
+      "version" : "2.0.0",
       "status" : "active",
-      "name" : "UdsPlusSexualOrientationCodes",
-      "title" : "Uds Plus Sexual Orientation Codes",
-      "description" : "The Uds Plus Sexual Orientation Codes is a 'starter set' of codes for identifying the sexual orientation of Patients.",
+      "name" : "UdsPlusSexCodes",
+      "title" : "Uds Plus Sex Codes",
+      "description" : "The Uds Plus Birth Sex Codes is a set of codes for identifying the birth sex of Patients, This ValueSet will deprecated in the future in favor of the CMS Sex codes value set used as part of the uds-plus-sex-extension.",
       "systems" : [
-        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
-        "http://hl7.org/fhir/us/core/ValueSet/us-core-sexual-orientation"
+        "http://snomed.info/sct",
+        "http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender|3.0.0"
       ],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-sexual-orientation-observation.html" : "De-Identified UDS Plus Sexual Orientation"
+      "StructureDefinition-uds-plus-birthsex-extension.html" : "UDS Plus Birth Sex Extension"
     },
     {
       "url" : "http://fhir.org/guides/hrsa/uds-plus/ValueSet/udsplus-agriculture-worker-status",
-      "version" : "1.1.0",
+      "version" : "2.0.0",
       "status" : "active",
       "name" : "UdsPlusAgricultureWorkerStatusCodes",
       "title" : "Uds Plus Agriculture Worker Status Codes",
@@ -123,7 +92,7 @@
     },
     {
       "url" : "http://fhir.org/guides/hrsa/uds-plus/ValueSet/udsplus-housing-status",
-      "version" : "1.1.0",
+      "version" : "2.0.0",
       "status" : "active",
       "name" : "UdsPlusHousingStatusCodes",
       "title" : "Uds Plus Housing Status Codes",
@@ -162,8 +131,8 @@
       "uses" : {
       },
       "StructureDefinition-de-identified-uds-plus-patient.html" : "De-Identified UDS Plus Patient",
-      "StructureDefinition-uds-plus-location.html" : "UDS Plus Location",
-      "StructureDefinition-uds-plus-import-manifest.html" : "UDS Plus Import Manifest"
+      "StructureDefinition-uds-plus-import-manifest.html" : "UDS Plus Import Manifest",
+      "StructureDefinition-uds-plus-location.html" : "UDS Plus Location"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/address-use",
@@ -178,8 +147,8 @@
       "uses" : {
       },
       "StructureDefinition-de-identified-uds-plus-patient.html" : "De-Identified UDS Plus Patient",
-      "StructureDefinition-uds-plus-location.html" : "UDS Plus Location",
-      "StructureDefinition-uds-plus-import-manifest.html" : "UDS Plus Import Manifest"
+      "StructureDefinition-uds-plus-import-manifest.html" : "UDS Plus Import Manifest",
+      "StructureDefinition-uds-plus-location.html" : "UDS Plus Location"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/administration-method-codes",
@@ -435,13 +404,12 @@
       "uses" : {
       },
       "StructureDefinition-uds-plus-lab-observation.html" : "De-Identified UDS Plus Lab Observation",
-      "StructureDefinition-uds-plus-sexual-orientation-observation.html" : "De-Identified UDS Plus Sexual Orientation",
-      "StructureDefinition-uds-plus-procedure.html" : "De-Identified UDS Plus Procedure",
+      "StructureDefinition-uds-plus-servicerequest.html" : "De-Identified UDS Plus ServiceRequest",
+      "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income",
       "StructureDefinition-uds-plus-observation.html" : "De-Identified UDS Plus Observation",
       "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation",
       "StructureDefinition-uds-plus-diagnosis.html" : "De-Identified UDS Plus Diagnosis",
-      "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income",
-      "StructureDefinition-uds-plus-servicerequest.html" : "De-Identified UDS Plus ServiceRequest"
+      "StructureDefinition-uds-plus-procedure.html" : "De-Identified UDS Plus Procedure"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
@@ -497,9 +465,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.161"],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-medicationstatement.html" : "De-Identified UDS Plus MedicationStatement",
       "StructureDefinition-uds-plus-medicationrequest.html" : "De-Identified UDS Plus MedicationRequest",
-      "StructureDefinition-uds-plus-procedure.html" : "De-Identified UDS Plus Procedure"
+      "StructureDefinition-uds-plus-procedure.html" : "De-Identified UDS Plus Procedure",
+      "StructureDefinition-uds-plus-medicationstatement.html" : "De-Identified UDS Plus MedicationStatement"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/condition-severity",
@@ -597,7 +565,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1009"],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-coverage.html" : "DeIdentified UDS Plus Coverage"
+      "StructureDefinition-uds-plus-coverage.html" : "De-Identified UDS Plus Coverage"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/coverage-copay-type",
@@ -611,7 +579,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.527"],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-coverage.html" : "DeIdentified UDS Plus Coverage"
+      "StructureDefinition-uds-plus-coverage.html" : "De-Identified UDS Plus Coverage"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/coverage-financial-exception",
@@ -627,7 +595,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1328"],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-coverage.html" : "DeIdentified UDS Plus Coverage"
+      "StructureDefinition-uds-plus-coverage.html" : "De-Identified UDS Plus Coverage"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/data-absent-reason",
@@ -641,12 +609,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.5"],
       "uses" : {
       },
-      "StructureDefinition-de-identified-uds-plus-patient.html" : "De-Identified UDS Plus Patient",
       "StructureDefinition-uds-plus-lab-observation.html" : "De-Identified UDS Plus Lab Observation",
-      "StructureDefinition-uds-plus-sexual-orientation-observation.html" : "De-Identified UDS Plus Sexual Orientation",
+      "StructureDefinition-de-identified-uds-plus-patient.html" : "De-Identified UDS Plus Patient",
+      "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income",
       "StructureDefinition-uds-plus-observation.html" : "De-Identified UDS Plus Observation",
-      "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation",
-      "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income"
+      "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/days-of-week",
@@ -864,7 +831,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.592"],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-coverage.html" : "DeIdentified UDS Plus Coverage"
+      "StructureDefinition-uds-plus-coverage.html" : "De-Identified UDS Plus Coverage"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/immunization-function",
@@ -1043,27 +1010,26 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-deidentify-operation-data-urls-parameter.html" : "UDS Plus DeIdentify Data Urls Parameter",
       "StructureDefinition-uds-plus-lab-observation.html" : "De-Identified UDS Plus Lab Observation",
-      "StructureDefinition-uds-plus-immunization.html" : "De-Identified UDS Plus Immunization",
-      "StructureDefinition-uds-plus-procedure.html" : "De-Identified UDS Plus Procedure",
-      "StructureDefinition-uds-plus-adverseevent.html" : "De-Identified UDS Plus AdverseEvent",
-      "StructureDefinition-uds-plus-import-manifest.html" : "UDS Plus Import Manifest",
-      "StructureDefinition-uds-plus-observation.html" : "De-Identified UDS Plus Observation",
-      "StructureDefinition-uds-plus-allergyintolerance.html" : "De-Identified UDS Plus AllergyIntolerance",
-      "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation",
-      "StructureDefinition-uds-plus-diagnosis.html" : "De-Identified UDS Plus Diagnosis",
-      "StructureDefinition-uds-plus-patient-reporting-parameters.html" : "UDS Plus Patient Reporting Parameters",
-      "StructureDefinition-uds-plus-encounter.html" : "De-Identified UDS Plus Encounter",
-      "StructureDefinition-uds-plus-medicationstatement.html" : "De-Identified UDS Plus MedicationStatement",
+      "StructureDefinition-uds-plus-deidentify-operation-data-urls-parameter.html" : "UDS Plus DeIdentify Data Urls Parameter",
       "StructureDefinition-de-identified-uds-plus-patient.html" : "De-Identified UDS Plus Patient",
-      "StructureDefinition-uds-plus-coverage.html" : "DeIdentified UDS Plus Coverage",
-      "StructureDefinition-uds-plus-location.html" : "UDS Plus Location",
-      "StructureDefinition-uds-plus-medicationrequest.html" : "De-Identified UDS Plus MedicationRequest",
-      "StructureDefinition-uds-plus-sexual-orientation-observation.html" : "De-Identified UDS Plus Sexual Orientation",
-      "StructureDefinition-de-identified-uds-plus-relatedperson.html" : "De-Identified UDS Plus RelatedPerson",
       "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income",
-      "StructureDefinition-uds-plus-servicerequest.html" : "De-Identified UDS Plus ServiceRequest"
+      "StructureDefinition-uds-plus-observation.html" : "De-Identified UDS Plus Observation",
+      "StructureDefinition-uds-plus-import-manifest.html" : "UDS Plus Import Manifest",
+      "StructureDefinition-uds-plus-patient-reporting-parameters.html" : "UDS Plus Patient Reporting Parameters",
+      "StructureDefinition-uds-plus-allergyintolerance.html" : "De-Identified UDS Plus AllergyIntolerance",
+      "StructureDefinition-uds-plus-medicationrequest.html" : "De-Identified UDS Plus MedicationRequest",
+      "StructureDefinition-uds-plus-immunization.html" : "De-Identified UDS Plus Immunization",
+      "StructureDefinition-uds-plus-coverage.html" : "De-Identified UDS Plus Coverage",
+      "StructureDefinition-uds-plus-location.html" : "UDS Plus Location",
+      "StructureDefinition-uds-plus-medicationstatement.html" : "De-Identified UDS Plus MedicationStatement",
+      "StructureDefinition-uds-plus-encounter.html" : "De-Identified UDS Plus Encounter",
+      "StructureDefinition-uds-plus-servicerequest.html" : "De-Identified UDS Plus ServiceRequest",
+      "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation",
+      "StructureDefinition-uds-plus-adverseevent.html" : "De-Identified UDS Plus AdverseEvent",
+      "StructureDefinition-uds-plus-diagnosis.html" : "De-Identified UDS Plus Diagnosis",
+      "StructureDefinition-uds-plus-procedure.html" : "De-Identified UDS Plus Procedure",
+      "StructureDefinition-de-identified-uds-plus-relatedperson.html" : "De-Identified UDS Plus RelatedPerson"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -1107,8 +1073,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.328"],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-location.html" : "UDS Plus Location",
-      "StructureDefinition-uds-plus-encounter.html" : "De-Identified UDS Plus Encounter"
+      "StructureDefinition-uds-plus-encounter.html" : "De-Identified UDS Plus Encounter",
+      "StructureDefinition-uds-plus-location.html" : "UDS Plus Location"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/location-status",
@@ -1167,8 +1133,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.96"],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-medicationstatement.html" : "De-Identified UDS Plus MedicationStatement",
-      "StructureDefinition-uds-plus-servicerequest.html" : "De-Identified UDS Plus ServiceRequest"
+      "StructureDefinition-uds-plus-servicerequest.html" : "De-Identified UDS Plus ServiceRequest",
+      "StructureDefinition-uds-plus-medicationstatement.html" : "De-Identified UDS Plus MedicationStatement"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/medication-codes",
@@ -1182,8 +1148,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.375"],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-medicationstatement.html" : "De-Identified UDS Plus MedicationStatement",
-      "StructureDefinition-uds-plus-medicationrequest.html" : "De-Identified UDS Plus MedicationRequest"
+      "StructureDefinition-uds-plus-medicationrequest.html" : "De-Identified UDS Plus MedicationRequest",
+      "StructureDefinition-uds-plus-medicationstatement.html" : "De-Identified UDS Plus MedicationStatement"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/medication-statement-category",
@@ -1317,9 +1283,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.403"],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-sexual-orientation-observation.html" : "De-Identified UDS Plus Sexual Orientation",
-      "StructureDefinition-uds-plus-observation.html" : "De-Identified UDS Plus Observation",
-      "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income"
+      "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income",
+      "StructureDefinition-uds-plus-observation.html" : "De-Identified UDS Plus Observation"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
@@ -1333,10 +1298,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.396"],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-sexual-orientation-observation.html" : "De-Identified UDS Plus Sexual Orientation",
       "StructureDefinition-uds-plus-observation.html" : "De-Identified UDS Plus Observation",
-      "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation",
-      "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income"
+      "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income",
+      "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
@@ -1353,10 +1317,9 @@
       "uses" : {
       },
       "StructureDefinition-uds-plus-lab-observation.html" : "De-Identified UDS Plus Lab Observation",
-      "StructureDefinition-uds-plus-sexual-orientation-observation.html" : "De-Identified UDS Plus Sexual Orientation",
+      "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income",
       "StructureDefinition-uds-plus-observation.html" : "De-Identified UDS Plus Observation",
-      "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation",
-      "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income"
+      "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-methods",
@@ -1371,10 +1334,9 @@
       "uses" : {
       },
       "StructureDefinition-uds-plus-lab-observation.html" : "De-Identified UDS Plus Lab Observation",
-      "StructureDefinition-uds-plus-sexual-orientation-observation.html" : "De-Identified UDS Plus Sexual Orientation",
+      "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income",
       "StructureDefinition-uds-plus-observation.html" : "De-Identified UDS Plus Observation",
-      "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation",
-      "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income"
+      "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-status",
@@ -1389,10 +1351,9 @@
       "uses" : {
       },
       "StructureDefinition-uds-plus-lab-observation.html" : "De-Identified UDS Plus Lab Observation",
-      "StructureDefinition-uds-plus-sexual-orientation-observation.html" : "De-Identified UDS Plus Sexual Orientation",
+      "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income",
       "StructureDefinition-uds-plus-observation.html" : "De-Identified UDS Plus Observation",
-      "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation",
-      "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income"
+      "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/participant-role",
@@ -1505,8 +1466,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.432"],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-procedure.html" : "De-Identified UDS Plus Procedure",
-      "StructureDefinition-uds-plus-servicerequest.html" : "De-Identified UDS Plus ServiceRequest"
+      "StructureDefinition-uds-plus-servicerequest.html" : "De-Identified UDS Plus ServiceRequest",
+      "StructureDefinition-uds-plus-procedure.html" : "De-Identified UDS Plus Procedure"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/reaction-event-severity",
@@ -1552,10 +1513,9 @@
       "uses" : {
       },
       "StructureDefinition-uds-plus-lab-observation.html" : "De-Identified UDS Plus Lab Observation",
-      "StructureDefinition-uds-plus-sexual-orientation-observation.html" : "De-Identified UDS Plus Sexual Orientation",
+      "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income",
       "StructureDefinition-uds-plus-observation.html" : "De-Identified UDS Plus Observation",
-      "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation",
-      "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income"
+      "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
@@ -1572,10 +1532,9 @@
       "uses" : {
       },
       "StructureDefinition-uds-plus-lab-observation.html" : "De-Identified UDS Plus Lab Observation",
-      "StructureDefinition-uds-plus-sexual-orientation-observation.html" : "De-Identified UDS Plus Sexual Orientation",
+      "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income",
       "StructureDefinition-uds-plus-observation.html" : "De-Identified UDS Plus Observation",
-      "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation",
-      "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income"
+      "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype",
@@ -1620,8 +1579,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.115"],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-medicationrequest.html" : "De-Identified UDS Plus MedicationRequest",
-      "StructureDefinition-uds-plus-servicerequest.html" : "De-Identified UDS Plus ServiceRequest"
+      "StructureDefinition-uds-plus-servicerequest.html" : "De-Identified UDS Plus ServiceRequest",
+      "StructureDefinition-uds-plus-medicationrequest.html" : "De-Identified UDS Plus MedicationRequest"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/request-status",
@@ -1650,22 +1609,21 @@
       "uses" : {
       },
       "StructureDefinition-uds-plus-lab-observation.html" : "De-Identified UDS Plus Lab Observation",
-      "StructureDefinition-uds-plus-immunization.html" : "De-Identified UDS Plus Immunization",
-      "StructureDefinition-uds-plus-procedure.html" : "De-Identified UDS Plus Procedure",
-      "StructureDefinition-uds-plus-adverseevent.html" : "De-Identified UDS Plus AdverseEvent",
-      "StructureDefinition-uds-plus-observation.html" : "De-Identified UDS Plus Observation",
-      "StructureDefinition-uds-plus-allergyintolerance.html" : "De-Identified UDS Plus AllergyIntolerance",
-      "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation",
-      "StructureDefinition-uds-plus-diagnosis.html" : "De-Identified UDS Plus Diagnosis",
-      "StructureDefinition-uds-plus-patient-reporting-parameters.html" : "UDS Plus Patient Reporting Parameters",
-      "StructureDefinition-uds-plus-encounter.html" : "De-Identified UDS Plus Encounter",
-      "StructureDefinition-uds-plus-medicationstatement.html" : "De-Identified UDS Plus MedicationStatement",
-      "StructureDefinition-uds-plus-coverage.html" : "DeIdentified UDS Plus Coverage",
-      "StructureDefinition-uds-plus-medicationrequest.html" : "De-Identified UDS Plus MedicationRequest",
-      "StructureDefinition-uds-plus-sexual-orientation-observation.html" : "De-Identified UDS Plus Sexual Orientation",
-      "StructureDefinition-de-identified-uds-plus-relatedperson.html" : "De-Identified UDS Plus RelatedPerson",
       "StructureDefinition-de-identified-uds-plus-income-observation.html" : "De-Identified UDS Plus Income",
-      "StructureDefinition-uds-plus-servicerequest.html" : "De-Identified UDS Plus ServiceRequest"
+      "StructureDefinition-uds-plus-observation.html" : "De-Identified UDS Plus Observation",
+      "StructureDefinition-uds-plus-patient-reporting-parameters.html" : "UDS Plus Patient Reporting Parameters",
+      "StructureDefinition-uds-plus-allergyintolerance.html" : "De-Identified UDS Plus AllergyIntolerance",
+      "StructureDefinition-uds-plus-medicationrequest.html" : "De-Identified UDS Plus MedicationRequest",
+      "StructureDefinition-uds-plus-immunization.html" : "De-Identified UDS Plus Immunization",
+      "StructureDefinition-uds-plus-coverage.html" : "De-Identified UDS Plus Coverage",
+      "StructureDefinition-uds-plus-medicationstatement.html" : "De-Identified UDS Plus MedicationStatement",
+      "StructureDefinition-uds-plus-encounter.html" : "De-Identified UDS Plus Encounter",
+      "StructureDefinition-uds-plus-servicerequest.html" : "De-Identified UDS Plus ServiceRequest",
+      "StructureDefinition-uds-plus-clinical-result-observation.html" : "De-Identified UDS Plus Clinical Result Observation",
+      "StructureDefinition-uds-plus-adverseevent.html" : "De-Identified UDS Plus AdverseEvent",
+      "StructureDefinition-uds-plus-diagnosis.html" : "De-Identified UDS Plus Diagnosis",
+      "StructureDefinition-uds-plus-procedure.html" : "De-Identified UDS Plus Procedure",
+      "StructureDefinition-de-identified-uds-plus-relatedperson.html" : "De-Identified UDS Plus RelatedPerson"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/route-codes",
@@ -1679,8 +1637,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.98"],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-medicationstatement.html" : "De-Identified UDS Plus MedicationStatement",
-      "StructureDefinition-uds-plus-allergyintolerance.html" : "De-Identified UDS Plus AllergyIntolerance"
+      "StructureDefinition-uds-plus-allergyintolerance.html" : "De-Identified UDS Plus AllergyIntolerance",
+      "StructureDefinition-uds-plus-medicationstatement.html" : "De-Identified UDS Plus MedicationStatement"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/service-type",
@@ -1738,7 +1696,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1385"],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-coverage.html" : "DeIdentified UDS Plus Coverage"
+      "StructureDefinition-uds-plus-coverage.html" : "De-Identified UDS Plus Coverage"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/substance-code",
@@ -1924,8 +1882,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-procedure.html" : "De-Identified UDS Plus Procedure",
-      "StructureDefinition-uds-plus-servicerequest.html" : "De-Identified UDS Plus ServiceRequest"
+      "StructureDefinition-uds-plus-servicerequest.html" : "De-Identified UDS Plus ServiceRequest",
+      "StructureDefinition-uds-plus-procedure.html" : "De-Identified UDS Plus Procedure"
     },
     {
       "url" : "http://hl7.org/fhir/us/core/ValueSet/us-core-usps-state",
@@ -2025,7 +1983,8 @@
       "sources" : ["2.16.840.1.113883.1.11.17660"],
       "uses" : {
       },
-      "StructureDefinition-uds-plus-servicerequest.html" : "De-Identified UDS Plus ServiceRequest"
+      "StructureDefinition-uds-plus-servicerequest.html" : "De-Identified UDS Plus ServiceRequest",
+      "ValueSet-uds-plus-service-delivery-codes.html" : "Uds Plus Service Delivery Codes"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason",

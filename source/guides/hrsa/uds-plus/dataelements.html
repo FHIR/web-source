@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Data Elements and FHIR Mappings - HRSA 2023 Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+) FHIR IG v1.1.0</title>
+    <title>Data Elements and FHIR Mappings - HRSA 2024 Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+) FHIR IG v2.0.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 <link href="assets/css/hrsa.css" rel="stylesheet"/>
 
@@ -45,6 +46,7 @@
     h3,h4,h5,h6{--heading-prefix:"7"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <div id="project-nav">
   <a id="hrsa-logo" no-external="true" href="https://hrsa.gov">
     <img height="71" alt="Visit the website" src="hrsa-logo.png"/>
@@ -56,9 +58,9 @@
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">HRSA 2023 Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+) FHIR IG</span>
+          <p><span style="font-size:12pt;font-weight:bold">HRSA 2024 Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+) FHIR IG</span>
             <br/>
-            <span style="display:inline-block;">1.1.0 - STU1 Release 1.1 - Standard for Trial-Use
+            <span style="display:inline-block;">2.0.0 - STU2 Release 1 - Standard for Trial-Use
 
 
 
@@ -166,7 +168,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the HRSA Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+ or uds-plus) FHIR IG (v1.1.0: <a no-external="true" href="https://confluence.hl7.org/display/HL7/HL7+Balloting" title="Standard for Trial-Use">STU</a>1) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="/guides/hrsa/uds-plus/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the HRSA Uniform Data System (UDS) Patient Level Submission (PLS) (UDS+ or uds-plus) FHIR IG (v2.0.0: <a no-external="true" href="https://confluence.hl7.org/display/HL7/HL7+Balloting" title="Standard for Trial-Use">STU</a>2) based on <a no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a no-external="true" href="http://fhir.org/guides/hrsa/uds-plus/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Data Elements and FHIR Mappings</h2>
   
 
@@ -256,9 +258,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td class="maptable17">Populated using the birthDate of the patient.</td>
       </tr>
       <tr style="height:20px;">
-        <td class="maptable16">Sex Assigned at Birth</td>
-        <td class="maptable17">de-identified-uds-plus-patient.extension (uds-plus-birthsex-extension)</td>
-        <td class="maptable17">NullFlavor values are not allowed for UDS+ reporting.</td>
+        <td class="maptable16">Sex</td>
+        <td class="maptable17">de-identified-uds-plus-patient.extension (uds-plus-sex-extension)</td>
+        <td class="maptable17">None</td>
       </tr>
       <tr style="height:20px;">
         <td class="maptable13" colspan="3">UDS Table 3B: Demographic Characteristics 
@@ -278,16 +280,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td class="maptable16">Preferred Language</td>
         <td class="maptable17">de-identified-uds-plus-patient.communication.language</td>
         <td class="maptable17">None</td>
-      </tr>
-      <tr style="height:20px;">
-        <td class="maptable16">Sexual Orientation</td>
-        <td class="maptable17">uds-plus-sexual-orientation-observation.valueCodeableConcept</td>
-        <td class="maptable17">Additional NullFlavor concept of NASK has been added for UDS+ reporting</td>
-      </tr>
-      <tr style="height:20px;">
-        <td class="maptable16">Gender Identity</td>
-        <td class="maptable17">uds-plus-patient.extension (uds-plus-gender-identity-extension)</td>
-        <td class="maptable17">Additional NullFlavor concept of NASK has to be supported</td>
       </tr>
       <tr style="height:20px;">
         <td class="maptable13" colspan="3">UDS Table 4: Selected Patient Characteristics
@@ -383,7 +375,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td class="maptable11">Differences with US Core 6.1.0</td>
       </tr>
       <tr style="height:20px;">
-        <td class="maptable13" colspan="3"><b>UDS Table : Childhood Immunization Status (CMS117v11)</b>
+        <td class="maptable13" colspan="3"><b>UDS Table : Childhood Immunization Status (CMS117v12)</b>
         </td>
       </tr>
 	  <tr style="height:20px;">
@@ -527,7 +519,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td class="maptable17">Missing in US Core profile</td>
       </tr>
       <tr style="height:20px;">
-        <td class="maptable13" colspan="3"><b>UDS Table : Cervical Cancer Screening (CMS124v11)</b>
+        <td class="maptable13" colspan="3"><b>UDS Table : Cervical Cancer Screening (CMS124v12)</b>
         </td>
       </tr>
 	  <tr style="height:20px;">
@@ -657,7 +649,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </tr>
 	  <tr style="height:20px;">
         <td class="maptable16">Patient Characteristic, Sex - Sex</td>
-        <td class="maptable17">uds-plus-patient.extension.us-core-birthsex</td>
+        <td class="maptable17">uds-plus-patient.extension (uds-plus-sex-extension)</td>
         <td class="maptable17">None</td>
       </tr>
 	  <tr style="height:20px;">
@@ -676,7 +668,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td class="maptable17">Missing in US Core profile</td>
       </tr>
 	  <tr style="height:20px;">
-        <td class="maptable13" colspan="3"><b>UDS Table : Breast Cancer Screening (CMS125v11)</b>
+        <td class="maptable13" colspan="3"><b>UDS Table : Breast Cancer Screening (CMS125v12)</b>
         </td>
       </tr>
 	  <tr style="height:20px;">
@@ -846,7 +838,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </tr>
 	  <tr style="height:20px;">
         <td class="maptable16">Patient Characteristic - Sex</td>
-        <td class="maptable17">uds-plus-patient.extension.us-core-birthsex</td>
+        <td class="maptable17">uds-plus-patient.extension (uds-plus-sex-extension)</td>
         <td class="maptable17">None</td>
       </tr>
 	  <tr style="height:20px;">
@@ -885,7 +877,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td class="maptable17">None</td>
       </tr>
 	  <tr style="height:20px;">
-        <td class="maptable13" colspan="3"><b>UDS Table : Weight Assessment and Counselling for Nutrition and Physical Activity for Children/Adolescents (CMS155v11)</b>
+        <td class="maptable13" colspan="3"><b>UDS Table : Weight Assessment and Counseling for Nutrition and Physical Activity for Children/Adolescents (CMS155v12)</b>
         </td>
       </tr>
 	  <tr style="height:20px;">
@@ -1014,7 +1006,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td class="maptable17">None</td>
       </tr>
 	  <tr style="height:20px;">
-        <td class="maptable13" colspan="3"><b>UDS Table : Preventive Care and Screening: Body Mass Index (BMI) Screening and Follow-Up Plan (CMS69v11)</b>
+        <td class="maptable13" colspan="3"><b>UDS Table : Preventive Care and Screening: Body Mass Index (BMI) Screening and Follow-Up Plan (CMS69v12)</b>
         </td>
       </tr>
 	  <tr style="height:20px;">
@@ -1158,7 +1150,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td class="maptable17">None</td>
       </tr>  
 	  <tr style="height:20px;">
-        <td class="maptable13" colspan="3"><b>UDS Table : Preventive Care and Screening: Tobacco Use: Screening and Cessation Intervention (CMS138v11)</b>
+        <td class="maptable13" colspan="3"><b>UDS Table : Preventive Care and Screening: Tobacco Use: Screening and Cessation Intervention (CMS138v12)</b>
         </td>
       </tr>
 	  <tr style="height:20px;">
@@ -1302,7 +1294,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td class="maptable17">None</td>
       </tr>
 	  <tr style="height:20px;">
-        <td class="maptable13" colspan="3"><b>UDS Table : Statin Therapy for the Prevention and Treatment of Cardiovascular Disease (CMS347v6)</b>
+        <td class="maptable13" colspan="3"><b>UDS Table : Statin Therapy for the Prevention and Treatment of Cardiovascular Disease (CMS347v7)</b>
         </td>
       </tr>
 	  <tr style="height:20px;">
@@ -1506,7 +1498,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td class="maptable17">Missing in US Core profile</td>
       </tr>	  
 	  <tr style="height:20px;">
-        <td class="maptable13" colspan="3"><b>UDS Table : Colorectal Cancer Screening (CMS130v11)</b>
+        <td class="maptable13" colspan="3"><b>UDS Table : Colorectal Cancer Screening (CMS130v12)</b>
         </td>
       </tr>
 	  <tr style="height:20px;">
@@ -1735,7 +1727,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td class="maptable17">None</td>
       </tr>
 	  <tr style="height:20px;">
-        <td class="maptable13" colspan="3"><b>UDS Table : HIV Screening (CMS349v5)</b>
+        <td class="maptable13" colspan="3"><b>UDS Table : HIV Screening (CMS349v6)</b>
         </td>
       </tr>
 	  <tr style="height:20px;">
@@ -1819,7 +1811,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td class="maptable17">None</td>
       </tr>
 	  <tr style="height:20px;">
-        <td class="maptable13" colspan="3"><b>UDS Table : Preventive Care and Screening: Screening for Depression and Follow-Up Plan (CMS2v12)</b>
+        <td class="maptable13" colspan="3"><b>UDS Table : Preventive Care and Screening: Screening for Depression and Follow-Up Plan (CMS2v13)</b>
         </td>
       </tr>
 	  <tr style="height:20px;">
@@ -1948,7 +1940,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td class="maptable17">None</td>
       </tr>
 	  <tr style="height:20px;">
-        <td class="maptable13" colspan="3"><b>UDS Table : Depression Remission at Twelve Months (CMS159v11)</b>
+        <td class="maptable13" colspan="3"><b>UDS Table : Depression Remission at Twelve Months (CMS159v12)</b>
         </td>
       </tr>
 	  <tr style="height:20px;">
@@ -2291,7 +2283,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td class="maptable17">Missing in US Core profile</td>
       </tr>
       <tr style="height:20px;">
-        <td class="maptable13" colspan="3"><b>UDS Table : Controlling High Blood Pressure (CMS165v11)</b>
+        <td class="maptable13" colspan="3"><b>UDS Table : Controlling High Blood Pressure (CMS165v12)</b>
         </td>
       </tr>
 	  <tr style="height:20px;">
@@ -2510,7 +2502,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         <td class="maptable17">None</td>
       </tr>
 	  <tr style="height:20px;">
-        <td class="maptable13" colspan="3"><b>UDS Table : Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%) (CMS122v11)</b>
+        <td class="maptable13" colspan="3"><b>UDS Table : Diabetes: Hemoglobin A1c (HbA1c) Poor Control (&gt; 9%) (CMS122v12)</b>
         </td>
       </tr>
 	  <tr style="height:20px;">
@@ -2774,7 +2766,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://bphc.hrsa.gov/">HRSA BPHC</a>.  Package fhir.hrsa.uds-plus#1.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Sep 20, 2024 09:30-0400">2024-09-20</span>
+          IG &#169; 2023+ <a style="color:var(--footer-hyperlink-text-color)" href="https://bphc.hrsa.gov/">HRSA BPHC</a>.  Package fhir.hrsa.uds-plus#2.0.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 28, 2025 22:48+1100">2025-03-28</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
             Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -2782,7 +2774,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
        <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
         | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" aria-label="New Issue" href="https://github.com/drajer-health/uds-plus/issues/new">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" aria-label="Issues" href="https://github.com/drajer-health/uds-plus/issues">Issues</a>
 
-       | <a style="color: var(--footer-hyperlink-text-color)" aria-lable="Version History" target="_blank" href="/guides/hrsa/uds-plus/history.html">Version History</a> |
+       | <a style="color: var(--footer-hyperlink-text-color)" aria-lable="Version History" target="_blank" href="http://fhir.org/guides/hrsa/uds-plus/history.html">Version History</a> |
 
           </span>
         </p>
