@@ -381,22 +381,62 @@ function loadRegistry() {
     var releaseOptions = '<select id="release-filter"><option value="any">Any</option><option value="5.0">R5</option><option value="4.3">R4B</option><option value="4.0">R4</option><option value="3.0">R3</option><option value="1.0">R2</option></select>';
     var productOptions = '<select id="product-filter"><option value="any">Any</option><option value="fhir">FHIR</option><option value="cda">CDA</option><option value="v2">V2</option></select>';
 
+    // Add National Base category first
     categoryOptions += '<option value="National Base">National Base</option>';
+    
+    // Sort other categories alphabetically
+    var sortedCategories = [];
     for (var category in properties.categories) {
       if (properties.categories.hasOwnProperty(category) && "National Base" != category) {
-        categoryOptions += '<option value="' + category + '">' + category + '</option>';
+        sortedCategories.push(category);
       }
     }
-
+    sortedCategories.sort(function(a, b) {
+      return a.toLowerCase().localeCompare(b.toLowerCase());
+    });
+    
+    // Add sorted categories to options
+    for (var i = 0; i < sortedCategories.length; i++) {
+      categoryOptions += '<option value="' + sortedCategories[i] + '">' + sortedCategories[i] + '</option>';
+    }
     categoryOptions += '</select>';
 
+    // Separate HL7 authorities from other authorities
+    var hl7Authorities = [];
+    var otherAuthorities = [];
+    
     for (var authority in properties.authorities) {
       if (properties.authorities.hasOwnProperty(authority)) {
-        authorityOptions += '<option value="' + authority + '">' + authority + '</option>';
+        if (authority.startsWith("HL7")) {
+          hl7Authorities.push(authority);
+        } else {
+          otherAuthorities.push(authority);
+        }
       }
+    }
+    
+    // Sort HL7 authorities alphabetically
+    hl7Authorities.sort(function(a, b) {
+      return a.toLowerCase().localeCompare(b.toLowerCase());
+    });
+    
+    // Sort other authorities alphabetically
+    otherAuthorities.sort(function(a, b) {
+      return a.toLowerCase().localeCompare(b.toLowerCase());
+    });
+    
+    // Add HL7 authorities first
+    for (var i = 0; i < hl7Authorities.length; i++) {
+      authorityOptions += '<option value="' + hl7Authorities[i] + '">' + hl7Authorities[i] + '</option>';
+    }
+    
+    // Then add other authorities
+    for (var i = 0; i < otherAuthorities.length; i++) {
+      authorityOptions += '<option value="' + otherAuthorities[i] + '">' + otherAuthorities[i] + '</option>';
     }
     authorityOptions += '</select>';
 
+    // Predefined country options (keeping the original order for these specific countries)
     countryOptions += '<option value="uv">All</option>';
     countryOptions += '<option value="eu">European Union</option>';
     countryOptions += '<option value="us">USA</option>';
@@ -421,31 +461,52 @@ function loadRegistry() {
     countryOptions += '<option value="se">Sweden (Sverige)</option>';
     countryOptions += '<option value="tw">Taiwan (台灣)</option>';
 
+    // Sort additional countries alphabetically
     const knownCountries = new Set(['uv', 'eu', 'us', 'at', 'au', 'be', 'br', 'ca', 'ch', 'de', 'dk', 'fi', 'fr', 'gb', 'in', 'it', 'jp', 'kr', 'nl', 'no', 'nz', 'se', 'tw']);
+    var additionalCountries = [];
     for (var country in properties.countries) {
-      if (properties.countries.hasOwnProperty(country)) {
-        if (!knownCountries.has(country)) 
-          countryOptions += '<option value="' + country + '">' + country.toUpperCase() + '</option>';
+      if (properties.countries.hasOwnProperty(country) && !knownCountries.has(country)) {
+        additionalCountries.push(country);
       }
+    }
+    additionalCountries.sort(function(a, b) {
+      return a.toLowerCase().localeCompare(b.toLowerCase());
+    });
+    
+    // Add sorted additional countries to options
+    for (var i = 0; i < additionalCountries.length; i++) {
+      countryOptions += '<option value="' + additionalCountries[i] + '">' + additionalCountries[i].toUpperCase() + '</option>';
     }
     countryOptions += '</select>';
     
-    natureOptions += '<option value="rest">RestFul API</option>';
-    natureOptions += '<option value="msg">Messaging</option>';
-    natureOptions += '<option value="document">Document</option>';
+    // Define nature options in alphabetical order (grouped by type first, then alphabetized within groups)
+    // Exchange mechanism options
     natureOptions += '<option value="content">No Exchange</option>';
-    natureOptions += '<option value="clincore">Clinical Core</option>';
-    natureOptions += '<option value="patientAdmin">Patient Administration</option>';
-    natureOptions += '<option value="carePlanning">Care Planning / Management</option>';
-    natureOptions += '<option value="financials">Financials</option>';
-    natureOptions += '<option value="medsMgmt">Medication Management</option>';
-    natureOptions += '<option value="scheduling">Scheduling</option>';
-    natureOptions += '<option value="diagnostics">Diagnostics / Imaging</option>';
-    natureOptions += '<option value="medsReg">Medication Registration</option>';
-    natureOptions += '<option value="measures">Quality Measures</option>';
-    natureOptions += '<option value="ebm">Evidence Based Medicine</option>';
-    natureOptions += '<option value="questionnaire">Questionnaires / Forms</option>';
-    natureOptions += '<option value="trials">Clinical Trial Management</option>';
+    natureOptions += '<option value="document">Document</option>';
+    natureOptions += '<option value="msg">Messaging</option>';
+    natureOptions += '<option value="rest">RestFul API</option>';
+    
+    // Content domain options (alphabetically sorted)
+    var contentDomainOptions = [
+      '<option value="carePlanning">Care Planning / Management</option>',
+      '<option value="clincore">Clinical Core</option>',
+      '<option value="diagnostics">Diagnostics / Imaging</option>',
+      '<option value="ebm">Evidence Based Medicine</option>',
+      '<option value="financials">Financials</option>',
+      '<option value="measures">Quality Measures</option>',
+      '<option value="medsMgmt">Medication Management</option>',
+      '<option value="medsReg">Medication Registration</option>',
+      '<option value="patientAdmin">Patient Administration</option>',
+      '<option value="questionnaire">Questionnaires / Forms</option>',
+      '<option value="scheduling">Scheduling</option>',
+      '<option value="trials">Clinical Trial Management</option>'
+    ];
+    
+    // Add sorted content domain options
+    contentDomainOptions.sort();
+    for (var i = 0; i < contentDomainOptions.length; i++) {
+      natureOptions += contentDomainOptions[i];
+    }
     natureOptions += '</select>';
 
     var div = document.getElementById("data");
