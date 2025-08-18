@@ -1,0 +1,69 @@
+{
+  "resourceType" : "Encounter",
+  "id" : "obs-encounter-example-2",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter obs-encounter-example-2</b></p><a name=\"obs-encounter-example-2\"> </a><a name=\"hcobs-encounter-example-2\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-encounter.html\">US Core Encounter Profileversion: null6.1.0)</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.19.5.1.698.8</code>/20005104252\u00a0(use:\u00a0usual,\u00a0)</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/6.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-OBSENC\">ActCode OBSENC</a>: observation encounter</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 448951000124107}\">Observation bed</span></p><p><b>subject</b>: <a href=\"Patient-bh-patient-example.html\">James Wolff</a></p><p><b>period</b>: 2024-02-01 22:02:00-0500 --&gt; 2024-02-02 12:00:00-0500</p><h3>Diagnoses</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Condition</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Condition-panic-attack-condition-example-1.html\">Panic Attack</a></td></tr></table><h3>Locations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Location</b></td><td><b>PhysicalType</b></td><td><b>Period</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Location-obs-location-example-1.html\">Hospital bed - OBSERVATION</a></td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/location-physical-type wa}\">Ward</span></td><td>2024-02-01 16:02:00-0500 --&gt; 2024-02-01 22:00:00-0500</td></tr></table><p><b>partOf</b>: <a href=\"Encounter-discharge-encounter-example-3.html\">Encounter: identifier = urn:oid:2.16.840.1.113883.19.5.1.698.8#40005104253\u00a0(use:\u00a0usual,\u00a0); status = finished; class = observation encounter (ActCode#OBSENC); type = Admission to observation unit (procedure); period = 2024-02-01 16:02:00-0500 --&gt; 2024-02-02 12:00:00-0500</a></p></div>"
+  },
+  "identifier" : [{
+    "use" : "usual",
+    "system" : "urn:oid:2.16.840.1.113883.19.5.1.698.8",
+    "value" : "20005104252"
+  }],
+  "status" : "finished",
+  "class" : {
+    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code" : "OBSENC",
+    "display" : "observation encounter"
+  },
+  "type" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "448951000124107",
+      "display" : "Admission to observation unit (procedure)"
+    }],
+    "text" : "Observation bed"
+  }],
+  "subject" : {
+    "reference" : "Patient/bh-patient-example",
+    "display" : "James Wolff"
+  },
+  "period" : {
+    "start" : "2024-02-01T22:02:00-05:00",
+    "end" : "2024-02-02T12:00:00-05:00"
+  },
+  "diagnosis" : [{
+    "condition" : {
+      "reference" : "Condition/panic-attack-condition-example-1",
+      "display" : "Panic Attack"
+    }
+  }],
+  "location" : [{
+    "location" : {
+      "reference" : "Location/obs-location-example-1",
+      "display" : "Hospital bed - OBSERVATION"
+    },
+    "physicalType" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/location-physical-type",
+        "code" : "wa",
+        "display" : "Ward"
+      }]
+    },
+    "period" : {
+      "start" : "2024-02-01T16:02:00-05:00",
+      "end" : "2024-02-01T22:00:00-05:00"
+    }
+  }],
+  "partOf" : {
+    "reference" : "Encounter/discharge-encounter-example-3",
+    "identifier" : {
+      "use" : "usual",
+      "system" : "urn:oid:2.16.840.1.113883.19.5.1.698.8",
+      "value" : "40005104253"
+    }
+  }
+}

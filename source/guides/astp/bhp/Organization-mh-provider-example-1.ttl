@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/astp/bhp/Organization/mh-provider-example-1> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "mh-provider-example-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|6.1.0"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|6.1.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization mh-provider-example-1</b></p><a name=\"mh-provider-example-1\"> </a><a name=\"hcmh-provider-example-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-organization.html\">US Core Organization Profileversion: null6.1.0)</a></p></div><p><b>active</b>: true</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/organization-type prov}\">Healthcare Provider</span></p><p><b>name</b>: Florida Mental Health Provider Associates</p><p><b>telecom</b>: ph: (+1) 734-677-7777</p><p><b>address</b>: 3300 WASHTENAW AVE STE 227 MIAMI FL 01002 USA </p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/organization-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "prov" ] ;
+       fhir:display [ fhir:v "Healthcare Provider" ]
+     ] )
+  ] ) ; # 
+  fhir:name [ fhir:v "Florida Mental Health Provider Associates"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "(+1) 734-677-7777" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "3300 WASHTENAW AVE STE 227" ] ) ;
+     fhir:city [ fhir:v "MIAMI" ] ;
+     fhir:state [ fhir:v "FL" ] ;
+     fhir:postalCode [ fhir:v "01002" ] ;
+     fhir:country [ fhir:v "USA" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/astp/bhp/RelatedPerson/adult-child-relatedperson-example-1> a fhir:RelatedPerson ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "adult-child-relatedperson-example-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson|6.1.0"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson|6.1.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson adult-child-relatedperson-example-1</b></p><a name=\"adult-child-relatedperson-example-1\"> </a><a name=\"hcadult-child-relatedperson-example-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-relatedperson.html\">US Core RelatedPerson Profileversion: null6.1.0)</a></p></div><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"Patient-bh-patient-example.html\">James Wolff</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode CHILD}\">child</span></p><p><b>name</b>: Sarah Wolff (Official)</p><p><b>telecom</b>: ph: 555-555-5555(Home), <a href=\"mailto:sarah.wolff@example.com\">sarah.wolff@example.com</a></p><p><b>birthDate</b>: 1996-01-28</p><p><b>address</b>: 80A VILLAGE ST NEW HOLLAND PA 17557 (home)</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:patient [
+     fhir:link <http://fhir.org/guides/astp/bhp/Patient/bh-patient-example> ;
+     fhir:reference [ fhir:v "Patient/bh-patient-example" ] ;
+     fhir:display [ fhir:v "James Wolff" ]
+  ] ; # 
+  fhir:relationship ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "CHILD" ] ;
+       fhir:display [ fhir:v "child" ]
+     ] )
+  ] ) ; # 
+  fhir:name ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:family [ fhir:v "Wolff" ] ;
+     fhir:given ( [ fhir:v "Sarah" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "555-555-5555" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "sarah.wolff@example.com" ] ;
+     fhir:use [ fhir:v "home" ]
+  ] ) ; # 
+  fhir:birthDate [ fhir:v "1996-01-28"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:line ( [ fhir:v "80A VILLAGE ST" ] ) ;
+     fhir:city [ fhir:v "NEW HOLLAND" ] ;
+     fhir:state [ fhir:v "PA" ] ;
+     fhir:postalCode [ fhir:v "17557" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/astp/bhp/Consent/SDOHCC-ConsentInformationDisclosure-example-1> a fhir:Consent ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "SDOHCC-ConsentInformationDisclosure-example-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p class=\"res-header-id\">\n                <b>Consent SDOHCC-ConsentInformationDisclosure-example-1</b>\n            </p>\n            <p><b>status</b>: Active</p>\n            <p><b>scope</b>: Primary HIPAA Consent</p>\n            <p><b>category</b>: Information Disclosure</p>\n            <p><b>patient</b>: <a href=\"Patient-bh-patient-example.html\">James Wolff</a></p>\n            <p><b>date</b>: 2024-02-01</p>\n            <p><b>organization</b>: Organization Florida Mental Health Provider Associates</p>\n            \n            <blockquote>\n                <p>\n                    <b>content</b>\n                </p>\n                <h3>Attachments</h3>\n                <table class=\"grid\">\n                    <tr>\n                        <td style=\"display: none\">-</td>\n                        <td>\n                            <b>ContentType</b>\n                        </td>\n                        <td>\n                            <b>Data</b>\n                        </td>\n                    </tr>\n                    <tr>\n                        <td style=\"display: none\">*</td>\n                        <td>text/plain</td>\n                        <td>\n                            <code>Tm8gYWN0aXZpdHkgcmVzdHJpY3Rpb24sIHJlZ3VsYXIgZGlldCwgZm9sbG93IHVwIGluIHR3byB0byB0aHJlZSB3ZWVrcyB3aXRoIHByaW1hcnkgY2FyZSBwcm92aWRlci4=</code>\n                        </td>\n                    </tr>\n                </table>\n            </blockquote>\n            <p><b>policyRule</b>: HIPAA Authorization</p>\n        </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:scope [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/consentscope"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "patient-privacy" ] ;
+       fhir:display [ fhir:v "Privacy Consent" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "IDSCL" ] ;
+       fhir:display [ fhir:v "information disclosure" ]
+     ] )
+  ] ) ; # 
+  fhir:patient [
+     fhir:link <http://fhir.org/guides/astp/bhp/Patient/bh-patient-example> ;
+     fhir:reference [ fhir:v "Patient/bh-patient-example" ] ;
+     fhir:display [ fhir:v "James Wolff" ]
+  ] ; # 
+  fhir:dateTime [ fhir:v "2024-02-01"^^xsd:date] ; # 
+  fhir:organization ( [
+     fhir:link <http://fhir.org/guides/astp/bhp/Organization/mh-provider-example-1> ;
+     fhir:reference [ fhir:v "Organization/mh-provider-example-1" ]
+  ] ) ; # 
+  fhir:source [
+     a fhir:Attachment ;
+     fhir:contentType [ fhir:v "text/plain" ] ;
+     fhir:data [ fhir:v "Tm8gYWN0aXZpdHkgcmVzdHJpY3Rpb24sIHJlZ3VsYXIgZGlldCwgZm9sbG93IHVwIGluIHR3byB0byB0aHJlZSB3ZWVrcyB3aXRoIHByaW1hcnkgY2FyZSBwcm92aWRlci4="^^xsd:base64Binary ]
+  ] ; # 
+  fhir:policyRule [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/consentpolicycodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "hipaa-auth" ] ;
+       fhir:display [ fhir:v "HIPAA Authorization" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

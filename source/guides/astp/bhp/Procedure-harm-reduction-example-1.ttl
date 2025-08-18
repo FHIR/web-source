@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/astp/bhp/Procedure/harm-reduction-example-1> a fhir:Procedure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "harm-reduction-example-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure|6.1.0"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure|6.1.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Procedure harm-reduction-example-1</b></p><a name=\"harm-reduction-example-1\"> </a><a name=\"hcharm-reduction-example-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-procedure.html\">US Core Procedure Profileversion: null6.1.0)</a></p></div><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 720175009}\">Alcohol harm reduction program (regime/therapy)</span></p><p><b>subject</b>: <a href=\"Patient-bh-patient-example.html\">James Wolff</a></p><p><b>performed</b>: 2024-03-23</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:720175009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "720175009" ] ;
+       fhir:display [ fhir:v "Alcohol harm reduction program (regime/therapy)" ]
+     ] ) ;
+     fhir:text [ fhir:v "Alcohol harm reduction program (regime/therapy)" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.org/guides/astp/bhp/Patient/bh-patient-example> ;
+     fhir:reference [ fhir:v "Patient/bh-patient-example" ] ;
+     fhir:display [ fhir:v "James Wolff" ]
+  ] ; # 
+  fhir:performed [
+     a fhir:dateTime ;
+     fhir:v "2024-03-23"^^xsd:date
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

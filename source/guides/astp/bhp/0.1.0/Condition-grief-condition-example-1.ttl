@@ -1,0 +1,79 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/astp/bhp/Condition/grief-condition-example-1> a fhir:Condition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "grief-condition-example-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns|6.1.0"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition-problems-health-concerns|6.1.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Condition grief-condition-example-1</b></p><a name=\"grief-condition-example-1\"> </a><a name=\"hcgrief-condition-example-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-condition-problems-health-concerns.html\">US Core Condition Problems and Health Concerns Profileversion: null6.1.0)</a></p></div><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}\">Confirmed</span></p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/core/CodeSystem/condition-category health-concern}\">Health Concern</span>, <span title=\"Codes:{http://hl7.org/fhir/us/core/CodeSystem/us-core-category sdoh}\">Social Determinants Of Health</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 723914003}, {http://hl7.org/fhir/sid/icd-10-cm F43.81}\">Prolonged grief disorder</span></p><p><b>subject</b>: <a href=\"Patient-bh-patient-example.html\">James Wolff</a></p><p><b>onset</b>: 2007-12-14</p><p><b>recordedDate</b>: 2007-12-14 07:15:07-0800</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ] ;
+       fhir:display [ fhir:v "Active" ]
+     ] )
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/condition-ver-status"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "4.0.0" ] ;
+       fhir:code [ fhir:v "confirmed" ] ;
+       fhir:display [ fhir:v "Confirmed" ]
+     ] ) ;
+     fhir:text [ fhir:v "Confirmed" ]
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/core/CodeSystem/condition-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "health-concern" ] ;
+       fhir:display [ fhir:v "Health Concern" ]
+     ] ) ;
+     fhir:text [ fhir:v "Health Concern" ]
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/core/CodeSystem/us-core-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "sdoh" ] ;
+       fhir:display [ fhir:v "SDOH" ]
+     ] ) ;
+     fhir:text [ fhir:v "Social Determinants Of Health" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:723914003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "723914003" ] ;
+       fhir:display [ fhir:v "Prolonged grief disorder" ]
+     ] [
+       fhir:system [ fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "F43.81" ] ;
+       fhir:display [ fhir:v "Prolonged grief disorder" ]
+     ] ) ;
+     fhir:text [ fhir:v "Prolonged grief disorder" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.org/guides/astp/bhp/Patient/bh-patient-example> ;
+     fhir:reference [ fhir:v "Patient/bh-patient-example" ] ;
+     fhir:display [ fhir:v "James Wolff" ]
+  ] ; # 
+  fhir:onset [
+     a fhir:dateTime ;
+     fhir:v "2007-12-14"^^xsd:date
+  ] ; # 
+  fhir:recordedDate [ fhir:v "2007-12-14T07:15:07-08:00"^^xsd:dateTime] . # 
+
+# -------------------------------------------------------------------------------------
+

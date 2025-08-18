@@ -1,0 +1,56 @@
+{
+  "resourceType" : "Observation",
+  "id" : "bh-grant-info-observation-example-1",
+  "meta" : {
+    "profile" : ["http://fhir.org/guides/astp/bhp/StructureDefinition/bh-grant-info"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p>\n                <b>Behavioral Health Grant Information Observation</b>\n                <a name=\"program-grant-info\"> </a>\n                <a name=\"hcprogram-grant-info\"> </a>\n            </p>\n            <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n                <p style=\"margin-bottom: 0px\">Resource Observation &quot;program-grant-info&quot; </p>\n                <p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bh-grant-info.html\">Grant Information Observation\n                        Profile</a></p>\n            </div>\n            <blockquote>\n                <p>\n                    <b>Behavioral Health Grant Information Extension</b>\n                </p>\n                <blockquote>\n                    <p>\n                        <b>url</b>\n                    </p>\n                    <code>program_id</code>\n                </blockquote>\n                <p><b>value</b> SP-23-004 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> <a href=\"https://www.samhsa.gov/\">(SAMHSA) </a></span></p>\n                <blockquote>\n                    <p>\n                        <b>url</b>\n                    </p>\n                    <code>grant_number</code>\n                </blockquote>\n                <p><b>value</b> SP083783-01</p>\n            </blockquote>\n\n            <p><b>status</b>: final</p>\n            <p><b>category</b>: Program Funding Information</p>\n            <p><b>code</b>: Behavioral Health Grant Funding Type</p>\n\n            <p><b>subject</b>: Patient/bh-patient-example: James Wolff</p>\n\n            <p><b>effectiveDateTime</b>: 2024-02-01</p>\n            <p><b>performer</b>: Organization: Florida Mental Health Provider Associates </p>\n            <p><b>valueCodeableConcept</b>: Discretionary Funding </p>\n\n        </div>"
+  },
+  "extension" : [{
+    "url" : "http://fhir.org/guides/astp/bhp/StructureDefinition/program-info",
+    "extension" : [{
+      "url" : "program-id",
+      "valueString" : "SP-23-004"
+    },
+    {
+      "url" : "grant-number",
+      "valueString" : "SP083783-01"
+    }]
+  }],
+  "status" : "final",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://fhir.org/guides/astp/bhp/CodeSystem/bh-funding-type-codes",
+      "code" : "funding-program-info",
+      "display" : "Program Funding Information"
+    }],
+    "text" : "Program Funding Information"
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://fhir.org/guides/astp/bhp/CodeSystem/bh-funding-type-codes",
+      "code" : "grant-funding-type",
+      "display" : "Grant Funding Type"
+    }],
+    "text" : "Behavioral Health Grant Funding Type"
+  },
+  "subject" : {
+    "reference" : "Patient/bh-patient-example",
+    "display" : "James Wolff"
+  },
+  "effectiveDateTime" : "2024-02-01",
+  "performer" : [{
+    "reference" : "Organization/mh-provider-example-1",
+    "display" : "Florida Mental Health Provider Associates"
+  }],
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://fhir.org/guides/astp/bhp/CodeSystem/bh-funding-type-codes",
+      "code" : "discretionary",
+      "display" : "Discretionary Funding"
+    }],
+    "text" : "Discretionary Grant Funding"
+  }
+}

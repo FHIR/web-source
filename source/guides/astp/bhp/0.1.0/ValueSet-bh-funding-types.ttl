@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/astp/bhp/ValueSet/bh-funding-types> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "bh-funding-types"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet bh-funding-types</b></p><a name=\"bh-funding-types\"> </a><a name=\"hcbh-funding-types\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-bh-funding-type-codes.html\"><code>http://fhir.org/guides/astp/bhp/CodeSystem/bh-funding-type-codes</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-bh-funding-type-codes.html#bh-funding-type-codes-discretionary\">discretionary</a></td><td>Discretionary Funding</td><td>Discretionary Funding</td></tr><tr><td><a href=\"CodeSystem-bh-funding-type-codes.html#bh-funding-type-codes-grant-funding-type\">grant-funding-type</a></td><td>Grant Funding Type</td><td>Grant Funding Type</td></tr><tr><td><a href=\"CodeSystem-bh-funding-type-codes.html#bh-funding-type-codes-funding-program-info\">funding-program-info</a></td><td>Program Funding Information</td><td>Program Funding Information</td></tr></table></li></ul></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://fhir.org/guides/astp/bhp/ValueSet/bh-funding-types"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "BehavioralHealthProgramFundingTypes"] ; # 
+  fhir:title [ fhir:v "Behavioral Health Program Funding Types"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2025-08-18T22:03:45+10:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "ASTP / BHIT"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.healthit.gov/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This ValueSet defines coded concepts pertaining to a Behavioral Health program/grant."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://fhir.org/guides/astp/bhp/CodeSystem/bh-funding-type-codes"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "discretionary" ] ;
+         fhir:display [ fhir:v "Discretionary Funding" ]
+       ] [
+         fhir:code [ fhir:v "grant-funding-type" ] ;
+         fhir:display [ fhir:v "Grant Funding Type" ]
+       ] [
+         fhir:code [ fhir:v "funding-program-info" ] ;
+         fhir:display [ fhir:v "Program Funding Information" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

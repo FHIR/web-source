@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/astp/bhp/Practitioner/pcp-provider-example-1> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pcp-provider-example-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|6.1.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner pcp-provider-example-1</b></p><a name=\"pcp-provider-example-1\"> </a><a name=\"hcpcp-provider-example-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-practitioner.html\">US Core Practitioner Profileversion: null6.1.0)</a></p></div><p><b>identifier</b>: <code>http://ncsbn.org/identifier/example-system</code>/2233551235</p><p><b>name</b>: Doc Family </p><p><b>telecom</b>: ph: 999-999-9999(Work), <a href=\"mailto:doc.family@example.com\">doc.family@example.com</a></p><p><b>address</b>: 444 Main Street Miami FL 33102 (work)</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://ncsbn.org/identifier/example-system"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2233551235" ]
+  ] ) ; #  <identifier>
+#        <system value="http://hl7.org/fhir/sid/us-npi"/>
+#        <value value="8757588713"/>
+#    </identifier> 
+  fhir:name ( [
+     fhir:family [ fhir:v "Family" ] ;
+     fhir:given ( [ fhir:v "Doc" ] ) ;
+     fhir:prefix ( [ fhir:v "Dr" ] )
+  ] ) ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "999-999-9999" ] ;
+     fhir:use [ fhir:v "work" ]
+  ] [
+     fhir:system [ fhir:v "email" ] ;
+     fhir:value [ fhir:v "doc.family@example.com" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "work" ] ;
+     fhir:line ( [ fhir:v "444 Main Street" ] ) ;
+     fhir:city [ fhir:v "Miami" ] ;
+     fhir:state [ fhir:v "FL" ] ;
+     fhir:postalCode [ fhir:v "33102" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

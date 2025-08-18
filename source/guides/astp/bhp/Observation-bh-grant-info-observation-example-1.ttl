@@ -1,0 +1,80 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/astp/bhp/Observation/bh-grant-info-observation-example-1> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "bh-grant-info-observation-example-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://fhir.org/guides/astp/bhp/StructureDefinition/bh-grant-info"^^xsd:anyURI ;
+       fhir:link <http://fhir.org/guides/astp/bhp/StructureDefinition/bh-grant-info>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p>\n                <b>Behavioral Health Grant Information Observation</b>\n                <a name=\"program-grant-info\"> </a>\n                <a name=\"hcprogram-grant-info\"> </a>\n            </p>\n            <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n                <p style=\"margin-bottom: 0px\">Resource Observation \"program-grant-info\" </p>\n                <p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-bh-grant-info.html\">Grant Information Observation\n                        Profile</a></p>\n            </div>\n            <blockquote>\n                <p>\n                    <b>Behavioral Health Grant Information Extension</b>\n                </p>\n                <blockquote>\n                    <p>\n                        <b>url</b>\n                    </p>\n                    <code>program_id</code>\n                </blockquote>\n                <p><b>value</b> SP-23-004 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> <a href=\"https://www.samhsa.gov/\">(SAMHSA) </a></span></p>\n                <blockquote>\n                    <p>\n                        <b>url</b>\n                    </p>\n                    <code>grant_number</code>\n                </blockquote>\n                <p><b>value</b> SP083783-01</p>\n            </blockquote>\n\n            <p><b>status</b>: final</p>\n            <p><b>category</b>: Program Funding Information</p>\n            <p><b>code</b>: Behavioral Health Grant Funding Type</p>\n\n            <p><b>subject</b>: Patient/bh-patient-example: James Wolff</p>\n\n            <p><b>effectiveDateTime</b>: 2024-02-01</p>\n            <p><b>performer</b>: Organization: Florida Mental Health Provider Associates </p>\n            <p><b>valueCodeableConcept</b>: Discretionary Funding </p>\n\n        </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://fhir.org/guides/astp/bhp/StructureDefinition/program-info"^^xsd:anyURI ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "program-id"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "SP-23-004"
+       ]
+     ] [
+       fhir:url [ fhir:v "grant-number"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:string ;
+         fhir:v "SP083783-01"
+       ]
+     ] )
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://fhir.org/guides/astp/bhp/CodeSystem/bh-funding-type-codes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "funding-program-info" ] ;
+       fhir:display [ fhir:v "Program Funding Information" ]
+     ] ) ;
+     fhir:text [ fhir:v "Program Funding Information" ]
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://fhir.org/guides/astp/bhp/CodeSystem/bh-funding-type-codes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "grant-funding-type" ] ;
+       fhir:display [ fhir:v "Grant Funding Type" ]
+     ] ) ;
+     fhir:text [ fhir:v "Behavioral Health Grant Funding Type" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.org/guides/astp/bhp/Patient/bh-patient-example> ;
+     fhir:reference [ fhir:v "Patient/bh-patient-example" ] ;
+     fhir:display [ fhir:v "James Wolff" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:dateTime ;
+     fhir:v "2024-02-01"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:link <http://fhir.org/guides/astp/bhp/Organization/mh-provider-example-1> ;
+     fhir:reference [ fhir:v "Organization/mh-provider-example-1" ] ;
+     fhir:display [ fhir:v "Florida Mental Health Provider Associates" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://fhir.org/guides/astp/bhp/CodeSystem/bh-funding-type-codes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "discretionary" ] ;
+       fhir:display [ fhir:v "Discretionary Funding" ]
+     ] ) ;
+     fhir:text [ fhir:v "Discretionary Grant Funding" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

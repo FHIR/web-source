@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/astp/bhp/Immunization/flu-vaccine-example-1> a fhir:Immunization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "flu-vaccine-example-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization|6.1.0"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-immunization|6.1.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Immunization flu-vaccine-example-1</b></p><a name=\"flu-vaccine-example-1\"> </a><a name=\"hcflu-vaccine-example-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-immunization.html\">US Core Immunization Profileversion: null6.1.0)</a></p></div><p><b>status</b>: Completed</p><p><b>vaccineCode</b>: <span title=\"Codes:{http://hl7.org/fhir/sid/cvx 197}, {http://hl7.org/fhir/sid/ndc 49281012165}\">influenza, high-dose, quadrivalent</span></p><p><b>patient</b>: <a href=\"Patient-bh-patient-example.html\">James Wolff</a></p><p><b>occurrence</b>: 2023-11-19 12:46:57-0800</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:vaccineCode [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/sid/cvx"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "197" ] ;
+       fhir:display [ fhir:v "influenza, high-dose, quadrivalent" ]
+     ] [
+       fhir:system [ fhir:v "http://hl7.org/fhir/sid/ndc"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "49281012165" ] ;
+       fhir:display [ fhir:v "FLUZONE High-Dose Quadrivalent Northern Hemisphere, 10 SYRINGE, GLASS in 1 PACKAGE (49281-121-65) > .7 mL in 1 SYRINGE, GLASS (49281-121-88) (package)" ]
+     ] ) ;
+     fhir:text [ fhir:v "influenza, high-dose, quadrivalent" ]
+  ] ; # 
+  fhir:patient [
+     fhir:link <http://fhir.org/guides/astp/bhp/Patient/bh-patient-example> ;
+     fhir:reference [ fhir:v "Patient/bh-patient-example" ] ;
+     fhir:display [ fhir:v "James Wolff" ]
+  ] ; # 
+  fhir:occurrence [
+     a fhir:dateTime ;
+     fhir:v "2023-11-19T12:46:57-08:00"^^xsd:dateTime
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

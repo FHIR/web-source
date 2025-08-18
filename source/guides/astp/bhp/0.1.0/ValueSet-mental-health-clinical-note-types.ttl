@@ -1,0 +1,56 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/astp/bhp/ValueSet/mental-health-clinical-note-types> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "mental-health-clinical-note-types"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet mental-health-clinical-note-types</b></p><a name=\"mental-health-clinical-note-types\"> </a><a name=\"hcmental-health-clinical-note-types\"> </a><ul><li>Include these codes as defined in <a href=\"http://loinc.org\"><code>http://loinc.org</code></a> version <code>2.77</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"https://loinc.org/34785-6/\">34785-6</a></td><td>Mental Health Consult Note</td></tr><tr><td><a href=\"https://loinc.org/78263-1/\">78263-1</a></td><td>Mental Health Discharge Summary Note</td></tr><tr><td><a href=\"https://loinc.org/78306-8/\">78306-8</a></td><td>Mental Health History and Physical Note</td></tr><tr><td><a href=\"https://loinc.org/78472-8/\">78472-8</a></td><td>Mental Health Procedure Note</td></tr><tr><td><a href=\"https://loinc.org/34904-3/\">34904-3</a></td><td>Mental Health Progress Note</td></tr></table></li></ul></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:url [ fhir:v "http://fhir.org/guides/astp/bhp/ValueSet/mental-health-clinical-note-types"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "MentalHealthClinicalNoteTypes"] ; # 
+  fhir:title [ fhir:v "Mental Health Clinical Note Types"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v true] ; # 
+  fhir:date [ fhir:v "2025-08-18T22:03:45+10:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "ASTP / BHIT"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.healthit.gov/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This ValueSet defines the LOINC codes for Mental Health Clinical Note types."] ; # 
+  fhir:compose [
+     fhir:inactive [ fhir:v false ] ;
+     fhir:include ( [
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:version [ fhir:v "2.77" ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "34785-6" ] ;
+         fhir:display [ fhir:v "Mental Health Consult Note" ]
+       ] [
+         fhir:code [ fhir:v "78263-1" ] ;
+         fhir:display [ fhir:v "Mental Health Discharge Summary Note" ]
+       ] [
+         fhir:code [ fhir:v "78306-8" ] ;
+         fhir:display [ fhir:v "Mental Health History and Physical Note" ]
+       ] [
+         fhir:code [ fhir:v "78472-8" ] ;
+         fhir:display [ fhir:v "Mental Health Procedure Note" ]
+       ] [
+         fhir:code [ fhir:v "34904-3" ] ;
+         fhir:display [ fhir:v "Mental Health Progress Note" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

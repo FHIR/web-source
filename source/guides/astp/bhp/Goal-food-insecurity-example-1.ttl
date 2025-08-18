@@ -1,0 +1,78 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/astp/bhp/Goal/food-insecurity-example-1> a fhir:Goal ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "food-insecurity-example-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Goal>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Goal food-insecurity-example-1</b></p><a name=\"food-insecurity-example-1\"> </a><a name=\"hcfood-insecurity-example-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.3/StructureDefinition-SDOHCC-Goal.html\">SDOHCC Goal</a></p></div><p><b>lifecycleStatus</b>: Active</p><p><b>achievementStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/goal-achievement improving}\">Improving</span></p><p><b>category</b>: <span title=\"Codes:{http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes food-insecurity}\">Food Insecurity</span></p><p><b>description</b>: <span title=\"Codes:{http://snomed.info/sct 1078229009}\">Food security</span></p><p><b>subject</b>: <a href=\"Patient-bh-patient-example.html\">James Wolff</a></p><h3>Targets</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Measure</b></td><td><b>Detail[x]</b></td><td><b>Due[x]</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://loinc.org 88124-3}\">Food insecurity risk [HVS]</span></td><td><span title=\"Codes:{http://loinc.org LA19983-8}\">No risk</span></td><td>2025-12-10</td></tr></table><p><b>statusDate</b>: 2024-02-01</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:lifecycleStatus [ fhir:v "active"] ; # 
+  fhir:achievementStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/goal-achievement"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "improving" ] ;
+       fhir:display [ fhir:v "Improving" ]
+     ] )
+  ] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "food-insecurity" ] ;
+       fhir:display [ fhir:v "Food Insecurity" ]
+     ] )
+  ] ) ; # 
+  fhir:description [
+     fhir:coding ( [
+       a sct:1078229009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "1078229009" ] ;
+       fhir:display [ fhir:v "Food security" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.org/guides/astp/bhp/Patient/bh-patient-example> ;
+     fhir:reference [ fhir:v "Patient/bh-patient-example" ] ;
+     fhir:display [ fhir:v "James Wolff" ]
+  ] ; # 
+  fhir:target ( [
+     fhir:measure [
+       fhir:coding ( [
+         a loinc:88124-3 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "88124-3" ] ;
+         fhir:display [ fhir:v "Food insecurity risk [HVS]" ]
+       ] )
+     ] ;
+     fhir:detail [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a loinc:LA19983-8 ;
+         fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "LA19983-8" ] ;
+         fhir:display [ fhir:v "No risk" ]
+       ] )
+     ] ;
+     fhir:due [
+       a fhir:date ;
+       fhir:v "2025-12-10"^^xsd:date
+     ]
+  ] ) ; # 
+  fhir:statusDate [ fhir:v "2024-02-01"^^xsd:date] . # 
+
+# -------------------------------------------------------------------------------------
+

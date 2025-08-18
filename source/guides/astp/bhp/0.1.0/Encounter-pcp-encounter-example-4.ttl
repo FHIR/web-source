@@ -1,0 +1,54 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/astp/bhp/Encounter/pcp-encounter-example-4> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pcp-encounter-example-4"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter pcp-encounter-example-4</b></p><a name=\"pcp-encounter-example-4\"> </a><a name=\"hcpcp-encounter-example-4\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-encounter.html\">US Core Encounter Profileversion: null6.1.0)</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.19.5.1.698.8</code>/40005104253 (use: usual, )</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/6.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode AMB</a>: ambulatory</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 737470001}\">Primary care encounter</span></p><p><b>subject</b>: <a href=\"Patient-bh-patient-example.html\">James Wolff</a></p><p><b>period</b>: 2024-02-15 12:02:00-0500 --&gt; 2024-02-15 12:32:00-0500</p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.19.5.1.698.8"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "40005104253" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "AMB" ] ;
+     fhir:display [ fhir:v "ambulatory" ]
+  ] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       a sct:737470001 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "737470001" ] ;
+       fhir:display [ fhir:v "Primary care management (procedure)" ]
+     ] ) ;
+     fhir:text [ fhir:v "Primary care encounter" ]
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <http://fhir.org/guides/astp/bhp/Patient/bh-patient-example> ;
+     fhir:reference [ fhir:v "Patient/bh-patient-example" ] ;
+     fhir:display [ fhir:v "James Wolff" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2024-02-15T12:02:00-05:00"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2024-02-15T12:32:00-05:00"^^xsd:dateTime ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

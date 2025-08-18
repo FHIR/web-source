@@ -1,0 +1,924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>+BH to FHIR Examples - US Behavioral Health Profiles Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/fhir-opa.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="project-nav">
+  <a id="hrsa-logo" no-external="true" href="https://www.healthit.gov/">
+    <img height="50" alt="Visit the website" src="images/images.png"/>
+  </a>
+</div>
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="images/fhir-logo.png"/> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - CI Build
+
+
+
+  <img alt="United States of America flag" src="assets/images/usa.svg" height="16" title="United States of America"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Background</a>
+    <ul class="dropdown-menu">
+      <li><a href="uscdi_bh_elements.html">USCDI+ BH Elements</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">User Story</a>
+    <ul class="dropdown-menu">
+      <li><a href="summary_story.html">Summary Story</a></li>
+      <li><a href="full_story.html">Full Story</a></li>
+      <li><a href="quick_facts.html">Quick Facts</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Technical Artifacts</a>
+    <ul class="dropdown-menu">
+      <li><a href="bh_to_fhir_examples.html">+BH to FHIR Examples</a></li>
+      <li><a href="bh_to_fhir_profiles.html">+BH to FHIR Profiles</a></li>
+      <li><a href="artifacts.html">Artifact Index</a></li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="change_log.html">Change Log</a></li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>+BH to FHIR Examples</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the US Behavioral Health Profiles (v0.1.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a data-no-external="true" href="http://fhir.org/guides/astp/bhp/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>+BH to FHIR Examples</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<p>This table provides a correlation between USCDI+ behavioral health data elements and their corresponding FHIR elements, illustrating how each data element is represented in the BH FHIR implementation guide. It includes specific examples and narratives for each matched representation, demonstrating how they are applied in practical scenarios, such as documenting allergies, health assessments, clinical notes, and patient demographics. This ensures that healthcare data is accurately represented and easily interoperable across different health information systems.</p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-yf6x{background-color:#ffffff;color:#467886;text-align:left;text-decoration:underline;vertical-align:top}
+.tg .tg-1wig{font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-ycr8{background-color:#ffffff;text-align:left;vertical-align:top}
+.tg .tg-2c4j{background-color:#ffffff;color:#06C;text-align:left;vertical-align:top}
+.tg .tg-2oxb{background-color:#ffffff;color:#467886;text-align:left;vertical-align:top}
+.tg .tg-w98d{background-color:#156082;color:#FFF;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-ktyi{background-color:#FFF;text-align:left;vertical-align:top}
+.tg .tg-zzem{color:#467886;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+.tg .tg-yk8o{color:#467886;text-align:left;text-decoration:underline;vertical-align:top}
+.tg .tg-7zrl{text-align:left;vertical-align:bottom}
+</style>
+
+<table class="tg"> <thead>
+  <tr>
+     <th class="tg-w98d">USCDI+ BH <br /> Data Class</th>
+     <th class="tg-w98d"><span style="color:white;background-color:#156082">USCDI+ BH </span><br /><span style="color:white;background-color:#156082"> Data Element</span></th>
+     <th class="tg-w98d"><span style="color:white;background-color:#156082">FHIR Example</span></th>
+     <th class="tg-w98d"><span style="font-weight:700;color:white;background-color:#156082">FHIR Narrative</span></th>
+  </tr></thead>
+<tbody>
+  <!-- <tr>
+     <td class="tg-ktyi">Adverse Event</td>
+     <td class="tg-1wig">Adverse Event</td>
+     <td class="tg-zzem"><a href="AdverseEvent-fall-adverse-event-example-1.html">fall-adverse-event-example</a></td>
+     <td class="tg-0lax">Example of patient adverse fall event</td>
+  </tr> -->
+  <tr>
+     <td class="tg-0lax">Allergies and Intolerances</td>
+     <td class="tg-1wig">Reaction</td>
+         <td class="tg-zzem"><a href="AllergyIntolerance-peanut-allergy-example-1.html">peanut-allergy-example</a><br /><a href="AllergyIntolerance-penicillin-allergy-example-1.html"> penicillin-allergy-example</a></td>
+     <td class="tg-0lax">Examples of allergic response to peanuts and penicillin</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Allergies and Intolerances</td>
+     <td class="tg-1wig">Substance (Medication)</td>
+     <td class="tg-zzem"><a href="AllergyIntolerance-penicillin-allergy-example-1.html">penicillin-allergy-example</a></td>
+     <td class="tg-0lax">Example of patient documented penicillin allergy</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Allergies and Intolerances</td>
+     <td class="tg-1wig">Substance (Non-Medication)</td>
+     <td class="tg-zzem"><a href="AllergyIntolerance-peanut-allergy-example-1.html">peanut-allergy-example</a></td>
+     <td class="tg-0lax">Example of patient documented peanut allergy</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Care Team Member(s)</td>
+     <td class="tg-1wig">Care Team Member Role</td>
+     <td class="tg-zzem"><a href="CareTeam-bh-care-team-example-1.html">care-team-example</a></td>
+     <td class="tg-0lax">Example of a mental health counselor as part of the care team</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Care Team Member(s)</td>
+     <td class="tg-1wig">Care Team Member Telecom</td>
+         <td class="tg-zzem"><a href="Practitioner-ed-physician-example-1.html">physician-example	</a><br /><a href="Practitioner-pcp-provider-example-1.html"> pcp-provider-example	</a><br /><a href="Practitioner-mental-health-provider-example-1.html"> mental-health-provider-example</a></td>
+     <td class="tg-0lax">Examples of a patient's emergency room provider, Primary care provider and mental health provider telecom</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Care Team Member(s)</td>
+     <td class="tg-1wig">Care Team Member Identifier</td>
+         <td class="tg-zzem"><a href="Practitioner-ed-physician-example-1.html">physician-example	</a><br /><a href="Practitioner-pcp-provider-example-1.html"> pcp-provider-example	</a><br /><a href="Practitioner-mental-health-provider-example-1.html"> mental-health-provider-example</a></td>
+     <td class="tg-0lax">Examples of a patient's emergency room provider, Primary care provider and mental health provider identifiers</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Clinical Notes</td>
+     <td class="tg-1wig">Mental Health Consultation Note</td>
+     <td class="tg-zzem"><a href="DocumentReference-mental-health-consult-note-example-1.html">mental-health-consult-note-example</a></td>
+     <td class="tg-0lax">Example of a mental health consult note. Clinical details of note content are encoded (base64)</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Clinical Notes</td>
+     <td class="tg-1wig">Mental Health Discharge Summary Note</td>
+     <td class="tg-zzem"><a href="DocumentReference-mental-health-discharge-summary-example-1.html">mental-health-discharge-note-example</a></td>
+     <td class="tg-0lax">Example of a mental health discharge summary note. Clinical details of note content are encoded (base64)</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Clinical Notes</td>
+     <td class="tg-1wig">Mental Health History &amp; Physical</td>
+         <td class="tg-zzem"><a href="DocumentReference-mental-health-hx-physical-example-1.html">mental-health-history-physical-note-example</a></td>
+     <td class="tg-0lax">Example of a mental health history and physical note. Clinical details of note content are encoded (base64)</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Clinical Notes</td>
+     <td class="tg-1wig">Mental Health Procedure Note</td>
+     <td class="tg-zzem"><a href="DocumentReference-mental-health-procedure-example-1.html">mental-health-procedure-note-example</a></td>
+     <td class="tg-0lax">Example of a mental health procedure note. Clinical details of note content are encoded (base64)</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Clinical Notes</td>
+     <td class="tg-1wig">Mental Health Progress Note</td>
+     <td class="tg-zzem"><a href="DocumentReference-mental-health-progress-example-1.html">mental-health-progress-note-example</a></td>
+     <td class="tg-0lax">Example of a mental health progress note. Clinical details of note content are encoded (base64)</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Clinical Tests</td>
+     <td class="tg-1wig">Clinical Test</td>
+     <td class="tg-zzem"><a href="Observation-hemoglobin-a1c-example-1.html" target="_blank" rel="noopener noreferrer">hemoglobin-a1c-example</a></td>
+     <td class="tg-ycr8">Example of laboratory test - Hemoglobin A1C</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Clinical Tests</td>
+     <td class="tg-1wig">Clinical Test Result/Report</td>
+     <td class="tg-zzem"><a href="Observation-hemoglobin-a1c-example-1.html" target="_blank" rel="noopener noreferrer">hemoglobin-a1c-example</a></td>
+     <td class="tg-ycr8">Example of laboratory test result - elevated value</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Consent</td>
+     <td class="tg-1wig">Consent</td>
+     <td class="tg-zzem"><a href="Consent-SDOHCC-ConsentInformationDisclosure-example-1.html" target="_blank" rel="noopener noreferrer">consent-disclosure-example</a></td>
+     <td class="tg-ycr8">Example of a consent for information disclosure. Information is encoded (base64)</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Diagnostic Imaging</td>
+     <td class="tg-1wig">Diagnostic Imaging Report</td>
+     <td class="tg-zzem"><a href="DiagnosticReport-ekg-impression-report-example-1.html">ekg-impression-report-example</a></td>
+     <td class="tg-0lax">Example of EKG impression report</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Diagnostic Imaging</td>
+     <td class="tg-1wig">Diagnostic Imaging Test</td>
+     <td class="tg-zzem"><a href="DiagnosticReport-ekg-impression-report-example-1.html">ekg-impression-report-example</a></td>
+     <td class="tg-0lax">Example of EKG test report</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Encounter Information</td>
+     <td class="tg-1wig">Diagnosis Rank</td>
+     <td class="tg-zzem"><a href="Encounter-discharge-encounter-example-3.html">discharge-encounter-example</a></td>
+     <td class="tg-ktyi">Example of the ranking of diagnosis in the discharge encounter </td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Encounter Information</td>
+     <td class="tg-1wig">Encounter Diagnosis</td>
+     <td class="tg-zzem"><a href="Encounter-discharge-encounter-example-3.html">discharge-encounter-example</a></td>
+     <td class="tg-ktyi">Example of encounter diagnosis</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Encounter Information</td>
+     <td class="tg-1wig">Encounter Disposition</td>
+     <td class="tg-zzem"><a href="Encounter-discharge-encounter-example-3.html">discharge-encounter-example</a></td>
+     <td class="tg-ktyi">Example of encounter disposition</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Encounter Information</td>
+     <td class="tg-1wig">Encounter Location</td>
+     <td class="tg-zzem"><a href="Encounter-discharge-encounter-example-3.html">discharge-encounter-example</a></td>
+     <td class="tg-ktyi">Example of encounter location</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Encounter Information</td>
+     <td class="tg-1wig">Encounter Time</td>
+      <td class="tg-zzem"><a href="Encounter-discharge-encounter-example-3.html">discharge-encounter-example</a></td>
+     <td class="tg-ktyi">Example of encounter time</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Encounter Information</td>
+     <td class="tg-1wig">Encounter Type</td>
+     <td class="tg-zzem"><a href="Encounter-discharge-encounter-example-3.html">discharge-encounter-example</a></td>
+     <td class="tg-ktyi">Example of encounter type such as observation or ambulatory</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Facility Information</td>
+     <td class="tg-1wig">Facility Type</td>
+     <td class="tg-zzem"><a href="Location-obs-location-example-1.html">obs-location-example</a><br /><a href="Location-ed-location-example-1.html"> ed-location-example</a></td>
+     <td class="tg-0lax">Examples of facility locations</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Family Health History</td>
+     <td class="tg-1wig">Family Health History</td>
+     <td class="tg-zzem"><a href="DocumentReference-mental-health-hx-physical-example-1.html">mental-health-physical-note-example</a></td>
+     <td class="tg-ycr8">Example of clinical note that contains family health history. Clinical details of note content are encoded (base64)</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Federal/State Grants Reporting Requirements</td>
+     <td class="tg-1wig">Grant Number</td>
+     <td class="tg-zzem"><a href="Observation-bh-grant-info-observation-example-1.html">bh-grant-info-obs-example</a></td>
+     <td class="tg-0lax">Example of a grant with a unique identifier </td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Federal/State Grants Reporting Requirements</td>
+     <td class="tg-1wig">Grant Program ID</td>
+     <td class="tg-zzem"><a href="Observation-bh-grant-info-observation-example-1.html">bh-grant-info-obs-example</a></td>
+     <td class="tg-0lax">Example of a grant program ID</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Federal/State Grants Reporting Requirements</td>
+     <td class="tg-1wig">Grant/Funding Type</td>
+     <td class="tg-zzem"><a href="Observation-bh-grant-info-observation-example-1.html">bh-grant-info-obs-example</a></td>
+     <td class="tg-0lax">Example of an identified grant funding type </td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Goals and Preferences</td>
+     <td class="tg-1wig">Care Experience Preference</td>
+     <td class="tg-zzem"><a href="Observation-provider-preference-observation-example-2.html">provider-preference-obs-example</a></td>
+     <td class="tg-0lax">Example of a care experience preference for health professional</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Goals and Preferences</td>
+     <td class="tg-1wig">Patient Goals</td>
+     <td class="tg-zzem"><a href="Goal-social-connection-example-1.html">sdoh-referral-example</a></td>
+     <td class="tg-0lax">Example of a patient goal to improve toward adequate social participation</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Goals and Preferences</td>
+     <td class="tg-1wig">SDOH Goals</td>
+      <td class="tg-zzem"><a href="Goal-food-insecurity-example-1.html">food-insecurity-example</a><br /><a href="Goal-housing-insecurity-example-1.html"> housing-insecurity-example</a><br /><a href="Goal-transportation-insecurity-example-1.html"> transportation-insecurity-example</a></td>
+     <td class="tg-0lax">Examples of food, housing, and transportation SDOH goals</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Goals and Preferences</td>
+     <td class="tg-1wig">Treatment Intervention Preference</td>
+     <td class="tg-zzem"><a href="Observation-no-morphine-preference-observation-example-1.html">no-morphine-preference-obs-example</a></td>
+     <td class="tg-0lax">Example of a treatment intervention preference to avoid morphine based on past history of substance abuse</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Insurance Information</td>
+     <td class="tg-1wig">Plan Name</td>
+     <td class="tg-zzem"><a href="Coverage-medicaid-coverage-example-1.html" target="_blank" rel="noopener noreferrer">medicaid-coverage-example</a></td>
+     <td class="tg-0lax">Example of health insurance coverage name</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Insurance Information</td>
+     <td class="tg-1wig">Coverage Status</td>
+     <td class="tg-zzem"><a href="Coverage-medicaid-coverage-example-1.html" target="_blank" rel="noopener noreferrer">medicaid-coverage-example</a></td>
+     <td class="tg-0lax">Example of health insurance coverage status</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Insurance Information</td>
+     <td class="tg-1wig">Coverage Type</td>
+     <td class="tg-zzem"><a href="Coverage-medicaid-coverage-example-1.html" target="_blank" rel="noopener noreferrer">medicaid-coverage-example</a></td>
+     <td class="tg-0lax">Example of health insurance coverage type</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Insurance Information</td>
+     <td class="tg-1wig">Group Identifier</td>
+     <td class="tg-zzem"><a href="Coverage-medicaid-coverage-example-1.html" target="_blank" rel="noopener noreferrer">medicaid-coverage-example</a></td>
+     <td class="tg-0lax">Example of health insurance group identifier</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Insurance Information</td>
+     <td class="tg-1wig">Member Identifier</td>
+     <td class="tg-zzem"><a href="Coverage-medicaid-coverage-example-1.html" target="_blank" rel="noopener noreferrer">medicaid-coverage-example</a></td>
+     <td class="tg-0lax">Example of health insurance member identifier</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Insurance Information</td>
+     <td class="tg-1wig">Payer Identifier</td>
+     <td class="tg-zzem"><a href="Coverage-medicaid-coverage-example-1.html" target="_blank" rel="noopener noreferrer">medicaid-coverage-example</a></td>
+     <td class="tg-0lax">Example of health insurance payer identifier</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Insurance Information</td>
+     <td class="tg-1wig">Relationship to Subscriber</td>
+     <td class="tg-zzem"><a href="Coverage-medicaid-coverage-example-1.html" target="_blank" rel="noopener noreferrer">medicaid-coverage-example</a></td>
+     <td class="tg-0lax">Example of health insurance relationship to subscriber</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Insurance Information</td>
+     <td class="tg-1wig">Subscriber Identifier</td>
+     <td class="tg-zzem"><a href="Coverage-medicaid-coverage-example-1.html" target="_blank" rel="noopener noreferrer">medicaid-coverage-example</a></td>
+     <td class="tg-0lax">Example of health insurance subscriber ID</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Depression Assessment</td>
+     <td class="tg-zzem"><a href="QuestionnaireResponse-phq-9-example-1.html">Patient Health Questionnaire-9 (PHQ-9)</a></td>
+     <td class="tg-ktyi">Example of a depression assessment/screening</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Mental/Cognitive Status</td>
+     <td class="tg-zzem"><a href="Observation-cognitive-status-observation-example-3.html">Mini-Mental State Examination [MMSE]</a></td>
+     <td class="tg-ktyi">Example of a mental/cognitive health status assessment/screening</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Anxiety Assessment</td>
+     <td class="tg-zzem"><a href="Observation-anxiety-assessment-observation-example-1.html">anxiety-assessment-obs-example</a></td>
+     <td class="tg-ktyi">Example of an anxiety assessment/screening</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Alcohol Use</td>
+     <td class="tg-zzem"><a href="QuestionnaireResponse-alcohol-use-identification-test-1.html">Alcohol Use Disorder Identification Test - Consumption [AUDIT-C]</a></td>
+     <td class="tg-ktyi">Example of patient alcohol use status assessment/screening</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Disability Status</td>
+     <td class="tg-zzem"><a href="Observation-disability-status-observation-example-1.html">Comprehensive Universal Behavior Health Screen (CUBS)©</a></td>
+     <td class="tg-ktyi">Example of disability status health status assessment/screening</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Food Insecurity</td>
+     <td class="tg-zzem"><a href="QuestionnaireResponse-BHP-QuestionnaireResponsePRAPAREExample-1.html">prapare-questionnaireresponse-example</a></td>
+     <td class="tg-ktyi">Example of SDOH food assessment/screening</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Functional Status</td>
+     <td class="tg-zzem"><a href="QuestionnaireResponse-barthel-index-functional-status-example-1.html">barthel-index-example</a></td>
+     <td class="tg-ktyi">Example of functional health status assessment/screening</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Housing Instability</td>
+     <td class="tg-zzem"><a href="QuestionnaireResponse-BHP-QuestionnaireResponsePRAPAREExample-1.html">prapare-questionnaireresponse-example</a></td>
+     <td class="tg-ktyi">Example of SDOH housing assessment/screening</td>
+  </tr>
+  <!-- <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Pregnancy Status</td>
+     <td class="tg-zzem"><a href="Observation-pregnancy-status-example-1.html">pregnancy-example</a></td>
+     <td class="tg-ktyi">Example of patient pregnancy status assessment/screening</td>
+  </tr> -->
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">SDOH Assessment</td>
+     <td class="tg-zzem"><a href="QuestionnaireResponse-BHP-QuestionnaireResponsePRAPAREExample-1.html">prapare-questionnaireresponse-example</a></td>
+     <td class="tg-ktyi">Example of SDOH health status assessment</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Smoking Status</td>
+     <td class="tg-zzem"><a href="Observation-non-smoker-example-1.html">non-smoker-example</a></td>
+     <td class="tg-ktyi">Example of patient smoking status assessment/screening</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Substance Use</td>
+     <td class="tg-zzem"><a href="Condition-substance-abuse-condition-example-1.html">substance-use-condition-example</a></td>
+     <td class="tg-ktyi">Example of substance use health status assessment</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Transportation Insecurity</td>
+     <td class="tg-zzem"><a href="QuestionnaireResponse-BHP-QuestionnaireResponsePRAPAREExample-1.html">prapare-questionnaireresponse-example</a></td>
+     <td class="tg-ktyi">Example of SDOH transportation assessment/screening</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Suicide Risk Assessment</td>
+     <td class="tg-zzem"><a href="QuestionnaireResponse-C-SSRS-example-1.html">Columbia-Suicide Severity Rating Scale (C-SSRS)</a></td>
+     <td class="tg-ktyi">Example of suicide risk assessment/screening</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Interpersonal Violence</td>
+     <td class="tg-zzem"><a href="QuestionnaireResponse-hark-example-1.html">Humiliation, Afraid, Rape, and Kick questionnaire (HARK)</a></td>
+     <td class="tg-ktyi">Example of Interpersonal Violence assessment/screening</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Mental Health Status Screen</td>
+     <td class="tg-zzem"><a href="Observation-cognitive-status-observation-example-3.html">Mini-Mental State Examination [MMSE]</a></td>
+     <td class="tg-ktyi">Example of a behavioral health focused mental health status screening</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Health Status Assessments</td>
+     <td class="tg-1wig">Mental Trauma and PTSD Assessment</td>
+     <td class="tg-zzem"><a href="QuestionnaireResponse-ace-example-1.html">Adverse Childhood Experiences (ACEs) Assessment</a></td>
+     <td class="tg-ktyi">Example of a mental trauma or PTSD assessment/screening</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Immunizations</td>
+     <td class="tg-1wig">Immunizations</td>
+     <td class="tg-zzem"><a href="Immunization-flu-vaccine-example-1.html">flu-vaccine-example</a></td>
+     <td class="tg-0lax">Example of patient flu vaccine (immunization)</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Laboratory</td>
+     <td class="tg-1wig">Tests</td>
+     <td class="tg-zzem"><a href="Observation-hemoglobin-a1c-example-1.html" target="_blank" rel="noopener noreferrer">hemoglobin-a1c-example</a></td>
+     <td class="tg-0lax">Example of laboratory test - Hemogobin A1C</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Laboratory</td>
+     <td class="tg-1wig">Values/Results</td>
+     <td class="tg-zzem"><a href="Observation-hemoglobin-a1c-example-1.html" target="_blank" rel="noopener noreferrer">hemoglobin-a1c-example</a></td>
+     <td class="tg-0lax">Example of laboratory test result - elevated value </td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Medications</td>
+     <td class="tg-1wig">Discharge Medications</td>
+      <td class="tg-zzem"><a href="MedicationRequest-paroxetine-discharge-med-example-1.html"><span style="color:#467886">paroxetine-discharge-example</span></a><br /><a href="MedicationRequest-metformin-discharge-med-example-1.html"><span style="color:#467886"> metformin-discharge-example</span></a><br /><a href="MedicationRequest-ativan-discharge-med-example-1.html"><span style="color:#467886"> ativan-discharge-example</span></a></td>
+     <td class="tg-0lax">Example of discharge medications to be continued at home</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Medications</td>
+     <td class="tg-1wig">Dose</td>
+     <td class="tg-zzem"><a href="MedicationRequest-paroxetine-discharge-med-example-1.html">paroxetine-discharge-example</a></td>
+     <td class="tg-0lax">Example of medication dose</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Medications</td>
+     <td class="tg-1wig">Dose Unit of Measure</td>
+     <td class="tg-zzem"><a href="MedicationRequest-paroxetine-discharge-med-example-1.html">paroxetine-discharge-example</a></td>
+     <td class="tg-0lax">Example of medication dose unit of measure</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Medications</td>
+     <td class="tg-1wig">Medications</td>
+     <td class="tg-zzem"><a href="Medication-benzo-medication-example-1.html">benzo-medication-example</a></td>
+     <td class="tg-0lax">Example of benzodiazepine medication</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Medications</td>
+     <td class="tg-1wig">Medication Adherence</td>
+     <td class="tg-zzem"><a href="MedicationRequest-paroxetine-discharge-med-example-1.html">paroxetine-discharge-med-example</a></td>
+     <td class="tg-0lax">Example of medication adherence - not taking antidepressant</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Medications</td>
+     <td class="tg-1wig">Medication Instructions</td>
+     <td class="tg-zzem"><a href="MedicationRequest-paroxetine-discharge-med-example-1.html">paroxetine-discharge-example</a><br /><a href="MedicationRequest-benzo-order-example-1.html">benzo-order-example</a></td>
+     <td class="tg-0lax">Example of medication instructions - paroxetine</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Medications</td>
+     <td class="tg-1wig">Medication Quantity</td>
+     <td class="tg-zzem"><a href="MedicationRequest-paroxetine-discharge-med-example-1.html">paroxetine-discharge-example</a></td>
+     <td class="tg-0lax">Example of medication quantity</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Medications</td>
+     <td class="tg-1wig">Medications Dispensed</td>
+     <td class="tg-zzem"><a href="MedicationDispense-bupropion-dispense-example-1.html">bupropion-dispense-example</a></td>
+     <td class="tg-0lax">Example of dispensed medication - bupropion</td>
+  </tr>
+  <!-- <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">Name to Use</td>
+     <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
+     <td class="tg-0lax">Example of patient preferred name</td>
+  </tr> -->
+  <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">Current Address</td>
+     <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
+     <td class="tg-0lax">Example of patient address</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">Date of Birth</td>
+     <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
+     <td class="tg-0lax">Example of patient date of birth</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">Email Address</td>
+     <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
+     <td class="tg-0lax">Example of patient email address</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">Ethnicity</td>
+     <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
+     <td class="tg-0lax">Example of patient ethnicity</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">First Name</td>
+     <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
+     <td class="tg-0lax">Example of patient first name</td>
+  </tr>
+  <!-- <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">Gender Identity</td>
+     <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
+     <td class="tg-0lax">Example of patient gender identify</td>
+  </tr> -->
+  <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">Last Name</td>
+     <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
+     <td class="tg-0lax">Example of patient last name</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">Name Suffix</td>
+     <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
+     <td class="tg-0lax">Example of patient name suffix</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">Phone Number</td>
+     <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
+     <td class="tg-ktyi">Example of patient phone number</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">Preferred Language</td>
+     <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
+     <td class="tg-ktyi">Example of patient preferred language</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">Race</td>
+     <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
+     <td class="tg-0lax">Example of patient race</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">Related Person's Name</td>
+     <td class="tg-zzem"><a href="RelatedPerson-adult-child-relatedperson-example-1.html">adult-child-relatedperson-example</a></td>
+     <td class="tg-0lax">Example of patient related person's name</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">Relationship Type</td>
+     <td class="tg-zzem"><a href="RelatedPerson-adult-child-relatedperson-example-1.html">adult-child-relatedperson-example</a></td>
+     <td class="tg-0lax">Example of patient related person's relationship</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">Sex</td>
+     <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
+     <td class="tg-0lax">Example of patient sex </td>
+  </tr>
+  <!-- <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">Sexual Orientation</td>
+     <td class="tg-zzem"><a href="Observation-sexual-orientation-example-1.html">sexual-orientation-example</a></td>
+     <td class="tg-0lax">Example of patient sexual orientation</td>
+  </tr> -->
+  <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">Tribal Affiliation</td>
+     <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
+     <td class="tg-0lax">Example of patient tribal affiliation</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">Date of Death</td>
+     <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
+     <td class="tg-0lax">Example of patient date of death</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Patient Demographics</td>
+     <td class="tg-1wig">Identifier</td>
+     <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
+     <td class="tg-0lax">Example of patient patient identifier</td>
+  </tr>
+  <!-- <tr>
+     <td class="tg-0lax">Patient Demographics  </td>
+     <td class="tg-1wig">Pronouns</td>
+     <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
+     <td class="tg-0lax">Example of patient preferred pronouns</td>
+  </tr> -->
+  <tr>
+     <td class="tg-0lax">Patient Summary and Plan</td>
+     <td class="tg-1wig">Assessment and Plan of Treatment</td>
+     <td class="tg-zzem"><a href="DocumentReference-mental-health-progress-example-1.html">mental-health-progress-note-example</a></td>
+     <td class="tg-ycr8">Example of assessment and plan of treatment recorded within a note. Clinical details of note content are encoded (base64)</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Problems</td>
+     <td class="tg-1wig">Problems/Conditions</td>
+         <td class="tg-zzem"><a href="Condition-panic-attack-condition-example-1.html">panic-attack-example</a><br /> <a href="Condition-chest-pain-condition-example-1.html">chest-pain-example</a><br /> <a href="Condition-grief-condition-example-1.html">grief-example</a><br /> <a href="Condition-substance-abuse-condition-example-1.html">substance-abuse-condition-example</a><br /> <a href="Condition-diabetes-condition-example-1.html">diabetes-example</a></td>
+     <td class="tg-0lax">Examples of diagnosis</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Problems</td>
+     <td class="tg-1wig">SDOH Problems/Health Concerns</td>
+     <td class="tg-zzem"><a href="Condition-substance-abuse-condition-example-1.html">substance-abuse-condition-example</a></td>
+     <td class="tg-0lax">Example of patient history of substance abuse</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Problems</td>
+     <td class="tg-1wig">Date of Diagnosis</td>
+             <td class="tg-zzem"><a href="Condition-panic-attack-condition-example-1.html">panic-attack-example</a><br /> <a href="Condition-chest-pain-condition-example-1.html">chest-pain-example</a><br /> <a href="Condition-grief-condition-example-1.html">grief-example</a><br /> <a href="Condition-substance-abuse-condition-example-1.html">substance-abuse-condition-example</a><br /> <a href="Condition-diabetes-condition-example-1.html">diabetes-example</a></td>
+     <td class="tg-0lax">Example of diagnosis date</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Problems</td>
+     <td class="tg-1wig">Date of Onset</td>
+             <td class="tg-zzem"><a href="Condition-panic-attack-condition-example-1.html">panic-attack-example</a><br /> <a href="Condition-chest-pain-condition-example-1.html">chest-pain-example</a><br /> <a href="Condition-grief-condition-example-1.html">grief-example</a><br /> <a href="Condition-substance-abuse-condition-example-1.html">substance-abuse-condition-example</a><br /> <a href="Condition-diabetes-condition-example-1.html">diabetes-example</a></td>
+     <td class="tg-0lax">Example of diagnosis onset date</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Problems</td>
+     <td class="tg-1wig">Date of Resolution</td>
+             <td class="tg-zzem"><a href="Condition-panic-attack-condition-example-1.html">panic-attack-example</a><br /> <a href="Condition-chest-pain-condition-example-1.html">chest-pain-example</a><br /> <a href="Condition-grief-condition-example-1.html">grief-example</a><br /> <a href="Condition-substance-abuse-condition-example-1.html">substance-abuse-condition-example</a><br /> <a href="Condition-diabetes-condition-example-1.html">diabetes-example</a></td>
+     <td class="tg-0lax">Example of diagnosis resolution date</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Procedures</td>
+     <td class="tg-1wig">Harm Reduction Activities</td>
+     <td class="tg-zzem"><a href="Procedure-harm-reduction-example-1.html">harm-reduction-activities-example</a></td>
+     <td class="tg-0lax">Example of patient harm reduction program</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Procedures</td>
+     <td class="tg-1wig">Performance Time</td>
+     <td class="tg-zzem"><a href="Procedure-alcohol-prevetion-education-example-1.html">alcohol-prevention-edu-example</a></td>
+     <td class="tg-0lax">Example of a documented time when alcohol harm reduction information was provided</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Procedures</td>
+     <td class="tg-1wig">Procedures</td>
+     <td class="tg-zzem"><a href="Procedure-alcohol-prevetion-education-example-1.html">alcohol-prevention-edu-example</a></td>
+     <td class="tg-0lax">Example of patient alcohol harm reduction education</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Procedures</td>
+     <td class="tg-1wig">Reason for Referral</td>
+     <td class="tg-zzem"><a href="ServiceRequest-ServiceRequest-peer-mentoring-example-1.html">sdoh-referral-example</a></td>
+     <td class="tg-0lax">Example of patient referral to a peer coaching program</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Procedures</td>
+     <td class="tg-1wig">SDOH Interventions</td>
+     <td class="tg-zzem"><a href="ServiceRequest-ServiceRequest-peer-mentoring-example-1.html">sdoh-referral-example</a></td>
+     <td class="tg-0lax">Example of social connection intervention</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Procedures</td>
+     <td class="tg-1wig">Peer Coaching or Mentoring</td>
+     <td class="tg-zzem"><a href="ServiceRequest-ServiceRequest-peer-mentoring-example-1.html">sdoh-referral-example</a></td>
+     <td class="tg-0lax">Example of a referral for peer support or mentoring</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Procedures</td>
+     <td class="tg-1wig">Recovery Planning</td>
+     <td class="tg-zzem"><a href="Procedure-alcohol-prevetion-education-example-1.html">alcohol-prevetion-edu-example</a></td>
+     <td class="tg-ktyi">Example of recovery planning services</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Vital Signs</td>
+     <td class="tg-1wig">Body Height</td>
+     <td class="tg-zzem"><a href="Observation-height-example-1.html">height-example</a></td>
+     <td class="tg-0lax">Example of body height</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Vital Signs</td>
+     <td class="tg-1wig">Body Temperature</td>
+     <td class="tg-zzem"><a href="Observation-temperature-example-1.html">temperature-example</a></td>
+     <td class="tg-0lax">Example of body temperature</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Vital Signs</td>
+     <td class="tg-1wig">Body Weight</td>
+     <td class="tg-zzem"><a href="Observation-weight-example-1.html">weight-example</a></td>
+     <td class="tg-0lax">Example of body weight</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Vital Signs</td>
+     <td class="tg-1wig">Diastolic Blood Pressure</td>
+     <td class="tg-zzem"><a href="Observation-blood-pressure-example-1.html">blood-pressure-example</a></td>
+     <td class="tg-0lax">Example of diastolic blood pressure</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Vital Signs</td>
+     <td class="tg-1wig">Heart Rate</td>
+     <td class="tg-zzem"><a href="Observation-heart-rate-example-1.html">heart-rate-example</a></td>
+     <td class="tg-0lax">Example of heart rate</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Vital Signs</td>
+     <td class="tg-1wig">Pulse Oximetry</td>
+     <td class="tg-zzem"><a href="Observation-oxygen-saturation-example-1.html">oxygen-saturation-example</a></td>
+     <td class="tg-0lax">Example of pulse oximetry </td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Vital Signs</td>
+     <td class="tg-1wig">Respiratory Rate</td>
+     <td class="tg-zzem"><a href="Observation-respiratory-rate-example-1.html">respiratory-rate-example</a></td>
+     <td class="tg-0lax">Example of respiratory rate</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Vital Signs</td>
+     <td class="tg-1wig">Systolic Blood Pressure</td>
+     <td class="tg-zzem"><a href="Observation-blood-pressure-example-1.html">blood-pressure-example</a></td>
+     <td class="tg-0lax">Example of systolic blood pressure</td>
+  </tr>
+  <tr>
+     <td class="tg-0lax">Vital Signs</td>
+     <td class="tg-1wig">Average Blood Pressure</td>
+     <td class="tg-zzem"><a href="Observation-average-blood-pressure-example-1.html">average-bp-example</a></td>
+     <td class="tg-0lax">Example of average blood pressure</td>
+  </tr>
+  <!-- <tr>
+     <td class="tg-0lax">Work Information</td>
+     <td class="tg-1wig">Farmworker Status</td>
+     <td class="tg-zzem"><a href="Observation-usual-work-example-1.html">history-of-occupation-example</a></td>
+     <td class="tg-7zrl">Example of patient usual occupation as a citrus farm worker</td>
+  </tr> -->
+  <tr>
+     <td class="tg-0lax">Work Information</td>
+     <td class="tg-1wig">Veteran Status</td>
+     <td class="tg-zzem"><a href="Patient-bh-patient-example.html">patient-example</a></td>
+     <td class="tg-0lax">Example of patient with a veteran status equals true</td>
+  </tr>
+</tbody></table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.healthit.gov/">ASTP / BHIT</a>.  Package fhir.astp.bhp#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Aug 18, 2025 22:04+1000">2025-08-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="license.html">License</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+        | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" aria-label="New Issue" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" aria-label="Issues" href="https://github.com/HL7/us-behavioral-health-profiles/issues">Issues</a>
+
+       | <a style="color: var(--footer-hyperlink-text-color)" aria-lable="Version History" target="_blank" href="http://fhir.org/guides/astp/bhp/history.html">Version History</a> |
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

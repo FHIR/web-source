@@ -1,0 +1,75 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/astp/bhp/Coverage/medicaid-coverage-example-1> a fhir:Coverage ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medicaid-coverage-example-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage|6.1.0"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage|6.1.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Coverage medicaid-coverage-example-1</b></p><a name=\"medicaid-coverage-example-1\"> </a><a name=\"hcmedicaid-coverage-example-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-coverage.html\">US Core Coverage Profileversion: null6.1.0)</a></p></div><p><b>identifier</b>: Member Number/88800933501</p><p><b>status</b>: Active</p><p><b>type</b>: <span title=\"Codes:{https://nahdo.org/sopt 2}\">Medicaid</span></p><p><b>subscriberId</b>: 888009335</p><p><b>beneficiary</b>: <a href=\"Patient-bh-patient-example.html\">James Wolff  Male, DoB: 1961-07-16 ( Medical Record Number: 1032702 (use: usual, ))</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/subscriber-relationship self}\">Self</span></p><p><b>period</b>: 2024-01-01 --&gt; (ongoing)</p><p><b>payor</b>: <a href=\"Organization-fl-medicaid-example-1.html\">MyACCESS - Florida Medicaid</a></p><h3>Classes</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/coverage-class group}\">Group</span></td><td>Union Group Plan</td></tr></table></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "MB" ] ;
+         fhir:display [ fhir:v "Member Number" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://example.org/fhir/memberidentifier"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "88800933501" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "https://nahdo.org/sopt"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "2" ] ;
+       fhir:display [ fhir:v "Medicaid" ]
+     ] ) ;
+     fhir:text [ fhir:v "Medicaid" ]
+  ] ; # 
+  fhir:subscriberId [ fhir:v "888009335"] ; # 
+  fhir:beneficiary [
+     fhir:link <http://fhir.org/guides/astp/bhp/Patient/bh-patient-example> ;
+     fhir:reference [ fhir:v "Patient/bh-patient-example" ]
+  ] ; # 
+  fhir:relationship [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/subscriber-relationship"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "self" ]
+     ] ) ;
+     fhir:text [ fhir:v "Self" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2024-01-01"^^xsd:date ]
+  ] ; # 
+  fhir:payor ( [
+     fhir:link <http://fhir.org/guides/astp/bhp/Organization/fl-medicaid-example-1> ;
+     fhir:reference [ fhir:v "Organization/fl-medicaid-example-1" ] ;
+     fhir:display [ fhir:v "MyACCESS - Florida Medicaid" ]
+  ] ) ; # 
+  fhir:class ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/coverage-class"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "group" ] ;
+         fhir:display [ fhir:v "Group" ]
+       ] ) ;
+       fhir:text [ fhir:v "Group" ]
+     ] ;
+     fhir:value [ fhir:v "Union Group Plan" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

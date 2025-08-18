@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/astp/bhp/ServiceRequest/ServiceRequest-peer-mentoring-example-1> a fhir:ServiceRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ServiceRequest-peer-mentoring-example-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-ServiceRequest>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ServiceRequest ServiceRequest-peer-mentoring-example-1</b></p><a name=\"ServiceRequest-peer-mentoring-example-1\"> </a><a name=\"hcServiceRequest-peer-mentoring-example-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/sdoh-clinicalcare/STU2.3/StructureDefinition-SDOHCC-ServiceRequest.html\">SDOHCC ServiceRequest</a></p></div><p><b>status</b>: Completed</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 410606002}\">Social service procedure</span>, <span title=\"Codes:{http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes social-connection}\">Social Connection</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 461481000124109}\">Referral to peer support (procedure)</span></p><p><b>subject</b>: <a href=\"Patient-bh-patient-example.html\">James Wolff</a></p><p><b>reasonReference</b>: <a href=\"Condition-depression-condition-example-1.html\">Condition Moderate depression (disorder)</a></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       a sct:410606002 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "410606002" ] ;
+       fhir:display [ fhir:v "Social service procedure" ]
+     ] )
+  ] [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://hl7.org/fhir/us/sdoh-clinicalcare/CodeSystem/SDOHCC-CodeSystemTemporaryCodes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "social-connection" ] ;
+       fhir:display [ fhir:v "Social Connection" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:461481000124109 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "461481000124109" ] ;
+       fhir:display [ fhir:v "Referral to peer support (procedure)" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.org/guides/astp/bhp/Patient/bh-patient-example> ;
+     fhir:reference [ fhir:v "Patient/bh-patient-example" ] ;
+     fhir:display [ fhir:v "James Wolff" ]
+  ] ; # 
+  fhir:reasonReference ( [
+     fhir:link <http://fhir.org/guides/astp/bhp/Condition/depression-condition-example-1> ;
+     fhir:reference [ fhir:v "Condition/depression-condition-example-1" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

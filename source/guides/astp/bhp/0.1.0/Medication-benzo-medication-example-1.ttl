@@ -1,0 +1,32 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/astp/bhp/Medication/benzo-medication-example-1> a fhir:Medication ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "benzo-medication-example-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|6.1.0"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication|6.1.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Medication benzo-medication-example-1</b></p><a name=\"benzo-medication-example-1\"> </a><a name=\"hcbenzo-medication-example-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-medication.html\">US Core Medication Profileversion: null6.1.0)</a></p></div><p><b>code</b>: <span title=\"Codes:{http://www.nlm.nih.gov/research/umls/rxnorm 206821}\">lorazepam 0.5 MG Oral Tablet [Ativan]</span></p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "206821" ] ;
+       fhir:display [ fhir:v "lorazepam 0.5 MG Oral Tablet [Ativan]" ]
+     ] ) ;
+     fhir:text [ fhir:v "lorazepam 0.5 MG Oral Tablet [Ativan]" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

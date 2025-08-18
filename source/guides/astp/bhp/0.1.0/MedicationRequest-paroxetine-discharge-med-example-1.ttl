@@ -1,0 +1,116 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/astp/bhp/MedicationRequest/paroxetine-discharge-med-example-1> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "paroxetine-discharge-med-example-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest|6.1.0"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest|6.1.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <p>\n                <b>MedicationRequest</b>\n                <a name=\"medicationrequest-coded-oral-axid\"> </a>\n                <a name=\"hcmedicationrequest-coded-oral-axid\"> </a>\n            </p>\n            <div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\">\n                <p style=\"margin-bottom: 0px\">Resource MedicationRequest\n                    \"medicationrequest-coded-oral-axid\" </p>\n                <p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest\">US Core\n                    MedicationRequest Profile (version 7.0.0)</a></p>\n            </div>\n            <blockquote>\n                <p>\n                    <b>US Core Medication Adherence Extension</b>\n                </p>\n                <blockquote>\n                    <p>\n                        <b>url</b>\n                    </p>\n                    <code>medicationAdherence</code>\n                </blockquote>\n                <p><b>value</b>: Non-compliance of drug therapy (finding) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">\n                    (<a href=\"https://browser.ihtsdotools.org/\">SNOMED\n                        CT</a>#702565001)</span></p>\n                <blockquote>\n                    <p>\n                        <b>url</b>\n                    </p>\n                    <code>dateAsserted</code>\n                </blockquote>\n                <p><b>value</b>: 2024-02-01 08:15:49+0000</p>\n                <blockquote>\n                    <p>\n                        <b>url</b>\n                    </p>\n                    <code>informationSource</code>\n                </blockquote>\n                <p><b>value</b>: Patient (person) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">\n                    (<a href=\"https://browser.ihtsdotools.org/\">SNOMED\n                        CT</a>#116154003)</span></p>\n                <blockquote>\n                    <p>\n                        <b>url</b>\n                    </p>\n                    <code>informationSource</code>\n                </blockquote>\n                <p><b>value</b>: Pharmacy <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">\n                    (<a href=\"https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html\">Healthcare Service Location</a>#1179-1)</span></p>\n            </blockquote>\n            <p><b>status</b>: completed</p>\n            <p><b>intent</b>: order</p>\n            <p><b>medication</b>: paroxetine hydrochloride 10 MG Oral Tablet <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://terminology.hl7.org/5.3.0/CodeSystem-v3-rxNorm.html\">RxNorm</a>#1738483)</span></p>\n            <p><b>subject</b>: <a href=\"Patient-bh-patient-example.html\">James Wolff</a></p>\n            <p><b>encounter</b>: <a href=\"Encounter-ed-encounter-example-1.html\">Emergency\n                Department</a></p>\n            <p><b>requester</b>: <a href=\"Practitioner-mental-health-provider-example-1.html\">Dr. Lazslo\n                Cravensworth</a></p>\n            <p><b>reasonReference</b>: <a href=\"Condition-depression-condition-example-1.html\">Condition\n                Moderate depression (disorder)</a></p>\n            <h3>DosageInstructions</h3>\n            <table class=\"grid\">\n                <tr>\n                    <td style=\"display: none\">-</td>\n                    <td>\n                        <b>Text</b>\n                    </td>\n                </tr>\n                <tr>\n                    <td style=\"display: none\">*</td>\n                    <td>Take 1 tablet daily</td>\n                </tr>\n            </table>\n            <h3>DispenseRequests</h3>\n            <table class=\"grid\">\n                <tr>\n                    <td style=\"display: none\">-</td>\n                    <td>\n                        <b>NumberOfRepeatsAllowed</b>\n                    </td>\n                    <td>\n                        <b>Quantity</b>\n                    </td>\n                </tr>\n                <tr>\n                    <td>3</td>\n                    <td>30</td>\n                    <td/>\n                </tr>\n            </table>\n        </div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication-adherence"^^xsd:anyURI ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "medicationAdherence"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:702565001 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "702565001" ] ;
+           fhir:display [ fhir:v "Non-compliance of drug therapy (finding)" ]
+         ] ) ;
+         fhir:text [ fhir:v "Non-compliance of drug therapy (finding)" ]
+       ]
+     ] [
+       fhir:url [ fhir:v "dateAsserted"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:dateTime ;
+         fhir:v "2024-02-01T08:15:49.449Z"^^xsd:dateTime
+       ]
+     ] [
+       fhir:url [ fhir:v "informationSource"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           a sct:116154003 ;
+           fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "116154003" ] ;
+           fhir:display [ fhir:v "Patient (person)" ]
+         ] )
+       ]
+     ] [
+       fhir:url [ fhir:v "informationSource"^^xsd:anyURI ] ;
+       fhir:value [
+         a fhir:CodeableConcept ;
+         fhir:coding ( [
+           fhir:system [ fhir:v "https://www.cdc.gov/nhsn/cdaportal/terminology/codesystem/hsloc.html"^^xsd:anyURI ] ;
+           fhir:code [ fhir:v "1179-1" ] ;
+           fhir:display [ fhir:v "Pharmacy" ]
+         ] )
+       ]
+     ] )
+  ] ) ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/medicationrequest-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "discharge" ] ;
+       fhir:display [ fhir:v "Discharge" ]
+     ] )
+  ] ) ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "1738483" ] ;
+       fhir:display [ fhir:v "paroxetine hydrochloride 10 MG Oral Tablet" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://fhir.org/guides/astp/bhp/Patient/bh-patient-example> ;
+     fhir:reference [ fhir:v "Patient/bh-patient-example" ] ;
+     fhir:display [ fhir:v "James Wolff" ]
+  ] ; # 
+  fhir:encounter [
+     fhir:link <http://fhir.org/guides/astp/bhp/Encounter/ed-encounter-example-1> ;
+     fhir:reference [ fhir:v "Encounter/ed-encounter-example-1" ] ;
+     fhir:display [ fhir:v "Emergency Department" ]
+  ] ; # 
+  fhir:requester [
+     fhir:link <http://fhir.org/guides/astp/bhp/Practitioner/mental-health-provider-example-1> ;
+     fhir:reference [ fhir:v "Practitioner/mental-health-provider-example-1" ] ;
+     fhir:display [ fhir:v "Dr. Lazslo Cravensworth" ]
+  ] ; # 
+  fhir:reasonReference ( [
+     fhir:link <http://fhir.org/guides/astp/bhp/Condition/depression-condition-example-1> ;
+     fhir:reference [ fhir:v "Condition/depression-condition-example-1" ]
+  ] ) ; # 
+  fhir:dosageInstruction ( [
+     fhir:text [ fhir:v "Take 1 tablet daily" ]
+  ] ) ; # 
+  fhir:dispenseRequest [
+     fhir:numberOfRepeatsAllowed [ fhir:v "3"^^xsd:nonNegativeInteger ] ;
+     fhir:quantity [
+       fhir:value [ fhir:v "30"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "mg" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "mg" ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

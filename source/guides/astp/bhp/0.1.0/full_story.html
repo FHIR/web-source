@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Full Use Case Story - US Behavioral Health Profiles Implementation Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/fhir-opa.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="project-nav">
+  <a id="hrsa-logo" no-external="true" href="https://www.healthit.gov/">
+    <img height="50" alt="Visit the website" src="images/images.png"/>
+  </a>
+</div>
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="images/fhir-logo.png"/> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">US Behavioral Health Profiles Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - CI Build
+
+
+
+  <img alt="United States of America flag" src="assets/images/usa.svg" height="16" title="United States of America"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Background</a>
+    <ul class="dropdown-menu">
+      <li><a href="uscdi_bh_elements.html">USCDI+ BH Elements</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">User Story</a>
+    <ul class="dropdown-menu">
+      <li><a href="summary_story.html">Summary Story</a></li>
+      <li><a href="full_story.html">Full Story</a></li>
+      <li><a href="quick_facts.html">Quick Facts</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Technical Artifacts</a>
+    <ul class="dropdown-menu">
+      <li><a href="bh_to_fhir_examples.html">+BH to FHIR Examples</a></li>
+      <li><a href="bh_to_fhir_profiles.html">+BH to FHIR Profiles</a></li>
+      <li><a href="artifacts.html">Artifact Index</a></li>
+    </ul>
+  </li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="change_log.html">Change Log</a></li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Full Use Case Story</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the US Behavioral Health Profiles (v0.1.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a data-no-external="true" href="http://fhir.org/guides/astp/bhp/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Full Use Case Story</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#ed-visit-encounter" id="markdown-toc-ed-visit-encounter">ED Visit Encounter</a></li>
+  <li><a href="#pcp-encounter" id="markdown-toc-pcp-encounter">PCP Encounter</a></li>
+  <li><a href="#initial-behavioral-health-encounter" id="markdown-toc-initial-behavioral-health-encounter">Initial Behavioral Health Encounter</a></li>
+  <li><a href="#in-house-care-manager-encounter" id="markdown-toc-in-house-care-manager-encounter">In-House Care Manager Encounter</a></li>
+  <li><a href="#follow-up-behavioral-health-encounter" id="markdown-toc-follow-up-behavioral-health-encounter">Follow-Up Behavioral Health Encounter</a></li>
+  <li><a href="#second-pcp-encounter" id="markdown-toc-second-pcp-encounter">Second PCP Encounter</a></li>
+  <li><a href="#second-follow-up-behavioral-health-encounter" id="markdown-toc-second-follow-up-behavioral-health-encounter">Second Follow-Up Behavioral Health Encounter</a></li>
+</ul>
+
+</div>
+<h3 id="ed-visit-encounter">ED Visit Encounter</h3>
+
+<p>James Wolff visited the emergency department (ED) six months ago due to chest pain, sweating, and feeling like his heart was racing. James is a 60-year-old non-Hispanic African American male<!-- assigned female at birth -->. He provided his address, contact information, and Medicaid insurance information at ED registration. <!-- He also informed the intake team that his legal name is Jennifer, but he prefers to be called James and uses he/him pronouns. --></p>
+
+<p>James shared his medical history with the triage nurse, which includes type 2 diabetes (managed with metformin 2000 mg daily), moderate depression (for which he has not taken his antidepressant recently due to difficulties scheduling a follow-up appointment with his primary care provider), and severe allergies to peanuts and penicillin. He denied smoking or using recreational drugs in the last year but noted past substance use issues.</p>
+
+<p>A patient care technician took his vital signs in triage, noting an elevated blood pressure of 157/92 and a heart rate of 111. An EKG showed normal sinus rhythm. His physical, cognitive, and functional assessments were normal. The ED physician suspected a panic attack and ordered a one-time dose of Ativan 0.5 mg. James's symptoms and vital signs improved, and he mentioned not taking his antidepressant since his wife, who used to schedule his appointments, died four months prior. He shared his loneliness and financial strain.</p>
+
+<p>James was kept overnight for observation and further tests, including a CBC, BMP, and HbA1c. The in-house psychiatrist noted evidence of depressive symptoms but assessed a low risk for suicide based on the C-SSRS screen completed by the ED nurse. James was prescribed Paroxetine 10 mg daily and Ativan 0.5 mg every 8 hours as needed, and he was referred to a community mental health provider. A care navigator helped secure appointments with a new primary care physician at a community health center and provided bus fare vouchers.</p>
+
+<h3 id="pcp-encounter">PCP Encounter</h3>
+
+<p>The following week, at his appointment with the new PCP, James shared his feelings of loneliness and lack of motivation to socialize or visit community centers since his wife's death. The PCP was able to see all the emergency room visit information from the week before, and after assessing and talking more with James, wanted him to continue his depression medication and wrote a new prescription for Paroxetine 10mg daily. She also referred James to his local community behavioral health provider and an in-house care manager. James agreed but requested afternoon appointments.</p>
+
+<h3 id="initial-behavioral-health-encounter">Initial Behavioral Health Encounter</h3>
+
+<p>James met with a Licensed Professional Counselor (LPC) two weeks later at the community mental health center. The LPC could view all prior encounter information, including the patient’s HIPAA consent, as a member of the same health information exchange network. He shared his mental health history, including an abusive relationship at 17, his parents' divorce, and past struggles with alcohol and substance use. Although he has always struggled with maintaining relationships, he had solid support from his late wife. James’s feelings of isolation are also due to a strained relationship with his adult daughter, Sarah Wolff. They only speak occasionally, as their connection has weakened over the years, leaving James with limited family support. The LPC administered a depression and suicide risk assessment, with James scoring 12 on the PHQ-9, indicating moderate depression and a low suicide risk on the C-SSRS. The LPC recommended cognitive behavioral therapy (CBT), peer coaching via a grief support group, and continuing the antidepressant. When James agreed to the plan, the LPC informed him that, based on the assessments, he was likely eligible for a grant program funded by SAMHSA, providing the services he needed at no cost. The LPC scheduled weekly CBT sessions and provided information on a local widower's support group.</p>
+
+<h3 id="in-house-care-manager-encounter">In-House Care Manager Encounter</h3>
+
+<p>That same day, James met with the community BH provider’s care manager, who administered the Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences tool (PRAPARE), an assessment for Social Determinants of Health (SDOH). She determined that, within the past year, James needed assistance with obtaining food and reliable transportation to medical appointments and the grocery store. He also worried about losing his housing. The care manager connected him with a community-based meal service for the elderly. Also, the care manager connected him with the local supportive housing office, provided more bus fare vouchers, and helped him apply for a reduced-fare MetroCard. She also assisted in reinstating his disability benefits, which he started receiving after suffering a back injury while working on a nearby citrus farm.</p>
+
+<h3 id="follow-up-behavioral-health-encounter">Follow-Up Behavioral Health Encounter</h3>
+
+<p>During a follow-up visit with his LPC four weeks later, James reported feeling “a little better.” He was taking his medications as prescribed and attending CBT sessions, though he missed a couple due to unreliable transportation. However, he found the support group sessions unhelpful. The LPC connected James with his community recreation center to explore other social engagement opportunities.</p>
+
+<h3 id="second-pcp-encounter">Second PCP Encounter</h3>
+
+<p>Three months later, James returned to his PCP with complaints of increased fatigue, trouble sleeping, periodic dizziness, and nausea. He had discontinued his antidepressant due to these side effects. He also reported that he had recently experienced a fall at home, which resulted in a minor injury to his knee. James shared that he had been drinking a few beers daily to relax and to help him sleep. He noted that he had missed several CBT sessions and support group meetings due to a lack of motivation. The PCP performed assessments, noting a score of 17 on the PHQ-9 and 6 on the AUDIT (Alcohol Use Disorders Identification Test), indicating potential health risks related to high alcohol use. The PCP provided alcohol use prevention education and discussed the possibility of resuming antidepressant medication. James agreed to reduce his drinking but wanted to think more before resuming antidepressants. Lab work ordered by the PCP showed an elevated HbA1c of 6.9%. The care manager scheduled appointments with an endocrinologist for diabetes management and virtual sessions with the LPC for CBT.</p>
+
+<h3 id="second-follow-up-behavioral-health-encounter">Second Follow-Up Behavioral Health Encounter</h3>
+
+<p>A month later, James's care team reviewed his case at the community mental health center. James reported feeling much better. They noted improvements in his diabetes management and reduced alcohol intake. James’s eating habits also improved thanks to the community-based meal service. The team also noted that James had not missed a CBT session since they became virtual and attended most support group sessions. He scored 3 on the AUDIT and 12 on the PHQ-9. James agreed to start retaking antidepressants, and the PCP prescribed Bupropion 200 mg daily, only to be taken in the morning so that his sleep was not affected. The care team continued to monitor his alcohol use and referred him to a psychiatrist for future management of his psychiatric medications. The care manager assisted in setting up the psychiatry appointment. The LPC expressed continued concern about James's social isolation. James informed them that he had enjoyed music and line dancing with his wife and might be interested in participating in a similar activity. The LPC suggested connecting him with a community recreation center offering free line-dance classes. They scheduled a follow-up visit in one month to review his progress.</p>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.healthit.gov/">ASTP / BHIT</a>.  Package fhir.astp.bhp#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Aug 18, 2025 22:04+1000">2025-08-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="license.html">License</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+        | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" aria-label="New Issue" href="https://github.com/HL7/us-behavioral-health-profiles/issues/new">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" aria-label="Issues" href="https://github.com/HL7/us-behavioral-health-profiles/issues">Issues</a>
+
+       | <a style="color: var(--footer-hyperlink-text-color)" aria-lable="Version History" target="_blank" href="http://fhir.org/guides/astp/bhp/history.html">Version History</a> |
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Coverage xmlns="http://hl7.org/fhir">
+  <id value="medicaid-coverage-example-1"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage|6.1.0"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Coverage medicaid-coverage-example-1</b></p><a name="medicaid-coverage-example-1"> </a><a name="hcmedicaid-coverage-example-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-coverage.html">US Core Coverage Profileversion: null6.1.0)</a></p></div><p><b>identifier</b>: Member Number/88800933501</p><p><b>status</b>: Active</p><p><b>type</b>: <span title="Codes:{https://nahdo.org/sopt 2}">Medicaid</span></p><p><b>subscriberId</b>: 888009335</p><p><b>beneficiary</b>: <a href="Patient-bh-patient-example.html">James Wolff  Male, DoB: 1961-07-16 ( Medical Record Number: 1032702 (use: usual, ))</a></p><p><b>relationship</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/subscriber-relationship self}">Self</span></p><p><b>period</b>: 2024-01-01 --&gt; (ongoing)</p><p><b>payor</b>: <a href="Organization-fl-medicaid-example-1.html">MyACCESS - Florida Medicaid</a></p><h3>Classes</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/coverage-class group}">Group</span></td><td>Union Group Plan</td></tr></table></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MB"/>
+        <display value="Member Number"/>
+      </coding>
+    </type>
+    <system value="http://example.org/fhir/memberidentifier"/>
+    <value value="88800933501"/>
+  </identifier>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="https://nahdo.org/sopt"/>
+      <code value="2"/>
+      <display value="Medicaid"/>
+    </coding>
+    <text value="Medicaid"/>
+  </type>
+  <subscriberId value="888009335"/>
+  <beneficiary>
+    <reference value="Patient/bh-patient-example"/>
+  </beneficiary>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/subscriber-relationship"/>
+      <code value="self"/>
+    </coding>
+    <text value="Self"/>
+  </relationship>
+  <period>
+    <start value="2024-01-01"/>
+  </period>
+  <payor>
+    <reference value="Organization/fl-medicaid-example-1"/>
+    <display value="MyACCESS - Florida Medicaid"/>
+  </payor>
+  <class>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+        <code value="group"/>
+        <display value="Group"/>
+      </coding>
+      <text value="Group"/>
+    </type>
+    <value value="Union Group Plan"/>
+  </class>
+</Coverage>

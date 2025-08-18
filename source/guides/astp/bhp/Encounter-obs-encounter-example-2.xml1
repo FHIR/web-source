@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="obs-encounter-example-2"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Encounter obs-encounter-example-2</b></p><a name="obs-encounter-example-2"> </a><a name="hcobs-encounter-example-2"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-encounter.html">US Core Encounter Profileversion: null6.1.0)</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.19.5.1.698.8</code>/20005104252 (use: usual, )</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/6.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-OBSENC">ActCode OBSENC</a>: observation encounter</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 448951000124107}">Observation bed</span></p><p><b>subject</b>: <a href="Patient-bh-patient-example.html">James Wolff</a></p><p><b>period</b>: 2024-02-01 22:02:00-0500 --&gt; 2024-02-02 12:00:00-0500</p><h3>Diagnoses</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Condition</b></td></tr><tr><td style="display: none">*</td><td><a href="Condition-panic-attack-condition-example-1.html">Panic Attack</a></td></tr></table><h3>Locations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Location</b></td><td><b>PhysicalType</b></td><td><b>Period</b></td></tr><tr><td style="display: none">*</td><td><a href="Location-obs-location-example-1.html">Hospital bed - OBSERVATION</a></td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/location-physical-type wa}">Ward</span></td><td>2024-02-01 16:02:00-0500 --&gt; 2024-02-01 22:00:00-0500</td></tr></table><p><b>partOf</b>: <a href="Encounter-discharge-encounter-example-3.html">Encounter: identifier = urn:oid:2.16.840.1.113883.19.5.1.698.8#40005104253 (use: usual, ); status = finished; class = observation encounter (ActCode#OBSENC); type = Admission to observation unit (procedure); period = 2024-02-01 16:02:00-0500 --&gt; 2024-02-02 12:00:00-0500</a></p></div>
+  </text>
+  <identifier>
+    <use value="usual"/>
+    <system value="urn:oid:2.16.840.1.113883.19.5.1.698.8"/>
+    <value value="20005104252"/>
+  </identifier>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="OBSENC"/>
+    <display value="observation encounter"/>
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="448951000124107"/>
+      <display value="Admission to observation unit (procedure)"/>
+    </coding>
+    <text value="Observation bed"/>
+  </type>
+  <subject>
+    <reference value="Patient/bh-patient-example"/>
+    <display value="James Wolff"/>
+  </subject>
+  <period>
+    <start value="2024-02-01T22:02:00-05:00"/>
+    <end value="2024-02-02T12:00:00-05:00"/>
+  </period>
+  <diagnosis>
+    <condition>
+      <reference value="Condition/panic-attack-condition-example-1"/>
+      <display value="Panic Attack"/>
+    </condition>
+  </diagnosis>
+  <location>
+    <location>
+      <reference value="Location/obs-location-example-1"/>
+      <display value="Hospital bed - OBSERVATION"/>
+    </location>
+    <physicalType>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/>
+        <code value="wa"/>
+        <display value="Ward"/>
+      </coding>
+    </physicalType>
+    <period>
+      <start value="2024-02-01T16:02:00-05:00"/>
+      <end value="2024-02-01T22:00:00-05:00"/>
+    </period>
+  </location>
+  <partOf>
+    <reference value="Encounter/discharge-encounter-example-3"/>
+    <identifier>
+      <use value="usual"/>
+      <system value="urn:oid:2.16.840.1.113883.19.5.1.698.8"/>
+      <value value="40005104253"/>
+    </identifier>
+  </partOf>
+</Encounter>

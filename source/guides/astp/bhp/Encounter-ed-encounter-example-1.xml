@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Encounter xmlns="http://hl7.org/fhir">
+  <id value="ed-encounter-example-1"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Encounter ed-encounter-example-1</b></p><a name="ed-encounter-example-1"> </a><a name="hced-encounter-example-1"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-encounter.html">US Core Encounter Profileversion: null6.1.0)</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.19.5.1.698.8</code>/10005104251 (use: usual, )</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href="http://terminology.hl7.org/6.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-EMER">ActCode EMER</a>: emergency</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 50849002}">Emergency room</span></p><p><b>subject</b>: <a href="Patient-bh-patient-example.html">James Wolff</a></p><p><b>period</b>: 2024-02-01 16:02:00-0500 --&gt; 2024-02-01 22:00:00-0500</p><p><b>reasonCode</b>: <span title="Codes:{http://hl7.org/fhir/sid/icd-10-cm R07.9}">Angina</span>, <span title="Codes:{http://hl7.org/fhir/sid/icd-10-cm R61}">Sweating</span>, <span title="Codes:{http://hl7.org/fhir/sid/icd-10-cm R00.2}">Palpitations</span></p><blockquote><p><b>diagnosis</b></p><p><b>condition</b>: <a href="Condition-panic-attack-condition-example-1.html">Panic Attack</a></p><p><b>rank</b>: 1</p></blockquote><blockquote><p><b>diagnosis</b></p><p><b>condition</b>: <a href="Condition-chest-pain-condition-example-1.html">Chest Pain</a></p><p><b>rank</b>: 2</p></blockquote><blockquote><p><b>diagnosis</b></p><p><b>condition</b>: <a href="Condition-diabetes-condition-example-1.html">Diabetes (II)</a></p><p><b>rank</b>: 3</p></blockquote><h3>Locations</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Location</b></td><td><b>PhysicalType</b></td><td><b>Period</b></td></tr><tr><td style="display: none">*</td><td><a href="Location-ed-location-example-1.html">Emergency Dept.</a></td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/location-physical-type wa}">Ward</span></td><td>2024-02-01 16:02:00-0500 --&gt; 2024-02-01 22:02:00-0500</td></tr></table><p><b>partOf</b>: <a href="Encounter-discharge-encounter-example-3.html">Encounter: identifier = urn:oid:2.16.840.1.113883.19.5.1.698.8#40005104253 (use: usual, ); status = finished; class = observation encounter (ActCode#OBSENC); type = Admission to observation unit (procedure); period = 2024-02-01 16:02:00-0500 --&gt; 2024-02-02 12:00:00-0500</a></p></div>
+  </text>
+  <!--  ED Encounter Identifier  -->
+  <identifier>
+    <use value="usual"/>
+    <system value="urn:oid:2.16.840.1.113883.19.5.1.698.8"/>
+    <value value="10005104251"/>
+  </identifier>
+  <status value="finished"/>
+  <class>
+    <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+    <code value="EMER"/>
+    <display value="emergency"/>
+  </class>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="50849002"/>
+      <display value="Emergency room admission (procedure)"/>
+    </coding>
+    <text value="Emergency room"/>
+  </type>
+  <subject>
+    <reference value="Patient/bh-patient-example"/>
+    <display value="James Wolff"/>
+  </subject>
+  <period>
+    <start value="2024-02-01T16:02:00-05:00"/>
+    <end value="2024-02-01T22:00:00-05:00"/>
+  </period>
+  <reasonCode>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
+      <code value="R07.9"/>
+      <display value="Chest pain, unspecified"/>
+    </coding>
+    <text value="Angina"/>
+  </reasonCode>
+  <reasonCode>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
+      <code value="R61"/>
+      <display value="Generalized hyperhidrosis"/>
+    </coding>
+    <text value="Sweating"/>
+  </reasonCode>
+  <reasonCode>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
+      <code value="R00.2"/>
+      <display value="Palpitations"/>
+    </coding>
+    <text value="Palpitations"/>
+  </reasonCode>
+  <diagnosis>
+    <condition>
+      <reference value="Condition/panic-attack-condition-example-1"/>
+      <display value="Panic Attack"/>
+    </condition>
+    <rank value="1"/>
+  </diagnosis>
+  <diagnosis>
+    <condition>
+      <reference value="Condition/chest-pain-condition-example-1"/>
+      <display value="Chest Pain"/>
+    </condition>
+    <rank value="2"/>
+  </diagnosis>
+  <diagnosis>
+    <condition>
+      <reference value="Condition/diabetes-condition-example-1"/>
+      <display value="Diabetes (II)"/>
+    </condition>
+    <rank value="3"/>
+  </diagnosis>
+  <location>
+    <location>
+      <reference value="Location/ed-location-example-1"/>
+      <display value="Emergency Dept."/>
+    </location>
+    <physicalType>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"/>
+        <code value="wa"/>
+        <display value="Ward"/>
+      </coding>
+    </physicalType>
+    <period>
+      <start value="2024-02-01T16:02:00-05:00"/>
+      <end value="2024-02-01T22:02:00-05:00"/>
+    </period>
+  </location>
+  <partOf>
+    <reference value="Encounter/discharge-encounter-example-3"/>
+    <identifier>
+      <use value="usual"/>
+      <system value="urn:oid:2.16.840.1.113883.19.5.1.698.8"/>
+      <value value="40005104253"/>
+    </identifier>
+  </partOf>
+</Encounter>

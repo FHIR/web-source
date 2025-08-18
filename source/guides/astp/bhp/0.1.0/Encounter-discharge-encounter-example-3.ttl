@@ -1,0 +1,121 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/astp/bhp/Encounter/discharge-encounter-example-3> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "discharge-encounter-example-3"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter|6.1.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter discharge-encounter-example-3</b></p><a name=\"discharge-encounter-example-3\"> </a><a name=\"hcdischarge-encounter-example-3\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-encounter.html\">US Core Encounter Profileversion: null6.1.0)</a></p></div><p><b>identifier</b>: <code>urn:oid:2.16.840.1.113883.19.5.1.698.8</code>/40005104253 (use: usual, )</p><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/6.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-OBSENC\">ActCode OBSENC</a>: observation encounter</p><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 448951000124107}\">Observation bed</span></p><p><b>subject</b>: <a href=\"Patient-bh-patient-example.html\">James Wolff</a></p><p><b>period</b>: 2024-02-01 16:02:00-0500 --&gt; 2024-02-02 12:00:00-0500</p><blockquote><p><b>diagnosis</b></p><p><b>condition</b>: <a href=\"Condition-panic-attack-condition-example-1.html\">Panic Attack</a></p><p><b>rank</b>: 1</p></blockquote><blockquote><p><b>diagnosis</b></p><p><b>condition</b>: <a href=\"Condition-chest-pain-condition-example-1.html\">Chest Pain</a></p><p><b>rank</b>: 2</p></blockquote><blockquote><p><b>diagnosis</b></p><p><b>condition</b>: <a href=\"Condition-diabetes-condition-example-1.html\">Diabetes (II)</a></p><p><b>rank</b>: 3</p></blockquote><h3>Hospitalizations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>DischargeDisposition</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{https://www.nubc.org/CodeSystem/PatDischargeStatus 01}\">Discharged to Home</span></td></tr></table><blockquote><p><b>location</b></p><p><b>location</b>: <a href=\"Location-ed-location-example-1.html\">Emergency Dept.</a></p><p><b>physicalType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/location-physical-type wa}\">Ward</span></p><p><b>period</b>: 2024-02-01 16:02:00-0500 --&gt; 2024-02-01 22:02:00-0500</p></blockquote><blockquote><p><b>location</b></p><p><b>location</b>: <a href=\"Location-obs-location-example-1.html\">Hospital bed - OBSERVATION</a></p><p><b>physicalType</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/location-physical-type wa}\">Ward</span></p><p><b>period</b>: 2024-02-01 16:02:00-0500 --&gt; 2024-02-01 22:00:00-0500</p></blockquote></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.19.5.1.698.8"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "40005104253" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "OBSENC" ] ;
+     fhir:display [ fhir:v "observation encounter" ]
+  ] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       a sct:448951000124107 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "448951000124107" ] ;
+       fhir:display [ fhir:v "Admission to observation unit (procedure)" ]
+     ] ) ;
+     fhir:text [ fhir:v "Observation bed" ]
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <http://fhir.org/guides/astp/bhp/Patient/bh-patient-example> ;
+     fhir:reference [ fhir:v "Patient/bh-patient-example" ] ;
+     fhir:display [ fhir:v "James Wolff" ]
+  ] ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2024-02-01T16:02:00-05:00"^^xsd:dateTime ] ;
+     fhir:end [ fhir:v "2024-02-02T12:00:00-05:00"^^xsd:dateTime ]
+  ] ; # 
+  fhir:diagnosis ( [
+     fhir:condition [
+       fhir:link <http://fhir.org/guides/astp/bhp/Condition/panic-attack-condition-example-1> ;
+       fhir:reference [ fhir:v "Condition/panic-attack-condition-example-1" ] ;
+       fhir:display [ fhir:v "Panic Attack" ]
+     ] ;
+     fhir:rank [ fhir:v "1"^^xsd:positiveInteger ]
+  ] [
+     fhir:condition [
+       fhir:link <http://fhir.org/guides/astp/bhp/Condition/chest-pain-condition-example-1> ;
+       fhir:reference [ fhir:v "Condition/chest-pain-condition-example-1" ] ;
+       fhir:display [ fhir:v "Chest Pain" ]
+     ] ;
+     fhir:rank [ fhir:v "2"^^xsd:positiveInteger ]
+  ] [
+     fhir:condition [
+       fhir:link <http://fhir.org/guides/astp/bhp/Condition/diabetes-condition-example-1> ;
+       fhir:reference [ fhir:v "Condition/diabetes-condition-example-1" ] ;
+       fhir:display [ fhir:v "Diabetes (II)" ]
+     ] ;
+     fhir:rank [ fhir:v "3"^^xsd:positiveInteger ]
+  ] ) ; # 
+  fhir:hospitalization [
+     fhir:dischargeDisposition [
+       fhir:coding ( [
+         fhir:system [ fhir:v "https://www.nubc.org/CodeSystem/PatDischargeStatus"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "01" ] ;
+         fhir:display [ fhir:v "Discharged to Home" ]
+       ] ) ;
+       fhir:text [ fhir:v "Discharged to Home" ]
+     ]
+  ] ; # 
+  fhir:location ( [
+     fhir:location [
+       fhir:link <http://fhir.org/guides/astp/bhp/Location/ed-location-example-1> ;
+       fhir:reference [ fhir:v "Location/ed-location-example-1" ] ;
+       fhir:display [ fhir:v "Emergency Dept." ]
+     ] ;
+     fhir:physicalType [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/location-physical-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "wa" ] ;
+         fhir:display [ fhir:v "Ward" ]
+       ] )
+     ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2024-02-01T16:02:00-05:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2024-02-01T22:02:00-05:00"^^xsd:dateTime ]
+     ]
+  ] [
+     fhir:location [
+       fhir:link <http://fhir.org/guides/astp/bhp/Location/obs-location-example-1> ;
+       fhir:reference [ fhir:v "Location/obs-location-example-1" ] ;
+       fhir:display [ fhir:v "Hospital bed - OBSERVATION" ]
+     ] ;
+     fhir:physicalType [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/location-physical-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "wa" ] ;
+         fhir:display [ fhir:v "Ward" ]
+       ] )
+     ] ;
+     fhir:period [
+       fhir:start [ fhir:v "2024-02-01T16:02:00-05:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2024-02-01T22:00:00-05:00"^^xsd:dateTime ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

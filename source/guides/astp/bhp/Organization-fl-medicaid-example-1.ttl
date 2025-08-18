@@ -1,0 +1,41 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/astp/bhp/Organization/fl-medicaid-example-1> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "fl-medicaid-example-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|6.1.0"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization|6.1.0>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization fl-medicaid-example-1</b></p><a name=\"fl-medicaid-example-1\"> </a><a name=\"hcfl-medicaid-example-1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/core/STU6.1/StructureDefinition-us-core-organization.html\">US Core Organization Profileversion: null6.1.0)</a></p></div><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/6.5.0/NamingSystem-NAICCompanyCodes.html\" title=\"NAIC company codes, also referred to as NAIC numbers, are five-digit identification codes assigned by the National Association of Insurance Commissioners (NAIC) to every insurance company to identify them. NAIC maintains a list of all lines of insurance the company sells and a list of all jurisdictions in which the company is licensed.#xD;#xA;#xD;#xA;For more information, see [https://content.naic.org/cis_consumer_information.htm](https://content.naic.org/cis_consumer_information.htm)\">National Association of Insurance Commissioners (NAIC) Company Codes</a>/55555</p><p><b>active</b>: true</p><p><b>name</b>: Florida MyACCESS - Medicaid</p><p><b>telecom</b>: ph: (+1) 734-677-7777</p><p><b>address</b>: 3300 WASHTENAW AVE STE 227 MIAMI FL 01002 USA </p></div>"^^rdf:XMLLiteral
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:oid:2.16.840.1.113883.6.300"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "55555" ]
+  ] ) ; # 
+  fhir:active [ fhir:v true] ; # 
+  fhir:name [ fhir:v "Florida MyACCESS - Medicaid"] ; # 
+  fhir:telecom ( [
+     fhir:system [ fhir:v "phone" ] ;
+     fhir:value [ fhir:v "(+1) 734-677-7777" ]
+  ] ) ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "3300 WASHTENAW AVE STE 227" ] ) ;
+     fhir:city [ fhir:v "MIAMI" ] ;
+     fhir:state [ fhir:v "FL" ] ;
+     fhir:postalCode [ fhir:v "01002" ] ;
+     fhir:country [ fhir:v "USA" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
