@@ -1,0 +1,27 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Check if client wants JSON (FHIR API request)
+RewriteCond %{HTTP_ACCEPT} application/fhir\+json [OR]
+RewriteCond %{HTTP_ACCEPT} application/json
+RewriteCond %{REQUEST_URI} ^/VCL/(.+)$
+# Route to PHP API handler
+RewriteRule ^(.*)$ vcl-api.php [L]
+
+# Explicitly allow JavaScript files
+RewriteRule ^.*\.js$ - [L]
+
+# Allow direct access to specific files (tests.html, vcl-parser.js, etc.)
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Allow direct access to directories
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Special case: direct access to test.html (or tests.html)
+RewriteRule ^test(s)?\.html$ test.html [L]
+
+# Catch all other requests under /VCL/ and serve index.html
+# This preserves the original URL path for JavaScript to parse
+RewriteRule ^(.*)$ index.html [L]

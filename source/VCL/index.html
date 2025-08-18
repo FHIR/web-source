@@ -1,0 +1,508 @@
+---
+layout: page
+title: VCL Viewer - Value Set Composition Language
+---
+
+<style>
+    .vcl-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2px;
+    }
+    
+    .vcl-header {
+        text-align: center;
+        margin-bottom: 3px;
+        padding: 3px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .vcl-header h1 {
+        margin: 0 0 10px 0;
+        font-size: 2.5em;
+        color: white;
+    }
+    
+    .vcl-header p {
+        margin: 0;
+        font-size: 1.2em;
+        opacity: 0.9;
+    }
+    
+    .vcl-input-section {
+        background: white;
+        padding: 2px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+    }
+    
+    .vcl-input-section h2 {
+        margin-top: 0;
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+    }
+    
+    #vclInput {
+        width: 100%;
+        padding: 2px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        font-size: 14px;
+        min-height: 60px;
+        resize: vertical;
+        transition: border-color 0.3s;
+    }
+    
+    #vclInput:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    }
+    
+    .vcl-buttons {
+        margin-top: 15px;
+        text-align: center;
+    }
+    
+    .vcl-btn {
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 6px 6px;
+        font-size: 10px;
+        border-radius: 2px;
+        cursor: pointer;
+        margin: 0 10px;
+        transition: all 0.3s;
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    .vcl-btn:hover {
+        background: #2980b9;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    .vcl-btn.secondary {
+        background: #95a5a6;
+    }
+    
+    .vcl-btn.secondary:hover {
+        background: #7f8c8d;
+    }
+    
+    .vcl-results {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        overflow: hidden;
+    }
+    
+    .vcl-results h3 {
+        background: #34495e;
+        color: white;
+        margin: 0;
+        padding: 2px;
+        font-size: 1.2em;
+    }
+    
+    .vcl-results-content {
+        padding: 2px;
+    }
+    
+    .vcl-error {
+        color: #e74c3c;
+        background: #fdf2f2;
+        border: 1px solid #f5c6cb;
+        padding: 2px;
+        border-radius: 2px;
+        margin: 2px 0;
+    }
+    
+    .vcl-success {
+        color: #27ae60;
+        background: #f0f9ff;
+        border: 1px solid #bee5eb;
+        padding: 2px;
+        border-radius: 2px;
+        margin: 2px 0;
+    }
+    
+    .valueset-summary {
+        background: #f8f9fa;
+        border-left: 4px solid #3498db;
+        padding: 2px;
+        margin: 2px 0;
+        border-radius: 0 6px 6px 0;
+    }
+    
+    .json-viewer {
+        background: #2d3748;
+        color: #e2e8f0;
+        padding: 2px;
+        border-radius: 2px;
+        font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        font-size: 14px;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        max-height: 500px;
+        overflow-y: auto;
+        margin: 2px 0;
+    }
+    
+    .examples-section {
+        background: white;
+        padding: 2px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .examples-section h3 {
+        color: #2c3e50;
+        margin-top: 0;
+    }
+    
+    .example-item {
+        display: block;
+        padding: 6px;
+        margin: 8px 0;
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 2px;
+        font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        font-size: 12px;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-decoration: none;
+        color: #495057;
+    }
+    
+    .example-item:hover {
+        background: #e9ecef;
+        border-color: #3498db;
+        transform: translateX(5px);
+    }
+    
+    .example-label {
+        font-weight: bold;
+        color: #3498db;
+        display: block;
+        margin-bottom: 5px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    
+    .url-display {
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 2px;
+        padding: 10px 15px;
+        font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        font-size: 14px;
+        margin: 10px 0;
+        word-break: break-all;
+    }
+    
+    .syntax-help {
+        background: #fff3cd;
+        border: 1px solid #ffeaa7;
+        border-radius: 2px;
+        padding: 20px;
+        margin: 20px 0;
+    }
+    
+    .syntax-help h4 {
+        color: #856404;
+        margin-top: 0;
+    }
+    
+    .syntax-help ul {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+    
+    .syntax-help code {
+        background: #f8f9fa;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    }
+</style>
+
+<div class="vcl-container">
+
+    <div id="vclResults" class="vcl-results" style="display: none;">
+        <h3>📊 Parsed ValueSet</h3>
+        <div class="vcl-results-content">
+            <div id="resultsContent"></div>
+        </div>
+    </div>
+    
+    <div class="vcl-input-section">
+        <h2>📝 Enter VCL Expression</h2>
+        <textarea id="vclInput" placeholder="Enter your VCL expression here, e.g., (http://snomed.info/sct)123456789"></textarea>
+        <div class="vcl-buttons">
+            <button class="vcl-btn" onclick="parseVCL()">Parse VCL</button>
+            <button class="vcl-btn secondary" onclick="clearAll()">Clear</button>
+            <button class="vcl-btn secondary" onclick="copyURL()">Copy URL</button>
+            <a href="test.html" class="vcl-btn secondary">Run Tests</a>
+        </div>
+        <div id="currentUrl" class="url-display" style="display: none;"></div>
+    </div>
+
+
+    <div class="examples-section">
+        <h3>📋 Example VCL Expressions</h3>
+        <div onclick="useExample('A')">
+            <span class="example-label">Simple code:</span>
+            <code>A</code>
+        </div>
+        <div onclick="useExample('A,B')">
+            <span class="example-label">Conjunction (AND):</span>
+            <code>A,B</code>
+        </div>
+        <div onclick="useExample('A;B')">
+            <span class="example-label">Disjunction (OR):</span>
+            <code>A;B</code>
+        </div>
+        <div onclick="useExample('(http://snomed.info/sct)123456789')">
+            <span class="example-label">System with code:</span>
+            <code>(http://snomed.info/sct)123456789</code>
+        </div>
+        <div onclick="useExample('(http://snomed.info/sct|20210131)123456789')">
+            <span class="example-label">System with version:</span>
+            <code>(http://snomed.info/sct|20210131)123456789</code>
+        </div>
+        <div onclick="useExample('concept<<17311000168105')">
+            <span class="example-label">IS-A relationship:</span>
+            <code>concept<<17311000168105</code>
+        </div>
+        <div onclick="useExample('concept~<<929360061000036106')">
+            <span class="example-label">IS-NOT-A relationship:</span>
+            <code>concept~<<929360061000036106</code>
+        </div>
+        <div onclick="useExample('COMPONENT=\".*test.*\"')">
+            <span class="example-label">Regex filter:</span>
+            <code>COMPONENT=".*test.*"</code>
+        </div>
+        <div onclick="useExample('(http://snomed.info/sct)*')">
+            <span class="example-label">Wildcard (all concepts):</span>
+            <code>(http://snomed.info/sct)*</code>
+        </div>
+        <div onclick="useExample('^(http://hl7.org/fhir/ValueSet/example)')">
+            <span class="example-label">Include ValueSet:</span>
+            <code>^(http://hl7.org/fhir/ValueSet/example)</code>
+        </div>
+        <div onclick="useExample('(A;B)-(C)')">
+            <span class="example-label">With exclusion:</span>
+            <code>(A;B)-(C)</code>
+        </div>
+    </div>
+
+    <div class="syntax-help">
+        <h4>📖 VCL Syntax Quick Reference</h4>
+        <ul>
+            <li><code>,</code> - Conjunction (AND)</li>
+            <li><code>;</code> - Disjunction (OR)</li>
+            <li><code>-</code> - Exclusion (NOT)</li>
+            <li><code>()</code> - Grouping</li>
+            <li><code><<</code> - IS-A relationship</li>
+            <li><code>~<<</code> - IS-NOT-A relationship</li>
+            <li><code>=</code> - Equals</li>
+            <li><code>^</code> - Include ValueSet</li>
+            <li><code>*</code> - Wildcard (all concepts)</li>
+            <li><code>"text"</code> - Quoted strings</li>
+        </ul>
+        <p><strong>System URIs:</strong> Use <code>(http://snomed.info/sct)</code> format to specify code systems. Add version with <code>|</code> like <code>(http://snomed.info/sct|20210131)</code>.</p>
+    </div>
+</div>
+
+<!-- Load VCL Parser -->
+<script src="/VCL/vcl-parser.js"></script>
+
+<script>
+    // Parse URL path and extract VCL expression
+    function getVCLFromURL() {
+        const path = window.location.pathname;
+        const vclMatch = path.match(/\/VCL\/(.+)/);
+        if (vclMatch && vclMatch[1]) {
+            return decodeURIComponent(vclMatch[1]);
+        }
+        return '';
+    }
+
+    // Update URL without page reload
+    function updateURL(vclExpression) {
+        if (vclExpression.trim()) {
+            const encodedVCL = encodeURIComponent(vclExpression);
+            const newURL = `/VCL/${encodedVCL}`;
+            window.history.pushState({vcl: vclExpression}, '', newURL);
+        } else {
+            window.history.pushState({vcl: ''}, '', '/VCL/');
+        }
+        updateCurrentUrlDisplay(vclExpression);
+    }
+
+    function updateCurrentUrlDisplay(vclExpression) {
+        const urlDiv = document.getElementById('currentUrl');
+        if (vclExpression.trim()) {
+            const encodedVCL = encodeURIComponent(vclExpression);
+            const fullURL = `http://fhir.org/VCL/${encodedVCL}`;
+            urlDiv.innerHTML = `<strong>Shareable URL:</strong> ${fullURL}`;
+            urlDiv.style.display = 'block';
+        } else {
+            urlDiv.style.display = 'none';
+        }
+    }
+
+    function parseVCL() {
+        const input = document.getElementById('vclInput').value.trim();
+        const resultsDiv = document.getElementById('vclResults');
+        const contentDiv = document.getElementById('resultsContent');
+        
+        if (!input) {
+            contentDiv.innerHTML = '<div class="vcl-error">Please enter a VCL expression</div>';
+            resultsDiv.style.display = 'block';
+            return;
+        }
+
+        try {
+            const valueSet = VCLParser.parseVCL(input);
+            
+            // Create summary
+            const summary = createValueSetSummary(valueSet);
+            
+            // Create JSON view
+            const jsonView = `<div class="json-viewer">${JSON.stringify(valueSet, null, 2)}</div>`;
+            
+            contentDiv.innerHTML = `
+                <div class="vcl-success">✅ <strong>Parsing successful!</strong></div>
+                <h4>📄 Complete FHIR ValueSet JSON:</h4>
+                ${jsonView}
+                ${summary}
+            `;
+            
+            resultsDiv.style.display = 'block';
+            
+            // Update URL
+            updateURL(input);
+            
+        } catch (error) {
+            contentDiv.innerHTML = `
+                <div class="vcl-error">
+                    <strong>❌ Parsing failed:</strong><br>
+                    ${error.message}
+                </div>
+            `;
+            resultsDiv.style.display = 'block';
+        }
+    }
+
+    function createValueSetSummary(valueSet) {
+        let summary = '<div class="valueset-summary">';
+        summary += `<h4>📋 ValueSet Summary</h4>`;
+        summary += `<p><strong>Resource Type:</strong> ${valueSet.resourceType}</p>`;
+        summary += `<p><strong>Status:</strong> ${valueSet.status}</p>`;
+        
+        if (valueSet.url) {
+            summary += `<p><strong>URL:</strong> <code>${valueSet.url}</code></p>`;
+        }
+        
+        if (valueSet.compose) {
+            if (valueSet.compose.include && valueSet.compose.include.length > 0) {
+                summary += `<p><strong>Includes:</strong> ${valueSet.compose.include.length} concept set(s)</p>`;
+                
+                valueSet.compose.include.forEach((include, i) => {
+                    summary += `<div style="margin-left: 20px; margin-top: 10px;">`;
+                    summary += `<strong>Include ${i + 1}:</strong><br>`;
+                    if (include.system) summary += `&nbsp;&nbsp;• System: <code>${include.system}</code><br>`;
+                    if (include.version) summary += `&nbsp;&nbsp;• Version: <code>${include.version}</code><br>`;
+                    if (include.concept) summary += `&nbsp;&nbsp;• Concepts: ${include.concept.length}<br>`;
+                    if (include.filter) summary += `&nbsp;&nbsp;• Filters: ${include.filter.length}<br>`;
+                    if (include.valueSet) summary += `&nbsp;&nbsp;• ValueSets: ${include.valueSet.length}<br>`;
+                    summary += `</div>`;
+                });
+            }
+            
+            if (valueSet.compose.exclude && valueSet.compose.exclude.length > 0) {
+                summary += `<p><strong>Excludes:</strong> ${valueSet.compose.exclude.length} concept set(s)</p>`;
+            }
+        }
+        
+        summary += '</div>';
+        return summary;
+    }
+
+    function clearAll() {
+        document.getElementById('vclInput').value = '';
+        document.getElementById('vclResults').style.display = 'none';
+        updateURL('');
+    }
+
+    function copyURL() {
+        const input = document.getElementById('vclInput').value.trim();
+        if (!input) {
+            alert('Enter a VCL expression first');
+            return;
+        }
+        
+        const encodedVCL = encodeURIComponent(input);
+        const fullURL = `${window.location.origin}/VCL/${encodedVCL}`;
+        
+        navigator.clipboard.writeText(fullURL).then(() => {
+            alert('URL copied to clipboard!');
+        }).catch(() => {
+            // Fallback for older browsers
+            const textarea = document.createElement('textarea');
+            textarea.value = fullURL;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('URL copied to clipboard!');
+        });
+    }
+
+    function useExample(example) {
+        document.getElementById('vclInput').value = example;
+        parseVCL();
+    }
+
+    // Handle browser back/forward
+    window.addEventListener('popstate', function(event) {
+        const vcl = getVCLFromURL();
+        if (vcl) {
+            document.getElementById('vclInput').value = vcl;
+            parseVCL();
+        } else {
+            clearAll();
+        }
+    });
+
+    // Initialize page
+    window.addEventListener('load', function() {
+        const vclFromURL = getVCLFromURL();
+        if (vclFromURL) {
+            document.getElementById('vclInput').value = vclFromURL;
+            parseVCL();
+        } else {
+            // Default example
+            document.getElementById('vclInput').value = '(http://snomed.info/sct)123456789';
+            updateCurrentUrlDisplay('');
+        }
+    });
+
+    // Auto-parse when Enter is pressed (with Ctrl/Cmd)
+    document.getElementById('vclInput').addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+            parseVCL();
+        }
+    });
+</script>
