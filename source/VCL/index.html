@@ -330,14 +330,11 @@ title: VCL Viewer - Value Set Composition Language
 <script>
     // Parse URL path and extract VCL expression
     function getVCLFromURL() {
-        const path = window.location.pathname;
-        const vclMatch = path.match(/\/VCL\/(.+)/);
-        if (vclMatch && vclMatch[1]) {
-            return decodeURIComponent(vclMatch[1]);
-        }
-        return '';
+      const params = new URLSearchParams(window.location.search);
+      const expression = params.get('v1');
+      return expression ? expression : '';
     }
-
+    
     // Update URL without page reload
     function updateURL(vclExpression) {
         if (vclExpression.trim()) {
