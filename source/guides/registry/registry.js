@@ -442,6 +442,7 @@ function loadRegistry() {
     countryOptions += '<option value="us">USA</option>';
     countryOptions += '<option value="at">Austria (Österreich)</option>';
     countryOptions += '<option value="au">Australia</option>';
+    countryOptions += '<option value="bd">Bangladesh</option>';
     countryOptions += '<option value="be">Belgium (België/Belgique)</option>';
     countryOptions += '<option value="br">Brasil</option>';
     countryOptions += '<option value="ca">Canada</option>';
