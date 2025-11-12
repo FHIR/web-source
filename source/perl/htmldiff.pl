@@ -495,8 +495,8 @@ sub cli {
 }
 
 sub cgi {
- 	# use LWP::UserAgent;
-	# use CGI;
+ 	use LWP::UserAgent;
+	use CGI;
 
 	my $query = new CGI;
 	my $url1 = $query->param("oldfile");
@@ -562,7 +562,7 @@ sub cgi {
 	  	$output =~ s/<html>/<html>\n<base href="$base">/i ;
 	}
 
-	print $query->header(-type=>'text/html',-nph=>1);
+	print $query->header(-type=>'text/html');
 	print $output;
 
 	unlink $file1;
@@ -576,8 +576,14 @@ $tmp2="/tmp/htdtmp2.$$";
 $headertmp2="/tmp/htdhtmp2.$$";
 $stripheader = 1;
 
-cli();		# always CLI
+# Detect if running as CGI or CLI
+if ($ENV{'REQUEST_METHOD'}) {
+	cgi();
+} else {
+	cli();
+}
 
+unlink $tmp1;
 unlink $tmp1;
 unlink $headertmp1;
 unlink $tmp2;
