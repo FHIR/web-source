@@ -1,0 +1,577 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openehr.org/fhir/StructureDefinition/EHR> a fhir:StructureDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EHR"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition EHR</b></p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHR-definitions.html#EHR\" title=\"The EHR object is the root object and access point of an EHR for a subject of care. \">EHR</a><a name=\"EHR\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;; padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;\" href=\"http://hl7.org/fhir/R5/conformance-rules.html#constraints\" title=\"This element has or is affected by constraints ( Contributions_valid, Ehr_access_valid, Ehr_status_valid, Compositions_valid, Directory_valid, Folders_valid, Directory_in_folders )\">C</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-Any.html\">Any</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">The EHR object is the root object and access point of an EHR for a subject of care.<br class=\"constraint\"/><span title=\"null\" class=\"constraint\">Constraints: </span><span style=\"font-weight:bold\" title=\"Contributions valid\" class=\"constraint\">Contributions_valid</span><span title=\"null\" class=\"constraint\">, </span><span style=\"font-weight:bold\" title=\"Ehr access valid\" class=\"constraint\">Ehr_access_valid</span><span title=\"null\" class=\"constraint\">, </span><span style=\"font-weight:bold\" title=\"Ehr status valid\" class=\"constraint\">Ehr_status_valid</span><span title=\"null\" class=\"constraint\">, </span><span style=\"font-weight:bold\" title=\"Compositions valid\" class=\"constraint\">Compositions_valid</span><span title=\"null\" class=\"constraint\">, </span><span style=\"font-weight:bold\" title=\"Directory valid must be present\" class=\"constraint\">Directory_valid</span><span title=\"null\" class=\"constraint\">, </span><span style=\"font-weight:bold\" title=\"Folders valid must be present\" class=\"constraint\">Folders_valid</span><span title=\"null\" class=\"constraint\">, </span><span style=\"font-weight:bold\" title=\"Directory in folders must be present\" class=\"constraint\">Directory_in_folders</span><br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHR-definitions.html#EHR.system-id\" title=\"The identifier of the logical EHR management system in which this EHR was created. #xA;\">system_id</a><a name=\"EHR.system_id\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-HIER-OBJECT-ID.html\">HIER_OBJECT_ID</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">The identifier of the logical EHR management system in which this EHR was created.</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHR-definitions.html#EHR.ehr-id\" title=\"The unique identifier of this EHR.#xA;#xA;NOTE: is is strongly recommended that a UUID always be used for this field.\">ehr_id</a><a name=\"EHR.ehr_id\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-HIER-OBJECT-ID.html\">HIER_OBJECT_ID</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">The unique identifier of this EHR.</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHR-definitions.html#EHR.contributions\" title=\"List of contributions causing changes to this EHR. Each contribution contains a list of versions, which may include references to any number of `VERSION` instances, i.e. items of type `VERSIONED_COMPOSITION` and `VERSIONED_FOLDER`. \">contributions</a><a name=\"EHR.contributions\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-OBJECT-REF.html\">OBJECT_REF</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">List of contributions causing changes to this EHR.<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHR-definitions.html#EHR.ehr-status\" title=\"Reference to `EHR_STATUS` object for this EHR.\">ehr_status</a><a name=\"EHR.ehr_status\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-OBJECT-REF.html\">OBJECT_REF</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Reference to `EHR_STATUS` object for this EHR.</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHR-definitions.html#EHR.ehr-access\" title=\"Reference to `EHR_ACCESS` object for this EHR.\">ehr_access</a><a name=\"EHR.ehr_access\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-OBJECT-REF.html\">OBJECT_REF</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Reference to `EHR_ACCESS` object for this EHR.</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHR-definitions.html#EHR.compositions\" title=\"Master list of all Versioned Composition references in this EHR.\">compositions</a><a name=\"EHR.compositions\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-OBJECT-REF.html\">OBJECT_REF</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Master list of all Versioned Composition references in this EHR.<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHR-definitions.html#EHR.directory\" title=\"Optional directory structure for this EHR. If present, this is a reference to the first member of `_folders_`.\">directory</a><a name=\"EHR.directory\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-OBJECT-REF.html\">OBJECT_REF</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Optional directory structure for this EHR.</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHR-definitions.html#EHR.time-created\" title=\"Time of creation of the EHR.\">time_created</a><a name=\"EHR.time_created\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-DV-DATE-TIME.html\">DV_DATE_TIME</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Time of creation of the EHR.</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHR-definitions.html#EHR.folders\" title=\"Optional additional Folder structures for this EHR. If set, the `_directory_` attribute refers to the first member.\">folders</a><a name=\"EHR.folders\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-OBJECT-REF.html\">OBJECT_REF</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Optional additional Folder structures for this EHR.<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-EHR-definitions.html#EHR.tags\" title=\"Optional list of tags associated with this EHR. Tag `_target_` values can only be within the same EHR.\">tags</a><a name=\"EHR.tags\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-OBJECT-REF.html\">OBJECT_REF</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Optional list of tags associated with this EHR.<br/></td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/tools/StructureDefinition/web-source"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/tools/StructureDefinition/web-source>
+     ] ;
+     fhir:value [
+       a fhir:Url ;
+       fhir:v "https://specifications.openehr.org/releases/RM/development/ehr.html#_ehr_class"^^xsd:anyURI ;
+       fhir:l <https://specifications.openehr.org/releases/RM/development/ehr.html#_ehr_class>
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/tools/StructureDefinition/view-hint"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/tools/StructureDefinition/view-hint>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "element-view-replace-cardinality"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 3 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "informative" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://openehr.org/fhir/StructureDefinition/EHR"^^xsd:anyURI ;
+     fhir:l <http://openehr.org/fhir/StructureDefinition/EHR>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0-snapshot"] ; # 
+  fhir:name [ fhir:v "EHR"] ; # 
+  fhir:title [ fhir:v "EHR"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-09-06T15:35:39+10:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "openEHR + HL7"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.openehr.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The EHR object is the root object and access point of an EHR for a subject of care. "] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:fhirVersion [ fhir:v "5.0.0"] ; # 
+  fhir:mapping ( [
+     fhir:identity [ fhir:v "rim" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/v3"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/v3>
+     ] ;
+     fhir:name [ fhir:v "RIM Mapping" ]
+  ] ) ; # 
+  fhir:kind [ fhir:v "logical"] ; # 
+  fhir:abstract [ fhir:v false] ; # 
+  fhir:type [
+     fhir:v "http://openehr.org/fhir/StructureDefinition/EHR"^^xsd:anyURI ;
+     fhir:l <http://openehr.org/fhir/StructureDefinition/EHR>
+  ] ; # 
+  fhir:baseDefinition [
+     fhir:v "http://openehr.org/fhir/StructureDefinition/Any"^^xsd:anyURI ;
+     fhir:l <http://openehr.org/fhir/StructureDefinition/Any>
+  ] ; # 
+  fhir:derivation [ fhir:v "specialization"] ; # 
+  fhir:snapshot [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version>
+       ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "0.1.0-snapshot"
+       ]
+     ] ) ;
+     fhir:element ( [
+       fhir:id [ fhir:v "EHR" ] ;
+       fhir:path [ fhir:v "EHR" ] ;
+       fhir:short [ fhir:v "The EHR object is the root object and access point of an EHR for a subject of care." ] ;
+       fhir:definition [ fhir:v "The EHR object is the root object and access point of an EHR for a subject of care. " ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Base" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "Contributions_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Contributions valid" ] ;
+         fhir:expression [ fhir:v "for_all c in contributions | c.type().is_equal(\\\"CONTRIBUTION\\\")" ]
+       ] [
+         fhir:key [ fhir:v "Ehr_access_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Ehr access valid" ] ;
+         fhir:expression [ fhir:v "ehr_access.type().is_equal (\\\"VERSIONED_EHR_ACCESS\\\")" ]
+       ] [
+         fhir:key [ fhir:v "Ehr_status_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Ehr status valid" ] ;
+         fhir:expression [ fhir:v "ehr_status.type().is_equal(\\\"VERSIONED_EHR_STATUS\\\")" ]
+       ] [
+         fhir:key [ fhir:v "Compositions_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Compositions valid" ] ;
+         fhir:expression [ fhir:v "for_all c in compositions | c.type().is_equal (\\\"VERSIONED_COMPOSITION\\\")" ]
+       ] [
+         fhir:key [ fhir:v "Directory_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Directory valid must be present" ] ;
+         fhir:expression [ fhir:v "directory.exists() implies directory.type().is_equal (\\\"VERSIONED_FOLDER\\\")" ]
+       ] [
+         fhir:key [ fhir:v "Folders_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Folders valid must be present" ] ;
+         fhir:expression [ fhir:v "folders.exists() implies for_all f in folders | f.type().is_equal(\\\"VERSIONED_FOLDER\\\")" ]
+       ] [
+         fhir:key [ fhir:v "Directory_in_folders" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Directory in folders must be present" ] ;
+         fhir:expression [ fhir:v "folders.exists() implies folders.item(1) = directory" ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "EHR.system-id" ] ;
+       fhir:path [ fhir:v "EHR.system_id" ] ;
+       fhir:short [ fhir:v "The identifier of the logical EHR management system in which this EHR was created." ] ;
+       fhir:definition [ fhir:v "The identifier of the logical EHR management system in which this EHR was created." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHR.system_id" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/HIER-OBJECT-ID"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/HIER-OBJECT-ID>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.ehr-id" ] ;
+       fhir:path [ fhir:v "EHR.ehr_id" ] ;
+       fhir:short [ fhir:v "The unique identifier of this EHR." ] ;
+       fhir:definition [ fhir:v "The unique identifier of this EHR.\n\nNOTE: is is strongly recommended that a UUID always be used for this field." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHR.ehr_id" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/HIER-OBJECT-ID"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/HIER-OBJECT-ID>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.contributions" ] ;
+       fhir:path [ fhir:v "EHR.contributions" ] ;
+       fhir:short [ fhir:v "List of contributions causing changes to this EHR." ] ;
+       fhir:definition [ fhir:v "List of contributions causing changes to this EHR. Each contribution contains a list of versions, which may include references to any number of `VERSION` instances, i.e. items of type `VERSIONED_COMPOSITION` and `VERSIONED_FOLDER`." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHR.contributions" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/OBJECT-REF>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.ehr-status" ] ;
+       fhir:path [ fhir:v "EHR.ehr_status" ] ;
+       fhir:short [ fhir:v "Reference to `EHR_STATUS` object for this EHR." ] ;
+       fhir:definition [ fhir:v "Reference to `EHR_STATUS` object for this EHR." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHR.ehr_status" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/OBJECT-REF>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.ehr-access" ] ;
+       fhir:path [ fhir:v "EHR.ehr_access" ] ;
+       fhir:short [ fhir:v "Reference to `EHR_ACCESS` object for this EHR." ] ;
+       fhir:definition [ fhir:v "Reference to `EHR_ACCESS` object for this EHR." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHR.ehr_access" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/OBJECT-REF>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.compositions" ] ;
+       fhir:path [ fhir:v "EHR.compositions" ] ;
+       fhir:short [ fhir:v "Master list of all Versioned Composition references in this EHR." ] ;
+       fhir:definition [ fhir:v "Master list of all Versioned Composition references in this EHR." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHR.compositions" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/OBJECT-REF>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.directory" ] ;
+       fhir:path [ fhir:v "EHR.directory" ] ;
+       fhir:short [ fhir:v "Optional directory structure for this EHR." ] ;
+       fhir:definition [ fhir:v "Optional directory structure for this EHR. If present, this is a reference to the first member of `_folders_`." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHR.directory" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/OBJECT-REF>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.time-created" ] ;
+       fhir:path [ fhir:v "EHR.time_created" ] ;
+       fhir:short [ fhir:v "Time of creation of the EHR." ] ;
+       fhir:definition [ fhir:v "Time of creation of the EHR." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHR.time_created" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/DV-DATE-TIME"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/DV-DATE-TIME>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.folders" ] ;
+       fhir:path [ fhir:v "EHR.folders" ] ;
+       fhir:short [ fhir:v "Optional additional Folder structures for this EHR." ] ;
+       fhir:definition [ fhir:v "Optional additional Folder structures for this EHR. If set, the `_directory_` attribute refers to the first member." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHR.folders" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/OBJECT-REF>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.tags" ] ;
+       fhir:path [ fhir:v "EHR.tags" ] ;
+       fhir:short [ fhir:v "Optional list of tags associated with this EHR." ] ;
+       fhir:definition [ fhir:v "Optional list of tags associated with this EHR. Tag `_target_` values can only be within the same EHR." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "EHR.tags" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/OBJECT-REF>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] )
+  ] ; # 
+  fhir:differential [
+     fhir:element ( [
+       fhir:id [ fhir:v "EHR" ] ;
+       fhir:path [ fhir:v "EHR" ] ;
+       fhir:short [ fhir:v "The EHR object is the root object and access point of an EHR for a subject of care." ] ;
+       fhir:definition [ fhir:v "The EHR object is the root object and access point of an EHR for a subject of care. " ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "Contributions_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Contributions valid" ] ;
+         fhir:expression [ fhir:v "for_all c in contributions | c.type().is_equal(\\\"CONTRIBUTION\\\")" ]
+       ] [
+         fhir:key [ fhir:v "Ehr_access_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Ehr access valid" ] ;
+         fhir:expression [ fhir:v "ehr_access.type().is_equal (\\\"VERSIONED_EHR_ACCESS\\\")" ]
+       ] [
+         fhir:key [ fhir:v "Ehr_status_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Ehr status valid" ] ;
+         fhir:expression [ fhir:v "ehr_status.type().is_equal(\\\"VERSIONED_EHR_STATUS\\\")" ]
+       ] [
+         fhir:key [ fhir:v "Compositions_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Compositions valid" ] ;
+         fhir:expression [ fhir:v "for_all c in compositions | c.type().is_equal (\\\"VERSIONED_COMPOSITION\\\")" ]
+       ] [
+         fhir:key [ fhir:v "Directory_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Directory valid must be present" ] ;
+         fhir:expression [ fhir:v "directory.exists() implies directory.type().is_equal (\\\"VERSIONED_FOLDER\\\")" ]
+       ] [
+         fhir:key [ fhir:v "Folders_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Folders valid must be present" ] ;
+         fhir:expression [ fhir:v "folders.exists() implies for_all f in folders | f.type().is_equal(\\\"VERSIONED_FOLDER\\\")" ]
+       ] [
+         fhir:key [ fhir:v "Directory_in_folders" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Directory in folders must be present" ] ;
+         fhir:expression [ fhir:v "folders.exists() implies folders.item(1) = directory" ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.system-id" ] ;
+       fhir:path [ fhir:v "EHR.system_id" ] ;
+       fhir:short [ fhir:v "The identifier of the logical EHR management system in which this EHR was created." ] ;
+       fhir:definition [ fhir:v "The identifier of the logical EHR management system in which this EHR was created. \n" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/HIER-OBJECT-ID"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/HIER-OBJECT-ID>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.ehr-id" ] ;
+       fhir:path [ fhir:v "EHR.ehr_id" ] ;
+       fhir:short [ fhir:v "The unique identifier of this EHR." ] ;
+       fhir:definition [ fhir:v "The unique identifier of this EHR.\n\nNOTE: is is strongly recommended that a UUID always be used for this field." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/HIER-OBJECT-ID"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/HIER-OBJECT-ID>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.contributions" ] ;
+       fhir:path [ fhir:v "EHR.contributions" ] ;
+       fhir:short [ fhir:v "List of contributions causing changes to this EHR." ] ;
+       fhir:definition [ fhir:v "List of contributions causing changes to this EHR. Each contribution contains a list of versions, which may include references to any number of `VERSION` instances, i.e. items of type `VERSIONED_COMPOSITION` and `VERSIONED_FOLDER`. " ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/OBJECT-REF>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.ehr-status" ] ;
+       fhir:path [ fhir:v "EHR.ehr_status" ] ;
+       fhir:short [ fhir:v "Reference to `EHR_STATUS` object for this EHR." ] ;
+       fhir:definition [ fhir:v "Reference to `EHR_STATUS` object for this EHR." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/OBJECT-REF>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.ehr-access" ] ;
+       fhir:path [ fhir:v "EHR.ehr_access" ] ;
+       fhir:short [ fhir:v "Reference to `EHR_ACCESS` object for this EHR." ] ;
+       fhir:definition [ fhir:v "Reference to `EHR_ACCESS` object for this EHR." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/OBJECT-REF>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.compositions" ] ;
+       fhir:path [ fhir:v "EHR.compositions" ] ;
+       fhir:short [ fhir:v "Master list of all Versioned Composition references in this EHR." ] ;
+       fhir:definition [ fhir:v "Master list of all Versioned Composition references in this EHR." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/OBJECT-REF>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.directory" ] ;
+       fhir:path [ fhir:v "EHR.directory" ] ;
+       fhir:short [ fhir:v "Optional directory structure for this EHR." ] ;
+       fhir:definition [ fhir:v "Optional directory structure for this EHR. If present, this is a reference to the first member of `_folders_`." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/OBJECT-REF>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.time-created" ] ;
+       fhir:path [ fhir:v "EHR.time_created" ] ;
+       fhir:short [ fhir:v "Time of creation of the EHR." ] ;
+       fhir:definition [ fhir:v "Time of creation of the EHR." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/DV-DATE-TIME"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/DV-DATE-TIME>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.folders" ] ;
+       fhir:path [ fhir:v "EHR.folders" ] ;
+       fhir:short [ fhir:v "Optional additional Folder structures for this EHR." ] ;
+       fhir:definition [ fhir:v "Optional additional Folder structures for this EHR. If set, the `_directory_` attribute refers to the first member." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/OBJECT-REF>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "EHR.tags" ] ;
+       fhir:path [ fhir:v "EHR.tags" ] ;
+       fhir:short [ fhir:v "Optional list of tags associated with this EHR." ] ;
+       fhir:definition [ fhir:v "Optional list of tags associated with this EHR. Tag `_target_` values can only be within the same EHR." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/OBJECT-REF>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

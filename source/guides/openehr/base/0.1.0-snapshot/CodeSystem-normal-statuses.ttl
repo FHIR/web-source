@@ -1,0 +1,123 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openehr.org/fhir/CodeSystem/normal-statuses> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "normal-statuses"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem normal-statuses</b></p><a name=\"normal-statuses\"> </a><a name=\"hcnormal-statuses\"> </a><p>This case-sensitive code system <code>https://specifications.openehr.org/fhir/codesystem-normal_statuses</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">HHH<a name=\"normal-statuses-HHH\"> </a></td></tr><tr><td style=\"white-space:nowrap\">HH<a name=\"normal-statuses-HH\"> </a></td></tr><tr><td style=\"white-space:nowrap\">H<a name=\"normal-statuses-H\"> </a></td></tr><tr><td style=\"white-space:nowrap\">N<a name=\"normal-statuses-N\"> </a></td></tr><tr><td style=\"white-space:nowrap\">L<a name=\"normal-statuses-L\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LL<a name=\"normal-statuses-LL\"> </a></td></tr><tr><td style=\"white-space:nowrap\">LLL<a name=\"normal-statuses-LLL\"> </a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 3 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "informative" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "https://specifications.openehr.org/fhir/codesystem-normal_statuses"^^xsd:anyURI ;
+     fhir:l <https://specifications.openehr.org/fhir/codesystem-normal_statuses>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0-snapshot"] ; # 
+  fhir:name [ fhir:v "normal_statuses"] ; # 
+  fhir:title [ fhir:v "Normal statuses"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2024-04-11"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "openEHR + HL7"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.openehr.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Normal statuses"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "https://specifications.openehr.org/fhir/valueset-normal_statuses"^^xsd:anyURI ;
+     fhir:l <https://specifications.openehr.org/fhir/valueset-normal_statuses>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "HHH" ] ;
+     fhir:display [ fhir:v "HHH" ]
+  ] [
+     fhir:code [ fhir:v "HH" ] ;
+     fhir:display [ fhir:v "HH" ]
+  ] [
+     fhir:code [ fhir:v "H" ] ;
+     fhir:display [ fhir:v "H" ]
+  ] [
+     fhir:code [ fhir:v "N" ] ;
+     fhir:display [ fhir:v "N" ]
+  ] [
+     fhir:code [ fhir:v "L" ] ;
+     fhir:display [ fhir:v "L" ]
+  ] [
+     fhir:code [ fhir:v "LL" ] ;
+     fhir:display [ fhir:v "LL" ]
+  ] [
+     fhir:code [ fhir:v "LLL" ] ;
+     fhir:display [ fhir:v "LLL" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

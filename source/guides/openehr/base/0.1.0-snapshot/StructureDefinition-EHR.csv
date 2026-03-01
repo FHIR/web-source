@@ -1,0 +1,26 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EHR","EHR","","","",0,*,"","","","null {[]} {[]}
+","The EHR object is the root object and access point of an EHR for a subject of care.","The EHR object is the root object and access point of an EHR for a subject of care. ","","","","","","","","","",,,,,"",,,,"Base",0,*,"","Contributions_valid:Contributions valid {for_all c in contributions | c.type().is_equal(\""CONTRIBUTION\"")}
+Ehr_access_valid:Ehr access valid {ehr_access.type().is_equal (\""VERSIONED_EHR_ACCESS\"")}Ehr_status_valid:Ehr status valid {ehr_status.type().is_equal(\""VERSIONED_EHR_STATUS\"")}Compositions_valid:Compositions valid {for_all c in compositions | c.type().is_equal (\""VERSIONED_COMPOSITION\"")}Directory_valid:Directory valid must be present {directory.exists() implies directory.type().is_equal (\""VERSIONED_FOLDER\"")}Folders_valid:Folders valid must be present {folders.exists() implies for_all f in folders | f.type().is_equal(\""VERSIONED_FOLDER\"")}Directory_in_folders:Directory in folders must be present {folders.exists() implies folders.item(1) = directory}","n/a"
+"EHR.system-id","EHR.system_id","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/HIER-OBJECT-ID {[]} {[]}
+","The identifier of the logical EHR management system in which this EHR was created.","The identifier of the logical EHR management system in which this EHR was created.","","","","","","","","","",,,,,"",,,,"EHR.system_id",1,1,"",""
+"EHR.ehr-id","EHR.ehr_id","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/HIER-OBJECT-ID {[]} {[]}
+","The unique identifier of this EHR.","The unique identifier of this EHR.
+
+NOTE: is is strongly recommended that a UUID always be used for this field.","","","","","","","","","",,,,,"",,,,"EHR.ehr_id",1,1,"",""
+"EHR.contributions","EHR.contributions","","","",0,*,"","","","http://openehr.org/fhir/StructureDefinition/OBJECT-REF {[]} {[]}
+","List of contributions causing changes to this EHR.","List of contributions causing changes to this EHR. Each contribution contains a list of versions, which may include references to any number of `VERSION` instances, i.e. items of type `VERSIONED_COMPOSITION` and `VERSIONED_FOLDER`.","","","","","","","","","",,,,,"",,,,"EHR.contributions",0,*,"",""
+"EHR.ehr-status","EHR.ehr_status","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/OBJECT-REF {[]} {[]}
+","Reference to `EHR_STATUS` object for this EHR.","Reference to `EHR_STATUS` object for this EHR.","","","","","","","","","",,,,,"",,,,"EHR.ehr_status",1,1,"",""
+"EHR.ehr-access","EHR.ehr_access","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/OBJECT-REF {[]} {[]}
+","Reference to `EHR_ACCESS` object for this EHR.","Reference to `EHR_ACCESS` object for this EHR.","","","","","","","","","",,,,,"",,,,"EHR.ehr_access",1,1,"",""
+"EHR.compositions","EHR.compositions","","","",0,*,"","","","http://openehr.org/fhir/StructureDefinition/OBJECT-REF {[]} {[]}
+","Master list of all Versioned Composition references in this EHR.","Master list of all Versioned Composition references in this EHR.","","","","","","","","","",,,,,"",,,,"EHR.compositions",0,*,"",""
+"EHR.directory","EHR.directory","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/OBJECT-REF {[]} {[]}
+","Optional directory structure for this EHR.","Optional directory structure for this EHR. If present, this is a reference to the first member of `_folders_`.","","","","","","","","","",,,,,"",,,,"EHR.directory",0,1,"",""
+"EHR.time-created","EHR.time_created","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/DV-DATE-TIME {[]} {[]}
+","Time of creation of the EHR.","Time of creation of the EHR.","","","","","","","","","",,,,,"",,,,"EHR.time_created",1,1,"",""
+"EHR.folders","EHR.folders","","","",0,*,"","","","http://openehr.org/fhir/StructureDefinition/OBJECT-REF {[]} {[]}
+","Optional additional Folder structures for this EHR.","Optional additional Folder structures for this EHR. If set, the `_directory_` attribute refers to the first member.","","","","","","","","","",,,,,"",,,,"EHR.folders",0,*,"",""
+"EHR.tags","EHR.tags","","","",0,*,"","","","http://openehr.org/fhir/StructureDefinition/OBJECT-REF {[]} {[]}
+","Optional list of tags associated with this EHR.","Optional list of tags associated with this EHR. Tag `_target_` values can only be within the same EHR.","","","","","","","","","",,,,,"",,,,"EHR.tags",0,*,"",""

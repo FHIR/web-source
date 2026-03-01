@@ -1,0 +1,38 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"DV_TEMPORAL","DV_TEMPORAL","","","",0,*,"","","","null {[]} {[]}
+","Specialised temporal variant of `DV_ABSOLUTE_QUANTITY` whose diff type is `DV_DURATION`.","Specialised temporal variant of `DV_ABSOLUTE_QUANTITY` whose diff type is `DV_DURATION`. ","","","","","","","","","",,,,,"",,,,"Base",0,*,"","Other_reference_ranges_validity:Other reference ranges validity must be present {other_reference_ranges.exists() implies other_reference_ranges.empty().not()}
+Is_simple_validity:Is simple validity must satisfy conditional constraints {(normal_range .empty() and other_reference_ranges .empty()) implies is_simple()}Normal_range_and_status_consistency:Normal range and status consistency must be present {(normal_range.exists() and normal_status.exists()) implies (normal_status.code_string.is_equal (“N”) xor normal_range.not().has (self))}Magnitude_status_valid:Magnitude status valid must be present {magnitude_status.exists() implies valid_magnitude_status() (magnitude_status)}","n/a"
+"DV_TEMPORAL.CR","DV_TEMPORAL.CR","","","",1,1,"","","","string {[]} {[]}
+","Carriage return character.","Carriage return character.","","","","","","","","","",,,,,"",,,,"BASIC_DEFINITIONS.CR",1,1,"",""
+"DV_TEMPORAL.LF","DV_TEMPORAL.LF","","","",1,1,"","","","string {[]} {[]}
+","Line feed character.","Line feed character.","","","","","","","","","",,,,,"",,,,"BASIC_DEFINITIONS.LF",1,1,"",""
+"DV_TEMPORAL.Local-terminology-id","DV_TEMPORAL.Local_terminology_id","","","",1,1,"","","","string {[]} {[]}
+","Predefined terminology identifier","Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype","","","","","","","","","",,,,,"",,,,"OPENEHR_DEFINITIONS.Local_terminology_id",1,1,"",""
+"DV_TEMPORAL.normal-status","DV_TEMPORAL.normal_status","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/CODE-PHRASE {[]} {[]}
+","Optional normal status indicator of value with respect to normal range for this value.","Optional normal status indicator of value with respect to normal range for this value. Often included by lab, even if the normal range itself is not included. Coded by ordinals in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group  `normal_status`.","","","","","","","","","",,,,,"",,,,"DV_ORDERED.normal_status",0,1,"",""
+"DV_TEMPORAL.normal-range","DV_TEMPORAL.normal_range","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/DV-INTERVAL {[]} {[]}
+","Optional normal range.","Optional normal range.","","","","","","","","","",,,,,"",,,,"DV_ORDERED.normal_range",0,1,"",""
+"DV_TEMPORAL.other-reference-ranges","DV_TEMPORAL.other_reference_ranges","","","",0,*,"","","","http://openehr.org/fhir/StructureDefinition/REFERENCE-RANGE {[]} {[]}
+","Optional tagged other reference ranges for this value in its particular measurement context.","Optional tagged other reference ranges for this value in its particular measurement context.","","","","","","","","","",,,,,"",,,,"DV_ORDERED.other_reference_ranges",0,*,"",""
+"DV_TEMPORAL.magnitude-status","DV_TEMPORAL.magnitude_status","","","",0,1,"","","","string {[]} {[]}
+","Optional status of magnitude with values: 
+
+* `""=""`   :   magnitude is a point value 
+* `""<""`   :   value is < magnitude 
+* `"">""`   :   value is > magnitude 
+* `""<=""` : value is <= magnitude 
+* `"">=""` : value is >= magnitude 
+* `""~""`   :   value is approximately magnitude 
+
+If not present, assumed meaning is  `""=""` .","Optional status of magnitude with values: 
+
+* `""=""`   :   magnitude is a point value 
+* `""<""`   :   value is < magnitude 
+* `"">""`   :   value is > magnitude 
+* `""<=""` : value is <= magnitude 
+* `"">=""` : value is >= magnitude 
+* `""~""`   :   value is approximately magnitude 
+
+If not present, assumed meaning is  `""=""` .","","","","","","","","","",,,,,"",,,,"DV_QUANTIFIED.magnitude_status",0,1,"",""
+"DV_TEMPORAL.accuracy","DV_TEMPORAL.accuracy","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/DV-DURATION {[]} {[]}
+","Time accuracy, expressed as a duration.","Time accuracy, expressed as a duration.","","","","","","","","","",,,,,"",,,,"DV_QUANTIFIED.accuracy",0,1,"",""

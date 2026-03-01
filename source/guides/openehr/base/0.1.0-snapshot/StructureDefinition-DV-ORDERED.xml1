@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="DV-ORDERED"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureDefinition DV-ORDERED</b></p><a name="DV-ORDERED"> </a><a name="hcDV-ORDERED"> </a><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-DV-ORDERED-definitions.html#DV_ORDERED" title="Abstract class defining the concept of ordered values, which includes ordinals as well as true quantities. It defines the functions  `&lt;` and `_is_strictly_comparable_to()_`, the latter of which must evaluate to `True` for instances being compared with the  `&lt;` function, or used as limits in the `DV_INTERVAL&lt;T&gt;` class. 
+
+Data value types which are to be used as limits in the `DV_INTERVAL&lt;T&gt;` class must inherit from this class, and implement the function `_is_strictly_comparable_to()_` to ensure that instances compare meaningfully. For example, instances of `DV_QUANTITY` can only be compared if they measure the same kind of physical quantity. 
+">DV_ORDERED</a><a name="DV_ORDERED"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;; padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;" href="http://hl7.org/fhir/R5/conformance-rules.html#constraints" title="This element has or is affected by constraints ( Other_reference_ranges_validity, Is_simple_validity, Normal_range_and_status_consistency )">C</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-DATA-VALUE.html">DATA_VALUE</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">This is an abstract type. Child types: <a href="StructureDefinition-DV-ORDINAL.html">DV_ORDINAL</a>, <a href="StructureDefinition-DV-QUANTIFIED.html">DV_QUANTIFIED</a>, <a href="StructureDefinition-DV-SCALE.html">DV_SCALE</a><br/>Abstract class defining the concept of ordered values, which includes ordinals as well as true quantities.<br/><br/>Elements defined in Ancestors:<a href="StructureDefinition-BASIC-DEFINITIONS.html" title="Carriage return character.">CR</a>, <a href="StructureDefinition-BASIC-DEFINITIONS.html" title="Line feed character.">LF</a>, <a href="StructureDefinition-OPENEHR-DEFINITIONS.html" title="Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype">Local_terminology_id</a><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-normal-statuses.html" title="https://specifications.openehr.org/fhir/valueset-normal_statuses" class="binding">Normal statuses</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R5/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="Other reference ranges validity must be present" class="constraint">Other_reference_ranges_validity</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="Is simple validity must satisfy conditional constraints" class="constraint">Is_simple_validity</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="Normal range and status consistency must be present" class="constraint">Normal_range_and_status_consistency</span><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-DV-ORDERED-definitions.html#DV_ORDERED.normal-status" title="Optional normal status indicator of value with respect to normal range for this value. Often included by lab, even if the normal range itself is not included. Coded by ordinals in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group  `normal_status`. ">normal_status</a><a name="DV_ORDERED.normal_status"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-CODE-PHRASE.html">CODE_PHRASE</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Optional normal status indicator of value with respect to normal range for this value.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-DV-ORDERED-definitions.html#DV_ORDERED.normal-range" title="Optional normal range. ">normal_range</a><a name="DV_ORDERED.normal_range"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-DV-INTERVAL.html">DV_INTERVAL</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Optional normal range.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-DV-ORDERED-definitions.html#DV_ORDERED.other-reference-ranges" title="Optional tagged other reference ranges for this value in its particular measurement context.">other_reference_ranges</a><a name="DV_ORDERED.other_reference_ranges"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-REFERENCE-RANGE.html">REFERENCE_RANGE</a>&lt;<a href="StructureDefinition-DV-ORDERED.html">DV_ORDERED</a>&gt;</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Optional tagged other reference ranges for this value in its particular measurement context.<br/></td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <contained>
+    <OperationDefinition>
+      <id value="is_strictly_comparable_to"/>
+      <name value="is_strictly_comparable_to"/>
+      <title value="is_strictly_comparable_to"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Test if two instances are strictly comparable. Effected in descendants."/>
+      <code value="is_strictly_comparable_to"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="other"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="Parameters"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="boolean"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="is_simple"/>
+      <name value="is_simple"/>
+      <title value="is_simple"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="True if this quantity has no reference ranges."/>
+      <code value="is_simple"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="boolean"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="is_normal"/>
+      <name value="is_normal"/>
+      <title value="is_normal"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Value is in the normal range, determined by comparison of the value to `_normal_range_` if present, or by the `_normal_status_` marker if present. &#xA;"/>
+      <code value="is_normal"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="boolean"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="less_than"/>
+      <name value="less_than"/>
+      <title value="less_than"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="True if this Ordered object is less than `_other_`. Redefined in descendants."/>
+      <code value="less_than"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="other"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="Parameters"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="boolean"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/web-source">
+    <valueUrl value="https://specifications.openehr.org/releases/RM/Release-1.1.0/data_types.html#_dv_ordered_class"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#is_strictly_comparable_to"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#is_simple"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#is_normal"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#less_than"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="fhir"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/view-hint">
+    <valueCode value="element-view-as-leaf"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/view-hint">
+    <valueCode value="element-view-defns-parent"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/view-hint">
+    <valueCode value="element-view-replace-cardinality"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="3">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://openehr.org/fhir/ImplementationGuide/openehr.base"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://openehr.org/fhir/ImplementationGuide/openehr.base"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://openehr.org/fhir/StructureDefinition/DV-ORDERED"/>
+  <version value="0.1.0-snapshot"/>
+  <name value="DV_ORDERED"/>
+  <title value="DV_ORDERED"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-09-06T15:35:39+10:00"/>
+  <publisher value="openEHR + HL7"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.openehr.org"/>
+    </telecom>
+  </contact>
+  <description value="Abstract class defining the concept of ordered values, which includes ordinals as well as true quantities. It defines the functions  `&lt;` and `_is_strictly_comparable_to()_`, the latter of which must evaluate to `True` for instances being compared with the  `&lt;` function, or used as limits in the `DV_INTERVAL&lt;T&gt;` class. &#xA;&#xA;Data value types which are to be used as limits in the `DV_INTERVAL&lt;T&gt;` class must inherit from this class, and implement the function `_is_strictly_comparable_to()_` to ensure that instances compare meaningfully. For example, instances of `DV_QUANTITY` can only be compared if they measure the same kind of physical quantity. &#xA;"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="5.0.0"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <kind value="logical"/>
+  <abstract value="true"/>
+  <type value="http://openehr.org/fhir/StructureDefinition/DV_ORDERED"/>
+  <baseDefinition value="http://openehr.org/fhir/StructureDefinition/DATA-VALUE"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="0.1.0-snapshot"/>
+    </extension>
+    <element id="DV_ORDERED">
+      <path value="DV_ORDERED"/>
+      <short value="Abstract class defining the concept of ordered values, which includes ordinals as well as true quantities."/>
+      <definition value="Abstract class defining the concept of ordered values, which includes ordinals as well as true quantities. It defines the functions  `&lt;` and `_is_strictly_comparable_to()_`, the latter of which must evaluate to `True` for instances being compared with the  `&lt;` function, or used as limits in the `DV_INTERVAL&lt;T&gt;` class. &#xA;&#xA;Data value types which are to be used as limits in the `DV_INTERVAL&lt;T&gt;` class must inherit from this class, and implement the function `_is_strictly_comparable_to()_` to ensure that instances compare meaningfully. For example, instances of `DV_QUANTITY` can only be compared if they measure the same kind of physical quantity. &#xA;"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Base"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <constraint>
+        <key value="Other_reference_ranges_validity"/>
+        <severity value="error"/>
+        <human value="Other reference ranges validity must be present"/>
+        <expression value="other_reference_ranges.exists() implies other_reference_ranges.empty().not()"/>
+      </constraint>
+      <constraint>
+        <key value="Is_simple_validity"/>
+        <severity value="error"/>
+        <human value="Is simple validity must satisfy conditional constraints"/>
+        <expression value="(normal_range .empty() and other_reference_ranges .empty()) implies is_simple()"/>
+      </constraint>
+      <constraint>
+        <key value="Normal_range_and_status_consistency"/>
+        <severity value="error"/>
+        <human value="Normal range and status consistency must be present"/>
+        <expression value="(normal_range.exists() and normal_status.exists()) implies (normal_status.code_string.is_equal (“N”) xor normal_range.not().has (self))"/>
+      </constraint>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="DV_ORDERED.CR">
+      <path value="DV_ORDERED.CR"/>
+      <short value="Carriage return character."/>
+      <definition value="Carriage return character."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="BASIC_DEFINITIONS.CR"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_ORDERED.LF">
+      <path value="DV_ORDERED.LF"/>
+      <short value="Line feed character."/>
+      <definition value="Line feed character."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="BASIC_DEFINITIONS.LF"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_ORDERED.Local-terminology-id">
+      <path value="DV_ORDERED.Local_terminology_id"/>
+      <short value="Predefined terminology identifier"/>
+      <definition value="Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="OPENEHR_DEFINITIONS.Local_terminology_id"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_ORDERED.normal-status">
+      <path value="DV_ORDERED.normal_status"/>
+      <short value="Optional normal status indicator of value with respect to normal range for this value."/>
+      <definition value="Optional normal status indicator of value with respect to normal range for this value. Often included by lab, even if the normal range itself is not included. Coded by ordinals in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group  `normal_status`."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_ORDERED.normal_status"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_ORDERED.normal-range">
+      <path value="DV_ORDERED.normal_range"/>
+      <short value="Optional normal range."/>
+      <definition value="Optional normal range."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_ORDERED.normal_range"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-INTERVAL"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_ORDERED.other-reference-ranges">
+      <path value="DV_ORDERED.other_reference_ranges"/>
+      <short value="Optional tagged other reference ranges for this value in its particular measurement context."/>
+      <definition value="Optional tagged other reference ranges for this value in its particular measurement context."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DV_ORDERED.other_reference_ranges"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-parameter">
+          <extension url="name">
+            <valueCode value="T"/>
+          </extension>
+          <extension url="type">
+            <valueUri value="http://openehr.org/fhir/StructureDefinition/DV-ORDERED"/>
+          </extension>
+        </extension>
+        <code value="http://openehr.org/fhir/StructureDefinition/REFERENCE-RANGE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="DV_ORDERED">
+      <path value="DV_ORDERED"/>
+      <short value="Abstract class defining the concept of ordered values, which includes ordinals as well as true quantities."/>
+      <definition value="Abstract class defining the concept of ordered values, which includes ordinals as well as true quantities. It defines the functions  `&lt;` and `_is_strictly_comparable_to()_`, the latter of which must evaluate to `True` for instances being compared with the  `&lt;` function, or used as limits in the `DV_INTERVAL&lt;T&gt;` class. &#xA;&#xA;Data value types which are to be used as limits in the `DV_INTERVAL&lt;T&gt;` class must inherit from this class, and implement the function `_is_strictly_comparable_to()_` to ensure that instances compare meaningfully. For example, instances of `DV_QUANTITY` can only be compared if they measure the same kind of physical quantity. &#xA;"/>
+      <min value="0"/>
+      <max value="*"/>
+      <constraint>
+        <key value="Other_reference_ranges_validity"/>
+        <severity value="error"/>
+        <human value="Other reference ranges validity must be present"/>
+        <expression value="other_reference_ranges.exists() implies other_reference_ranges.empty().not()"/>
+      </constraint>
+      <constraint>
+        <key value="Is_simple_validity"/>
+        <severity value="error"/>
+        <human value="Is simple validity must satisfy conditional constraints"/>
+        <expression value="(normal_range .empty() and other_reference_ranges .empty()) implies is_simple()"/>
+      </constraint>
+      <constraint>
+        <key value="Normal_range_and_status_consistency"/>
+        <severity value="error"/>
+        <human value="Normal range and status consistency must be present"/>
+        <expression value="(normal_range.exists() and normal_status.exists()) implies (normal_status.code_string.is_equal (“N”) xor normal_range.not().has (self))"/>
+      </constraint>
+      <isModifier value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://specifications.openehr.org/fhir/valueset-normal_statuses"/>
+      </binding>
+    </element>
+    <element id="DV_ORDERED.normal-status">
+      <path value="DV_ORDERED.normal_status"/>
+      <short value="Optional normal status indicator of value with respect to normal range for this value."/>
+      <definition value="Optional normal status indicator of value with respect to normal range for this value. Often included by lab, even if the normal range itself is not included. Coded by ordinals in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group  `normal_status`. "/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_ORDERED.normal-range">
+      <path value="DV_ORDERED.normal_range"/>
+      <short value="Optional normal range."/>
+      <definition value="Optional normal range. "/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-INTERVAL"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_ORDERED.other-reference-ranges">
+      <path value="DV_ORDERED.other_reference_ranges"/>
+      <short value="Optional tagged other reference ranges for this value in its particular measurement context."/>
+      <definition value="Optional tagged other reference ranges for this value in its particular measurement context."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-parameter">
+          <extension url="name">
+            <valueCode value="T"/>
+          </extension>
+          <extension url="type">
+            <valueUri value="http://openehr.org/fhir/StructureDefinition/DV-ORDERED"/>
+          </extension>
+        </extension>
+        <code value="http://openehr.org/fhir/StructureDefinition/REFERENCE-RANGE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

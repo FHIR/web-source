@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="DV-PROPORTION"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureDefinition DV-PROPORTION</b></p><a name="DV-PROPORTION"> </a><a name="hcDV-PROPORTION"> </a><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-DV-PROPORTION-definitions.html#DV_PROPORTION" title="Models a ratio of values, i.e. where the numerator and denominator are both pure numbers. The `_valid_proportion_kind_` property of the `PROPORTION_KIND` class is used to control the type attribute to be one of a defined set.
+
+Used for recording titers (e.g. 1:128), concentration ratios, e.g. Na:K (unitary denominator), albumin:creatinine ratio, and percentages, e.g. red cell distirbution width (RDW). 
+ 
+Misuse: Should not be used to represent things like blood pressure which are often written using a  '/' character, giving the misleading impression that the item is a ratio, when in fact it is a structured value. Similarly, visual acuity, often written as (e.g.) &quot;6/24&quot; in clinical notes is not a ratio but an ordinal (which includes non-numeric symbols like CF = count fingers etc). Should not be used for formulations. ">DV_PROPORTION</a><a name="DV_PROPORTION"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;; padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;" href="http://hl7.org/fhir/R5/conformance-rules.html#constraints" title="This element has or is affected by constraints ( Type_validity, Precision_validity, Is_integral_validity, Fraction_validity, Unitary_validity, Percent_validity, Valid_denominator )">C</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-PROPORTION-KIND.html">PROPORTION_KIND</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Models a ratio of values, i.<br/><br/>Elements defined in Ancestors:<a href="http://hl7.org/fhir/R5/types.html#Element" title="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.">@id</a>, <a href="http://hl7.org/fhir/R5/types.html#Element" title="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.">extension</a>, <a href="http://hl7.org/fhir/R5/datatypes.html#string" title="Primitive value for string">@value</a>, <a href="http://hl7.org/fhir/R5/datatypes.html#code" title="Primitive value for code">@value</a><br/><span style="font-weight:bold">Instances of this logical model are not marked to be the target of a Reference</span><br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="Type validity" class="constraint">Type_validity</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="Precision validity must satisfy conditional constraints" class="constraint">Precision_validity</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="Is integral validity must satisfy conditional constraints" class="constraint">Is_integral_validity</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="Fraction validity must satisfy conditional constraints" class="constraint">Fraction_validity</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="Unitary validity must satisfy conditional constraints" class="constraint">Unitary_validity</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="Percent validity must satisfy conditional constraints" class="constraint">Percent_validity</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="Valid denominator" class="constraint">Valid_denominator</span><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-DV-PROPORTION-definitions.html#DV_PROPORTION.numerator" title="Numerator of ratio">numerator</a><a name="DV_PROPORTION.numerator"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#decimal">decimal</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Numerator of ratio</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-DV-PROPORTION-definitions.html#DV_PROPORTION.denominator" title="Denominator of ratio.">denominator</a><a name="DV_PROPORTION.denominator"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#decimal">decimal</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Denominator of ratio.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-DV-PROPORTION-definitions.html#DV_PROPORTION.type" title="Indicates semantic type of proportion, including percent, unitary etc.">type</a><a name="DV_PROPORTION.type"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#integer">integer</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Indicates semantic type of proportion, including percent, unitary etc.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-DV-PROPORTION-definitions.html#DV_PROPORTION.precision" title="Precision  to  which  the  `_numerator_` and `_denominator_` values of  the  proportion are expressed, in terms of number  of decimal places. The value 0 implies an integral quantity. The value -1 implies no limit, i.e. any number of decimal places. ">precision</a><a name="DV_PROPORTION.precision"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#integer">integer</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Precision  to  which  the  `_numerator_` and `_denominator_` values of  the  proportion are expressed, in terms of number  of decimal places.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-DV-PROPORTION-definitions.html#DV_PROPORTION.normal-range" title="Optional normal range. ">normal_range</a><a name="DV_PROPORTION.normal_range"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-DV-INTERVAL.html">DV_INTERVAL</a>&lt;<a href="StructureDefinition-DV-PROPORTION.html">DV_PROPORTION</a>&gt;</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Optional normal range.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-DV-PROPORTION-definitions.html#DV_PROPORTION.other-reference-ranges" title="Optional tagged other reference ranges for this value in its particular measurement context.">other_reference_ranges</a><a name="DV_PROPORTION.other_reference_ranges"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-REFERENCE-RANGE.html">REFERENCE_RANGE</a>&lt;<a href="StructureDefinition-DV-PROPORTION.html">DV_PROPORTION</a>&gt;</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Optional tagged other reference ranges for this value in its particular measurement context.<br/></td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <contained>
+    <OperationDefinition>
+      <id value="magnitude"/>
+      <name value="magnitude"/>
+      <title value="magnitude"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Effective magnitude represented by ratio."/>
+      <code value="magnitude"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="decimal"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="is_integral"/>
+      <name value="is_integral"/>
+      <title value="is_integral"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="True if the `_numerator_` and `_denominator_` values are integers, i.e. if `_precision_` is 0."/>
+      <code value="is_integral"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="boolean"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="add"/>
+      <name value="add"/>
+      <title value="add"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Sum of two strictly comparable proportions."/>
+      <code value="add"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="other"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="decimal"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="decimal"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="subtract"/>
+      <name value="subtract"/>
+      <title value="subtract"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Difference between two strictly comparable proportions."/>
+      <code value="subtract"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="other"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="decimal"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="decimal"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="is_equal"/>
+      <name value="is_equal"/>
+      <title value="is_equal"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Return True if this `DV_AMOUNT` is considered equal to `_other_`."/>
+      <code value="is_equal"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="other"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="decimal"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="boolean"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="multiply"/>
+      <name value="multiply"/>
+      <title value="multiply"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Product of this Proportion and `_factor_`."/>
+      <code value="multiply"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="factor"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="decimal"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="decimal"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="less_than"/>
+      <name value="less_than"/>
+      <title value="less_than"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="True if this Proportion is less than  `_other_`. Only valid if `_is_strictly_comparable_to()_` is True."/>
+      <code value="less_than"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="other"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="decimal"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="boolean"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="is_strictly_comparable_to"/>
+      <name value="is_strictly_comparable_to"/>
+      <title value="is_strictly_comparable_to"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Return True if the `_type_` of this proportion is the same as the `_type_` of `_other_`."/>
+      <code value="is_strictly_comparable_to"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="other"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="Parameters"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="boolean"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/web-source">
+    <valueUrl value="https://specifications.openehr.org/releases/RM/Release-1.1.0/data_types.html#_dv_proportion_class"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#magnitude"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#is_integral"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#add"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#subtract"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#is_equal"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#multiply"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#less_than"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#is_strictly_comparable_to"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="fhir"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-type-characteristics">
+    <valueCode value="can-bind"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="3">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://openehr.org/fhir/ImplementationGuide/openehr.base"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://openehr.org/fhir/ImplementationGuide/openehr.base"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://openehr.org/fhir/StructureDefinition/DV-PROPORTION"/>
+  <version value="0.1.0-snapshot"/>
+  <name value="DV_PROPORTION"/>
+  <title value="DV_PROPORTION"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-09-06T15:35:39+10:00"/>
+  <publisher value="openEHR + HL7"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.openehr.org"/>
+    </telecom>
+  </contact>
+  <description value="Models a ratio of values, i.e. where the numerator and denominator are both pure numbers. The `_valid_proportion_kind_` property of the `PROPORTION_KIND` class is used to control the type attribute to be one of a defined set.&#xA;&#xA;Used for recording titers (e.g. 1:128), concentration ratios, e.g. Na:K (unitary denominator), albumin:creatinine ratio, and percentages, e.g. red cell distirbution width (RDW). &#xA; &#xA;Misuse: Should not be used to represent things like blood pressure which are often written using a  '/' character, giving the misleading impression that the item is a ratio, when in fact it is a structured value. Similarly, visual acuity, often written as (e.g.) &quot;6/24&quot; in clinical notes is not a ratio but an ordinal (which includes non-numeric symbols like CF = count fingers etc). Should not be used for formulations. "/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="5.0.0"/>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="http://openehr.org/fhir/StructureDefinition/DV_PROPORTION"/>
+  <baseDefinition value="http://openehr.org/fhir/StructureDefinition/PROPORTION-KIND"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="0.1.0-snapshot"/>
+    </extension>
+    <element id="DV_PROPORTION">
+      <path value="DV_PROPORTION"/>
+      <short value="Models a ratio of values, i."/>
+      <definition value="Models a ratio of values, i.e. where the numerator and denominator are both pure numbers. The `_valid_proportion_kind_` property of the `PROPORTION_KIND` class is used to control the type attribute to be one of a defined set.&#xA;&#xA;Used for recording titers (e.g. 1:128), concentration ratios, e.g. Na:K (unitary denominator), albumin:creatinine ratio, and percentages, e.g. red cell distirbution width (RDW). &#xA; &#xA;Misuse: Should not be used to represent things like blood pressure which are often written using a  '/' character, giving the misleading impression that the item is a ratio, when in fact it is a structured value. Similarly, visual acuity, often written as (e.g.) &quot;6/24&quot; in clinical notes is not a ratio but an ordinal (which includes non-numeric symbols like CF = count fingers etc). Should not be used for formulations. "/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="code"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="Type_validity"/>
+        <severity value="error"/>
+        <human value="Type validity"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <constraint>
+        <key value="Precision_validity"/>
+        <severity value="error"/>
+        <human value="Precision validity must satisfy conditional constraints"/>
+        <expression value="precision = 0 implies is_integral()"/>
+      </constraint>
+      <constraint>
+        <key value="Is_integral_validity"/>
+        <severity value="error"/>
+        <human value="Is integral validity must satisfy conditional constraints"/>
+        <expression value="is_integral() implies (numerator.floor = numerator and denominator.floor = denominator)"/>
+      </constraint>
+      <constraint>
+        <key value="Fraction_validity"/>
+        <severity value="error"/>
+        <human value="Fraction validity must satisfy conditional constraints"/>
+        <expression value="(type = pk_fraction or type = pk_integer_fraction) implies is_integral()"/>
+      </constraint>
+      <constraint>
+        <key value="Unitary_validity"/>
+        <severity value="error"/>
+        <human value="Unitary validity must satisfy conditional constraints"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <constraint>
+        <key value="Percent_validity"/>
+        <severity value="error"/>
+        <human value="Percent validity must satisfy conditional constraints"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <constraint>
+        <key value="Valid_denominator"/>
+        <severity value="error"/>
+        <human value="Valid denominator"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="DV_PROPORTION.id">
+      <path value="DV_PROPORTION.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references)"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String"/>
+      </type>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="DV_PROPORTION.extension">
+      <path value="DV_PROPORTION.extension"/>
+      <short value="Additional content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="DV_PROPORTION.value">
+      <path value="DV_PROPORTION.value"/>
+      <representation value="xmlAttr"/>
+      <short value="Primitive value for code"/>
+      <definition value="Primitive value for code"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="string.value"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="code"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/regex">
+          <valueString value="[^\s]+( [^\s]+)*"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String"/>
+      </type>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="DV_PROPORTION.numerator">
+      <path value="DV_PROPORTION.numerator"/>
+      <short value="Numerator of ratio"/>
+      <definition value="Numerator of ratio"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_PROPORTION.numerator"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_PROPORTION.denominator">
+      <path value="DV_PROPORTION.denominator"/>
+      <short value="Denominator of ratio."/>
+      <definition value="Denominator of ratio."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_PROPORTION.denominator"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_PROPORTION.type">
+      <path value="DV_PROPORTION.type"/>
+      <short value="Indicates semantic type of proportion, including percent, unitary etc."/>
+      <definition value="Indicates semantic type of proportion, including percent, unitary etc."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_PROPORTION.type"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_PROPORTION.precision">
+      <path value="DV_PROPORTION.precision"/>
+      <short value="Precision  to  which  the  `_numerator_` and `_denominator_` values of  the  proportion are expressed, in terms of number  of decimal places."/>
+      <definition value="Precision  to  which  the  `_numerator_` and `_denominator_` values of  the  proportion are expressed, in terms of number  of decimal places. The value 0 implies an integral quantity. The value -1 implies no limit, i.e. any number of decimal places."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_PROPORTION.precision"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_PROPORTION.normal-range">
+      <path value="DV_PROPORTION.normal_range"/>
+      <short value="Optional normal range."/>
+      <definition value="Optional normal range."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_PROPORTION.normal_range"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-parameter">
+          <extension url="name">
+            <valueCode value="T"/>
+          </extension>
+          <extension url="type">
+            <valueUri value="http://openehr.org/fhir/StructureDefinition/DV-PROPORTION"/>
+          </extension>
+        </extension>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-INTERVAL"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_PROPORTION.other-reference-ranges">
+      <path value="DV_PROPORTION.other_reference_ranges"/>
+      <short value="Optional tagged other reference ranges for this value in its particular measurement context."/>
+      <definition value="Optional tagged other reference ranges for this value in its particular measurement context."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DV_PROPORTION.other_reference_ranges"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-parameter">
+          <extension url="name">
+            <valueCode value="T"/>
+          </extension>
+          <extension url="type">
+            <valueUri value="http://openehr.org/fhir/StructureDefinition/DV-PROPORTION"/>
+          </extension>
+        </extension>
+        <code value="http://openehr.org/fhir/StructureDefinition/REFERENCE-RANGE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="DV_PROPORTION">
+      <path value="DV_PROPORTION"/>
+      <short value="Models a ratio of values, i."/>
+      <definition value="Models a ratio of values, i.e. where the numerator and denominator are both pure numbers. The `_valid_proportion_kind_` property of the `PROPORTION_KIND` class is used to control the type attribute to be one of a defined set.&#xA;&#xA;Used for recording titers (e.g. 1:128), concentration ratios, e.g. Na:K (unitary denominator), albumin:creatinine ratio, and percentages, e.g. red cell distirbution width (RDW). &#xA; &#xA;Misuse: Should not be used to represent things like blood pressure which are often written using a  '/' character, giving the misleading impression that the item is a ratio, when in fact it is a structured value. Similarly, visual acuity, often written as (e.g.) &quot;6/24&quot; in clinical notes is not a ratio but an ordinal (which includes non-numeric symbols like CF = count fingers etc). Should not be used for formulations. "/>
+      <min value="0"/>
+      <max value="*"/>
+      <constraint>
+        <key value="Type_validity"/>
+        <severity value="error"/>
+        <human value="Type validity"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <constraint>
+        <key value="Precision_validity"/>
+        <severity value="error"/>
+        <human value="Precision validity must satisfy conditional constraints"/>
+        <expression value="precision = 0 implies is_integral()"/>
+      </constraint>
+      <constraint>
+        <key value="Is_integral_validity"/>
+        <severity value="error"/>
+        <human value="Is integral validity must satisfy conditional constraints"/>
+        <expression value="is_integral() implies (numerator.floor = numerator and denominator.floor = denominator)"/>
+      </constraint>
+      <constraint>
+        <key value="Fraction_validity"/>
+        <severity value="error"/>
+        <human value="Fraction validity must satisfy conditional constraints"/>
+        <expression value="(type = pk_fraction or type = pk_integer_fraction) implies is_integral()"/>
+      </constraint>
+      <constraint>
+        <key value="Unitary_validity"/>
+        <severity value="error"/>
+        <human value="Unitary validity must satisfy conditional constraints"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <constraint>
+        <key value="Percent_validity"/>
+        <severity value="error"/>
+        <human value="Percent validity must satisfy conditional constraints"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <constraint>
+        <key value="Valid_denominator"/>
+        <severity value="error"/>
+        <human value="Valid denominator"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_PROPORTION.numerator">
+      <path value="DV_PROPORTION.numerator"/>
+      <short value="Numerator of ratio"/>
+      <definition value="Numerator of ratio"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_PROPORTION.denominator">
+      <path value="DV_PROPORTION.denominator"/>
+      <short value="Denominator of ratio."/>
+      <definition value="Denominator of ratio."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_PROPORTION.type">
+      <path value="DV_PROPORTION.type"/>
+      <short value="Indicates semantic type of proportion, including percent, unitary etc."/>
+      <definition value="Indicates semantic type of proportion, including percent, unitary etc."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_PROPORTION.precision">
+      <path value="DV_PROPORTION.precision"/>
+      <short value="Precision  to  which  the  `_numerator_` and `_denominator_` values of  the  proportion are expressed, in terms of number  of decimal places."/>
+      <definition value="Precision  to  which  the  `_numerator_` and `_denominator_` values of  the  proportion are expressed, in terms of number  of decimal places. The value 0 implies an integral quantity. The value -1 implies no limit, i.e. any number of decimal places. "/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_PROPORTION.normal-range">
+      <path value="DV_PROPORTION.normal_range"/>
+      <short value="Optional normal range."/>
+      <definition value="Optional normal range. "/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-parameter">
+          <extension url="name">
+            <valueCode value="T"/>
+          </extension>
+          <extension url="type">
+            <valueUri value="http://openehr.org/fhir/StructureDefinition/DV-PROPORTION"/>
+          </extension>
+        </extension>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-INTERVAL"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_PROPORTION.other-reference-ranges">
+      <path value="DV_PROPORTION.other_reference_ranges"/>
+      <short value="Optional tagged other reference ranges for this value in its particular measurement context."/>
+      <definition value="Optional tagged other reference ranges for this value in its particular measurement context."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-parameter">
+          <extension url="name">
+            <valueCode value="T"/>
+          </extension>
+          <extension url="type">
+            <valueUri value="http://openehr.org/fhir/StructureDefinition/DV-PROPORTION"/>
+          </extension>
+        </extension>
+        <code value="http://openehr.org/fhir/StructureDefinition/REFERENCE-RANGE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -1,0 +1,147 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openehr.org/fhir/CodeSystem/extract-update-trigger-event-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "extract-update-trigger-event-type"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem extract-update-trigger-event-type</b></p><a name=\"extract-update-trigger-event-type\"> </a><a name=\"hcextract-update-trigger-event-type\"> </a><p>This case-sensitive code system <code>https://specifications.openehr.org/fhir/codesystem-extract_update_trigger_event_type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">812<a name=\"extract-update-trigger-event-type-812\"> </a></td><td>any change</td></tr><tr><td style=\"white-space:nowrap\">813<a name=\"extract-update-trigger-event-type-813\"> </a></td><td>correction</td></tr><tr><td style=\"white-space:nowrap\">814<a name=\"extract-update-trigger-event-type-814\"> </a></td><td>update</td></tr></table><p><b>Additional Language Displays</b></p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Spanish (es)</b></td><td><b>Japanese (ja)</b></td><td><b>Portuguese (pt)</b></td><td><b>中文 (Chinese, zh)</b></td></tr><tr><td>812</td><td>cualquier cambio</td><td>変更</td><td>qualquer alteração</td><td>任何变更</td></tr><tr><td>813</td><td>corrección</td><td>訂正</td><td>correcção</td><td>修正</td></tr><tr><td>814</td><td>actualización</td><td>更新</td><td>actualização</td><td>更新</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 3 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "informative" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "https://specifications.openehr.org/fhir/codesystem-extract_update_trigger_event_type"^^xsd:anyURI ;
+     fhir:l <https://specifications.openehr.org/fhir/codesystem-extract_update_trigger_event_type>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0-snapshot"] ; # 
+  fhir:name [ fhir:v "extract_update_trigger_event_type"] ; # 
+  fhir:title [ fhir:v "Extract Update Trigger Event Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2024-08-22"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "openEHR + HL7"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.openehr.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Extract Update Trigger Event Type"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "812" ] ;
+     fhir:display [ fhir:v "any change" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "cualquier cambio" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "変更" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "qualquer alteração" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "任何变更" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "813" ] ;
+     fhir:display [ fhir:v "correction" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "corrección" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "訂正" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "correcção" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "修正" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "814" ] ;
+     fhir:display [ fhir:v "update" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "actualización" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "更新" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "actualização" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "更新" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

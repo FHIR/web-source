@@ -1,0 +1,815 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "VERSIONED-OBJECT",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition VERSIONED-OBJECT</b></p><a name=\"VERSIONED-OBJECT\"> </a><a name=\"hcVERSIONED-OBJECT\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VERSIONED-OBJECT-definitions.html#VERSIONED_OBJECT\" title=\"Version control abstraction, defining semantics for versioning one complex object.\">VERSIONED_OBJECT</a><a href=\"StructureDefinition-Any.html\">&lt;T : Any&gt;</a><a name=\"VERSIONED_OBJECT\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;; padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;\" href=\"http://hl7.org/fhir/R5/conformance-rules.html#constraints\" title=\"This element has or is affected by constraints ( Version_count_valid, All_version_ids_valid, All_versions_valid, Latest_version_valid, Uid_validity )\">C</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-Any.html\">Any</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Version control abstraction, defining semantics for versioning one complex object.<br class=\"constraint\"/><span title=\"null\" class=\"constraint\">Constraints: </span><span style=\"font-weight:bold\" title=\"Version count valid must satisfy range constraints\" class=\"constraint\">Version_count_valid</span><span title=\"null\" class=\"constraint\">, </span><span style=\"font-weight:bold\" title=\"All version ids valid\" class=\"constraint\">All_version_ids_valid</span><span title=\"null\" class=\"constraint\">, </span><span style=\"font-weight:bold\" title=\"All versions valid\" class=\"constraint\">All_versions_valid</span><span title=\"null\" class=\"constraint\">, </span><span style=\"font-weight:bold\" title=\"Latest version valid must be present\" class=\"constraint\">Latest_version_valid</span><span title=\"null\" class=\"constraint\">, </span><span style=\"font-weight:bold\" title=\"Uid validity must not be empty\" class=\"constraint\">Uid_validity</span><br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VERSIONED-OBJECT-definitions.html#VERSIONED_OBJECT.uid\" title=\"Unique identifier of this version container in the form of a UID with no extension. This id will be the same in all instances of the same container in a distributed environment, meaning that it can be understood as the uid of the  virtual version tree. \">uid</a><a href=\"StructureDefinition-Any.html\">&lt;T : Any&gt;</a><a name=\"VERSIONED_OBJECT.uid\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-HIER-OBJECT-ID.html\">HIER_OBJECT_ID</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Unique identifier of this version container in the form of a UID with no extension.</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VERSIONED-OBJECT-definitions.html#VERSIONED_OBJECT.owner-id\" title=\"Reference to object to which this version container belongs, e.g. the id of the containing EHR or other relevant owning entity. \">owner_id</a><a href=\"StructureDefinition-Any.html\">&lt;T : Any&gt;</a><a name=\"VERSIONED_OBJECT.owner_id\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-OBJECT-REF.html\">OBJECT_REF</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Reference to object to which this version container belongs, e.</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-VERSIONED-OBJECT-definitions.html#VERSIONED_OBJECT.time-created\" title=\"Time of initial creation of this versioned object. \">time_created</a><a href=\"StructureDefinition-Any.html\">&lt;T : Any&gt;</a><a name=\"VERSIONED_OBJECT.time_created\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-DV-DATE-TIME.html\">DV_DATE_TIME</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Time of initial creation of this versioned object.</td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+  },
+  "contained" : [{
+    "resourceType" : "OperationDefinition",
+    "id" : "version_count",
+    "name" : "version_count",
+    "title" : "version_count",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "Return the total number of versions in this object.",
+    "code" : "version_count",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "1",
+      "type" : "integer"
+    }]
+  },
+  {
+    "resourceType" : "OperationDefinition",
+    "id" : "all_version_ids",
+    "name" : "all_version_ids",
+    "title" : "all_version_ids",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "Return a list of ids of all versions in this object. ",
+    "code" : "all_version_ids",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    }]
+  },
+  {
+    "resourceType" : "OperationDefinition",
+    "id" : "all_versions",
+    "name" : "all_versions",
+    "title" : "all_versions",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "Return a list of all versions in this object. ",
+    "code" : "all_versions",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "*",
+      "type" : "Parameters"
+    }]
+  },
+  {
+    "resourceType" : "OperationDefinition",
+    "id" : "has_version_at_time",
+    "name" : "has_version_at_time",
+    "title" : "has_version_at_time",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "True if a version for time  `_a_time_` exists. ",
+    "code" : "has_version_at_time",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "a_time",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "dateTime"
+    },
+    {
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "1",
+      "type" : "boolean"
+    }]
+  },
+  {
+    "resourceType" : "OperationDefinition",
+    "id" : "has_version_id",
+    "name" : "has_version_id",
+    "title" : "has_version_id",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "True if a version with `_a_version_uid_` exists. ",
+    "code" : "has_version_id",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "a_version_uid",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "1",
+      "type" : "boolean"
+    }]
+  },
+  {
+    "resourceType" : "OperationDefinition",
+    "id" : "version_with_id",
+    "name" : "version_with_id",
+    "title" : "version_with_id",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "Return the version with `_uid_` =  `_a_version_uid_`. \n",
+    "code" : "version_with_id",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "a_version_uid",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    }]
+  },
+  {
+    "resourceType" : "OperationDefinition",
+    "id" : "is_original_version",
+    "name" : "is_original_version",
+    "title" : "is_original_version",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "True if version with `_a_version_uid_` is an `ORIGINAL_VERSION`. ",
+    "code" : "is_original_version",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "a_version_uid",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "1",
+      "type" : "boolean"
+    }]
+  },
+  {
+    "resourceType" : "OperationDefinition",
+    "id" : "version_at_time",
+    "name" : "version_at_time",
+    "title" : "version_at_time",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "Return the version for time  `_a_time_`. ",
+    "code" : "version_at_time",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "a_time",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "dateTime"
+    },
+    {
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    }]
+  },
+  {
+    "resourceType" : "OperationDefinition",
+    "id" : "revision_history",
+    "name" : "revision_history",
+    "title" : "revision_history",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "History of all audits and attestations in this versioned repository.",
+    "code" : "revision_history",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    }]
+  },
+  {
+    "resourceType" : "OperationDefinition",
+    "id" : "latest_version",
+    "name" : "latest_version",
+    "title" : "latest_version",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "Return the most recently added version (i.e. on trunk or any branch). ",
+    "code" : "latest_version",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    }]
+  },
+  {
+    "resourceType" : "OperationDefinition",
+    "id" : "latest_trunk_version",
+    "name" : "latest_trunk_version",
+    "title" : "latest_trunk_version",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "Return the most recently added trunk version. ",
+    "code" : "latest_trunk_version",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    }]
+  },
+  {
+    "resourceType" : "OperationDefinition",
+    "id" : "trunk_lifecycle_state",
+    "name" : "trunk_lifecycle_state",
+    "title" : "trunk_lifecycle_state",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "Return the lifecycle state from the latest trunk version. Useful for determining if the version container is logically deleted. ",
+    "code" : "trunk_lifecycle_state",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "1",
+      "type" : "string"
+    }]
+  },
+  {
+    "resourceType" : "OperationDefinition",
+    "id" : "commit_original_version",
+    "name" : "commit_original_version",
+    "title" : "commit_original_version",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "Add a new original version. ",
+    "code" : "commit_original_version",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "a_contribution",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "a_new_version_uid",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "a_preceding_version_id",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "an_audit",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "a_lifecycle_state",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "string"
+    },
+    {
+      "name" : "a_data",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "signing_key",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "string"
+    },
+    {
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    }]
+  },
+  {
+    "resourceType" : "OperationDefinition",
+    "id" : "commit_original_merged_version",
+    "name" : "commit_original_merged_version",
+    "title" : "commit_original_merged_version",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "Add a new original merged version. This commit function adds a parameter containing the ids of other versions merged into the current one. ",
+    "code" : "commit_original_merged_version",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "a_contribution",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "a_new_version_uid",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "a_preceding_version_id",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "an_audit",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "a_lifecycle_state",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "string"
+    },
+    {
+      "name" : "a_data",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "an_other_input_uids",
+      "use" : "in",
+      "min" : 1,
+      "max" : "*",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "signing_key",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "string"
+    },
+    {
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    }]
+  },
+  {
+    "resourceType" : "OperationDefinition",
+    "id" : "commit_imported_version",
+    "name" : "commit_imported_version",
+    "title" : "commit_imported_version",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "Add a new imported version. Details of version id etc come from the `ORIGINAL_VERSION` being committed. ",
+    "code" : "commit_imported_version",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "a_contribution",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "an_audit",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "a_version",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    }]
+  },
+  {
+    "resourceType" : "OperationDefinition",
+    "id" : "commit_attestation",
+    "name" : "commit_attestation",
+    "title" : "commit_attestation",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "Add a new attestation to a specified original version. Attestations can only be added to Original versions. ",
+    "code" : "commit_attestation",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "an_attestation",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "a_ver_id",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "signing_key",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "string"
+    },
+    {
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    }]
+  }],
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/web-source",
+    "valueUrl" : "https://specifications.openehr.org/releases/RM/development/common.html#_versioned_object_class"
+  },
+  {
+    "extension" : [{
+      "url" : "name",
+      "valueCode" : "T"
+    },
+    {
+      "url" : "type",
+      "valueUri" : "http://openehr.org/fhir/StructureDefinition/Any"
+    }],
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-parameter"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#version_count"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#all_version_ids"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#all_versions"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#has_version_at_time"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#has_version_id"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#version_with_id"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#is_original_version"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#version_at_time"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#revision_history"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#latest_version"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#latest_trunk_version"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#trunk_lifecycle_state"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#commit_original_version"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#commit_original_merged_version"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#commit_imported_version"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#commit_attestation"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "fhir"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/view-hint",
+    "valueCode" : "element-view-replace-cardinality"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 3,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://openehr.org/fhir/ImplementationGuide/openehr.base"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "informative",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://openehr.org/fhir/ImplementationGuide/openehr.base"
+      }]
+    }
+  }],
+  "url" : "http://openehr.org/fhir/StructureDefinition/VERSIONED-OBJECT",
+  "version" : "0.1.0-snapshot",
+  "name" : "VERSIONED_OBJECT",
+  "title" : "VERSIONED_OBJECT",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-09-06T15:35:39+10:00",
+  "publisher" : "openEHR + HL7",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.openehr.org"
+    }]
+  }],
+  "description" : "Version control abstraction, defining semantics for versioning one complex object.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "fhirVersion" : "5.0.0",
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
+  "kind" : "logical",
+  "abstract" : false,
+  "type" : "http://openehr.org/fhir/StructureDefinition/VERSIONED_OBJECT",
+  "baseDefinition" : "http://openehr.org/fhir/StructureDefinition/Any",
+  "derivation" : "specialization",
+  "snapshot" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
+      "valueString" : "0.1.0-snapshot"
+    }],
+    "element" : [{
+      "id" : "VERSIONED_OBJECT",
+      "path" : "VERSIONED_OBJECT",
+      "short" : "Version control abstraction, defining semantics for versioning one complex object.",
+      "definition" : "Version control abstraction, defining semantics for versioning one complex object.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Base",
+        "min" : 0,
+        "max" : "*"
+      },
+      "constraint" : [{
+        "key" : "Version_count_valid",
+        "severity" : "error",
+        "human" : "Version count valid must satisfy range constraints",
+        "expression" : "version_count() >= 0"
+      },
+      {
+        "key" : "All_version_ids_valid",
+        "severity" : "error",
+        "human" : "All version ids valid",
+        "expression" : "all_version_ids().count() = version_count()"
+      },
+      {
+        "key" : "All_versions_valid",
+        "severity" : "error",
+        "human" : "All versions valid",
+        "expression" : "all_versions().count() = version_count()"
+      },
+      {
+        "key" : "Latest_version_valid",
+        "severity" : "error",
+        "human" : "Latest version valid must be present",
+        "expression" : "version_count() > 0 implies latest_version().exists()"
+      },
+      {
+        "key" : "Uid_validity",
+        "severity" : "error",
+        "human" : "Uid validity must not be empty",
+        "expression" : "extension.empty()"
+      }],
+      "isModifier" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "VERSIONED_OBJECT.uid",
+      "path" : "VERSIONED_OBJECT.uid",
+      "short" : "Unique identifier of this version container in the form of a UID with no extension.",
+      "definition" : "Unique identifier of this version container in the form of a UID with no extension. This id will be the same in all instances of the same container in a distributed environment, meaning that it can be understood as the uid of the  virtual version tree. ",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "VERSIONED_OBJECT.uid",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/HIER-OBJECT-ID"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "VERSIONED_OBJECT.owner-id",
+      "path" : "VERSIONED_OBJECT.owner_id",
+      "short" : "Reference to object to which this version container belongs, e.",
+      "definition" : "Reference to object to which this version container belongs, e.g. the id of the containing EHR or other relevant owning entity. ",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "VERSIONED_OBJECT.owner_id",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "VERSIONED_OBJECT.time-created",
+      "path" : "VERSIONED_OBJECT.time_created",
+      "short" : "Time of initial creation of this versioned object.",
+      "definition" : "Time of initial creation of this versioned object. ",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "VERSIONED_OBJECT.time_created",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/DV-DATE-TIME"
+      }],
+      "isModifier" : false
+    }]
+  },
+  "differential" : {
+    "element" : [{
+      "id" : "VERSIONED_OBJECT",
+      "path" : "VERSIONED_OBJECT",
+      "short" : "Version control abstraction, defining semantics for versioning one complex object.",
+      "definition" : "Version control abstraction, defining semantics for versioning one complex object.",
+      "min" : 0,
+      "max" : "*",
+      "constraint" : [{
+        "key" : "Version_count_valid",
+        "severity" : "error",
+        "human" : "Version count valid must satisfy range constraints",
+        "expression" : "version_count() >= 0"
+      },
+      {
+        "key" : "All_version_ids_valid",
+        "severity" : "error",
+        "human" : "All version ids valid",
+        "expression" : "all_version_ids().count() = version_count()"
+      },
+      {
+        "key" : "All_versions_valid",
+        "severity" : "error",
+        "human" : "All versions valid",
+        "expression" : "all_versions().count() = version_count()"
+      },
+      {
+        "key" : "Latest_version_valid",
+        "severity" : "error",
+        "human" : "Latest version valid must be present",
+        "expression" : "version_count() > 0 implies latest_version().exists()"
+      },
+      {
+        "key" : "Uid_validity",
+        "severity" : "error",
+        "human" : "Uid validity must not be empty",
+        "expression" : "extension.empty()"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "VERSIONED_OBJECT.uid",
+      "path" : "VERSIONED_OBJECT.uid",
+      "short" : "Unique identifier of this version container in the form of a UID with no extension.",
+      "definition" : "Unique identifier of this version container in the form of a UID with no extension. This id will be the same in all instances of the same container in a distributed environment, meaning that it can be understood as the uid of the  virtual version tree. ",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/HIER-OBJECT-ID"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "VERSIONED_OBJECT.owner-id",
+      "path" : "VERSIONED_OBJECT.owner_id",
+      "short" : "Reference to object to which this version container belongs, e.",
+      "definition" : "Reference to object to which this version container belongs, e.g. the id of the containing EHR or other relevant owning entity. ",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "VERSIONED_OBJECT.time-created",
+      "path" : "VERSIONED_OBJECT.time_created",
+      "short" : "Time of initial creation of this versioned object.",
+      "definition" : "Time of initial creation of this versioned object. ",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/DV-DATE-TIME"
+      }],
+      "isModifier" : false
+    }]
+  }
+}

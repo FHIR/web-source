@@ -1,0 +1,42 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"DV_TEXT","DV_TEXT","","","",0,*,"","","","null {[]} {[]}
+","A text item, which may contain any amount of legal characters arranged as e.","A text item, which may contain any amount of legal characters arranged as e.g. words, sentences etc (i.e. one `DV_TEXT` may be more than one word). Visual formatting and hyperlinks may be included via markdown.
+
+If the `_formatting_` field is set, the `_value_` field is affected as follows:
+
+* `_formatting_ = ""plain""`: plain text, may contain newlines;
+* `_formatting_ = ""plain_no_newlines""`: plain text with no newlines;
+* `_formatting_ = ""markdown""`: text in markdown format; use of CommonMark strongly recommended.
+
+A `DV_TEXT` can be coded by adding mappings to it.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","Valid_value:Valid value must not be empty {value.empty().not()}
+Mappings_valid:Mappings valid must not be empty {mappings /= void implies mappings.empty().not()}Formatting_valid:Formatting valid must not be empty {formatting /= void implies formatting.empty().not()}","n/a"
+"DV_TEXT.CR","DV_TEXT.CR","","","",1,1,"","","","string {[]} {[]}
+","Carriage return character.","Carriage return character.","","","","","","","","","",,,,,"",,,,"BASIC_DEFINITIONS.CR",1,1,"",""
+"DV_TEXT.LF","DV_TEXT.LF","","","",1,1,"","","","string {[]} {[]}
+","Line feed character.","Line feed character.","","","","","","","","","",,,,,"",,,,"BASIC_DEFINITIONS.LF",1,1,"",""
+"DV_TEXT.Local-terminology-id","DV_TEXT.Local_terminology_id","","","",1,1,"","","","string {[]} {[]}
+","Predefined terminology identifier","Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype","","","","","","","","","",,,,,"",,,,"OPENEHR_DEFINITIONS.Local_terminology_id",1,1,"",""
+"DV_TEXT.value","DV_TEXT.value","","","",1,1,"","","","string {[]} {[]}
+","Displayable rendition of the item, regardless of its underlying structure.","Displayable rendition of the item, regardless of its underlying structure. For `DV_CODED_TEXT`, this is the rubric of the complete term as provided by the terminology service.","","","","","","","","","",,,,,"",,,,"DV_TEXT.value",1,1,"",""
+"DV_TEXT.hyperlink","DV_TEXT.hyperlink","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/DV-URI {[]} {[]}
+","DEPRECATED: this field is deprecated; use markdown link/text in the `_value_` attribute, and `""markdown""` as the value of the `_formatting_` field.","DEPRECATED: this field is deprecated; use markdown link/text in the `_value_` attribute, and `""markdown""` as the value of the `_formatting_` field.
+
+Original usage, prior to RM Release 1.0.4: Optional link sitting behind a section of plain text or coded term item.","","","","","","","","","",,,,,"",,,,"DV_TEXT.hyperlink",0,1,"",""
+"DV_TEXT.formatting","DV_TEXT.formatting","","","",0,1,"","","","string {[]} {[]}
+","If set, contains one of the following values:
+
+* `""plain""`: use for plain text, possibly containing newlines, but otherwise unformatted (same as Void);
+* `""plain_no_newlines""`: use for text containing no newlines or other formatting;
+* `""markdown""`: use for markdown formatted text, strongly recommended in the format of the CommonMark specification.","If set, contains one of the following values:
+
+* `""plain""`: use for plain text, possibly containing newlines, but otherwise unformatted (same as Void);
+* `""plain_no_newlines""`: use for text containing no newlines or other formatting;
+* `""markdown""`: use for markdown formatted text, strongly recommended in the format of the CommonMark specification.
+
+DEPRECATED usage: contains a string of the form `""name:value; name:value...""` , e.g. `""font-weight : bold; font-family : Arial; font-size : 12pt;""`. Values taken from W3C CSS2 properties lists for background and font .","","","","","","","","","",,,,,"",,,,"DV_TEXT.formatting",0,1,"",""
+"DV_TEXT.mappings","DV_TEXT.mappings","","","",0,*,"","","","http://openehr.org/fhir/StructureDefinition/TERM-MAPPING {[]} {[]}
+","Terms from other terminologies most closely matching this term, typically used where the originator (e.","Terms from other terminologies most closely matching this term, typically used where the originator (e.g. pathology lab) of information uses a local terminology but also supplies one or more equivalents from well known terminologies (e.g. LOINC).","","","","","","","","","",,,,,"",,,,"DV_TEXT.mappings",0,*,"",""
+"DV_TEXT.language","DV_TEXT.language","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/CODE-PHRASE {[]} {[]}
+","Optional indicator of the localised language in which the value is written.","Optional indicator of the localised language in which the value is written. Coded from openEHR Code Set  languages . Only used when either the text object is in a different language from the enclosing `ENTRY`, or else the text object is being used outside of an `ENTRY` or other enclosing structure which indicates the language.","","","","","","","","","",,,,,"",,,,"DV_TEXT.language",0,1,"",""
+"DV_TEXT.encoding","DV_TEXT.encoding","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/CODE-PHRASE {[]} {[]}
+","Name of character encoding scheme in which this value is encoded.","Name of character encoding scheme in which this value is encoded. Coded from openEHR Code Set  character sets . Unicode is the default assumption in openEHR, with UTF-8 being the assumed encoding. This attribute allows for variations from these assumptions.","","","","","","","","","",,,,,"",,,,"DV_TEXT.encoding",0,1,"",""

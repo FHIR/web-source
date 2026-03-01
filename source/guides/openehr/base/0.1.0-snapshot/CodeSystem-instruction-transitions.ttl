@@ -1,0 +1,419 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openehr.org/fhir/CodeSystem/instruction-transitions> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "instruction-transitions"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem instruction-transitions</b></p><a name=\"instruction-transitions\"> </a><a name=\"hcinstruction-transitions\"> </a><p>This case-sensitive code system <code>https://specifications.openehr.org/fhir/codesystem-instruction_transitions</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">535<a name=\"instruction-transitions-535\"> </a></td><td>initiate</td></tr><tr><td style=\"white-space:nowrap\">536<a name=\"instruction-transitions-536\"> </a></td><td>plan step</td></tr><tr><td style=\"white-space:nowrap\">537<a name=\"instruction-transitions-537\"> </a></td><td>postpone</td></tr><tr><td style=\"white-space:nowrap\">538<a name=\"instruction-transitions-538\"> </a></td><td>restore</td></tr><tr><td style=\"white-space:nowrap\">166<a name=\"instruction-transitions-166\"> </a></td><td>cancel</td></tr><tr><td style=\"white-space:nowrap\">542<a name=\"instruction-transitions-542\"> </a></td><td>postponed step</td></tr><tr><td style=\"white-space:nowrap\">539<a name=\"instruction-transitions-539\"> </a></td><td>schedule</td></tr><tr><td style=\"white-space:nowrap\">534<a name=\"instruction-transitions-534\"> </a></td><td>scheduled step</td></tr><tr><td style=\"white-space:nowrap\">540<a name=\"instruction-transitions-540\"> </a></td><td>start</td></tr><tr><td style=\"white-space:nowrap\">541<a name=\"instruction-transitions-541\"> </a></td><td>do</td></tr><tr><td style=\"white-space:nowrap\">543<a name=\"instruction-transitions-543\"> </a></td><td>active step</td></tr><tr><td style=\"white-space:nowrap\">544<a name=\"instruction-transitions-544\"> </a></td><td>suspend</td></tr><tr><td style=\"white-space:nowrap\">545<a name=\"instruction-transitions-545\"> </a></td><td>suspended step</td></tr><tr><td style=\"white-space:nowrap\">546<a name=\"instruction-transitions-546\"> </a></td><td>resume</td></tr><tr><td style=\"white-space:nowrap\">547<a name=\"instruction-transitions-547\"> </a></td><td>abort</td></tr><tr><td style=\"white-space:nowrap\">548<a name=\"instruction-transitions-548\"> </a></td><td>finish</td></tr><tr><td style=\"white-space:nowrap\">549<a name=\"instruction-transitions-549\"> </a></td><td>time out</td></tr><tr><td style=\"white-space:nowrap\">550<a name=\"instruction-transitions-550\"> </a></td><td>notify aborted</td></tr><tr><td style=\"white-space:nowrap\">551<a name=\"instruction-transitions-551\"> </a></td><td>notify completed</td></tr><tr><td style=\"white-space:nowrap\">552<a name=\"instruction-transitions-552\"> </a></td><td>notify cancelled</td></tr></table><p><b>Additional Language Displays</b></p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Spanish (es)</b></td><td><b>Japanese (ja)</b></td><td><b>Portuguese (pt)</b></td><td><b>中文 (Chinese, zh)</b></td></tr><tr><td>535</td><td>iniciar</td><td>新しく始める</td><td>iniciar</td><td>发起</td></tr><tr><td>536</td><td>paso del plan</td><td>ステップを計画する</td><td>planear etapa</td><td>计划步骤</td></tr><tr><td>537</td><td>postponer</td><td>延期する</td><td>adiar</td><td>推迟</td></tr><tr><td>538</td><td>restaurar</td><td>元に戻す</td><td>restaurar</td><td>恢复</td></tr><tr><td>166</td><td>cancelar</td><td>キャンセルする</td><td>cancelar</td><td>取消</td></tr><tr><td>542</td><td>paso postpuesto</td><td>延期されたステップ</td><td>etapa adiada</td><td>推迟的步骤</td></tr><tr><td>539</td><td>coordinar</td><td>計画する</td><td>agendar</td><td>排程</td></tr><tr><td>534</td><td>paso coordinado</td><td>計画されたステップ</td><td>etapa agendada</td><td>排程步骤</td></tr><tr><td>540</td><td>comienzar</td><td>開始する</td><td>iniciar</td><td>开始</td></tr><tr><td>541</td><td>realizar</td><td>実施する</td><td>executar</td><td>执行</td></tr><tr><td>543</td><td>paso activo</td><td>実行中のステップ</td><td>etapa activa</td><td>现行步骤</td></tr><tr><td>544</td><td>suspender</td><td>中断する</td><td>suspender</td><td>暂停</td></tr><tr><td>545</td><td>paso suspendido</td><td>中断されたステップ</td><td>etapa suspensa</td><td>暂停步骤</td></tr><tr><td>546</td><td>reanudar</td><td>再開する</td><td>retomar</td><td>中断后继续</td></tr><tr><td>547</td><td>abortar</td><td>中断する</td><td>abortar</td><td>中止</td></tr><tr><td>548</td><td>terminar</td><td>完了する</td><td>terminar</td><td>完成</td></tr><tr><td>549</td><td>se acabó el tiempo</td><td>時間切れ</td><td>tempo esgotado</td><td>超时</td></tr><tr><td>550</td><td>notificar abortado</td><td>中断を知らせる</td><td>notificação abortada</td><td>通知已中止</td></tr><tr><td>551</td><td>notificar completado</td><td>完了を知らせる</td><td>notificação concluída</td><td>通知已完成</td></tr><tr><td>552</td><td>notificar cancelado</td><td>キャンセルを知らせる</td><td>notificação cancelada</td><td>通知已取消</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 3 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "informative" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "https://specifications.openehr.org/fhir/codesystem-instruction_transitions"^^xsd:anyURI ;
+     fhir:l <https://specifications.openehr.org/fhir/codesystem-instruction_transitions>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0-snapshot"] ; # 
+  fhir:name [ fhir:v "instruction_transitions"] ; # 
+  fhir:title [ fhir:v "Instruction Transitions"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2024-08-22"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "openEHR + HL7"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.openehr.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Instruction Transitions"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "20"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "535" ] ;
+     fhir:display [ fhir:v "initiate" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "iniciar" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "新しく始める" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "iniciar" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "发起" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "536" ] ;
+     fhir:display [ fhir:v "plan step" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "paso del plan" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "ステップを計画する" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "planear etapa" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "计划步骤" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "537" ] ;
+     fhir:display [ fhir:v "postpone" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "postponer" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "延期する" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "adiar" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "推迟" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "538" ] ;
+     fhir:display [ fhir:v "restore" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "restaurar" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "元に戻す" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "restaurar" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "恢复" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "166" ] ;
+     fhir:display [ fhir:v "cancel" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "cancelar" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "キャンセルする" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "cancelar" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "取消" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "542" ] ;
+     fhir:display [ fhir:v "postponed step" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "paso postpuesto" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "延期されたステップ" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "etapa adiada" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "推迟的步骤" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "539" ] ;
+     fhir:display [ fhir:v "schedule" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "coordinar" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "計画する" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "agendar" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "排程" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "534" ] ;
+     fhir:display [ fhir:v "scheduled step" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "paso coordinado" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "計画されたステップ" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "etapa agendada" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "排程步骤" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "540" ] ;
+     fhir:display [ fhir:v "start" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "comienzar" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "開始する" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "iniciar" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "开始" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "541" ] ;
+     fhir:display [ fhir:v "do" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "realizar" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "実施する" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "executar" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "执行" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "543" ] ;
+     fhir:display [ fhir:v "active step" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "paso activo" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "実行中のステップ" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "etapa activa" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "现行步骤" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "544" ] ;
+     fhir:display [ fhir:v "suspend" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "suspender" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "中断する" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "suspender" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "暂停" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "545" ] ;
+     fhir:display [ fhir:v "suspended step" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "paso suspendido" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "中断されたステップ" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "etapa suspensa" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "暂停步骤" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "546" ] ;
+     fhir:display [ fhir:v "resume" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "reanudar" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "再開する" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "retomar" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "中断后继续" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "547" ] ;
+     fhir:display [ fhir:v "abort" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "abortar" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "中断する" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "abortar" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "中止" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "548" ] ;
+     fhir:display [ fhir:v "finish" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "terminar" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "完了する" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "terminar" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "完成" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "549" ] ;
+     fhir:display [ fhir:v "time out" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "se acabó el tiempo" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "時間切れ" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "tempo esgotado" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "超时" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "550" ] ;
+     fhir:display [ fhir:v "notify aborted" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "notificar abortado" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "中断を知らせる" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "notificação abortada" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "通知已中止" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "551" ] ;
+     fhir:display [ fhir:v "notify completed" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "notificar completado" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "完了を知らせる" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "notificação concluída" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "通知已完成" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "552" ] ;
+     fhir:display [ fhir:v "notify cancelled" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "notificar cancelado" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "キャンセルを知らせる" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "notificação cancelada" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "通知已取消" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

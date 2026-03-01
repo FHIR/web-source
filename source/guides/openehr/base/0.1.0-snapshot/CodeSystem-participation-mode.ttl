@@ -1,0 +1,611 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openehr.org/fhir/CodeSystem/participation-mode> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "participation-mode"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem participation-mode</b></p><a name=\"participation-mode\"> </a><a name=\"hcparticipation-mode\"> </a><p>This case-sensitive code system <code>https://specifications.openehr.org/fhir/codesystem-participation_mode</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">193<a name=\"participation-mode-193\"> </a></td><td>not specified</td></tr><tr><td style=\"white-space:nowrap\">216<a name=\"participation-mode-216\"> </a></td><td>face-to-face communication</td></tr><tr><td style=\"white-space:nowrap\">223<a name=\"participation-mode-223\"> </a></td><td>interpreted face-to-face communication</td></tr><tr><td style=\"white-space:nowrap\">217<a name=\"participation-mode-217\"> </a></td><td>signing (face-to-face)</td></tr><tr><td style=\"white-space:nowrap\">195<a name=\"participation-mode-195\"> </a></td><td>live audiovisual; videoconference; videophone</td></tr><tr><td style=\"white-space:nowrap\">198<a name=\"participation-mode-198\"> </a></td><td>videoconferencing</td></tr><tr><td style=\"white-space:nowrap\">197<a name=\"participation-mode-197\"> </a></td><td>videophone</td></tr><tr><td style=\"white-space:nowrap\">218<a name=\"participation-mode-218\"> </a></td><td>signing over video</td></tr><tr><td style=\"white-space:nowrap\">224<a name=\"participation-mode-224\"> </a></td><td>interpreted video communication</td></tr><tr><td style=\"white-space:nowrap\">194<a name=\"participation-mode-194\"> </a></td><td>asynchronous audiovisual; recorded video</td></tr><tr><td style=\"white-space:nowrap\">196<a name=\"participation-mode-196\"> </a></td><td>recorded video</td></tr><tr><td style=\"white-space:nowrap\">202<a name=\"participation-mode-202\"> </a></td><td>live audio-only; telephone; internet phone; teleconference</td></tr><tr><td style=\"white-space:nowrap\">204<a name=\"participation-mode-204\"> </a></td><td>telephone</td></tr><tr><td style=\"white-space:nowrap\">203<a name=\"participation-mode-203\"> </a></td><td>teleconference</td></tr><tr><td style=\"white-space:nowrap\">205<a name=\"participation-mode-205\"> </a></td><td>internet telephone</td></tr><tr><td style=\"white-space:nowrap\">222<a name=\"participation-mode-222\"> </a></td><td>interpreted audio-only</td></tr><tr><td style=\"white-space:nowrap\">199<a name=\"participation-mode-199\"> </a></td><td>asynchronous audio-only; dictated; voice mail</td></tr><tr><td style=\"white-space:nowrap\">200<a name=\"participation-mode-200\"> </a></td><td>dictated</td></tr><tr><td style=\"white-space:nowrap\">201<a name=\"participation-mode-201\"> </a></td><td>voice-mail</td></tr><tr><td style=\"white-space:nowrap\">212<a name=\"participation-mode-212\"> </a></td><td>live text-only; internet chat; SMS chat; interactive written note</td></tr><tr><td style=\"white-space:nowrap\">213<a name=\"participation-mode-213\"> </a></td><td>internet chat</td></tr><tr><td style=\"white-space:nowrap\">214<a name=\"participation-mode-214\"> </a></td><td>SMS chat</td></tr><tr><td style=\"white-space:nowrap\">215<a name=\"participation-mode-215\"> </a></td><td>interactive written note</td></tr><tr><td style=\"white-space:nowrap\">206<a name=\"participation-mode-206\"> </a></td><td>asynchronous text; email; fax; letter; handwritten note; SMS message</td></tr><tr><td style=\"white-space:nowrap\">211<a name=\"participation-mode-211\"> </a></td><td>handwritten note</td></tr><tr><td style=\"white-space:nowrap\">210<a name=\"participation-mode-210\"> </a></td><td>printed/typed letter</td></tr><tr><td style=\"white-space:nowrap\">207<a name=\"participation-mode-207\"> </a></td><td>email</td></tr><tr><td style=\"white-space:nowrap\">208<a name=\"participation-mode-208\"> </a></td><td>facsimile/telefax</td></tr><tr><td style=\"white-space:nowrap\">221<a name=\"participation-mode-221\"> </a></td><td>translated text</td></tr><tr><td style=\"white-space:nowrap\">209<a name=\"participation-mode-209\"> </a></td><td>SMS message</td></tr><tr><td style=\"white-space:nowrap\">219<a name=\"participation-mode-219\"> </a></td><td>physically present</td></tr><tr><td style=\"white-space:nowrap\">220<a name=\"participation-mode-220\"> </a></td><td>physically remote</td></tr></table><p><b>Additional Language Displays</b></p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Spanish (es)</b></td><td><b>Japanese (ja)</b></td><td><b>Portuguese (pt)</b></td><td><b>中文 (Chinese, zh)</b></td></tr><tr><td>193</td><td>no especificado</td><td>指定なし</td><td>não especificado</td><td>未明确说明</td></tr><tr><td>216</td><td>comunicación cara a cara</td><td>対面コミュニケーション</td><td>comunicação cara-a-cara</td><td>面对面沟通</td></tr><tr><td>223</td><td>comunicación cara a cara interpretada</td><td>通訳された対面コミュニケーション</td><td>comunicação interpretada cara-a-cara</td><td>配备口译的面对面沟通</td></tr><tr><td>217</td><td>firma (cara a cara)</td><td>身振り(対面での)</td><td>assinatura (cara-a-cara)</td><td>签名 (面对面)</td></tr><tr><td>195</td><td>audiovisuales en vivo; video conferencia; video llamada</td><td>生のオーディオビジュアル; ビデオカンファレンス; テレビ電話</td><td>audiovisual ao vivo; videoconferência; videofone</td><td>现场视听、视频会议、视频电话</td></tr><tr><td>198</td><td>video conferencia</td><td>ビデオカンファレンス</td><td>videoconferência</td><td>视频会议</td></tr><tr><td>197</td><td>video llamada</td><td>テレビ電話</td><td>videofone</td><td>可视电话</td></tr><tr><td>218</td><td>firma sobre video</td><td>テレビを通じた身振り</td><td>assinatura por vídeo</td><td>视频签名</td></tr><tr><td>224</td><td>comunicación por video interpretada</td><td>通訳されたビデオコミュニケーション</td><td>comunicação interpretada por vídeo</td><td>配备口译的视频沟通</td></tr><tr><td>194</td><td>audiovisual asíncrona; video grabado</td><td>非同期のオーディオビジュアル; 録画されたビデオ</td><td>audiovisual assíncrono; vídeo gravado</td><td>异步视听、录制的视频</td></tr><tr><td>196</td><td>video grabado</td><td>録画されたビデオ</td><td>vídeo gravado</td><td>录制的视频</td></tr><tr><td>202</td><td>sólo audio en vivo; teléfono; teléfono de internet; tele-conferencia</td><td>生の音声; 電話; インターネット電話; 電話会議</td><td>apenas áudio em directo; telefone; telefone por internet; teleconferência</td><td>纯现场音频、电话、互联网电话、电话会议</td></tr><tr><td>204</td><td>teléfono</td><td>電話</td><td>telefone</td><td>电话</td></tr><tr><td>203</td><td>tele-conferencia</td><td>電話会議</td><td>teleconferência</td><td>电话会议</td></tr><tr><td>205</td><td>teléfono de internet</td><td>インターネット電話</td><td>telefone por internet</td><td>互联网电话</td></tr><tr><td>222</td><td>sólo audio interpretado</td><td>通訳された音声</td><td>áudio interpretado</td><td>配备口译的纯音频</td></tr><tr><td>199</td><td>sólo audio asíncrono; dictado; correo de voz</td><td>非同期の音声; 口述; ボイスメール</td><td>áudio assíncrono; ditado; correio de voz</td><td>异步纯音频、口述、语音邮件</td></tr><tr><td>200</td><td>dictado</td><td>口述</td><td>ditado</td><td>口述</td></tr><tr><td>201</td><td>correo de voz</td><td>ボイスメール</td><td>correio de voz</td><td>语音邮件</td></tr><tr><td>212</td><td>sólo texto en vivo; charla de texto por internet; charla por SMS; nota escrita interactiva</td><td>生の文字通信; インターネットチャット SMSチャット; 相互に書き込めるノート</td><td>apenas texto em directo; chat na Internet; chat por SMS; nota escrita interactiva</td><td>纯实时文本、互联网聊天、短信聊天、交互式书面笔记</td></tr><tr><td>213</td><td>charla (texto) por internet</td><td>インターネットチャット</td><td>chat por internet</td><td>互联网聊天</td></tr><tr><td>214</td><td>charla por SMS</td><td>SMSチャット</td><td>chat por SMS</td><td>短信聊天</td></tr><tr><td>215</td><td>nota escrita interactiva</td><td>相互に書き込めるノート</td><td>nota escrita interactiva</td><td>交互式书面笔记</td></tr><tr><td>206</td><td>texto asíncrono; correo electrónico; fax; carta; nota manuscrita; mensaje SMS</td><td>非同期の文字通信; email; fax; 手紙; 手書きのノート; SMSメッセージ</td><td>texto assíncrono; correio electrónico; fax; carta; nota manuscrita; mensagem SMS</td><td>异步文本、电子邮件、传真、信件、手写笔记、短信</td></tr><tr><td>211</td><td>nota manuscrita</td><td>手書きのノート</td><td>nota manuscrita</td><td>手写笔记</td></tr><tr><td>210</td><td>carta impresa/escrita</td><td>印刷された（タイプされた）手紙</td><td>carta impressa/datilografada</td><td>打印/打字形成的信件</td></tr><tr><td>207</td><td>correo electrónico</td><td>email</td><td>email</td><td>电子邮件</td></tr><tr><td>208</td><td>facsímil/telefax</td><td>FAX/telefax</td><td>fax/telefax</td><td>传真/电传</td></tr><tr><td>221</td><td>texto traducido</td><td>翻訳された文書</td><td>texto traduzido</td><td>经过翻译的文本</td></tr><tr><td>209</td><td>mensajería SMS</td><td>SMSメッセージ</td><td>mensagem SMS</td><td>短信</td></tr><tr><td>219</td><td>físicamente presente</td><td>出席</td><td>fisicamente presente</td><td>亲自到场</td></tr><tr><td>220</td><td>físicamente remoto</td><td>遠隔での参加</td><td>fisicamente remoto</td><td>亲自远程</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 3 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "informative" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "https://specifications.openehr.org/fhir/codesystem-participation_mode"^^xsd:anyURI ;
+     fhir:l <https://specifications.openehr.org/fhir/codesystem-participation_mode>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0-snapshot"] ; # 
+  fhir:name [ fhir:v "participation_mode"] ; # 
+  fhir:title [ fhir:v "Participation Mode"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2024-08-22"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "openEHR + HL7"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.openehr.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Participation Mode"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "32"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "193" ] ;
+     fhir:display [ fhir:v "not specified" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "no especificado" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "指定なし" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "não especificado" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "未明确说明" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "216" ] ;
+     fhir:display [ fhir:v "face-to-face communication" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "comunicación cara a cara" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "対面コミュニケーション" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "comunicação cara-a-cara" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "面对面沟通" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "223" ] ;
+     fhir:display [ fhir:v "interpreted face-to-face communication" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "comunicación cara a cara interpretada" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "通訳された対面コミュニケーション" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "comunicação interpretada cara-a-cara" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "配备口译的面对面沟通" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "217" ] ;
+     fhir:display [ fhir:v "signing (face-to-face)" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "firma (cara a cara)" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "身振り(対面での)" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "assinatura (cara-a-cara)" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "签名 (面对面)" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "195" ] ;
+     fhir:display [ fhir:v "live audiovisual; videoconference; videophone" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "audiovisuales en vivo; video conferencia; video llamada" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "生のオーディオビジュアル; ビデオカンファレンス; テレビ電話" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "audiovisual ao vivo; videoconferência; videofone" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "现场视听、视频会议、视频电话" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "198" ] ;
+     fhir:display [ fhir:v "videoconferencing" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "video conferencia" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "ビデオカンファレンス" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "videoconferência" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "视频会议" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "197" ] ;
+     fhir:display [ fhir:v "videophone" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "video llamada" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "テレビ電話" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "videofone" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "可视电话" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "218" ] ;
+     fhir:display [ fhir:v "signing over video" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "firma sobre video" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "テレビを通じた身振り" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "assinatura por vídeo" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "视频签名" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "224" ] ;
+     fhir:display [ fhir:v "interpreted video communication" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "comunicación por video interpretada" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "通訳されたビデオコミュニケーション" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "comunicação interpretada por vídeo" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "配备口译的视频沟通" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "194" ] ;
+     fhir:display [ fhir:v "asynchronous audiovisual; recorded video" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "audiovisual asíncrona; video grabado" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "非同期のオーディオビジュアル; 録画されたビデオ" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "audiovisual assíncrono; vídeo gravado" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "异步视听、录制的视频" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "196" ] ;
+     fhir:display [ fhir:v "recorded video" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "video grabado" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "録画されたビデオ" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "vídeo gravado" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "录制的视频" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "202" ] ;
+     fhir:display [ fhir:v "live audio-only; telephone; internet phone; teleconference" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "sólo audio en vivo; teléfono; teléfono de internet; tele-conferencia" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "生の音声; 電話; インターネット電話; 電話会議" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "apenas áudio em directo; telefone; telefone por internet; teleconferência" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "纯现场音频、电话、互联网电话、电话会议" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "204" ] ;
+     fhir:display [ fhir:v "telephone" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "teléfono" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "電話" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "telefone" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "电话" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "203" ] ;
+     fhir:display [ fhir:v "teleconference" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "tele-conferencia" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "電話会議" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "teleconferência" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "电话会议" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "205" ] ;
+     fhir:display [ fhir:v "internet telephone" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "teléfono de internet" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "インターネット電話" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "telefone por internet" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "互联网电话" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "222" ] ;
+     fhir:display [ fhir:v "interpreted audio-only" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "sólo audio interpretado" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "通訳された音声" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "áudio interpretado" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "配备口译的纯音频" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "199" ] ;
+     fhir:display [ fhir:v "asynchronous audio-only; dictated; voice mail" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "sólo audio asíncrono; dictado; correo de voz" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "非同期の音声; 口述; ボイスメール" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "áudio assíncrono; ditado; correio de voz" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "异步纯音频、口述、语音邮件" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "200" ] ;
+     fhir:display [ fhir:v "dictated" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "dictado" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "口述" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "ditado" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "口述" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "201" ] ;
+     fhir:display [ fhir:v "voice-mail" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "correo de voz" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "ボイスメール" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "correio de voz" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "语音邮件" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "212" ] ;
+     fhir:display [ fhir:v "live text-only; internet chat; SMS chat; interactive written note" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "sólo texto en vivo; charla de texto por internet; charla por SMS; nota escrita interactiva" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "生の文字通信; インターネットチャット SMSチャット; 相互に書き込めるノート" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "apenas texto em directo; chat na Internet; chat por SMS; nota escrita interactiva" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "纯实时文本、互联网聊天、短信聊天、交互式书面笔记" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "213" ] ;
+     fhir:display [ fhir:v "internet chat" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "charla (texto) por internet" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "インターネットチャット" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "chat por internet" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "互联网聊天" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "214" ] ;
+     fhir:display [ fhir:v "SMS chat" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "charla por SMS" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "SMSチャット" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "chat por SMS" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "短信聊天" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "215" ] ;
+     fhir:display [ fhir:v "interactive written note" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "nota escrita interactiva" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "相互に書き込めるノート" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "nota escrita interactiva" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "交互式书面笔记" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "206" ] ;
+     fhir:display [ fhir:v "asynchronous text; email; fax; letter; handwritten note; SMS message" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "texto asíncrono; correo electrónico; fax; carta; nota manuscrita; mensaje SMS" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "非同期の文字通信; email; fax; 手紙; 手書きのノート; SMSメッセージ" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "texto assíncrono; correio electrónico; fax; carta; nota manuscrita; mensagem SMS" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "异步文本、电子邮件、传真、信件、手写笔记、短信" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "211" ] ;
+     fhir:display [ fhir:v "handwritten note" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "nota manuscrita" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "手書きのノート" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "nota manuscrita" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "手写笔记" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "210" ] ;
+     fhir:display [ fhir:v "printed/typed letter" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "carta impresa/escrita" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "印刷された（タイプされた）手紙" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "carta impressa/datilografada" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "打印/打字形成的信件" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "207" ] ;
+     fhir:display [ fhir:v "email" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "correo electrónico" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "email" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "email" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "电子邮件" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "208" ] ;
+     fhir:display [ fhir:v "facsimile/telefax" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "facsímil/telefax" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "FAX/telefax" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "fax/telefax" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "传真/电传" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "221" ] ;
+     fhir:display [ fhir:v "translated text" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "texto traducido" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "翻訳された文書" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "texto traduzido" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "经过翻译的文本" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "209" ] ;
+     fhir:display [ fhir:v "SMS message" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "mensajería SMS" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "SMSメッセージ" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "mensagem SMS" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "短信" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "219" ] ;
+     fhir:display [ fhir:v "physically present" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "físicamente presente" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "出席" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "fisicamente presente" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "亲自到场" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "220" ] ;
+     fhir:display [ fhir:v "physically remote" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "físicamente remoto" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "遠隔での参加" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "fisicamente remoto" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "亲自远程" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

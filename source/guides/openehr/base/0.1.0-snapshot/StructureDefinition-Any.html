@@ -1,0 +1,625 @@
+<!-- get modelType -->
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Any - OpenEHR Base package v0.1.0-snapshot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"2.24"}
+    h3,h4,h5,h6{--heading-prefix:"2.24"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">OpenEHR Base package</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0-snapshot - First Draft
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="artifacts.html">Full Artifact Index</a></li>
+</ul>      
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='index.html'><b>Home Page</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Any</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the Base openEHR specification (v0.1.0-snapshot: Release - Informative) based on <a data-no-external="true" href="http://hl7.org/fhir/R5">FHIR (HL7® FHIR® Standard) v5.0.0</a>. No current official version has been published yet.  For a full list of available versions, see the <a data-no-external="true" href="http://openehr.org/fhir/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Content</a>
+  </li>
+
+
+
+  <li>
+    <a href="StructureDefinition-Any-definitions.html">Detailed Descriptions</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="StructureDefinition-Any-mappings.html">Mappings</a>
+    </li>
+  
+
+
+
+
+
+
+
+  
+    <li>
+      <a href="StructureDefinition-Any.profile.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureDefinition-Any.profile.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureDefinition-Any.profile.ttl.html">TTL</a>
+    </li>
+  
+
+
+</ul>
+
+
+  <a name="root"> </a>
+  <h2 id="root">Logical Model:
+
+    <i>Any</i>
+
+(
+Abstract
+
+)
+  </h2>
+
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://openehr.org/fhir/StructureDefinition/Any<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://openehr.org/fhir/StructureDefinition/Any"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.1.0-snapshot<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://openehr.org/fhir/StructureDefinition/Any|0.1.0-snapshot"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="3">
+        
+          <i>
+            
+            Standards status:
+          </i> <a href="http://hl7.org/fhir/R5/versions.html#std-process" title="Standard Status">Informative</a>
+          
+          
+        
+      </td>
+
+      <td>
+        <a href="http://hl7.org/fhir/versions.html#maturity">Maturity Level</a>: 3
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">Any</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+<p>
+<p>Abstract ancestor class for all other classes. Usually maps to a type like Any or Object in an object-oriented technology. Defined here to provide value and reference equality semantics.</p>
+
+</p>
+
+
+
+<!-- insert intro if present -->
+
+
+
+
+<p><b>Original Source:</b> <a href="https://specifications.openehr.org/releases/BASE/latest/foundation_types.html#_any_class">specifications.openehr.org</a></p>
+<p><b>Usages:</b></p>
+<ul>
+ <li>Derived from this Logical Model: <a href="StructureDefinition-ACCESS-CONTROL-SETTINGS.html">ACCESS_CONTROL_SETTINGS</a>, <a href="StructureDefinition-ADDRESSED-MESSAGE.html">ADDRESSED_MESSAGE</a>, <a href="StructureDefinition-ARCHETYPED.html">ARCHETYPED</a>, <a href="StructureDefinition-AUDIT-DETAILS.html">AUDIT_DETAILS</a><span id="rr_base" onClick="document.getElementById('rr_base').innerHTML = document.getElementById('rr2_base').innerHTML">... <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show 37 more</span></span><span id="rr2_base" style="display: none">, <a href="StructureDefinition-AUTHORED-RESOURCE.html">AUTHORED_RESOURCE</a>, <a href="StructureDefinition-BASIC-DEFINITIONS.html">BASIC_DEFINITIONS</a>, <a href="StructureDefinition-CODE-PHRASE.html">CODE_PHRASE</a>, <a href="StructureDefinition-CODE-SET-ACCESS.html">CODE_SET_ACCESS</a>, <a href="StructureDefinition-CONTRIBUTION.html">CONTRIBUTION</a>, <a href="StructureDefinition-EHR.html">EHR</a>, <a href="StructureDefinition-EXTRACT-ENTITY-MANIFEST.html">EXTRACT_ENTITY_MANIFEST</a>, <a href="StructureDefinition-EXTRACT-ERROR.html">EXTRACT_ERROR</a>, <a href="StructureDefinition-EXTRACT-MANIFEST.html">EXTRACT_MANIFEST</a>, <a href="StructureDefinition-EXTRACT-PARTICIPATION.html">EXTRACT_PARTICIPATION</a>, <a href="StructureDefinition-EXTRACT-SPEC.html">EXTRACT_SPEC</a>, <a href="StructureDefinition-EXTRACT-UPDATE-SPEC.html">EXTRACT_UPDATE_SPEC</a>, <a href="StructureDefinition-EXTRACT-VERSION-SPEC.html">EXTRACT_VERSION_SPEC</a>, <a href="StructureDefinition-FEEDER-AUDIT-DETAILS.html">FEEDER_AUDIT_DETAILS</a>, <a href="StructureDefinition-FEEDER-AUDIT.html">FEEDER_AUDIT</a>, <a href="StructureDefinition-ITEM-TAG.html">ITEM_TAG</a>, <a href="StructureDefinition-LINK.html">LINK</a>, <a href="StructureDefinition-MEASUREMENT-SERVICE.html">MEASUREMENT_SERVICE</a>, <a href="StructureDefinition-MESSAGE-CONTENT.html">MESSAGE_CONTENT</a>, <a href="StructureDefinition-MESSAGE.html">MESSAGE</a>, <a href="StructureDefinition-OPENEHR-CODE-SET-IDENTIFIERS.html">OPENEHR_CODE_SET_IDENTIFIERS</a>, <a href="StructureDefinition-OPENEHR-TERMINOLOGY-GROUP-IDENTIFIERS.html">OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS</a>, <a href="StructureDefinition-PARTICIPATION.html">PARTICIPATION</a>, <a href="StructureDefinition-PARTY-PROXY.html">PARTY_PROXY</a>, <a href="StructureDefinition-PATHABLE.html">PATHABLE</a>, <a href="StructureDefinition-REFERENCE-RANGE.html">REFERENCE_RANGE</a>, <a href="StructureDefinition-RESOURCE-DESCRIPTION-ITEM.html">RESOURCE_DESCRIPTION_ITEM</a>, <a href="StructureDefinition-RESOURCE-DESCRIPTION.html">RESOURCE_DESCRIPTION</a>, <a href="StructureDefinition-REVISION-HISTORY-ITEM.html">REVISION_HISTORY_ITEM</a>, <a href="StructureDefinition-REVISION-HISTORY.html">REVISION_HISTORY</a>, <a href="StructureDefinition-SYNC-EXTRACT-SPEC.html">SYNC_EXTRACT_SPEC</a>, <a href="StructureDefinition-TERM-MAPPING.html">TERM_MAPPING</a>, <a href="StructureDefinition-TERMINOLOGY-ACCESS.html">TERMINOLOGY_ACCESS</a>, <a href="StructureDefinition-TRANSLATION-DETAILS.html">TRANSLATION_DETAILS</a>, <a href="StructureDefinition-UID.html">UID</a>, <a href="StructureDefinition-VERSION.html">VERSION</a> and <a href="StructureDefinition-VERSIONED-OBJECT.html">VERSIONED_OBJECT</a></span></li>
+</ul>
+<p>You can also check for <a href="https://packages2.fhir.org/xig/openehr.base|current/StructureDefinition/Any">usages in the FHIR IG Statistics</a></p>
+
+  <!-- no uri -->
+  <a name="profile"> </a>
+  <h3 id="profile">Formal Views of Profile Content</h3>
+  <p>
+    <a href="http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions">Description of Profiles, Differentials, Snapshots and how the different presentations work</a>.
+  </p>
+  <div id="tabs">
+    <ul>
+      <li>
+        <a href="#tabs-key">Key Elements Table</a>
+      </li>
+      <li>
+        <a href="#tabs-diff">Differential Table</a>
+      </li>
+      <li>
+        <a href="#tabs-snap">Snapshot Table</a>
+      </li>
+
+<!--      <li>
+        <a href="#tabs-xml">Pseudo-XML</a>
+      </li>-->
+
+
+<!--      <li>
+        <a href="#tabs-json">Pseudo-JSON</a>
+      </li>-->
+
+
+      <!--<li>
+        <a href="#tabs-ttl">Pseudo-TTL</a>
+      </li>-->
+
+      <li>
+        <a href="#tabs-summ">Statistics/References</a>
+      </li>
+      <li>
+        <a href="#tabs-all">All</a>
+      </li>
+    </ul>
+    <a name="tabs-key"> </a>
+    <div id="tabs-key">
+      <div id="tbl-key">
+        <div id="tbl-key-inner">
+          <table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="AnyK" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element" data-no-external="true">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element" data-no-external="true">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance" data-no-external="true">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element" data-no-external="true">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element" data-no-external="true">Description &amp; Constraints</a>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: normal">Filter: <input size="10" name="filter" style="border: 1px #F0F0F0 solid; background-color: rgb(254, 254, 231);" onInput="filterTree(document.getElementById('AnyK'), event.target.value)" type="text"/> <img onClick="showPanel(event.target, document.getElementById('AnyK'), document.getElementById('ppAnyK'))" src="tree-filter.png" alt="Filters"/><div style="display: none; position: fixed; opacity : 1.0; background-color: rgb(254, 254, 231); border: 1px solid #ccc; padding: 10px; boxShadow: 0 2px 5px rgba(0,0,0,0.2); zIndex: 1000; borderRadius: 4px" id="ppAnyK">Bindings <input onClick="filterDesc(document.getElementById('AnyK'), 'binding',event.target.checked, document.getElementById('ppAnyK'))" size="1" name="binding" checked="true" id="cbAnyK-binding" type="checkbox"/><br/>Constraints <input onClick="filterDesc(document.getElementById('AnyK'), 'constraint',event.target.checked, document.getElementById('ppAnyK'))" size="1" name="constraint" checked="true" id="cbAnyK-constraint" type="checkbox"/><br/>Obligations <input onClick="filterDesc(document.getElementById('AnyK'), 'obligation',event.target.checked, document.getElementById('ppAnyK'))" size="1" name="obligation" checked="true" id="cbAnyK-obligation" type="checkbox"/><br/></div></span><span style="float: right"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format" data-no-external="true"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Any-definitions.html#Any" title="Abstract ancestor class for all other classes. Usually maps to a type like Any or Object in an object-oriented technology. Defined here to provide value and reference equality semantics." data-no-external="true">Any</a><a name="k-Any"> </a></td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/types.html#Base">Base</a></td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">This is an abstract type. Child types: <a href="StructureDefinition-ACCESS-CONTROL-SETTINGS.html">ACCESS_CONTROL_SETTINGS</a>, <a href="StructureDefinition-ADDRESSED-MESSAGE.html">ADDRESSED_MESSAGE</a>, <a href="StructureDefinition-ARCHETYPED.html">ARCHETYPED</a>, <a href="StructureDefinition-AUDIT-DETAILS.html">AUDIT_DETAILS</a>, <a href="StructureDefinition-AUTHORED-RESOURCE.html">AUTHORED_RESOURCE</a>, <a href="StructureDefinition-BASIC-DEFINITIONS.html">BASIC_DEFINITIONS</a>, <a href="StructureDefinition-CODE-PHRASE.html">CODE_PHRASE</a>, <a href="StructureDefinition-CODE-SET-ACCESS.html">CODE_SET_ACCESS</a>, <a href="StructureDefinition-CONTRIBUTION.html">CONTRIBUTION</a>, <a href="StructureDefinition-EHR.html">EHR</a>, <a href="StructureDefinition-EXTRACT-ENTITY-MANIFEST.html">EXTRACT_ENTITY_MANIFEST</a>, <a href="StructureDefinition-EXTRACT-ERROR.html">EXTRACT_ERROR</a>, <a href="StructureDefinition-EXTRACT-MANIFEST.html">EXTRACT_MANIFEST</a>, <a href="StructureDefinition-EXTRACT-PARTICIPATION.html">EXTRACT_PARTICIPATION</a>, <a href="StructureDefinition-EXTRACT-SPEC.html">EXTRACT_SPEC</a>, <a href="StructureDefinition-EXTRACT-UPDATE-SPEC.html">EXTRACT_UPDATE_SPEC</a>, <a href="StructureDefinition-EXTRACT-VERSION-SPEC.html">EXTRACT_VERSION_SPEC</a>, <a href="StructureDefinition-FEEDER-AUDIT-DETAILS.html">FEEDER_AUDIT_DETAILS</a>, <a href="StructureDefinition-FEEDER-AUDIT.html">FEEDER_AUDIT</a>, <a href="StructureDefinition-ITEM-TAG.html">ITEM_TAG</a>, <a href="StructureDefinition-LINK.html">LINK</a>, <a href="StructureDefinition-MEASUREMENT-SERVICE.html">MEASUREMENT_SERVICE</a>, <a href="StructureDefinition-MESSAGE-CONTENT.html">MESSAGE_CONTENT</a>, <a href="StructureDefinition-MESSAGE.html">MESSAGE</a>, <a href="StructureDefinition-OPENEHR-CODE-SET-IDENTIFIERS.html">OPENEHR_CODE_SET_IDENTIFIERS</a>, <a href="StructureDefinition-OPENEHR-TERMINOLOGY-GROUP-IDENTIFIERS.html">OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS</a>, <a href="StructureDefinition-PARTICIPATION.html">PARTICIPATION</a>, <a href="StructureDefinition-PARTY-PROXY.html">PARTY_PROXY</a>, <a href="StructureDefinition-PATHABLE.html">PATHABLE</a>, <a href="StructureDefinition-REFERENCE-RANGE.html">REFERENCE_RANGE</a>, <a href="StructureDefinition-RESOURCE-DESCRIPTION-ITEM.html">RESOURCE_DESCRIPTION_ITEM</a>, <a href="StructureDefinition-RESOURCE-DESCRIPTION.html">RESOURCE_DESCRIPTION</a>, <a href="StructureDefinition-REVISION-HISTORY-ITEM.html">REVISION_HISTORY_ITEM</a>, <a href="StructureDefinition-REVISION-HISTORY.html">REVISION_HISTORY</a>, <a href="StructureDefinition-SYNC-EXTRACT-SPEC.html">SYNC_EXTRACT_SPEC</a>, <a href="StructureDefinition-TERM-MAPPING.html">TERM_MAPPING</a>, <a href="StructureDefinition-TERMINOLOGY-ACCESS.html">TERMINOLOGY_ACCESS</a>, <a href="StructureDefinition-TRANSLATION-DETAILS.html">TRANSLATION_DETAILS</a>, <a href="StructureDefinition-UID.html">UID</a>, <a href="StructureDefinition-VERSION.html">VERSION</a>, <a href="StructureDefinition-VERSIONED-OBJECT.html">VERSIONED_OBJECT</a><br/>Abstract ancestor class for all other classes<br/></td></tr>
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 9baed900-9deb-4469-bc6e-087c60368448
+document.getElementById('cbAnyK-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
+filterDesc(document.getElementById('AnyK'), 'binding', document.getElementById('cbAnyK-binding').checked, document.getElementById('ppAnyK'));
+document.getElementById('cbAnyK-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
+filterDesc(document.getElementById('AnyK'), 'constraint', document.getElementById('cbAnyK-constraint').checked, document.getElementById('ppAnyK'));
+document.getElementById('cbAnyK-obligation').checked = 'false' != localStorage.getItem('ht-table-states-obligation');
+filterDesc(document.getElementById('AnyK'), 'obligation', document.getElementById('cbAnyK-obligation').checked, document.getElementById('ppAnyK'));
+</script></table>
+          <!--Terminology Bindings heading in the fragment -->
+          
+        
+          
+          <!-- 218 is size of empty table -->
+          
+        </div>
+      </div>
+    </div>
+    <a name="tabs-diff"> </a>
+    <div id="tabs-diff">
+      <div id="tbl-diff">
+        <p>This structure is derived from <a href="http://hl7.org/fhir/R5/types.html#Base">Base</a>
+        </p>
+        <div id="tbl-diff-inner">
+          <table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="AnyD" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element" data-no-external="true">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element" data-no-external="true">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance" data-no-external="true">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element" data-no-external="true">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element" data-no-external="true">Description &amp; Constraints</a>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: normal">Filter: <input size="10" name="filter" style="border: 1px #F0F0F0 solid; background-color: rgb(254, 254, 231);" onInput="filterTree(document.getElementById('AnyD'), event.target.value)" type="text"/> <img onClick="showPanel(event.target, document.getElementById('AnyD'), document.getElementById('ppAnyD'))" src="tree-filter.png" alt="Filters"/><div style="display: none; position: fixed; opacity : 1.0; background-color: rgb(254, 254, 231); border: 1px solid #ccc; padding: 10px; boxShadow: 0 2px 5px rgba(0,0,0,0.2); zIndex: 1000; borderRadius: 4px" id="ppAnyD">Bindings <input onClick="filterDesc(document.getElementById('AnyD'), 'binding',event.target.checked, document.getElementById('ppAnyD'))" size="1" name="binding" checked="true" id="cbAnyD-binding" type="checkbox"/><br/>Constraints <input onClick="filterDesc(document.getElementById('AnyD'), 'constraint',event.target.checked, document.getElementById('ppAnyD'))" size="1" name="constraint" checked="true" id="cbAnyD-constraint" type="checkbox"/><br/>Obligations <input onClick="filterDesc(document.getElementById('AnyD'), 'obligation',event.target.checked, document.getElementById('ppAnyD'))" size="1" name="obligation" checked="true" id="cbAnyD-obligation" type="checkbox"/><br/></div></span><span style="float: right"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format" data-no-external="true"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Any-definitions.html#Any" title="Abstract ancestor class for all other classes. Usually maps to a type like Any or Object in an object-oriented technology. Defined here to provide value and reference equality semantics." data-no-external="true">Any</a><a name="Any"> </a></td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/types.html#Base">Base</a></td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">This is an abstract type. Child types: <a href="StructureDefinition-ACCESS-CONTROL-SETTINGS.html">ACCESS_CONTROL_SETTINGS</a>, <a href="StructureDefinition-ADDRESSED-MESSAGE.html">ADDRESSED_MESSAGE</a>, <a href="StructureDefinition-ARCHETYPED.html">ARCHETYPED</a>, <a href="StructureDefinition-AUDIT-DETAILS.html">AUDIT_DETAILS</a>, <a href="StructureDefinition-AUTHORED-RESOURCE.html">AUTHORED_RESOURCE</a>, <a href="StructureDefinition-BASIC-DEFINITIONS.html">BASIC_DEFINITIONS</a>, <a href="StructureDefinition-CODE-PHRASE.html">CODE_PHRASE</a>, <a href="StructureDefinition-CODE-SET-ACCESS.html">CODE_SET_ACCESS</a>, <a href="StructureDefinition-CONTRIBUTION.html">CONTRIBUTION</a>, <a href="StructureDefinition-EHR.html">EHR</a>, <a href="StructureDefinition-EXTRACT-ENTITY-MANIFEST.html">EXTRACT_ENTITY_MANIFEST</a>, <a href="StructureDefinition-EXTRACT-ERROR.html">EXTRACT_ERROR</a>, <a href="StructureDefinition-EXTRACT-MANIFEST.html">EXTRACT_MANIFEST</a>, <a href="StructureDefinition-EXTRACT-PARTICIPATION.html">EXTRACT_PARTICIPATION</a>, <a href="StructureDefinition-EXTRACT-SPEC.html">EXTRACT_SPEC</a>, <a href="StructureDefinition-EXTRACT-UPDATE-SPEC.html">EXTRACT_UPDATE_SPEC</a>, <a href="StructureDefinition-EXTRACT-VERSION-SPEC.html">EXTRACT_VERSION_SPEC</a>, <a href="StructureDefinition-FEEDER-AUDIT-DETAILS.html">FEEDER_AUDIT_DETAILS</a>, <a href="StructureDefinition-FEEDER-AUDIT.html">FEEDER_AUDIT</a>, <a href="StructureDefinition-ITEM-TAG.html">ITEM_TAG</a>, <a href="StructureDefinition-LINK.html">LINK</a>, <a href="StructureDefinition-MEASUREMENT-SERVICE.html">MEASUREMENT_SERVICE</a>, <a href="StructureDefinition-MESSAGE-CONTENT.html">MESSAGE_CONTENT</a>, <a href="StructureDefinition-MESSAGE.html">MESSAGE</a>, <a href="StructureDefinition-OPENEHR-CODE-SET-IDENTIFIERS.html">OPENEHR_CODE_SET_IDENTIFIERS</a>, <a href="StructureDefinition-OPENEHR-TERMINOLOGY-GROUP-IDENTIFIERS.html">OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS</a>, <a href="StructureDefinition-PARTICIPATION.html">PARTICIPATION</a>, <a href="StructureDefinition-PARTY-PROXY.html">PARTY_PROXY</a>, <a href="StructureDefinition-PATHABLE.html">PATHABLE</a>, <a href="StructureDefinition-REFERENCE-RANGE.html">REFERENCE_RANGE</a>, <a href="StructureDefinition-RESOURCE-DESCRIPTION-ITEM.html">RESOURCE_DESCRIPTION_ITEM</a>, <a href="StructureDefinition-RESOURCE-DESCRIPTION.html">RESOURCE_DESCRIPTION</a>, <a href="StructureDefinition-REVISION-HISTORY-ITEM.html">REVISION_HISTORY_ITEM</a>, <a href="StructureDefinition-REVISION-HISTORY.html">REVISION_HISTORY</a>, <a href="StructureDefinition-SYNC-EXTRACT-SPEC.html">SYNC_EXTRACT_SPEC</a>, <a href="StructureDefinition-TERM-MAPPING.html">TERM_MAPPING</a>, <a href="StructureDefinition-TERMINOLOGY-ACCESS.html">TERMINOLOGY_ACCESS</a>, <a href="StructureDefinition-TRANSLATION-DETAILS.html">TRANSLATION_DETAILS</a>, <a href="StructureDefinition-UID.html">UID</a>, <a href="StructureDefinition-VERSION.html">VERSION</a>, <a href="StructureDefinition-VERSIONED-OBJECT.html">VERSIONED_OBJECT</a><br/>Abstract ancestor class for all other classes<br/></td></tr>
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 9baed900-9deb-4469-bc6e-087c60368448
+document.getElementById('cbAnyD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
+filterDesc(document.getElementById('AnyD'), 'binding', document.getElementById('cbAnyD-binding').checked, document.getElementById('ppAnyD'));
+document.getElementById('cbAnyD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
+filterDesc(document.getElementById('AnyD'), 'constraint', document.getElementById('cbAnyD-constraint').checked, document.getElementById('ppAnyD'));
+document.getElementById('cbAnyD-obligation').checked = 'false' != localStorage.getItem('ht-table-states-obligation');
+filterDesc(document.getElementById('AnyD'), 'obligation', document.getElementById('cbAnyD-obligation').checked, document.getElementById('ppAnyD'));
+</script></table>
+          <a name="tx"> </a>
+          <!--Terminology Bindings heading in the fragment -->
+          
+        
+          
+          <!-- 218 is size of empty table -->
+          
+        </div>
+      </div>
+    </div>
+    <a name="tabs-snap"> </a>
+    <div id="tabs-snap">
+      <div id="tbl-snap">
+        <div id="tbl-snap-inner">
+          <table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="AnyS" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element" data-no-external="true">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element" data-no-external="true">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance" data-no-external="true">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element" data-no-external="true">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element" data-no-external="true">Description &amp; Constraints</a>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: normal">Filter: <input size="10" name="filter" style="border: 1px #F0F0F0 solid; background-color: rgb(254, 254, 231);" onInput="filterTree(document.getElementById('AnyS'), event.target.value)" type="text"/> <img onClick="showPanel(event.target, document.getElementById('AnyS'), document.getElementById('ppAnyS'))" src="tree-filter.png" alt="Filters"/><div style="display: none; position: fixed; opacity : 1.0; background-color: rgb(254, 254, 231); border: 1px solid #ccc; padding: 10px; boxShadow: 0 2px 5px rgba(0,0,0,0.2); zIndex: 1000; borderRadius: 4px" id="ppAnyS">Bindings <input onClick="filterDesc(document.getElementById('AnyS'), 'binding',event.target.checked, document.getElementById('ppAnyS'))" size="1" name="binding" checked="true" id="cbAnyS-binding" type="checkbox"/><br/>Constraints <input onClick="filterDesc(document.getElementById('AnyS'), 'constraint',event.target.checked, document.getElementById('ppAnyS'))" size="1" name="constraint" checked="true" id="cbAnyS-constraint" type="checkbox"/><br/>Obligations <input onClick="filterDesc(document.getElementById('AnyS'), 'obligation',event.target.checked, document.getElementById('ppAnyS'))" size="1" name="obligation" checked="true" id="cbAnyS-obligation" type="checkbox"/><br/></div></span><span style="float: right"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format" data-no-external="true"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Any-definitions.html#Any" title="Abstract ancestor class for all other classes. Usually maps to a type like Any or Object in an object-oriented technology. Defined here to provide value and reference equality semantics." data-no-external="true">Any</a><a name="s-Any"> </a></td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/types.html#Base">Base</a></td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">This is an abstract type. Child types: <a href="StructureDefinition-ACCESS-CONTROL-SETTINGS.html">ACCESS_CONTROL_SETTINGS</a>, <a href="StructureDefinition-ADDRESSED-MESSAGE.html">ADDRESSED_MESSAGE</a>, <a href="StructureDefinition-ARCHETYPED.html">ARCHETYPED</a>, <a href="StructureDefinition-AUDIT-DETAILS.html">AUDIT_DETAILS</a>, <a href="StructureDefinition-AUTHORED-RESOURCE.html">AUTHORED_RESOURCE</a>, <a href="StructureDefinition-BASIC-DEFINITIONS.html">BASIC_DEFINITIONS</a>, <a href="StructureDefinition-CODE-PHRASE.html">CODE_PHRASE</a>, <a href="StructureDefinition-CODE-SET-ACCESS.html">CODE_SET_ACCESS</a>, <a href="StructureDefinition-CONTRIBUTION.html">CONTRIBUTION</a>, <a href="StructureDefinition-EHR.html">EHR</a>, <a href="StructureDefinition-EXTRACT-ENTITY-MANIFEST.html">EXTRACT_ENTITY_MANIFEST</a>, <a href="StructureDefinition-EXTRACT-ERROR.html">EXTRACT_ERROR</a>, <a href="StructureDefinition-EXTRACT-MANIFEST.html">EXTRACT_MANIFEST</a>, <a href="StructureDefinition-EXTRACT-PARTICIPATION.html">EXTRACT_PARTICIPATION</a>, <a href="StructureDefinition-EXTRACT-SPEC.html">EXTRACT_SPEC</a>, <a href="StructureDefinition-EXTRACT-UPDATE-SPEC.html">EXTRACT_UPDATE_SPEC</a>, <a href="StructureDefinition-EXTRACT-VERSION-SPEC.html">EXTRACT_VERSION_SPEC</a>, <a href="StructureDefinition-FEEDER-AUDIT-DETAILS.html">FEEDER_AUDIT_DETAILS</a>, <a href="StructureDefinition-FEEDER-AUDIT.html">FEEDER_AUDIT</a>, <a href="StructureDefinition-ITEM-TAG.html">ITEM_TAG</a>, <a href="StructureDefinition-LINK.html">LINK</a>, <a href="StructureDefinition-MEASUREMENT-SERVICE.html">MEASUREMENT_SERVICE</a>, <a href="StructureDefinition-MESSAGE-CONTENT.html">MESSAGE_CONTENT</a>, <a href="StructureDefinition-MESSAGE.html">MESSAGE</a>, <a href="StructureDefinition-OPENEHR-CODE-SET-IDENTIFIERS.html">OPENEHR_CODE_SET_IDENTIFIERS</a>, <a href="StructureDefinition-OPENEHR-TERMINOLOGY-GROUP-IDENTIFIERS.html">OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS</a>, <a href="StructureDefinition-PARTICIPATION.html">PARTICIPATION</a>, <a href="StructureDefinition-PARTY-PROXY.html">PARTY_PROXY</a>, <a href="StructureDefinition-PATHABLE.html">PATHABLE</a>, <a href="StructureDefinition-REFERENCE-RANGE.html">REFERENCE_RANGE</a>, <a href="StructureDefinition-RESOURCE-DESCRIPTION-ITEM.html">RESOURCE_DESCRIPTION_ITEM</a>, <a href="StructureDefinition-RESOURCE-DESCRIPTION.html">RESOURCE_DESCRIPTION</a>, <a href="StructureDefinition-REVISION-HISTORY-ITEM.html">REVISION_HISTORY_ITEM</a>, <a href="StructureDefinition-REVISION-HISTORY.html">REVISION_HISTORY</a>, <a href="StructureDefinition-SYNC-EXTRACT-SPEC.html">SYNC_EXTRACT_SPEC</a>, <a href="StructureDefinition-TERM-MAPPING.html">TERM_MAPPING</a>, <a href="StructureDefinition-TERMINOLOGY-ACCESS.html">TERMINOLOGY_ACCESS</a>, <a href="StructureDefinition-TRANSLATION-DETAILS.html">TRANSLATION_DETAILS</a>, <a href="StructureDefinition-UID.html">UID</a>, <a href="StructureDefinition-VERSION.html">VERSION</a>, <a href="StructureDefinition-VERSIONED-OBJECT.html">VERSIONED_OBJECT</a><br/>Abstract ancestor class for all other classes<br/></td></tr>
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 9baed900-9deb-4469-bc6e-087c60368448
+document.getElementById('cbAnyS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
+filterDesc(document.getElementById('AnyS'), 'binding', document.getElementById('cbAnyS-binding').checked, document.getElementById('ppAnyS'));
+document.getElementById('cbAnyS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
+filterDesc(document.getElementById('AnyS'), 'constraint', document.getElementById('cbAnyS-constraint').checked, document.getElementById('ppAnyS'));
+document.getElementById('cbAnyS-obligation').checked = 'false' != localStorage.getItem('ht-table-states-obligation');
+filterDesc(document.getElementById('AnyS'), 'obligation', document.getElementById('cbAnyS-obligation').checked, document.getElementById('ppAnyS'));
+</script></table>
+          <!--Terminology Bindings heading in the fragment -->
+          
+        
+          
+          <!-- 218 is size of empty table -->
+          
+        </div>
+      </div>
+    </div>
+
+<!--    <a name="tabs-xml"> </a>
+    <div id="tabs-xml">
+      <div id="xml">
+        <div id="xml-inner">
+          <p><span style="color: maroon; font-weight: bold">yet to be done: Xml template</span></p>
+
+        </div>
+      </div>
+    </div>-->
+
+
+<!--    <a name="tabs-json"> </a>
+    <div id="tabs-json">
+      <div id="json">
+        <div id="json-inner">
+           // <span style="color: navy; opacity: 0.8">Any</span>
+ {
+// from Element: <a href="http://hl7.org/fhir/R5/extensibility.html">extension</a>
+  }
+
+        </div>
+      </div>
+    </div>-->
+
+
+    <!--<a name="tabs-ttl"> </a>
+    <div id="tabs-ttl">
+      <div id="ttl">
+        <div id="ttl-inner">
+          <p><span style="color: maroon; font-weight: bold">yet to be done: Turtle template</span></p>
+
+        </div>
+      </div>
+    </div>-->
+
+    <a name="tabs-summ"> </a>
+    <div id="tabs-summ">
+      <div id="tbl-summ">
+        <p>This structure is derived from <a href="http://hl7.org/fhir/R5/types.html#Base">Base</a>
+        </p>
+        <div id="tbl-summ-inner">
+          <a name="summary"> </a>
+          <a name="s-summary"> </a>
+<p><b>
+Summary
+</b></p>
+<p><b><a class="fmm" href="http://hl7.org/fhir/versions.html#maturity" title="Maturity Level">Maturity</a></b>: 3</p>
+
+        </div>
+      </div>
+    </div>
+    <a name="tabs-all"> </a>
+    <div id="tabs-all">
+      <div id="all-tbl-key">
+        <p>
+          <b>Key Elements View</b>
+        </p>
+        <div id="all-tbl-key-inner">
+          <table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="AnyKA" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element" data-no-external="true">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element" data-no-external="true">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance" data-no-external="true">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element" data-no-external="true">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element" data-no-external="true">Description &amp; Constraints</a>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: normal">Filter: <input size="10" name="filter" style="border: 1px #F0F0F0 solid; background-color: rgb(254, 254, 231);" onInput="filterTree(document.getElementById('AnyKA'), event.target.value)" type="text"/> <img onClick="showPanel(event.target, document.getElementById('AnyKA'), document.getElementById('ppAnyKA'))" src="tree-filter.png" alt="Filters"/><div style="display: none; position: fixed; opacity : 1.0; background-color: rgb(254, 254, 231); border: 1px solid #ccc; padding: 10px; boxShadow: 0 2px 5px rgba(0,0,0,0.2); zIndex: 1000; borderRadius: 4px" id="ppAnyKA">Bindings <input onClick="filterDesc(document.getElementById('AnyKA'), 'binding',event.target.checked, document.getElementById('ppAnyKA'))" size="1" name="binding" checked="true" id="cbAnyKA-binding" type="checkbox"/><br/>Constraints <input onClick="filterDesc(document.getElementById('AnyKA'), 'constraint',event.target.checked, document.getElementById('ppAnyKA'))" size="1" name="constraint" checked="true" id="cbAnyKA-constraint" type="checkbox"/><br/>Obligations <input onClick="filterDesc(document.getElementById('AnyKA'), 'obligation',event.target.checked, document.getElementById('ppAnyKA'))" size="1" name="obligation" checked="true" id="cbAnyKA-obligation" type="checkbox"/><br/></div></span><span style="float: right"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format" data-no-external="true"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Any-definitions.html#Any" title="Abstract ancestor class for all other classes. Usually maps to a type like Any or Object in an object-oriented technology. Defined here to provide value and reference equality semantics." data-no-external="true">Any</a><a name="ka-Any"> </a></td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/types.html#Base">Base</a></td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">This is an abstract type. Child types: <a href="StructureDefinition-ACCESS-CONTROL-SETTINGS.html">ACCESS_CONTROL_SETTINGS</a>, <a href="StructureDefinition-ADDRESSED-MESSAGE.html">ADDRESSED_MESSAGE</a>, <a href="StructureDefinition-ARCHETYPED.html">ARCHETYPED</a>, <a href="StructureDefinition-AUDIT-DETAILS.html">AUDIT_DETAILS</a>, <a href="StructureDefinition-AUTHORED-RESOURCE.html">AUTHORED_RESOURCE</a>, <a href="StructureDefinition-BASIC-DEFINITIONS.html">BASIC_DEFINITIONS</a>, <a href="StructureDefinition-CODE-PHRASE.html">CODE_PHRASE</a>, <a href="StructureDefinition-CODE-SET-ACCESS.html">CODE_SET_ACCESS</a>, <a href="StructureDefinition-CONTRIBUTION.html">CONTRIBUTION</a>, <a href="StructureDefinition-EHR.html">EHR</a>, <a href="StructureDefinition-EXTRACT-ENTITY-MANIFEST.html">EXTRACT_ENTITY_MANIFEST</a>, <a href="StructureDefinition-EXTRACT-ERROR.html">EXTRACT_ERROR</a>, <a href="StructureDefinition-EXTRACT-MANIFEST.html">EXTRACT_MANIFEST</a>, <a href="StructureDefinition-EXTRACT-PARTICIPATION.html">EXTRACT_PARTICIPATION</a>, <a href="StructureDefinition-EXTRACT-SPEC.html">EXTRACT_SPEC</a>, <a href="StructureDefinition-EXTRACT-UPDATE-SPEC.html">EXTRACT_UPDATE_SPEC</a>, <a href="StructureDefinition-EXTRACT-VERSION-SPEC.html">EXTRACT_VERSION_SPEC</a>, <a href="StructureDefinition-FEEDER-AUDIT-DETAILS.html">FEEDER_AUDIT_DETAILS</a>, <a href="StructureDefinition-FEEDER-AUDIT.html">FEEDER_AUDIT</a>, <a href="StructureDefinition-ITEM-TAG.html">ITEM_TAG</a>, <a href="StructureDefinition-LINK.html">LINK</a>, <a href="StructureDefinition-MEASUREMENT-SERVICE.html">MEASUREMENT_SERVICE</a>, <a href="StructureDefinition-MESSAGE-CONTENT.html">MESSAGE_CONTENT</a>, <a href="StructureDefinition-MESSAGE.html">MESSAGE</a>, <a href="StructureDefinition-OPENEHR-CODE-SET-IDENTIFIERS.html">OPENEHR_CODE_SET_IDENTIFIERS</a>, <a href="StructureDefinition-OPENEHR-TERMINOLOGY-GROUP-IDENTIFIERS.html">OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS</a>, <a href="StructureDefinition-PARTICIPATION.html">PARTICIPATION</a>, <a href="StructureDefinition-PARTY-PROXY.html">PARTY_PROXY</a>, <a href="StructureDefinition-PATHABLE.html">PATHABLE</a>, <a href="StructureDefinition-REFERENCE-RANGE.html">REFERENCE_RANGE</a>, <a href="StructureDefinition-RESOURCE-DESCRIPTION-ITEM.html">RESOURCE_DESCRIPTION_ITEM</a>, <a href="StructureDefinition-RESOURCE-DESCRIPTION.html">RESOURCE_DESCRIPTION</a>, <a href="StructureDefinition-REVISION-HISTORY-ITEM.html">REVISION_HISTORY_ITEM</a>, <a href="StructureDefinition-REVISION-HISTORY.html">REVISION_HISTORY</a>, <a href="StructureDefinition-SYNC-EXTRACT-SPEC.html">SYNC_EXTRACT_SPEC</a>, <a href="StructureDefinition-TERM-MAPPING.html">TERM_MAPPING</a>, <a href="StructureDefinition-TERMINOLOGY-ACCESS.html">TERMINOLOGY_ACCESS</a>, <a href="StructureDefinition-TRANSLATION-DETAILS.html">TRANSLATION_DETAILS</a>, <a href="StructureDefinition-UID.html">UID</a>, <a href="StructureDefinition-VERSION.html">VERSION</a>, <a href="StructureDefinition-VERSIONED-OBJECT.html">VERSIONED_OBJECT</a><br/>Abstract ancestor class for all other classes<br/></td></tr>
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 9baed900-9deb-4469-bc6e-087c60368448
+document.getElementById('cbAnyKA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
+filterDesc(document.getElementById('AnyKA'), 'binding', document.getElementById('cbAnyKA-binding').checked, document.getElementById('ppAnyKA'));
+document.getElementById('cbAnyKA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
+filterDesc(document.getElementById('AnyKA'), 'constraint', document.getElementById('cbAnyKA-constraint').checked, document.getElementById('ppAnyKA'));
+document.getElementById('cbAnyKA-obligation').checked = 'false' != localStorage.getItem('ht-table-states-obligation');
+filterDesc(document.getElementById('AnyKA'), 'obligation', document.getElementById('cbAnyKA-obligation').checked, document.getElementById('ppAnyKA'));
+</script></table>
+          <!--Terminology Bindings heading in the fragment -->
+          
+        
+          
+          <!-- 218 is size of empty table -->
+          
+        </div>
+      </div>
+      <div id="all-tbl-diff">
+        <p>
+          <b>Differential View</b>
+        </p>
+        <p>This structure is derived from <a href="http://hl7.org/fhir/R5/types.html#Base">Base</a>
+        </p>
+        <div id="all-tbl-diff-inner">
+          <table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="AnyDA" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element" data-no-external="true">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element" data-no-external="true">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance" data-no-external="true">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element" data-no-external="true">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element" data-no-external="true">Description &amp; Constraints</a>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: normal">Filter: <input size="10" name="filter" style="border: 1px #F0F0F0 solid; background-color: rgb(254, 254, 231);" onInput="filterTree(document.getElementById('AnyDA'), event.target.value)" type="text"/> <img onClick="showPanel(event.target, document.getElementById('AnyDA'), document.getElementById('ppAnyDA'))" src="tree-filter.png" alt="Filters"/><div style="display: none; position: fixed; opacity : 1.0; background-color: rgb(254, 254, 231); border: 1px solid #ccc; padding: 10px; boxShadow: 0 2px 5px rgba(0,0,0,0.2); zIndex: 1000; borderRadius: 4px" id="ppAnyDA">Bindings <input onClick="filterDesc(document.getElementById('AnyDA'), 'binding',event.target.checked, document.getElementById('ppAnyDA'))" size="1" name="binding" checked="true" id="cbAnyDA-binding" type="checkbox"/><br/>Constraints <input onClick="filterDesc(document.getElementById('AnyDA'), 'constraint',event.target.checked, document.getElementById('ppAnyDA'))" size="1" name="constraint" checked="true" id="cbAnyDA-constraint" type="checkbox"/><br/>Obligations <input onClick="filterDesc(document.getElementById('AnyDA'), 'obligation',event.target.checked, document.getElementById('ppAnyDA'))" size="1" name="obligation" checked="true" id="cbAnyDA-obligation" type="checkbox"/><br/></div></span><span style="float: right"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format" data-no-external="true"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Any-definitions.html#Any" title="Abstract ancestor class for all other classes. Usually maps to a type like Any or Object in an object-oriented technology. Defined here to provide value and reference equality semantics." data-no-external="true">Any</a><a name="a-Any"> </a></td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/types.html#Base">Base</a></td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">This is an abstract type. Child types: <a href="StructureDefinition-ACCESS-CONTROL-SETTINGS.html">ACCESS_CONTROL_SETTINGS</a>, <a href="StructureDefinition-ADDRESSED-MESSAGE.html">ADDRESSED_MESSAGE</a>, <a href="StructureDefinition-ARCHETYPED.html">ARCHETYPED</a>, <a href="StructureDefinition-AUDIT-DETAILS.html">AUDIT_DETAILS</a>, <a href="StructureDefinition-AUTHORED-RESOURCE.html">AUTHORED_RESOURCE</a>, <a href="StructureDefinition-BASIC-DEFINITIONS.html">BASIC_DEFINITIONS</a>, <a href="StructureDefinition-CODE-PHRASE.html">CODE_PHRASE</a>, <a href="StructureDefinition-CODE-SET-ACCESS.html">CODE_SET_ACCESS</a>, <a href="StructureDefinition-CONTRIBUTION.html">CONTRIBUTION</a>, <a href="StructureDefinition-EHR.html">EHR</a>, <a href="StructureDefinition-EXTRACT-ENTITY-MANIFEST.html">EXTRACT_ENTITY_MANIFEST</a>, <a href="StructureDefinition-EXTRACT-ERROR.html">EXTRACT_ERROR</a>, <a href="StructureDefinition-EXTRACT-MANIFEST.html">EXTRACT_MANIFEST</a>, <a href="StructureDefinition-EXTRACT-PARTICIPATION.html">EXTRACT_PARTICIPATION</a>, <a href="StructureDefinition-EXTRACT-SPEC.html">EXTRACT_SPEC</a>, <a href="StructureDefinition-EXTRACT-UPDATE-SPEC.html">EXTRACT_UPDATE_SPEC</a>, <a href="StructureDefinition-EXTRACT-VERSION-SPEC.html">EXTRACT_VERSION_SPEC</a>, <a href="StructureDefinition-FEEDER-AUDIT-DETAILS.html">FEEDER_AUDIT_DETAILS</a>, <a href="StructureDefinition-FEEDER-AUDIT.html">FEEDER_AUDIT</a>, <a href="StructureDefinition-ITEM-TAG.html">ITEM_TAG</a>, <a href="StructureDefinition-LINK.html">LINK</a>, <a href="StructureDefinition-MEASUREMENT-SERVICE.html">MEASUREMENT_SERVICE</a>, <a href="StructureDefinition-MESSAGE-CONTENT.html">MESSAGE_CONTENT</a>, <a href="StructureDefinition-MESSAGE.html">MESSAGE</a>, <a href="StructureDefinition-OPENEHR-CODE-SET-IDENTIFIERS.html">OPENEHR_CODE_SET_IDENTIFIERS</a>, <a href="StructureDefinition-OPENEHR-TERMINOLOGY-GROUP-IDENTIFIERS.html">OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS</a>, <a href="StructureDefinition-PARTICIPATION.html">PARTICIPATION</a>, <a href="StructureDefinition-PARTY-PROXY.html">PARTY_PROXY</a>, <a href="StructureDefinition-PATHABLE.html">PATHABLE</a>, <a href="StructureDefinition-REFERENCE-RANGE.html">REFERENCE_RANGE</a>, <a href="StructureDefinition-RESOURCE-DESCRIPTION-ITEM.html">RESOURCE_DESCRIPTION_ITEM</a>, <a href="StructureDefinition-RESOURCE-DESCRIPTION.html">RESOURCE_DESCRIPTION</a>, <a href="StructureDefinition-REVISION-HISTORY-ITEM.html">REVISION_HISTORY_ITEM</a>, <a href="StructureDefinition-REVISION-HISTORY.html">REVISION_HISTORY</a>, <a href="StructureDefinition-SYNC-EXTRACT-SPEC.html">SYNC_EXTRACT_SPEC</a>, <a href="StructureDefinition-TERM-MAPPING.html">TERM_MAPPING</a>, <a href="StructureDefinition-TERMINOLOGY-ACCESS.html">TERMINOLOGY_ACCESS</a>, <a href="StructureDefinition-TRANSLATION-DETAILS.html">TRANSLATION_DETAILS</a>, <a href="StructureDefinition-UID.html">UID</a>, <a href="StructureDefinition-VERSION.html">VERSION</a>, <a href="StructureDefinition-VERSIONED-OBJECT.html">VERSIONED_OBJECT</a><br/>Abstract ancestor class for all other classes<br/></td></tr>
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 9baed900-9deb-4469-bc6e-087c60368448
+document.getElementById('cbAnyDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
+filterDesc(document.getElementById('AnyDA'), 'binding', document.getElementById('cbAnyDA-binding').checked, document.getElementById('ppAnyDA'));
+document.getElementById('cbAnyDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
+filterDesc(document.getElementById('AnyDA'), 'constraint', document.getElementById('cbAnyDA-constraint').checked, document.getElementById('ppAnyDA'));
+document.getElementById('cbAnyDA-obligation').checked = 'false' != localStorage.getItem('ht-table-states-obligation');
+filterDesc(document.getElementById('AnyDA'), 'obligation', document.getElementById('cbAnyDA-obligation').checked, document.getElementById('ppAnyDA'));
+</script></table>
+          <!--Terminology Bindings heading in the fragment -->
+          
+        
+          
+          <!-- 218 is size of empty table -->
+          
+        </div>
+      </div>
+      <div id="all-tbl-snap">
+        <p>
+          <b>Snapshot View</b>
+        </p>
+        <div id="all-tbl-snap-inner">
+          <table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="AnySA" data-fhir="generated-heirarchy"><tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top" data-fhir="generated-heirarchy"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element" data-no-external="true">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element" data-no-external="true">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance" data-no-external="true">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element" data-no-external="true">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element" data-no-external="true">Description &amp; Constraints</a>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-weight: normal">Filter: <input size="10" name="filter" style="border: 1px #F0F0F0 solid; background-color: rgb(254, 254, 231);" onInput="filterTree(document.getElementById('AnySA'), event.target.value)" type="text"/> <img onClick="showPanel(event.target, document.getElementById('AnySA'), document.getElementById('ppAnySA'))" src="tree-filter.png" alt="Filters"/><div style="display: none; position: fixed; opacity : 1.0; background-color: rgb(254, 254, 231); border: 1px solid #ccc; padding: 10px; boxShadow: 0 2px 5px rgba(0,0,0,0.2); zIndex: 1000; borderRadius: 4px" id="ppAnySA">Bindings <input onClick="filterDesc(document.getElementById('AnySA'), 'binding',event.target.checked, document.getElementById('ppAnySA'))" size="1" name="binding" checked="true" id="cbAnySA-binding" type="checkbox"/><br/>Constraints <input onClick="filterDesc(document.getElementById('AnySA'), 'constraint',event.target.checked, document.getElementById('ppAnySA'))" size="1" name="constraint" checked="true" id="cbAnySA-constraint" type="checkbox"/><br/>Obligations <input onClick="filterDesc(document.getElementById('AnySA'), 'obligation',event.target.checked, document.getElementById('ppAnySA'))" size="1" name="obligation" checked="true" id="cbAnySA-obligation" type="checkbox"/><br/></div></span><span style="float: right"><a no-external="true" href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format" data-no-external="true"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" onLoad="fhirTableInit(this)" style="background-color: inherit"/></a></span></th></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a" data-fhir="generated-heirarchy"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck0.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a no-external="true" href="StructureDefinition-Any-definitions.html#Any" title="Abstract ancestor class for all other classes. Usually maps to a type like Any or Object in an object-oriented technology. Defined here to provide value and reference equality semantics." data-no-external="true">Any</a><a name="sa-Any"> </a></td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/types.html#Base">Base</a></td>
+<td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">This is an abstract type. Child types: <a href="StructureDefinition-ACCESS-CONTROL-SETTINGS.html">ACCESS_CONTROL_SETTINGS</a>, <a href="StructureDefinition-ADDRESSED-MESSAGE.html">ADDRESSED_MESSAGE</a>, <a href="StructureDefinition-ARCHETYPED.html">ARCHETYPED</a>, <a href="StructureDefinition-AUDIT-DETAILS.html">AUDIT_DETAILS</a>, <a href="StructureDefinition-AUTHORED-RESOURCE.html">AUTHORED_RESOURCE</a>, <a href="StructureDefinition-BASIC-DEFINITIONS.html">BASIC_DEFINITIONS</a>, <a href="StructureDefinition-CODE-PHRASE.html">CODE_PHRASE</a>, <a href="StructureDefinition-CODE-SET-ACCESS.html">CODE_SET_ACCESS</a>, <a href="StructureDefinition-CONTRIBUTION.html">CONTRIBUTION</a>, <a href="StructureDefinition-EHR.html">EHR</a>, <a href="StructureDefinition-EXTRACT-ENTITY-MANIFEST.html">EXTRACT_ENTITY_MANIFEST</a>, <a href="StructureDefinition-EXTRACT-ERROR.html">EXTRACT_ERROR</a>, <a href="StructureDefinition-EXTRACT-MANIFEST.html">EXTRACT_MANIFEST</a>, <a href="StructureDefinition-EXTRACT-PARTICIPATION.html">EXTRACT_PARTICIPATION</a>, <a href="StructureDefinition-EXTRACT-SPEC.html">EXTRACT_SPEC</a>, <a href="StructureDefinition-EXTRACT-UPDATE-SPEC.html">EXTRACT_UPDATE_SPEC</a>, <a href="StructureDefinition-EXTRACT-VERSION-SPEC.html">EXTRACT_VERSION_SPEC</a>, <a href="StructureDefinition-FEEDER-AUDIT-DETAILS.html">FEEDER_AUDIT_DETAILS</a>, <a href="StructureDefinition-FEEDER-AUDIT.html">FEEDER_AUDIT</a>, <a href="StructureDefinition-ITEM-TAG.html">ITEM_TAG</a>, <a href="StructureDefinition-LINK.html">LINK</a>, <a href="StructureDefinition-MEASUREMENT-SERVICE.html">MEASUREMENT_SERVICE</a>, <a href="StructureDefinition-MESSAGE-CONTENT.html">MESSAGE_CONTENT</a>, <a href="StructureDefinition-MESSAGE.html">MESSAGE</a>, <a href="StructureDefinition-OPENEHR-CODE-SET-IDENTIFIERS.html">OPENEHR_CODE_SET_IDENTIFIERS</a>, <a href="StructureDefinition-OPENEHR-TERMINOLOGY-GROUP-IDENTIFIERS.html">OPENEHR_TERMINOLOGY_GROUP_IDENTIFIERS</a>, <a href="StructureDefinition-PARTICIPATION.html">PARTICIPATION</a>, <a href="StructureDefinition-PARTY-PROXY.html">PARTY_PROXY</a>, <a href="StructureDefinition-PATHABLE.html">PATHABLE</a>, <a href="StructureDefinition-REFERENCE-RANGE.html">REFERENCE_RANGE</a>, <a href="StructureDefinition-RESOURCE-DESCRIPTION-ITEM.html">RESOURCE_DESCRIPTION_ITEM</a>, <a href="StructureDefinition-RESOURCE-DESCRIPTION.html">RESOURCE_DESCRIPTION</a>, <a href="StructureDefinition-REVISION-HISTORY-ITEM.html">REVISION_HISTORY_ITEM</a>, <a href="StructureDefinition-REVISION-HISTORY.html">REVISION_HISTORY</a>, <a href="StructureDefinition-SYNC-EXTRACT-SPEC.html">SYNC_EXTRACT_SPEC</a>, <a href="StructureDefinition-TERM-MAPPING.html">TERM_MAPPING</a>, <a href="StructureDefinition-TERMINOLOGY-ACCESS.html">TERMINOLOGY_ACCESS</a>, <a href="StructureDefinition-TRANSLATION-DETAILS.html">TRANSLATION_DETAILS</a>, <a href="StructureDefinition-UID.html">UID</a>, <a href="StructureDefinition-VERSION.html">VERSION</a>, <a href="StructureDefinition-VERSIONED-OBJECT.html">VERSIONED_OBJECT</a><br/>Abstract ancestor class for all other classes<br/></td></tr>
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R5/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 9baed900-9deb-4469-bc6e-087c60368448
+document.getElementById('cbAnySA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
+filterDesc(document.getElementById('AnySA'), 'binding', document.getElementById('cbAnySA-binding').checked, document.getElementById('ppAnySA'));
+document.getElementById('cbAnySA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
+filterDesc(document.getElementById('AnySA'), 'constraint', document.getElementById('cbAnySA-constraint').checked, document.getElementById('ppAnySA'));
+document.getElementById('cbAnySA-obligation').checked = 'false' != localStorage.getItem('ht-table-states-obligation');
+filterDesc(document.getElementById('AnySA'), 'obligation', document.getElementById('cbAnySA-obligation').checked, document.getElementById('ppAnySA'));
+</script></table>
+          <!--Terminology Bindings heading in the fragment -->
+          
+        
+          
+          <!-- 218 is size of empty table -->
+          
+        </div>
+      </div>
+
+      <!--<div id="all-xml">
+        <p>
+          <b>XML Template</b>
+        </p>
+        <div id="all-xml-inner">
+          <p><span style="color: maroon; font-weight: bold">yet to be done: Xml template</span></p>
+
+        </div>
+      </div>-->
+
+
+      <!--<div id="all-json">
+        <p>
+          <b>JSON Template</b>
+        </p>
+        <div id="all-json-inner">
+           // <span style="color: navy; opacity: 0.8">Any</span>
+ {
+// from Element: <a href="http://hl7.org/fhir/R5/extensibility.html">extension</a>
+  }
+
+        </div>
+      </div>-->
+
+
+      <!--<div id="all-ttl">
+        <p>
+          <b>TTL Template</b>
+        </p>
+        <div id="all-ttl-inner">
+          <p><span style="color: maroon; font-weight: bold">yet to be done: Turtle template</span></p>
+
+        </div>
+      </div>-->
+
+      <div id="all-summ">
+        <p>This structure is derived from <a href="http://hl7.org/fhir/R5/types.html#Base">Base</a>
+        </p>
+        <div id="all-summ-inner">
+          <a name="a-summary"> </a>
+<p><b>
+Summary
+</b></p>
+<p><b><a class="fmm" href="http://hl7.org/fhir/versions.html#maturity" title="Maturity Level">Maturity</a></b>: 3</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>&#160;</p>
+  <p>Other representations of profile: <a href="StructureDefinition-Any.csv">CSV</a>, <a href="StructureDefinition-Any.xlsx">Excel</a> 
+  </p>
+
+  
+
+<!-- insert notes if present -->
+
+
+
+
+</div>
+
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/tabs.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.openehr.org">openEHR + HL7</a>.  Package openehr.base#0.1.0-snapshot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Wed, Dec 17, 2025 07:04+1100">2025-12-17</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

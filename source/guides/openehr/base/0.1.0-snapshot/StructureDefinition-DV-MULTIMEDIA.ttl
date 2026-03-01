@@ -1,0 +1,741 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openehr.org/fhir/StructureDefinition/DV-MULTIMEDIA> a fhir:StructureDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "DV-MULTIMEDIA"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition DV-MULTIMEDIA</b></p><a name=\"DV-MULTIMEDIA\"> </a><a name=\"hcDV-MULTIMEDIA\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-DV-MULTIMEDIA-definitions.html#DV_MULTIMEDIA\" title=\"A specialisation of `DV_ENCAPSULATED` for audiovisual and bio-signal types. Includes further metadata relating to multimedia types which are not applicable to other subtypes of `DV_ENCAPSULATED`.\">DV_MULTIMEDIA</a><a name=\"DV_MULTIMEDIA\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;; padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;\" href=\"http://hl7.org/fhir/R5/conformance-rules.html#constraints\" title=\"This element has or is affected by constraints ( Not_empty, Integrity_check_validity, Size_valid )\">C</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-DV-ENCAPSULATED.html\">DV_ENCAPSULATED</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">A specialisation of `DV_ENCAPSULATED` for audiovisual and bio-signal types.<br/><br/>Elements defined in Ancestors:<a href=\"StructureDefinition-BASIC-DEFINITIONS.html\" title=\"Carriage return character.\">CR</a>, <a href=\"StructureDefinition-BASIC-DEFINITIONS.html\" title=\"Line feed character.\">LF</a>, <a href=\"StructureDefinition-OPENEHR-DEFINITIONS.html\" title=\"Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype\">Local_terminology_id</a>, <a href=\"StructureDefinition-DV-ENCAPSULATED.html\" title=\"Name of character encoding scheme in which this value is encoded. Coded from openEHR Code Set  character sets . Unicode is the default assumption in openEHR, with UTF-8 being the assumed encoding. This attribute allows for variations from these assumptions. \">charset</a>, <a href=\"StructureDefinition-DV-ENCAPSULATED.html\" title=\"Optional indicator of the localised language in which the data is written, if relevant. Coded from openEHR Code Set `languages`.\">language</a><br class=\"binding\"/><span style=\"font-weight:bold\" title=\"null\" class=\"binding\">Binding: </span><a href=\"ValueSet-integrity-check-algorithms.html\" title=\"https://specifications.openehr.org/fhir/valueset-integrity_check_algorithms\" class=\"binding\">Integrity check algorithms</a><span title=\"null\" class=\"binding\"> (</span><a href=\"http://hl7.org/fhir/R5/terminologies.html#required\" title=\"To be conformant, the concept in this element SHALL be from the specified value set.\" class=\"binding\">required</a><span title=\"null\" class=\"binding\">)</span><br class=\"constraint\"/><span title=\"null\" class=\"constraint\">Constraints: </span><span style=\"font-weight:bold\" title=\"Not empty\" class=\"constraint\">Not_empty</span><span title=\"null\" class=\"constraint\">, </span><span style=\"font-weight:bold\" title=\"Integrity check validity must be present\" class=\"constraint\">Integrity_check_validity</span><span title=\"null\" class=\"constraint\">, </span><span style=\"font-weight:bold\" title=\"Size valid must satisfy range constraints\" class=\"constraint\">Size_valid</span><br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-DV-MULTIMEDIA-definitions.html#DV_MULTIMEDIA.alternate-text\" title=\"Text to display in lieu of multimedia display/replay.\">alternate_text</a><a name=\"DV_MULTIMEDIA.alternate_text\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Text to display in lieu of multimedia display/replay.</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-DV-MULTIMEDIA-definitions.html#DV_MULTIMEDIA.uri\" title=\"URI reference to electronic information stored outside the record as a file, database entry etc, if supplied as a reference. #xA;\">uri</a><a name=\"DV_MULTIMEDIA.uri\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-DV-URI.html\">DV_URI</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">URI reference to electronic information stored outside the record as a file, database entry etc, if supplied as a reference.</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-DV-MULTIMEDIA-definitions.html#DV_MULTIMEDIA.data\" title=\"The actual data found at `_uri_`, if supplied inline.\">data</a><a name=\"DV_MULTIMEDIA.data\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#base64Binary\">base64Binary</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">The actual data found at `_uri_`, if supplied inline.<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-DV-MULTIMEDIA-definitions.html#DV_MULTIMEDIA.media-type\" title=\"Data media type coded from openEHR code set  media types  (interface for the IANA MIME types code set). #xA;\">media_type</a><a name=\"DV_MULTIMEDIA.media_type\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-CODE-PHRASE.html\">CODE_PHRASE</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Data media type coded from openEHR code set  media types  (interface for the IANA MIME types code set).</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-DV-MULTIMEDIA-definitions.html#DV_MULTIMEDIA.compression-algorithm\" title=\"Compression type, a coded value from the openEHR Integrity check code set. Void means no compression. \">compression_algorithm</a><a name=\"DV_MULTIMEDIA.compression_algorithm\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-CODE-PHRASE.html\">CODE_PHRASE</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Compression type, a coded value from the openEHR Integrity check code set.</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-DV-MULTIMEDIA-definitions.html#DV_MULTIMEDIA.integrity-check\" title=\"Binary cryptographic integrity checksum.\">integrity_check</a><a name=\"DV_MULTIMEDIA.integrity_check\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#base64Binary\">base64Binary</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Binary cryptographic integrity checksum.<br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-DV-MULTIMEDIA-definitions.html#DV_MULTIMEDIA.integrity-check-algorithm\" title=\"Type of integrity check, a coded value from the openEHR `Integrity check` code set. \">integrity_check_algorithm</a><a name=\"DV_MULTIMEDIA.integrity_check_algorithm\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-CODE-PHRASE.html\">CODE_PHRASE</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Type of integrity check, a coded value from the openEHR `Integrity check` code set.</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-DV-MULTIMEDIA-definitions.html#DV_MULTIMEDIA.thumbnail\" title=\"The thumbnail for this item, if one exists; mainly for graphics formats.\">thumbnail</a><a name=\"DV_MULTIMEDIA.thumbnail\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-DV-MULTIMEDIA.html\">DV_MULTIMEDIA</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">The thumbnail for this item, if one exists; mainly for graphics formats.</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-DV-MULTIMEDIA-definitions.html#DV_MULTIMEDIA.size\" title=\"Original size in bytes of unencoded encapsulated data. I.e. encodings such as base64, hexadecimal etc do not change the value of this attribute.\">size</a><a name=\"DV_MULTIMEDIA.size\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#integer\">integer</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Original size in bytes of unencoded encapsulated data.</td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:contained ( [
+     a fhir:OperationDefinition ;
+     fhir:id [ fhir:v "is_external" ] ;
+     fhir:name [ fhir:v "is_external" ] ;
+     fhir:title [ fhir:v "is_external" ] ;
+     fhir:status [ fhir:v "active" ] ;
+     fhir:kind [ fhir:v "operation" ] ;
+     fhir:description [ fhir:v "Computed from the value of the `_uri_` attribute: True if  the data is stored externally to the record, as indicated by `_uri_`. A copy may also be stored internally, in which case `_is_expanded_` is also true." ] ;
+     fhir:code [ fhir:v "is_external" ] ;
+     fhir:system [ fhir:v false ] ;
+     fhir:instance [ fhir:v true ] ;
+     fhir:parameter ( [
+       fhir:name [ fhir:v "return" ] ;
+       fhir:use [ fhir:v "out" ] ;
+       fhir:min [ fhir:v 1 ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type [ fhir:v "boolean" ]
+     ] )
+  ] [
+     a fhir:OperationDefinition ;
+     fhir:id [ fhir:v "is_inline" ] ;
+     fhir:name [ fhir:v "is_inline" ] ;
+     fhir:title [ fhir:v "is_inline" ] ;
+     fhir:status [ fhir:v "active" ] ;
+     fhir:kind [ fhir:v "operation" ] ;
+     fhir:description [ fhir:v "Computed from the value of the data attribute. True if  the  data is stored  in  expanded  form, ie within the EHR itself. " ] ;
+     fhir:code [ fhir:v "is_inline" ] ;
+     fhir:system [ fhir:v false ] ;
+     fhir:instance [ fhir:v true ] ;
+     fhir:parameter ( [
+       fhir:name [ fhir:v "return" ] ;
+       fhir:use [ fhir:v "out" ] ;
+       fhir:min [ fhir:v 1 ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type [ fhir:v "boolean" ]
+     ] )
+  ] [
+     a fhir:OperationDefinition ;
+     fhir:id [ fhir:v "is_compressed" ] ;
+     fhir:name [ fhir:v "is_compressed" ] ;
+     fhir:title [ fhir:v "is_compressed" ] ;
+     fhir:status [ fhir:v "active" ] ;
+     fhir:kind [ fhir:v "operation" ] ;
+     fhir:description [ fhir:v "Computed from the value of the `_compression_algorithm_` attribute: True if  the  data is stored in compressed form. " ] ;
+     fhir:code [ fhir:v "is_compressed" ] ;
+     fhir:system [ fhir:v false ] ;
+     fhir:instance [ fhir:v true ] ;
+     fhir:parameter ( [
+       fhir:name [ fhir:v "return" ] ;
+       fhir:use [ fhir:v "out" ] ;
+       fhir:min [ fhir:v 1 ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type [ fhir:v "boolean" ]
+     ] )
+  ] [
+     a fhir:OperationDefinition ;
+     fhir:id [ fhir:v "has_integrity_check" ] ;
+     fhir:name [ fhir:v "has_integrity_check" ] ;
+     fhir:title [ fhir:v "has_integrity_check" ] ;
+     fhir:status [ fhir:v "active" ] ;
+     fhir:kind [ fhir:v "operation" ] ;
+     fhir:description [ fhir:v "Computed from the value of the `_integrity_check_algorithm_` attribute: True if an integrity check has been computed. " ] ;
+     fhir:code [ fhir:v "has_integrity_check" ] ;
+     fhir:system [ fhir:v false ] ;
+     fhir:instance [ fhir:v true ] ;
+     fhir:parameter ( [
+       fhir:name [ fhir:v "return" ] ;
+       fhir:use [ fhir:v "out" ] ;
+       fhir:min [ fhir:v 1 ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type [ fhir:v "boolean" ]
+     ] )
+  ] ) ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/tools/StructureDefinition/web-source"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/tools/StructureDefinition/web-source>
+     ] ;
+     fhir:value [
+       a fhir:Url ;
+       fhir:v "https://specifications.openehr.org/releases/RM/Release-1.1.0/data_types.html#_dv_multimedia_class"^^xsd:anyURI ;
+       fhir:l <https://specifications.openehr.org/releases/RM/Release-1.1.0/data_types.html#_dv_multimedia_class>
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/tools/StructureDefinition/type-operation"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/tools/StructureDefinition/type-operation>
+     ] ;
+     fhir:value [
+       a fhir:Canonical ;
+       fhir:v "#is_external"^^xsd:anyURI ;
+       fhir:l <#is_external>
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/tools/StructureDefinition/type-operation"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/tools/StructureDefinition/type-operation>
+     ] ;
+     fhir:value [
+       a fhir:Canonical ;
+       fhir:v "#is_inline"^^xsd:anyURI ;
+       fhir:l <#is_inline>
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/tools/StructureDefinition/type-operation"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/tools/StructureDefinition/type-operation>
+     ] ;
+     fhir:value [
+       a fhir:Canonical ;
+       fhir:v "#is_compressed"^^xsd:anyURI ;
+       fhir:l <#is_compressed>
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/tools/StructureDefinition/type-operation"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/tools/StructureDefinition/type-operation>
+     ] ;
+     fhir:value [
+       a fhir:Canonical ;
+       fhir:v "#has_integrity_check"^^xsd:anyURI ;
+       fhir:l <#has_integrity_check>
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/tools/StructureDefinition/view-hint"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/tools/StructureDefinition/view-hint>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "element-view-as-leaf"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/tools/StructureDefinition/view-hint"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/tools/StructureDefinition/view-hint>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "element-view-defns-parent"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/tools/StructureDefinition/view-hint"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/tools/StructureDefinition/view-hint>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "element-view-replace-cardinality"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 3 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "informative" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://openehr.org/fhir/StructureDefinition/DV-MULTIMEDIA"^^xsd:anyURI ;
+     fhir:l <http://openehr.org/fhir/StructureDefinition/DV-MULTIMEDIA>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0-snapshot"] ; # 
+  fhir:name [ fhir:v "DV_MULTIMEDIA"] ; # 
+  fhir:title [ fhir:v "DV_MULTIMEDIA"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-09-06T15:35:39+10:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "openEHR + HL7"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.openehr.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "A specialisation of `DV_ENCAPSULATED` for audiovisual and bio-signal types. Includes further metadata relating to multimedia types which are not applicable to other subtypes of `DV_ENCAPSULATED`."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:fhirVersion [ fhir:v "5.0.0"] ; # 
+  fhir:mapping ( [
+     fhir:identity [ fhir:v "rim" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/v3"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/v3>
+     ] ;
+     fhir:name [ fhir:v "RIM Mapping" ]
+  ] ) ; # 
+  fhir:kind [ fhir:v "logical"] ; # 
+  fhir:abstract [ fhir:v false] ; # 
+  fhir:type [
+     fhir:v "http://openehr.org/fhir/StructureDefinition/DV_MULTIMEDIA"^^xsd:anyURI ;
+     fhir:l <http://openehr.org/fhir/StructureDefinition/DV_MULTIMEDIA>
+  ] ; # 
+  fhir:baseDefinition [
+     fhir:v "http://openehr.org/fhir/StructureDefinition/DV-ENCAPSULATED"^^xsd:anyURI ;
+     fhir:l <http://openehr.org/fhir/StructureDefinition/DV-ENCAPSULATED>
+  ] ; # 
+  fhir:derivation [ fhir:v "specialization"] ; # 
+  fhir:snapshot [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version>
+       ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "0.1.0-snapshot"
+       ]
+     ] ) ;
+     fhir:element ( [
+       fhir:id [ fhir:v "DV_MULTIMEDIA" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA" ] ;
+       fhir:short [ fhir:v "A specialisation of `DV_ENCAPSULATED` for audiovisual and bio-signal types." ] ;
+       fhir:definition [ fhir:v "A specialisation of `DV_ENCAPSULATED` for audiovisual and bio-signal types. Includes further metadata relating to multimedia types which are not applicable to other subtypes of `DV_ENCAPSULATED`." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Base" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "Size_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Size valid must satisfy range constraints" ] ;
+         fhir:expression [ fhir:v "size() >= 0" ] ;
+         fhir:source [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/DV-ENCAPSULATED"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/DV-ENCAPSULATED>
+         ]
+       ] [
+         fhir:key [ fhir:v "Not_empty" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Not empty" ] ;
+         fhir:expression [ fhir:v "is_inline() or is_external()" ]
+       ] [
+         fhir:key [ fhir:v "Integrity_check_validity" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Integrity check validity must be present" ] ;
+         fhir:expression [ fhir:v "integrity_check.exists() implies integrity_check_algorithm.exists()" ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.CR" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.CR" ] ;
+       fhir:short [ fhir:v "Carriage return character." ] ;
+       fhir:definition [ fhir:v "Carriage return character." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "BASIC_DEFINITIONS.CR" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.LF" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.LF" ] ;
+       fhir:short [ fhir:v "Line feed character." ] ;
+       fhir:definition [ fhir:v "Line feed character." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "BASIC_DEFINITIONS.LF" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.Local-terminology-id" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.Local_terminology_id" ] ;
+       fhir:short [ fhir:v "Predefined terminology identifier" ] ;
+       fhir:definition [ fhir:v "Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "OPENEHR_DEFINITIONS.Local_terminology_id" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.charset" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.charset" ] ;
+       fhir:short [ fhir:v "Name of character encoding scheme in which this value is encoded." ] ;
+       fhir:definition [ fhir:v "Name of character encoding scheme in which this value is encoded. Coded from openEHR Code Set  character sets . Unicode is the default assumption in openEHR, with UTF-8 being the assumed encoding. This attribute allows for variations from these assumptions." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DV_ENCAPSULATED.charset" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/CODE-PHRASE>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.language" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.language" ] ;
+       fhir:short [ fhir:v "Optional indicator of the localised language in which the data is written, if relevant." ] ;
+       fhir:definition [ fhir:v "Optional indicator of the localised language in which the data is written, if relevant. Coded from openEHR Code Set `languages`." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DV_ENCAPSULATED.language" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/CODE-PHRASE>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.alternate-text" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.alternate_text" ] ;
+       fhir:short [ fhir:v "Text to display in lieu of multimedia display/replay." ] ;
+       fhir:definition [ fhir:v "Text to display in lieu of multimedia display/replay." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DV_MULTIMEDIA.alternate_text" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.uri" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.uri" ] ;
+       fhir:short [ fhir:v "URI reference to electronic information stored outside the record as a file, database entry etc, if supplied as a reference." ] ;
+       fhir:definition [ fhir:v "URI reference to electronic information stored outside the record as a file, database entry etc, if supplied as a reference." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DV_MULTIMEDIA.uri" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/DV-URI"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/DV-URI>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.data" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.data" ] ;
+       fhir:short [ fhir:v "The actual data found at `_uri_`, if supplied inline." ] ;
+       fhir:definition [ fhir:v "The actual data found at `_uri_`, if supplied inline." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DV_MULTIMEDIA.data" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "base64Binary"^^xsd:anyURI ;
+           fhir:l fhir:base64Binary
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.media-type" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.media_type" ] ;
+       fhir:short [ fhir:v "Data media type coded from openEHR code set  media types  (interface for the IANA MIME types code set)." ] ;
+       fhir:definition [ fhir:v "Data media type coded from openEHR code set  media types  (interface for the IANA MIME types code set)." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DV_MULTIMEDIA.media_type" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/CODE-PHRASE>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.compression-algorithm" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.compression_algorithm" ] ;
+       fhir:short [ fhir:v "Compression type, a coded value from the openEHR Integrity check code set." ] ;
+       fhir:definition [ fhir:v "Compression type, a coded value from the openEHR Integrity check code set. Void means no compression." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DV_MULTIMEDIA.compression_algorithm" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/CODE-PHRASE>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.integrity-check" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.integrity_check" ] ;
+       fhir:short [ fhir:v "Binary cryptographic integrity checksum." ] ;
+       fhir:definition [ fhir:v "Binary cryptographic integrity checksum." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DV_MULTIMEDIA.integrity_check" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "base64Binary"^^xsd:anyURI ;
+           fhir:l fhir:base64Binary
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.integrity-check-algorithm" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.integrity_check_algorithm" ] ;
+       fhir:short [ fhir:v "Type of integrity check, a coded value from the openEHR `Integrity check` code set." ] ;
+       fhir:definition [ fhir:v "Type of integrity check, a coded value from the openEHR `Integrity check` code set." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DV_MULTIMEDIA.integrity_check_algorithm" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/CODE-PHRASE>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.thumbnail" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.thumbnail" ] ;
+       fhir:short [ fhir:v "The thumbnail for this item, if one exists; mainly for graphics formats." ] ;
+       fhir:definition [ fhir:v "The thumbnail for this item, if one exists; mainly for graphics formats." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DV_MULTIMEDIA.thumbnail" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/DV-MULTIMEDIA"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/DV-MULTIMEDIA>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.size" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.size" ] ;
+       fhir:short [ fhir:v "Original size in bytes of unencoded encapsulated data." ] ;
+       fhir:definition [ fhir:v "Original size in bytes of unencoded encapsulated data. I.e. encodings such as base64, hexadecimal etc do not change the value of this attribute." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "DV_MULTIMEDIA.size" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "integer"^^xsd:anyURI ;
+           fhir:l fhir:integer
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] )
+  ] ; # 
+  fhir:differential [
+     fhir:element ( [
+       fhir:id [ fhir:v "DV_MULTIMEDIA" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA" ] ;
+       fhir:short [ fhir:v "A specialisation of `DV_ENCAPSULATED` for audiovisual and bio-signal types." ] ;
+       fhir:definition [ fhir:v "A specialisation of `DV_ENCAPSULATED` for audiovisual and bio-signal types. Includes further metadata relating to multimedia types which are not applicable to other subtypes of `DV_ENCAPSULATED`." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "Not_empty" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Not empty" ] ;
+         fhir:expression [ fhir:v "is_inline() or is_external()" ]
+       ] [
+         fhir:key [ fhir:v "Integrity_check_validity" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Integrity check validity must be present" ] ;
+         fhir:expression [ fhir:v "integrity_check.exists() implies integrity_check_algorithm.exists()" ]
+       ] [
+         fhir:key [ fhir:v "Size_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Size valid must satisfy range constraints" ] ;
+         fhir:expression [ fhir:v "null # TODO: manual translation needed" ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:binding [
+         fhir:strength [ fhir:v "required" ] ;
+         fhir:valueSet [
+           fhir:v "https://specifications.openehr.org/fhir/valueset-integrity_check_algorithms"^^xsd:anyURI ;
+           fhir:l <https://specifications.openehr.org/fhir/valueset-integrity_check_algorithms>
+         ]
+       ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.alternate-text" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.alternate_text" ] ;
+       fhir:short [ fhir:v "Text to display in lieu of multimedia display/replay." ] ;
+       fhir:definition [ fhir:v "Text to display in lieu of multimedia display/replay." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.uri" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.uri" ] ;
+       fhir:short [ fhir:v "URI reference to electronic information stored outside the record as a file, database entry etc, if supplied as a reference." ] ;
+       fhir:definition [ fhir:v "URI reference to electronic information stored outside the record as a file, database entry etc, if supplied as a reference. \n" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/DV-URI"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/DV-URI>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.data" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.data" ] ;
+       fhir:short [ fhir:v "The actual data found at `_uri_`, if supplied inline." ] ;
+       fhir:definition [ fhir:v "The actual data found at `_uri_`, if supplied inline." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "base64Binary"^^xsd:anyURI ;
+           fhir:l fhir:base64Binary
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.media-type" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.media_type" ] ;
+       fhir:short [ fhir:v "Data media type coded from openEHR code set  media types  (interface for the IANA MIME types code set)." ] ;
+       fhir:definition [ fhir:v "Data media type coded from openEHR code set  media types  (interface for the IANA MIME types code set). \n" ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/CODE-PHRASE>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.compression-algorithm" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.compression_algorithm" ] ;
+       fhir:short [ fhir:v "Compression type, a coded value from the openEHR Integrity check code set." ] ;
+       fhir:definition [ fhir:v "Compression type, a coded value from the openEHR Integrity check code set. Void means no compression. " ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/CODE-PHRASE>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.integrity-check" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.integrity_check" ] ;
+       fhir:short [ fhir:v "Binary cryptographic integrity checksum." ] ;
+       fhir:definition [ fhir:v "Binary cryptographic integrity checksum." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "base64Binary"^^xsd:anyURI ;
+           fhir:l fhir:base64Binary
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.integrity-check-algorithm" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.integrity_check_algorithm" ] ;
+       fhir:short [ fhir:v "Type of integrity check, a coded value from the openEHR `Integrity check` code set." ] ;
+       fhir:definition [ fhir:v "Type of integrity check, a coded value from the openEHR `Integrity check` code set. " ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/CODE-PHRASE>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.thumbnail" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.thumbnail" ] ;
+       fhir:short [ fhir:v "The thumbnail for this item, if one exists; mainly for graphics formats." ] ;
+       fhir:definition [ fhir:v "The thumbnail for this item, if one exists; mainly for graphics formats." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/DV-MULTIMEDIA"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/DV-MULTIMEDIA>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "DV_MULTIMEDIA.size" ] ;
+       fhir:path [ fhir:v "DV_MULTIMEDIA.size" ] ;
+       fhir:short [ fhir:v "Original size in bytes of unencoded encapsulated data." ] ;
+       fhir:definition [ fhir:v "Original size in bytes of unencoded encapsulated data. I.e. encodings such as base64, hexadecimal etc do not change the value of this attribute." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "integer"^^xsd:anyURI ;
+           fhir:l fhir:integer
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

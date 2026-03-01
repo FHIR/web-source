@@ -499,16 +499,31 @@ sub cgi {
 	use CGI;
 
 	my $query = new CGI;
+
+	print $query->header(-type=>'text/html');
+	
 	my $url1 = $query->param("oldfile");
 	my $url2 = $query->param("newfile");
 	my $mhtml = $query->param("mhtml");
+
+	# Append index.html if URL has no file extension
+	foreach my $url (\$url1, \$url2) {
+			if ($$url =~ /\/$/ || $$url !~ /\/[^\/]+\.[a-zA-Z0-9]+$/) {
+					$$url .= '/' unless $$url =~ /\/$/;
+					$$url .= 'index.html';
+			}
+	}
 
 	my $file1 = "/tmp/htdcgi1.$$";
 	my $file2 = "/tmp/htdcgi2.$$";
 
 	my $ua = new LWP::UserAgent;
-	$ua->agent("MACS, Inc. HTMLdiff/0.9 " . $ua->agent);
-
+  $ua->agent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
+  $ua->default_header(
+    'Accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language' => 'en-US,en;q=0.5',
+  );
+	
 	# Create a request
 
 	my $req1 = new HTTP::Request GET => $url1;
@@ -562,7 +577,6 @@ sub cgi {
 	  	$output =~ s/<html>/<html>\n<base href="$base">/i ;
 	}
 
-	print $query->header(-type=>'text/html');
 	print $output;
 
 	unlink $file1;

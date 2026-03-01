@@ -1,0 +1,122 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openehr.org/fhir/CodeSystem/input-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "input-type"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem input-type</b></p><a name=\"input-type\"> </a><a name=\"hcinput-type\"> </a><p>This case-sensitive code system <code>https://specifications.openehr.org/fhir/codesystem-input-type</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">DATE<a name=\"input-type-DATE\"> </a></td></tr><tr><td style=\"white-space:nowrap\">DATETIME<a name=\"input-type-DATETIME\"> </a></td></tr><tr><td style=\"white-space:nowrap\">CODED_TEXT<a name=\"input-type-CODED_TEXT\"> </a></td></tr><tr><td style=\"white-space:nowrap\">DECIMAL<a name=\"input-type-DECIMAL\"> </a></td></tr><tr><td style=\"white-space:nowrap\">TEXT<a name=\"input-type-TEXT\"> </a></td></tr><tr><td style=\"white-space:nowrap\">TIME<a name=\"input-type-TIME\"> </a></td></tr><tr><td style=\"white-space:nowrap\">BOOLEAN<a name=\"input-type-BOOLEAN\"> </a></td></tr><tr><td style=\"white-space:nowrap\">INTEGER<a name=\"input-type-INTEGER\"> </a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 3 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "informative" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "https://specifications.openehr.org/fhir/codesystem-input-type"^^xsd:anyURI ;
+     fhir:l <https://specifications.openehr.org/fhir/codesystem-input-type>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0-snapshot"] ; # 
+  fhir:name [ fhir:v "InputTypeCS"] ; # 
+  fhir:title [ fhir:v "Input Type CodeSystem"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2024-08-22"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "openEHR + HL7"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.openehr.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Input Type CodeSystem"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "DATE" ] ;
+     fhir:display [ fhir:v "DATE" ]
+  ] [
+     fhir:code [ fhir:v "DATETIME" ] ;
+     fhir:display [ fhir:v "DATETIME" ]
+  ] [
+     fhir:code [ fhir:v "CODED_TEXT" ] ;
+     fhir:display [ fhir:v "CODED_TEXT" ]
+  ] [
+     fhir:code [ fhir:v "DECIMAL" ] ;
+     fhir:display [ fhir:v "DECIMAL" ]
+  ] [
+     fhir:code [ fhir:v "TEXT" ] ;
+     fhir:display [ fhir:v "TEXT" ]
+  ] [
+     fhir:code [ fhir:v "TIME" ] ;
+     fhir:display [ fhir:v "TIME" ]
+  ] [
+     fhir:code [ fhir:v "BOOLEAN" ] ;
+     fhir:display [ fhir:v "BOOLEAN" ]
+  ] [
+     fhir:code [ fhir:v "INTEGER" ] ;
+     fhir:display [ fhir:v "INTEGER" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

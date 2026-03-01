@@ -1,0 +1,12 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"DV_URI","DV_URI","","","",0,*,"","","","null {[]} {[]}
+","A reference to an object which structurally conforms to the Universal Resource Identifier (URI) RFC-3986 standard.","A reference to an object which structurally conforms to the Universal Resource Identifier (URI) RFC-3986 standard. The reference is contained in the `_value_` attribute, which is a `String`. So-called 'plain-text URIs' that contain RFC-3986 forbidden characters such as spaces etc, are allowed on the basis that they need to be RFC-3986 encoded prior to use in e.g. REST APIs or other contexts relying on machine-level conformance.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","Value_valid:Value valid must not be empty {value.empty().not()}
+","n/a"
+"DV_URI.CR","DV_URI.CR","","","",1,1,"","","","string {[]} {[]}
+","Carriage return character.","Carriage return character.","","","","","","","","","",,,,,"",,,,"BASIC_DEFINITIONS.CR",1,1,"",""
+"DV_URI.LF","DV_URI.LF","","","",1,1,"","","","string {[]} {[]}
+","Line feed character.","Line feed character.","","","","","","","","","",,,,,"",,,,"BASIC_DEFINITIONS.LF",1,1,"",""
+"DV_URI.Local-terminology-id","DV_URI.Local_terminology_id","","","",1,1,"","","","string {[]} {[]}
+","Predefined terminology identifier","Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype","","","","","","","","","",,,,,"",,,,"OPENEHR_DEFINITIONS.Local_terminology_id",1,1,"",""
+"DV_URI.value","DV_URI.value","","","",1,1,"","","","string {[]} {[]}
+","Value of URI as a String.","Value of URI as a String. 'Plain-text' URIs are allowed, enabling better readability, but must be RFC-3986 encoded in use.","","","","","","","","","",,,,,"",,,,"DV_URI.value",1,1,"",""

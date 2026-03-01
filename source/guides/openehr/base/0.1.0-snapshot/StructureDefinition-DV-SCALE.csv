@@ -1,0 +1,47 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"DV_SCALE","DV_SCALE","","","",0,*,"","","","null {[]} {[]}
+","A data type that represents scale values, where there is:
+
+a) implied ordering, 
+b) no implication that the distance between each value is constant, and 
+c) the total number of values is finite;
+d) non-integer values are allowed.","A data type that represents scale values, where there is:
+
+a) implied ordering, 
+b) no implication that the distance between each value is constant, and 
+c) the total number of values is finite;
+d) non-integer values are allowed.
+
+Example:
+
+----
+Borg CR 10 Scale
+
+0    No Breathlessness at all
+0.5  Very Very Slight (Just Noticeable)
+1    Very Slight
+2    Slight Breathlessness
+3    Moderate
+... etc
+----
+
+For scores that include only Integers, `DV_SCALE` may also be used, but `DV_ORDINAL` should be supported to accommodate existing data instances of that type.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","Other_reference_ranges_validity:Other reference ranges validity must be present {other_reference_ranges.exists() implies other_reference_ranges.empty().not()}
+Is_simple_validity:Is simple validity must satisfy conditional constraints {(normal_range .empty() and other_reference_ranges .empty()) implies is_simple()}Normal_range_and_status_consistency:Normal range and status consistency must be present {(normal_range.exists() and normal_status.exists()) implies (normal_status.code_string.is_equal (“N”) xor normal_range.not().has (self))}","n/a"
+"DV_SCALE.CR","DV_SCALE.CR","","","",1,1,"","","","string {[]} {[]}
+","Carriage return character.","Carriage return character.","","","","","","","","","",,,,,"",,,,"BASIC_DEFINITIONS.CR",1,1,"",""
+"DV_SCALE.LF","DV_SCALE.LF","","","",1,1,"","","","string {[]} {[]}
+","Line feed character.","Line feed character.","","","","","","","","","",,,,,"",,,,"BASIC_DEFINITIONS.LF",1,1,"",""
+"DV_SCALE.Local-terminology-id","DV_SCALE.Local_terminology_id","","","",1,1,"","","","string {[]} {[]}
+","Predefined terminology identifier","Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype","","","","","","","","","",,,,,"",,,,"OPENEHR_DEFINITIONS.Local_terminology_id",1,1,"",""
+"DV_SCALE.normal-status","DV_SCALE.normal_status","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/CODE-PHRASE {[]} {[]}
+","Optional normal status indicator of value with respect to normal range for this value.","Optional normal status indicator of value with respect to normal range for this value. Often included by lab, even if the normal range itself is not included. Coded by ordinals in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group  `normal_status`.","","","","","","","","","",,,,,"",,,,"DV_ORDERED.normal_status",0,1,"",""
+"DV_SCALE.normal-range","DV_SCALE.normal_range","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/DV-INTERVAL {[]} {[]}
+","Optional normal range.","Optional normal range.","","","","","","","","","",,,,,"",,,,"DV_ORDERED.normal_range",0,1,"",""
+"DV_SCALE.other-reference-ranges","DV_SCALE.other_reference_ranges","","","",0,*,"","","","http://openehr.org/fhir/StructureDefinition/REFERENCE-RANGE {[]} {[]}
+","Optional tagged other reference ranges for this value in its particular measurement context.","Optional tagged other reference ranges for this value in its particular measurement context.","","","","","","","","","",,,,,"",,,,"DV_ORDERED.other_reference_ranges",0,*,"",""
+"DV_SCALE.symbol","DV_SCALE.symbol","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/DV-CODED-TEXT {[]} {[]}
+","Coded textual representation of this value in the scale range, which may be strings made from symbols or other enumerations of terms such as  `no breathlessness`, `very very slight`, `slight breathlessness`.","Coded textual representation of this value in the scale range, which may be strings made from symbols or other enumerations of terms such as  `no breathlessness`, `very very slight`, `slight breathlessness`. Codes come from archetypes.
+
+In some cases, a scale may include values that have no code/symbol. In this case, the symbol will be a `DV-CODED_TEXT` including the `_terminology_id_` and a blank String value for `_code_string_`.","","","","","","","","","",,,,,"",,,,"DV_SCALE.symbol",1,1,"",""
+"DV_SCALE.value","DV_SCALE.value","","","",1,1,"","","","decimal {[]} {[]}
+","Real number value of Scale item.","Real number value of Scale item.","","","","","","","","","",,,,,"",,,,"DV_SCALE.value",1,1,"",""

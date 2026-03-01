@@ -8,10 +8,15 @@
     "index-template" : "index.template",
     "clone-xml-json" : true
   },
+  "canonical-mismatch" : true,
   "layout-rules" : [{
     "npm" : "fhir.*.*",
     "canonical" : "http://fhir.org/guides/{2}/{3}",
     "destination" : "/{2}/{3}"
+  },{
+    "npm" : "openehr.*",
+    "canonical" : "http://fhir.org/guides/openehr/{2}",
+    "destination" : "/openehr/{2}"
   }],
   "feeds" : {
     "package" : "package-feed.xml",

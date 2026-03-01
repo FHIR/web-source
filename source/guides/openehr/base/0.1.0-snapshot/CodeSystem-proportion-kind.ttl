@@ -1,0 +1,128 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openehr.org/fhir/CodeSystem/proportion-kind> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "proportion-kind"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem proportion-kind</b></p><a name=\"proportion-kind\"> </a><a name=\"hcproportion-kind\"> </a><p>This case-sensitive code system <code>https://specifications.openehr.org/fhir/codesystem-proportion_kind</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">pk_ratio<a name=\"proportion-kind-pk_ratio\"> </a></td><td>Ratio type. Numerator and denominator may be any value.</td></tr><tr><td style=\"white-space:nowrap\">pk_unitary<a name=\"proportion-kind-pk_unitary\"> </a></td><td>Denominator must be 1.</td></tr><tr><td style=\"white-space:nowrap\">pk_percent<a name=\"proportion-kind-pk_percent\"> </a></td><td>Denominator is 100, numerator is understood as a percentage value.</td></tr><tr><td style=\"white-space:nowrap\">pk_fraction<a name=\"proportion-kind-pk_fraction\"> </a></td><td>Numerator and denominator are integral, and the presentation method uses a slash, e.g. 1/2 .</td></tr><tr><td style=\"white-space:nowrap\">pk_integer_fraction<a name=\"proportion-kind-pk_integer_fraction\"> </a></td><td>Numerator and denominator are integral, and the presentation method uses a slash, e.g. 1/2 ; if the numerator is greater than the denominator, e.g. n=3, d=2, the presentation is 1 1/2 .</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/tools/StructureDefinition/web-source"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/tools/StructureDefinition/web-source>
+     ] ;
+     fhir:value [
+       a fhir:Url ;
+       fhir:v "https://specifications.openehr.org/releases/RM/Release-1.1.0/data_types.html#_proportion_kind_class"^^xsd:anyURI ;
+       fhir:l <https://specifications.openehr.org/releases/RM/Release-1.1.0/data_types.html#_proportion_kind_class>
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 3 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "informative" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "https://specifications.openehr.org/fhir/codesystem-proportion_kind"^^xsd:anyURI ;
+     fhir:l <https://specifications.openehr.org/fhir/codesystem-proportion_kind>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0-snapshot"] ; # 
+  fhir:name [ fhir:v "PROPORTION_KIND"] ; # 
+  fhir:title [ fhir:v "PROPORTION_KIND"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2023-06-27T18:45:58+10:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "openEHR + HL7"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.openehr.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Class of enumeration constants defining types of proportion for the DV_PROPORTION class."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "pk_ratio" ] ;
+     fhir:display [ fhir:v "pk_ratio" ] ;
+     fhir:definition [ fhir:v "Ratio type. Numerator and denominator may be any value." ]
+  ] [
+     fhir:code [ fhir:v "pk_unitary" ] ;
+     fhir:display [ fhir:v "pk_unitary" ] ;
+     fhir:definition [ fhir:v "Denominator must be 1." ]
+  ] [
+     fhir:code [ fhir:v "pk_percent" ] ;
+     fhir:display [ fhir:v "pk_percent" ] ;
+     fhir:definition [ fhir:v "Denominator is 100, numerator is understood as a percentage value." ]
+  ] [
+     fhir:code [ fhir:v "pk_fraction" ] ;
+     fhir:display [ fhir:v "pk_fraction" ] ;
+     fhir:definition [ fhir:v "Numerator and denominator are integral, and the presentation method uses a slash, e.g. 1/2 ." ]
+  ] [
+     fhir:code [ fhir:v "pk_integer_fraction" ] ;
+     fhir:display [ fhir:v "pk_integer_fraction" ] ;
+     fhir:definition [ fhir:v "Numerator and denominator are integral, and the presentation method uses a slash, e.g. 1/2 ; if the numerator is greater than the denominator, e.g. n=3, d=2, the presentation is 1 1/2 ." ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

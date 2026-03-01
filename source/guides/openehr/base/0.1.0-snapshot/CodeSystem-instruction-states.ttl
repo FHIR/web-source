@@ -1,0 +1,259 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openehr.org/fhir/CodeSystem/instruction-states> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "instruction-states"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem instruction-states</b></p><a name=\"instruction-states\"> </a><a name=\"hcinstruction-states\"> </a><p>This case-sensitive code system <code>https://specifications.openehr.org/fhir/codesystem-instruction_states</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">524<a name=\"instruction-states-524\"> </a></td><td>initial</td></tr><tr><td style=\"white-space:nowrap\">526<a name=\"instruction-states-526\"> </a></td><td>planned</td></tr><tr><td style=\"white-space:nowrap\">527<a name=\"instruction-states-527\"> </a></td><td>postponed</td></tr><tr><td style=\"white-space:nowrap\">528<a name=\"instruction-states-528\"> </a></td><td>cancelled</td></tr><tr><td style=\"white-space:nowrap\">529<a name=\"instruction-states-529\"> </a></td><td>scheduled</td></tr><tr><td style=\"white-space:nowrap\">245<a name=\"instruction-states-245\"> </a></td><td>active</td></tr><tr><td style=\"white-space:nowrap\">530<a name=\"instruction-states-530\"> </a></td><td>suspended</td></tr><tr><td style=\"white-space:nowrap\">531<a name=\"instruction-states-531\"> </a></td><td>aborted</td></tr><tr><td style=\"white-space:nowrap\">532<a name=\"instruction-states-532\"> </a></td><td>completed</td></tr><tr><td style=\"white-space:nowrap\">533<a name=\"instruction-states-533\"> </a></td><td>expired</td></tr></table><p><b>Additional Language Displays</b></p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Spanish (es)</b></td><td><b>Japanese (ja)</b></td><td><b>Portuguese (pt)</b></td><td><b>中文 (Chinese, zh)</b></td></tr><tr><td>524</td><td>inicial</td><td>最初</td><td>inicial</td><td>初始</td></tr><tr><td>526</td><td>planificado</td><td>予定されている</td><td>planeado</td><td>已计划</td></tr><tr><td>527</td><td>postpuesto</td><td>延期された</td><td>adiado</td><td>已推迟</td></tr><tr><td>528</td><td>cancelado</td><td>キャンセルされた</td><td>cancelado</td><td>已取消</td></tr><tr><td>529</td><td>coordinado</td><td>計画された</td><td>agendado</td><td>已排程</td></tr><tr><td>245</td><td>activo</td><td>実施中</td><td>activo</td><td>现行有效</td></tr><tr><td>530</td><td>suspendido</td><td>一時停止中</td><td>suspenso</td><td>已暂停</td></tr><tr><td>531</td><td>abortado</td><td>中断された</td><td>abortado</td><td>已中止</td></tr><tr><td>532</td><td>completado</td><td>完了</td><td>concluído</td><td>已完成</td></tr><tr><td>533</td><td>expirado</td><td>期限切れ</td><td>expirado</td><td>已过期</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 3 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "informative" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "https://specifications.openehr.org/fhir/codesystem-instruction_states"^^xsd:anyURI ;
+     fhir:l <https://specifications.openehr.org/fhir/codesystem-instruction_states>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0-snapshot"] ; # 
+  fhir:name [ fhir:v "instruction_states"] ; # 
+  fhir:title [ fhir:v "Instruction States"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2024-08-22"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "openEHR + HL7"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.openehr.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Instruction States"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "10"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "524" ] ;
+     fhir:display [ fhir:v "initial" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "inicial" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "最初" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "inicial" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "初始" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "526" ] ;
+     fhir:display [ fhir:v "planned" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "planificado" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "予定されている" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "planeado" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "已计划" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "527" ] ;
+     fhir:display [ fhir:v "postponed" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "postpuesto" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "延期された" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "adiado" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "已推迟" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "528" ] ;
+     fhir:display [ fhir:v "cancelled" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "cancelado" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "キャンセルされた" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "cancelado" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "已取消" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "529" ] ;
+     fhir:display [ fhir:v "scheduled" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "coordinado" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "計画された" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "agendado" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "已排程" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "245" ] ;
+     fhir:display [ fhir:v "active" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "activo" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "実施中" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "activo" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "现行有效" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "530" ] ;
+     fhir:display [ fhir:v "suspended" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "suspendido" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "一時停止中" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "suspenso" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "已暂停" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "531" ] ;
+     fhir:display [ fhir:v "aborted" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "abortado" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "中断された" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "abortado" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "已中止" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "532" ] ;
+     fhir:display [ fhir:v "completed" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "completado" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "完了" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "concluído" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "已完成" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "533" ] ;
+     fhir:display [ fhir:v "expired" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "expirado" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "期限切れ" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "expirado" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "已过期" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

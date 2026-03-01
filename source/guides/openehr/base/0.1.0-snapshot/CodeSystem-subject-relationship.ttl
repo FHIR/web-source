@@ -1,0 +1,675 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openehr.org/fhir/CodeSystem/subject-relationship> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "subject-relationship"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem subject-relationship</b></p><a name=\"subject-relationship\"> </a><a name=\"hcsubject-relationship\"> </a><p>This case-sensitive code system <code>https://specifications.openehr.org/fhir/codesystem-subject_relationship</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">0<a name=\"subject-relationship-0\"> </a></td><td>self</td></tr><tr><td style=\"white-space:nowrap\">3<a name=\"subject-relationship-3\"> </a></td><td>foetus</td></tr><tr><td style=\"white-space:nowrap\">10<a name=\"subject-relationship-10\"> </a></td><td>mother</td></tr><tr><td style=\"white-space:nowrap\">9<a name=\"subject-relationship-9\"> </a></td><td>father</td></tr><tr><td style=\"white-space:nowrap\">6<a name=\"subject-relationship-6\"> </a></td><td>donor</td></tr><tr><td style=\"white-space:nowrap\">253<a name=\"subject-relationship-253\"> </a></td><td>unknown</td></tr><tr><td style=\"white-space:nowrap\">261<a name=\"subject-relationship-261\"> </a></td><td>adopted daughter</td></tr><tr><td style=\"white-space:nowrap\">260<a name=\"subject-relationship-260\"> </a></td><td>adopted son</td></tr><tr><td style=\"white-space:nowrap\">259<a name=\"subject-relationship-259\"> </a></td><td>adoptive father</td></tr><tr><td style=\"white-space:nowrap\">258<a name=\"subject-relationship-258\"> </a></td><td>adoptive mother</td></tr><tr><td style=\"white-space:nowrap\">256<a name=\"subject-relationship-256\"> </a></td><td>biological father</td></tr><tr><td style=\"white-space:nowrap\">255<a name=\"subject-relationship-255\"> </a></td><td>biological mother</td></tr><tr><td style=\"white-space:nowrap\">23<a name=\"subject-relationship-23\"> </a></td><td>brother</td></tr><tr><td style=\"white-space:nowrap\">28<a name=\"subject-relationship-28\"> </a></td><td>child</td></tr><tr><td style=\"white-space:nowrap\">265<a name=\"subject-relationship-265\"> </a></td><td>cohabitee</td></tr><tr><td style=\"white-space:nowrap\">257<a name=\"subject-relationship-257\"> </a></td><td>cousin</td></tr><tr><td style=\"white-space:nowrap\">29<a name=\"subject-relationship-29\"> </a></td><td>daughter</td></tr><tr><td style=\"white-space:nowrap\">264<a name=\"subject-relationship-264\"> </a></td><td>guardian</td></tr><tr><td style=\"white-space:nowrap\">39<a name=\"subject-relationship-39\"> </a></td><td>maternal aunt</td></tr><tr><td style=\"white-space:nowrap\">8<a name=\"subject-relationship-8\"> </a></td><td>maternal grandfather</td></tr><tr><td style=\"white-space:nowrap\">7<a name=\"subject-relationship-7\"> </a></td><td>maternal grandmother</td></tr><tr><td style=\"white-space:nowrap\">38<a name=\"subject-relationship-38\"> </a></td><td>maternal uncle</td></tr><tr><td style=\"white-space:nowrap\">189<a name=\"subject-relationship-189\"> </a></td><td>neonate</td></tr><tr><td style=\"white-space:nowrap\">254<a name=\"subject-relationship-254\"> </a></td><td>parent</td></tr><tr><td style=\"white-space:nowrap\">22<a name=\"subject-relationship-22\"> </a></td><td>partner/spouse</td></tr><tr><td style=\"white-space:nowrap\">41<a name=\"subject-relationship-41\"> </a></td><td>paternal aunt</td></tr><tr><td style=\"white-space:nowrap\">36<a name=\"subject-relationship-36\"> </a></td><td>paternal grandfather</td></tr><tr><td style=\"white-space:nowrap\">37<a name=\"subject-relationship-37\"> </a></td><td>paternal grandmother</td></tr><tr><td style=\"white-space:nowrap\">40<a name=\"subject-relationship-40\"> </a></td><td>paternal uncle</td></tr><tr><td style=\"white-space:nowrap\">27<a name=\"subject-relationship-27\"> </a></td><td>sibling</td></tr><tr><td style=\"white-space:nowrap\">24<a name=\"subject-relationship-24\"> </a></td><td>sister</td></tr><tr><td style=\"white-space:nowrap\">31<a name=\"subject-relationship-31\"> </a></td><td>son</td></tr><tr><td style=\"white-space:nowrap\">263<a name=\"subject-relationship-263\"> </a></td><td>step father</td></tr><tr><td style=\"white-space:nowrap\">262<a name=\"subject-relationship-262\"> </a></td><td>step mother</td></tr><tr><td style=\"white-space:nowrap\">25<a name=\"subject-relationship-25\"> </a></td><td>step or half brother</td></tr><tr><td style=\"white-space:nowrap\">26<a name=\"subject-relationship-26\"> </a></td><td>step or half sister</td></tr></table><p><b>Additional Language Displays</b></p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Spanish (es)</b></td><td><b>Japanese (ja)</b></td><td><b>Portuguese (pt)</b></td><td><b>中文 (Chinese, zh)</b></td></tr><tr><td>0</td><td>sí mismo</td><td>自己</td><td>próprio</td><td>本人</td></tr><tr><td>3</td><td>feto</td><td>胎児</td><td>feto</td><td>胎儿</td></tr><tr><td>10</td><td>madre</td><td>母</td><td>mãe</td><td>母亲</td></tr><tr><td>9</td><td>padre</td><td>父</td><td>pai</td><td>父亲</td></tr><tr><td>6</td><td>donante</td><td>ドナー</td><td>dador</td><td>供体</td></tr><tr><td>253</td><td>desconocido</td><td>未知</td><td>desconhecido</td><td>未知</td></tr><tr><td>261</td><td>hija adoptiva</td><td>養女</td><td>filha adoptiva</td><td>养女</td></tr><tr><td>260</td><td>hijo adoptivo</td><td>養子</td><td>filho adoptivo</td><td>养子</td></tr><tr><td>259</td><td>padre adoptivo</td><td>養父</td><td>pai adoptivo</td><td>养父</td></tr><tr><td>258</td><td>madre adoptiva</td><td>養母</td><td>mãe adoptiva</td><td>养母</td></tr><tr><td>256</td><td>padre biológico</td><td>生物学上の父</td><td>pai biológico</td><td>亲生父亲</td></tr><tr><td>255</td><td>madre biológica</td><td>生物学上の母</td><td>mãe biológica</td><td>亲生母亲</td></tr><tr><td>23</td><td>hermano</td><td>兄弟</td><td>irmão</td><td>兄弟</td></tr><tr><td>28</td><td>niño</td><td>子</td><td>filho</td><td>孩子</td></tr><tr><td>265</td><td>cohabitante</td><td>同居者</td><td>coabitante</td><td>同居者</td></tr><tr><td>257</td><td>primo</td><td>従兄弟</td><td>primo(a)</td><td>同辈堂表亲戚</td></tr><tr><td>29</td><td>hija</td><td>娘</td><td>filha</td><td>女儿</td></tr><tr><td>264</td><td>guardián</td><td>保護者</td><td>guardião(ã)</td><td>监护人</td></tr><tr><td>39</td><td>tía materna</td><td>母方の叔母</td><td>tia materna</td><td>姨母</td></tr><tr><td>8</td><td>abuelo materno</td><td>母方</td><td>avô materno</td><td>外祖父</td></tr><tr><td>7</td><td>abuela materna</td><td>母型の</td><td>avó materna</td><td>外祖母</td></tr><tr><td>38</td><td>tío materno</td><td>母型の叔父</td><td>tio materno</td><td>舅父</td></tr><tr><td>189</td><td>neonato</td><td>新生児</td><td>recém-nascido</td><td>新生儿</td></tr><tr><td>254</td><td>padre</td><td>親</td><td>pai/mãe</td><td>父母</td></tr><tr><td>22</td><td>compañero/esposo</td><td>配偶者</td><td>companheiro/cônjuge</td><td>伴侣/配偶</td></tr><tr><td>41</td><td>tía paterna</td><td>父方の叔母</td><td>tia paterna</td><td>姑母</td></tr><tr><td>36</td><td>abuelo paterno</td><td>父方の祖母</td><td>avô paterno</td><td>祖父</td></tr><tr><td>37</td><td>abuela paterna</td><td>父方の祖-</td><td>avó paterna</td><td>祖母</td></tr><tr><td>40</td><td>tío paterno</td><td>父方の叔父</td><td>tio paterno</td><td>叔伯</td></tr><tr><td>27</td><td>hermano</td><td>同胞</td><td>irmão(ã)</td><td>兄弟姐妹</td></tr><tr><td>24</td><td>hermana</td><td>姉妹</td><td>irmã</td><td>姐妹</td></tr><tr><td>31</td><td>hijo</td><td>息子</td><td>filho</td><td>儿子</td></tr><tr><td>263</td><td>padrastro</td><td>義父</td><td>padrasto</td><td>继父</td></tr><tr><td>262</td><td>madrastra</td><td>義母</td><td>madrasta</td><td>继母</td></tr><tr><td>25</td><td>hermanastro o medio hermano</td><td>義理あるいは異父母兄弟</td><td>meio-irmão</td><td>继兄弟或同父异母或同母异父兄弟</td></tr><tr><td>26</td><td>hermanastra o media hermana</td><td>義理あるいは異父母姉妹</td><td>meia-irmã</td><td>继姐妹或同父异母或同母异父姐妹</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 3 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "informative" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "https://specifications.openehr.org/fhir/codesystem-subject_relationship"^^xsd:anyURI ;
+     fhir:l <https://specifications.openehr.org/fhir/codesystem-subject_relationship>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0-snapshot"] ; # 
+  fhir:name [ fhir:v "subject_relationship"] ; # 
+  fhir:title [ fhir:v "Subject Relationship"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2024-08-22"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "openEHR + HL7"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.openehr.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Subject Relationship"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "36"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "0" ] ;
+     fhir:display [ fhir:v "self" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "sí mismo" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "自己" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "próprio" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "本人" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "3" ] ;
+     fhir:display [ fhir:v "foetus" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "feto" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "胎児" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "feto" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "胎儿" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "10" ] ;
+     fhir:display [ fhir:v "mother" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "madre" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "母" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "mãe" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "母亲" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "9" ] ;
+     fhir:display [ fhir:v "father" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "padre" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "父" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "pai" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "父亲" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "6" ] ;
+     fhir:display [ fhir:v "donor" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "donante" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "ドナー" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "dador" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "供体" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "253" ] ;
+     fhir:display [ fhir:v "unknown" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "desconocido" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "未知" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "desconhecido" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "未知" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "261" ] ;
+     fhir:display [ fhir:v "adopted daughter" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "hija adoptiva" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "養女" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "filha adoptiva" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "养女" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "260" ] ;
+     fhir:display [ fhir:v "adopted son" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "hijo adoptivo" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "養子" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "filho adoptivo" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "养子" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "259" ] ;
+     fhir:display [ fhir:v "adoptive father" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "padre adoptivo" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "養父" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "pai adoptivo" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "养父" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "258" ] ;
+     fhir:display [ fhir:v "adoptive mother" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "madre adoptiva" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "養母" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "mãe adoptiva" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "养母" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "256" ] ;
+     fhir:display [ fhir:v "biological father" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "padre biológico" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "生物学上の父" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "pai biológico" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "亲生父亲" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "255" ] ;
+     fhir:display [ fhir:v "biological mother" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "madre biológica" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "生物学上の母" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "mãe biológica" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "亲生母亲" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "23" ] ;
+     fhir:display [ fhir:v "brother" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "hermano" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "兄弟" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "irmão" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "兄弟" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "28" ] ;
+     fhir:display [ fhir:v "child" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "niño" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "子" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "filho" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "孩子" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "265" ] ;
+     fhir:display [ fhir:v "cohabitee" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "cohabitante" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "同居者" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "coabitante" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "同居者" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "257" ] ;
+     fhir:display [ fhir:v "cousin" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "primo" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "従兄弟" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "primo(a)" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "同辈堂表亲戚" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "29" ] ;
+     fhir:display [ fhir:v "daughter" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "hija" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "娘" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "filha" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "女儿" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "264" ] ;
+     fhir:display [ fhir:v "guardian" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "guardián" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "保護者" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "guardião(ã)" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "监护人" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "39" ] ;
+     fhir:display [ fhir:v "maternal aunt" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "tía materna" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "母方の叔母" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "tia materna" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "姨母" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "8" ] ;
+     fhir:display [ fhir:v "maternal grandfather" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "abuelo materno" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "母方" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "avô materno" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "外祖父" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "7" ] ;
+     fhir:display [ fhir:v "maternal grandmother" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "abuela materna" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "母型の" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "avó materna" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "外祖母" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "38" ] ;
+     fhir:display [ fhir:v "maternal uncle" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "tío materno" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "母型の叔父" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "tio materno" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "舅父" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "189" ] ;
+     fhir:display [ fhir:v "neonate" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "neonato" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "新生児" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "recém-nascido" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "新生儿" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "254" ] ;
+     fhir:display [ fhir:v "parent" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "padre" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "親" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "pai/mãe" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "父母" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "22" ] ;
+     fhir:display [ fhir:v "partner/spouse" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "compañero/esposo" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "配偶者" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "companheiro/cônjuge" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "伴侣/配偶" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "41" ] ;
+     fhir:display [ fhir:v "paternal aunt" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "tía paterna" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "父方の叔母" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "tia paterna" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "姑母" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "36" ] ;
+     fhir:display [ fhir:v "paternal grandfather" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "abuelo paterno" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "父方の祖母" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "avô paterno" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "祖父" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "37" ] ;
+     fhir:display [ fhir:v "paternal grandmother" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "abuela paterna" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "父方の祖-" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "avó paterna" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "祖母" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "40" ] ;
+     fhir:display [ fhir:v "paternal uncle" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "tío paterno" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "父方の叔父" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "tio paterno" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "叔伯" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "27" ] ;
+     fhir:display [ fhir:v "sibling" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "hermano" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "同胞" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "irmão(ã)" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "兄弟姐妹" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "24" ] ;
+     fhir:display [ fhir:v "sister" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "hermana" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "姉妹" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "irmã" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "姐妹" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "31" ] ;
+     fhir:display [ fhir:v "son" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "hijo" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "息子" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "filho" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "儿子" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "263" ] ;
+     fhir:display [ fhir:v "step father" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "padrastro" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "義父" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "padrasto" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "继父" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "262" ] ;
+     fhir:display [ fhir:v "step mother" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "madrastra" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "義母" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "madrasta" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "继母" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "25" ] ;
+     fhir:display [ fhir:v "step or half brother" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "hermanastro o medio hermano" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "義理あるいは異父母兄弟" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "meio-irmão" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "继兄弟或同父异母或同母异父兄弟" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "26" ] ;
+     fhir:display [ fhir:v "step or half sister" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "hermanastra o media hermana" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "義理あるいは異父母姉妹" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "meia-irmã" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "继姐妹或同父异母或同母异父姐妹" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

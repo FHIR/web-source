@@ -1,0 +1,14 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"ITEM_TAG","ITEM_TAG","","","",0,*,"","","","null {[]} {[]}
+","A tag with optional value that is associated with a target information entity identified by a UID.","A tag with optional value that is associated with a target information entity identified by a UID.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","Inv_key_valid:Inv key valid must not be empty {key.empty().not() and key.is_justified}
+Inv_value_valid:Inv value valid must be present {value.exists() implies value.empty().not()}","n/a"
+"ITEM_TAG.key","ITEM_TAG.key","","","",1,1,"","","","string {[]} {[]}
+","The tag key.","The tag key. May not be empty or contain leading or trailing whitespace.","","","","","","","","","",,,,,"",,,,"ITEM_TAG.key",1,1,"",""
+"ITEM_TAG.value","ITEM_TAG.value","","","",0,1,"","","","string {[]} {[]}
+","The value.","The value. If set, may not be empty.","","","","","","","","","",,,,,"",,,,"ITEM_TAG.value",0,1,"",""
+"ITEM_TAG.target","ITEM_TAG.target","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/UID-BASED-ID {[]} {[]}
+","Identifier of target, which may be a `VERSIONED_OBJECT<T>` or a `VERSION<T>`.","Identifier of target, which may be a `VERSIONED_OBJECT<T>` or a `VERSION<T>`.","","","","","","","","","",,,,,"",,,,"ITEM_TAG.target",1,1,"",""
+"ITEM_TAG.target-path","ITEM_TAG.target_path","","","",0,1,"","","","string {[]} {[]}
+","Optional archetype (i.","Optional archetype (i.e. AQL) or RM path within `_target_`, used to tag a fine-grained element.","","","","","","","","","",,,,,"",,,,"ITEM_TAG.target_path",0,1,"",""
+"ITEM_TAG.owner-id","ITEM_TAG.owner_id","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/OBJECT-REF {[]} {[]}
+","Identifier of owner object, such as EHR.","Identifier of owner object, such as EHR.","","","","","","","","","",,,,,"",,,,"ITEM_TAG.owner_id",1,1,"",""

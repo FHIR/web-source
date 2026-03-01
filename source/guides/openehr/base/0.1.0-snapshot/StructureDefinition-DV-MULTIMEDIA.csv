@@ -1,0 +1,32 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"DV_MULTIMEDIA","DV_MULTIMEDIA","","","",0,*,"","","","null {[]} {[]}
+","A specialisation of `DV_ENCAPSULATED` for audiovisual and bio-signal types.","A specialisation of `DV_ENCAPSULATED` for audiovisual and bio-signal types. Includes further metadata relating to multimedia types which are not applicable to other subtypes of `DV_ENCAPSULATED`.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","Size_valid:Size valid must satisfy range constraints {size() >= 0}
+Not_empty:Not empty {is_inline() or is_external()}Integrity_check_validity:Integrity check validity must be present {integrity_check.exists() implies integrity_check_algorithm.exists()}","n/a"
+"DV_MULTIMEDIA.CR","DV_MULTIMEDIA.CR","","","",1,1,"","","","string {[]} {[]}
+","Carriage return character.","Carriage return character.","","","","","","","","","",,,,,"",,,,"BASIC_DEFINITIONS.CR",1,1,"",""
+"DV_MULTIMEDIA.LF","DV_MULTIMEDIA.LF","","","",1,1,"","","","string {[]} {[]}
+","Line feed character.","Line feed character.","","","","","","","","","",,,,,"",,,,"BASIC_DEFINITIONS.LF",1,1,"",""
+"DV_MULTIMEDIA.Local-terminology-id","DV_MULTIMEDIA.Local_terminology_id","","","",1,1,"","","","string {[]} {[]}
+","Predefined terminology identifier","Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype","","","","","","","","","",,,,,"",,,,"OPENEHR_DEFINITIONS.Local_terminology_id",1,1,"",""
+"DV_MULTIMEDIA.charset","DV_MULTIMEDIA.charset","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/CODE-PHRASE {[]} {[]}
+","Name of character encoding scheme in which this value is encoded.","Name of character encoding scheme in which this value is encoded. Coded from openEHR Code Set  character sets . Unicode is the default assumption in openEHR, with UTF-8 being the assumed encoding. This attribute allows for variations from these assumptions.","","","","","","","","","",,,,,"",,,,"DV_ENCAPSULATED.charset",0,1,"",""
+"DV_MULTIMEDIA.language","DV_MULTIMEDIA.language","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/CODE-PHRASE {[]} {[]}
+","Optional indicator of the localised language in which the data is written, if relevant.","Optional indicator of the localised language in which the data is written, if relevant. Coded from openEHR Code Set `languages`.","","","","","","","","","",,,,,"",,,,"DV_ENCAPSULATED.language",0,1,"",""
+"DV_MULTIMEDIA.alternate-text","DV_MULTIMEDIA.alternate_text","","","",0,1,"","","","string {[]} {[]}
+","Text to display in lieu of multimedia display/replay.","Text to display in lieu of multimedia display/replay.","","","","","","","","","",,,,,"",,,,"DV_MULTIMEDIA.alternate_text",0,1,"",""
+"DV_MULTIMEDIA.uri","DV_MULTIMEDIA.uri","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/DV-URI {[]} {[]}
+","URI reference to electronic information stored outside the record as a file, database entry etc, if supplied as a reference.","URI reference to electronic information stored outside the record as a file, database entry etc, if supplied as a reference.","","","","","","","","","",,,,,"",,,,"DV_MULTIMEDIA.uri",0,1,"",""
+"DV_MULTIMEDIA.data","DV_MULTIMEDIA.data","","","",0,*,"","","","base64Binary {[]} {[]}
+","The actual data found at `_uri_`, if supplied inline.","The actual data found at `_uri_`, if supplied inline.","","","","","","","","","",,,,,"",,,,"DV_MULTIMEDIA.data",0,*,"",""
+"DV_MULTIMEDIA.media-type","DV_MULTIMEDIA.media_type","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/CODE-PHRASE {[]} {[]}
+","Data media type coded from openEHR code set  media types  (interface for the IANA MIME types code set).","Data media type coded from openEHR code set  media types  (interface for the IANA MIME types code set).","","","","","","","","","",,,,,"",,,,"DV_MULTIMEDIA.media_type",1,1,"",""
+"DV_MULTIMEDIA.compression-algorithm","DV_MULTIMEDIA.compression_algorithm","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/CODE-PHRASE {[]} {[]}
+","Compression type, a coded value from the openEHR Integrity check code set.","Compression type, a coded value from the openEHR Integrity check code set. Void means no compression.","","","","","","","","","",,,,,"",,,,"DV_MULTIMEDIA.compression_algorithm",0,1,"",""
+"DV_MULTIMEDIA.integrity-check","DV_MULTIMEDIA.integrity_check","","","",0,*,"","","","base64Binary {[]} {[]}
+","Binary cryptographic integrity checksum.","Binary cryptographic integrity checksum.","","","","","","","","","",,,,,"",,,,"DV_MULTIMEDIA.integrity_check",0,*,"",""
+"DV_MULTIMEDIA.integrity-check-algorithm","DV_MULTIMEDIA.integrity_check_algorithm","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/CODE-PHRASE {[]} {[]}
+","Type of integrity check, a coded value from the openEHR `Integrity check` code set.","Type of integrity check, a coded value from the openEHR `Integrity check` code set.","","","","","","","","","",,,,,"",,,,"DV_MULTIMEDIA.integrity_check_algorithm",0,1,"",""
+"DV_MULTIMEDIA.thumbnail","DV_MULTIMEDIA.thumbnail","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/DV-MULTIMEDIA {[]} {[]}
+","The thumbnail for this item, if one exists; mainly for graphics formats.","The thumbnail for this item, if one exists; mainly for graphics formats.","","","","","","","","","",,,,,"",,,,"DV_MULTIMEDIA.thumbnail",0,1,"",""
+"DV_MULTIMEDIA.size","DV_MULTIMEDIA.size","","","",1,1,"","","","integer {[]} {[]}
+","Original size in bytes of unencoded encapsulated data.","Original size in bytes of unencoded encapsulated data. I.e. encodings such as base64, hexadecimal etc do not change the value of this attribute.","","","","","","","","","",,,,,"",,,,"DV_MULTIMEDIA.size",1,1,"",""

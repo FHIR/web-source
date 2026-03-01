@@ -1,0 +1,1475 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openehr.org/fhir/CodeSystem/property> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "property"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem property</b></p><a name=\"property\"> </a><a name=\"hcproperty\"> </a><p>This case-sensitive code system <code>https://specifications.openehr.org/fhir/codesystem-property</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">339<a name=\"property-339\"> </a></td><td>Acceleration</td></tr><tr><td style=\"white-space:nowrap\">342<a name=\"property-342\"> </a></td><td>Acceleration, angular</td></tr><tr><td style=\"white-space:nowrap\">381<a name=\"property-381\"> </a></td><td>Amount (Eq)</td></tr><tr><td style=\"white-space:nowrap\">384<a name=\"property-384\"> </a></td><td>Amount (mole)</td></tr><tr><td style=\"white-space:nowrap\">497<a name=\"property-497\"> </a></td><td>Angle, plane</td></tr><tr><td style=\"white-space:nowrap\">500<a name=\"property-500\"> </a></td><td>Angle, solid</td></tr><tr><td style=\"white-space:nowrap\">335<a name=\"property-335\"> </a></td><td>Area</td></tr><tr><td style=\"white-space:nowrap\">119<a name=\"property-119\"> </a></td><td>Concentration</td></tr><tr><td style=\"white-space:nowrap\">350<a name=\"property-350\"> </a></td><td>Density</td></tr><tr><td style=\"white-space:nowrap\">362<a name=\"property-362\"> </a></td><td>Diffusion coefficient</td></tr><tr><td style=\"white-space:nowrap\">501<a name=\"property-501\"> </a></td><td>Electric capacitance</td></tr><tr><td style=\"white-space:nowrap\">498<a name=\"property-498\"> </a></td><td>Electric charge</td></tr><tr><td style=\"white-space:nowrap\">502<a name=\"property-502\"> </a></td><td>Electric conductance</td></tr><tr><td style=\"white-space:nowrap\">334<a name=\"property-334\"> </a></td><td>Electric current</td></tr><tr><td style=\"white-space:nowrap\">377<a name=\"property-377\"> </a></td><td>Electric field strength</td></tr><tr><td style=\"white-space:nowrap\">655<a name=\"property-655\"> </a></td><td>Electric potential time</td></tr><tr><td style=\"white-space:nowrap\">121<a name=\"property-121\"> </a></td><td>Energy</td></tr><tr><td style=\"white-space:nowrap\">366<a name=\"property-366\"> </a></td><td>Energy density</td></tr><tr><td style=\"white-space:nowrap\">508<a name=\"property-508\"> </a></td><td>Energy dose</td></tr><tr><td style=\"white-space:nowrap\">365<a name=\"property-365\"> </a></td><td>Energy per area</td></tr><tr><td style=\"white-space:nowrap\">364<a name=\"property-364\"> </a></td><td>Energy, linear</td></tr><tr><td style=\"white-space:nowrap\">347<a name=\"property-347\"> </a></td><td>Flow rate, mass</td></tr><tr><td style=\"white-space:nowrap\">352<a name=\"property-352\"> </a></td><td>Flow rate, mass/force</td></tr><tr><td style=\"white-space:nowrap\">351<a name=\"property-351\"> </a></td><td>Flow rate, mass/volume</td></tr><tr><td style=\"white-space:nowrap\">126<a name=\"property-126\"> </a></td><td>Flow rate, volume</td></tr><tr><td style=\"white-space:nowrap\">348<a name=\"property-348\"> </a></td><td>Flux, mass</td></tr><tr><td style=\"white-space:nowrap\">355<a name=\"property-355\"> </a></td><td>Force</td></tr><tr><td style=\"white-space:nowrap\">358<a name=\"property-358\"> </a></td><td>Force per mass</td></tr><tr><td style=\"white-space:nowrap\">357<a name=\"property-357\"> </a></td><td>Force, body</td></tr><tr><td style=\"white-space:nowrap\">382<a name=\"property-382\"> </a></td><td>Frequency</td></tr><tr><td style=\"white-space:nowrap\">586<a name=\"property-586\"> </a></td><td>Glomerular filtration rate</td></tr><tr><td style=\"white-space:nowrap\">373<a name=\"property-373\"> </a></td><td>Heat transfer coefficient</td></tr><tr><td style=\"white-space:nowrap\">505<a name=\"property-505\"> </a></td><td>Illuminance</td></tr><tr><td style=\"white-space:nowrap\">379<a name=\"property-379\"> </a></td><td>Inductance</td></tr><tr><td style=\"white-space:nowrap\">122<a name=\"property-122\"> </a></td><td>Length</td></tr><tr><td style=\"white-space:nowrap\">499<a name=\"property-499\"> </a></td><td>Light intensity</td></tr><tr><td style=\"white-space:nowrap\">123<a name=\"property-123\"> </a></td><td>Loudness</td></tr><tr><td style=\"white-space:nowrap\">504<a name=\"property-504\"> </a></td><td>Luminous flux</td></tr><tr><td style=\"white-space:nowrap\">378<a name=\"property-378\"> </a></td><td>Magnetic flux</td></tr><tr><td style=\"white-space:nowrap\">503<a name=\"property-503\"> </a></td><td>Magnetic flux density</td></tr><tr><td style=\"white-space:nowrap\">124<a name=\"property-124\"> </a></td><td>Mass</td></tr><tr><td style=\"white-space:nowrap\">385<a name=\"property-385\"> </a></td><td>Mass (IU)</td></tr><tr><td style=\"white-space:nowrap\">445<a name=\"property-445\"> </a></td><td>Mass (Units)</td></tr><tr><td style=\"white-space:nowrap\">349<a name=\"property-349\"> </a></td><td>Mass per area</td></tr><tr><td style=\"white-space:nowrap\">344<a name=\"property-344\"> </a></td><td>Moment inertia, area</td></tr><tr><td style=\"white-space:nowrap\">345<a name=\"property-345\"> </a></td><td>Moment inertia, mass</td></tr><tr><td style=\"white-space:nowrap\">340<a name=\"property-340\"> </a></td><td>Momentum</td></tr><tr><td style=\"white-space:nowrap\">346<a name=\"property-346\"> </a></td><td>Momentum flow rate</td></tr><tr><td style=\"white-space:nowrap\">343<a name=\"property-343\"> </a></td><td>Momentum, angular</td></tr><tr><td style=\"white-space:nowrap\">363<a name=\"property-363\"> </a></td><td>Power</td></tr><tr><td style=\"white-space:nowrap\">369<a name=\"property-369\"> </a></td><td>Power density</td></tr><tr><td style=\"white-space:nowrap\">368<a name=\"property-368\"> </a></td><td>Power flux</td></tr><tr><td style=\"white-space:nowrap\">367<a name=\"property-367\"> </a></td><td>Power, linear</td></tr><tr><td style=\"white-space:nowrap\">125<a name=\"property-125\"> </a></td><td>Pressure</td></tr><tr><td style=\"white-space:nowrap\">507<a name=\"property-507\"> </a></td><td>Proportion</td></tr><tr><td style=\"white-space:nowrap\">380<a name=\"property-380\"> </a></td><td>Qualified real</td></tr><tr><td style=\"white-space:nowrap\">506<a name=\"property-506\"> </a></td><td>Radioactivity</td></tr><tr><td style=\"white-space:nowrap\">375<a name=\"property-375\"> </a></td><td>Resistance</td></tr><tr><td style=\"white-space:nowrap\">370<a name=\"property-370\"> </a></td><td>Specific energy</td></tr><tr><td style=\"white-space:nowrap\">371<a name=\"property-371\"> </a></td><td>Specific heat, gas constant</td></tr><tr><td style=\"white-space:nowrap\">337<a name=\"property-337\"> </a></td><td>Specific surface</td></tr><tr><td style=\"white-space:nowrap\">336<a name=\"property-336\"> </a></td><td>Specific volume</td></tr><tr><td style=\"white-space:nowrap\">354<a name=\"property-354\"> </a></td><td>Specific weight</td></tr><tr><td style=\"white-space:nowrap\">356<a name=\"property-356\"> </a></td><td>Surface tension</td></tr><tr><td style=\"white-space:nowrap\">127<a name=\"property-127\"> </a></td><td>Temperature</td></tr><tr><td style=\"white-space:nowrap\">372<a name=\"property-372\"> </a></td><td>Thermal conductivity</td></tr><tr><td style=\"white-space:nowrap\">128<a name=\"property-128\"> </a></td><td>Time</td></tr><tr><td style=\"white-space:nowrap\">359<a name=\"property-359\"> </a></td><td>Torque</td></tr><tr><td style=\"white-space:nowrap\">338<a name=\"property-338\"> </a></td><td>Velocity</td></tr><tr><td style=\"white-space:nowrap\">341<a name=\"property-341\"> </a></td><td>Velocity, angular</td></tr><tr><td style=\"white-space:nowrap\">360<a name=\"property-360\"> </a></td><td>Viscosity, dynamic</td></tr><tr><td style=\"white-space:nowrap\">361<a name=\"property-361\"> </a></td><td>Viscosity, kinematic</td></tr><tr><td style=\"white-space:nowrap\">374<a name=\"property-374\"> </a></td><td>Electric potential</td></tr><tr><td style=\"white-space:nowrap\">129<a name=\"property-129\"> </a></td><td>Volume</td></tr><tr><td style=\"white-space:nowrap\">130<a name=\"property-130\"> </a></td><td>Work</td></tr><tr><td style=\"white-space:nowrap\">685<a name=\"property-685\"> </a></td><td>Refractive power</td></tr><tr><td style=\"white-space:nowrap\">118<a name=\"property-118\"> </a></td><td>&lt;not set&gt;</td></tr><tr><td style=\"white-space:nowrap\">709<a name=\"property-709\"> </a></td><td>Time fraction</td></tr><tr><td style=\"white-space:nowrap\">708<a name=\"property-708\"> </a></td><td>Rate of change, pressure</td></tr><tr><td style=\"white-space:nowrap\">754<a name=\"property-754\"> </a></td><td>Rate of change, frequency</td></tr><tr><td style=\"white-space:nowrap\">755<a name=\"property-755\"> </a></td><td>Arbitrary</td></tr><tr><td style=\"white-space:nowrap\">756<a name=\"property-756\"> </a></td><td>Medication dose rate</td></tr><tr><td style=\"white-space:nowrap\">757<a name=\"property-757\"> </a></td><td>Spectral power</td></tr><tr><td style=\"white-space:nowrap\">758<a name=\"property-758\"> </a></td><td>Spectral power density</td></tr><tr><td style=\"white-space:nowrap\">759<a name=\"property-759\"> </a></td><td>Pace</td></tr><tr><td style=\"white-space:nowrap\">760<a name=\"property-760\"> </a></td><td>Enzyme activity</td></tr></table><p><b>Additional Language Displays</b></p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Spanish (es)</b></td><td><b>Japanese (ja)</b></td><td><b>Portuguese (pt)</b></td><td><b>中文 (Chinese, zh)</b></td></tr><tr><td>339</td><td>Aceleración</td><td>加速度</td><td>Aceleração</td><td>加速度</td></tr><tr><td>342</td><td>Aceleración, angular</td><td>角加速度</td><td>Aceleração, angular</td><td>加速度, 角</td></tr><tr><td>381</td><td>Cantidad (equivalente)</td><td>量 (Eq)</td><td>Quantidade (Eq)</td><td>物质的量 (当量)</td></tr><tr><td>384</td><td>Cantidad (mol)</td><td>量 (mole)</td><td>Quantidade (mol)</td><td>物质的量 (摩尔)</td></tr><tr><td>497</td><td>Ángulo, plano</td><td>平面角</td><td>Ângulo, plano</td><td>角度, 平面</td></tr><tr><td>500</td><td>Ángulo, sólido</td><td>立体角</td><td>Ângulo, sólido</td><td>角度, 立体</td></tr><tr><td>335</td><td>Área</td><td>面積</td><td>Área</td><td>面积</td></tr><tr><td>119</td><td>Concentración</td><td>濃度</td><td>Concentração</td><td>浓度</td></tr><tr><td>350</td><td>Densidad</td><td>密度</td><td>Densidade</td><td>密度</td></tr><tr><td>362</td><td>Coeficiente de difusión</td><td>拡散係数</td><td>Coeficiente de difusão</td><td>扩散系数</td></tr><tr><td>501</td><td>Capacidad eléctrica</td><td>電気容量</td><td>Capacitância elétrica</td><td>电容</td></tr><tr><td>498</td><td>Carga eléctrica</td><td>電荷</td><td>Carga elétrica</td><td>电荷</td></tr><tr><td>502</td><td>Conductancia eléctrica</td><td>電気伝導度</td><td>Condutância elétrica</td><td>电导</td></tr><tr><td>334</td><td>Corriente eléctrica</td><td>電流</td><td>Corrente elétrica</td><td>电流</td></tr><tr><td>377</td><td>Intensidad del campo eléctrico</td><td>電界強度</td><td>Intensidade do campo elétrico</td><td>电场强度</td></tr><tr><td>655</td><td>Potencial eléctrico</td><td>電位時間</td><td>Energia potencial elétrica</td><td>电势时间</td></tr><tr><td>121</td><td>Energía</td><td>エネルギー</td><td>Energia</td><td>能量</td></tr><tr><td>366</td><td>Densidad de energía</td><td>エネルギー密度</td><td>Densidade de energia</td><td>能量密度</td></tr><tr><td>508</td><td>Dosis de energía</td><td>エネルギー量</td><td>Dose de energia</td><td>能量剂量</td></tr><tr><td>365</td><td>Energía por área</td><td>面積あたりエネルギー</td><td>Energia por área</td><td>能量单位面积</td></tr><tr><td>364</td><td>Energía, lineal</td><td>線エネルギー</td><td>Energia, linear</td><td>能量, 线性</td></tr><tr><td>347</td><td>Caudal, masa</td><td>質量流量</td><td>Taxa de fluxo, massa</td><td>流速, 质量</td></tr><tr><td>352</td><td>Caudal, masa/fuerza</td><td>質量/力流量</td><td>Taxa de fluxo, massa/força</td><td>流速, 质量/力</td></tr><tr><td>351</td><td>Caudal, amsa/volumen</td><td>質量/体積流量</td><td>Taxa de fluxo, massa/volume</td><td>流速, 质量/体积</td></tr><tr><td>126</td><td>Caudal, volumen</td><td>体積流量</td><td>Taxa de fluxo, volume</td><td>流速, 体积</td></tr><tr><td>348</td><td>Flujo, masa</td><td>質量流束</td><td>Fluxo, massa</td><td>通量, 质量</td></tr><tr><td>355</td><td>Fuerza</td><td>力</td><td>Força</td><td>力</td></tr><tr><td>358</td><td>Fuerza por masa</td><td>質量あたりの力</td><td>Força por massa</td><td>力单位质量</td></tr><tr><td>357</td><td>Fuerza, cuerpo</td><td>体積力</td><td>Força, corpo</td><td>力, 彻体</td></tr><tr><td>382</td><td>Frecuencia</td><td>頻度</td><td>Frequência</td><td>频率</td></tr><tr><td>586</td><td>Tasa de filtración glomerular</td><td>糸球体濾過量</td><td>Taxa de filtração glomerular</td><td>肾小球滤过率</td></tr><tr><td>373</td><td>Coeficiente de transferencia de calor</td><td>熱伝導係数</td><td>Coeficiente de transferência de calor</td><td>传热系数</td></tr><tr><td>505</td><td>Iluminancia</td><td>照度</td><td>Iluminância</td><td>照度</td></tr><tr><td>379</td><td>Inductancia</td><td>インダクタンス</td><td>Indutância</td><td>电感</td></tr><tr><td>122</td><td>Longitud</td><td>長さ</td><td>Comprimento</td><td>程度</td></tr><tr><td>499</td><td>Intensidad de luz</td><td>光強度</td><td>Intensidade luminosa</td><td>光强</td></tr><tr><td>123</td><td>Volumen sonoro</td><td>音圧</td><td>Intensidade sonora</td><td>响度</td></tr><tr><td>504</td><td>Flujo luminoso</td><td>光束</td><td>Fluxo luminoso</td><td>光通量</td></tr><tr><td>378</td><td>Flujo magnético</td><td>磁束</td><td>Fluxo magnético</td><td>磁通量</td></tr><tr><td>503</td><td>Densidad de flujo magnético</td><td>磁束密度</td><td>Densidade de fluxo magnético</td><td>磁通量密度</td></tr><tr><td>124</td><td>Masa</td><td>質量</td><td>Massa</td><td>质量</td></tr><tr><td>385</td><td>Masa (IU)</td><td>質量 (IU)</td><td>Massa (UI)</td><td>质量 (国际单位)</td></tr><tr><td>445</td><td>Masa (Unidades)</td><td>質量 (Units)</td><td>Massa (unidades)</td><td>质量 (单位)</td></tr><tr><td>349</td><td>Masa por área</td><td>面積あたり質量</td><td>Massa por área</td><td>质量单位面积</td></tr><tr><td>344</td><td>Momento de inercia, área</td><td>断面二次モーメント</td><td>Momento de inércia, área</td><td>转动惯量, 面积</td></tr><tr><td>345</td><td>Momento de inercia, masa</td><td>質量慣性モーメント</td><td>Momento de inércia, massa</td><td>转动惯量, 质量</td></tr><tr><td>340</td><td>Impulso</td><td>モーメント</td><td>Momento</td><td>动量</td></tr><tr><td>346</td><td>Impulso, caudal</td><td>流量モーメント</td><td>Momento, taxa de fluxo</td><td>动量 流速</td></tr><tr><td>343</td><td>Impulso, angular</td><td>角モーメント</td><td>Momento, angular</td><td>动量, 角</td></tr><tr><td>363</td><td>Potencia</td><td>電力</td><td>Potência</td><td>功率</td></tr><tr><td>369</td><td>Densidad de potencia</td><td>電力密度</td><td>Densidade de potência</td><td>功率密度</td></tr><tr><td>368</td><td>Flujo de potencia</td><td>電力束</td><td>Fluxo de potência</td><td>功率通量</td></tr><tr><td>367</td><td>Potencia, lineal</td><td>線形電力</td><td>Potência, linear</td><td>功率, 线性</td></tr><tr><td>125</td><td>Presión</td><td>圧力</td><td>Pressão</td><td>压强</td></tr><tr><td>507</td><td>Proporción</td><td>比率</td><td>Proporção</td><td>比例</td></tr><tr><td>380</td><td>Real calificado</td><td>制限付き実数</td><td>Real qualificado</td><td>带有量词限定的实数</td></tr><tr><td>506</td><td>Radioactividad</td><td>放射能</td><td>Radioactividade</td><td>放射性活度</td></tr><tr><td>375</td><td>Resistencia</td><td>抵抗</td><td>Resistência</td><td>电阻</td></tr><tr><td>370</td><td>Energía específica</td><td>比エネルギー</td><td>Energia específica</td><td>比能</td></tr><tr><td>371</td><td>Calor específico, constante de gas</td><td>比熱、気体定数</td><td>Calor específico, gás constante</td><td>比热, 气体常数</td></tr><tr><td>337</td><td>Superficie específica</td><td>比表面</td><td>Superfície específica</td><td>比表面积</td></tr><tr><td>336</td><td>Volumen específico</td><td>比容Specific volume</td><td>Volume específico</td><td>比容</td></tr><tr><td>354</td><td>Peso específico</td><td>比重Specific weight</td><td>Peso específico</td><td>比重</td></tr><tr><td>356</td><td>Tensión superficial</td><td>表面張力Surface tension</td><td>Tensão superficial</td><td>表面张力</td></tr><tr><td>127</td><td>Temperatura</td><td>温度</td><td>Temperatura</td><td>温度</td></tr><tr><td>372</td><td>Conductividad térmica</td><td>熱伝導度</td><td>Condutividade térmica</td><td>热导率</td></tr><tr><td>128</td><td>Tiempo</td><td>時間</td><td>Tempo</td><td>时间</td></tr><tr><td>359</td><td>Torque</td><td>トルク</td><td>Torque</td><td>扭矩</td></tr><tr><td>338</td><td>Velocidad</td><td>速度</td><td>Velocidade</td><td>速度</td></tr><tr><td>341</td><td>Velocidad, angular</td><td>角速度</td><td>Velocidade, angular</td><td>速度, 角</td></tr><tr><td>360</td><td>Viscosidad, dinámica</td><td>Viscosity, dynamic (en)</td><td>Viscosidade, dinâmica</td><td>黏度, 动力</td></tr><tr><td>361</td><td>Viscosity, cinemática</td><td>Viscosity, kinematic (en)</td><td>Viscosidade, cinemática</td><td>黏度, 运动</td></tr><tr><td>374</td><td>Voltaje, eléctrico</td><td>電圧</td><td>Potencial eléctrico</td><td>电势</td></tr><tr><td>129</td><td>Volumen</td><td>容積</td><td>volume</td><td>体积</td></tr><tr><td>130</td><td>Trabajo</td><td>仕事量</td><td>Trabalho</td><td>功</td></tr><tr><td>685</td><td>Poder refractivo</td><td>屈折力</td><td>Poder de refracção</td><td>屈光力</td></tr><tr><td>118</td><td>&lt;no asignado&gt;</td><td>&lt;not set&gt; (en)</td><td>Não definido</td><td>&lt;未设置&gt;</td></tr><tr><td>709</td><td>Fracción de tiempo</td><td>Time fraction (en)</td><td>Fracção de tempo</td><td>时间分数</td></tr><tr><td>708</td><td>Tasa de variación, presión</td><td>Rate of change, pressure (en)</td><td>Taxa de variação, pressão</td><td>变化速率, 压强</td></tr><tr><td>754</td><td>Tasa de variación, frecuencia</td><td>Rate of change, frequency (en)</td><td>Taxa de variação, frequência</td><td>变化速率, 频率</td></tr><tr><td>755</td><td>Arbitrario</td><td>Arbitrary (en)</td><td>Arbitrário</td><td>任意</td></tr><tr><td>756</td><td>Dosis de medicación</td><td>Medication dose rate (en)</td><td>Taxa de dose de medicação</td><td>药物剂量速率</td></tr><tr><td>757</td><td>Potencia espectral</td><td>Spectral power (en)</td><td>Potência espectral</td><td>谱功率</td></tr><tr><td>758</td><td>Densidad espectral de potencia</td><td>Spectral power density (en)</td><td>Densidade de potência espectral</td><td>功率谱密度</td></tr><tr><td>759</td><td>Ritmo</td><td>Pace (en)</td><td>Ritmo</td><td>步速</td></tr><tr><td>760</td><td>Actividad enzimática</td><td>Enzyme activity (en)</td><td>Actividade enzimática</td><td>酶活性</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 3 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "informative" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "https://specifications.openehr.org/fhir/codesystem-property"^^xsd:anyURI ;
+     fhir:l <https://specifications.openehr.org/fhir/codesystem-property>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0-snapshot"] ; # 
+  fhir:name [ fhir:v "property"] ; # 
+  fhir:title [ fhir:v "Property"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2024-08-22"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "openEHR + HL7"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.openehr.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Type of quantity being measured"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "86"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "339" ] ;
+     fhir:display [ fhir:v "Acceleration" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Aceleración" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "加速度" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Aceleração" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "加速度" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "342" ] ;
+     fhir:display [ fhir:v "Acceleration, angular" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Aceleración, angular" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "角加速度" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Aceleração, angular" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "加速度, 角" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "381" ] ;
+     fhir:display [ fhir:v "Amount (Eq)" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Cantidad (equivalente)" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "量 (Eq)" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Quantidade (Eq)" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "物质的量 (当量)" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "384" ] ;
+     fhir:display [ fhir:v "Amount (mole)" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Cantidad (mol)" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "量 (mole)" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Quantidade (mol)" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "物质的量 (摩尔)" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "497" ] ;
+     fhir:display [ fhir:v "Angle, plane" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Ángulo, plano" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "平面角" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Ângulo, plano" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "角度, 平面" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "500" ] ;
+     fhir:display [ fhir:v "Angle, solid" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Ángulo, sólido" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "立体角" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Ângulo, sólido" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "角度, 立体" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "335" ] ;
+     fhir:display [ fhir:v "Area" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Área" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "面積" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Área" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "面积" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "119" ] ;
+     fhir:display [ fhir:v "Concentration" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Concentración" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "濃度" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Concentração" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "浓度" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "350" ] ;
+     fhir:display [ fhir:v "Density" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Densidad" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "密度" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Densidade" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "密度" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "362" ] ;
+     fhir:display [ fhir:v "Diffusion coefficient" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Coeficiente de difusión" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "拡散係数" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Coeficiente de difusão" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "扩散系数" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "501" ] ;
+     fhir:display [ fhir:v "Electric capacitance" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Capacidad eléctrica" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "電気容量" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Capacitância elétrica" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "电容" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "498" ] ;
+     fhir:display [ fhir:v "Electric charge" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Carga eléctrica" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "電荷" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Carga elétrica" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "电荷" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "502" ] ;
+     fhir:display [ fhir:v "Electric conductance" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Conductancia eléctrica" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "電気伝導度" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Condutância elétrica" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "电导" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "334" ] ;
+     fhir:display [ fhir:v "Electric current" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Corriente eléctrica" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "電流" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Corrente elétrica" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "电流" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "377" ] ;
+     fhir:display [ fhir:v "Electric field strength" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Intensidad del campo eléctrico" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "電界強度" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Intensidade do campo elétrico" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "电场强度" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "655" ] ;
+     fhir:display [ fhir:v "Electric potential time" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Potencial eléctrico" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "電位時間" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Energia potencial elétrica" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "电势时间" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "121" ] ;
+     fhir:display [ fhir:v "Energy" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Energía" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "エネルギー" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Energia" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "能量" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "366" ] ;
+     fhir:display [ fhir:v "Energy density" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Densidad de energía" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "エネルギー密度" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Densidade de energia" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "能量密度" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "508" ] ;
+     fhir:display [ fhir:v "Energy dose" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Dosis de energía" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "エネルギー量" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Dose de energia" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "能量剂量" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "365" ] ;
+     fhir:display [ fhir:v "Energy per area" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Energía por área" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "面積あたりエネルギー" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Energia por área" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "能量单位面积" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "364" ] ;
+     fhir:display [ fhir:v "Energy, linear" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Energía, lineal" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "線エネルギー" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Energia, linear" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "能量, 线性" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "347" ] ;
+     fhir:display [ fhir:v "Flow rate, mass" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Caudal, masa" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "質量流量" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Taxa de fluxo, massa" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "流速, 质量" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "352" ] ;
+     fhir:display [ fhir:v "Flow rate, mass/force" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Caudal, masa/fuerza" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "質量/力流量" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Taxa de fluxo, massa/força" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "流速, 质量/力" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "351" ] ;
+     fhir:display [ fhir:v "Flow rate, mass/volume" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Caudal, amsa/volumen" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "質量/体積流量" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Taxa de fluxo, massa/volume" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "流速, 质量/体积" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "126" ] ;
+     fhir:display [ fhir:v "Flow rate, volume" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Caudal, volumen" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "体積流量" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Taxa de fluxo, volume" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "流速, 体积" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "348" ] ;
+     fhir:display [ fhir:v "Flux, mass" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Flujo, masa" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "質量流束" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Fluxo, massa" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "通量, 质量" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "355" ] ;
+     fhir:display [ fhir:v "Force" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Fuerza" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "力" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Força" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "力" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "358" ] ;
+     fhir:display [ fhir:v "Force per mass" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Fuerza por masa" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "質量あたりの力" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Força por massa" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "力单位质量" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "357" ] ;
+     fhir:display [ fhir:v "Force, body" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Fuerza, cuerpo" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "体積力" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Força, corpo" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "力, 彻体" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "382" ] ;
+     fhir:display [ fhir:v "Frequency" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Frecuencia" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "頻度" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Frequência" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "频率" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "586" ] ;
+     fhir:display [ fhir:v "Glomerular filtration rate" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Tasa de filtración glomerular" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "糸球体濾過量" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Taxa de filtração glomerular" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "肾小球滤过率" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "373" ] ;
+     fhir:display [ fhir:v "Heat transfer coefficient" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Coeficiente de transferencia de calor" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "熱伝導係数" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Coeficiente de transferência de calor" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "传热系数" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "505" ] ;
+     fhir:display [ fhir:v "Illuminance" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Iluminancia" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "照度" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Iluminância" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "照度" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "379" ] ;
+     fhir:display [ fhir:v "Inductance" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Inductancia" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "インダクタンス" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Indutância" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "电感" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "122" ] ;
+     fhir:display [ fhir:v "Length" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Longitud" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "長さ" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Comprimento" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "程度" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "499" ] ;
+     fhir:display [ fhir:v "Light intensity" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Intensidad de luz" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "光強度" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Intensidade luminosa" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "光强" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "123" ] ;
+     fhir:display [ fhir:v "Loudness" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Volumen sonoro" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "音圧" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Intensidade sonora" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "响度" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "504" ] ;
+     fhir:display [ fhir:v "Luminous flux" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Flujo luminoso" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "光束" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Fluxo luminoso" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "光通量" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "378" ] ;
+     fhir:display [ fhir:v "Magnetic flux" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Flujo magnético" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "磁束" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Fluxo magnético" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "磁通量" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "503" ] ;
+     fhir:display [ fhir:v "Magnetic flux density" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Densidad de flujo magnético" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "磁束密度" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Densidade de fluxo magnético" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "磁通量密度" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "124" ] ;
+     fhir:display [ fhir:v "Mass" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Masa" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "質量" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Massa" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "质量" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "385" ] ;
+     fhir:display [ fhir:v "Mass (IU)" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Masa (IU)" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "質量 (IU)" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Massa (UI)" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "质量 (国际单位)" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "445" ] ;
+     fhir:display [ fhir:v "Mass (Units)" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Masa (Unidades)" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "質量 (Units)" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Massa (unidades)" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "质量 (单位)" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "349" ] ;
+     fhir:display [ fhir:v "Mass per area" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Masa por área" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "面積あたり質量" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Massa por área" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "质量单位面积" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "344" ] ;
+     fhir:display [ fhir:v "Moment inertia, area" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Momento de inercia, área" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "断面二次モーメント" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Momento de inércia, área" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "转动惯量, 面积" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "345" ] ;
+     fhir:display [ fhir:v "Moment inertia, mass" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Momento de inercia, masa" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "質量慣性モーメント" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Momento de inércia, massa" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "转动惯量, 质量" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "340" ] ;
+     fhir:display [ fhir:v "Momentum" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Impulso" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "モーメント" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Momento" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "动量" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "346" ] ;
+     fhir:display [ fhir:v "Momentum flow rate" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Impulso, caudal" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "流量モーメント" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Momento, taxa de fluxo" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "动量 流速" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "343" ] ;
+     fhir:display [ fhir:v "Momentum, angular" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Impulso, angular" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "角モーメント" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Momento, angular" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "动量, 角" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "363" ] ;
+     fhir:display [ fhir:v "Power" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Potencia" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "電力" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Potência" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "功率" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "369" ] ;
+     fhir:display [ fhir:v "Power density" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Densidad de potencia" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "電力密度" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Densidade de potência" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "功率密度" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "368" ] ;
+     fhir:display [ fhir:v "Power flux" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Flujo de potencia" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "電力束" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Fluxo de potência" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "功率通量" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "367" ] ;
+     fhir:display [ fhir:v "Power, linear" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Potencia, lineal" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "線形電力" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Potência, linear" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "功率, 线性" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "125" ] ;
+     fhir:display [ fhir:v "Pressure" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Presión" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "圧力" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Pressão" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "压强" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "507" ] ;
+     fhir:display [ fhir:v "Proportion" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Proporción" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "比率" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Proporção" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "比例" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "380" ] ;
+     fhir:display [ fhir:v "Qualified real" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Real calificado" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "制限付き実数" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Real qualificado" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "带有量词限定的实数" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "506" ] ;
+     fhir:display [ fhir:v "Radioactivity" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Radioactividad" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "放射能" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Radioactividade" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "放射性活度" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "375" ] ;
+     fhir:display [ fhir:v "Resistance" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Resistencia" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "抵抗" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Resistência" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "电阻" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "370" ] ;
+     fhir:display [ fhir:v "Specific energy" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Energía específica" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "比エネルギー" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Energia específica" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "比能" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "371" ] ;
+     fhir:display [ fhir:v "Specific heat, gas constant" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Calor específico, constante de gas" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "比熱、気体定数" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Calor específico, gás constante" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "比热, 气体常数" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "337" ] ;
+     fhir:display [ fhir:v "Specific surface" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Superficie específica" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "比表面" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Superfície específica" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "比表面积" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "336" ] ;
+     fhir:display [ fhir:v "Specific volume" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Volumen específico" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "比容Specific volume" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Volume específico" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "比容" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "354" ] ;
+     fhir:display [ fhir:v "Specific weight" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Peso específico" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "比重Specific weight" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Peso específico" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "比重" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "356" ] ;
+     fhir:display [ fhir:v "Surface tension" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Tensión superficial" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "表面張力Surface tension" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Tensão superficial" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "表面张力" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "127" ] ;
+     fhir:display [ fhir:v "Temperature" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Temperatura" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "温度" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Temperatura" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "温度" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "372" ] ;
+     fhir:display [ fhir:v "Thermal conductivity" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Conductividad térmica" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "熱伝導度" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Condutividade térmica" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "热导率" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "128" ] ;
+     fhir:display [ fhir:v "Time" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Tiempo" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "時間" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Tempo" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "时间" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "359" ] ;
+     fhir:display [ fhir:v "Torque" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Torque" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "トルク" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Torque" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "扭矩" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "338" ] ;
+     fhir:display [ fhir:v "Velocity" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Velocidad" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "速度" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Velocidade" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "速度" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "341" ] ;
+     fhir:display [ fhir:v "Velocity, angular" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Velocidad, angular" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "角速度" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Velocidade, angular" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "速度, 角" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "360" ] ;
+     fhir:display [ fhir:v "Viscosity, dynamic" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Viscosidad, dinámica" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "Viscosity, dynamic (en)" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Viscosidade, dinâmica" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "黏度, 动力" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "361" ] ;
+     fhir:display [ fhir:v "Viscosity, kinematic" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Viscosity, cinemática" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "Viscosity, kinematic (en)" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Viscosidade, cinemática" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "黏度, 运动" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "374" ] ;
+     fhir:display [ fhir:v "Electric potential" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Voltaje, eléctrico" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "電圧" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Potencial eléctrico" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "电势" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "129" ] ;
+     fhir:display [ fhir:v "Volume" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Volumen" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "容積" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "volume" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "体积" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "130" ] ;
+     fhir:display [ fhir:v "Work" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Trabajo" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "仕事量" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Trabalho" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "功" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "685" ] ;
+     fhir:display [ fhir:v "Refractive power" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Poder refractivo" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "屈折力" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Poder de refracção" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "屈光力" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "118" ] ;
+     fhir:display [ fhir:v "<not set>" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "<no asignado>" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "<not set> (en)" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Não definido" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "<未设置>" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "709" ] ;
+     fhir:display [ fhir:v "Time fraction" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Fracción de tiempo" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "Time fraction (en)" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Fracção de tempo" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "时间分数" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "708" ] ;
+     fhir:display [ fhir:v "Rate of change, pressure" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Tasa de variación, presión" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "Rate of change, pressure (en)" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Taxa de variação, pressão" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "变化速率, 压强" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "754" ] ;
+     fhir:display [ fhir:v "Rate of change, frequency" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Tasa de variación, frecuencia" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "Rate of change, frequency (en)" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Taxa de variação, frequência" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "变化速率, 频率" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "755" ] ;
+     fhir:display [ fhir:v "Arbitrary" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Arbitrario" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "Arbitrary (en)" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Arbitrário" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "任意" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "756" ] ;
+     fhir:display [ fhir:v "Medication dose rate" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Dosis de medicación" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "Medication dose rate (en)" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Taxa de dose de medicação" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "药物剂量速率" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "757" ] ;
+     fhir:display [ fhir:v "Spectral power" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Potencia espectral" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "Spectral power (en)" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Potência espectral" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "谱功率" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "758" ] ;
+     fhir:display [ fhir:v "Spectral power density" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Densidad espectral de potencia" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "Spectral power density (en)" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Densidade de potência espectral" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "功率谱密度" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "759" ] ;
+     fhir:display [ fhir:v "Pace" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Ritmo" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "Pace (en)" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Ritmo" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "步速" ]
+     ] )
+  ] [
+     fhir:code [ fhir:v "760" ] ;
+     fhir:display [ fhir:v "Enzyme activity" ] ;
+     fhir:designation ( [
+       fhir:language [ fhir:v "es" ] ;
+       fhir:value [ fhir:v "Actividad enzimática" ]
+     ] [
+       fhir:language [ fhir:v "ja" ] ;
+       fhir:value [ fhir:v "Enzyme activity (en)" ]
+     ] [
+       fhir:language [ fhir:v "pt" ] ;
+       fhir:value [ fhir:v "Actividade enzimática" ]
+     ] [
+       fhir:language [ fhir:v "zh" ] ;
+       fhir:value [ fhir:v "酶活性" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

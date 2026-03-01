@@ -1,0 +1,698 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openehr.org/fhir/StructureDefinition/INSTRUCTION> a fhir:StructureDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "INSTRUCTION"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition INSTRUCTION</b></p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-INSTRUCTION-definitions.html#INSTRUCTION\" title=\"Used to specify actions in the future. Enables simple and complex specifications to be expressed, including in a fully-computable workflow form. Used for any actionable statement such as medication and therapeutic orders, monitoring, recall and review. Enough details must be provided for the specification to be directly executed by an actor, either human or machine. #xA;#xA;Not to be used for plan items which are only specified in general terms. \">INSTRUCTION</a><a name=\"INSTRUCTION\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;; padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;\" href=\"http://hl7.org/fhir/R5/conformance-rules.html#constraints\" title=\"This element has or is affected by constraints ( Activities_valid )\">C</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-CARE-ENTRY.html\">CARE_ENTRY</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Used to specify actions in the future.<br/><br/>Elements defined in Ancestors:<a href=\"StructureDefinition-LOCATABLE.html\" title=\"Runtime name of this fragment, used to build runtime paths. This is the term provided via a clinical application or batch process to name this EHR construct: its retention in the EHR faithfully preserves the original label by which this entry was known to end users. #xA;\">name</a>, <a href=\"StructureDefinition-LOCATABLE.html\" title=\"Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths. Always in the form of an at-code, e.g.  `at0005`. This value enables a 'standardised' name for this node to be generated, by referring to the generating archetype local terminology. #xA;#xA;At an archetype root point, the value of this attribute is always the stringified form of the `_archetype_id_` found in the `_archetype_details_` object. #xA;\">archetype_node_id</a>, <a href=\"StructureDefinition-LOCATABLE.html\" title=\"Optional globally unique object identifier for root points of archetyped structures. \">uid</a>, <a href=\"StructureDefinition-LOCATABLE.html\" title=\"Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions. \">links</a>, <a href=\"StructureDefinition-LOCATABLE.html\" title=\"Details of archetyping used on this node.\">archetype_details</a>, <a href=\"StructureDefinition-LOCATABLE.html\" title=\"Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node. \">feeder_audit</a>, <a href=\"StructureDefinition-ENTRY.html\" title=\"Mandatory indicator of the localised language in which this Entry is written. Coded from openEHR Code Set  languages . \">language</a>, <a href=\"StructureDefinition-ENTRY.html\" title=\"Name of character set in which text values in this Entry are encoded. Coded from openEHR Code Set  character sets.\">encoding</a>, <a href=\"StructureDefinition-ENTRY.html\" title=\"Other participations at `ENTRY` level. \">other_participations</a>, <a href=\"StructureDefinition-ENTRY.html\" title=\"Identifier of externally held workflow engine data for this workflow execution, for this subject of care.\">workflow_id</a>, <a href=\"StructureDefinition-ENTRY.html\" title=\"Id of human subject of this `ENTRY`, e.g.: #xA;#xA;* organ donor #xA;* foetus #xA;* a family member #xA;* another clinically relevant person.\">subject</a>, <a href=\"StructureDefinition-ENTRY.html\" title=\"Optional identification of provider of the information in this `ENTRY`, which might be: #xA;#xA;* the patient #xA;* a patient agent, e.g. parent, guardian #xA;* the clinician #xA;* a device or software #xA;#xA;Generally only used when the recorder needs to make it explicit. Otherwise, Composition composer and other participants are assumed. #xA;\">provider</a>, <a href=\"StructureDefinition-CARE-ENTRY.html\" title=\"Description of the method (i.e. how) the information in this entry was arrived at. For `OBSERVATIONs`, this is a description of the method or instrument used. For `EVALUATIONs`, how the evaluation was arrived at. For `INSTRUCTIONs`, how to execute the Instruction. This may take the form of references to guidelines, including manually followed and executable; knowledge references such as a paper in Medline; clinical reasons within a larger care process. \">protocol</a>, <a href=\"StructureDefinition-CARE-ENTRY.html\" title=\"Optional external identifier of guideline creating this Entry if relevant.\">guideline_id</a><br class=\"constraint\"/><span title=\"null\" class=\"constraint\">Constraints: </span><span style=\"font-weight:bold\" title=\"Activities valid must be present\" class=\"constraint\">Activities_valid</span><br/></td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-INSTRUCTION-definitions.html#INSTRUCTION.narrative\" title=\"Mandatory human-readable version of what the Instruction is about. \">narrative</a><a name=\"INSTRUCTION.narrative\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-DV-TEXT.html\">DV_TEXT</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Mandatory human-readable version of what the Instruction is about.</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-INSTRUCTION-definitions.html#INSTRUCTION.expiry-time\" title=\"Optional expiry date/time to assist determination of when an Instruction can be assumed to have expired. This helps prevent false listing of Instructions as Active when they clearly must have been terminated in some way or other. \">expiry_time</a><a name=\"INSTRUCTION.expiry_time\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-DV-DATE-TIME.html\">DV_DATE_TIME</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Optional expiry date/time to assist determination of when an Instruction can be assumed to have expired.</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-INSTRUCTION-definitions.html#INSTRUCTION.wf-definition\" title=\"Optional workflow engine executable expression of the Instruction. \">wf_definition</a><a name=\"INSTRUCTION.wf_definition\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-DV-PARSABLE.html\">DV_PARSABLE</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Optional workflow engine executable expression of the Instruction.</td></tr>#xD;\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-INSTRUCTION-definitions.html#INSTRUCTION.activities\" title=\"List of all activities in Instruction. #xA;\">activities</a><a name=\"INSTRUCTION.activities\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-ACTIVITY.html\">ACTIVITY</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">List of all activities in Instruction.<br/></td></tr>#xD;\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/tools/StructureDefinition/web-source"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/tools/StructureDefinition/web-source>
+     ] ;
+     fhir:value [
+       a fhir:Url ;
+       fhir:v "https://specifications.openehr.org/releases/RM/development/ehr.html#_instruction_class"^^xsd:anyURI ;
+       fhir:l <https://specifications.openehr.org/releases/RM/development/ehr.html#_instruction_class>
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/tools/StructureDefinition/type-operation"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/tools/StructureDefinition/type-operation>
+     ] ;
+     fhir:value [
+       a fhir:Canonical ;
+       fhir:v "#subject_is_self"^^xsd:anyURI ;
+       fhir:l <#subject_is_self>
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/tools/StructureDefinition/view-hint"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/tools/StructureDefinition/view-hint>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "element-view-replace-cardinality"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 3 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "informative" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://openehr.org/fhir/StructureDefinition/INSTRUCTION"^^xsd:anyURI ;
+     fhir:l <http://openehr.org/fhir/StructureDefinition/INSTRUCTION>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0-snapshot"] ; # 
+  fhir:name [ fhir:v "INSTRUCTION"] ; # 
+  fhir:title [ fhir:v "INSTRUCTION"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-09-06T15:35:39+10:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "openEHR + HL7"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.openehr.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Used to specify actions in the future. Enables simple and complex specifications to be expressed, including in a fully-computable workflow form. Used for any actionable statement such as medication and therapeutic orders, monitoring, recall and review. Enough details must be provided for the specification to be directly executed by an actor, either human or machine. \n\nNot to be used for plan items which are only specified in general terms. "] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:fhirVersion [ fhir:v "5.0.0"] ; # 
+  fhir:mapping ( [
+     fhir:identity [ fhir:v "rim" ] ;
+     fhir:uri [
+       fhir:v "http://hl7.org/v3"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/v3>
+     ] ;
+     fhir:name [ fhir:v "RIM Mapping" ]
+  ] ) ; # 
+  fhir:kind [ fhir:v "logical"] ; # 
+  fhir:abstract [ fhir:v false] ; # 
+  fhir:type [
+     fhir:v "http://openehr.org/fhir/StructureDefinition/INSTRUCTION"^^xsd:anyURI ;
+     fhir:l <http://openehr.org/fhir/StructureDefinition/INSTRUCTION>
+  ] ; # 
+  fhir:baseDefinition [
+     fhir:v "http://openehr.org/fhir/StructureDefinition/CARE-ENTRY"^^xsd:anyURI ;
+     fhir:l <http://openehr.org/fhir/StructureDefinition/CARE-ENTRY>
+  ] ; # 
+  fhir:derivation [ fhir:v "specialization"] ; # 
+  fhir:snapshot [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version>
+       ] ;
+       fhir:value [
+         a fhir:String ;
+         fhir:v "0.1.0-snapshot"
+       ]
+     ] ) ;
+     fhir:element ( [
+       fhir:id [ fhir:v "INSTRUCTION" ] ;
+       fhir:path [ fhir:v "INSTRUCTION" ] ;
+       fhir:short [ fhir:v "Used to specify actions in the future." ] ;
+       fhir:definition [ fhir:v "Used to specify actions in the future. Enables simple and complex specifications to be expressed, including in a fully-computable workflow form. Used for any actionable statement such as medication and therapeutic orders, monitoring, recall and review. Enough details must be provided for the specification to be directly executed by an actor, either human or machine. \n\nNot to be used for plan items which are only specified in general terms. " ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "Base" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "Links_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Links valid must be present" ] ;
+         fhir:expression [ fhir:v "links.exists() implies links.empty().not()" ] ;
+         fhir:source [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/LOCATABLE"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/LOCATABLE>
+         ]
+       ] [
+         fhir:key [ fhir:v "Archetyped_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Archetyped valid must satisfy exclusive conditions" ] ;
+         fhir:expression [ fhir:v "is_archetype_root() xor archetype_details .empty()" ] ;
+         fhir:source [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/LOCATABLE"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/LOCATABLE>
+         ]
+       ] [
+         fhir:key [ fhir:v "Archetype_node_id_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Archetype node id valid must not be empty" ] ;
+         fhir:expression [ fhir:v "archetype_node_id.empty().not()" ] ;
+         fhir:source [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/LOCATABLE"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/LOCATABLE>
+         ]
+       ] [
+         fhir:key [ fhir:v "Subject_validity" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Subject validity must satisfy conditional constraints" ] ;
+         fhir:expression [ fhir:v "subject_is_self() implies subject.generating_type = “PARTY_SELF”" ] ;
+         fhir:source [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/ENTRY"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/ENTRY>
+         ]
+       ] [
+         fhir:key [ fhir:v "Other_participations_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Other participations valid must be present" ] ;
+         fhir:expression [ fhir:v "other_participations.exists() implies other_participations.empty().not()" ] ;
+         fhir:source [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/ENTRY"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/ENTRY>
+         ]
+       ] [
+         fhir:key [ fhir:v "Is_archetype_root" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Is archetype root" ] ;
+         fhir:expression [ fhir:v "is_archetype_root()" ] ;
+         fhir:source [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/ENTRY"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/ENTRY>
+         ]
+       ] [
+         fhir:key [ fhir:v "Activities_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Activities valid must be present" ] ;
+         fhir:expression [ fhir:v "activities.exists() implies activities.empty().not()" ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ] ;
+       fhir:mapping ( [
+         fhir:identity [ fhir:v "rim" ] ;
+         fhir:map [ fhir:v "n/a" ]
+       ] )
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.name" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.name" ] ;
+       fhir:short [ fhir:v "Runtime name of this fragment, used to build runtime paths." ] ;
+       fhir:definition [ fhir:v "Runtime name of this fragment, used to build runtime paths. This is the term provided via a clinical application or batch process to name this EHR construct: its retention in the EHR faithfully preserves the original label by which this entry was known to end users." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "LOCATABLE.name" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/DV-TEXT"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/DV-TEXT>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.archetype-node-id" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.archetype_node_id" ] ;
+       fhir:short [ fhir:v "Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths." ] ;
+       fhir:definition [ fhir:v "Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths. Always in the form of an at-code, e.g.  `at0005`. This value enables a 'standardised' name for this node to be generated, by referring to the generating archetype local terminology. \n\nAt an archetype root point, the value of this attribute is always the stringified form of the `_archetype_id_` found in the `_archetype_details_` object." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "LOCATABLE.archetype_node_id" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "string"^^xsd:anyURI ;
+           fhir:l fhir:string
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.uid" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.uid" ] ;
+       fhir:short [ fhir:v "Optional globally unique object identifier for root points of archetyped structures." ] ;
+       fhir:definition [ fhir:v "Optional globally unique object identifier for root points of archetyped structures." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "LOCATABLE.uid" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/UID-BASED-ID"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/UID-BASED-ID>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.links" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.links" ] ;
+       fhir:short [ fhir:v "Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on)." ] ;
+       fhir:definition [ fhir:v "Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "LOCATABLE.links" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/LINK"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/LINK>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.archetype-details" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.archetype_details" ] ;
+       fhir:short [ fhir:v "Details of archetyping used on this node." ] ;
+       fhir:definition [ fhir:v "Details of archetyping used on this node." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "LOCATABLE.archetype_details" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/ARCHETYPED"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/ARCHETYPED>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.feeder-audit" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.feeder_audit" ] ;
+       fhir:short [ fhir:v "Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node." ] ;
+       fhir:definition [ fhir:v "Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "LOCATABLE.feeder_audit" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/FEEDER-AUDIT"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/FEEDER-AUDIT>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.language" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.language" ] ;
+       fhir:short [ fhir:v "Mandatory indicator of the localised language in which this Entry is written." ] ;
+       fhir:definition [ fhir:v "Mandatory indicator of the localised language in which this Entry is written. Coded from openEHR Code Set  languages ." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "ENTRY.language" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/CODE-PHRASE>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.encoding" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.encoding" ] ;
+       fhir:short [ fhir:v "Name of character set in which text values in this Entry are encoded." ] ;
+       fhir:definition [ fhir:v "Name of character set in which text values in this Entry are encoded. Coded from openEHR Code Set  character sets." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "ENTRY.encoding" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/CODE-PHRASE>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.other-participations" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.other_participations" ] ;
+       fhir:short [ fhir:v "Other participations at `ENTRY` level." ] ;
+       fhir:definition [ fhir:v "Other participations at `ENTRY` level." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "ENTRY.other_participations" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/PARTICIPATION"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/PARTICIPATION>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.workflow-id" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.workflow_id" ] ;
+       fhir:short [ fhir:v "Identifier of externally held workflow engine data for this workflow execution, for this subject of care." ] ;
+       fhir:definition [ fhir:v "Identifier of externally held workflow engine data for this workflow execution, for this subject of care." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "ENTRY.workflow_id" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/OBJECT-REF>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.subject" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.subject" ] ;
+       fhir:short [ fhir:v "Id of human subject of this `ENTRY`, e." ] ;
+       fhir:definition [ fhir:v "Id of human subject of this `ENTRY`, e.g.: \n\n* organ donor \n* foetus \n* a family member \n* another clinically relevant person." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "ENTRY.subject" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/PARTY-PROXY"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/PARTY-PROXY>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.provider" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.provider" ] ;
+       fhir:short [ fhir:v "Optional identification of provider of the information in this `ENTRY`, which might be: \n\n* the patient \n* a patient agent, e." ] ;
+       fhir:definition [ fhir:v "Optional identification of provider of the information in this `ENTRY`, which might be: \n\n* the patient \n* a patient agent, e.g. parent, guardian \n* the clinician \n* a device or software \n\nGenerally only used when the recorder needs to make it explicit. Otherwise, Composition composer and other participants are assumed." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "ENTRY.provider" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/PARTY-PROXY"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/PARTY-PROXY>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.protocol" ] ;
+       fhir:extension ( [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "name"^^xsd:anyURI ;
+             fhir:l fhir:name
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "element-view-group"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "value"^^xsd:anyURI ;
+             fhir:l fhir:value
+           ] ;
+           fhir:value [
+             a fhir:String ;
+             fhir:v "Protocol"
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/view-hint"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/view-hint>
+         ]
+       ] [
+         fhir:extension ( [
+           fhir:url [
+             fhir:v "name"^^xsd:anyURI ;
+             fhir:l fhir:name
+           ] ;
+           fhir:value [
+             a fhir:Code ;
+             fhir:v "element-view-order"
+           ]
+         ] [
+           fhir:url [
+             fhir:v "value"^^xsd:anyURI ;
+             fhir:l fhir:value
+           ] ;
+           fhir:value [
+             a fhir:Integer ;
+             fhir:v 4
+           ]
+         ] ) ;
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/tools/StructureDefinition/view-hint"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/tools/StructureDefinition/view-hint>
+         ]
+       ] ) ;
+       fhir:path [ fhir:v "INSTRUCTION.protocol" ] ;
+       fhir:short [ fhir:v "Description of the method (i." ] ;
+       fhir:definition [ fhir:v "Description of the method (i.e. how) the information in this entry was arrived at. For `OBSERVATIONs`, this is a description of the method or instrument used. For `EVALUATIONs`, how the evaluation was arrived at. For `INSTRUCTIONs`, how to execute the Instruction. This may take the form of references to guidelines, including manually followed and executable; knowledge references such as a paper in Medline; clinical reasons within a larger care process." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "CARE_ENTRY.protocol" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/ITEM-STRUCTURE"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/ITEM-STRUCTURE>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.guideline-id" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.guideline_id" ] ;
+       fhir:short [ fhir:v "Optional external identifier of guideline creating this Entry if relevant." ] ;
+       fhir:definition [ fhir:v "Optional external identifier of guideline creating this Entry if relevant." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "CARE_ENTRY.guideline_id" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/OBJECT-REF>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.narrative" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.narrative" ] ;
+       fhir:short [ fhir:v "Mandatory human-readable version of what the Instruction is about." ] ;
+       fhir:definition [ fhir:v "Mandatory human-readable version of what the Instruction is about." ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "INSTRUCTION.narrative" ] ;
+         fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/DV-TEXT"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/DV-TEXT>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.expiry-time" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.expiry_time" ] ;
+       fhir:short [ fhir:v "Optional expiry date/time to assist determination of when an Instruction can be assumed to have expired." ] ;
+       fhir:definition [ fhir:v "Optional expiry date/time to assist determination of when an Instruction can be assumed to have expired. This helps prevent false listing of Instructions as Active when they clearly must have been terminated in some way or other." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "INSTRUCTION.expiry_time" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/DV-DATE-TIME"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/DV-DATE-TIME>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.wf-definition" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.wf_definition" ] ;
+       fhir:short [ fhir:v "Optional workflow engine executable expression of the Instruction." ] ;
+       fhir:definition [ fhir:v "Optional workflow engine executable expression of the Instruction." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "INSTRUCTION.wf_definition" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "1" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/DV-PARSABLE"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/DV-PARSABLE>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.activities" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.activities" ] ;
+       fhir:short [ fhir:v "List of all activities in Instruction." ] ;
+       fhir:definition [ fhir:v "List of all activities in Instruction." ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:base [
+         fhir:path [ fhir:v "INSTRUCTION.activities" ] ;
+         fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+         fhir:max [ fhir:v "*" ]
+       ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/ACTIVITY"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/ACTIVITY>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] )
+  ] ; # 
+  fhir:differential [
+     fhir:element ( [
+       fhir:id [ fhir:v "INSTRUCTION" ] ;
+       fhir:path [ fhir:v "INSTRUCTION" ] ;
+       fhir:short [ fhir:v "Used to specify actions in the future." ] ;
+       fhir:definition [ fhir:v "Used to specify actions in the future. Enables simple and complex specifications to be expressed, including in a fully-computable workflow form. Used for any actionable statement such as medication and therapeutic orders, monitoring, recall and review. Enough details must be provided for the specification to be directly executed by an actor, either human or machine. \n\nNot to be used for plan items which are only specified in general terms. " ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:constraint ( [
+         fhir:key [ fhir:v "Activities_valid" ] ;
+         fhir:severity [ fhir:v "error" ] ;
+         fhir:human [ fhir:v "Activities valid must be present" ] ;
+         fhir:expression [ fhir:v "activities.exists() implies activities.empty().not()" ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.narrative" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.narrative" ] ;
+       fhir:short [ fhir:v "Mandatory human-readable version of what the Instruction is about." ] ;
+       fhir:definition [ fhir:v "Mandatory human-readable version of what the Instruction is about. " ] ;
+       fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/DV-TEXT"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/DV-TEXT>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.expiry-time" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.expiry_time" ] ;
+       fhir:short [ fhir:v "Optional expiry date/time to assist determination of when an Instruction can be assumed to have expired." ] ;
+       fhir:definition [ fhir:v "Optional expiry date/time to assist determination of when an Instruction can be assumed to have expired. This helps prevent false listing of Instructions as Active when they clearly must have been terminated in some way or other. " ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/DV-DATE-TIME"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/DV-DATE-TIME>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.wf-definition" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.wf_definition" ] ;
+       fhir:short [ fhir:v "Optional workflow engine executable expression of the Instruction." ] ;
+       fhir:definition [ fhir:v "Optional workflow engine executable expression of the Instruction. " ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "1" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/DV-PARSABLE"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/DV-PARSABLE>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] [
+       fhir:id [ fhir:v "INSTRUCTION.activities" ] ;
+       fhir:path [ fhir:v "INSTRUCTION.activities" ] ;
+       fhir:short [ fhir:v "List of all activities in Instruction." ] ;
+       fhir:definition [ fhir:v "List of all activities in Instruction. \n" ] ;
+       fhir:min [ fhir:v "0"^^xsd:nonNegativeInteger ] ;
+       fhir:max [ fhir:v "*" ] ;
+       fhir:type ( [
+         fhir:code [
+           fhir:v "http://openehr.org/fhir/StructureDefinition/ACTIVITY"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/StructureDefinition/ACTIVITY>
+         ]
+       ] ) ;
+       fhir:isModifier [ fhir:v false ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

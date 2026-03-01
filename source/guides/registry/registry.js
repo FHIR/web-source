@@ -379,7 +379,7 @@ function loadRegistry() {
     var countryOptions = '<select id="country-filter"><option value="any">Any</option>';
     var natureOptions = '<select id="content-filter"><option value="any">Any</option>';
     var releaseOptions = '<select id="release-filter"><option value="any">Any</option><option value="5.0">R5</option><option value="4.3">R4B</option><option value="4.0">R4</option><option value="3.0">R3</option><option value="1.0">R2</option></select>';
-    var productOptions = '<select id="product-filter"><option value="any">Any</option><option value="fhir">FHIR</option><option value="cda">CDA</option><option value="v2">V2</option></select>';
+    var productOptions = '<select id="product-filter"><option value="any">Any</option><option value="fhir">FHIR</option><option value="cda">CDA</option><option value="v2">V2</option><option value="openehr">openEHR</option></select>';
 
     // Add National Base category first
     categoryOptions += '<option value="National Base">National Base</option>';
@@ -447,6 +447,8 @@ function loadRegistry() {
     countryOptions += '<option value="br">Brasil</option>';
     countryOptions += '<option value="ca">Canada</option>';
     countryOptions += '<option value="ch">Switzerland (Schweiz/Suisse/Svizzera)</option>';
+    countryOptions += '<option value="cr">Costa Rica</option>';    
+    countryOptions += '<option value="cz">Czeckia</option>';    
     countryOptions += '<option value="de">Germany (Deutschland)</option>';
     countryOptions += '<option value="dk">Denmark (Danmark)</option>';
     countryOptions += '<option value="fi">Finland (Suomi)</option>';
@@ -459,11 +461,14 @@ function loadRegistry() {
     countryOptions += '<option value="nl">Netherlands (Nederland)</option>';
     countryOptions += '<option value="no">Norway (Norge)</option>';
     countryOptions += '<option value="nz">New Zealand</option>';
+    countryOptions += '<option value="pl">Poland (Polska)</option>';
+    countryOptions += '<option value="es">Spain (Espana)</option>';
     countryOptions += '<option value="se">Sweden (Sverige)</option>';
     countryOptions += '<option value="tw">Taiwan (台灣)</option>';
+    countryOptions += '<option value="uz">Uzbekistan</option>';
 
     // Sort additional countries alphabetically
-    const knownCountries = new Set(['uv', 'eu', 'us', 'at', 'au', 'be', 'br', 'ca', 'ch', 'de', 'dk', 'fi', 'fr', 'gb', 'in', 'it', 'jp', 'kr', 'nl', 'no', 'nz', 'se', 'tw']);
+    const knownCountries = new Set(['uv', 'eu', 'us', 'at', 'au', 'be', 'bd', 'br', 'ca', 'ch', 'cr', 'cz', 'de', 'dk', 'es', 'fi', 'fr', 'gb', 'in', 'it', 'jp', 'kr', 'nl', 'no', 'nz', 'pl', 'se', 'tw', 'uz']);
     var additionalCountries = [];
     for (var country in properties.countries) {
       if (properties.countries.hasOwnProperty(country) && !knownCountries.has(country)) {

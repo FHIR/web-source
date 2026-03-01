@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="ATTESTATION"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureDefinition ATTESTATION</b></p><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-ATTESTATION-definitions.html#ATTESTATION" title="Record an attestation of a party (the committer) to item(s) of record content. An attestation is an explicit signing by one healthcare agent of particular content for various particular purposes, including:
+
+* for authorisation of a controlled substance or procedure (e.g. sectioning of patient under mental health act); 
+* witnessing of content by senior clinical professional; 
+* indicating acknowledgement of content by intended recipient, e.g. GP who ordered a test result. 
+">ATTESTATION</a><a name="ATTESTATION"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;; padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;" href="http://hl7.org/fhir/R5/conformance-rules.html#constraints" title="This element has or is affected by constraints ( Items_valid, Reason_valid )">C</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-AUDIT-DETAILS.html">AUDIT_DETAILS</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Record an attestation of a party (the committer) to item(s) of record content.<br/><br/>Elements defined in Ancestors:<a href="StructureDefinition-AUDIT-DETAILS.html" title="Identifier of the logical EHR system where the change was committed. This is almost always owned by the organisation legally responsible for the EHR, and is distinct from any application, or any hosting infrastructure.">system_id</a>, <a href="StructureDefinition-AUDIT-DETAILS.html" title="Time of committal of the item. ">time_committed</a>, <a href="StructureDefinition-AUDIT-DETAILS.html" title="Type of change. Coded using the openEHR Terminology  audit change type  group.">change_type</a>, <a href="StructureDefinition-AUDIT-DETAILS.html" title="Reason for committal. This may be used to qualify the value in the `_change_type_` field. For example, if the change affects only the EHR directory, this field might be used to indicate 'Folder &quot;episode 2018-02-16&quot; added' or similar.">description</a>, <a href="StructureDefinition-AUDIT-DETAILS.html" title="Identity and optional reference into identity management service, of user who committed the item. ">committer</a><br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="Items valid must be present" class="constraint">Items_valid</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="Reason valid must satisfy conditional constraints" class="constraint">Reason_valid</span><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-ATTESTATION-definitions.html#ATTESTATION.attested-view" title="Optional visual representation of content attested e.g. screen image. ">attested_view</a><a name="ATTESTATION.attested_view"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-DV-MULTIMEDIA.html">DV_MULTIMEDIA</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Optional visual representation of content attested e.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-ATTESTATION-definitions.html#ATTESTATION.proof" title="Proof of attestation. ">proof</a><a name="ATTESTATION.proof"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Proof of attestation.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-ATTESTATION-definitions.html#ATTESTATION.items" title="Items attested, expressed as fully qualified runtime paths to the items in question. Although not recommended, these may include fine-grained items which have been attested in some other system. Otherwise it is assumed to be for the entire VERSION with which it is associated. ">items</a><a name="ATTESTATION.items"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-DV-EHR-URI.html">DV_EHR_URI</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Items attested, expressed as fully qualified runtime paths to the items in question.<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-ATTESTATION-definitions.html#ATTESTATION.reason" title="Reason of this attestation. Optionally coded by the openEHR Terminology group  attestation reason ; includes values like  authorisation ,  witness  etc. ">reason</a><a name="ATTESTATION.reason"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-DV-TEXT.html">DV_TEXT</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Reason of this attestation.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-ATTESTATION-definitions.html#ATTESTATION.is-pending" title="True if this attestation is outstanding; False means it has been completed.">is_pending</a><a name="ATTESTATION.is_pending"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#boolean">boolean</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">True if this attestation is outstanding; False means it has been completed.</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/web-source">
+    <valueUrl value="https://specifications.openehr.org/releases/RM/development/common.html#_attestation_class"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="fhir"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/view-hint">
+    <valueCode value="element-view-replace-cardinality"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="3">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://openehr.org/fhir/ImplementationGuide/openehr.base"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://openehr.org/fhir/ImplementationGuide/openehr.base"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://openehr.org/fhir/StructureDefinition/ATTESTATION"/>
+  <version value="0.1.0-snapshot"/>
+  <name value="ATTESTATION"/>
+  <title value="ATTESTATION"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-09-06T15:35:39+10:00"/>
+  <publisher value="openEHR + HL7"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.openehr.org"/>
+    </telecom>
+  </contact>
+  <description value="Record an attestation of a party (the committer) to item(s) of record content. An attestation is an explicit signing by one healthcare agent of particular content for various particular purposes, including:&#xA;&#xA;* for authorisation of a controlled substance or procedure (e.g. sectioning of patient under mental health act); &#xA;* witnessing of content by senior clinical professional; &#xA;* indicating acknowledgement of content by intended recipient, e.g. GP who ordered a test result. &#xA;"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="5.0.0"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="http://openehr.org/fhir/StructureDefinition/ATTESTATION"/>
+  <baseDefinition value="http://openehr.org/fhir/StructureDefinition/AUDIT-DETAILS"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="0.1.0-snapshot"/>
+    </extension>
+    <element id="ATTESTATION">
+      <path value="ATTESTATION"/>
+      <short value="Record an attestation of a party (the committer) to item(s) of record content."/>
+      <definition value="Record an attestation of a party (the committer) to item(s) of record content. An attestation is an explicit signing by one healthcare agent of particular content for various particular purposes, including:&#xA;&#xA;* for authorisation of a controlled substance or procedure (e.g. sectioning of patient under mental health act); &#xA;* witnessing of content by senior clinical professional; &#xA;* indicating acknowledgement of content by intended recipient, e.g. GP who ordered a test result. &#xA;"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Base"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <constraint>
+        <key value="System_id_valid"/>
+        <severity value="error"/>
+        <human value="System id valid must not be empty"/>
+        <expression value="system_id.empty().not()"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/AUDIT-DETAILS"/>
+      </constraint>
+      <constraint>
+        <key value="Change_type_valid"/>
+        <severity value="error"/>
+        <human value="Change type valid"/>
+        <expression value="null # TODO: manual translation needed"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/AUDIT-DETAILS"/>
+      </constraint>
+      <constraint>
+        <key value="Items_valid"/>
+        <severity value="error"/>
+        <human value="Items valid must be present"/>
+        <expression value="items.exists() implies items.empty().not()"/>
+      </constraint>
+      <constraint>
+        <key value="Reason_valid"/>
+        <severity value="error"/>
+        <human value="Reason valid must satisfy conditional constraints"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="ATTESTATION.system-id">
+      <path value="ATTESTATION.system_id"/>
+      <short value="Identifier of the logical EHR system where the change was committed."/>
+      <definition value="Identifier of the logical EHR system where the change was committed. This is almost always owned by the organisation legally responsible for the EHR, and is distinct from any application, or any hosting infrastructure."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="AUDIT_DETAILS.system_id"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ATTESTATION.time-committed">
+      <path value="ATTESTATION.time_committed"/>
+      <short value="Time of committal of the item."/>
+      <definition value="Time of committal of the item."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="AUDIT_DETAILS.time_committed"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-DATE-TIME"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ATTESTATION.change-type">
+      <path value="ATTESTATION.change_type"/>
+      <short value="Type of change."/>
+      <definition value="Type of change. Coded using the openEHR Terminology  audit change type  group."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="AUDIT_DETAILS.change_type"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-CODED-TEXT"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ATTESTATION.description">
+      <path value="ATTESTATION.description"/>
+      <short value="Reason for committal."/>
+      <definition value="Reason for committal. This may be used to qualify the value in the `_change_type_` field. For example, if the change affects only the EHR directory, this field might be used to indicate 'Folder &quot;episode 2018-02-16&quot; added' or similar."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="AUDIT_DETAILS.description"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-TEXT"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ATTESTATION.committer">
+      <path value="ATTESTATION.committer"/>
+      <short value="Identity and optional reference into identity management service, of user who committed the item."/>
+      <definition value="Identity and optional reference into identity management service, of user who committed the item."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="AUDIT_DETAILS.committer"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/PARTY-PROXY"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ATTESTATION.attested-view">
+      <path value="ATTESTATION.attested_view"/>
+      <short value="Optional visual representation of content attested e."/>
+      <definition value="Optional visual representation of content attested e.g. screen image."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="ATTESTATION.attested_view"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-MULTIMEDIA"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ATTESTATION.proof">
+      <path value="ATTESTATION.proof"/>
+      <short value="Proof of attestation."/>
+      <definition value="Proof of attestation."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="ATTESTATION.proof"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ATTESTATION.items">
+      <path value="ATTESTATION.items"/>
+      <short value="Items attested, expressed as fully qualified runtime paths to the items in question."/>
+      <definition value="Items attested, expressed as fully qualified runtime paths to the items in question. Although not recommended, these may include fine-grained items which have been attested in some other system. Otherwise it is assumed to be for the entire VERSION with which it is associated."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="ATTESTATION.items"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-EHR-URI"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ATTESTATION.reason">
+      <path value="ATTESTATION.reason"/>
+      <short value="Reason of this attestation."/>
+      <definition value="Reason of this attestation. Optionally coded by the openEHR Terminology group  attestation reason ; includes values like  authorisation ,  witness  etc."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="ATTESTATION.reason"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-TEXT"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ATTESTATION.is-pending">
+      <path value="ATTESTATION.is_pending"/>
+      <short value="True if this attestation is outstanding; False means it has been completed."/>
+      <definition value="True if this attestation is outstanding; False means it has been completed."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="ATTESTATION.is_pending"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="ATTESTATION">
+      <path value="ATTESTATION"/>
+      <short value="Record an attestation of a party (the committer) to item(s) of record content."/>
+      <definition value="Record an attestation of a party (the committer) to item(s) of record content. An attestation is an explicit signing by one healthcare agent of particular content for various particular purposes, including:&#xA;&#xA;* for authorisation of a controlled substance or procedure (e.g. sectioning of patient under mental health act); &#xA;* witnessing of content by senior clinical professional; &#xA;* indicating acknowledgement of content by intended recipient, e.g. GP who ordered a test result. &#xA;"/>
+      <min value="0"/>
+      <max value="*"/>
+      <constraint>
+        <key value="Items_valid"/>
+        <severity value="error"/>
+        <human value="Items valid must be present"/>
+        <expression value="items.exists() implies items.empty().not()"/>
+      </constraint>
+      <constraint>
+        <key value="Reason_valid"/>
+        <severity value="error"/>
+        <human value="Reason valid must satisfy conditional constraints"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <isModifier value="false"/>
+    </element>
+    <element id="ATTESTATION.attested-view">
+      <path value="ATTESTATION.attested_view"/>
+      <short value="Optional visual representation of content attested e."/>
+      <definition value="Optional visual representation of content attested e.g. screen image. "/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-MULTIMEDIA"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ATTESTATION.proof">
+      <path value="ATTESTATION.proof"/>
+      <short value="Proof of attestation."/>
+      <definition value="Proof of attestation. "/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ATTESTATION.items">
+      <path value="ATTESTATION.items"/>
+      <short value="Items attested, expressed as fully qualified runtime paths to the items in question."/>
+      <definition value="Items attested, expressed as fully qualified runtime paths to the items in question. Although not recommended, these may include fine-grained items which have been attested in some other system. Otherwise it is assumed to be for the entire VERSION with which it is associated. "/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-EHR-URI"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ATTESTATION.reason">
+      <path value="ATTESTATION.reason"/>
+      <short value="Reason of this attestation."/>
+      <definition value="Reason of this attestation. Optionally coded by the openEHR Terminology group  attestation reason ; includes values like  authorisation ,  witness  etc. "/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-TEXT"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ATTESTATION.is-pending">
+      <path value="ATTESTATION.is_pending"/>
+      <short value="True if this attestation is outstanding; False means it has been completed."/>
+      <definition value="True if this attestation is outstanding; False means it has been completed."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

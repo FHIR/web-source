@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="INSTRUCTION"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureDefinition INSTRUCTION</b></p><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-INSTRUCTION-definitions.html#INSTRUCTION" title="Used to specify actions in the future. Enables simple and complex specifications to be expressed, including in a fully-computable workflow form. Used for any actionable statement such as medication and therapeutic orders, monitoring, recall and review. Enough details must be provided for the specification to be directly executed by an actor, either human or machine. 
+
+Not to be used for plan items which are only specified in general terms. ">INSTRUCTION</a><a name="INSTRUCTION"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;; padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;" href="http://hl7.org/fhir/R5/conformance-rules.html#constraints" title="This element has or is affected by constraints ( Activities_valid )">C</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-CARE-ENTRY.html">CARE_ENTRY</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Used to specify actions in the future.<br/><br/>Elements defined in Ancestors:<a href="StructureDefinition-LOCATABLE.html" title="Runtime name of this fragment, used to build runtime paths. This is the term provided via a clinical application or batch process to name this EHR construct: its retention in the EHR faithfully preserves the original label by which this entry was known to end users. 
+">name</a>, <a href="StructureDefinition-LOCATABLE.html" title="Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths. Always in the form of an at-code, e.g.  `at0005`. This value enables a 'standardised' name for this node to be generated, by referring to the generating archetype local terminology. 
+
+At an archetype root point, the value of this attribute is always the stringified form of the `_archetype_id_` found in the `_archetype_details_` object. 
+">archetype_node_id</a>, <a href="StructureDefinition-LOCATABLE.html" title="Optional globally unique object identifier for root points of archetyped structures. ">uid</a>, <a href="StructureDefinition-LOCATABLE.html" title="Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions. ">links</a>, <a href="StructureDefinition-LOCATABLE.html" title="Details of archetyping used on this node.">archetype_details</a>, <a href="StructureDefinition-LOCATABLE.html" title="Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node. ">feeder_audit</a>, <a href="StructureDefinition-ENTRY.html" title="Mandatory indicator of the localised language in which this Entry is written. Coded from openEHR Code Set  languages . ">language</a>, <a href="StructureDefinition-ENTRY.html" title="Name of character set in which text values in this Entry are encoded. Coded from openEHR Code Set  character sets.">encoding</a>, <a href="StructureDefinition-ENTRY.html" title="Other participations at `ENTRY` level. ">other_participations</a>, <a href="StructureDefinition-ENTRY.html" title="Identifier of externally held workflow engine data for this workflow execution, for this subject of care.">workflow_id</a>, <a href="StructureDefinition-ENTRY.html" title="Id of human subject of this `ENTRY`, e.g.: 
+
+* organ donor 
+* foetus 
+* a family member 
+* another clinically relevant person.">subject</a>, <a href="StructureDefinition-ENTRY.html" title="Optional identification of provider of the information in this `ENTRY`, which might be: 
+
+* the patient 
+* a patient agent, e.g. parent, guardian 
+* the clinician 
+* a device or software 
+
+Generally only used when the recorder needs to make it explicit. Otherwise, Composition composer and other participants are assumed. 
+">provider</a>, <a href="StructureDefinition-CARE-ENTRY.html" title="Description of the method (i.e. how) the information in this entry was arrived at. For `OBSERVATIONs`, this is a description of the method or instrument used. For `EVALUATIONs`, how the evaluation was arrived at. For `INSTRUCTIONs`, how to execute the Instruction. This may take the form of references to guidelines, including manually followed and executable; knowledge references such as a paper in Medline; clinical reasons within a larger care process. ">protocol</a>, <a href="StructureDefinition-CARE-ENTRY.html" title="Optional external identifier of guideline creating this Entry if relevant.">guideline_id</a><br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="Activities valid must be present" class="constraint">Activities_valid</span><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-INSTRUCTION-definitions.html#INSTRUCTION.narrative" title="Mandatory human-readable version of what the Instruction is about. ">narrative</a><a name="INSTRUCTION.narrative"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-DV-TEXT.html">DV_TEXT</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Mandatory human-readable version of what the Instruction is about.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-INSTRUCTION-definitions.html#INSTRUCTION.expiry-time" title="Optional expiry date/time to assist determination of when an Instruction can be assumed to have expired. This helps prevent false listing of Instructions as Active when they clearly must have been terminated in some way or other. ">expiry_time</a><a name="INSTRUCTION.expiry_time"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-DV-DATE-TIME.html">DV_DATE_TIME</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Optional expiry date/time to assist determination of when an Instruction can be assumed to have expired.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-INSTRUCTION-definitions.html#INSTRUCTION.wf-definition" title="Optional workflow engine executable expression of the Instruction. ">wf_definition</a><a name="INSTRUCTION.wf_definition"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-DV-PARSABLE.html">DV_PARSABLE</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Optional workflow engine executable expression of the Instruction.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-INSTRUCTION-definitions.html#INSTRUCTION.activities" title="List of all activities in Instruction. 
+">activities</a><a name="INSTRUCTION.activities"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-ACTIVITY.html">ACTIVITY</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">List of all activities in Instruction.<br/></td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/web-source">
+    <valueUrl value="https://specifications.openehr.org/releases/RM/development/ehr.html#_instruction_class"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="fhir"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#subject_is_self"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/view-hint">
+    <valueCode value="element-view-replace-cardinality"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="3">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://openehr.org/fhir/ImplementationGuide/openehr.base"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://openehr.org/fhir/ImplementationGuide/openehr.base"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://openehr.org/fhir/StructureDefinition/INSTRUCTION"/>
+  <version value="0.1.0-snapshot"/>
+  <name value="INSTRUCTION"/>
+  <title value="INSTRUCTION"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-09-06T15:35:39+10:00"/>
+  <publisher value="openEHR + HL7"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.openehr.org"/>
+    </telecom>
+  </contact>
+  <description value="Used to specify actions in the future. Enables simple and complex specifications to be expressed, including in a fully-computable workflow form. Used for any actionable statement such as medication and therapeutic orders, monitoring, recall and review. Enough details must be provided for the specification to be directly executed by an actor, either human or machine. &#xA;&#xA;Not to be used for plan items which are only specified in general terms. "/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="5.0.0"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="http://openehr.org/fhir/StructureDefinition/INSTRUCTION"/>
+  <baseDefinition value="http://openehr.org/fhir/StructureDefinition/CARE-ENTRY"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="0.1.0-snapshot"/>
+    </extension>
+    <element id="INSTRUCTION">
+      <path value="INSTRUCTION"/>
+      <short value="Used to specify actions in the future."/>
+      <definition value="Used to specify actions in the future. Enables simple and complex specifications to be expressed, including in a fully-computable workflow form. Used for any actionable statement such as medication and therapeutic orders, monitoring, recall and review. Enough details must be provided for the specification to be directly executed by an actor, either human or machine. &#xA;&#xA;Not to be used for plan items which are only specified in general terms. "/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Base"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <constraint>
+        <key value="Links_valid"/>
+        <severity value="error"/>
+        <human value="Links valid must be present"/>
+        <expression value="links.exists() implies links.empty().not()"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/LOCATABLE"/>
+      </constraint>
+      <constraint>
+        <key value="Archetyped_valid"/>
+        <severity value="error"/>
+        <human value="Archetyped valid must satisfy exclusive conditions"/>
+        <expression value="is_archetype_root() xor archetype_details .empty()"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/LOCATABLE"/>
+      </constraint>
+      <constraint>
+        <key value="Archetype_node_id_valid"/>
+        <severity value="error"/>
+        <human value="Archetype node id valid must not be empty"/>
+        <expression value="archetype_node_id.empty().not()"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/LOCATABLE"/>
+      </constraint>
+      <constraint>
+        <key value="Subject_validity"/>
+        <severity value="error"/>
+        <human value="Subject validity must satisfy conditional constraints"/>
+        <expression value="subject_is_self() implies subject.generating_type = “PARTY_SELF”"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/ENTRY"/>
+      </constraint>
+      <constraint>
+        <key value="Other_participations_valid"/>
+        <severity value="error"/>
+        <human value="Other participations valid must be present"/>
+        <expression value="other_participations.exists() implies other_participations.empty().not()"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/ENTRY"/>
+      </constraint>
+      <constraint>
+        <key value="Is_archetype_root"/>
+        <severity value="error"/>
+        <human value="Is archetype root"/>
+        <expression value="is_archetype_root()"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/ENTRY"/>
+      </constraint>
+      <constraint>
+        <key value="Activities_valid"/>
+        <severity value="error"/>
+        <human value="Activities valid must be present"/>
+        <expression value="activities.exists() implies activities.empty().not()"/>
+      </constraint>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="INSTRUCTION.name">
+      <path value="INSTRUCTION.name"/>
+      <short value="Runtime name of this fragment, used to build runtime paths."/>
+      <definition value="Runtime name of this fragment, used to build runtime paths. This is the term provided via a clinical application or batch process to name this EHR construct: its retention in the EHR faithfully preserves the original label by which this entry was known to end users."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="LOCATABLE.name"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-TEXT"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.archetype-node-id">
+      <path value="INSTRUCTION.archetype_node_id"/>
+      <short value="Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths."/>
+      <definition value="Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths. Always in the form of an at-code, e.g.  `at0005`. This value enables a 'standardised' name for this node to be generated, by referring to the generating archetype local terminology. &#xA;&#xA;At an archetype root point, the value of this attribute is always the stringified form of the `_archetype_id_` found in the `_archetype_details_` object."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="LOCATABLE.archetype_node_id"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.uid">
+      <path value="INSTRUCTION.uid"/>
+      <short value="Optional globally unique object identifier for root points of archetyped structures."/>
+      <definition value="Optional globally unique object identifier for root points of archetyped structures."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="LOCATABLE.uid"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/UID-BASED-ID"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.links">
+      <path value="INSTRUCTION.links"/>
+      <short value="Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on)."/>
+      <definition value="Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="LOCATABLE.links"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/LINK"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.archetype-details">
+      <path value="INSTRUCTION.archetype_details"/>
+      <short value="Details of archetyping used on this node."/>
+      <definition value="Details of archetyping used on this node."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="LOCATABLE.archetype_details"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/ARCHETYPED"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.feeder-audit">
+      <path value="INSTRUCTION.feeder_audit"/>
+      <short value="Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node."/>
+      <definition value="Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="LOCATABLE.feeder_audit"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/FEEDER-AUDIT"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.language">
+      <path value="INSTRUCTION.language"/>
+      <short value="Mandatory indicator of the localised language in which this Entry is written."/>
+      <definition value="Mandatory indicator of the localised language in which this Entry is written. Coded from openEHR Code Set  languages ."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="ENTRY.language"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.encoding">
+      <path value="INSTRUCTION.encoding"/>
+      <short value="Name of character set in which text values in this Entry are encoded."/>
+      <definition value="Name of character set in which text values in this Entry are encoded. Coded from openEHR Code Set  character sets."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="ENTRY.encoding"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.other-participations">
+      <path value="INSTRUCTION.other_participations"/>
+      <short value="Other participations at `ENTRY` level."/>
+      <definition value="Other participations at `ENTRY` level."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="ENTRY.other_participations"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/PARTICIPATION"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.workflow-id">
+      <path value="INSTRUCTION.workflow_id"/>
+      <short value="Identifier of externally held workflow engine data for this workflow execution, for this subject of care."/>
+      <definition value="Identifier of externally held workflow engine data for this workflow execution, for this subject of care."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="ENTRY.workflow_id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/OBJECT-REF"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.subject">
+      <path value="INSTRUCTION.subject"/>
+      <short value="Id of human subject of this `ENTRY`, e."/>
+      <definition value="Id of human subject of this `ENTRY`, e.g.: &#xA;&#xA;* organ donor &#xA;* foetus &#xA;* a family member &#xA;* another clinically relevant person."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="ENTRY.subject"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/PARTY-PROXY"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.provider">
+      <path value="INSTRUCTION.provider"/>
+      <short value="Optional identification of provider of the information in this `ENTRY`, which might be: &#xA;&#xA;* the patient &#xA;* a patient agent, e."/>
+      <definition value="Optional identification of provider of the information in this `ENTRY`, which might be: &#xA;&#xA;* the patient &#xA;* a patient agent, e.g. parent, guardian &#xA;* the clinician &#xA;* a device or software &#xA;&#xA;Generally only used when the recorder needs to make it explicit. Otherwise, Composition composer and other participants are assumed."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="ENTRY.provider"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/PARTY-PROXY"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.protocol">
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/view-hint">
+        <extension url="name">
+          <valueCode value="element-view-group"/>
+        </extension>
+        <extension url="value">
+          <valueString value="Protocol"/>
+        </extension>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/view-hint">
+        <extension url="name">
+          <valueCode value="element-view-order"/>
+        </extension>
+        <extension url="value">
+          <valueInteger value="4"/>
+        </extension>
+      </extension>
+      <path value="INSTRUCTION.protocol"/>
+      <short value="Description of the method (i."/>
+      <definition value="Description of the method (i.e. how) the information in this entry was arrived at. For `OBSERVATIONs`, this is a description of the method or instrument used. For `EVALUATIONs`, how the evaluation was arrived at. For `INSTRUCTIONs`, how to execute the Instruction. This may take the form of references to guidelines, including manually followed and executable; knowledge references such as a paper in Medline; clinical reasons within a larger care process."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="CARE_ENTRY.protocol"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/ITEM-STRUCTURE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.guideline-id">
+      <path value="INSTRUCTION.guideline_id"/>
+      <short value="Optional external identifier of guideline creating this Entry if relevant."/>
+      <definition value="Optional external identifier of guideline creating this Entry if relevant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="CARE_ENTRY.guideline_id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/OBJECT-REF"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.narrative">
+      <path value="INSTRUCTION.narrative"/>
+      <short value="Mandatory human-readable version of what the Instruction is about."/>
+      <definition value="Mandatory human-readable version of what the Instruction is about."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="INSTRUCTION.narrative"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-TEXT"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.expiry-time">
+      <path value="INSTRUCTION.expiry_time"/>
+      <short value="Optional expiry date/time to assist determination of when an Instruction can be assumed to have expired."/>
+      <definition value="Optional expiry date/time to assist determination of when an Instruction can be assumed to have expired. This helps prevent false listing of Instructions as Active when they clearly must have been terminated in some way or other."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="INSTRUCTION.expiry_time"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-DATE-TIME"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.wf-definition">
+      <path value="INSTRUCTION.wf_definition"/>
+      <short value="Optional workflow engine executable expression of the Instruction."/>
+      <definition value="Optional workflow engine executable expression of the Instruction."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="INSTRUCTION.wf_definition"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-PARSABLE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.activities">
+      <path value="INSTRUCTION.activities"/>
+      <short value="List of all activities in Instruction."/>
+      <definition value="List of all activities in Instruction."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="INSTRUCTION.activities"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/ACTIVITY"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="INSTRUCTION">
+      <path value="INSTRUCTION"/>
+      <short value="Used to specify actions in the future."/>
+      <definition value="Used to specify actions in the future. Enables simple and complex specifications to be expressed, including in a fully-computable workflow form. Used for any actionable statement such as medication and therapeutic orders, monitoring, recall and review. Enough details must be provided for the specification to be directly executed by an actor, either human or machine. &#xA;&#xA;Not to be used for plan items which are only specified in general terms. "/>
+      <min value="0"/>
+      <max value="*"/>
+      <constraint>
+        <key value="Activities_valid"/>
+        <severity value="error"/>
+        <human value="Activities valid must be present"/>
+        <expression value="activities.exists() implies activities.empty().not()"/>
+      </constraint>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.narrative">
+      <path value="INSTRUCTION.narrative"/>
+      <short value="Mandatory human-readable version of what the Instruction is about."/>
+      <definition value="Mandatory human-readable version of what the Instruction is about. "/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-TEXT"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.expiry-time">
+      <path value="INSTRUCTION.expiry_time"/>
+      <short value="Optional expiry date/time to assist determination of when an Instruction can be assumed to have expired."/>
+      <definition value="Optional expiry date/time to assist determination of when an Instruction can be assumed to have expired. This helps prevent false listing of Instructions as Active when they clearly must have been terminated in some way or other. "/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-DATE-TIME"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.wf-definition">
+      <path value="INSTRUCTION.wf_definition"/>
+      <short value="Optional workflow engine executable expression of the Instruction."/>
+      <definition value="Optional workflow engine executable expression of the Instruction. "/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-PARSABLE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="INSTRUCTION.activities">
+      <path value="INSTRUCTION.activities"/>
+      <short value="List of all activities in Instruction."/>
+      <definition value="List of all activities in Instruction. &#xA;"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/ACTIVITY"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

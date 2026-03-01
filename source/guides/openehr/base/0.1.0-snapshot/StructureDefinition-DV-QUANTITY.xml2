@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="DV-QUANTITY"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureDefinition DV-QUANTITY</b></p><a name="DV-QUANTITY"> </a><a name="hcDV-QUANTITY"> </a><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-DV-QUANTITY-definitions.html#DV_QUANTITY" title="Quantitified type representing  scientific  quantities, i.e. quantities expressed as a magnitude and units. Units are expressed in the UCUM syntax (http://unitsofmeasure.org/ucum.html[Unified Code for Units of Measure (UCUM)], by Gunther Schadow and Clement J. McDonald of The Regenstrief Institute)  (case-sensitive form) by default, or another system if `_units_system_` is set. 
+
+Can also be used for time durations, where it is more convenient to treat these as simply a number of seconds rather than days, months, years (in the latter case, `DV_DURATION` may be used).">DV_QUANTITY</a><a name="DV_QUANTITY"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-DV-AMOUNT.html">DV_AMOUNT</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Quantitified type representing  scientific  quantities, i.<br/><br/>Elements defined in Ancestors:<a href="StructureDefinition-BASIC-DEFINITIONS.html" title="Carriage return character.">CR</a>, <a href="StructureDefinition-BASIC-DEFINITIONS.html" title="Line feed character.">LF</a>, <a href="StructureDefinition-OPENEHR-DEFINITIONS.html" title="Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype">Local_terminology_id</a>, <a href="StructureDefinition-DV-ORDERED.html" title="Optional normal status indicator of value with respect to normal range for this value. Often included by lab, even if the normal range itself is not included. Coded by ordinals in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group  `normal_status`. ">normal_status</a>, <a href="StructureDefinition-DV-ORDERED.html" title="Optional normal range. ">normal_range</a>, <a href="StructureDefinition-DV-ORDERED.html" title="Optional tagged other reference ranges for this value in its particular measurement context.">other_reference_ranges</a>, <a href="StructureDefinition-DV-QUANTIFIED.html" title="Optional status of magnitude with values: 
+
+* `&quot;=&quot;`   :   magnitude is a point value 
+* `&quot;&lt;&quot;`   :   value is &lt; magnitude 
+* `&quot;&gt;&quot;`   :   value is &gt; magnitude 
+* `&quot;&lt;=&quot;` : value is &lt;= magnitude 
+* `&quot;&gt;=&quot;` : value is &gt;= magnitude 
+* `&quot;~&quot;`   :   value is approximately magnitude 
+
+If not present, assumed meaning is  `&quot;=&quot;` . 
+">magnitude_status</a>, <a href="StructureDefinition-DV-QUANTIFIED.html" title="Accuracy of measurement. Exact form of expression determined in descendants.">accuracy</a>, <a href="StructureDefinition-DV-AMOUNT.html" title="If `True`, indicates that when this object was created, `_accuracy_` was recorded as a percent value; if `False`, as an absolute quantity value.">accuracy_is_percent</a>, <a href="StructureDefinition-DV-AMOUNT.html" title="Accuracy of measurement, expressed either as a half-range percent value (`_accuracy_is_percent_` = `True`) or a half-range quantity. A value of `0` means that accuracy is 100%, i.e. no error.
+
+A value of `_unknown_accuracy_value_` means that accuracy was not recorded.">accuracy</a><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-DV-QUANTITY-definitions.html#DV_QUANTITY.magnitude" title="Numeric magnitude of the quantity.">magnitude</a><a name="DV_QUANTITY.magnitude"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#decimal">decimal</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Numeric magnitude of the quantity.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-DV-QUANTITY-definitions.html#DV_QUANTITY.precision" title="Precision to which the value of the quantity is expressed, in terms of number of decimal places. The value 0 implies an integral quantity.
+The value -1 implies no limit, i.e. any number of decimal places.">precision</a><a name="DV_QUANTITY.precision"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#integer">integer</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Precision to which the value of the quantity is expressed, in terms of number of decimal places.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-DV-QUANTITY-definitions.html#DV_QUANTITY.units" title="Quantity units, expressed as a code or syntax string from either UCUM (the default) or the units system specified in `_units_system_`, when set.
+
+In either case, the value is the code or syntax - normally formed of standard ASCII - which is in principal not the same as the display string, although in simple cases such as 'm' (for meters) it will be.
+
+If the `_units_display_name_` field is set, this may be used for display. If not, the implementations must effect the resolution of the `_units_` value to a display form locally, e.g. by lookup of reference tables, request to a terminology service etc.
+
+Example values from UCUM: &quot;kg/m^2&quot;, “mm[Hg]&quot;, &quot;ms-1&quot;, &quot;km/h&quot;.">units</a><a name="DV_QUANTITY.units"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Quantity units, expressed as a code or syntax string from either UCUM (the default) or the units system specified in `_units_system_`, when set.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-DV-QUANTITY-definitions.html#DV_QUANTITY.normal-range" title="Optional normal range. ">normal_range</a><a name="DV_QUANTITY.normal_range"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-DV-INTERVAL.html">DV_INTERVAL</a>&lt;<a href="StructureDefinition-DV-QUANTITY.html">DV_QUANTITY</a>&gt;</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Optional normal range.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-DV-QUANTITY-definitions.html#DV_QUANTITY.other-reference-ranges" title="Optional tagged other reference ranges for this value in its particular measurement context.">other_reference_ranges</a><a name="DV_QUANTITY.other_reference_ranges"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-REFERENCE-RANGE.html">REFERENCE_RANGE</a>&lt;<a href="StructureDefinition-DV-QUANTITY.html">DV_QUANTITY</a>&gt;</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Optional tagged other reference ranges for this value in its particular measurement context.<br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-DV-QUANTITY-definitions.html#DV_QUANTITY.units-system" title="Optional field used to specify a units system from which codes in `_units_` are defined. Value is a URI identifying a terminology containing units concepts from the  (https://www.hl7.org/fhir/terminologies-systems.html[HL7 FHIR terminologies list]).
+
+If not set, the UCUM standard (case-sensitive codes) is assumed as the units system.">units_system</a><a name="DV_QUANTITY.units_system"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Optional field used to specify a units system from which codes in `_units_` are defined.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-DV-QUANTITY-definitions.html#DV_QUANTITY.units-display-name" title="Optional field containing the displayable form of the `_units_` field, e.g. `'°C'`.
+
+If not set, the application environment needs to determine the displayable form.
+
+NOTE: The display name may be language-dependent for various older and non-systematic units. For this reason, it is not recommended to add unit display names to archetypes, only to templates (for localisation purposes).">units_display_name</a><a name="DV_QUANTITY.units_display_name"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#string">string</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Optional field containing the displayable form of the `_units_` field, e.</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <contained>
+    <OperationDefinition>
+      <id value="add"/>
+      <name value="add"/>
+      <title value="add"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Sum of this `DV_QUANTITY` and `_other_`."/>
+      <code value="add"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="other"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="decimal"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="decimal"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="subtract"/>
+      <name value="subtract"/>
+      <title value="subtract"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Difference of this `DV_QUANTITY` and `_other_`."/>
+      <code value="subtract"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="other"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="decimal"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="decimal"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="multiply"/>
+      <name value="multiply"/>
+      <title value="multiply"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Product of this `DV_QUANTITY` and `_factor_`."/>
+      <code value="multiply"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="factor"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="decimal"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="decimal"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="less_than"/>
+      <name value="less_than"/>
+      <title value="less_than"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="True if this Quantity object is less than `_other_`, based on comparison of `_magnitude_`. Only valid if `_is_strictly_comparable_to()_` is True."/>
+      <code value="less_than"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="other"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="decimal"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="boolean"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="is_integral"/>
+      <name value="is_integral"/>
+      <title value="is_integral"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="True if `_precision_` = 0, meaning that the `_magnitude_` is a whole number."/>
+      <code value="is_integral"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="boolean"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="is_strictly_comparable_to"/>
+      <name value="is_strictly_comparable_to"/>
+      <title value="is_strictly_comparable_to"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="True if this quantity and `_other_` have the same `_units_` and also `_units_system_` if it exists."/>
+      <code value="is_strictly_comparable_to"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="other"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="Parameters"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="boolean"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/web-source">
+    <valueUrl value="https://specifications.openehr.org/releases/RM/Release-1.1.0/data_types.html#_dv_quantity_class"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#add"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#subtract"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#multiply"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#less_than"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#is_integral"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#is_strictly_comparable_to"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="fhir"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/view-hint">
+    <valueCode value="element-view-as-leaf"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/view-hint">
+    <valueCode value="element-view-defns-parent"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/view-hint">
+    <valueCode value="element-view-replace-cardinality"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="3">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://openehr.org/fhir/ImplementationGuide/openehr.base"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://openehr.org/fhir/ImplementationGuide/openehr.base"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://openehr.org/fhir/StructureDefinition/DV-QUANTITY"/>
+  <version value="0.1.0-snapshot"/>
+  <name value="DV_QUANTITY"/>
+  <title value="DV_QUANTITY"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-09-06T15:35:39+10:00"/>
+  <publisher value="openEHR + HL7"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.openehr.org"/>
+    </telecom>
+  </contact>
+  <description value="Quantitified type representing  scientific  quantities, i.e. quantities expressed as a magnitude and units. Units are expressed in the UCUM syntax (http://unitsofmeasure.org/ucum.html[Unified Code for Units of Measure (UCUM)], by Gunther Schadow and Clement J. McDonald of The Regenstrief Institute)  (case-sensitive form) by default, or another system if `_units_system_` is set. &#xA;&#xA;Can also be used for time durations, where it is more convenient to treat these as simply a number of seconds rather than days, months, years (in the latter case, `DV_DURATION` may be used)."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="5.0.0"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="http://openehr.org/fhir/StructureDefinition/DV_QUANTITY"/>
+  <baseDefinition value="http://openehr.org/fhir/StructureDefinition/DV-AMOUNT"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="0.1.0-snapshot"/>
+    </extension>
+    <element id="DV_QUANTITY">
+      <path value="DV_QUANTITY"/>
+      <short value="Quantitified type representing  scientific  quantities, i."/>
+      <definition value="Quantitified type representing  scientific  quantities, i.e. quantities expressed as a magnitude and units. Units are expressed in the UCUM syntax (http://unitsofmeasure.org/ucum.html[Unified Code for Units of Measure (UCUM)], by Gunther Schadow and Clement J. McDonald of The Regenstrief Institute)  (case-sensitive form) by default, or another system if `_units_system_` is set. &#xA;&#xA;Can also be used for time durations, where it is more convenient to treat these as simply a number of seconds rather than days, months, years (in the latter case, `DV_DURATION` may be used)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Base"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <constraint>
+        <key value="Other_reference_ranges_validity"/>
+        <severity value="error"/>
+        <human value="Other reference ranges validity must be present"/>
+        <expression value="other_reference_ranges.exists() implies other_reference_ranges.empty().not()"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/DV-ORDERED"/>
+      </constraint>
+      <constraint>
+        <key value="Is_simple_validity"/>
+        <severity value="error"/>
+        <human value="Is simple validity must satisfy conditional constraints"/>
+        <expression value="(normal_range .empty() and other_reference_ranges .empty()) implies is_simple()"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/DV-ORDERED"/>
+      </constraint>
+      <constraint>
+        <key value="Normal_range_and_status_consistency"/>
+        <severity value="error"/>
+        <human value="Normal range and status consistency must be present"/>
+        <expression value="(normal_range.exists() and normal_status.exists()) implies (normal_status.code_string.is_equal (“N”) xor normal_range.not().has (self))"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/DV-ORDERED"/>
+      </constraint>
+      <constraint>
+        <key value="Magnitude_status_valid"/>
+        <severity value="error"/>
+        <human value="Magnitude status valid must be present"/>
+        <expression value="magnitude_status.exists() implies valid_magnitude_status() (magnitude_status)"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/DV-QUANTIFIED"/>
+      </constraint>
+      <constraint>
+        <key value="Accuracy_is_percent_validity"/>
+        <severity value="error"/>
+        <human value="Accuracy is percent validity must satisfy conditional constraints"/>
+        <expression value="accuracy = 0 implies accuracy_is_percent.not()"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/DV-AMOUNT"/>
+      </constraint>
+      <constraint>
+        <key value="Accuracy_validity"/>
+        <severity value="error"/>
+        <human value="Accuracy validity must satisfy conditional constraints"/>
+        <expression value="accuracy_is_percent implies valid_percentage() (accuracy)"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/DV-AMOUNT"/>
+      </constraint>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="DV_QUANTITY.CR">
+      <path value="DV_QUANTITY.CR"/>
+      <short value="Carriage return character."/>
+      <definition value="Carriage return character."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="BASIC_DEFINITIONS.CR"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.LF">
+      <path value="DV_QUANTITY.LF"/>
+      <short value="Line feed character."/>
+      <definition value="Line feed character."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="BASIC_DEFINITIONS.LF"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.Local-terminology-id">
+      <path value="DV_QUANTITY.Local_terminology_id"/>
+      <short value="Predefined terminology identifier"/>
+      <definition value="Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="OPENEHR_DEFINITIONS.Local_terminology_id"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.normal-status">
+      <path value="DV_QUANTITY.normal_status"/>
+      <short value="Optional normal status indicator of value with respect to normal range for this value."/>
+      <definition value="Optional normal status indicator of value with respect to normal range for this value. Often included by lab, even if the normal range itself is not included. Coded by ordinals in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group  `normal_status`."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_ORDERED.normal_status"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.normal-range">
+      <path value="DV_QUANTITY.normal_range"/>
+      <short value="Optional normal range."/>
+      <definition value="Optional normal range. "/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_ORDERED.normal_range"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-parameter">
+          <extension url="name">
+            <valueCode value="T"/>
+          </extension>
+          <extension url="type">
+            <valueUri value="http://openehr.org/fhir/StructureDefinition/DV-QUANTITY"/>
+          </extension>
+        </extension>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-INTERVAL"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.other-reference-ranges">
+      <path value="DV_QUANTITY.other_reference_ranges"/>
+      <short value="Optional tagged other reference ranges for this value in its particular measurement context."/>
+      <definition value="Optional tagged other reference ranges for this value in its particular measurement context."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DV_ORDERED.other_reference_ranges"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-parameter">
+          <extension url="name">
+            <valueCode value="T"/>
+          </extension>
+          <extension url="type">
+            <valueUri value="http://openehr.org/fhir/StructureDefinition/DV-QUANTITY"/>
+          </extension>
+        </extension>
+        <code value="http://openehr.org/fhir/StructureDefinition/REFERENCE-RANGE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.magnitude-status">
+      <path value="DV_QUANTITY.magnitude_status"/>
+      <short value="Optional status of magnitude with values: &#xA;&#xA;* `&quot;=&quot;`   :   magnitude is a point value &#xA;* `&quot;&lt;&quot;`   :   value is &lt; magnitude &#xA;* `&quot;&gt;&quot;`   :   value is &gt; magnitude &#xA;* `&quot;&lt;=&quot;` : value is &lt;= magnitude &#xA;* `&quot;&gt;=&quot;` : value is &gt;= magnitude &#xA;* `&quot;~&quot;`   :   value is approximately magnitude &#xA;&#xA;If not present, assumed meaning is  `&quot;=&quot;` ."/>
+      <definition value="Optional status of magnitude with values: &#xA;&#xA;* `&quot;=&quot;`   :   magnitude is a point value &#xA;* `&quot;&lt;&quot;`   :   value is &lt; magnitude &#xA;* `&quot;&gt;&quot;`   :   value is &gt; magnitude &#xA;* `&quot;&lt;=&quot;` : value is &lt;= magnitude &#xA;* `&quot;&gt;=&quot;` : value is &gt;= magnitude &#xA;* `&quot;~&quot;`   :   value is approximately magnitude &#xA;&#xA;If not present, assumed meaning is  `&quot;=&quot;` ."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_QUANTIFIED.magnitude_status"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.accuracy">
+      <path value="DV_QUANTITY.accuracy"/>
+      <short value="Accuracy of measurement, expressed either as a half-range percent value (`_accuracy_is_percent_` = `True`) or a half-range quantity."/>
+      <definition value="Accuracy of measurement, expressed either as a half-range percent value (`_accuracy_is_percent_` = `True`) or a half-range quantity. A value of `0` means that accuracy is 100%, i.e. no error.&#xA;&#xA;A value of `_unknown_accuracy_value_` means that accuracy was not recorded."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_QUANTIFIED.accuracy"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.accuracy-is-percent">
+      <path value="DV_QUANTITY.accuracy_is_percent"/>
+      <short value="If `True`, indicates that when this object was created, `_accuracy_` was recorded as a percent value; if `False`, as an absolute quantity value."/>
+      <definition value="If `True`, indicates that when this object was created, `_accuracy_` was recorded as a percent value; if `False`, as an absolute quantity value."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_AMOUNT.accuracy_is_percent"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.magnitude">
+      <path value="DV_QUANTITY.magnitude"/>
+      <short value="Numeric magnitude of the quantity."/>
+      <definition value="Numeric magnitude of the quantity."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_QUANTITY.magnitude"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.precision">
+      <path value="DV_QUANTITY.precision"/>
+      <short value="Precision to which the value of the quantity is expressed, in terms of number of decimal places."/>
+      <definition value="Precision to which the value of the quantity is expressed, in terms of number of decimal places. The value 0 implies an integral quantity.&#xA;The value -1 implies no limit, i.e. any number of decimal places."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_QUANTITY.precision"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.units">
+      <path value="DV_QUANTITY.units"/>
+      <short value="Quantity units, expressed as a code or syntax string from either UCUM (the default) or the units system specified in `_units_system_`, when set."/>
+      <definition value="Quantity units, expressed as a code or syntax string from either UCUM (the default) or the units system specified in `_units_system_`, when set.&#xA;&#xA;In either case, the value is the code or syntax - normally formed of standard ASCII - which is in principal not the same as the display string, although in simple cases such as 'm' (for meters) it will be.&#xA;&#xA;If the `_units_display_name_` field is set, this may be used for display. If not, the implementations must effect the resolution of the `_units_` value to a display form locally, e.g. by lookup of reference tables, request to a terminology service etc.&#xA;&#xA;Example values from UCUM: &quot;kg/m^2&quot;, “mm[Hg]&quot;, &quot;ms-1&quot;, &quot;km/h&quot;."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_QUANTITY.units"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.units-system">
+      <path value="DV_QUANTITY.units_system"/>
+      <short value="Optional field used to specify a units system from which codes in `_units_` are defined."/>
+      <definition value="Optional field used to specify a units system from which codes in `_units_` are defined. Value is a URI identifying a terminology containing units concepts from the  (https://www.hl7.org/fhir/terminologies-systems.html[HL7 FHIR terminologies list]).&#xA;&#xA;If not set, the UCUM standard (case-sensitive codes) is assumed as the units system."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_QUANTITY.units_system"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.units-display-name">
+      <path value="DV_QUANTITY.units_display_name"/>
+      <short value="Optional field containing the displayable form of the `_units_` field, e."/>
+      <definition value="Optional field containing the displayable form of the `_units_` field, e.g. `'°C'`.&#xA;&#xA;If not set, the application environment needs to determine the displayable form.&#xA;&#xA;NOTE: The display name may be language-dependent for various older and non-systematic units. For this reason, it is not recommended to add unit display names to archetypes, only to templates (for localisation purposes)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_QUANTITY.units_display_name"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="DV_QUANTITY">
+      <path value="DV_QUANTITY"/>
+      <short value="Quantitified type representing  scientific  quantities, i."/>
+      <definition value="Quantitified type representing  scientific  quantities, i.e. quantities expressed as a magnitude and units. Units are expressed in the UCUM syntax (http://unitsofmeasure.org/ucum.html[Unified Code for Units of Measure (UCUM)], by Gunther Schadow and Clement J. McDonald of The Regenstrief Institute)  (case-sensitive form) by default, or another system if `_units_system_` is set. &#xA;&#xA;Can also be used for time durations, where it is more convenient to treat these as simply a number of seconds rather than days, months, years (in the latter case, `DV_DURATION` may be used)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.magnitude">
+      <path value="DV_QUANTITY.magnitude"/>
+      <short value="Numeric magnitude of the quantity."/>
+      <definition value="Numeric magnitude of the quantity."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.precision">
+      <path value="DV_QUANTITY.precision"/>
+      <short value="Precision to which the value of the quantity is expressed, in terms of number of decimal places."/>
+      <definition value="Precision to which the value of the quantity is expressed, in terms of number of decimal places. The value 0 implies an integral quantity.&#xA;The value -1 implies no limit, i.e. any number of decimal places."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.units">
+      <path value="DV_QUANTITY.units"/>
+      <short value="Quantity units, expressed as a code or syntax string from either UCUM (the default) or the units system specified in `_units_system_`, when set."/>
+      <definition value="Quantity units, expressed as a code or syntax string from either UCUM (the default) or the units system specified in `_units_system_`, when set.&#xA;&#xA;In either case, the value is the code or syntax - normally formed of standard ASCII - which is in principal not the same as the display string, although in simple cases such as 'm' (for meters) it will be.&#xA;&#xA;If the `_units_display_name_` field is set, this may be used for display. If not, the implementations must effect the resolution of the `_units_` value to a display form locally, e.g. by lookup of reference tables, request to a terminology service etc.&#xA;&#xA;Example values from UCUM: &quot;kg/m^2&quot;, “mm[Hg]&quot;, &quot;ms-1&quot;, &quot;km/h&quot;."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.normal-range">
+      <path value="DV_QUANTITY.normal_range"/>
+      <short value="Optional normal range."/>
+      <definition value="Optional normal range. "/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-parameter">
+          <extension url="name">
+            <valueCode value="T"/>
+          </extension>
+          <extension url="type">
+            <valueUri value="http://openehr.org/fhir/StructureDefinition/DV-QUANTITY"/>
+          </extension>
+        </extension>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-INTERVAL"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.other-reference-ranges">
+      <path value="DV_QUANTITY.other_reference_ranges"/>
+      <short value="Optional tagged other reference ranges for this value in its particular measurement context."/>
+      <definition value="Optional tagged other reference ranges for this value in its particular measurement context."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-parameter">
+          <extension url="name">
+            <valueCode value="T"/>
+          </extension>
+          <extension url="type">
+            <valueUri value="http://openehr.org/fhir/StructureDefinition/DV-QUANTITY"/>
+          </extension>
+        </extension>
+        <code value="http://openehr.org/fhir/StructureDefinition/REFERENCE-RANGE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.units-system">
+      <path value="DV_QUANTITY.units_system"/>
+      <short value="Optional field used to specify a units system from which codes in `_units_` are defined."/>
+      <definition value="Optional field used to specify a units system from which codes in `_units_` are defined. Value is a URI identifying a terminology containing units concepts from the  (https://www.hl7.org/fhir/terminologies-systems.html[HL7 FHIR terminologies list]).&#xA;&#xA;If not set, the UCUM standard (case-sensitive codes) is assumed as the units system."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_QUANTITY.units-display-name">
+      <path value="DV_QUANTITY.units_display_name"/>
+      <short value="Optional field containing the displayable form of the `_units_` field, e."/>
+      <definition value="Optional field containing the displayable form of the `_units_` field, e.g. `'°C'`.&#xA;&#xA;If not set, the application environment needs to determine the displayable form.&#xA;&#xA;NOTE: The display name may be language-dependent for various older and non-systematic units. For this reason, it is not recommended to add unit display names to archetypes, only to templates (for localisation purposes)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

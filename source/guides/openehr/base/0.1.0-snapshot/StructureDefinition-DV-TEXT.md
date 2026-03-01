@@ -1,0 +1,259 @@
+# DV_TEXT - OpenEHR Base package v0.1.0-snapshot
+
+* [**Home Page**](index.md)
+* [**Artifacts Summary**](artifacts.md)
+* **DV_TEXT**
+
+## Logical Model: DV_TEXT 
+
+| | | |
+| :--- | :--- | :--- |
+| *Official URL*:http://openehr.org/fhir/StructureDefinition/DV-TEXT | *Version*:0.1.0-snapshot | |
+| *Standards status:*[Informative](http://hl7.org/fhir/R5/versions.html#std-process) | [Maturity Level](http://hl7.org/fhir/versions.html#maturity): 3 | *Computable Name*:DV_TEXT |
+
+ 
+A text item, which may contain any amount of legal characters arranged as e.g. words, sentences etc (i.e. one`DV_TEXT`may be more than one word). Visual formatting and hyperlinks may be included via markdown. 
+If the`_formatting_`field is set, the`_value_`field is affected as follows: 
+* `_formatting_ = "plain"`: plain text, may contain newlines;
+* `_formatting_ = "plain_no_newlines"`: plain text with no newlines;
+* `_formatting_ = "markdown"`: text in markdown format; use of CommonMark strongly recommended.
+ 
+A`DV_TEXT`can be coded by adding mappings to it. 
+
+**Original Source:** [specifications.openehr.org](https://specifications.openehr.org/releases/RM/Release-1.1.0/data_types.html#_dv_text_class)
+
+**Usages:**
+
+* Derived from this Logical Model: [DV_CODED_TEXT](StructureDefinition-DV-CODED-TEXT.md)
+* Use this Logical Model: [ACTOR](StructureDefinition-ACTOR.md), [ATTESTATION](StructureDefinition-ATTESTATION.md), [AUDIT_DETAILS](StructureDefinition-AUDIT-DETAILS.md), [DV_PARAGRAPH](StructureDefinition-DV-PARAGRAPH.md)...Show 9 more,[ELEMENT](StructureDefinition-ELEMENT.md),[EXTRACT_ERROR](StructureDefinition-EXTRACT-ERROR.md),[EXTRACT_PARTICIPATION](StructureDefinition-EXTRACT-PARTICIPATION.md),[INSTRUCTION](StructureDefinition-INSTRUCTION.md),[ISM_TRANSITION](StructureDefinition-ISM-TRANSITION.md),[LINK](StructureDefinition-LINK.md),[LOCATABLE](StructureDefinition-LOCATABLE.md),[PARTICIPATION](StructureDefinition-PARTICIPATION.md)and[REFERENCE_RANGE](StructureDefinition-REFERENCE-RANGE.md)
+
+You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/openehr.base|current/StructureDefinition/DV-TEXT)
+
+### Formal Views of Profile Content
+
+ [Description of Profiles, Differentials, Snapshots and how the different presentations work](http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions). 
+
+ 
+
+Other representations of profile: [CSV](StructureDefinition-DV-TEXT.csv), [Excel](StructureDefinition-DV-TEXT.xlsx) 
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "DV-TEXT",
+  "extension" : [
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/web-source",
+      "valueUrl" : "https://specifications.openehr.org/releases/RM/Release-1.1.0/data_types.html#_dv_text_class"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode" : "fhir"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/view-hint",
+      "valueCode" : "element-view-as-leaf"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/view-hint",
+      "valueCode" : "element-view-defns-parent"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/view-hint",
+      "valueCode" : "element-view-replace-cardinality"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger" : 3,
+      "_valueInteger" : {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+            "valueCanonical" : "http://openehr.org/fhir/ImplementationGuide/openehr.base"
+          }
+        ]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode" : "informative",
+      "_valueCode" : {
+        "extension" : [
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+            "valueCanonical" : "http://openehr.org/fhir/ImplementationGuide/openehr.base"
+          }
+        ]
+      }
+    }
+  ],
+  "url" : "http://openehr.org/fhir/StructureDefinition/DV-TEXT",
+  "version" : "0.1.0-snapshot",
+  "name" : "DV_TEXT",
+  "title" : "DV_TEXT",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-09-06T15:35:39+10:00",
+  "publisher" : "openEHR + HL7",
+  "contact" : [
+    {
+      "telecom" : [
+        {
+          "system" : "url",
+          "value" : "http://www.openehr.org"
+        }
+      ]
+    }
+  ],
+  "description" : "A text item, which may contain any amount of legal characters arranged as e.g. words, sentences etc (i.e. one `DV_TEXT` may be more than one word). Visual formatting and hyperlinks may be included via markdown.\n\nIf the `_formatting_` field is set, the `_value_` field is affected as follows:\n\n* `_formatting_ = \"plain\"`: plain text, may contain newlines;\n* `_formatting_ = \"plain_no_newlines\"`: plain text with no newlines;\n* `_formatting_ = \"markdown\"`: text in markdown format; use of CommonMark strongly recommended.\n\nA `DV_TEXT` can be coded by adding mappings to it.",
+  "jurisdiction" : [
+    {
+      "coding" : [
+        {
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "001"
+        }
+      ]
+    }
+  ],
+  "fhirVersion" : "5.0.0",
+  "mapping" : [
+    {
+      "identity" : "rim",
+      "uri" : "http://hl7.org/v3",
+      "name" : "RIM Mapping"
+    }
+  ],
+  "kind" : "logical",
+  "abstract" : false,
+  "type" : "http://openehr.org/fhir/StructureDefinition/DV_TEXT",
+  "baseDefinition" : "http://openehr.org/fhir/StructureDefinition/DATA-VALUE",
+  "derivation" : "specialization",
+  "differential" : {
+    "element" : [
+      {
+        "id" : "DV_TEXT",
+        "path" : "DV_TEXT",
+        "short" : "A text item, which may contain any amount of legal characters arranged as e.",
+        "definition" : "A text item, which may contain any amount of legal characters arranged as e.g. words, sentences etc (i.e. one `DV_TEXT` may be more than one word). Visual formatting and hyperlinks may be included via markdown.\n\nIf the `_formatting_` field is set, the `_value_` field is affected as follows:\n\n* `_formatting_ = \"plain\"`: plain text, may contain newlines;\n* `_formatting_ = \"plain_no_newlines\"`: plain text with no newlines;\n* `_formatting_ = \"markdown\"`: text in markdown format; use of CommonMark strongly recommended.\n\nA `DV_TEXT` can be coded by adding mappings to it.",
+        "min" : 0,
+        "max" : "*",
+        "constraint" : [
+          {
+            "key" : "Valid_value",
+            "severity" : "error",
+            "human" : "Valid value must not be empty",
+            "expression" : "value.empty().not()"
+          },
+          {
+            "key" : "Mappings_valid",
+            "severity" : "error",
+            "human" : "Mappings valid must not be empty",
+            "expression" : "mappings /= void implies mappings.empty().not()"
+          },
+          {
+            "key" : "Formatting_valid",
+            "severity" : "error",
+            "human" : "Formatting valid must not be empty",
+            "expression" : "formatting /= void implies formatting.empty().not()"
+          }
+        ],
+        "isModifier" : false,
+        "binding" : {
+          "strength" : "required",
+          "valueSet" : "https://specifications.openehr.org/fhir/valueset-character_sets"
+        }
+      },
+      {
+        "id" : "DV_TEXT.value",
+        "path" : "DV_TEXT.value",
+        "short" : "Displayable rendition of the item, regardless of its underlying structure.",
+        "definition" : "Displayable rendition of the item, regardless of its underlying structure. For `DV_CODED_TEXT`, this is the rubric of the complete term as provided by the terminology service.\n",
+        "min" : 1,
+        "max" : "1",
+        "type" : [
+          {
+            "code" : "string"
+          }
+        ],
+        "isModifier" : false
+      },
+      {
+        "id" : "DV_TEXT.hyperlink",
+        "path" : "DV_TEXT.hyperlink",
+        "short" : "DEPRECATED: this field is deprecated; use markdown link/text in the `_value_` attribute, and `\"markdown\"` as the value of the `_formatting_` field.",
+        "definition" : "DEPRECATED: this field is deprecated; use markdown link/text in the `_value_` attribute, and `\"markdown\"` as the value of the `_formatting_` field.\n\nOriginal usage, prior to RM Release 1.0.4: Optional link sitting behind a section of plain text or coded term item.",
+        "min" : 0,
+        "max" : "1",
+        "type" : [
+          {
+            "code" : "http://openehr.org/fhir/StructureDefinition/DV-URI"
+          }
+        ],
+        "isModifier" : false
+      },
+      {
+        "id" : "DV_TEXT.formatting",
+        "path" : "DV_TEXT.formatting",
+        "short" : "If set, contains one of the following values:\n\n* `\"plain\"`: use for plain text, possibly containing newlines, but otherwise unformatted (same as Void);\n* `\"plain_no_newlines\"`: use for text containing no newlines or other formatting;\n* `\"markdown\"`: use for markdown formatted text, strongly recommended in the format of the CommonMark specification.",
+        "definition" : "If set, contains one of the following values:\n\n* `\"plain\"`: use for plain text, possibly containing newlines, but otherwise unformatted (same as Void);\n* `\"plain_no_newlines\"`: use for text containing no newlines or other formatting;\n* `\"markdown\"`: use for markdown formatted text, strongly recommended in the format of the CommonMark specification.\n\nDEPRECATED usage: contains a string of the form `\"name:value; name:value...\"` , e.g. `\"font-weight : bold; font-family : Arial; font-size : 12pt;\"`. Values taken from W3C CSS2 properties lists for background and font . ",
+        "min" : 0,
+        "max" : "1",
+        "type" : [
+          {
+            "code" : "string"
+          }
+        ],
+        "isModifier" : false
+      },
+      {
+        "id" : "DV_TEXT.mappings",
+        "path" : "DV_TEXT.mappings",
+        "short" : "Terms from other terminologies most closely matching this term, typically used where the originator (e.",
+        "definition" : "Terms from other terminologies most closely matching this term, typically used where the originator (e.g. pathology lab) of information uses a local terminology but also supplies one or more equivalents from well known terminologies (e.g. LOINC). \n",
+        "min" : 0,
+        "max" : "*",
+        "type" : [
+          {
+            "code" : "http://openehr.org/fhir/StructureDefinition/TERM-MAPPING"
+          }
+        ],
+        "isModifier" : false
+      },
+      {
+        "id" : "DV_TEXT.language",
+        "path" : "DV_TEXT.language",
+        "short" : "Optional indicator of the localised language in which the value is written.",
+        "definition" : "Optional indicator of the localised language in which the value is written. Coded from openEHR Code Set  languages . Only used when either the text object is in a different language from the enclosing `ENTRY`, or else the text object is being used outside of an `ENTRY` or other enclosing structure which indicates the language. ",
+        "min" : 0,
+        "max" : "1",
+        "type" : [
+          {
+            "code" : "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"
+          }
+        ],
+        "isModifier" : false
+      },
+      {
+        "id" : "DV_TEXT.encoding",
+        "path" : "DV_TEXT.encoding",
+        "short" : "Name of character encoding scheme in which this value is encoded.",
+        "definition" : "Name of character encoding scheme in which this value is encoded. Coded from openEHR Code Set  character sets . Unicode is the default assumption in openEHR, with UTF-8 being the assumed encoding. This attribute allows for variations from these assumptions. \n",
+        "min" : 0,
+        "max" : "1",
+        "type" : [
+          {
+            "code" : "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"
+          }
+        ],
+        "isModifier" : false
+      }
+    ]
+  }
+}
+
+```

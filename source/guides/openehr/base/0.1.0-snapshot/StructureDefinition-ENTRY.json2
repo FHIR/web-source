@@ -1,0 +1,467 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "ENTRY",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition ENTRY</b></p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ENTRY-definitions.html#ENTRY\" title=\"The abstract parent of all `ENTRY` subtypes. An `ENTRY` is the root of a logical item of  hard  clinical information created in the  clinical statement  context, within a clinical session. There can be numerous such contexts in a clinical session. Observations and other Entry types only ever document information captured/created in the event documented by the enclosing Composition.\n\nAn `ENTRY` is also the minimal unit of information any query should return, since a whole `ENTRY` (including subparts) records spatial structure, timing information, and contextual information, as well as the subject and generator of the information. \">ENTRY</a><a name=\"ENTRY\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;; padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;\" href=\"http://hl7.org/fhir/R5/conformance-rules.html#constraints\" title=\"This element has or is affected by constraints ( Subject_validity, Other_participations_valid, Is_archetype_root )\">C</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-CONTENT-ITEM.html\">CONTENT_ITEM</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">This is an abstract type. Child types: <a href=\"StructureDefinition-ADMIN-ENTRY.html\">ADMIN_ENTRY</a>, <a href=\"StructureDefinition-CARE-ENTRY.html\">CARE_ENTRY</a><br/>The abstract parent of all `ENTRY` subtypes.<br/><br/>Elements defined in Ancestors:<a href=\"StructureDefinition-LOCATABLE.html\" title=\"Runtime name of this fragment, used to build runtime paths. This is the term provided via a clinical application or batch process to name this EHR construct: its retention in the EHR faithfully preserves the original label by which this entry was known to end users. \n\">name</a>, <a href=\"StructureDefinition-LOCATABLE.html\" title=\"Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths. Always in the form of an at-code, e.g.  `at0005`. This value enables a 'standardised' name for this node to be generated, by referring to the generating archetype local terminology. \n\nAt an archetype root point, the value of this attribute is always the stringified form of the `_archetype_id_` found in the `_archetype_details_` object. \n\">archetype_node_id</a>, <a href=\"StructureDefinition-LOCATABLE.html\" title=\"Optional globally unique object identifier for root points of archetyped structures. \">uid</a>, <a href=\"StructureDefinition-LOCATABLE.html\" title=\"Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions. \">links</a>, <a href=\"StructureDefinition-LOCATABLE.html\" title=\"Details of archetyping used on this node.\">archetype_details</a>, <a href=\"StructureDefinition-LOCATABLE.html\" title=\"Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node. \">feeder_audit</a><br class=\"binding\"/><span style=\"font-weight:bold\" title=\"null\" class=\"binding\">Binding: </span><a href=\"ValueSet-character-sets.html\" title=\"https://specifications.openehr.org/fhir/valueset-character_sets\" class=\"binding\">Character Set</a><span title=\"null\" class=\"binding\"> (</span><a href=\"http://hl7.org/fhir/R5/terminologies.html#required\" title=\"To be conformant, the concept in this element SHALL be from the specified value set.\" class=\"binding\">required</a><span title=\"null\" class=\"binding\">)</span><br class=\"constraint\"/><span title=\"null\" class=\"constraint\">Constraints: </span><span style=\"font-weight:bold\" title=\"Subject validity must satisfy conditional constraints\" class=\"constraint\">Subject_validity</span><span title=\"null\" class=\"constraint\">, </span><span style=\"font-weight:bold\" title=\"Other participations valid must be present\" class=\"constraint\">Other_participations_valid</span><span title=\"null\" class=\"constraint\">, </span><span style=\"font-weight:bold\" title=\"Is archetype root\" class=\"constraint\">Is_archetype_root</span><br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ENTRY-definitions.html#ENTRY.language\" title=\"Mandatory indicator of the localised language in which this Entry is written. Coded from openEHR Code Set  languages . \">language</a><a name=\"ENTRY.language\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-CODE-PHRASE.html\">CODE_PHRASE</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Mandatory indicator of the localised language in which this Entry is written.</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ENTRY-definitions.html#ENTRY.encoding\" title=\"Name of character set in which text values in this Entry are encoded. Coded from openEHR Code Set  character sets.\">encoding</a><a name=\"ENTRY.encoding\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-CODE-PHRASE.html\">CODE_PHRASE</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Name of character set in which text values in this Entry are encoded.</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ENTRY-definitions.html#ENTRY.other-participations\" title=\"Other participations at `ENTRY` level. \">other_participations</a><a name=\"ENTRY.other_participations\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-PARTICIPATION.html\">PARTICIPATION</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Other participations at `ENTRY` level.<br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ENTRY-definitions.html#ENTRY.workflow-id\" title=\"Identifier of externally held workflow engine data for this workflow execution, for this subject of care.\">workflow_id</a><a name=\"ENTRY.workflow_id\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-OBJECT-REF.html\">OBJECT_REF</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Identifier of externally held workflow engine data for this workflow execution, for this subject of care.</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ENTRY-definitions.html#ENTRY.subject\" title=\"Id of human subject of this `ENTRY`, e.g.: \n\n* organ donor \n* foetus \n* a family member \n* another clinically relevant person.\">subject</a><a name=\"ENTRY.subject\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-PARTY-PROXY.html\">PARTY_PROXY</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Id of human subject of this `ENTRY`, e.</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ENTRY-definitions.html#ENTRY.provider\" title=\"Optional identification of provider of the information in this `ENTRY`, which might be: \n\n* the patient \n* a patient agent, e.g. parent, guardian \n* the clinician \n* a device or software \n\nGenerally only used when the recorder needs to make it explicit. Otherwise, Composition composer and other participants are assumed. \n\">provider</a><a name=\"ENTRY.provider\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-PARTY-PROXY.html\">PARTY_PROXY</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Optional identification of provider of the information in this `ENTRY`, which might be: \n\n* the patient \n* a patient agent, e.</td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+  },
+  "contained" : [{
+    "resourceType" : "OperationDefinition",
+    "id" : "subject_is_self",
+    "name" : "subject_is_self",
+    "title" : "subject_is_self",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "Returns True if this Entry is about the subject of the EHR, in which case the subject attribute is of type PARTY_SELF.",
+    "code" : "subject_is_self",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "1",
+      "type" : "boolean"
+    }]
+  }],
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/web-source",
+    "valueUrl" : "https://specifications.openehr.org/releases/RM/development/ehr.html#_entry_class"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#subject_is_self"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "fhir"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/view-hint",
+    "valueCode" : "element-view-replace-cardinality"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 3,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://openehr.org/fhir/ImplementationGuide/openehr.base"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "informative",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://openehr.org/fhir/ImplementationGuide/openehr.base"
+      }]
+    }
+  }],
+  "url" : "http://openehr.org/fhir/StructureDefinition/ENTRY",
+  "version" : "0.1.0-snapshot",
+  "name" : "ENTRY",
+  "title" : "ENTRY",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-09-06T15:35:39+10:00",
+  "publisher" : "openEHR + HL7",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.openehr.org"
+    }]
+  }],
+  "description" : "The abstract parent of all `ENTRY` subtypes. An `ENTRY` is the root of a logical item of  hard  clinical information created in the  clinical statement  context, within a clinical session. There can be numerous such contexts in a clinical session. Observations and other Entry types only ever document information captured/created in the event documented by the enclosing Composition.\n\nAn `ENTRY` is also the minimal unit of information any query should return, since a whole `ENTRY` (including subparts) records spatial structure, timing information, and contextual information, as well as the subject and generator of the information. ",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "fhirVersion" : "5.0.0",
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
+  "kind" : "logical",
+  "abstract" : true,
+  "type" : "http://openehr.org/fhir/StructureDefinition/ENTRY",
+  "baseDefinition" : "http://openehr.org/fhir/StructureDefinition/CONTENT-ITEM",
+  "derivation" : "specialization",
+  "snapshot" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
+      "valueString" : "0.1.0-snapshot"
+    }],
+    "element" : [{
+      "id" : "ENTRY",
+      "path" : "ENTRY",
+      "short" : "The abstract parent of all `ENTRY` subtypes.",
+      "definition" : "The abstract parent of all `ENTRY` subtypes. An `ENTRY` is the root of a logical item of  hard  clinical information created in the  clinical statement  context, within a clinical session. There can be numerous such contexts in a clinical session. Observations and other Entry types only ever document information captured/created in the event documented by the enclosing Composition.\n\nAn `ENTRY` is also the minimal unit of information any query should return, since a whole `ENTRY` (including subparts) records spatial structure, timing information, and contextual information, as well as the subject and generator of the information. ",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Base",
+        "min" : 0,
+        "max" : "*"
+      },
+      "constraint" : [{
+        "key" : "Links_valid",
+        "severity" : "error",
+        "human" : "Links valid must be present",
+        "expression" : "links.exists() implies links.empty().not()",
+        "source" : "http://openehr.org/fhir/StructureDefinition/LOCATABLE"
+      },
+      {
+        "key" : "Archetyped_valid",
+        "severity" : "error",
+        "human" : "Archetyped valid must satisfy exclusive conditions",
+        "expression" : "is_archetype_root() xor archetype_details .empty()",
+        "source" : "http://openehr.org/fhir/StructureDefinition/LOCATABLE"
+      },
+      {
+        "key" : "Archetype_node_id_valid",
+        "severity" : "error",
+        "human" : "Archetype node id valid must not be empty",
+        "expression" : "archetype_node_id.empty().not()",
+        "source" : "http://openehr.org/fhir/StructureDefinition/LOCATABLE"
+      },
+      {
+        "key" : "Subject_validity",
+        "severity" : "error",
+        "human" : "Subject validity must satisfy conditional constraints",
+        "expression" : "subject_is_self() implies subject.generating_type = “PARTY_SELF”"
+      },
+      {
+        "key" : "Other_participations_valid",
+        "severity" : "error",
+        "human" : "Other participations valid must be present",
+        "expression" : "other_participations.exists() implies other_participations.empty().not()"
+      },
+      {
+        "key" : "Is_archetype_root",
+        "severity" : "error",
+        "human" : "Is archetype root",
+        "expression" : "is_archetype_root()"
+      }],
+      "isModifier" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "ENTRY.name",
+      "path" : "ENTRY.name",
+      "short" : "Runtime name of this fragment, used to build runtime paths.",
+      "definition" : "Runtime name of this fragment, used to build runtime paths. This is the term provided via a clinical application or batch process to name this EHR construct: its retention in the EHR faithfully preserves the original label by which this entry was known to end users.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "LOCATABLE.name",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/DV-TEXT"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "ENTRY.archetype-node-id",
+      "path" : "ENTRY.archetype_node_id",
+      "short" : "Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths.",
+      "definition" : "Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths. Always in the form of an at-code, e.g.  `at0005`. This value enables a 'standardised' name for this node to be generated, by referring to the generating archetype local terminology. \n\nAt an archetype root point, the value of this attribute is always the stringified form of the `_archetype_id_` found in the `_archetype_details_` object.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "LOCATABLE.archetype_node_id",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "ENTRY.uid",
+      "path" : "ENTRY.uid",
+      "short" : "Optional globally unique object identifier for root points of archetyped structures.",
+      "definition" : "Optional globally unique object identifier for root points of archetyped structures.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "LOCATABLE.uid",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/UID-BASED-ID"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "ENTRY.links",
+      "path" : "ENTRY.links",
+      "short" : "Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on).",
+      "definition" : "Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "LOCATABLE.links",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/LINK"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "ENTRY.archetype-details",
+      "path" : "ENTRY.archetype_details",
+      "short" : "Details of archetyping used on this node.",
+      "definition" : "Details of archetyping used on this node.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "LOCATABLE.archetype_details",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/ARCHETYPED"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "ENTRY.feeder-audit",
+      "path" : "ENTRY.feeder_audit",
+      "short" : "Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node.",
+      "definition" : "Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "LOCATABLE.feeder_audit",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/FEEDER-AUDIT"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "ENTRY.language",
+      "path" : "ENTRY.language",
+      "short" : "Mandatory indicator of the localised language in which this Entry is written.",
+      "definition" : "Mandatory indicator of the localised language in which this Entry is written. Coded from openEHR Code Set  languages .",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "ENTRY.language",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "ENTRY.encoding",
+      "path" : "ENTRY.encoding",
+      "short" : "Name of character set in which text values in this Entry are encoded.",
+      "definition" : "Name of character set in which text values in this Entry are encoded. Coded from openEHR Code Set  character sets.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "ENTRY.encoding",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "ENTRY.other-participations",
+      "path" : "ENTRY.other_participations",
+      "short" : "Other participations at `ENTRY` level.",
+      "definition" : "Other participations at `ENTRY` level.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "ENTRY.other_participations",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/PARTICIPATION"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "ENTRY.workflow-id",
+      "path" : "ENTRY.workflow_id",
+      "short" : "Identifier of externally held workflow engine data for this workflow execution, for this subject of care.",
+      "definition" : "Identifier of externally held workflow engine data for this workflow execution, for this subject of care.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ENTRY.workflow_id",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "ENTRY.subject",
+      "path" : "ENTRY.subject",
+      "short" : "Id of human subject of this `ENTRY`, e.",
+      "definition" : "Id of human subject of this `ENTRY`, e.g.: \n\n* organ donor \n* foetus \n* a family member \n* another clinically relevant person.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "ENTRY.subject",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/PARTY-PROXY"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "ENTRY.provider",
+      "path" : "ENTRY.provider",
+      "short" : "Optional identification of provider of the information in this `ENTRY`, which might be: \n\n* the patient \n* a patient agent, e.",
+      "definition" : "Optional identification of provider of the information in this `ENTRY`, which might be: \n\n* the patient \n* a patient agent, e.g. parent, guardian \n* the clinician \n* a device or software \n\nGenerally only used when the recorder needs to make it explicit. Otherwise, Composition composer and other participants are assumed.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ENTRY.provider",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/PARTY-PROXY"
+      }],
+      "isModifier" : false
+    }]
+  },
+  "differential" : {
+    "element" : [{
+      "id" : "ENTRY",
+      "path" : "ENTRY",
+      "short" : "The abstract parent of all `ENTRY` subtypes.",
+      "definition" : "The abstract parent of all `ENTRY` subtypes. An `ENTRY` is the root of a logical item of  hard  clinical information created in the  clinical statement  context, within a clinical session. There can be numerous such contexts in a clinical session. Observations and other Entry types only ever document information captured/created in the event documented by the enclosing Composition.\n\nAn `ENTRY` is also the minimal unit of information any query should return, since a whole `ENTRY` (including subparts) records spatial structure, timing information, and contextual information, as well as the subject and generator of the information. ",
+      "min" : 0,
+      "max" : "*",
+      "constraint" : [{
+        "key" : "Subject_validity",
+        "severity" : "error",
+        "human" : "Subject validity must satisfy conditional constraints",
+        "expression" : "subject_is_self() implies subject.generating_type = “PARTY_SELF”"
+      },
+      {
+        "key" : "Other_participations_valid",
+        "severity" : "error",
+        "human" : "Other participations valid must be present",
+        "expression" : "other_participations.exists() implies other_participations.empty().not()"
+      },
+      {
+        "key" : "Is_archetype_root",
+        "severity" : "error",
+        "human" : "Is archetype root",
+        "expression" : "is_archetype_root()"
+      }],
+      "isModifier" : false,
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://specifications.openehr.org/fhir/valueset-character_sets"
+      }
+    },
+    {
+      "id" : "ENTRY.language",
+      "path" : "ENTRY.language",
+      "short" : "Mandatory indicator of the localised language in which this Entry is written.",
+      "definition" : "Mandatory indicator of the localised language in which this Entry is written. Coded from openEHR Code Set  languages . ",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "ENTRY.encoding",
+      "path" : "ENTRY.encoding",
+      "short" : "Name of character set in which text values in this Entry are encoded.",
+      "definition" : "Name of character set in which text values in this Entry are encoded. Coded from openEHR Code Set  character sets.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "ENTRY.other-participations",
+      "path" : "ENTRY.other_participations",
+      "short" : "Other participations at `ENTRY` level.",
+      "definition" : "Other participations at `ENTRY` level. ",
+      "min" : 0,
+      "max" : "*",
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/PARTICIPATION"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "ENTRY.workflow-id",
+      "path" : "ENTRY.workflow_id",
+      "short" : "Identifier of externally held workflow engine data for this workflow execution, for this subject of care.",
+      "definition" : "Identifier of externally held workflow engine data for this workflow execution, for this subject of care.",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "ENTRY.subject",
+      "path" : "ENTRY.subject",
+      "short" : "Id of human subject of this `ENTRY`, e.",
+      "definition" : "Id of human subject of this `ENTRY`, e.g.: \n\n* organ donor \n* foetus \n* a family member \n* another clinically relevant person.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/PARTY-PROXY"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "ENTRY.provider",
+      "path" : "ENTRY.provider",
+      "short" : "Optional identification of provider of the information in this `ENTRY`, which might be: \n\n* the patient \n* a patient agent, e.",
+      "definition" : "Optional identification of provider of the information in this `ENTRY`, which might be: \n\n* the patient \n* a patient agent, e.g. parent, guardian \n* the clinician \n* a device or software \n\nGenerally only used when the recorder needs to make it explicit. Otherwise, Composition composer and other participants are assumed. \n",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/PARTY-PROXY"
+      }],
+      "isModifier" : false
+    }]
+  }
+}

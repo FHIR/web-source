@@ -1,0 +1,17 @@
+# OperationDefinition - OpenEHR Base package v0.1.0-snapshot
+
+* [**Home Page**](index.md)
+* [**Artifacts Summary**](artifacts.md)
+* [**ITEM_TABLE**](StructureDefinition-ITEM-TABLE.md)
+* **OperationDefinition**
+
+## OperationDefinition: OperationDefinition 
+
+| | | |
+| :--- | :--- | :--- |
+| *Official URL*:http://openehr.org/fhir/StructureDefinition/ITEM-TABLE#has_row_with_key | *Version*:0.1.0-snapshot | |
+| *Standards status:*[Informative](http://hl7.org/fhir/R5/versions.html#std-process) | [Maturity Level](http://hl7.org/fhir/versions.html#maturity): 3 | *Computable Name*:has_row_with_key |
+
+ 
+Return`True`if there is a row with key`_keys_`. 
+

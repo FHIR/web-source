@@ -1,0 +1,57 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"ACTION","ACTION","","","",0,*,"","","","null {[]} {[]}
+","Used to record a clinical action that has been performed, which may have been ad hoc, or due to the execution of an Activity in an Instruction workflow.","Used to record a clinical action that has been performed, which may have been ad hoc, or due to the execution of an Activity in an Instruction workflow. Every Action corresponds to a careflow step of some kind or another. ","","","","","","","","","",,,,,"",,,,"Base",0,*,"","Links_valid:Links valid must be present {links.exists() implies links.empty().not()}
+Archetyped_valid:Archetyped valid must satisfy exclusive conditions {is_archetype_root() xor archetype_details .empty()}Archetype_node_id_valid:Archetype node id valid must not be empty {archetype_node_id.empty().not()}Subject_validity:Subject validity must satisfy conditional constraints {subject_is_self() implies subject.generating_type = “PARTY_SELF”}Other_participations_valid:Other participations valid must be present {other_participations.exists() implies other_participations.empty().not()}Is_archetype_root:Is archetype root {is_archetype_root()}","n/a"
+"ACTION.name","ACTION.name","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/DV-TEXT {[]} {[]}
+","Runtime name of this fragment, used to build runtime paths.","Runtime name of this fragment, used to build runtime paths. This is the term provided via a clinical application or batch process to name this EHR construct: its retention in the EHR faithfully preserves the original label by which this entry was known to end users.","","","","","","","","","",,,,,"",,,,"LOCATABLE.name",1,1,"",""
+"ACTION.archetype-node-id","ACTION.archetype_node_id","","","",1,1,"","","","string {[]} {[]}
+","Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths.","Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths. Always in the form of an at-code, e.g.  `at0005`. This value enables a 'standardised' name for this node to be generated, by referring to the generating archetype local terminology. 
+
+At an archetype root point, the value of this attribute is always the stringified form of the `_archetype_id_` found in the `_archetype_details_` object.","","","","","","","","","",,,,,"",,,,"LOCATABLE.archetype_node_id",1,1,"",""
+"ACTION.uid","ACTION.uid","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/UID-BASED-ID {[]} {[]}
+","Optional globally unique object identifier for root points of archetyped structures.","Optional globally unique object identifier for root points of archetyped structures.","","","","","","","","","",,,,,"",,,,"LOCATABLE.uid",0,1,"",""
+"ACTION.links","ACTION.links","","","",0,*,"","","","http://openehr.org/fhir/StructureDefinition/LINK {[]} {[]}
+","Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on).","Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions.","","","","","","","","","",,,,,"",,,,"LOCATABLE.links",0,*,"",""
+"ACTION.archetype-details","ACTION.archetype_details","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/ARCHETYPED {[]} {[]}
+","Details of archetyping used on this node.","Details of archetyping used on this node.","","","","","","","","","",,,,,"",,,,"LOCATABLE.archetype_details",0,1,"",""
+"ACTION.feeder-audit","ACTION.feeder_audit","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/FEEDER-AUDIT {[]} {[]}
+","Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node.","Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node.","","","","","","","","","",,,,,"",,,,"LOCATABLE.feeder_audit",0,1,"",""
+"ACTION.language","ACTION.language","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/CODE-PHRASE {[]} {[]}
+","Mandatory indicator of the localised language in which this Entry is written.","Mandatory indicator of the localised language in which this Entry is written. Coded from openEHR Code Set  languages .","","","","","","","","","",,,,,"",,,,"ENTRY.language",1,1,"",""
+"ACTION.encoding","ACTION.encoding","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/CODE-PHRASE {[]} {[]}
+","Name of character set in which text values in this Entry are encoded.","Name of character set in which text values in this Entry are encoded. Coded from openEHR Code Set  character sets.","","","","","","","","","",,,,,"",,,,"ENTRY.encoding",1,1,"",""
+"ACTION.other-participations","ACTION.other_participations","","","",0,*,"","","","http://openehr.org/fhir/StructureDefinition/PARTICIPATION {[]} {[]}
+","Other participations at `ENTRY` level.","Other participations at `ENTRY` level.","","","","","","","","","",,,,,"",,,,"ENTRY.other_participations",0,*,"",""
+"ACTION.workflow-id","ACTION.workflow_id","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/OBJECT-REF {[]} {[]}
+","Identifier of externally held workflow engine data for this workflow execution, for this subject of care.","Identifier of externally held workflow engine data for this workflow execution, for this subject of care.","","","","","","","","","",,,,,"",,,,"ENTRY.workflow_id",0,1,"",""
+"ACTION.subject","ACTION.subject","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/PARTY-PROXY {[]} {[]}
+","Id of human subject of this `ENTRY`, e.","Id of human subject of this `ENTRY`, e.g.: 
+
+* organ donor 
+* foetus 
+* a family member 
+* another clinically relevant person.","","","","","","","","","",,,,,"",,,,"ENTRY.subject",1,1,"",""
+"ACTION.provider","ACTION.provider","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/PARTY-PROXY {[]} {[]}
+","Optional identification of provider of the information in this `ENTRY`, which might be: 
+
+* the patient 
+* a patient agent, e.","Optional identification of provider of the information in this `ENTRY`, which might be: 
+
+* the patient 
+* a patient agent, e.g. parent, guardian 
+* the clinician 
+* a device or software 
+
+Generally only used when the recorder needs to make it explicit. Otherwise, Composition composer and other participants are assumed.","","","","","","","","","",,,,,"",,,,"ENTRY.provider",0,1,"",""
+"ACTION.protocol","ACTION.protocol","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/ITEM-STRUCTURE {[]} {[]}
+","Description of the method (i.","Description of the method (i.e. how) the information in this entry was arrived at. For `OBSERVATIONs`, this is a description of the method or instrument used. For `EVALUATIONs`, how the evaluation was arrived at. For `INSTRUCTIONs`, how to execute the Instruction. This may take the form of references to guidelines, including manually followed and executable; knowledge references such as a paper in Medline; clinical reasons within a larger care process.","","","","","","","","","",,,,,"",,,,"CARE_ENTRY.protocol",0,1,"",""
+"ACTION.guideline-id","ACTION.guideline_id","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/OBJECT-REF {[]} {[]}
+","Optional external identifier of guideline creating this Entry if relevant.","Optional external identifier of guideline creating this Entry if relevant.","","","","","","","","","",,,,,"",,,,"CARE_ENTRY.guideline_id",0,1,"",""
+"ACTION.time","ACTION.time","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/DV-DATE-TIME {[]} {[]}
+","Point in time at which this action completed.","Point in time at which this action completed. To indicate an unknown time, use a `DV_DATE_TIME` instance with `_value_` set to the time of creation (or some other known time before which the Action is known to have occurred, e.g. data accession timestamp from integration engine), and `_magnitude_status_` set to `<`.","","","","","","","","","",,,,,"",,,,"ACTION.time",1,1,"",""
+"ACTION.ism-transition","ACTION.ism_transition","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/ISM-TRANSITION {[]} {[]}
+","Details of transition in the Instruction state machine caused by this Action.","Details of transition in the Instruction state machine caused by this Action.","","","","","","","","","",,,,,"",,,,"ACTION.ism_transition",1,1,"",""
+"ACTION.instruction-details","ACTION.instruction_details","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/INSTRUCTION-DETAILS {[]} {[]}
+","Details of the Instruction that caused this Action to be performed, if there was one.","Details of the Instruction that caused this Action to be performed, if there was one.","","","","","","","","","",,,,,"",,,,"ACTION.instruction_details",0,1,"",""
+"ACTION.description","ACTION.description","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/ITEM-STRUCTURE {[]} {[]}
+","Description of the action that has been performed, in the form of an archetyped structure.","Description of the action that has been performed, in the form of an archetyped structure.","","","","","","","","","",,,,,"",,,,"ACTION.description",1,1,"",""

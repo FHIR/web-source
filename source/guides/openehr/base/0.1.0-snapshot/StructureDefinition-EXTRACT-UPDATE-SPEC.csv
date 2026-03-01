@@ -1,0 +1,20 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"EXTRACT_UPDATE_SPEC","EXTRACT_UPDATE_SPEC","","","",0,*,"","","","null {[]} {[]}
+","Specification of the how the request should be processed by server.","Specification of the how the request should be processed by server. The request can be persisted in the server, meaning that a) it can be re-activated by the requesting system simply by indicating Request id, and b) that a changes-only pattern of Extract updates can be set up. To achieve this, the server has to remember what was sent in the previous response.
+
+The update mode may be event-driven and periodic update or a mixture of both. The candidate items to be sent each time are the result of re-evaluating the content and versioning parts of the specification; what is actually sent is determined by the `_send_changes_only_` flag.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","Overall_validity:Overall validity must be present {repeat_period.exists() or trigger_events.exists()}
+Trigger_events_validity:Trigger events validity must be present {trigger_events.exists() implies trigger_events.empty().not()}Send_changes_only_validity:Send changes only validity must satisfy conditional constraints {null # TODO: manual translation needed}","n/a"
+"EXTRACT_UPDATE_SPEC.persist-in-server","EXTRACT_UPDATE_SPEC.persist_in_server","","","",1,1,"","","","boolean {[]} {[]}
+","If True, this Request is persisted in the server until further notice.","If True, this Request is persisted in the server until further notice.","","","","","","","","","",,,,,"",,,,"EXTRACT_UPDATE_SPEC.persist_in_server",1,1,"",""
+"EXTRACT_UPDATE_SPEC.repeat-period","EXTRACT_UPDATE_SPEC.repeat_period","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/DV-DURATION {[]} {[]}
+","Period for resending update Extracts in response to original Request.","Period for resending update Extracts in response to original Request.","","","","","","","","","",,,,,"",,,,"EXTRACT_UPDATE_SPEC.repeat_period",0,1,"",""
+"EXTRACT_UPDATE_SPEC.trigger-events","EXTRACT_UPDATE_SPEC.trigger_events","","","",0,*,"","","","http://openehr.org/fhir/StructureDefinition/DV-CODED-TEXT {[]} {[]}
+","Set of Event names that will cause sending of update Extracts.","Set of Event names that will cause sending of update Extracts. Event types include:   
+
+* `|any_change|` - any change in content items matched by content specification, e.g. new versions of persistent compositions. If the content list allows matching of any, or a wide range of archetypes, this event type will match any additions to the record.
+* `|correction|` - match error corrections only, including deletions.
+* `|update|` - match updates (i.e. new versions) of included content items.
+
+Coded by openEHR Terminology group 'extract update trigger event type'.","","","","","","","","","",,,,,"",,,,"EXTRACT_UPDATE_SPEC.trigger_events",0,*,"",""
+"EXTRACT_UPDATE_SPEC.update-method","EXTRACT_UPDATE_SPEC.update_method","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/CODE-PHRASE {[]} {[]}
+","Indicate mode of update.","Indicate mode of update. Can be: send only items that are changed (including logical deletions) or new since last send. For `_persist_in_server_` Requests only.","","","","","","","","","",,,,,"",,,,"EXTRACT_UPDATE_SPEC.update_method",1,1,"",""

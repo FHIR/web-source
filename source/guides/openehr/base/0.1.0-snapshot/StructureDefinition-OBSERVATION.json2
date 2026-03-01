@@ -1,0 +1,563 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "OBSERVATION",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition OBSERVATION</b></p><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-OBSERVATION-definitions.html#OBSERVATION\" title=\"Entry subtype for all clinical data in the past or present, i.e. which (by the time it is recorded) has already occurred. `OBSERVATION` data is expressed using the class `HISTORY&lt;T&gt;`, which guarantees that it is situated in time. `OBSERVATION` is used for all notionally objective (i.e. measured in some way) observations of phenomena, and patient-reported phenomena, e.g. pain. \n\nNot to be used for recording opinion or future statements of any kind, including instructions, intentions, plans etc.\">OBSERVATION</a><a name=\"OBSERVATION\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-CARE-ENTRY.html\">CARE_ENTRY</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Entry subtype for all clinical data in the past or present, i.<br/><br/>Elements defined in Ancestors:<a href=\"StructureDefinition-LOCATABLE.html\" title=\"Runtime name of this fragment, used to build runtime paths. This is the term provided via a clinical application or batch process to name this EHR construct: its retention in the EHR faithfully preserves the original label by which this entry was known to end users. \n\">name</a>, <a href=\"StructureDefinition-LOCATABLE.html\" title=\"Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths. Always in the form of an at-code, e.g.  `at0005`. This value enables a 'standardised' name for this node to be generated, by referring to the generating archetype local terminology. \n\nAt an archetype root point, the value of this attribute is always the stringified form of the `_archetype_id_` found in the `_archetype_details_` object. \n\">archetype_node_id</a>, <a href=\"StructureDefinition-LOCATABLE.html\" title=\"Optional globally unique object identifier for root points of archetyped structures. \">uid</a>, <a href=\"StructureDefinition-LOCATABLE.html\" title=\"Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions. \">links</a>, <a href=\"StructureDefinition-LOCATABLE.html\" title=\"Details of archetyping used on this node.\">archetype_details</a>, <a href=\"StructureDefinition-LOCATABLE.html\" title=\"Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node. \">feeder_audit</a>, <a href=\"StructureDefinition-ENTRY.html\" title=\"Mandatory indicator of the localised language in which this Entry is written. Coded from openEHR Code Set  languages . \">language</a>, <a href=\"StructureDefinition-ENTRY.html\" title=\"Name of character set in which text values in this Entry are encoded. Coded from openEHR Code Set  character sets.\">encoding</a>, <a href=\"StructureDefinition-ENTRY.html\" title=\"Other participations at `ENTRY` level. \">other_participations</a>, <a href=\"StructureDefinition-ENTRY.html\" title=\"Identifier of externally held workflow engine data for this workflow execution, for this subject of care.\">workflow_id</a>, <a href=\"StructureDefinition-ENTRY.html\" title=\"Id of human subject of this `ENTRY`, e.g.: \n\n* organ donor \n* foetus \n* a family member \n* another clinically relevant person.\">subject</a>, <a href=\"StructureDefinition-ENTRY.html\" title=\"Optional identification of provider of the information in this `ENTRY`, which might be: \n\n* the patient \n* a patient agent, e.g. parent, guardian \n* the clinician \n* a device or software \n\nGenerally only used when the recorder needs to make it explicit. Otherwise, Composition composer and other participants are assumed. \n\">provider</a>, <a href=\"StructureDefinition-CARE-ENTRY.html\" title=\"Description of the method (i.e. how) the information in this entry was arrived at. For `OBSERVATIONs`, this is a description of the method or instrument used. For `EVALUATIONs`, how the evaluation was arrived at. For `INSTRUCTIONs`, how to execute the Instruction. This may take the form of references to guidelines, including manually followed and executable; knowledge references such as a paper in Medline; clinical reasons within a larger care process. \">protocol</a>, <a href=\"StructureDefinition-CARE-ENTRY.html\" title=\"Optional external identifier of guideline creating this Entry if relevant.\">guideline_id</a><br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-OBSERVATION-definitions.html#OBSERVATION.data\" title=\"The data of this observation, in the form of a history of values which may be of any complexity.\">data</a><a name=\"OBSERVATION.data\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-HISTORY.html\">HISTORY</a>&lt;<a href=\"StructureDefinition-ITEM-STRUCTURE.html\">ITEM_STRUCTURE</a>&gt;</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">The data of this observation, in the form of a history of values which may be of any complexity.</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-OBSERVATION-definitions.html#OBSERVATION.state\" title=\"Optional recording of the state of subject of this observation during the observation process, in the form of a separate history of values which may be of any complexity. State may also be recorded within the History of the data attribute. \">state</a><a name=\"OBSERVATION.state\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-HISTORY.html\">HISTORY</a>&lt;<a href=\"StructureDefinition-ITEM-STRUCTURE.html\">ITEM_STRUCTURE</a>&gt;</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Optional recording of the state of subject of this observation during the observation process, in the form of a separate history of values which may be of any complexity.</td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/web-source",
+    "valueUrl" : "https://specifications.openehr.org/releases/RM/development/ehr.html#_observation_class"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/view-hint",
+    "valueCode" : "element-view-ready"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "fhir"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#subject_is_self"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/view-hint",
+    "valueCode" : "element-view-replace-cardinality"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 3,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://openehr.org/fhir/ImplementationGuide/openehr.base"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "informative",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://openehr.org/fhir/ImplementationGuide/openehr.base"
+      }]
+    }
+  }],
+  "url" : "http://openehr.org/fhir/StructureDefinition/OBSERVATION",
+  "version" : "0.1.0-snapshot",
+  "name" : "OBSERVATION",
+  "title" : "OBSERVATION",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-09-06T15:35:39+10:00",
+  "publisher" : "openEHR + HL7",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.openehr.org"
+    }]
+  }],
+  "description" : "Entry subtype for all clinical data in the past or present, i.e. which (by the time it is recorded) has already occurred. `OBSERVATION` data is expressed using the class `HISTORY<T>`, which guarantees that it is situated in time. `OBSERVATION` is used for all notionally objective (i.e. measured in some way) observations of phenomena, and patient-reported phenomena, e.g. pain. \n\nNot to be used for recording opinion or future statements of any kind, including instructions, intentions, plans etc.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "fhirVersion" : "5.0.0",
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
+  "kind" : "logical",
+  "abstract" : false,
+  "type" : "http://openehr.org/fhir/StructureDefinition/OBSERVATION",
+  "baseDefinition" : "http://openehr.org/fhir/StructureDefinition/CARE-ENTRY",
+  "derivation" : "specialization",
+  "snapshot" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
+      "valueString" : "0.1.0-snapshot"
+    }],
+    "element" : [{
+      "id" : "OBSERVATION",
+      "path" : "OBSERVATION",
+      "short" : "Entry subtype for all clinical data in the past or present, i.",
+      "definition" : "Entry subtype for all clinical data in the past or present, i.e. which (by the time it is recorded) has already occurred. `OBSERVATION` data is expressed using the class `HISTORY<T>`, which guarantees that it is situated in time. `OBSERVATION` is used for all notionally objective (i.e. measured in some way) observations of phenomena, and patient-reported phenomena, e.g. pain. \n\nNot to be used for recording opinion or future statements of any kind, including instructions, intentions, plans etc.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Base",
+        "min" : 0,
+        "max" : "*"
+      },
+      "constraint" : [{
+        "key" : "Links_valid",
+        "severity" : "error",
+        "human" : "Links valid must be present",
+        "expression" : "links.exists() implies links.empty().not()",
+        "source" : "http://openehr.org/fhir/StructureDefinition/LOCATABLE"
+      },
+      {
+        "key" : "Archetyped_valid",
+        "severity" : "error",
+        "human" : "Archetyped valid must satisfy exclusive conditions",
+        "expression" : "is_archetype_root() xor archetype_details .empty()",
+        "source" : "http://openehr.org/fhir/StructureDefinition/LOCATABLE"
+      },
+      {
+        "key" : "Archetype_node_id_valid",
+        "severity" : "error",
+        "human" : "Archetype node id valid must not be empty",
+        "expression" : "archetype_node_id.empty().not()",
+        "source" : "http://openehr.org/fhir/StructureDefinition/LOCATABLE"
+      },
+      {
+        "key" : "Subject_validity",
+        "severity" : "error",
+        "human" : "Subject validity must satisfy conditional constraints",
+        "expression" : "subject_is_self() implies subject.generating_type = “PARTY_SELF”",
+        "source" : "http://openehr.org/fhir/StructureDefinition/ENTRY"
+      },
+      {
+        "key" : "Other_participations_valid",
+        "severity" : "error",
+        "human" : "Other participations valid must be present",
+        "expression" : "other_participations.exists() implies other_participations.empty().not()",
+        "source" : "http://openehr.org/fhir/StructureDefinition/ENTRY"
+      },
+      {
+        "key" : "Is_archetype_root",
+        "severity" : "error",
+        "human" : "Is archetype root",
+        "expression" : "is_archetype_root()",
+        "source" : "http://openehr.org/fhir/StructureDefinition/ENTRY"
+      }],
+      "isModifier" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "OBSERVATION.name",
+      "path" : "OBSERVATION.name",
+      "short" : "Runtime name of this fragment, used to build runtime paths.",
+      "definition" : "Runtime name of this fragment, used to build runtime paths. This is the term provided via a clinical application or batch process to name this EHR construct: its retention in the EHR faithfully preserves the original label by which this entry was known to end users.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "LOCATABLE.name",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/DV-TEXT"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "OBSERVATION.archetype-node-id",
+      "path" : "OBSERVATION.archetype_node_id",
+      "short" : "Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths.",
+      "definition" : "Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths. Always in the form of an at-code, e.g.  `at0005`. This value enables a 'standardised' name for this node to be generated, by referring to the generating archetype local terminology. \n\nAt an archetype root point, the value of this attribute is always the stringified form of the `_archetype_id_` found in the `_archetype_details_` object.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "LOCATABLE.archetype_node_id",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "OBSERVATION.uid",
+      "path" : "OBSERVATION.uid",
+      "short" : "Optional globally unique object identifier for root points of archetyped structures.",
+      "definition" : "Optional globally unique object identifier for root points of archetyped structures.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "LOCATABLE.uid",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/UID-BASED-ID"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "OBSERVATION.links",
+      "path" : "OBSERVATION.links",
+      "short" : "Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on).",
+      "definition" : "Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "LOCATABLE.links",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/LINK"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "OBSERVATION.archetype-details",
+      "path" : "OBSERVATION.archetype_details",
+      "short" : "Details of archetyping used on this node.",
+      "definition" : "Details of archetyping used on this node.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "LOCATABLE.archetype_details",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/ARCHETYPED"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "OBSERVATION.feeder-audit",
+      "path" : "OBSERVATION.feeder_audit",
+      "short" : "Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node.",
+      "definition" : "Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "LOCATABLE.feeder_audit",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/FEEDER-AUDIT"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "OBSERVATION.language",
+      "path" : "OBSERVATION.language",
+      "short" : "Mandatory indicator of the localised language in which this Entry is written.",
+      "definition" : "Mandatory indicator of the localised language in which this Entry is written. Coded from openEHR Code Set  languages .",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "ENTRY.language",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "OBSERVATION.encoding",
+      "path" : "OBSERVATION.encoding",
+      "short" : "Name of character set in which text values in this Entry are encoded.",
+      "definition" : "Name of character set in which text values in this Entry are encoded. Coded from openEHR Code Set  character sets.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "ENTRY.encoding",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "OBSERVATION.other-participations",
+      "path" : "OBSERVATION.other_participations",
+      "short" : "Other participations at `ENTRY` level.",
+      "definition" : "Other participations at `ENTRY` level.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "ENTRY.other_participations",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/PARTICIPATION"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "OBSERVATION.workflow-id",
+      "path" : "OBSERVATION.workflow_id",
+      "short" : "Identifier of externally held workflow engine data for this workflow execution, for this subject of care.",
+      "definition" : "Identifier of externally held workflow engine data for this workflow execution, for this subject of care.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ENTRY.workflow_id",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "OBSERVATION.subject",
+      "path" : "OBSERVATION.subject",
+      "short" : "Id of human subject of this `ENTRY`, e.",
+      "definition" : "Id of human subject of this `ENTRY`, e.g.: \n\n* organ donor \n* foetus \n* a family member \n* another clinically relevant person.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "ENTRY.subject",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/PARTY-PROXY"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "OBSERVATION.provider",
+      "path" : "OBSERVATION.provider",
+      "short" : "Optional identification of provider of the information in this `ENTRY`, which might be: \n\n* the patient \n* a patient agent, e.",
+      "definition" : "Optional identification of provider of the information in this `ENTRY`, which might be: \n\n* the patient \n* a patient agent, e.g. parent, guardian \n* the clinician \n* a device or software \n\nGenerally only used when the recorder needs to make it explicit. Otherwise, Composition composer and other participants are assumed.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "ENTRY.provider",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/PARTY-PROXY"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "OBSERVATION.protocol",
+      "extension" : [{
+        "extension" : [{
+          "url" : "name",
+          "valueCode" : "element-view-group"
+        },
+        {
+          "url" : "value",
+          "valueString" : "Protocol"
+        }],
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/view-hint"
+      },
+      {
+        "extension" : [{
+          "url" : "name",
+          "valueCode" : "element-view-order"
+        },
+        {
+          "url" : "value",
+          "valueInteger" : 4
+        }],
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/view-hint"
+      }],
+      "path" : "OBSERVATION.protocol",
+      "short" : "Description of the method (i.",
+      "definition" : "Description of the method (i.e. how) the information in this entry was arrived at. For `OBSERVATIONs`, this is a description of the method or instrument used. For `EVALUATIONs`, how the evaluation was arrived at. For `INSTRUCTIONs`, how to execute the Instruction. This may take the form of references to guidelines, including manually followed and executable; knowledge references such as a paper in Medline; clinical reasons within a larger care process.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "CARE_ENTRY.protocol",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/ITEM-STRUCTURE"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "OBSERVATION.guideline-id",
+      "path" : "OBSERVATION.guideline_id",
+      "short" : "Optional external identifier of guideline creating this Entry if relevant.",
+      "definition" : "Optional external identifier of guideline creating this Entry if relevant.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "CARE_ENTRY.guideline_id",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/OBJECT-REF"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "OBSERVATION.data",
+      "path" : "OBSERVATION.data",
+      "short" : "The data of this observation, in the form of a history of values which may be of any complexity.",
+      "definition" : "The data of this observation, in the form of a history of values which may be of any complexity.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "OBSERVATION.data",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "extension" : [{
+          "extension" : [{
+            "url" : "name",
+            "valueCode" : "T"
+          },
+          {
+            "url" : "type",
+            "valueUri" : "http://openehr.org/fhir/StructureDefinition/ITEM-STRUCTURE"
+          }],
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-parameter"
+        }],
+        "code" : "http://openehr.org/fhir/StructureDefinition/HISTORY"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "OBSERVATION.state",
+      "extension" : [{
+        "extension" : [{
+          "url" : "name",
+          "valueCode" : "element-view-group"
+        },
+        {
+          "url" : "value",
+          "valueString" : "State"
+        }],
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/view-hint"
+      },
+      {
+        "extension" : [{
+          "url" : "name",
+          "valueCode" : "element-view-order"
+        },
+        {
+          "url" : "value",
+          "valueInteger" : 8
+        }],
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/view-hint"
+      }],
+      "path" : "OBSERVATION.state",
+      "short" : "Optional recording of the state of subject of this observation during the observation process, in the form of a separate history of values which may be of any complexity.",
+      "definition" : "Optional recording of the state of subject of this observation during the observation process, in the form of a separate history of values which may be of any complexity. State may also be recorded within the History of the data attribute.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "OBSERVATION.state",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "extension" : [{
+          "extension" : [{
+            "url" : "name",
+            "valueCode" : "T"
+          },
+          {
+            "url" : "type",
+            "valueUri" : "http://openehr.org/fhir/StructureDefinition/ITEM-STRUCTURE"
+          }],
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-parameter"
+        }],
+        "code" : "http://openehr.org/fhir/StructureDefinition/HISTORY"
+      }],
+      "isModifier" : false
+    }]
+  },
+  "differential" : {
+    "element" : [{
+      "id" : "OBSERVATION",
+      "path" : "OBSERVATION",
+      "short" : "Entry subtype for all clinical data in the past or present, i.",
+      "definition" : "Entry subtype for all clinical data in the past or present, i.e. which (by the time it is recorded) has already occurred. `OBSERVATION` data is expressed using the class `HISTORY<T>`, which guarantees that it is situated in time. `OBSERVATION` is used for all notionally objective (i.e. measured in some way) observations of phenomena, and patient-reported phenomena, e.g. pain. \n\nNot to be used for recording opinion or future statements of any kind, including instructions, intentions, plans etc.",
+      "min" : 0,
+      "max" : "*",
+      "isModifier" : false
+    },
+    {
+      "id" : "OBSERVATION.data",
+      "path" : "OBSERVATION.data",
+      "short" : "The data of this observation, in the form of a history of values which may be of any complexity.",
+      "definition" : "The data of this observation, in the form of a history of values which may be of any complexity.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "extension" : [{
+          "extension" : [{
+            "url" : "name",
+            "valueCode" : "T"
+          },
+          {
+            "url" : "type",
+            "valueUri" : "http://openehr.org/fhir/StructureDefinition/ITEM-STRUCTURE"
+          }],
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-parameter"
+        }],
+        "code" : "http://openehr.org/fhir/StructureDefinition/HISTORY"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "OBSERVATION.state",
+      "extension" : [{
+        "extension" : [{
+          "url" : "name",
+          "valueCode" : "element-view-group"
+        },
+        {
+          "url" : "value",
+          "valueString" : "State"
+        }],
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/view-hint"
+      },
+      {
+        "extension" : [{
+          "url" : "name",
+          "valueCode" : "element-view-order"
+        },
+        {
+          "url" : "value",
+          "valueInteger" : 8
+        }],
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/view-hint"
+      }],
+      "path" : "OBSERVATION.state",
+      "short" : "Optional recording of the state of subject of this observation during the observation process, in the form of a separate history of values which may be of any complexity.",
+      "definition" : "Optional recording of the state of subject of this observation during the observation process, in the form of a separate history of values which may be of any complexity. State may also be recorded within the History of the data attribute. ",
+      "min" : 0,
+      "max" : "1",
+      "type" : [{
+        "extension" : [{
+          "extension" : [{
+            "url" : "name",
+            "valueCode" : "T"
+          },
+          {
+            "url" : "type",
+            "valueUri" : "http://openehr.org/fhir/StructureDefinition/ITEM-STRUCTURE"
+          }],
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-parameter"
+        }],
+        "code" : "http://openehr.org/fhir/StructureDefinition/HISTORY"
+      }],
+      "isModifier" : false
+    }]
+  }
+}

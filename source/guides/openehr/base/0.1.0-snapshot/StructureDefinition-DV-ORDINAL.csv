@@ -1,0 +1,34 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"DV_ORDINAL","DV_ORDINAL","","","",0,*,"","","","null {[]} {[]}
+","A data type that represents integral score values, e.","A data type that represents integral score values, e.g. pain, Apgar values, etc, where there is:
+
+a) implied ordering, 
+b) no implication that the distance between each value is constant, and 
+c) the total number of values is finite;
+d) integer values only.
+
+Note that although the term 'ordinal' in mathematics means natural numbers only, here any integer is allowed, since negative and zero values are often used by medical professionals for values around a neutral point. Examples of sets of ordinal values: 
+
+*   -3, -2, -1, 0, 1, 2, 3  -- reflex response values 
+*    0, 1, 2                  -- Apgar values 
+
+This class is used for recording any clinical datum which is customarily recorded using symbolic values. Example: the results on a urinalysis strip, e.g. `{neg, trace, +, ++, +++}` are used for leucocytes, protein, nitrites etc; for non-haemolysed blood `{neg, trace, moderate}`; for haemolysed blood `{small, moderate, large}`.
+
+For scores or scales that include Real numbers (or might in the future, i.e. not fixed for all time, such as Apgar), use `DV_SCALE`. `DV_SCALE` may also be used in future for representing purely Integer-based scales, however, the `DV_ORDINAL` type should continue to be supported in software implementations in order to accommodate existing data that are instances of this type.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","Other_reference_ranges_validity:Other reference ranges validity must be present {other_reference_ranges.exists() implies other_reference_ranges.empty().not()}
+Is_simple_validity:Is simple validity must satisfy conditional constraints {(normal_range .empty() and other_reference_ranges .empty()) implies is_simple()}Normal_range_and_status_consistency:Normal range and status consistency must be present {(normal_range.exists() and normal_status.exists()) implies (normal_status.code_string.is_equal (“N”) xor normal_range.not().has (self))}Limits_valid:Limits valid {null # TODO: manual translation needed}Reference_range_valid:Reference range valid {null # TODO: manual translation needed}","n/a"
+"DV_ORDINAL.CR","DV_ORDINAL.CR","","","",1,1,"","","","string {[]} {[]}
+","Carriage return character.","Carriage return character.","","","","","","","","","",,,,,"",,,,"BASIC_DEFINITIONS.CR",1,1,"",""
+"DV_ORDINAL.LF","DV_ORDINAL.LF","","","",1,1,"","","","string {[]} {[]}
+","Line feed character.","Line feed character.","","","","","","","","","",,,,,"",,,,"BASIC_DEFINITIONS.LF",1,1,"",""
+"DV_ORDINAL.Local-terminology-id","DV_ORDINAL.Local_terminology_id","","","",1,1,"","","","string {[]} {[]}
+","Predefined terminology identifier","Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype","","","","","","","","","",,,,,"",,,,"OPENEHR_DEFINITIONS.Local_terminology_id",1,1,"",""
+"DV_ORDINAL.normal-status","DV_ORDINAL.normal_status","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/CODE-PHRASE {[]} {[]}
+","Optional normal status indicator of value with respect to normal range for this value.","Optional normal status indicator of value with respect to normal range for this value. Often included by lab, even if the normal range itself is not included. Coded by ordinals in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group  `normal_status`.","","","","","","","","","",,,,,"",,,,"DV_ORDERED.normal_status",0,1,"",""
+"DV_ORDINAL.normal-range","DV_ORDINAL.normal_range","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/DV-INTERVAL {[]} {[]}
+","Optional normal range.","Optional normal range.","","","","","","","","","",,,,,"",,,,"DV_ORDERED.normal_range",0,1,"",""
+"DV_ORDINAL.other-reference-ranges","DV_ORDINAL.other_reference_ranges","","","",0,*,"","","","http://openehr.org/fhir/StructureDefinition/REFERENCE-RANGE {[]} {[]}
+","Optional tagged other reference ranges for this value in its particular measurement context.","Optional tagged other reference ranges for this value in its particular measurement context.","","","","","","","","","",,,,,"",,,,"DV_ORDERED.other_reference_ranges",0,*,"",""
+"DV_ORDINAL.symbol","DV_ORDINAL.symbol","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/DV-CODED-TEXT {[]} {[]}
+","Coded textual representation of this value in the enumeration, which may be strings made from  +  symbols, or other enumerations of terms such as  `mild`, `moderate`, `severe`, or even the same number series as the values, e.","Coded textual representation of this value in the enumeration, which may be strings made from  +  symbols, or other enumerations of terms such as  `mild`, `moderate`, `severe`, or even the same number series as the values, e.g. 1, 2, 3.","","","","","","","","","",,,,,"",,,,"DV_ORDINAL.symbol",1,1,"",""
+"DV_ORDINAL.value","DV_ORDINAL.value","","","",1,1,"","","","integer {[]} {[]}
+","Value in ordered enumeration of values.","Value in ordered enumeration of values. Any integer value can be used.","","","","","","","","","",,,,,"",,,,"DV_ORDINAL.value",1,1,"",""

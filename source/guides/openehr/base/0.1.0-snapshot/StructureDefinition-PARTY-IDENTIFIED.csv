@@ -1,0 +1,14 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"PARTY_IDENTIFIED","PARTY_IDENTIFIED","","","",0,*,"","","","null {[]} {[]}
+","Proxy data for an identified party other than the subject of the record, minimally consisting of human-readable identifier(s), such as name, formal (and possibly computable) identifiers such as NHS number, and an optional link to external data.","Proxy data for an identified party other than the subject of the record, minimally consisting of human-readable identifier(s), such as name, formal (and possibly computable) identifiers such as NHS number, and an optional link to external data. There must be at least one of name, identifier or external_ref present.
+
+Used to describe parties where only identifiers may be known, and there is no entry at all in the demographic system (or even no demographic system). Typically for health care providers, e.g. name and provider number of an institution. 
+
+Should not be used to include patient identifying information. ","","","","","","","","","",,,,,"",,,,"Base",0,*,"","Basic_validity:Basic validity must be present {name.exists() or identifiers.exists() or external_ref.exists()}
+Name_valid:Name valid must be present {name.exists() implies name.empty().not()}Identifiers_valid:Identifiers valid must be present {identifiers.exists() implies identifiers.empty().not()}","n/a"
+"PARTY_IDENTIFIED.external-ref","PARTY_IDENTIFIED.external_ref","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/PARTY-REF {[]} {[]}
+","Optional reference to more detailed demographic or identification information for this party, in an external system.","Optional reference to more detailed demographic or identification information for this party, in an external system.","","","","","","","","","",,,,,"",,,,"PARTY_PROXY.external_ref",0,1,"",""
+"PARTY_IDENTIFIED.name","PARTY_IDENTIFIED.name","","","",0,1,"","","","string {[]} {[]}
+","Optional human-readable name (in String form).","Optional human-readable name (in String form).","","","","","","","","","",,,,,"",,,,"PARTY_IDENTIFIED.name",0,1,"",""
+"PARTY_IDENTIFIED.identifiers","PARTY_IDENTIFIED.identifiers","","","",0,*,"","","","http://openehr.org/fhir/StructureDefinition/DV-IDENTIFIER {[]} {[]}
+","One or more formal identifiers (possibly computable).","One or more formal identifiers (possibly computable).","","","","","","","","","",,,,,"",,,,"PARTY_IDENTIFIED.identifiers",0,*,"",""

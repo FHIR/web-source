@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="ITEM-TABLE"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureDefinition ITEM-TABLE</b></p><a name="ITEM-TABLE"> </a><a name="hcITEM-TABLE"> </a><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-ITEM-TABLE-definitions.html#ITEM_TABLE" title="Logical relational database style table data structure, in which columns are named and ordered with respect to each other. Implemented using Cluster-per-row encoding. Each row Cluster must have an identical number of Elements, each of which in turn must have identical names and value types in the corresponding positions in each row. 
+
+Some columns may be designated  key' columns, containing key data for each row, in the manner of relational tables. This allows row-naming, where each row represents a body site, a blood antigen etc. All values in a column have the same data type. 
+
+Used for representing any data which is logically a table of values, such as blood pressure, most protocols, many blood tests etc. 
+
+Misuse: Not to be used for time-based data, which should be represented with the temporal class `HISTORY`. The table may be empty. ">ITEM_TABLE</a><a name="ITEM_TABLE"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;; padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;" href="http://hl7.org/fhir/R5/conformance-rules.html#constraints" title="This element has or is affected by constraints ( Valid_structure )">C</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-ITEM-STRUCTURE.html">ITEM_STRUCTURE</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Logical relational database style table data structure, in which columns are named and ordered with respect to each other.<br/><br/>Elements defined in Ancestors:<a href="StructureDefinition-LOCATABLE.html" title="Runtime name of this fragment, used to build runtime paths. This is the term provided via a clinical application or batch process to name this EHR construct: its retention in the EHR faithfully preserves the original label by which this entry was known to end users. 
+">name</a>, <a href="StructureDefinition-LOCATABLE.html" title="Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths. Always in the form of an at-code, e.g.  `at0005`. This value enables a 'standardised' name for this node to be generated, by referring to the generating archetype local terminology. 
+
+At an archetype root point, the value of this attribute is always the stringified form of the `_archetype_id_` found in the `_archetype_details_` object. 
+">archetype_node_id</a>, <a href="StructureDefinition-LOCATABLE.html" title="Optional globally unique object identifier for root points of archetyped structures. ">uid</a>, <a href="StructureDefinition-LOCATABLE.html" title="Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions. ">links</a>, <a href="StructureDefinition-LOCATABLE.html" title="Details of archetyping used on this node.">archetype_details</a>, <a href="StructureDefinition-LOCATABLE.html" title="Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node. ">feeder_audit</a><br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="Valid structure" class="constraint">Valid_structure</span><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-ITEM-TABLE-definitions.html#ITEM_TABLE.rows" title="Physical representation of the table as a list of `CLUSTERs`, each containing the data of one row of the table. ">rows</a><a name="ITEM_TABLE.rows"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-CLUSTER.html">CLUSTER</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Physical representation of the table as a list of `CLUSTERs`, each containing the data of one row of the table.<br/></td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <contained>
+    <OperationDefinition>
+      <id value="row_count"/>
+      <name value="row_count"/>
+      <title value="row_count"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Number of rows in the table."/>
+      <code value="row_count"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="integer"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="column_count"/>
+      <name value="column_count"/>
+      <title value="column_count"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Return number of columns in the table."/>
+      <code value="column_count"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="integer"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="row_names"/>
+      <name value="row_names"/>
+      <title value="row_names"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Return set of row names."/>
+      <code value="row_names"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="string"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="column_names"/>
+      <name value="column_names"/>
+      <title value="column_names"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Return set of column names."/>
+      <code value="column_names"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="string"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="ith_row"/>
+      <name value="ith_row"/>
+      <title value="ith_row"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Return i-th row."/>
+      <code value="ith_row"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="i"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="integer"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="Parameters"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="has_row_with_name"/>
+      <name value="has_row_with_name"/>
+      <title value="has_row_with_name"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Return `True` if there is a column with name = `_a_key_`."/>
+      <code value="has_row_with_name"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="a_key"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="string"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="boolean"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="has_column_with_name"/>
+      <name value="has_column_with_name"/>
+      <title value="has_column_with_name"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Return `True` if there is a column with name = `_a_key_`."/>
+      <code value="has_column_with_name"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="a_key"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="string"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="boolean"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="named_row"/>
+      <name value="named_row"/>
+      <title value="named_row"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Return row with name = `_a_key_`."/>
+      <code value="named_row"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="a_key"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="string"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="Parameters"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="has_row_with_key"/>
+      <name value="has_row_with_key"/>
+      <title value="has_row_with_key"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Return `True` if there is a row with key `_keys_`."/>
+      <code value="has_row_with_key"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="keys"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="*"/>
+        <type value="string"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="boolean"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="row_with_key"/>
+      <name value="row_with_key"/>
+      <title value="row_with_key"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Return rows with particular keys."/>
+      <code value="row_with_key"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="keys"/>
+        <use value="in"/>
+        <min value="0"/>
+        <max value="*"/>
+        <type value="string"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="Parameters"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="element_at_cell_ij"/>
+      <name value="element_at_cell_ij"/>
+      <title value="element_at_cell_ij"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Return cell at a particular location."/>
+      <code value="element_at_cell_ij"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="i"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="integer"/>
+      </parameter>
+      <parameter>
+        <name value="j"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="integer"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="Parameters"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="as_hierarchy"/>
+      <name value="as_hierarchy"/>
+      <title value="as_hierarchy"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Generate a CEN EN13606-compatible hierarchy consisting of a single `CLUSTER` containing the `CLUSTERs` representing the columns of this table. "/>
+      <code value="as_hierarchy"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="Parameters"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/web-source">
+    <valueUrl value="https://specifications.openehr.org/releases/RM/Release-1.1.0/data_structures.html#_item_table_class"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#row_count"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#column_count"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#row_names"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#column_names"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#ith_row"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#has_row_with_name"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#has_column_with_name"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#named_row"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#has_row_with_key"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#row_with_key"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#element_at_cell_ij"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#as_hierarchy"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="fhir"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/view-hint">
+    <valueCode value="element-view-replace-cardinality"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="3">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://openehr.org/fhir/ImplementationGuide/openehr.base"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://openehr.org/fhir/ImplementationGuide/openehr.base"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://openehr.org/fhir/StructureDefinition/ITEM-TABLE"/>
+  <version value="0.1.0-snapshot"/>
+  <name value="ITEM_TABLE"/>
+  <title value="ITEM_TABLE"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-09-06T15:35:39+10:00"/>
+  <publisher value="openEHR + HL7"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.openehr.org"/>
+    </telecom>
+  </contact>
+  <description value="Logical relational database style table data structure, in which columns are named and ordered with respect to each other. Implemented using Cluster-per-row encoding. Each row Cluster must have an identical number of Elements, each of which in turn must have identical names and value types in the corresponding positions in each row. &#xA;&#xA;Some columns may be designated  key' columns, containing key data for each row, in the manner of relational tables. This allows row-naming, where each row represents a body site, a blood antigen etc. All values in a column have the same data type. &#xA;&#xA;Used for representing any data which is logically a table of values, such as blood pressure, most protocols, many blood tests etc. &#xA;&#xA;Misuse: Not to be used for time-based data, which should be represented with the temporal class `HISTORY`. The table may be empty. "/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="5.0.0"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="http://openehr.org/fhir/StructureDefinition/ITEM_TABLE"/>
+  <baseDefinition value="http://openehr.org/fhir/StructureDefinition/ITEM-STRUCTURE"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="0.1.0-snapshot"/>
+    </extension>
+    <element id="ITEM_TABLE">
+      <path value="ITEM_TABLE"/>
+      <short value="Logical relational database style table data structure, in which columns are named and ordered with respect to each other."/>
+      <definition value="Logical relational database style table data structure, in which columns are named and ordered with respect to each other. Implemented using Cluster-per-row encoding. Each row Cluster must have an identical number of Elements, each of which in turn must have identical names and value types in the corresponding positions in each row. &#xA;&#xA;Some columns may be designated  key' columns, containing key data for each row, in the manner of relational tables. This allows row-naming, where each row represents a body site, a blood antigen etc. All values in a column have the same data type. &#xA;&#xA;Used for representing any data which is logically a table of values, such as blood pressure, most protocols, many blood tests etc. &#xA;&#xA;Misuse: Not to be used for time-based data, which should be represented with the temporal class `HISTORY`. The table may be empty. "/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Base"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <constraint>
+        <key value="Links_valid"/>
+        <severity value="error"/>
+        <human value="Links valid must be present"/>
+        <expression value="links.exists() implies links.empty().not()"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/LOCATABLE"/>
+      </constraint>
+      <constraint>
+        <key value="Archetyped_valid"/>
+        <severity value="error"/>
+        <human value="Archetyped valid must satisfy exclusive conditions"/>
+        <expression value="is_archetype_root() xor archetype_details .empty()"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/LOCATABLE"/>
+      </constraint>
+      <constraint>
+        <key value="Archetype_node_id_valid"/>
+        <severity value="error"/>
+        <human value="Archetype node id valid must not be empty"/>
+        <expression value="archetype_node_id.empty().not()"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/LOCATABLE"/>
+      </constraint>
+      <constraint>
+        <key value="Valid_structure"/>
+        <severity value="error"/>
+        <human value="Valid structure"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="ITEM_TABLE.name">
+      <path value="ITEM_TABLE.name"/>
+      <short value="Runtime name of this fragment, used to build runtime paths."/>
+      <definition value="Runtime name of this fragment, used to build runtime paths. This is the term provided via a clinical application or batch process to name this EHR construct: its retention in the EHR faithfully preserves the original label by which this entry was known to end users."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="LOCATABLE.name"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-TEXT"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ITEM_TABLE.archetype-node-id">
+      <path value="ITEM_TABLE.archetype_node_id"/>
+      <short value="Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths."/>
+      <definition value="Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths. Always in the form of an at-code, e.g.  `at0005`. This value enables a 'standardised' name for this node to be generated, by referring to the generating archetype local terminology. &#xA;&#xA;At an archetype root point, the value of this attribute is always the stringified form of the `_archetype_id_` found in the `_archetype_details_` object."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="LOCATABLE.archetype_node_id"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ITEM_TABLE.uid">
+      <path value="ITEM_TABLE.uid"/>
+      <short value="Optional globally unique object identifier for root points of archetyped structures."/>
+      <definition value="Optional globally unique object identifier for root points of archetyped structures."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="LOCATABLE.uid"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/UID-BASED-ID"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ITEM_TABLE.links">
+      <path value="ITEM_TABLE.links"/>
+      <short value="Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on)."/>
+      <definition value="Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="LOCATABLE.links"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/LINK"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ITEM_TABLE.archetype-details">
+      <path value="ITEM_TABLE.archetype_details"/>
+      <short value="Details of archetyping used on this node."/>
+      <definition value="Details of archetyping used on this node."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="LOCATABLE.archetype_details"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/ARCHETYPED"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ITEM_TABLE.feeder-audit">
+      <path value="ITEM_TABLE.feeder_audit"/>
+      <short value="Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node."/>
+      <definition value="Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="LOCATABLE.feeder_audit"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/FEEDER-AUDIT"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="ITEM_TABLE.rows">
+      <path value="ITEM_TABLE.rows"/>
+      <short value="Physical representation of the table as a list of `CLUSTERs`, each containing the data of one row of the table."/>
+      <definition value="Physical representation of the table as a list of `CLUSTERs`, each containing the data of one row of the table."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="ITEM_TABLE.rows"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/CLUSTER"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="ITEM_TABLE">
+      <path value="ITEM_TABLE"/>
+      <short value="Logical relational database style table data structure, in which columns are named and ordered with respect to each other."/>
+      <definition value="Logical relational database style table data structure, in which columns are named and ordered with respect to each other. Implemented using Cluster-per-row encoding. Each row Cluster must have an identical number of Elements, each of which in turn must have identical names and value types in the corresponding positions in each row. &#xA;&#xA;Some columns may be designated  key' columns, containing key data for each row, in the manner of relational tables. This allows row-naming, where each row represents a body site, a blood antigen etc. All values in a column have the same data type. &#xA;&#xA;Used for representing any data which is logically a table of values, such as blood pressure, most protocols, many blood tests etc. &#xA;&#xA;Misuse: Not to be used for time-based data, which should be represented with the temporal class `HISTORY`. The table may be empty. "/>
+      <min value="0"/>
+      <max value="*"/>
+      <constraint>
+        <key value="Valid_structure"/>
+        <severity value="error"/>
+        <human value="Valid structure"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <isModifier value="false"/>
+    </element>
+    <element id="ITEM_TABLE.rows">
+      <path value="ITEM_TABLE.rows"/>
+      <short value="Physical representation of the table as a list of `CLUSTERs`, each containing the data of one row of the table."/>
+      <definition value="Physical representation of the table as a list of `CLUSTERs`, each containing the data of one row of the table. "/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/CLUSTER"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

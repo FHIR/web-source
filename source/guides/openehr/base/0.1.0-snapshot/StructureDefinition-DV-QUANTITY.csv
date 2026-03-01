@@ -1,0 +1,67 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"DV_QUANTITY","DV_QUANTITY","","","",0,*,"","","","null {[]} {[]}
+","Quantitified type representing  scientific  quantities, i.","Quantitified type representing  scientific  quantities, i.e. quantities expressed as a magnitude and units. Units are expressed in the UCUM syntax (http://unitsofmeasure.org/ucum.html[Unified Code for Units of Measure (UCUM)], by Gunther Schadow and Clement J. McDonald of The Regenstrief Institute)  (case-sensitive form) by default, or another system if `_units_system_` is set. 
+
+Can also be used for time durations, where it is more convenient to treat these as simply a number of seconds rather than days, months, years (in the latter case, `DV_DURATION` may be used).","","","","","","","","","",,,,,"",,,,"Base",0,*,"","Other_reference_ranges_validity:Other reference ranges validity must be present {other_reference_ranges.exists() implies other_reference_ranges.empty().not()}
+Is_simple_validity:Is simple validity must satisfy conditional constraints {(normal_range .empty() and other_reference_ranges .empty()) implies is_simple()}Normal_range_and_status_consistency:Normal range and status consistency must be present {(normal_range.exists() and normal_status.exists()) implies (normal_status.code_string.is_equal (“N”) xor normal_range.not().has (self))}Magnitude_status_valid:Magnitude status valid must be present {magnitude_status.exists() implies valid_magnitude_status() (magnitude_status)}Accuracy_is_percent_validity:Accuracy is percent validity must satisfy conditional constraints {accuracy = 0 implies accuracy_is_percent.not()}Accuracy_validity:Accuracy validity must satisfy conditional constraints {accuracy_is_percent implies valid_percentage() (accuracy)}","n/a"
+"DV_QUANTITY.CR","DV_QUANTITY.CR","","","",1,1,"","","","string {[]} {[]}
+","Carriage return character.","Carriage return character.","","","","","","","","","",,,,,"",,,,"BASIC_DEFINITIONS.CR",1,1,"",""
+"DV_QUANTITY.LF","DV_QUANTITY.LF","","","",1,1,"","","","string {[]} {[]}
+","Line feed character.","Line feed character.","","","","","","","","","",,,,,"",,,,"BASIC_DEFINITIONS.LF",1,1,"",""
+"DV_QUANTITY.Local-terminology-id","DV_QUANTITY.Local_terminology_id","","","",1,1,"","","","string {[]} {[]}
+","Predefined terminology identifier","Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype","","","","","","","","","",,,,,"",,,,"OPENEHR_DEFINITIONS.Local_terminology_id",1,1,"",""
+"DV_QUANTITY.normal-status","DV_QUANTITY.normal_status","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/CODE-PHRASE {[]} {[]}
+","Optional normal status indicator of value with respect to normal range for this value.","Optional normal status indicator of value with respect to normal range for this value. Often included by lab, even if the normal range itself is not included. Coded by ordinals in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group  `normal_status`.","","","","","","","","","",,,,,"",,,,"DV_ORDERED.normal_status",0,1,"",""
+"DV_QUANTITY.normal-range","DV_QUANTITY.normal_range","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/DV-INTERVAL {[]} {[]}
+","Optional normal range.","Optional normal range. ","","","","","","","","","",,,,,"",,,,"DV_ORDERED.normal_range",0,1,"",""
+"DV_QUANTITY.other-reference-ranges","DV_QUANTITY.other_reference_ranges","","","",0,*,"","","","http://openehr.org/fhir/StructureDefinition/REFERENCE-RANGE {[]} {[]}
+","Optional tagged other reference ranges for this value in its particular measurement context.","Optional tagged other reference ranges for this value in its particular measurement context.","","","","","","","","","",,,,,"",,,,"DV_ORDERED.other_reference_ranges",0,*,"",""
+"DV_QUANTITY.magnitude-status","DV_QUANTITY.magnitude_status","","","",0,1,"","","","string {[]} {[]}
+","Optional status of magnitude with values: 
+
+* `""=""`   :   magnitude is a point value 
+* `""<""`   :   value is < magnitude 
+* `"">""`   :   value is > magnitude 
+* `""<=""` : value is <= magnitude 
+* `"">=""` : value is >= magnitude 
+* `""~""`   :   value is approximately magnitude 
+
+If not present, assumed meaning is  `""=""` .","Optional status of magnitude with values: 
+
+* `""=""`   :   magnitude is a point value 
+* `""<""`   :   value is < magnitude 
+* `"">""`   :   value is > magnitude 
+* `""<=""` : value is <= magnitude 
+* `"">=""` : value is >= magnitude 
+* `""~""`   :   value is approximately magnitude 
+
+If not present, assumed meaning is  `""=""` .","","","","","","","","","",,,,,"",,,,"DV_QUANTIFIED.magnitude_status",0,1,"",""
+"DV_QUANTITY.accuracy","DV_QUANTITY.accuracy","","","",0,1,"","","","decimal {[]} {[]}
+","Accuracy of measurement, expressed either as a half-range percent value (`_accuracy_is_percent_` = `True`) or a half-range quantity.","Accuracy of measurement, expressed either as a half-range percent value (`_accuracy_is_percent_` = `True`) or a half-range quantity. A value of `0` means that accuracy is 100%, i.e. no error.
+
+A value of `_unknown_accuracy_value_` means that accuracy was not recorded.","","","","","","","","","",,,,,"",,,,"DV_QUANTIFIED.accuracy",0,1,"",""
+"DV_QUANTITY.accuracy-is-percent","DV_QUANTITY.accuracy_is_percent","","","",0,1,"","","","boolean {[]} {[]}
+","If `True`, indicates that when this object was created, `_accuracy_` was recorded as a percent value; if `False`, as an absolute quantity value.","If `True`, indicates that when this object was created, `_accuracy_` was recorded as a percent value; if `False`, as an absolute quantity value.","","","","","","","","","",,,,,"",,,,"DV_AMOUNT.accuracy_is_percent",0,1,"",""
+"DV_QUANTITY.magnitude","DV_QUANTITY.magnitude","","","",1,1,"","","","decimal {[]} {[]}
+","Numeric magnitude of the quantity.","Numeric magnitude of the quantity.","","","","","","","","","",,,,,"",,,,"DV_QUANTITY.magnitude",1,1,"",""
+"DV_QUANTITY.precision","DV_QUANTITY.precision","","","",0,1,"","","","integer {[]} {[]}
+","Precision to which the value of the quantity is expressed, in terms of number of decimal places.","Precision to which the value of the quantity is expressed, in terms of number of decimal places. The value 0 implies an integral quantity.
+The value -1 implies no limit, i.e. any number of decimal places.","","","","","","","","","",,,,,"",,,,"DV_QUANTITY.precision",0,1,"",""
+"DV_QUANTITY.units","DV_QUANTITY.units","","","",1,1,"","","","string {[]} {[]}
+","Quantity units, expressed as a code or syntax string from either UCUM (the default) or the units system specified in `_units_system_`, when set.","Quantity units, expressed as a code or syntax string from either UCUM (the default) or the units system specified in `_units_system_`, when set.
+
+In either case, the value is the code or syntax - normally formed of standard ASCII - which is in principal not the same as the display string, although in simple cases such as 'm' (for meters) it will be.
+
+If the `_units_display_name_` field is set, this may be used for display. If not, the implementations must effect the resolution of the `_units_` value to a display form locally, e.g. by lookup of reference tables, request to a terminology service etc.
+
+Example values from UCUM: ""kg/m^2"", “mm[Hg]"", ""ms-1"", ""km/h"".","","","","","","","","","",,,,,"",,,,"DV_QUANTITY.units",1,1,"",""
+"DV_QUANTITY.units-system","DV_QUANTITY.units_system","","","",0,1,"","","","string {[]} {[]}
+","Optional field used to specify a units system from which codes in `_units_` are defined.","Optional field used to specify a units system from which codes in `_units_` are defined. Value is a URI identifying a terminology containing units concepts from the  (https://www.hl7.org/fhir/terminologies-systems.html[HL7 FHIR terminologies list]).
+
+If not set, the UCUM standard (case-sensitive codes) is assumed as the units system.","","","","","","","","","",,,,,"",,,,"DV_QUANTITY.units_system",0,1,"",""
+"DV_QUANTITY.units-display-name","DV_QUANTITY.units_display_name","","","",0,1,"","","","string {[]} {[]}
+","Optional field containing the displayable form of the `_units_` field, e.","Optional field containing the displayable form of the `_units_` field, e.g. `'°C'`.
+
+If not set, the application environment needs to determine the displayable form.
+
+NOTE: The display name may be language-dependent for various older and non-systematic units. For this reason, it is not recommended to add unit display names to archetypes, only to templates (for localisation purposes).","","","","","","","","","",,,,,"",,,,"DV_QUANTITY.units_display_name",0,1,"",""

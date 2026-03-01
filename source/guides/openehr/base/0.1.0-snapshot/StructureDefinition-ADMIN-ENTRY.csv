@@ -1,0 +1,51 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"ADMIN_ENTRY","ADMIN_ENTRY","","","",0,*,"","","","null {[]} {[]}
+","Entry subtype for administrative information, i.","Entry subtype for administrative information, i.e. information about setting up the clinical process, but not itself clinically relevant. Archetypes will define contained information.
+
+Used for administrative details of admission, episode, ward location, discharge, appointment (if not stored in a practice management or appointments system). 
+
+Not to be used for any clinically significant information.","","","","","","","","","",,,,,"",,,,"Base",0,*,"","Links_valid:Links valid must be present {links.exists() implies links.empty().not()}
+Archetyped_valid:Archetyped valid must satisfy exclusive conditions {is_archetype_root() xor archetype_details .empty()}Archetype_node_id_valid:Archetype node id valid must not be empty {archetype_node_id.empty().not()}Subject_validity:Subject validity must satisfy conditional constraints {subject_is_self() implies subject.generating_type = “PARTY_SELF”}Other_participations_valid:Other participations valid must be present {other_participations.exists() implies other_participations.empty().not()}Is_archetype_root:Is archetype root {is_archetype_root()}","n/a"
+"ADMIN_ENTRY.name","ADMIN_ENTRY.name","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/DV-TEXT {[]} {[]}
+","Runtime name of this fragment, used to build runtime paths.","Runtime name of this fragment, used to build runtime paths. This is the term provided via a clinical application or batch process to name this EHR construct: its retention in the EHR faithfully preserves the original label by which this entry was known to end users.","","","","","","","","","",,,,,"",,,,"LOCATABLE.name",1,1,"",""
+"ADMIN_ENTRY.archetype-node-id","ADMIN_ENTRY.archetype_node_id","","","",1,1,"","","","string {[]} {[]}
+","Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths.","Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths. Always in the form of an at-code, e.g.  `at0005`. This value enables a 'standardised' name for this node to be generated, by referring to the generating archetype local terminology. 
+
+At an archetype root point, the value of this attribute is always the stringified form of the `_archetype_id_` found in the `_archetype_details_` object.","","","","","","","","","",,,,,"",,,,"LOCATABLE.archetype_node_id",1,1,"",""
+"ADMIN_ENTRY.uid","ADMIN_ENTRY.uid","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/UID-BASED-ID {[]} {[]}
+","Optional globally unique object identifier for root points of archetyped structures.","Optional globally unique object identifier for root points of archetyped structures.","","","","","","","","","",,,,,"",,,,"LOCATABLE.uid",0,1,"",""
+"ADMIN_ENTRY.links","ADMIN_ENTRY.links","","","",0,*,"","","","http://openehr.org/fhir/StructureDefinition/LINK {[]} {[]}
+","Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on).","Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions.","","","","","","","","","",,,,,"",,,,"LOCATABLE.links",0,*,"",""
+"ADMIN_ENTRY.archetype-details","ADMIN_ENTRY.archetype_details","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/ARCHETYPED {[]} {[]}
+","Details of archetyping used on this node.","Details of archetyping used on this node.","","","","","","","","","",,,,,"",,,,"LOCATABLE.archetype_details",0,1,"",""
+"ADMIN_ENTRY.feeder-audit","ADMIN_ENTRY.feeder_audit","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/FEEDER-AUDIT {[]} {[]}
+","Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node.","Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node.","","","","","","","","","",,,,,"",,,,"LOCATABLE.feeder_audit",0,1,"",""
+"ADMIN_ENTRY.language","ADMIN_ENTRY.language","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/CODE-PHRASE {[]} {[]}
+","Mandatory indicator of the localised language in which this Entry is written.","Mandatory indicator of the localised language in which this Entry is written. Coded from openEHR Code Set  languages .","","","","","","","","","",,,,,"",,,,"ENTRY.language",1,1,"",""
+"ADMIN_ENTRY.encoding","ADMIN_ENTRY.encoding","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/CODE-PHRASE {[]} {[]}
+","Name of character set in which text values in this Entry are encoded.","Name of character set in which text values in this Entry are encoded. Coded from openEHR Code Set  character sets.","","","","","","","","","",,,,,"",,,,"ENTRY.encoding",1,1,"",""
+"ADMIN_ENTRY.other-participations","ADMIN_ENTRY.other_participations","","","",0,*,"","","","http://openehr.org/fhir/StructureDefinition/PARTICIPATION {[]} {[]}
+","Other participations at `ENTRY` level.","Other participations at `ENTRY` level.","","","","","","","","","",,,,,"",,,,"ENTRY.other_participations",0,*,"",""
+"ADMIN_ENTRY.workflow-id","ADMIN_ENTRY.workflow_id","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/OBJECT-REF {[]} {[]}
+","Identifier of externally held workflow engine data for this workflow execution, for this subject of care.","Identifier of externally held workflow engine data for this workflow execution, for this subject of care.","","","","","","","","","",,,,,"",,,,"ENTRY.workflow_id",0,1,"",""
+"ADMIN_ENTRY.subject","ADMIN_ENTRY.subject","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/PARTY-PROXY {[]} {[]}
+","Id of human subject of this `ENTRY`, e.","Id of human subject of this `ENTRY`, e.g.: 
+
+* organ donor 
+* foetus 
+* a family member 
+* another clinically relevant person.","","","","","","","","","",,,,,"",,,,"ENTRY.subject",1,1,"",""
+"ADMIN_ENTRY.provider","ADMIN_ENTRY.provider","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/PARTY-PROXY {[]} {[]}
+","Optional identification of provider of the information in this `ENTRY`, which might be: 
+
+* the patient 
+* a patient agent, e.","Optional identification of provider of the information in this `ENTRY`, which might be: 
+
+* the patient 
+* a patient agent, e.g. parent, guardian 
+* the clinician 
+* a device or software 
+
+Generally only used when the recorder needs to make it explicit. Otherwise, Composition composer and other participants are assumed.","","","","","","","","","",,,,,"",,,,"ENTRY.provider",0,1,"",""
+"ADMIN_ENTRY.data","ADMIN_ENTRY.data","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/ITEM-STRUCTURE {[]} {[]}
+","Content of the Admin Entry.","Content of the Admin Entry.","","","","","","","","","",,,,,"",,,,"ADMIN_ENTRY.data",1,1,"",""

@@ -1,0 +1,31 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"ACTIVITY","ACTIVITY","","","",0,*,"","","","null {[]} {[]}
+","Defines a single activity within an Instruction, such as a medication administration.","Defines a single activity within an Instruction, such as a medication administration. ","","","","","","","","","",,,,,"",,,,"Base",0,*,"","Links_valid:Links valid must be present {links.exists() implies links.empty().not()}
+Archetyped_valid:Archetyped valid must satisfy exclusive conditions {is_archetype_root() xor archetype_details .empty()}Archetype_node_id_valid:Archetype node id valid must not be empty {archetype_node_id.empty().not()}Action_archetype_id_valid:Action archetype id valid must not be empty {action_archetype_id.empty().not()}","n/a"
+"ACTIVITY.name","ACTIVITY.name","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/DV-TEXT {[]} {[]}
+","Runtime name of this fragment, used to build runtime paths.","Runtime name of this fragment, used to build runtime paths. This is the term provided via a clinical application or batch process to name this EHR construct: its retention in the EHR faithfully preserves the original label by which this entry was known to end users.","","","","","","","","","",,,,,"",,,,"LOCATABLE.name",1,1,"",""
+"ACTIVITY.archetype-node-id","ACTIVITY.archetype_node_id","","","",1,1,"","","","string {[]} {[]}
+","Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths.","Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths. Always in the form of an at-code, e.g.  `at0005`. This value enables a 'standardised' name for this node to be generated, by referring to the generating archetype local terminology. 
+
+At an archetype root point, the value of this attribute is always the stringified form of the `_archetype_id_` found in the `_archetype_details_` object.","","","","","","","","","",,,,,"",,,,"LOCATABLE.archetype_node_id",1,1,"",""
+"ACTIVITY.uid","ACTIVITY.uid","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/UID-BASED-ID {[]} {[]}
+","Optional globally unique object identifier for root points of archetyped structures.","Optional globally unique object identifier for root points of archetyped structures.","","","","","","","","","",,,,,"",,,,"LOCATABLE.uid",0,1,"",""
+"ACTIVITY.links","ACTIVITY.links","","","",0,*,"","","","http://openehr.org/fhir/StructureDefinition/LINK {[]} {[]}
+","Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on).","Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions.","","","","","","","","","",,,,,"",,,,"LOCATABLE.links",0,*,"",""
+"ACTIVITY.archetype-details","ACTIVITY.archetype_details","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/ARCHETYPED {[]} {[]}
+","Details of archetyping used on this node.","Details of archetyping used on this node.","","","","","","","","","",,,,,"",,,,"LOCATABLE.archetype_details",0,1,"",""
+"ACTIVITY.feeder-audit","ACTIVITY.feeder_audit","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/FEEDER-AUDIT {[]} {[]}
+","Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node.","Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node.","","","","","","","","","",,,,,"",,,,"LOCATABLE.feeder_audit",0,1,"",""
+"ACTIVITY.timing","ACTIVITY.timing","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/DV-PARSABLE {[]} {[]}
+","Timing of the activity, in the form of a parsable string.","Timing of the activity, in the form of a parsable string. If used, the preferred syntax is ISO8601 'R' format, but other formats may be used including HL7 GTS.
+
+May be omitted if:
+
+* timing is represented structurally in the `_description_` attribute (e.g. via archetyped elements), or
+* unavailable, e.g. imported legacy data; in such cases, the `INSTRUCTION._narrative_` should carry text that indicates the timing of its `_activities_`.","","","","","","","","","",,,,,"",,,,"ACTIVITY.timing",0,1,"",""
+"ACTIVITY.action-archetype-id","ACTIVITY.action_archetype_id","","","",1,1,"","","","string {[]} {[]}
+","Perl-compliant regular expression pattern, enclosed in  '//' delimiters, indicating the valid identifiers of archetypes for Actions corresponding to this Activity specification.","Perl-compliant regular expression pattern, enclosed in  '//' delimiters, indicating the valid identifiers of archetypes for Actions corresponding to this Activity specification. 
+
+Defaults to  `/.*/`, meaning any archetype.","","","","","","","","","",,,,,"",,,,"ACTIVITY.action_archetype_id",1,1,"",""
+"ACTIVITY.description","ACTIVITY.description","","","",1,1,"","","","http://openehr.org/fhir/StructureDefinition/ITEM-STRUCTURE {[]} {[]}
+","Description of the activity, in the form of an archetyped structure.","Description of the activity, in the form of an archetyped structure.","","","","","","","","","",,,,,"",,,,"ACTIVITY.description",1,1,"",""

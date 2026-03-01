@@ -1,0 +1,367 @@
+{
+  "resourceType" : "StructureDefinition",
+  "id" : "DV-SCALE",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: StructureDefinition DV-SCALE</b></p><a name=\"DV-SCALE\"> </a><a name=\"hcDV-SCALE\"> </a><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the element can appear in the instance\">Card.</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px\" class=\"hierarchy\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-DV-SCALE-definitions.html#DV_SCALE\" title=\"A data type that represents scale values, where there is:\n\na) implied ordering, \nb) no implication that the distance between each value is constant, and \nc) the total number of values is finite;\nd) non-integer values are allowed.\n\nExample:\n\n----\nBorg CR 10 Scale\n\n0    No Breathlessness at all\n0.5  Very Very Slight (Just Noticeable)\n1    Very Slight\n2    Slight Breathlessness\n3    Moderate\n... etc\n----\n\nFor scores that include only Integers, `DV_SCALE` may also be used, but `DV_ORDINAL` should be supported to accommodate existing data instances of that type.\">DV_SCALE</a><a name=\"DV_SCALE\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">0..*</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-DV-ORDERED.html\">DV_ORDERED</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">A data type that represents scale values, where there is:\n\na) implied ordering, \nb) no implication that the distance between each value is constant, and \nc) the total number of values is finite;\nd) non-integer values are allowed.<br/><br/>Elements defined in Ancestors:<a href=\"StructureDefinition-BASIC-DEFINITIONS.html\" title=\"Carriage return character.\">CR</a>, <a href=\"StructureDefinition-BASIC-DEFINITIONS.html\" title=\"Line feed character.\">LF</a>, <a href=\"StructureDefinition-OPENEHR-DEFINITIONS.html\" title=\"Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype\">Local_terminology_id</a>, <a href=\"StructureDefinition-DV-ORDERED.html\" title=\"Optional normal status indicator of value with respect to normal range for this value. Often included by lab, even if the normal range itself is not included. Coded by ordinals in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group  `normal_status`. \">normal_status</a>, <a href=\"StructureDefinition-DV-ORDERED.html\" title=\"Optional normal range. \">normal_range</a>, <a href=\"StructureDefinition-DV-ORDERED.html\" title=\"Optional tagged other reference ranges for this value in its particular measurement context.\">other_reference_ranges</a><br/></td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-DV-SCALE-definitions.html#DV_SCALE.symbol\" title=\"Coded textual representation of this value in the scale range, which may be strings made from symbols or other enumerations of terms such as  `no breathlessness`, `very very slight`, `slight breathlessness`. Codes come from archetypes.\n\nIn some cases, a scale may include values that have no code/symbol. In this case, the symbol will be a `DV-CODED_TEXT` including the `_terminology_id_` and a blank String value for `_code_string_`.\">symbol</a><a name=\"DV_SCALE.symbol\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"StructureDefinition-DV-CODED-TEXT.html\">DV_CODED_TEXT</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Coded textual representation of this value in the scale range, which may be strings made from symbols or other enumerations of terms such as  `no breathlessness`, `very very slight`, `slight breathlessness`.</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_primitive.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Primitive Data Type\" class=\"hierarchy\"/> <a href=\"StructureDefinition-DV-SCALE-definitions.html#DV_SCALE.value\" title=\"Real number value of Scale item.\n\">value</a><a name=\"DV_SCALE.value\"> </a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">1..1</td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R5/datatypes.html#decimal\">decimal</a></td><td style=\"vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">Real number value of Scale item.</td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"><img src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+  },
+  "contained" : [{
+    "resourceType" : "OperationDefinition",
+    "id" : "is_strictly_comparable_to",
+    "name" : "is_strictly_comparable_to",
+    "title" : "is_strictly_comparable_to",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "Test if this Scale value is strictly comparable to `_other_`.",
+    "code" : "is_strictly_comparable_to",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "other",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "1",
+      "type" : "boolean"
+    }]
+  },
+  {
+    "resourceType" : "OperationDefinition",
+    "id" : "less_than",
+    "name" : "less_than",
+    "title" : "less_than",
+    "status" : "active",
+    "kind" : "operation",
+    "description" : "True if this Scale value is less than `_other_`.",
+    "code" : "less_than",
+    "system" : false,
+    "instance" : true,
+    "parameter" : [{
+      "name" : "other",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "type" : "Parameters"
+    },
+    {
+      "name" : "return",
+      "use" : "out",
+      "min" : 1,
+      "max" : "1",
+      "type" : "boolean"
+    }]
+  }],
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/web-source",
+    "valueUrl" : "https://specifications.openehr.org/releases/RM/Release-1.1.0/data_types.html#_dv_scale_class"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#is_strictly_comparable_to"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-operation",
+    "valueCanonical" : "#less_than"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "fhir"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/view-hint",
+    "valueCode" : "element-view-as-leaf"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/view-hint",
+    "valueCode" : "element-view-defns-parent"
+  },
+  {
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/view-hint",
+    "valueCode" : "element-view-replace-cardinality"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 3,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://openehr.org/fhir/ImplementationGuide/openehr.base"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "informative",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://openehr.org/fhir/ImplementationGuide/openehr.base"
+      }]
+    }
+  }],
+  "url" : "http://openehr.org/fhir/StructureDefinition/DV-SCALE",
+  "version" : "0.1.0-snapshot",
+  "name" : "DV_SCALE",
+  "title" : "DV_SCALE",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-09-06T15:35:39+10:00",
+  "publisher" : "openEHR + HL7",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.openehr.org"
+    }]
+  }],
+  "description" : "A data type that represents scale values, where there is:\n\na) implied ordering, \nb) no implication that the distance between each value is constant, and \nc) the total number of values is finite;\nd) non-integer values are allowed.\n\nExample:\n\n----\nBorg CR 10 Scale\n\n0    No Breathlessness at all\n0.5  Very Very Slight (Just Noticeable)\n1    Very Slight\n2    Slight Breathlessness\n3    Moderate\n... etc\n----\n\nFor scores that include only Integers, `DV_SCALE` may also be used, but `DV_ORDINAL` should be supported to accommodate existing data instances of that type.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "fhirVersion" : "5.0.0",
+  "mapping" : [{
+    "identity" : "rim",
+    "uri" : "http://hl7.org/v3",
+    "name" : "RIM Mapping"
+  }],
+  "kind" : "logical",
+  "abstract" : false,
+  "type" : "http://openehr.org/fhir/StructureDefinition/DV_SCALE",
+  "baseDefinition" : "http://openehr.org/fhir/StructureDefinition/DV-ORDERED",
+  "derivation" : "specialization",
+  "snapshot" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version",
+      "valueString" : "0.1.0-snapshot"
+    }],
+    "element" : [{
+      "id" : "DV_SCALE",
+      "path" : "DV_SCALE",
+      "short" : "A data type that represents scale values, where there is:\n\na) implied ordering, \nb) no implication that the distance between each value is constant, and \nc) the total number of values is finite;\nd) non-integer values are allowed.",
+      "definition" : "A data type that represents scale values, where there is:\n\na) implied ordering, \nb) no implication that the distance between each value is constant, and \nc) the total number of values is finite;\nd) non-integer values are allowed.\n\nExample:\n\n----\nBorg CR 10 Scale\n\n0    No Breathlessness at all\n0.5  Very Very Slight (Just Noticeable)\n1    Very Slight\n2    Slight Breathlessness\n3    Moderate\n... etc\n----\n\nFor scores that include only Integers, `DV_SCALE` may also be used, but `DV_ORDINAL` should be supported to accommodate existing data instances of that type.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "Base",
+        "min" : 0,
+        "max" : "*"
+      },
+      "constraint" : [{
+        "key" : "Other_reference_ranges_validity",
+        "severity" : "error",
+        "human" : "Other reference ranges validity must be present",
+        "expression" : "other_reference_ranges.exists() implies other_reference_ranges.empty().not()",
+        "source" : "http://openehr.org/fhir/StructureDefinition/DV-ORDERED"
+      },
+      {
+        "key" : "Is_simple_validity",
+        "severity" : "error",
+        "human" : "Is simple validity must satisfy conditional constraints",
+        "expression" : "(normal_range .empty() and other_reference_ranges .empty()) implies is_simple()",
+        "source" : "http://openehr.org/fhir/StructureDefinition/DV-ORDERED"
+      },
+      {
+        "key" : "Normal_range_and_status_consistency",
+        "severity" : "error",
+        "human" : "Normal range and status consistency must be present",
+        "expression" : "(normal_range.exists() and normal_status.exists()) implies (normal_status.code_string.is_equal (“N”) xor normal_range.not().has (self))",
+        "source" : "http://openehr.org/fhir/StructureDefinition/DV-ORDERED"
+      }],
+      "isModifier" : false,
+      "mapping" : [{
+        "identity" : "rim",
+        "map" : "n/a"
+      }]
+    },
+    {
+      "id" : "DV_SCALE.CR",
+      "path" : "DV_SCALE.CR",
+      "short" : "Carriage return character.",
+      "definition" : "Carriage return character.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "BASIC_DEFINITIONS.CR",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "DV_SCALE.LF",
+      "path" : "DV_SCALE.LF",
+      "short" : "Line feed character.",
+      "definition" : "Line feed character.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "BASIC_DEFINITIONS.LF",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "DV_SCALE.Local-terminology-id",
+      "path" : "DV_SCALE.Local_terminology_id",
+      "short" : "Predefined terminology identifier",
+      "definition" : "Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "OPENEHR_DEFINITIONS.Local_terminology_id",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "string"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "DV_SCALE.normal-status",
+      "path" : "DV_SCALE.normal_status",
+      "short" : "Optional normal status indicator of value with respect to normal range for this value.",
+      "definition" : "Optional normal status indicator of value with respect to normal range for this value. Often included by lab, even if the normal range itself is not included. Coded by ordinals in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group  `normal_status`.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "DV_ORDERED.normal_status",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "DV_SCALE.normal-range",
+      "path" : "DV_SCALE.normal_range",
+      "short" : "Optional normal range.",
+      "definition" : "Optional normal range.",
+      "min" : 0,
+      "max" : "1",
+      "base" : {
+        "path" : "DV_ORDERED.normal_range",
+        "min" : 0,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/DV-INTERVAL"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "DV_SCALE.other-reference-ranges",
+      "path" : "DV_SCALE.other_reference_ranges",
+      "short" : "Optional tagged other reference ranges for this value in its particular measurement context.",
+      "definition" : "Optional tagged other reference ranges for this value in its particular measurement context.",
+      "min" : 0,
+      "max" : "*",
+      "base" : {
+        "path" : "DV_ORDERED.other_reference_ranges",
+        "min" : 0,
+        "max" : "*"
+      },
+      "type" : [{
+        "extension" : [{
+          "extension" : [{
+            "url" : "name",
+            "valueCode" : "T"
+          },
+          {
+            "url" : "type",
+            "valueUri" : "http://openehr.org/fhir/StructureDefinition/DV-ORDERED"
+          }],
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/type-parameter"
+        }],
+        "code" : "http://openehr.org/fhir/StructureDefinition/REFERENCE-RANGE"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "DV_SCALE.symbol",
+      "path" : "DV_SCALE.symbol",
+      "short" : "Coded textual representation of this value in the scale range, which may be strings made from symbols or other enumerations of terms such as  `no breathlessness`, `very very slight`, `slight breathlessness`.",
+      "definition" : "Coded textual representation of this value in the scale range, which may be strings made from symbols or other enumerations of terms such as  `no breathlessness`, `very very slight`, `slight breathlessness`. Codes come from archetypes.\n\nIn some cases, a scale may include values that have no code/symbol. In this case, the symbol will be a `DV-CODED_TEXT` including the `_terminology_id_` and a blank String value for `_code_string_`.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "DV_SCALE.symbol",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/DV-CODED-TEXT"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "DV_SCALE.value",
+      "path" : "DV_SCALE.value",
+      "short" : "Real number value of Scale item.",
+      "definition" : "Real number value of Scale item.",
+      "min" : 1,
+      "max" : "1",
+      "base" : {
+        "path" : "DV_SCALE.value",
+        "min" : 1,
+        "max" : "1"
+      },
+      "type" : [{
+        "code" : "decimal"
+      }],
+      "isModifier" : false
+    }]
+  },
+  "differential" : {
+    "element" : [{
+      "id" : "DV_SCALE",
+      "path" : "DV_SCALE",
+      "short" : "A data type that represents scale values, where there is:\n\na) implied ordering, \nb) no implication that the distance between each value is constant, and \nc) the total number of values is finite;\nd) non-integer values are allowed.",
+      "definition" : "A data type that represents scale values, where there is:\n\na) implied ordering, \nb) no implication that the distance between each value is constant, and \nc) the total number of values is finite;\nd) non-integer values are allowed.\n\nExample:\n\n----\nBorg CR 10 Scale\n\n0    No Breathlessness at all\n0.5  Very Very Slight (Just Noticeable)\n1    Very Slight\n2    Slight Breathlessness\n3    Moderate\n... etc\n----\n\nFor scores that include only Integers, `DV_SCALE` may also be used, but `DV_ORDINAL` should be supported to accommodate existing data instances of that type.",
+      "min" : 0,
+      "max" : "*",
+      "isModifier" : false
+    },
+    {
+      "id" : "DV_SCALE.symbol",
+      "path" : "DV_SCALE.symbol",
+      "short" : "Coded textual representation of this value in the scale range, which may be strings made from symbols or other enumerations of terms such as  `no breathlessness`, `very very slight`, `slight breathlessness`.",
+      "definition" : "Coded textual representation of this value in the scale range, which may be strings made from symbols or other enumerations of terms such as  `no breathlessness`, `very very slight`, `slight breathlessness`. Codes come from archetypes.\n\nIn some cases, a scale may include values that have no code/symbol. In this case, the symbol will be a `DV-CODED_TEXT` including the `_terminology_id_` and a blank String value for `_code_string_`.",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "http://openehr.org/fhir/StructureDefinition/DV-CODED-TEXT"
+      }],
+      "isModifier" : false
+    },
+    {
+      "id" : "DV_SCALE.value",
+      "path" : "DV_SCALE.value",
+      "short" : "Real number value of Scale item.",
+      "definition" : "Real number value of Scale item.\n",
+      "min" : 1,
+      "max" : "1",
+      "type" : [{
+        "code" : "decimal"
+      }],
+      "isModifier" : false
+    }]
+  }
+}

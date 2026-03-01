@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="DV-ORDINAL"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureDefinition DV-ORDINAL</b></p><a name="DV-ORDINAL"> </a><a name="hcDV-ORDINAL"> </a><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-DV-ORDINAL-definitions.html#DV_ORDINAL" title="A data type that represents integral score values, e.g. pain, Apgar values, etc, where there is:
+
+a) implied ordering, 
+b) no implication that the distance between each value is constant, and 
+c) the total number of values is finite;
+d) integer values only.
+
+Note that although the term 'ordinal' in mathematics means natural numbers only, here any integer is allowed, since negative and zero values are often used by medical professionals for values around a neutral point. Examples of sets of ordinal values: 
+
+*   -3, -2, -1, 0, 1, 2, 3  -- reflex response values 
+*    0, 1, 2                  -- Apgar values 
+
+This class is used for recording any clinical datum which is customarily recorded using symbolic values. Example: the results on a urinalysis strip, e.g. `{neg, trace, +, ++, +++}` are used for leucocytes, protein, nitrites etc; for non-haemolysed blood `{neg, trace, moderate}`; for haemolysed blood `{small, moderate, large}`.
+
+For scores or scales that include Real numbers (or might in the future, i.e. not fixed for all time, such as Apgar), use `DV_SCALE`. `DV_SCALE` may also be used in future for representing purely Integer-based scales, however, the `DV_ORDINAL` type should continue to be supported in software implementations in order to accommodate existing data that are instances of this type.">DV_ORDINAL</a><a name="DV_ORDINAL"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;; padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;" href="http://hl7.org/fhir/R5/conformance-rules.html#constraints" title="This element has or is affected by constraints ( Limits_valid, Reference_range_valid )">C</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-DV-ORDERED.html">DV_ORDERED</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">A data type that represents integral score values, e.<br/><br/>Elements defined in Ancestors:<a href="StructureDefinition-BASIC-DEFINITIONS.html" title="Carriage return character.">CR</a>, <a href="StructureDefinition-BASIC-DEFINITIONS.html" title="Line feed character.">LF</a>, <a href="StructureDefinition-OPENEHR-DEFINITIONS.html" title="Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype">Local_terminology_id</a>, <a href="StructureDefinition-DV-ORDERED.html" title="Optional normal status indicator of value with respect to normal range for this value. Often included by lab, even if the normal range itself is not included. Coded by ordinals in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group  `normal_status`. ">normal_status</a>, <a href="StructureDefinition-DV-ORDERED.html" title="Optional normal range. ">normal_range</a>, <a href="StructureDefinition-DV-ORDERED.html" title="Optional tagged other reference ranges for this value in its particular measurement context.">other_reference_ranges</a><br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="Limits valid" class="constraint">Limits_valid</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="Reference range valid" class="constraint">Reference_range_valid</span><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-DV-ORDINAL-definitions.html#DV_ORDINAL.symbol" title="Coded textual representation of this value in the enumeration, which may be strings made from  +  symbols, or other enumerations of terms such as  `mild`, `moderate`, `severe`, or even the same number series as the values, e.g. 1, 2, 3.">symbol</a><a name="DV_ORDINAL.symbol"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-DV-CODED-TEXT.html">DV_CODED_TEXT</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Coded textual representation of this value in the enumeration, which may be strings made from  +  symbols, or other enumerations of terms such as  `mild`, `moderate`, `severe`, or even the same number series as the values, e.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_primitive.png" alt="." style="background-color: white; background-color: inherit" title="Primitive Data Type" class="hierarchy"/> <a href="StructureDefinition-DV-ORDINAL-definitions.html#DV_ORDINAL.value" title="Value in ordered enumeration of values. Any integer value can be used. 
+">value</a><a name="DV_ORDINAL.value"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R5/datatypes.html#integer">integer</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Value in ordered enumeration of values.</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <contained>
+    <OperationDefinition>
+      <id value="less_than"/>
+      <name value="less_than"/>
+      <title value="less_than"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="True if this Ordinal value is less than `_other_`."/>
+      <code value="less_than"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="other"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="integer"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="boolean"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <contained>
+    <OperationDefinition>
+      <id value="is_strictly_comparable_to"/>
+      <name value="is_strictly_comparable_to"/>
+      <title value="is_strictly_comparable_to"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="Test if this Ordinal is strictly comparable to `_other_`."/>
+      <code value="is_strictly_comparable_to"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="other"/>
+        <use value="in"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="integer"/>
+      </parameter>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="boolean"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/web-source">
+    <valueUrl value="https://specifications.openehr.org/releases/RM/Release-1.1.0/data_types.html#_dv_ordinal_class"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#less_than"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#is_strictly_comparable_to"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="fhir"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/view-hint">
+    <valueCode value="element-view-as-leaf"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/view-hint">
+    <valueCode value="element-view-defns-parent"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/view-hint">
+    <valueCode value="element-view-replace-cardinality"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="3">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://openehr.org/fhir/ImplementationGuide/openehr.base"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://openehr.org/fhir/ImplementationGuide/openehr.base"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://openehr.org/fhir/StructureDefinition/DV-ORDINAL"/>
+  <version value="0.1.0-snapshot"/>
+  <name value="DV_ORDINAL"/>
+  <title value="DV_ORDINAL"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-09-06T15:35:39+10:00"/>
+  <publisher value="openEHR + HL7"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.openehr.org"/>
+    </telecom>
+  </contact>
+  <description value="A data type that represents integral score values, e.g. pain, Apgar values, etc, where there is:&#xA;&#xA;a) implied ordering, &#xA;b) no implication that the distance between each value is constant, and &#xA;c) the total number of values is finite;&#xA;d) integer values only.&#xA;&#xA;Note that although the term 'ordinal' in mathematics means natural numbers only, here any integer is allowed, since negative and zero values are often used by medical professionals for values around a neutral point. Examples of sets of ordinal values: &#xA;&#xA;*   -3, -2, -1, 0, 1, 2, 3  -- reflex response values &#xA;*    0, 1, 2                  -- Apgar values &#xA;&#xA;This class is used for recording any clinical datum which is customarily recorded using symbolic values. Example: the results on a urinalysis strip, e.g. `{neg, trace, +, ++, +++}` are used for leucocytes, protein, nitrites etc; for non-haemolysed blood `{neg, trace, moderate}`; for haemolysed blood `{small, moderate, large}`.&#xA;&#xA;For scores or scales that include Real numbers (or might in the future, i.e. not fixed for all time, such as Apgar), use `DV_SCALE`. `DV_SCALE` may also be used in future for representing purely Integer-based scales, however, the `DV_ORDINAL` type should continue to be supported in software implementations in order to accommodate existing data that are instances of this type."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="5.0.0"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="http://openehr.org/fhir/StructureDefinition/DV_ORDINAL"/>
+  <baseDefinition value="http://openehr.org/fhir/StructureDefinition/DV-ORDERED"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="0.1.0-snapshot"/>
+    </extension>
+    <element id="DV_ORDINAL">
+      <path value="DV_ORDINAL"/>
+      <short value="A data type that represents integral score values, e."/>
+      <definition value="A data type that represents integral score values, e.g. pain, Apgar values, etc, where there is:&#xA;&#xA;a) implied ordering, &#xA;b) no implication that the distance between each value is constant, and &#xA;c) the total number of values is finite;&#xA;d) integer values only.&#xA;&#xA;Note that although the term 'ordinal' in mathematics means natural numbers only, here any integer is allowed, since negative and zero values are often used by medical professionals for values around a neutral point. Examples of sets of ordinal values: &#xA;&#xA;*   -3, -2, -1, 0, 1, 2, 3  -- reflex response values &#xA;*    0, 1, 2                  -- Apgar values &#xA;&#xA;This class is used for recording any clinical datum which is customarily recorded using symbolic values. Example: the results on a urinalysis strip, e.g. `{neg, trace, +, ++, +++}` are used for leucocytes, protein, nitrites etc; for non-haemolysed blood `{neg, trace, moderate}`; for haemolysed blood `{small, moderate, large}`.&#xA;&#xA;For scores or scales that include Real numbers (or might in the future, i.e. not fixed for all time, such as Apgar), use `DV_SCALE`. `DV_SCALE` may also be used in future for representing purely Integer-based scales, however, the `DV_ORDINAL` type should continue to be supported in software implementations in order to accommodate existing data that are instances of this type."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Base"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <constraint>
+        <key value="Other_reference_ranges_validity"/>
+        <severity value="error"/>
+        <human value="Other reference ranges validity must be present"/>
+        <expression value="other_reference_ranges.exists() implies other_reference_ranges.empty().not()"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/DV-ORDERED"/>
+      </constraint>
+      <constraint>
+        <key value="Is_simple_validity"/>
+        <severity value="error"/>
+        <human value="Is simple validity must satisfy conditional constraints"/>
+        <expression value="(normal_range .empty() and other_reference_ranges .empty()) implies is_simple()"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/DV-ORDERED"/>
+      </constraint>
+      <constraint>
+        <key value="Normal_range_and_status_consistency"/>
+        <severity value="error"/>
+        <human value="Normal range and status consistency must be present"/>
+        <expression value="(normal_range.exists() and normal_status.exists()) implies (normal_status.code_string.is_equal (“N”) xor normal_range.not().has (self))"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/DV-ORDERED"/>
+      </constraint>
+      <constraint>
+        <key value="Limits_valid"/>
+        <severity value="error"/>
+        <human value="Limits valid"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <constraint>
+        <key value="Reference_range_valid"/>
+        <severity value="error"/>
+        <human value="Reference range valid"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="DV_ORDINAL.CR">
+      <path value="DV_ORDINAL.CR"/>
+      <short value="Carriage return character."/>
+      <definition value="Carriage return character."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="BASIC_DEFINITIONS.CR"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_ORDINAL.LF">
+      <path value="DV_ORDINAL.LF"/>
+      <short value="Line feed character."/>
+      <definition value="Line feed character."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="BASIC_DEFINITIONS.LF"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_ORDINAL.Local-terminology-id">
+      <path value="DV_ORDINAL.Local_terminology_id"/>
+      <short value="Predefined terminology identifier"/>
+      <definition value="Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="OPENEHR_DEFINITIONS.Local_terminology_id"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_ORDINAL.normal-status">
+      <path value="DV_ORDINAL.normal_status"/>
+      <short value="Optional normal status indicator of value with respect to normal range for this value."/>
+      <definition value="Optional normal status indicator of value with respect to normal range for this value. Often included by lab, even if the normal range itself is not included. Coded by ordinals in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group  `normal_status`."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_ORDERED.normal_status"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_ORDINAL.normal-range">
+      <path value="DV_ORDINAL.normal_range"/>
+      <short value="Optional normal range."/>
+      <definition value="Optional normal range."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_ORDERED.normal_range"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-INTERVAL"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_ORDINAL.other-reference-ranges">
+      <path value="DV_ORDINAL.other_reference_ranges"/>
+      <short value="Optional tagged other reference ranges for this value in its particular measurement context."/>
+      <definition value="Optional tagged other reference ranges for this value in its particular measurement context."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DV_ORDERED.other_reference_ranges"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-parameter">
+          <extension url="name">
+            <valueCode value="T"/>
+          </extension>
+          <extension url="type">
+            <valueUri value="http://openehr.org/fhir/StructureDefinition/DV-ORDERED"/>
+          </extension>
+        </extension>
+        <code value="http://openehr.org/fhir/StructureDefinition/REFERENCE-RANGE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_ORDINAL.symbol">
+      <path value="DV_ORDINAL.symbol"/>
+      <short value="Coded textual representation of this value in the enumeration, which may be strings made from  +  symbols, or other enumerations of terms such as  `mild`, `moderate`, `severe`, or even the same number series as the values, e."/>
+      <definition value="Coded textual representation of this value in the enumeration, which may be strings made from  +  symbols, or other enumerations of terms such as  `mild`, `moderate`, `severe`, or even the same number series as the values, e.g. 1, 2, 3."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_ORDINAL.symbol"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-CODED-TEXT"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_ORDINAL.value">
+      <path value="DV_ORDINAL.value"/>
+      <short value="Value in ordered enumeration of values."/>
+      <definition value="Value in ordered enumeration of values. Any integer value can be used."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="DV_ORDINAL.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="DV_ORDINAL">
+      <path value="DV_ORDINAL"/>
+      <short value="A data type that represents integral score values, e."/>
+      <definition value="A data type that represents integral score values, e.g. pain, Apgar values, etc, where there is:&#xA;&#xA;a) implied ordering, &#xA;b) no implication that the distance between each value is constant, and &#xA;c) the total number of values is finite;&#xA;d) integer values only.&#xA;&#xA;Note that although the term 'ordinal' in mathematics means natural numbers only, here any integer is allowed, since negative and zero values are often used by medical professionals for values around a neutral point. Examples of sets of ordinal values: &#xA;&#xA;*   -3, -2, -1, 0, 1, 2, 3  -- reflex response values &#xA;*    0, 1, 2                  -- Apgar values &#xA;&#xA;This class is used for recording any clinical datum which is customarily recorded using symbolic values. Example: the results on a urinalysis strip, e.g. `{neg, trace, +, ++, +++}` are used for leucocytes, protein, nitrites etc; for non-haemolysed blood `{neg, trace, moderate}`; for haemolysed blood `{small, moderate, large}`.&#xA;&#xA;For scores or scales that include Real numbers (or might in the future, i.e. not fixed for all time, such as Apgar), use `DV_SCALE`. `DV_SCALE` may also be used in future for representing purely Integer-based scales, however, the `DV_ORDINAL` type should continue to be supported in software implementations in order to accommodate existing data that are instances of this type."/>
+      <min value="0"/>
+      <max value="*"/>
+      <constraint>
+        <key value="Limits_valid"/>
+        <severity value="error"/>
+        <human value="Limits valid"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <constraint>
+        <key value="Reference_range_valid"/>
+        <severity value="error"/>
+        <human value="Reference range valid"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_ORDINAL.symbol">
+      <path value="DV_ORDINAL.symbol"/>
+      <short value="Coded textual representation of this value in the enumeration, which may be strings made from  +  symbols, or other enumerations of terms such as  `mild`, `moderate`, `severe`, or even the same number series as the values, e."/>
+      <definition value="Coded textual representation of this value in the enumeration, which may be strings made from  +  symbols, or other enumerations of terms such as  `mild`, `moderate`, `severe`, or even the same number series as the values, e.g. 1, 2, 3."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-CODED-TEXT"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="DV_ORDINAL.value">
+      <path value="DV_ORDINAL.value"/>
+      <short value="Value in ordered enumeration of values."/>
+      <definition value="Value in ordered enumeration of values. Any integer value can be used. &#xA;"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>

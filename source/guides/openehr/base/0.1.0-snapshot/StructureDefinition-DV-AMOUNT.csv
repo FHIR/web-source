@@ -1,0 +1,43 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"DV_AMOUNT","DV_AMOUNT","","","",0,*,"","","","null {[]} {[]}
+","Abstract class defining the concept of relative quantified  'amounts'.","Abstract class defining the concept of relative quantified  'amounts'. For relative quantities, the  `+` and  `-` operators are defined (unlike descendants of `DV_ABSOLUTE_QUANTITY`, such as the date/time types). 
+","","","","","","","","","",,,,,"",,,,"Base",0,*,"","Other_reference_ranges_validity:Other reference ranges validity must be present {other_reference_ranges.exists() implies other_reference_ranges.empty().not()}
+Is_simple_validity:Is simple validity must satisfy conditional constraints {(normal_range .empty() and other_reference_ranges .empty()) implies is_simple()}Normal_range_and_status_consistency:Normal range and status consistency must be present {(normal_range.exists() and normal_status.exists()) implies (normal_status.code_string.is_equal (“N”) xor normal_range.not().has (self))}Magnitude_status_valid:Magnitude status valid must be present {magnitude_status.exists() implies valid_magnitude_status() (magnitude_status)}Accuracy_is_percent_validity:Accuracy is percent validity must satisfy conditional constraints {accuracy = 0 implies accuracy_is_percent.not()}Accuracy_validity:Accuracy validity must satisfy conditional constraints {accuracy_is_percent implies valid_percentage() (accuracy)}","n/a"
+"DV_AMOUNT.CR","DV_AMOUNT.CR","","","",1,1,"","","","string {[]} {[]}
+","Carriage return character.","Carriage return character.","","","","","","","","","",,,,,"",,,,"BASIC_DEFINITIONS.CR",1,1,"",""
+"DV_AMOUNT.LF","DV_AMOUNT.LF","","","",1,1,"","","","string {[]} {[]}
+","Line feed character.","Line feed character.","","","","","","","","","",,,,,"",,,,"BASIC_DEFINITIONS.LF",1,1,"",""
+"DV_AMOUNT.Local-terminology-id","DV_AMOUNT.Local_terminology_id","","","",1,1,"","","","string {[]} {[]}
+","Predefined terminology identifier","Predefined terminology identifier to indicate it is local to the knowledge resource in which it occurs, e.g. an archetype","","","","","","","","","",,,,,"",,,,"OPENEHR_DEFINITIONS.Local_terminology_id",1,1,"",""
+"DV_AMOUNT.normal-status","DV_AMOUNT.normal_status","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/CODE-PHRASE {[]} {[]}
+","Optional normal status indicator of value with respect to normal range for this value.","Optional normal status indicator of value with respect to normal range for this value. Often included by lab, even if the normal range itself is not included. Coded by ordinals in series HHH, HH, H, (nothing), L, LL, LLL; see openEHR terminology group  `normal_status`.","","","","","","","","","",,,,,"",,,,"DV_ORDERED.normal_status",0,1,"",""
+"DV_AMOUNT.normal-range","DV_AMOUNT.normal_range","","","",0,1,"","","","http://openehr.org/fhir/StructureDefinition/DV-INTERVAL {[]} {[]}
+","Optional normal range.","Optional normal range.","","","","","","","","","",,,,,"",,,,"DV_ORDERED.normal_range",0,1,"",""
+"DV_AMOUNT.other-reference-ranges","DV_AMOUNT.other_reference_ranges","","","",0,*,"","","","http://openehr.org/fhir/StructureDefinition/REFERENCE-RANGE {[]} {[]}
+","Optional tagged other reference ranges for this value in its particular measurement context.","Optional tagged other reference ranges for this value in its particular measurement context.","","","","","","","","","",,,,,"",,,,"DV_ORDERED.other_reference_ranges",0,*,"",""
+"DV_AMOUNT.magnitude-status","DV_AMOUNT.magnitude_status","","","",0,1,"","","","string {[]} {[]}
+","Optional status of magnitude with values: 
+
+* `""=""`   :   magnitude is a point value 
+* `""<""`   :   value is < magnitude 
+* `"">""`   :   value is > magnitude 
+* `""<=""` : value is <= magnitude 
+* `"">=""` : value is >= magnitude 
+* `""~""`   :   value is approximately magnitude 
+
+If not present, assumed meaning is  `""=""` .","Optional status of magnitude with values: 
+
+* `""=""`   :   magnitude is a point value 
+* `""<""`   :   value is < magnitude 
+* `"">""`   :   value is > magnitude 
+* `""<=""` : value is <= magnitude 
+* `"">=""` : value is >= magnitude 
+* `""~""`   :   value is approximately magnitude 
+
+If not present, assumed meaning is  `""=""` .","","","","","","","","","",,,,,"",,,,"DV_QUANTIFIED.magnitude_status",0,1,"",""
+"DV_AMOUNT.accuracy","DV_AMOUNT.accuracy","","","",0,1,"","","","decimal {[]} {[]}
+","Accuracy of measurement, expressed either as a half-range percent value (`_accuracy_is_percent_` = `True`) or a half-range quantity.","Accuracy of measurement, expressed either as a half-range percent value (`_accuracy_is_percent_` = `True`) or a half-range quantity. A value of `0` means that accuracy is 100%, i.e. no error.
+
+A value of `_unknown_accuracy_value_` means that accuracy was not recorded.","","","","","","","","","",,,,,"",,,,"DV_QUANTIFIED.accuracy",0,1,"",""
+"DV_AMOUNT.accuracy-is-percent","DV_AMOUNT.accuracy_is_percent","","","",0,1,"","","","boolean {[]} {[]}
+","If `True`, indicates that when this object was created, `_accuracy_` was recorded as a percent value; if `False`, as an absolute quantity value.","If `True`, indicates that when this object was created, `_accuracy_` was recorded as a percent value; if `False`, as an absolute quantity value.","","","","","","","","","",,,,,"",,,,"DV_AMOUNT.accuracy_is_percent",0,1,"",""

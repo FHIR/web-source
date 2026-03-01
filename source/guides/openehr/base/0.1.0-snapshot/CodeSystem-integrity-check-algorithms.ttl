@@ -1,0 +1,123 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://openehr.org/fhir/CodeSystem/integrity-check-algorithms> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "integrity-check-algorithms"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem integrity-check-algorithms</b></p><a name=\"integrity-check-algorithms\"> </a><a name=\"hcintegrity-check-algorithms\"> </a><p>This case-sensitive code system <code>https://specifications.openehr.org/fhir/codesystem-integrity_check_algorithms</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">SHA-1<a name=\"integrity-check-algorithms-SHA-1\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SHA-224<a name=\"integrity-check-algorithms-SHA-224\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SHA-256<a name=\"integrity-check-algorithms-SHA-256\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SHA-384<a name=\"integrity-check-algorithms-SHA-384\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SHA-512<a name=\"integrity-check-algorithms-SHA-512\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SHA-512/224<a name=\"integrity-check-algorithms-SHA-512.47224\"> </a></td></tr><tr><td style=\"white-space:nowrap\">SHA-512/256<a name=\"integrity-check-algorithms-SHA-512.47256\"> </a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-wg>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "fhir"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm>
+     ] ;
+     fhir:value [
+       a fhir:Integer ;
+       fhir:v 3 ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "informative" ;
+       fhir:extension ( [
+         fhir:url [
+           fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ;
+           fhir:l <http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom>
+         ] ;
+         fhir:value [
+           a fhir:Canonical ;
+           fhir:v "http://openehr.org/fhir/ImplementationGuide/openehr.base"^^xsd:anyURI ;
+           fhir:l <http://openehr.org/fhir/ImplementationGuide/openehr.base>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "https://specifications.openehr.org/fhir/codesystem-integrity_check_algorithms"^^xsd:anyURI ;
+     fhir:l <https://specifications.openehr.org/fhir/codesystem-integrity_check_algorithms>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0-snapshot"] ; # 
+  fhir:name [ fhir:v "integrity_check_algorithms"] ; # 
+  fhir:title [ fhir:v "Integrity check algorithms"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2024-04-11"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "openEHR + HL7"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.openehr.org" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Integrity check algorithms"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ;
+         fhir:l <http://unstats.un.org/unsd/methods/m49/m49.htm>
+       ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:caseSensitive [ fhir:v true] ; # 
+  fhir:valueSet [
+     fhir:v "https://specifications.openehr.org/fhir/valueset-integrity-check-algorithms"^^xsd:anyURI ;
+     fhir:l <https://specifications.openehr.org/fhir/valueset-integrity-check-algorithms>
+  ] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "SHA-1" ] ;
+     fhir:display [ fhir:v "SHA-1" ]
+  ] [
+     fhir:code [ fhir:v "SHA-224" ] ;
+     fhir:display [ fhir:v "SHA-224" ]
+  ] [
+     fhir:code [ fhir:v "SHA-256" ] ;
+     fhir:display [ fhir:v "SHA-256" ]
+  ] [
+     fhir:code [ fhir:v "SHA-384" ] ;
+     fhir:display [ fhir:v "SHA-384" ]
+  ] [
+     fhir:code [ fhir:v "SHA-512" ] ;
+     fhir:display [ fhir:v "SHA-512" ]
+  ] [
+     fhir:code [ fhir:v "SHA-512/224" ] ;
+     fhir:display [ fhir:v "SHA-512/224" ]
+  ] [
+     fhir:code [ fhir:v "SHA-512/256" ] ;
+     fhir:display [ fhir:v "SHA-512/256" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

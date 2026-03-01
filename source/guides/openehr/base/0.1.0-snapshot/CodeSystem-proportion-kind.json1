@@ -1,0 +1,84 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "proportion-kind",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem proportion-kind</b></p><a name=\"proportion-kind\"> </a><a name=\"hcproportion-kind\"> </a><p>This case-sensitive code system <code>https://specifications.openehr.org/fhir/codesystem-proportion_kind</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">pk_ratio<a name=\"proportion-kind-pk_ratio\"> </a></td><td>Ratio type. Numerator and denominator may be any value.</td></tr><tr><td style=\"white-space:nowrap\">pk_unitary<a name=\"proportion-kind-pk_unitary\"> </a></td><td>Denominator must be 1.</td></tr><tr><td style=\"white-space:nowrap\">pk_percent<a name=\"proportion-kind-pk_percent\"> </a></td><td>Denominator is 100, numerator is understood as a percentage value.</td></tr><tr><td style=\"white-space:nowrap\">pk_fraction<a name=\"proportion-kind-pk_fraction\"> </a></td><td>Numerator and denominator are integral, and the presentation method uses a slash, e.g. 1/2 .</td></tr><tr><td style=\"white-space:nowrap\">pk_integer_fraction<a name=\"proportion-kind-pk_integer_fraction\"> </a></td><td>Numerator and denominator are integral, and the presentation method uses a slash, e.g. 1/2 ; if the numerator is greater than the denominator, e.g. n=3, d=2, the presentation is 1 1/2 .</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/tools/StructureDefinition/web-source",
+    "valueUrl" : "https://specifications.openehr.org/releases/RM/Release-1.1.0/data_types.html#_proportion_kind_class"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "fhir"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 3,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://openehr.org/fhir/ImplementationGuide/openehr.base"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "informative",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://openehr.org/fhir/ImplementationGuide/openehr.base"
+      }]
+    }
+  }],
+  "url" : "https://specifications.openehr.org/fhir/codesystem-proportion_kind",
+  "version" : "0.1.0-snapshot",
+  "name" : "PROPORTION_KIND",
+  "title" : "PROPORTION_KIND",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-06-27T18:45:58+10:00",
+  "publisher" : "openEHR + HL7",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.openehr.org"
+    }]
+  }],
+  "description" : "Class of enumeration constants defining types of proportion for the DV_PROPORTION class.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "caseSensitive" : true,
+  "content" : "complete",
+  "concept" : [{
+    "code" : "pk_ratio",
+    "display" : "pk_ratio",
+    "definition" : "Ratio type. Numerator and denominator may be any value."
+  },
+  {
+    "code" : "pk_unitary",
+    "display" : "pk_unitary",
+    "definition" : "Denominator must be 1."
+  },
+  {
+    "code" : "pk_percent",
+    "display" : "pk_percent",
+    "definition" : "Denominator is 100, numerator is understood as a percentage value."
+  },
+  {
+    "code" : "pk_fraction",
+    "display" : "pk_fraction",
+    "definition" : "Numerator and denominator are integral, and the presentation method uses a slash, e.g. 1/2 ."
+  },
+  {
+    "code" : "pk_integer_fraction",
+    "display" : "pk_integer_fraction",
+    "definition" : "Numerator and denominator are integral, and the presentation method uses a slash, e.g. 1/2 ; if the numerator is greater than the denominator, e.g. n=3, d=2, the presentation is 1 1/2 ."
+  }]
+}

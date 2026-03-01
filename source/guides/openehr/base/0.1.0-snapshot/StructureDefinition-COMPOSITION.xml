@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="COMPOSITION"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: StructureDefinition COMPOSITION</b></p><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the element can appear in the instance">Card.</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px; width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-COMPOSITION-definitions.html#COMPOSITION" title="Content of one version in a `VERSIONED_COMPOSITION`. A Composition is considered the unit of modification of the record, the unit of transmission in record Extracts, and the unit of attestation by authorising clinicians. In this latter sense, it may be considered equivalent to a signed document.
+
+NOTE: It is strongly recommended that the inherited attribute `_uid_` be populated in Compositions, using the UID copied from the `_object_id()_` of the `_uid_` field of the enclosing `VERSION` object. +
+For example, the `ORIGINAL_VERSION.uid` `87284370-2D4B-4e3d-A3F3-F303D2F4F34B::uk.nhs.ehr1::2` would be copied to the `_uid_` field of the Composition.">COMPOSITION</a><a name="COMPOSITION"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;; padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;" href="http://hl7.org/fhir/R5/conformance-rules.html#constraints" title="This element has or is affected by constraints ( Setting_valid, unnamed2, unnamed3, Category_validity, Is_persistent_validity, Content_valid, Is_archetype_root )">C</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-LOCATABLE.html">LOCATABLE</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Content of one version in a `VERSIONED_COMPOSITION`.<br/><br/>Elements defined in Ancestors:<a href="StructureDefinition-LOCATABLE.html" title="Runtime name of this fragment, used to build runtime paths. This is the term provided via a clinical application or batch process to name this EHR construct: its retention in the EHR faithfully preserves the original label by which this entry was known to end users. 
+">name</a>, <a href="StructureDefinition-LOCATABLE.html" title="Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths. Always in the form of an at-code, e.g.  `at0005`. This value enables a 'standardised' name for this node to be generated, by referring to the generating archetype local terminology. 
+
+At an archetype root point, the value of this attribute is always the stringified form of the `_archetype_id_` found in the `_archetype_details_` object. 
+">archetype_node_id</a>, <a href="StructureDefinition-LOCATABLE.html" title="Optional globally unique object identifier for root points of archetyped structures. ">uid</a>, <a href="StructureDefinition-LOCATABLE.html" title="Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions. ">links</a>, <a href="StructureDefinition-LOCATABLE.html" title="Details of archetyping used on this node.">archetype_details</a>, <a href="StructureDefinition-LOCATABLE.html" title="Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node. ">feeder_audit</a><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="https://specifications.openehr.org/fhir/valueset-languages" class="binding">https://specifications.openehr.org/fhir/valueset-languages</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R5/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span><br class="constraint"/><span title="null" class="constraint">Constraints: </span><span style="font-weight:bold" title="Setting valid" class="constraint">Setting_valid</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="unnamed2" class="constraint">unnamed2</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="unnamed3" class="constraint">unnamed3</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="Category validity" class="constraint">Category_validity</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="Is persistent validity must satisfy conditional constraints" class="constraint">Is_persistent_validity</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="Content valid must be present" class="constraint">Content_valid</span><span title="null" class="constraint">, </span><span style="font-weight:bold" title="Is archetype root" class="constraint">Is_archetype_root</span><br/></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-COMPOSITION-definitions.html#COMPOSITION.language" title="Mandatory indicator of the localised language in which this Composition is written. Coded from openEHR Code Set  `languages`. The language of an Entry if different from the Composition is indicated in `ENTRY._language_`. ">language</a><a name="COMPOSITION.language"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-CODE-PHRASE.html">CODE_PHRASE</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Mandatory indicator of the localised language in which this Composition is written.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-COMPOSITION-definitions.html#COMPOSITION.territory" title="Name of territory in which this Composition was written. Coded from openEHR  countries  code set, which is an expression of the ISO 3166 standard.">territory</a><a name="COMPOSITION.territory"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-CODE-PHRASE.html">CODE_PHRASE</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Name of territory in which this Composition was written.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-COMPOSITION-definitions.html#COMPOSITION.category" title="Temporal category of this Composition, i.e. 
+
+* `431|persistent|` - of potential life-time validity;
+* `451|episodic|` - valid over the life of a care episode;
+* `433|event|` - valid at the time of recording (long-term validity requires subsequent clinical assessment).
+
+or any other code defined in the openEHR terminology group 'category'.
+">category</a><a name="COMPOSITION.category"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-DV-CODED-TEXT.html">DV_CODED_TEXT</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Temporal category of this Composition, i.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-COMPOSITION-definitions.html#COMPOSITION.context" title="The clinical session context of this Composition, i.e. the contextual attributes of the clinical session. ">context</a><a name="COMPOSITION.context"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-EVENT-CONTEXT.html">EVENT_CONTEXT</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">The clinical session context of this Composition, i.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-COMPOSITION-definitions.html#COMPOSITION.composer" title="The person primarily responsible for the content of the Composition (but not necessarily its committal into the EHR system). This is the identifier which should appear on the screen. It may or may not be the person who entered the data. When it is the patient, the special self  instance of `PARTY_PROXY` will be used.">composer</a><a name="COMPOSITION.composer"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-PARTY-PROXY.html">PARTY_PROXY</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">The person primarily responsible for the content of the Composition (but not necessarily its committal into the EHR system).</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-COMPOSITION-definitions.html#COMPOSITION.content" title="The content of this Composition. ">content</a><a name="COMPOSITION.content"> </a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..*</td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-CONTENT-ITEM.html">CONTENT_ITEM</a></td><td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">The content of this Composition.<br/></td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <contained>
+    <OperationDefinition>
+      <id value="is_persistent"/>
+      <name value="is_persistent"/>
+      <title value="is_persistent"/>
+      <status value="active"/>
+      <kind value="operation"/>
+      <description value="True if category is `431|persistent|`, False otherwise. Useful for finding Compositions in an EHR which are guaranteed to be of interest to most users. "/>
+      <code value="is_persistent"/>
+      <system value="false"/>
+      <instance value="true"/>
+      <parameter>
+        <name value="return"/>
+        <use value="out"/>
+        <min value="1"/>
+        <max value="1"/>
+        <type value="boolean"/>
+      </parameter>
+    </OperationDefinition>
+  </contained>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/web-source">
+    <valueUrl value="https://specifications.openehr.org/releases/RM/development/ehr.html#_composition_class"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/type-operation">
+    <valueCanonical value="#is_persistent"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="fhir"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/tools/StructureDefinition/view-hint">
+    <valueCode value="element-view-replace-cardinality"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="3">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://openehr.org/fhir/ImplementationGuide/openehr.base"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://openehr.org/fhir/ImplementationGuide/openehr.base"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://openehr.org/fhir/StructureDefinition/COMPOSITION"/>
+  <version value="0.1.0-snapshot"/>
+  <name value="COMPOSITION"/>
+  <title value="COMPOSITION"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-09-06T15:35:39+10:00"/>
+  <publisher value="openEHR + HL7"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.openehr.org"/>
+    </telecom>
+  </contact>
+  <description value="Content of one version in a `VERSIONED_COMPOSITION`. A Composition is considered the unit of modification of the record, the unit of transmission in record Extracts, and the unit of attestation by authorising clinicians. In this latter sense, it may be considered equivalent to a signed document.&#xA;&#xA;NOTE: It is strongly recommended that the inherited attribute `_uid_` be populated in Compositions, using the UID copied from the `_object_id()_` of the `_uid_` field of the enclosing `VERSION` object. +&#xA;For example, the `ORIGINAL_VERSION.uid` `87284370-2D4B-4e3d-A3F3-F303D2F4F34B::uk.nhs.ehr1::2` would be copied to the `_uid_` field of the Composition."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="5.0.0"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <kind value="logical"/>
+  <abstract value="false"/>
+  <type value="http://openehr.org/fhir/StructureDefinition/COMPOSITION"/>
+  <baseDefinition value="http://openehr.org/fhir/StructureDefinition/LOCATABLE"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version">
+      <valueString value="0.1.0-snapshot"/>
+    </extension>
+    <element id="COMPOSITION">
+      <path value="COMPOSITION"/>
+      <short value="Content of one version in a `VERSIONED_COMPOSITION`."/>
+      <definition value="Content of one version in a `VERSIONED_COMPOSITION`. A Composition is considered the unit of modification of the record, the unit of transmission in record Extracts, and the unit of attestation by authorising clinicians. In this latter sense, it may be considered equivalent to a signed document.&#xA;&#xA;NOTE: It is strongly recommended that the inherited attribute `_uid_` be populated in Compositions, using the UID copied from the `_object_id()_` of the `_uid_` field of the enclosing `VERSION` object. +&#xA;For example, the `ORIGINAL_VERSION.uid` `87284370-2D4B-4e3d-A3F3-F303D2F4F34B::uk.nhs.ehr1::2` would be copied to the `_uid_` field of the Composition."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Base"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <constraint>
+        <key value="Links_valid"/>
+        <severity value="error"/>
+        <human value="Links valid must be present"/>
+        <expression value="links.exists() implies links.empty().not()"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/LOCATABLE"/>
+      </constraint>
+      <constraint>
+        <key value="Archetyped_valid"/>
+        <severity value="error"/>
+        <human value="Archetyped valid must satisfy exclusive conditions"/>
+        <expression value="is_archetype_root() xor archetype_details .empty()"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/LOCATABLE"/>
+      </constraint>
+      <constraint>
+        <key value="Archetype_node_id_valid"/>
+        <severity value="error"/>
+        <human value="Archetype node id valid must not be empty"/>
+        <expression value="archetype_node_id.empty().not()"/>
+        <source value="http://openehr.org/fhir/StructureDefinition/LOCATABLE"/>
+      </constraint>
+      <constraint>
+        <key value="Setting_valid"/>
+        <severity value="error"/>
+        <human value="Setting valid"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <constraint>
+        <key value="unnamed2"/>
+        <severity value="error"/>
+        <human value="unnamed2"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <constraint>
+        <key value="unnamed3"/>
+        <severity value="error"/>
+        <human value="unnamed3"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <constraint>
+        <key value="Category_validity"/>
+        <severity value="error"/>
+        <human value="Category validity"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <constraint>
+        <key value="Is_persistent_validity"/>
+        <severity value="error"/>
+        <human value="Is persistent validity must satisfy conditional constraints"/>
+        <expression value="is_persistent() implies context .empty()"/>
+      </constraint>
+      <constraint>
+        <key value="Content_valid"/>
+        <severity value="error"/>
+        <human value="Content valid must be present"/>
+        <expression value="content.exists() implies content.empty().not()"/>
+      </constraint>
+      <constraint>
+        <key value="Is_archetype_root"/>
+        <severity value="error"/>
+        <human value="Is archetype root"/>
+        <expression value="is_archetype_root()"/>
+      </constraint>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="COMPOSITION.name">
+      <path value="COMPOSITION.name"/>
+      <short value="Runtime name of this fragment, used to build runtime paths."/>
+      <definition value="Runtime name of this fragment, used to build runtime paths. This is the term provided via a clinical application or batch process to name this EHR construct: its retention in the EHR faithfully preserves the original label by which this entry was known to end users."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="LOCATABLE.name"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-TEXT"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="COMPOSITION.archetype-node-id">
+      <path value="COMPOSITION.archetype_node_id"/>
+      <short value="Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths."/>
+      <definition value="Design-time archetype identifier of this node taken from its generating archetype; used to build archetype paths. Always in the form of an at-code, e.g.  `at0005`. This value enables a 'standardised' name for this node to be generated, by referring to the generating archetype local terminology. &#xA;&#xA;At an archetype root point, the value of this attribute is always the stringified form of the `_archetype_id_` found in the `_archetype_details_` object."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="LOCATABLE.archetype_node_id"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="COMPOSITION.uid">
+      <path value="COMPOSITION.uid"/>
+      <short value="Optional globally unique object identifier for root points of archetyped structures."/>
+      <definition value="Optional globally unique object identifier for root points of archetyped structures."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="LOCATABLE.uid"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/UID-BASED-ID"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="COMPOSITION.links">
+      <path value="COMPOSITION.links"/>
+      <short value="Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on)."/>
+      <definition value="Links to other archetyped structures (data whose root object inherits from `ARCHETYPED`, such as `ENTRY`, `SECTION` and so on). Links may be to structures in other compositions."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="LOCATABLE.links"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/LINK"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="COMPOSITION.archetype-details">
+      <path value="COMPOSITION.archetype_details"/>
+      <short value="Details of archetyping used on this node."/>
+      <definition value="Details of archetyping used on this node."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="LOCATABLE.archetype_details"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/ARCHETYPED"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="COMPOSITION.feeder-audit">
+      <path value="COMPOSITION.feeder_audit"/>
+      <short value="Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node."/>
+      <definition value="Audit trail from non-openEHR system of original commit of information forming the content of this node, or from a conversion gateway which has synthesised this node."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="LOCATABLE.feeder_audit"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/FEEDER-AUDIT"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="COMPOSITION.language">
+      <path value="COMPOSITION.language"/>
+      <short value="Mandatory indicator of the localised language in which this Composition is written."/>
+      <definition value="Mandatory indicator of the localised language in which this Composition is written. Coded from openEHR Code Set  `languages`. The language of an Entry if different from the Composition is indicated in `ENTRY._language_`."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="COMPOSITION.language"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="COMPOSITION.territory">
+      <path value="COMPOSITION.territory"/>
+      <short value="Name of territory in which this Composition was written."/>
+      <definition value="Name of territory in which this Composition was written. Coded from openEHR  countries  code set, which is an expression of the ISO 3166 standard."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="COMPOSITION.territory"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="COMPOSITION.category">
+      <path value="COMPOSITION.category"/>
+      <short value="Temporal category of this Composition, i."/>
+      <definition value="Temporal category of this Composition, i.e. &#xA;&#xA;* `431|persistent|` - of potential life-time validity;&#xA;* `451|episodic|` - valid over the life of a care episode;&#xA;* `433|event|` - valid at the time of recording (long-term validity requires subsequent clinical assessment).&#xA;&#xA;or any other code defined in the openEHR terminology group 'category'."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="COMPOSITION.category"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-CODED-TEXT"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="COMPOSITION.context">
+      <path value="COMPOSITION.context"/>
+      <short value="The clinical session context of this Composition, i."/>
+      <definition value="The clinical session context of this Composition, i.e. the contextual attributes of the clinical session."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="COMPOSITION.context"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/EVENT-CONTEXT"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="COMPOSITION.composer">
+      <path value="COMPOSITION.composer"/>
+      <short value="The person primarily responsible for the content of the Composition (but not necessarily its committal into the EHR system)."/>
+      <definition value="The person primarily responsible for the content of the Composition (but not necessarily its committal into the EHR system). This is the identifier which should appear on the screen. It may or may not be the person who entered the data. When it is the patient, the special self  instance of `PARTY_PROXY` will be used."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="COMPOSITION.composer"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/PARTY-PROXY"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="COMPOSITION.content">
+      <path value="COMPOSITION.content"/>
+      <short value="The content of this Composition."/>
+      <definition value="The content of this Composition."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="COMPOSITION.content"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/CONTENT-ITEM"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="COMPOSITION">
+      <path value="COMPOSITION"/>
+      <short value="Content of one version in a `VERSIONED_COMPOSITION`."/>
+      <definition value="Content of one version in a `VERSIONED_COMPOSITION`. A Composition is considered the unit of modification of the record, the unit of transmission in record Extracts, and the unit of attestation by authorising clinicians. In this latter sense, it may be considered equivalent to a signed document.&#xA;&#xA;NOTE: It is strongly recommended that the inherited attribute `_uid_` be populated in Compositions, using the UID copied from the `_object_id()_` of the `_uid_` field of the enclosing `VERSION` object. +&#xA;For example, the `ORIGINAL_VERSION.uid` `87284370-2D4B-4e3d-A3F3-F303D2F4F34B::uk.nhs.ehr1::2` would be copied to the `_uid_` field of the Composition."/>
+      <min value="0"/>
+      <max value="*"/>
+      <constraint>
+        <key value="Setting_valid"/>
+        <severity value="error"/>
+        <human value="Setting valid"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <constraint>
+        <key value="unnamed2"/>
+        <severity value="error"/>
+        <human value="unnamed2"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <constraint>
+        <key value="unnamed3"/>
+        <severity value="error"/>
+        <human value="unnamed3"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <constraint>
+        <key value="Category_validity"/>
+        <severity value="error"/>
+        <human value="Category validity"/>
+        <expression value="null # TODO: manual translation needed"/>
+      </constraint>
+      <constraint>
+        <key value="Is_persistent_validity"/>
+        <severity value="error"/>
+        <human value="Is persistent validity must satisfy conditional constraints"/>
+        <expression value="is_persistent() implies context .empty()"/>
+      </constraint>
+      <constraint>
+        <key value="Content_valid"/>
+        <severity value="error"/>
+        <human value="Content valid must be present"/>
+        <expression value="content.exists() implies content.empty().not()"/>
+      </constraint>
+      <constraint>
+        <key value="Is_archetype_root"/>
+        <severity value="error"/>
+        <human value="Is archetype root"/>
+        <expression value="is_archetype_root()"/>
+      </constraint>
+      <isModifier value="false"/>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://specifications.openehr.org/fhir/valueset-languages"/>
+      </binding>
+    </element>
+    <element id="COMPOSITION.language">
+      <path value="COMPOSITION.language"/>
+      <short value="Mandatory indicator of the localised language in which this Composition is written."/>
+      <definition value="Mandatory indicator of the localised language in which this Composition is written. Coded from openEHR Code Set  `languages`. The language of an Entry if different from the Composition is indicated in `ENTRY._language_`. "/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="COMPOSITION.territory">
+      <path value="COMPOSITION.territory"/>
+      <short value="Name of territory in which this Composition was written."/>
+      <definition value="Name of territory in which this Composition was written. Coded from openEHR  countries  code set, which is an expression of the ISO 3166 standard."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/CODE-PHRASE"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="COMPOSITION.category">
+      <path value="COMPOSITION.category"/>
+      <short value="Temporal category of this Composition, i."/>
+      <definition value="Temporal category of this Composition, i.e. &#xA;&#xA;* `431|persistent|` - of potential life-time validity;&#xA;* `451|episodic|` - valid over the life of a care episode;&#xA;* `433|event|` - valid at the time of recording (long-term validity requires subsequent clinical assessment).&#xA;&#xA;or any other code defined in the openEHR terminology group 'category'.&#xA;"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/DV-CODED-TEXT"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="COMPOSITION.context">
+      <path value="COMPOSITION.context"/>
+      <short value="The clinical session context of this Composition, i."/>
+      <definition value="The clinical session context of this Composition, i.e. the contextual attributes of the clinical session. "/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/EVENT-CONTEXT"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="COMPOSITION.composer">
+      <path value="COMPOSITION.composer"/>
+      <short value="The person primarily responsible for the content of the Composition (but not necessarily its committal into the EHR system)."/>
+      <definition value="The person primarily responsible for the content of the Composition (but not necessarily its committal into the EHR system). This is the identifier which should appear on the screen. It may or may not be the person who entered the data. When it is the patient, the special self  instance of `PARTY_PROXY` will be used."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/PARTY-PROXY"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+    <element id="COMPOSITION.content">
+      <path value="COMPOSITION.content"/>
+      <short value="The content of this Composition."/>
+      <definition value="The content of this Composition. "/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="http://openehr.org/fhir/StructureDefinition/CONTENT-ITEM"/>
+      </type>
+      <isModifier value="false"/>
+    </element>
+  </differential>
+</StructureDefinition>
