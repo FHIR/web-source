@@ -27,7 +27,7 @@ system("wget -q --max-redirect=5 -O $oldfile '$params{oldfile}'");
 system("wget -q --max-redirect=5 -O $newfile '$params{newfile}'");
 
 # Run htmldiff
-system("/usr/lib/cgi-bin/htmldiff.pl $oldfile $newfile");
+system("/var/www/fhir.org/_site/perl/htmldiff.pl $oldfile $newfile");
 
 # Clean up
 unlink($oldfile);
