@@ -5,7 +5,7 @@ title: "Potential Exploit: NPM Package Dependencies"
 
 ## Security Notice 
 
-This security notice was issued by the FHIR product Manager on the 17-March 2026. 
+This security notice was issued by the FHIR Product Director on the 17-March 2026. 
 
 ## Background
 
