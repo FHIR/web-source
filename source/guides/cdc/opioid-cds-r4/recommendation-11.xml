@@ -1,0 +1,39 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
+  
+  {% include multiple-variation-note.html %}
+  
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#order-select">Recommendation 11 Order Select</a></li>
+      <li><a data-toggle="tab" href="#patient-view">Recommendation 11 Patient View</a></li>
+    </ul>
+    <div class="tab-content">
+      <div id="order-select" class="tab-pane fade in active">
+        {% include recommendation-page-template.html 
+          recommendationNum='11' 
+          topic='Selecting Opioids and Determining Opioid Dosages' 
+          description='Clinicians should use particular caution when prescribing opioid pain medication and benzodiazepines concurrently and consider whether benefits outweigh risks of concurrent prescribing of opioids and other central nervous system depressants.' 
+          recommendation-category='B' 
+          evidence-type='3' 
+          flow-diagram='flow_rec11_orderselect.svg'
+          func-desc='recommendation11-order-select-functional-description.html'
+          data-elements='recommendation11-order-select-data-elements.html'
+          content-table='recommendation11-order-select-content-table.html'
+          test-data='recommendation11-order-select-test-data.html' %}
+      </div>
+      <div id="patient-view" class="tab-pane fade">
+        {% include recommendation-page-template.html 
+          recommendationNum='11' 
+          topic='Selecting Opioids and Determining Opioid Dosages' 
+          description='Clinicians should use particular caution when prescribing opioid pain medication and benzodiazepines concurrently and consider whether benefits outweigh risks of concurrent prescribing of opioids and other central nervous system depressants.' 
+          recommendation-category='B' 
+          evidence-type='3' 
+          flow-diagram='flow_rec11_patientview.svg'
+          func-desc='recommendation11-patient-view-functional-description.html'
+          data-elements='recommendation11-patient-view-data-elements.html'
+          content-table='recommendation11-patient-view-content-table.html'
+          test-data='recommendation11-patient-view-test-data.html' %}
+      </div>
+    </div>
+  </div>
+</div>

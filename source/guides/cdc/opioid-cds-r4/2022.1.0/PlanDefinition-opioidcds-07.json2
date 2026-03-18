@@ -1,0 +1,1375 @@
+{
+  "resourceType" : "PlanDefinition",
+  "id" : "opioidcds-07",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition",
+    "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishableplandefinition"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <table class=\"grid dict\">\n        \n        <tr>\n            <th scope=\"row\"><b>Id: </b></th>\n            <td style=\"padding-left: 4px;\">opioidcds-07</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Url: </b></th>\n            <td style=\"padding-left: 4px;\"><a href=\"PlanDefinition-opioidcds-07.html\">Recommendation #7 - Opioid Therapy Risk Assessment</a></td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Version: </b></th>\n            <td style=\"padding-left: 4px;\">2022.1.0</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Identifier: </b></th>\n            <td style=\"padding-left: 4px;\">\n                \n                \n                <p style=\"margin-bottom: 5px;\">\n                    <b>value: </b> <span>cdc-opioid-guidance</span>\n                </p>\n                \n            </td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Name: </b></th>\n            <td style=\"padding-left: 4px;\">PlanDefinition_Recommendation_07_Order_Sign</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Title: </b></th>\n            <td style=\"padding-left: 4px;\">Recommendation #7 - Opioid Therapy Risk Assessment</td>\n        </tr>\n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Status: </b></th>\n            <td style=\"padding-left: 4px;\">active</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Experimental: </b></th>\n            <td style=\"padding-left: 4px;\">false</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Type: </b></th>\n            <td style=\"padding-left: 4px;\">\n                \n                    \n                        \n                        <p style=\"margin-bottom: 5px;\">\n                            <b>system: </b> <span><a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-plan-definition-type.html\">http://terminology.hl7.org/CodeSystem/plan-definition-type</a></span>\n                        </p>\n                        \n                        \n                        <p style=\"margin-bottom: 5px;\">\n                            <b>code: </b> <span>eca-rule</span>\n                        </p>\n                        \n                        \n                        <p style=\"margin-bottom: 5px;\">\n                            <b>display: </b> <span>ECA Rule</span>\n                        </p>\n                        \n                    \n                \n                \n            </td>\n        </tr>\n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Date: </b></th>\n            <td style=\"padding-left: 4px;\">2025-08-06</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Publisher: </b></th>\n            <td style=\"padding-left: 4px;\">CDC / Security Risk Solutions, Inc. (SRS)</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Description: </b></th>\n            <td style=\"padding-left: 4px;\">Clinicians should evaluate benefits and risks with patients within 1-4 weeks of starting opioid therapy for subacute or chronic pain or of dosage escalation. Clinicians should regularly reevaluate benefits and risks of continued opioid therapy with patients.</td>\n        </tr>\n        \n        \n            <tr>\n                <th scope=\"row\"><a name=\"effective-data-requirements\"> </a><b>Logic Definitions: </b></th>\n                <td style=\"padding-left: 4px;\">\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSREC07</td>\n                                \n                                \n                                    <td>Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions</td>\n                                \n                                \n                                    <td>0</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions&quot;:\n  ( Common.&quot;Is Opioid Analgesic with Ambulatory Misuse Potential?&quot;( ContextPrescriptions ) ) AmbulatoryOpioidPrescription\n    where Routines.&quot;Is Subacute or Chronic Pain Prescription?&quot;( AmbulatoryOpioidPrescription )</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSREC07</td>\n                                \n                                \n                                    <td>Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential</td>\n                                \n                                \n                                    <td>1</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential&quot;:\n  exists( &quot;Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions&quot; )</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommonConfig</td>\n                                \n                                \n                                    <td>Age Less than 18 Years Is Enabled</td>\n                                \n                                \n                                    <td>2</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">// CDC 2022 General Inclusion Criteria\ndefine &quot;Age Less than 18 Years Is Enabled&quot;:\n  true</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSRoutines</td>\n                                \n                                \n                                    <td>Patient Age Less Than 18</td>\n                                \n                                \n                                    <td>3</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Patient Age Less Than 18&quot;:\n  if (Config.&quot;Age Less than 18 Years Is Enabled&quot;) then\n    AgeInYearsAt(Today()) &lt; 18\n  else false</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommonConfig</td>\n                                \n                                \n                                    <td>Sickle Cell Check Enabled</td>\n                                \n                                \n                                    <td>4</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">// Sickle Cell\ndefine &quot;Sickle Cell Check Enabled&quot;:\n  true</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommonConfig</td>\n                                \n                                \n                                    <td>Sickle Cell Assumed Active</td>\n                                \n                                \n                                    <td>5</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Sickle Cell Assumed Active&quot;:\n  true</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommon</td>\n                                \n                                \n                                    <td>US Core-Categorized Conditions</td>\n                                \n                                \n                                    <td>6</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">// 3. Medications indicating end of life\n    /* or exists (\n      &quot;Medications Indicating End of Life&quot;\n    ) */\n\ndefine &quot;US Core-Categorized Conditions&quot;:\n  [Condition: category in &quot;Encounter Diagnosis Condition Category&quot;]\n    union [Condition: category in &quot;Problem List Condition Category&quot;]\n    union [Condition: category in &quot;US Core Health Concern Condition Category&quot;]</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommon</td>\n                                \n                                \n                                    <td>Positive Sickle Cell Condition</td>\n                                \n                                \n                                    <td>7</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Positive Sickle Cell Condition&quot;:\n  if Config.&quot;Sickle Cell Check Enabled&quot; and not Config.&quot;Sickle Cell Assumed Active&quot;\n    then (\n      &quot;US Core-Categorized Conditions&quot; C\n        where C.code in &quot;Sickle Cell Diseases&quot;\n          and C.clinicalStatus in &quot;Active Condition&quot;\n    ) else if Config.&quot;Sickle Cell Check Enabled&quot; and Config.&quot;Sickle Cell Assumed Active&quot;\n        then (\n          &quot;US Core-Categorized Conditions&quot; C\n            where C.code in &quot;Sickle Cell Diseases&quot;\n        )\n      else null</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSRoutines</td>\n                                \n                                \n                                    <td>Condition Positive for Sickle Cell</td>\n                                \n                                \n                                    <td>8</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Condition Positive for Sickle Cell&quot;:\n  if (Config.&quot;Sickle Cell Check Enabled&quot;) then\n    exists(\n      Common.&quot;Positive Sickle Cell Condition&quot;\n    ) \n  else false</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommonConfig</td>\n                                \n                                \n                                    <td>Active Cancer Treatment Encounters Condition Is Enabled</td>\n                                \n                                \n                                    <td>9</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">// Active Cancer Treatment\ndefine &quot;Active Cancer Treatment Encounters Condition Is Enabled&quot;:\n  true</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSRoutines</td>\n                                \n                                \n                                    <td>Encounter Period</td>\n                                \n                                \n                                    <td>10</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">// End of Opioid Naive Routine\n\n/*\n**  Routine #3\n**  Active Cancer Treatment Routine\n**\n**  Definition                    | Answer to Proceed   | Details                                    | Data (Terminology) Requirement\n**  ---------------------------------------------------------------------------------------------------------------------------------\n**  Two office visits within the  | No                  | Look for a minimum of two distinct         | Office Visit\n**  past 12 months                |                     | encounters within 12 months of the date    |\n**                                |                     | of the current visit for which each of the |\n**                                |                     | following is true:                         |\n**                                |                     |   - the encounter diagnosis (primary or    |\n**                                |                     |     secondary or co-morbidity diagnosis)   |\n**                                |                     |     is listed in the CDC Malignant Cancer  |\n**                                |                     |     Conditions value set                   |\n**  ---------------------------------------------------------------------------------------------------------------------------------\n**  Office visits with an         | No                  | The encounter is performed by an           | Oncology specialty\n**  oncology specialist           |                     | oncologist as defined in the oncology      | designations (NUCC)\n**  present                       |                     | specialty designations using the           |\n**                                |                     | National Uniform Claim Committee           |\n**                                |                     | (NUCC) classifications                     |\n**  ---------------------------------------------------------------------------------------------------------------------------------\n**  Office visits including CDC   | No                  | The encounter diagnosis (primary or        | CDC malignant cancer\n**  malignant cancer              |                     | secondary or co-morbidity diagnosis)       | conditions\n**  condition                     |                     | is listed in the CDC Malignant Cancer      |\n**                                |                     | Conditions value set                       |\n**  ----------------------------------------------------------------------------------------------------------------------------------\n**\n*/\n\ndefine &quot;Encounter Period&quot;:\n  Interval[Today() - 12 months, Today())</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommon</td>\n                                \n                                \n                                    <td>USCore Encounter Cancer Diagnoses</td>\n                                \n                                \n                                    <td>11</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;USCore Encounter Cancer Diagnoses&quot;:\n  [Condition: category in &quot;Encounter Diagnosis Condition Category&quot;] CancerDiagnoses\n    where CancerDiagnoses.code in &quot;CDC malignant cancer conditions&quot;</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSRoutines</td>\n                                \n                                \n                                    <td>Encounters with Cancer Diagnosis During Encounter Period</td>\n                                \n                                \n                                    <td>12</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">// encounter-diagnosis, problem-list and health-concern Conditions\n// define &quot;US Core-Categorized Cancer Diagnoses&quot;:\n//   Common.&quot;US Core-Categorized Conditions&quot; C\n//     where C.code in Common.&quot;CDC malignant cancer conditions&quot;\n\n// define &quot;Encounters with Cancer Diagnosis During Encounter Period&quot;:\n//   [Encounter] Encounter\n//     with &quot;US Core-Categorized Cancer Diagnoses&quot; CancerDiagnosis\n//     such that date from Encounter.period.&quot;start&quot;.value in day of &quot;Encounter Period&quot;\n//       and EndsWith(CancerDiagnosis.encounter.reference, Encounter.id)\n\ndefine &quot;Encounters with Cancer Diagnosis During Encounter Period&quot;:\n  [Encounter] Encounters\n    where date from Encounters.period.&quot;start&quot; in day of &quot;Encounter Period&quot;\n      and exists (\n        Common.&quot;USCore Encounter Cancer Diagnoses&quot; CancerDiagnoses\n          where EndsWith(CancerDiagnoses.encounter.reference, Encounters.id)\n      )</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSRoutines</td>\n                                \n                                \n                                    <td>Number of Encounters with Cancer Diagnosis During Encounter Period</td>\n                                \n                                \n                                    <td>13</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Number of Encounters with Cancer Diagnosis During Encounter Period&quot;:\n  Count (&quot;Encounters with Cancer Diagnosis During Encounter Period&quot;)</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSRoutines</td>\n                                \n                                \n                                    <td>Has Two or More Encounters with Cancer Diagnosis During Encounter Period</td>\n                                \n                                \n                                    <td>14</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Has Two or More Encounters with Cancer Diagnosis During Encounter Period&quot;:\n  &quot;Number of Encounters with Cancer Diagnosis During Encounter Period&quot; &gt;= 2</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommon</td>\n                                \n                                \n                                    <td>USCore Problem List Cancer Diagnoses</td>\n                                \n                                \n                                    <td>15</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;USCore Problem List Cancer Diagnoses&quot;:\n  [Condition: category in &quot;Problem List Condition Category&quot;] CancerDiagnoses\n    where CancerDiagnoses.code in &quot;CDC malignant cancer conditions&quot;</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSRoutines</td>\n                                \n                                \n                                    <td>Has Active Cancer Diagnosis on Problem List</td>\n                                \n                                \n                                    <td>16</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Has Active Cancer Diagnosis on Problem List&quot;:\n  exists (\n    Common.&quot;USCore Problem List Cancer Diagnoses&quot; CancerDiagnoses\n      where CancerDiagnoses.category in Common.&quot;Problem List Condition Category&quot;\n        and exists(\n          CancerDiagnoses.clinicalStatus.coding ClinicalStatus\n            where ClinicalStatus.code ~ 'active'\n        )\n  )</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSRoutines</td>\n                                \n                                \n                                    <td>Is Active Cancer Treatment?</td>\n                                \n                                \n                                    <td>17</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Is Active Cancer Treatment?&quot;:\n  if (Config.&quot;Active Cancer Treatment Encounters Condition Is Enabled&quot;) \n    then &quot;Has Two or More Encounters with Cancer Diagnosis During Encounter Period&quot;\n      or &quot;Has Active Cancer Diagnosis on Problem List&quot;\n  else false</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommonConfig</td>\n                                \n                                \n                                    <td>End-Stage Disease Criteria Enabled</td>\n                                \n                                \n                                    <td>18</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">// CDC 2022 General Inclusion Criteria\ndefine &quot;End-Stage Disease Criteria Enabled&quot;:\n  true</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSRoutines</td>\n                                \n                                \n                                    <td>Conditions Likely Terminal for Opioid Prescribing</td>\n                                \n                                \n                                    <td>19</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Conditions Likely Terminal for Opioid Prescribing&quot;:\n  if (Config.&quot;End-Stage Disease Criteria Enabled&quot;) then\n    exists (\n      Common.&quot;US Core-Categorized Conditions&quot; EOLC\n        where EOLC.code in Common.&quot;Conditions likely terminal for opioid prescribing&quot;\n          // and EOLC.clinicalStatus in Common.&quot;Active Condition&quot;\n    )\n  else false</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSRoutines</td>\n                                \n                                \n                                    <td>CDC 2022 Guideline General Inclusion Criteria</td>\n                                \n                                \n                                    <td>20</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;CDC 2022 Guideline General Inclusion Criteria&quot;:\n  not &quot;Patient Age Less Than 18&quot;\n    and not &quot;Condition Positive for Sickle Cell&quot;\n    and not &quot;Is Active Cancer Treatment?&quot;\n    and not &quot;Conditions Likely Terminal for Opioid Prescribing&quot;</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSREC07</td>\n                                \n                                \n                                    <td>Risk Assessment Interval</td>\n                                \n                                \n                                    <td>21</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Risk Assessment Interval&quot;:\n  Interval[Today() - 91 days, Today() - 1 day]</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSREC07</td>\n                                \n                                \n                                    <td>Opioid Risk Assessment in Past 90 Days</td>\n                                \n                                \n                                    <td>22</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Opioid Risk Assessment in Past 90 Days&quot;:\n  [Procedure: Common.&quot;Opioid misuse assessment procedure&quot;] riskAssessment\n    where start of (riskAssessment.performed as FHIR.Period) in day of &quot;Risk Assessment Interval&quot;</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSREC07</td>\n                                \n                                \n                                    <td>Previous 10 Days Interval</td>\n                                \n                                \n                                    <td>23</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Previous 10 Days Interval&quot;:\n  Interval[Today() - 10 days, Today()]</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSREC07</td>\n                                \n                                \n                                    <td>Encounter Interval</td>\n                                \n                                \n                                    <td>24</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Encounter Interval&quot;:\n  Interval[Today() - 12 months - 1 days, Today() - 1 day]</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSREC07</td>\n                                \n                                \n                                    <td>Prescribed Opioids for 7 of Past 10 Days with an Encounter</td>\n                                \n                                \n                                    <td>25</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Prescribed Opioids for 7 of Past 10 Days with an Encounter&quot;:\n  Common.&quot;Days on Opioids during Period&quot;( &quot;Previous 10 Days Interval&quot; ) &gt;= 7\n    and exists (\n      [Encounter: Common.&quot;Office Visit&quot;] AmbulatoryEncounter\n        where AmbulatoryEncounter.period during &quot;Encounter Interval&quot;\n    )</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommon</td>\n                                \n                                \n                                    <td>First Month</td>\n                                \n                                \n                                    <td>26</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;First Month&quot;:\nInterval[Today() - 3 months, Today() - 2 months]</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommon</td>\n                                \n                                \n                                    <td>Second Month</td>\n                                \n                                \n                                    <td>27</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Second Month&quot;:\nInterval[Today() - 2 months, Today() - 1 months]</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommon</td>\n                                \n                                \n                                    <td>Third Month</td>\n                                \n                                \n                                    <td>28</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Third Month&quot;:\nInterval[Today() - 1 months, Today()]</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommon</td>\n                                \n                                \n                                    <td>Prescribed Opioids for 21 or more of 30 Days for each of the past 3 Months</td>\n                                \n                                \n                                    <td>29</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Prescribed Opioids for 21 or more of 30 Days for each of the past 3 Months&quot;:\n  &quot;Days on Opioids during Period&quot;(&quot;First Month&quot;) &gt;= 21\n    and &quot;Days on Opioids during Period&quot;(&quot;Second Month&quot;) &gt;= 21\n    and &quot;Days on Opioids during Period&quot;(&quot;Third Month&quot;) &gt;= 21</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSREC07</td>\n                                \n                                \n                                    <td>Inclusion Criteria</td>\n                                \n                                \n                                    <td>30</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Inclusion Criteria&quot;:\n  &quot;Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential&quot;\n    and Routines.&quot;CDC 2022 Guideline General Inclusion Criteria&quot;\n    and not exists ( &quot;Opioid Risk Assessment in Past 90 Days&quot; )\n    and (\n      &quot;Prescribed Opioids for 7 of Past 10 Days with an Encounter&quot;\n        or Common.&quot;Prescribed Opioids for 21 or more of 30 Days for each of the past 3 Months&quot;\n    )</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommon</td>\n                                \n                                \n                                    <td>Conditions Indicating End of Life or With Limited Life Expectancy</td>\n                                \n                                \n                                    <td>31</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Conditions Indicating End of Life or With Limited Life Expectancy&quot;:\n  (\n    &quot;US Core-Categorized Conditions&quot; C\n      where C.code in &quot;Conditions likely terminal for opioid prescribing&quot;\n        and C.clinicalStatus in &quot;Active Condition&quot;\n  )\n  union\n  (\n    &quot;US Core-Categorized Conditions&quot; C\n      where C.code in &quot;Limited life expectancy conditions&quot;\n        and C.clinicalStatus in &quot;Active Condition&quot;\n  )</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommonConfig</td>\n                                \n                                \n                                    <td>Hospice Findings Exclusion Enabled</td>\n                                \n                                \n                                    <td>32</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">// OpioidCDSCommon\ndefine &quot;Hospice Findings Exclusion Enabled&quot;:\n  false</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommon</td>\n                                \n                                \n                                    <td>Admitted/Referred/Discharged to Hospice Care</td>\n                                \n                                \n                                    <td>33</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Admitted/Referred/Discharged to Hospice Care&quot;:\n  (\n    if (Config.&quot;Hospice Findings Exclusion Enabled&quot;) then\n      [Observation: code in &quot;Hospice Finding Codes&quot;] O\n        where not (O.status.value in { 'unknown', 'entered-in-error', 'cancelled' })\n    else\n      {}\n  )\n  union\n  (\n    [Encounter] E\n      where date from E.period.start 1 year or less on or before Today()\n        and (\n          if E.hospitalization.dischargeDisposition.coding is null\n              or not exists (E.hospitalization.dischargeDisposition.coding)\n            then false\n          else E.hospitalization.dischargeDisposition in &quot;Hospice Disposition&quot;\n        )\n        and E.status.value in { 'planned', 'arrived', 'in-progress', 'finished', 'onleave' }\n  )</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommon</td>\n                                \n                                \n                                    <td>End of Life Assessment</td>\n                                \n                                \n                                    <td>34</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;End of Life Assessment&quot;:\n    // 1. Conditions indicating end of life or with limited life expectancy\n    exists (\n      &quot;Conditions Indicating End of Life or With Limited Life Expectancy&quot;\n    )\n    // 2. Admitted/referred/discharged to hospice care\n    or exists (\n      &quot;Admitted/Referred/Discharged to Hospice Care&quot;\n    )</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSREC07</td>\n                                \n                                \n                                    <td>Exclusion Criteria</td>\n                                \n                                \n                                    <td>35</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Exclusion Criteria&quot;:\n  Common.&quot;End of Life Assessment&quot;</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSREC07</td>\n                                \n                                \n                                    <td>Is Recommendation Applicable?</td>\n                                \n                                \n                                    <td>36</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define &quot;Is Recommendation Applicable?&quot;:\n  &quot;Inclusion Criteria&quot;\n    and not &quot;Exclusion Criteria&quot;</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommon</td>\n                                \n                                \n                                    <td>Is Opioid Analgesic with Ambulatory Misuse Potential?</td>\n                                \n                                \n                                    <td>37</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define function &quot;Is Opioid Analgesic with Ambulatory Misuse Potential?&quot;(value List&lt;MedicationRequest&gt;):\n  (&quot;Get MedicationRequest Medication as Code&quot;(value)) Rx\n    where Rx.medication in &quot;Opioid analgesics with ambulatory misuse potential&quot; \n      and Rx.category in &quot;Community&quot;</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommon</td>\n                                \n                                \n                                    <td>Get MedicationRequest Medication as Code</td>\n                                \n                                \n                                    <td>38</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define function &quot;Get MedicationRequest Medication as Code&quot;(value List&lt;MedicationRequest&gt;):\n  value Rx\n    let Med: \n      if Rx.medication is Reference then singleton from (\n        [Medication] M\n          where M.id = (Last(Split((Rx.medication as FHIR.Reference).reference, '/')))\n      ) else null\n    return \n      MedicationRequest {\n        id: Rx.id,\n        status: Rx.status,\n        intent: Rx.intent,\n        category: Rx.category,\n        medication: if Rx.medication is Reference then Med.code else Rx.medication as CodeableConcept,\n        subject: Rx.subject,\n        authoredOn: Rx.authoredOn,\n        recorder: Rx.recorder,\n        dosageInstruction: Rx.dosageInstruction,\n        dispenseRequest: Rx.dispenseRequest\n      }</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>FHIRHelpers</td>\n                                \n                                \n                                    <td>ToString</td>\n                                \n                                \n                                    <td>39</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define function ToString(value string): value.value</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>FHIRHelpers</td>\n                                \n                                \n                                    <td>ToConcept</td>\n                                \n                                \n                                    <td>40</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define function ToConcept(concept FHIR.CodeableConcept):\n    if concept is null then\n        null\n    else\n        System.Concept {\n            codes: concept.coding C return ToCode(C),\n            display: concept.text.value\n        }</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>FHIRHelpers</td>\n                                \n                                \n                                    <td>ToCode</td>\n                                \n                                \n                                    <td>41</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define function ToCode(coding FHIR.Coding):\n    if coding is null then\n        null\n    else\n        System.Code {\n          code: coding.code.value,\n          system: coding.system.value,\n          version: coding.version.value,\n          display: coding.display.value\n        }</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSRoutines</td>\n                                \n                                \n                                    <td>Is Subacute or Chronic Pain Prescription?</td>\n                                \n                                \n                                    <td>42</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">// End of Active Cancer Treatment Routine\n\n/*\n**  Routine #4\n**  For Subacute or Chronic Pain Routine\n**\n**  Definition                  | Answer to Proceed   | Details                                        | Data (Terminology) Requirement\n**  -----------------------------------------------------------------------------------------------------------------------------------\n**  Order for opioid analgesic  | Yes                 | Order for opioid analgesics with ambulatory    | Opioid analgesics with\n**  with expected supply        |                     | misuse potential with a supply duration of &gt;=  | ambulatory misuse potential\n**  duration &gt;= 28 days         |                     | 28 days                                        |\n**                              |                     |                                                |\n**                              |                     | - Subacute definition = order for opioid       |\n**                              |                     |   analgesics with ambulatory misuse            |\n**                              |                     |   potential with a supply duration of one to   |\n**                              |                     |   two months.                                  |\n**                              |                     | - Chronic pain definition = order for opioid   |\n**                              |                     |   analgesics with ambulatory misuse            |\n**                              |                     |   potential with a supply duration of &gt;= two   |\n**                              |                     |   months.                                      |\n**  -----------------------------------------------------------------------------------------------------------------------------------\n**\n*/\n\ndefine function &quot;Is Subacute or Chronic Pain Prescription?&quot;(prescription FHIR.MedicationRequest):\n  &quot;Is Subacute or Chronic Pain Using Expected Supply Duration&quot;(prescription)\n    or &quot;Is Subacute or Chronic Pain Using Validity Period&quot;(prescription)</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSRoutines</td>\n                                \n                                \n                                    <td>Is Subacute or Chronic Pain Using Expected Supply Duration</td>\n                                \n                                \n                                    <td>43</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define function &quot;Is Subacute or Chronic Pain Using Expected Supply Duration&quot;(prescription FHIR.MedicationRequest):\n  (\n    prescription.dispenseRequest is not null\n      and prescription.dispenseRequest.expectedSupplyDuration is not null\n      and (\n        Common.GetDurationInDays(prescription.dispenseRequest.expectedSupplyDuration) &gt;= 28 days \n      )\n  )</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommon</td>\n                                \n                                \n                                    <td>GetDurationInDays</td>\n                                \n                                \n                                    <td>44</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define function GetDurationInDays(value FHIR.Duration):\n  if value is null then null\n  else\n    case\n      when value.code.value ~ 'a' then System.Quantity{ value: value.value.value * 365.0, unit: 'days' }\n      when value.code.value ~ 'mo' then System.Quantity{ value: value.value.value * 30.0, unit: 'days' }\n      when value.code.value ~ 'wk' then System.Quantity{ value: value.value.value * 7.0, unit: 'days' }\n      when value.code.value ~ 'd' then System.Quantity{ value: value.value.value, unit: 'days' }\n      when value.code.value ~ 'h' then System.Quantity{ value: value.value.value / 24.0, unit: 'days' }\n      when value.code.value ~ 'min' then System.Quantity{ value: value.value.value / 60.0 / 24.0, unit: 'days' }\n      when value.code.value ~ 's' then System.Quantity{ value: value.value.value / 60.0 / 60.0 / 24.0, unit: 'days' }\n      when value.code.value ~ 'ms' then System.Quantity{ value: value.value.value / 60.0 / 60.0 / 24.0 / 1000.0, unit: 'days' }\n      when value.code.value is null then Message(1000, true, 'Undefined', 'Error', 'Duration unit code is null')\n      else Message(1000, true, 'Undefined', 'Error', 'Unsupported duration unit code: ' + value.code.value)\nend</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSRoutines</td>\n                                \n                                \n                                    <td>Is Subacute or Chronic Pain Using Validity Period</td>\n                                \n                                \n                                    <td>45</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define function &quot;Is Subacute or Chronic Pain Using Validity Period&quot;(prescription FHIR.MedicationRequest):\n  (\n    prescription.dispenseRequest is not null\n      and prescription.dispenseRequest.validityPeriod is not null\n      and (\n        days between prescription.dispenseRequest.validityPeriod.start and prescription.dispenseRequest.validityPeriod.end &gt;= 28 \n      )\n  )</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>FHIRHelpers</td>\n                                \n                                \n                                    <td>ToDateTime</td>\n                                \n                                \n                                    <td>46</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define function ToDateTime(value dateTime): value.value</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>FHIRHelpers</td>\n                                \n                                \n                                    <td>ToInterval</td>\n                                \n                                \n                                    <td>47</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define function ToInterval(period FHIR.Period):\n    if period is null then\n        null\n    else\n        if period.&quot;start&quot; is null then\n            Interval(period.&quot;start&quot;.value, period.&quot;end&quot;.value]\n        else\n            Interval[period.&quot;start&quot;.value, period.&quot;end&quot;.value]</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommon</td>\n                                \n                                \n                                    <td>Days on Opioids during Period</td>\n                                \n                                \n                                    <td>48</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define function &quot;Days on Opioids during Period&quot;(period Interval&lt;Date&gt;):\n  Sum(\n    (\n      collapse (\n        [MedicationRequest: &quot;Opioid analgesics with ambulatory misuse potential&quot;] OpioidPrescription\n        return &quot;Prescription Relevant Period&quot;( OpioidPrescription ) intersect period\n      )\n    ) OpioidUseInterval\n      return days between start of OpioidUseInterval and end of OpioidUseInterval\n  )</code></pre>\n                        \n                        <br/><br/>\n                    \n                        <table class=\"grid-dict\">\n                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>\n                            <tr>\n                                \n                                    <td>OpioidCDSCommon</td>\n                                \n                                \n                                    <td>Prescription Relevant Period</td>\n                                \n                                \n                                    <td>49</td>\n                                \n                            </tr>\n                        </table>\n                        \n                            <pre style=\"max-width: 990px;\"><code class=\"language-cql\">define function &quot;Prescription Relevant Period&quot;(prescription FHIR.MedicationRequest):\n  if (\n    prescription.authoredOn is not null and prescription.dispenseRequest is not null\n      and prescription.dispenseRequest.expectedSupplyDuration is not null\n  )\n  then Interval[\n    date from prescription.authoredOn,\n    date from prescription.authoredOn + GetDurationInDays(prescription.dispenseRequest.expectedSupplyDuration)\n  ]\n  else null</code></pre>\n                        \n                        <br/><br/>\n                    \n                </td>\n            </tr>\n        \n        \n        <tr>\n          <th scope=\"row\"><b>Knowledge Capability: </b></th>\n          <td style=\"padding-left: 4px;\">\n            shareable computable executable publishable \n          </td>\n        </tr>\n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Use Context: </b></th>\n            <td style=\"padding-left: 4px;\">\n                <table class=\"grid-dict\">\n                    <tr><th><b>code</b></th><th><b>value</b></th><th><b>display</b></th></tr>\n                    \n                      <tr>\n                        <td>focus</td>\n                        <td>182888003</td>\n                        <td>Medication requested (situation)</td>\n                      </tr>\n                    \n                      <tr>\n                        <td>focus</td>\n                        <td>82423001</td>\n                        <td>Chronic pain (finding)</td>\n                      </tr>\n                    \n                      <tr>\n                        <td>focus</td>\n                        <td/>\n                        <td/>\n                      </tr>\n                    \n                </table>\n            </td>\n        </tr>\n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Purpose: </b></th>\n            <td style=\"padding-left: 4px;\"><div><p>The 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain is intended to improve communication between clinicians and patients about the benefits and risks of pain treatments, including opioid therapy; improve the effectiveness and safety of pain treatment; mitigate pain; improve function and quality of life for patients with pain; and reduce risks associated with opioid pain therapy, including opioid use disorder, overdose, and death. The recommendations do not apply to pain related to sickle cell disease or cancer or to patients receiving palliative or end-of-life care.</p>\n</div></td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Usage: </b></th>\n            <td style=\"padding-left: 4px;\">In addition to evaluating benefits and risks of opioids before starting opioid therapy (see Recommendation 2), clinicians should evaluate patients to assess benefits and risks of opioids within 1-4 weeks of starting long-term opioid therapy or of dosage escalation.</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Copyright: </b></th>\n            <td style=\"padding-left: 4px;\"><div><p>© CDC 2016+.</p>\n</div></td>\n        </tr>\n        \n        \n        \n        \n        \n        \n        <tr>\n          <th scope=\"row\"><b>Related Artifacts: </b></th>\n          <td style=\"padding-left: 4px;\">\n            \n            <p><b>Documentation</b></p>\n            <ul>\n              \n                  <li>\n                    <a href=\"https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm\"> 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain</a>\n                  </li>\n              \n            </ul>\n            \n            \n            \n            \n            \n            \n            \n          </td>\n        </tr>\n        \n\n        \n        <tr>\n          <th scope=\"row\"><b>Libraries: </b></th>\n          <td style=\"padding-left: 4px;\">\n            <table class=\"grid-dict\">\n              \n                <tr><td><a href=\"Library-OpioidCDSREC07.html\">Library - Recommendation #7 - Opioid Therapy Risk Assessment</a></td></tr>\n              \n            </table>\n          </td>\n        </tr>\n        \n\n        \n        <tr>\n          <th scope=\"row\"><b>Actions: </b></th>\n          <td style=\"padding-left: 4px;\">\n            <table class=\"grid-dict\">\n              \n                <tr>\n                  <td>\n                    <b> Regularly Evaluate the Benefits and Risks of Opioid Therapy:</b> Recommend that clinicians evaluate benefits and risks with patients within 1-4 weeks of starting opioid therapy for subacute or chronic pain or of dosage escalation. Clinicians should also regularly reevaluate the benefits and risks of continued opioid therapy with patients.\r\n\r\nFor additional guidance regarding opioid therapy patient consultations, see [Recommendation 7 of the 2022 CDC Clinical Practice Guideline for additional guidance](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#Recommendation7)<br/>\n                    <b>When:</b> <i>Named Event:</i> order-sign<br/>\n                    <b>If:</b> <i>Applicability:</i> Check whether the patient has a current order is for an opioid with ambulatory misuse potential for subacute or chronic pain, a risk assessment has been performed in the past 90 days, has taken an opioid with abuse potential for 7 of the past 10 days or 63 of the past 90 days and if the 2022 CDC guideline general inclusion criteria is met. <i>(Is Recommendation Applicable?)</i><br/>\n                    <b>Then:</b>\n                    \n                      <table class=\"grid-dict\">\n                        \n                          <tr>\n                            <td>\n                              <b> :</b> Document - Conducted benefit and risk assessment<br/>\n                              \n                              \n                              <b>Then:</b>\n                              \n                                \n                                \n                              \n                            </td>\n                          </tr>\n                        \n                          <tr>\n                            <td>\n                              <b> :</b> Snooze* - Conducted assessment, snooze 3 months<br/>\n                              \n                              \n                              <b>Then:</b>\n                              \n                                \n                                \n                              \n                            </td>\n                          </tr>\n                        \n                          <tr>\n                            <td>\n                              <b> :</b> Snooze* - N/A see comment, snooze 3 months<br/>\n                              \n                              \n                              <b>Then:</b>\n                              \n                                \n                                \n                              \n                            </td>\n                          </tr>\n                        \n                      </table>\n                    \n                  </td>\n                </tr>\n              \n            </table>\n          </td>\n        </tr>\n        \n    </table>\n</div>"
+  },
+  "contained" : [{
+    "resourceType" : "Library",
+    "id" : "effective-data-requirements",
+    "name" : "EffectiveDataRequirements",
+    "status" : "active",
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/library-type",
+        "code" : "module-definition"
+      }]
+    },
+    "relatedArtifact" : [{
+      "type" : "depends-on",
+      "display" : "Library Common",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSCommon|2022.1.0"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Library FHIRHelpers",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/Library/FHIRHelpers|4.0.1"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Library Routines",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSRoutines|2022.1.0"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Library Config",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSCommonConfig|2022.1.0"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Opioid analgesics with ambulatory misuse potential",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-analgesics-with-ambulatory-misuse-potential"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Community",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/medicationrequest-category-community"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Encounter Diagnosis Condition Category",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-encounter-diagnosis-category"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Problem List Condition Category",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-problem-list-category"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set US Core Health Concern Condition Category",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-us-core-health-concern-category"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Sickle Cell Diseases",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/sickle-cell-diseases"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Active Condition",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-clinical-status-active"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set CDC malignant cancer conditions",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/cdc-malignant-cancer-conditions"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Conditions likely terminal for opioid prescribing",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/conditions-likely-terminal-for-opioid-prescribing"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Opioid misuse assessment procedure",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-misuse-assessment-procedure"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Office Visit",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/office-visit"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Limited life expectancy conditions",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/limited-life-expectancy-conditions"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Hospice Finding Codes",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-finding"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Hospice Disposition",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-disposition"
+    }],
+    "parameter" : [{
+      "name" : "ContextPrescriptions",
+      "use" : "in",
+      "min" : 0,
+      "max" : "*",
+      "type" : "MedicationRequest"
+    },
+    {
+      "name" : "Is Recommendation Applicable?",
+      "use" : "out",
+      "min" : 0,
+      "max" : "1",
+      "type" : "boolean"
+    }],
+    "dataRequirement" : [{
+      "type" : "Medication",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Medication"],
+      "mustSupport" : ["id",
+      "code"]
+    },
+    {
+      "type" : "Patient",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
+    },
+    {
+      "type" : "Condition",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Condition"],
+      "mustSupport" : ["category",
+      "code",
+      "clinicalStatus"],
+      "codeFilter" : [{
+        "path" : "category",
+        "valueSet" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-us-core-health-concern-category"
+      }]
+    },
+    {
+      "type" : "Condition",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Condition"],
+      "mustSupport" : ["category",
+      "code",
+      "clinicalStatus",
+      "encounter",
+      "encounter.reference"],
+      "codeFilter" : [{
+        "path" : "category",
+        "valueSet" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-encounter-diagnosis-category"
+      }]
+    },
+    {
+      "type" : "Condition",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Condition"],
+      "mustSupport" : ["category",
+      "code",
+      "clinicalStatus",
+      "clinicalStatus.coding"],
+      "codeFilter" : [{
+        "path" : "category",
+        "valueSet" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-problem-list-category"
+      }]
+    },
+    {
+      "type" : "Encounter",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Encounter"],
+      "mustSupport" : ["type",
+      "period"],
+      "codeFilter" : [{
+        "path" : "type",
+        "valueSet" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/office-visit"
+      }]
+    },
+    {
+      "type" : "Encounter",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Encounter"],
+      "mustSupport" : ["period",
+      "period.start",
+      "id",
+      "hospitalization",
+      "hospitalization.dischargeDisposition",
+      "hospitalization.dischargeDisposition.coding",
+      "status",
+      "status.value"]
+    },
+    {
+      "type" : "Procedure",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Procedure"],
+      "mustSupport" : ["code",
+      "performed"],
+      "codeFilter" : [{
+        "path" : "code",
+        "valueSet" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-misuse-assessment-procedure"
+      }]
+    },
+    {
+      "type" : "MedicationRequest",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/MedicationRequest"],
+      "mustSupport" : ["medication",
+      "medication.reference",
+      "id",
+      "status",
+      "intent",
+      "category",
+      "subject",
+      "authoredOn",
+      "recorder",
+      "dosageInstruction",
+      "dispenseRequest"],
+      "codeFilter" : [{
+        "path" : "medication",
+        "valueSet" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-analgesics-with-ambulatory-misuse-potential"
+      }]
+    },
+    {
+      "type" : "MedicationRequest",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/MedicationRequest"],
+      "mustSupport" : ["medication.reference",
+      "medication",
+      "id",
+      "status",
+      "intent",
+      "category",
+      "subject",
+      "authoredOn",
+      "recorder",
+      "dosageInstruction",
+      "dispenseRequest"]
+    },
+    {
+      "type" : "Observation",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Observation"],
+      "mustSupport" : ["code",
+      "status",
+      "status.value"],
+      "codeFilter" : [{
+        "path" : "code",
+        "valueSet" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-finding"
+      }]
+    }]
+  }],
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueCode" : "computable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueCode" : "executable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC07"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions\":\n  ( Common.\"Is Opioid Analgesic with Ambulatory Misuse Potential?\"( ContextPrescriptions ) ) AmbulatoryOpioidPrescription\n    where Routines.\"Is Subacute or Chronic Pain Prescription?\"( AmbulatoryOpioidPrescription )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 0
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC07"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential\":\n  exists( \"Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions\" )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 1
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommonConfig"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Age Less than 18 Years Is Enabled"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// CDC 2022 General Inclusion Criteria\ndefine \"Age Less than 18 Years Is Enabled\":\n  true"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 2
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Patient Age Less Than 18"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Patient Age Less Than 18\":\n  if (Config.\"Age Less than 18 Years Is Enabled\") then\n    AgeInYearsAt(Today()) < 18\n  else false"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 3
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommonConfig"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Sickle Cell Check Enabled"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// Sickle Cell\ndefine \"Sickle Cell Check Enabled\":\n  true"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 4
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommonConfig"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Sickle Cell Assumed Active"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Sickle Cell Assumed Active\":\n  true"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 5
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "US Core-Categorized Conditions"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// 3. Medications indicating end of life\n    /* or exists (\n      \"Medications Indicating End of Life\"\n    ) */\n\ndefine \"US Core-Categorized Conditions\":\n  [Condition: category in \"Encounter Diagnosis Condition Category\"]\n    union [Condition: category in \"Problem List Condition Category\"]\n    union [Condition: category in \"US Core Health Concern Condition Category\"]"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 6
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Positive Sickle Cell Condition"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Positive Sickle Cell Condition\":\n  if Config.\"Sickle Cell Check Enabled\" and not Config.\"Sickle Cell Assumed Active\"\n    then (\n      \"US Core-Categorized Conditions\" C\n        where C.code in \"Sickle Cell Diseases\"\n          and C.clinicalStatus in \"Active Condition\"\n    ) else if Config.\"Sickle Cell Check Enabled\" and Config.\"Sickle Cell Assumed Active\"\n        then (\n          \"US Core-Categorized Conditions\" C\n            where C.code in \"Sickle Cell Diseases\"\n        )\n      else null"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 7
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Condition Positive for Sickle Cell"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Condition Positive for Sickle Cell\":\n  if (Config.\"Sickle Cell Check Enabled\") then\n    exists(\n      Common.\"Positive Sickle Cell Condition\"\n    ) \n  else false"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 8
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommonConfig"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Active Cancer Treatment Encounters Condition Is Enabled"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// Active Cancer Treatment\ndefine \"Active Cancer Treatment Encounters Condition Is Enabled\":\n  true"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 9
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Encounter Period"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// End of Opioid Naive Routine\n\n/*\n**  Routine #3\n**  Active Cancer Treatment Routine\n**\n**  Definition                    | Answer to Proceed   | Details                                    | Data (Terminology) Requirement\n**  ---------------------------------------------------------------------------------------------------------------------------------\n**  Two office visits within the  | No                  | Look for a minimum of two distinct         | Office Visit\n**  past 12 months                |                     | encounters within 12 months of the date    |\n**                                |                     | of the current visit for which each of the |\n**                                |                     | following is true:                         |\n**                                |                     |   - the encounter diagnosis (primary or    |\n**                                |                     |     secondary or co-morbidity diagnosis)   |\n**                                |                     |     is listed in the CDC Malignant Cancer  |\n**                                |                     |     Conditions value set                   |\n**  ---------------------------------------------------------------------------------------------------------------------------------\n**  Office visits with an         | No                  | The encounter is performed by an           | Oncology specialty\n**  oncology specialist           |                     | oncologist as defined in the oncology      | designations (NUCC)\n**  present                       |                     | specialty designations using the           |\n**                                |                     | National Uniform Claim Committee           |\n**                                |                     | (NUCC) classifications                     |\n**  ---------------------------------------------------------------------------------------------------------------------------------\n**  Office visits including CDC   | No                  | The encounter diagnosis (primary or        | CDC malignant cancer\n**  malignant cancer              |                     | secondary or co-morbidity diagnosis)       | conditions\n**  condition                     |                     | is listed in the CDC Malignant Cancer      |\n**                                |                     | Conditions value set                       |\n**  ----------------------------------------------------------------------------------------------------------------------------------\n**\n*/\n\ndefine \"Encounter Period\":\n  Interval[Today() - 12 months, Today())"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 10
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "USCore Encounter Cancer Diagnoses"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"USCore Encounter Cancer Diagnoses\":\n  [Condition: category in \"Encounter Diagnosis Condition Category\"] CancerDiagnoses\n    where CancerDiagnoses.code in \"CDC malignant cancer conditions\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 11
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Encounters with Cancer Diagnosis During Encounter Period"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// encounter-diagnosis, problem-list and health-concern Conditions\n// define \"US Core-Categorized Cancer Diagnoses\":\n//   Common.\"US Core-Categorized Conditions\" C\n//     where C.code in Common.\"CDC malignant cancer conditions\"\n\n// define \"Encounters with Cancer Diagnosis During Encounter Period\":\n//   [Encounter] Encounter\n//     with \"US Core-Categorized Cancer Diagnoses\" CancerDiagnosis\n//     such that date from Encounter.period.\"start\".value in day of \"Encounter Period\"\n//       and EndsWith(CancerDiagnosis.encounter.reference, Encounter.id)\n\ndefine \"Encounters with Cancer Diagnosis During Encounter Period\":\n  [Encounter] Encounters\n    where date from Encounters.period.\"start\" in day of \"Encounter Period\"\n      and exists (\n        Common.\"USCore Encounter Cancer Diagnoses\" CancerDiagnoses\n          where EndsWith(CancerDiagnoses.encounter.reference, Encounters.id)\n      )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 12
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Number of Encounters with Cancer Diagnosis During Encounter Period"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Number of Encounters with Cancer Diagnosis During Encounter Period\":\n  Count (\"Encounters with Cancer Diagnosis During Encounter Period\")"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 13
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Has Two or More Encounters with Cancer Diagnosis During Encounter Period"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Has Two or More Encounters with Cancer Diagnosis During Encounter Period\":\n  \"Number of Encounters with Cancer Diagnosis During Encounter Period\" >= 2"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 14
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "USCore Problem List Cancer Diagnoses"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"USCore Problem List Cancer Diagnoses\":\n  [Condition: category in \"Problem List Condition Category\"] CancerDiagnoses\n    where CancerDiagnoses.code in \"CDC malignant cancer conditions\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 15
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Has Active Cancer Diagnosis on Problem List"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Has Active Cancer Diagnosis on Problem List\":\n  exists (\n    Common.\"USCore Problem List Cancer Diagnoses\" CancerDiagnoses\n      where CancerDiagnoses.category in Common.\"Problem List Condition Category\"\n        and exists(\n          CancerDiagnoses.clinicalStatus.coding ClinicalStatus\n            where ClinicalStatus.code ~ 'active'\n        )\n  )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 16
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Is Active Cancer Treatment?"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Is Active Cancer Treatment?\":\n  if (Config.\"Active Cancer Treatment Encounters Condition Is Enabled\") \n    then \"Has Two or More Encounters with Cancer Diagnosis During Encounter Period\"\n      or \"Has Active Cancer Diagnosis on Problem List\"\n  else false"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 17
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommonConfig"
+    },
+    {
+      "url" : "name",
+      "valueString" : "End-Stage Disease Criteria Enabled"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// CDC 2022 General Inclusion Criteria\ndefine \"End-Stage Disease Criteria Enabled\":\n  true"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 18
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Conditions Likely Terminal for Opioid Prescribing"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Conditions Likely Terminal for Opioid Prescribing\":\n  if (Config.\"End-Stage Disease Criteria Enabled\") then\n    exists (\n      Common.\"US Core-Categorized Conditions\" EOLC\n        where EOLC.code in Common.\"Conditions likely terminal for opioid prescribing\"\n          // and EOLC.clinicalStatus in Common.\"Active Condition\"\n    )\n  else false"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 19
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "CDC 2022 Guideline General Inclusion Criteria"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"CDC 2022 Guideline General Inclusion Criteria\":\n  not \"Patient Age Less Than 18\"\n    and not \"Condition Positive for Sickle Cell\"\n    and not \"Is Active Cancer Treatment?\"\n    and not \"Conditions Likely Terminal for Opioid Prescribing\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 20
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC07"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Risk Assessment Interval"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Risk Assessment Interval\":\n  Interval[Today() - 91 days, Today() - 1 day]"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 21
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC07"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Opioid Risk Assessment in Past 90 Days"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Opioid Risk Assessment in Past 90 Days\":\n  [Procedure: Common.\"Opioid misuse assessment procedure\"] riskAssessment\n    where start of (riskAssessment.performed as FHIR.Period) in day of \"Risk Assessment Interval\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 22
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC07"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Previous 10 Days Interval"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Previous 10 Days Interval\":\n  Interval[Today() - 10 days, Today()]"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 23
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC07"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Encounter Interval"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Encounter Interval\":\n  Interval[Today() - 12 months - 1 days, Today() - 1 day]"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 24
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC07"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Prescribed Opioids for 7 of Past 10 Days with an Encounter"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Prescribed Opioids for 7 of Past 10 Days with an Encounter\":\n  Common.\"Days on Opioids during Period\"( \"Previous 10 Days Interval\" ) >= 7\n    and exists (\n      [Encounter: Common.\"Office Visit\"] AmbulatoryEncounter\n        where AmbulatoryEncounter.period during \"Encounter Interval\"\n    )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 25
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "First Month"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"First Month\":\nInterval[Today() - 3 months, Today() - 2 months]"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 26
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Second Month"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Second Month\":\nInterval[Today() - 2 months, Today() - 1 months]"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 27
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Third Month"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Third Month\":\nInterval[Today() - 1 months, Today()]"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 28
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Prescribed Opioids for 21 or more of 30 Days for each of the past 3 Months"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Prescribed Opioids for 21 or more of 30 Days for each of the past 3 Months\":\n  \"Days on Opioids during Period\"(\"First Month\") >= 21\n    and \"Days on Opioids during Period\"(\"Second Month\") >= 21\n    and \"Days on Opioids during Period\"(\"Third Month\") >= 21"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 29
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC07"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Inclusion Criteria"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Inclusion Criteria\":\n  \"Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential\"\n    and Routines.\"CDC 2022 Guideline General Inclusion Criteria\"\n    and not exists ( \"Opioid Risk Assessment in Past 90 Days\" )\n    and (\n      \"Prescribed Opioids for 7 of Past 10 Days with an Encounter\"\n        or Common.\"Prescribed Opioids for 21 or more of 30 Days for each of the past 3 Months\"\n    )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 30
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Conditions Indicating End of Life or With Limited Life Expectancy"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Conditions Indicating End of Life or With Limited Life Expectancy\":\n  (\n    \"US Core-Categorized Conditions\" C\n      where C.code in \"Conditions likely terminal for opioid prescribing\"\n        and C.clinicalStatus in \"Active Condition\"\n  )\n  union\n  (\n    \"US Core-Categorized Conditions\" C\n      where C.code in \"Limited life expectancy conditions\"\n        and C.clinicalStatus in \"Active Condition\"\n  )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 31
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommonConfig"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Hospice Findings Exclusion Enabled"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// OpioidCDSCommon\ndefine \"Hospice Findings Exclusion Enabled\":\n  false"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 32
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Admitted/Referred/Discharged to Hospice Care"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Admitted/Referred/Discharged to Hospice Care\":\n  (\n    if (Config.\"Hospice Findings Exclusion Enabled\") then\n      [Observation: code in \"Hospice Finding Codes\"] O\n        where not (O.status.value in { 'unknown', 'entered-in-error', 'cancelled' })\n    else\n      {}\n  )\n  union\n  (\n    [Encounter] E\n      where date from E.period.start 1 year or less on or before Today()\n        and (\n          if E.hospitalization.dischargeDisposition.coding is null\n              or not exists (E.hospitalization.dischargeDisposition.coding)\n            then false\n          else E.hospitalization.dischargeDisposition in \"Hospice Disposition\"\n        )\n        and E.status.value in { 'planned', 'arrived', 'in-progress', 'finished', 'onleave' }\n  )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 33
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "End of Life Assessment"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"End of Life Assessment\":\n    // 1. Conditions indicating end of life or with limited life expectancy\n    exists (\n      \"Conditions Indicating End of Life or With Limited Life Expectancy\"\n    )\n    // 2. Admitted/referred/discharged to hospice care\n    or exists (\n      \"Admitted/Referred/Discharged to Hospice Care\"\n    )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 34
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC07"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Exclusion Criteria"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Exclusion Criteria\":\n  Common.\"End of Life Assessment\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 35
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC07"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Is Recommendation Applicable?"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Is Recommendation Applicable?\":\n  \"Inclusion Criteria\"\n    and not \"Exclusion Criteria\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 36
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Is Opioid Analgesic with Ambulatory Misuse Potential?"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function \"Is Opioid Analgesic with Ambulatory Misuse Potential?\"(value List<MedicationRequest>):\n  (\"Get MedicationRequest Medication as Code\"(value)) Rx\n    where Rx.medication in \"Opioid analgesics with ambulatory misuse potential\" \n      and Rx.category in \"Community\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 37
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Get MedicationRequest Medication as Code"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function \"Get MedicationRequest Medication as Code\"(value List<MedicationRequest>):\n  value Rx\n    let Med: \n      if Rx.medication is Reference then singleton from (\n        [Medication] M\n          where M.id = (Last(Split((Rx.medication as FHIR.Reference).reference, '/')))\n      ) else null\n    return \n      MedicationRequest {\n        id: Rx.id,\n        status: Rx.status,\n        intent: Rx.intent,\n        category: Rx.category,\n        medication: if Rx.medication is Reference then Med.code else Rx.medication as CodeableConcept,\n        subject: Rx.subject,\n        authoredOn: Rx.authoredOn,\n        recorder: Rx.recorder,\n        dosageInstruction: Rx.dosageInstruction,\n        dispenseRequest: Rx.dispenseRequest\n      }"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 38
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "FHIRHelpers"
+    },
+    {
+      "url" : "name",
+      "valueString" : "ToString"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function ToString(value string): value.value"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 39
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "FHIRHelpers"
+    },
+    {
+      "url" : "name",
+      "valueString" : "ToConcept"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function ToConcept(concept FHIR.CodeableConcept):\n    if concept is null then\n        null\n    else\n        System.Concept {\n            codes: concept.coding C return ToCode(C),\n            display: concept.text.value\n        }"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 40
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "FHIRHelpers"
+    },
+    {
+      "url" : "name",
+      "valueString" : "ToCode"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function ToCode(coding FHIR.Coding):\n    if coding is null then\n        null\n    else\n        System.Code {\n          code: coding.code.value,\n          system: coding.system.value,\n          version: coding.version.value,\n          display: coding.display.value\n        }"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 41
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Is Subacute or Chronic Pain Prescription?"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// End of Active Cancer Treatment Routine\n\n/*\n**  Routine #4\n**  For Subacute or Chronic Pain Routine\n**\n**  Definition                  | Answer to Proceed   | Details                                        | Data (Terminology) Requirement\n**  -----------------------------------------------------------------------------------------------------------------------------------\n**  Order for opioid analgesic  | Yes                 | Order for opioid analgesics with ambulatory    | Opioid analgesics with\n**  with expected supply        |                     | misuse potential with a supply duration of >=  | ambulatory misuse potential\n**  duration >= 28 days         |                     | 28 days                                        |\n**                              |                     |                                                |\n**                              |                     | - Subacute definition = order for opioid       |\n**                              |                     |   analgesics with ambulatory misuse            |\n**                              |                     |   potential with a supply duration of one to   |\n**                              |                     |   two months.                                  |\n**                              |                     | - Chronic pain definition = order for opioid   |\n**                              |                     |   analgesics with ambulatory misuse            |\n**                              |                     |   potential with a supply duration of >= two   |\n**                              |                     |   months.                                      |\n**  -----------------------------------------------------------------------------------------------------------------------------------\n**\n*/\n\ndefine function \"Is Subacute or Chronic Pain Prescription?\"(prescription FHIR.MedicationRequest):\n  \"Is Subacute or Chronic Pain Using Expected Supply Duration\"(prescription)\n    or \"Is Subacute or Chronic Pain Using Validity Period\"(prescription)"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 42
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Is Subacute or Chronic Pain Using Expected Supply Duration"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function \"Is Subacute or Chronic Pain Using Expected Supply Duration\"(prescription FHIR.MedicationRequest):\n  (\n    prescription.dispenseRequest is not null\n      and prescription.dispenseRequest.expectedSupplyDuration is not null\n      and (\n        Common.GetDurationInDays(prescription.dispenseRequest.expectedSupplyDuration) >= 28 days \n      )\n  )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 43
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "GetDurationInDays"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function GetDurationInDays(value FHIR.Duration):\n  if value is null then null\n  else\n    case\n      when value.code.value ~ 'a' then System.Quantity{ value: value.value.value * 365.0, unit: 'days' }\n      when value.code.value ~ 'mo' then System.Quantity{ value: value.value.value * 30.0, unit: 'days' }\n      when value.code.value ~ 'wk' then System.Quantity{ value: value.value.value * 7.0, unit: 'days' }\n      when value.code.value ~ 'd' then System.Quantity{ value: value.value.value, unit: 'days' }\n      when value.code.value ~ 'h' then System.Quantity{ value: value.value.value / 24.0, unit: 'days' }\n      when value.code.value ~ 'min' then System.Quantity{ value: value.value.value / 60.0 / 24.0, unit: 'days' }\n      when value.code.value ~ 's' then System.Quantity{ value: value.value.value / 60.0 / 60.0 / 24.0, unit: 'days' }\n      when value.code.value ~ 'ms' then System.Quantity{ value: value.value.value / 60.0 / 60.0 / 24.0 / 1000.0, unit: 'days' }\n      when value.code.value is null then Message(1000, true, 'Undefined', 'Error', 'Duration unit code is null')\n      else Message(1000, true, 'Undefined', 'Error', 'Unsupported duration unit code: ' + value.code.value)\nend"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 44
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Is Subacute or Chronic Pain Using Validity Period"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function \"Is Subacute or Chronic Pain Using Validity Period\"(prescription FHIR.MedicationRequest):\n  (\n    prescription.dispenseRequest is not null\n      and prescription.dispenseRequest.validityPeriod is not null\n      and (\n        days between prescription.dispenseRequest.validityPeriod.start and prescription.dispenseRequest.validityPeriod.end >= 28 \n      )\n  )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 45
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "FHIRHelpers"
+    },
+    {
+      "url" : "name",
+      "valueString" : "ToDateTime"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function ToDateTime(value dateTime): value.value"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 46
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "FHIRHelpers"
+    },
+    {
+      "url" : "name",
+      "valueString" : "ToInterval"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function ToInterval(period FHIR.Period):\n    if period is null then\n        null\n    else\n        if period.\"start\" is null then\n            Interval(period.\"start\".value, period.\"end\".value]\n        else\n            Interval[period.\"start\".value, period.\"end\".value]"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 47
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Days on Opioids during Period"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function \"Days on Opioids during Period\"(period Interval<Date>):\n  Sum(\n    (\n      collapse (\n        [MedicationRequest: \"Opioid analgesics with ambulatory misuse potential\"] OpioidPrescription\n        return \"Prescription Relevant Period\"( OpioidPrescription ) intersect period\n      )\n    ) OpioidUseInterval\n      return days between start of OpioidUseInterval and end of OpioidUseInterval\n  )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 48
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Prescription Relevant Period"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function \"Prescription Relevant Period\"(prescription FHIR.MedicationRequest):\n  if (\n    prescription.authoredOn is not null and prescription.dispenseRequest is not null\n      and prescription.dispenseRequest.expectedSupplyDuration is not null\n  )\n  then Interval[\n    date from prescription.authoredOn,\n    date from prescription.authoredOn + GetDurationInDays(prescription.dispenseRequest.expectedSupplyDuration)\n  ]\n  else null"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 49
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "id" : "effective-data-requirements",
+    "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-effectiveDataRequirements",
+    "valueCanonical" : "#effective-data-requirements"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-softwaresystem",
+    "valueReference" : {
+      "reference" : "Device/cqf-tooling"
+    }
+  }],
+  "url" : "http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-07",
+  "identifier" : [{
+    "use" : "official",
+    "value" : "cdc-opioid-guidance"
+  }],
+  "version" : "2022.1.0",
+  "name" : "PlanDefinition_Recommendation_07_Order_Sign",
+  "title" : "Recommendation #7 - Opioid Therapy Risk Assessment",
+  "type" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+      "code" : "eca-rule",
+      "display" : "ECA Rule"
+    }]
+  },
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-08-06",
+  "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.securityrisksolutions.com"
+    }]
+  }],
+  "description" : "Clinicians should evaluate benefits and risks with patients within 1-4 weeks of starting opioid therapy for subacute or chronic pain or of dosage escalation. Clinicians should regularly reevaluate benefits and risks of continued opioid therapy with patients.",
+  "useContext" : [{
+    "code" : {
+      "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
+      "code" : "focus",
+      "display" : "Clinical Focus"
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "182888003",
+        "display" : "Medication requested (situation)"
+      }]
+    }
+  },
+  {
+    "code" : {
+      "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
+      "code" : "focus",
+      "display" : "Clinical Focus"
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "82423001",
+        "display" : "Chronic pain (finding)"
+      }]
+    }
+  },
+  {
+    "code" : {
+      "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
+      "code" : "focus",
+      "display" : "Clinical Focus"
+    },
+    "valueCodeableConcept" : {
+      "text" : "Subacute pain"
+    }
+  }],
+  "purpose" : "The 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain is intended to improve communication between clinicians and patients about the benefits and risks of pain treatments, including opioid therapy; improve the effectiveness and safety of pain treatment; mitigate pain; improve function and quality of life for patients with pain; and reduce risks associated with opioid pain therapy, including opioid use disorder, overdose, and death. The recommendations do not apply to pain related to sickle cell disease or cancer or to patients receiving palliative or end-of-life care.",
+  "usage" : "In addition to evaluating benefits and risks of opioids before starting opioid therapy (see Recommendation 2), clinicians should evaluate patients to assess benefits and risks of opioids within 1-4 weeks of starting long-term opioid therapy or of dosage escalation.",
+  "copyright" : "© CDC 2016+.",
+  "topic" : [{
+    "text" : "Opioid Prescribing"
+  }],
+  "author" : [{
+    "name" : "Kensaku Kawamoto, MD, PhD, MHS"
+  },
+  {
+    "name" : "Bryn Rhodes"
+  },
+  {
+    "name" : "Floyd Eisenberg, MD, MPH"
+  },
+  {
+    "name" : "Robert McClure, MD, MPH"
+  }],
+  "relatedArtifact" : [{
+    "type" : "documentation",
+    "display" : "2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain",
+    "url" : "https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm",
+    "document" : {
+      "url" : "https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm"
+    }
+  }],
+  "library" : ["http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC07"],
+  "action" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/recommendation-strength",
+          "code" : "strong",
+          "display" : "Strong"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/cqf-qualityOfEvidence",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/evidence-quality",
+          "code" : "very-low",
+          "display" : "Very Low quality"
+        }]
+      }
+    }],
+    "title" : "Regularly Evaluate the Benefits and Risks of Opioid Therapy",
+    "description" : "Recommend that clinicians evaluate benefits and risks with patients within 1-4 weeks of starting opioid therapy for subacute or chronic pain or of dosage escalation. Clinicians should also regularly reevaluate the benefits and risks of continued opioid therapy with patients.\r\n\r\nFor additional guidance regarding opioid therapy patient consultations, see [Recommendation 7 of the 2022 CDC Clinical Practice Guideline for additional guidance](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#Recommendation7)",
+    "priority" : "urgent",
+    "trigger" : [{
+      "type" : "named-event",
+      "name" : "order-sign"
+    }],
+    "condition" : [{
+      "kind" : "applicability",
+      "expression" : {
+        "description" : "Check whether the patient has a current order is for an opioid with ambulatory misuse potential for subacute or chronic pain, a risk assessment has been performed in the past 90 days, has taken an opioid with abuse potential for 7 of the past 10 days or 63 of the past 90 days and if the 2022 CDC guideline general inclusion criteria is met.",
+        "language" : "text/cql.identifier",
+        "expression" : "Is Recommendation Applicable?"
+      }
+    }],
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/action-type",
+        "code" : "create",
+        "display" : "Create"
+      }]
+    },
+    "groupingBehavior" : "visual-group",
+    "selectionBehavior" : "any",
+    "definitionCanonical" : "http://fhir.org/guides/cdc/opioid-cds/ActivityDefinition/opioidcds-risk-assessment-request",
+    "action" : [{
+      "description" : "Document - Conducted benefit and risk assessment"
+    },
+    {
+      "description" : "Snooze* - Conducted assessment, snooze 3 months"
+    },
+    {
+      "description" : "Snooze* - N/A see comment, snooze 3 months"
+    }]
+  }]
+}

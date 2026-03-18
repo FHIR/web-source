@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1" localId="0">
+   <annotation translatorVersion="3.25.0" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="Overloads" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="286">
+         <a:s>library OpioidCDSREC06 version '2022.1.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="OpioidCDSREC06" system="http://fhir.org/guides/cdc/opioid-cds" version="2022.1.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localId="1" localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="206" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="206">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="208" locator="5:1-5:54" localIdentifier="FHIRHelpers" path="http://fhir.org/guides/cdc/opioid-cds/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="208">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1' called FHIRHelpers</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="210" locator="6:1-6:56" localIdentifier="Common" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommon" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="210">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSCommon</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Common</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="212" locator="7:1-7:62" localIdentifier="Config" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommonConfig" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="212">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSCommonConfig</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Config</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="214" locator="8:1-8:60" localIdentifier="Routines" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSRoutines" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="214">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSRoutines</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Routines</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <parameters>
+      <def localId="216" locator="40:1-40:54" name="ContextPrescriptions" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="216">
+               <a:s>/*
+**
+**  Recommendation #6
+**    When opioids are needed for acute pain, clinicians should prescribe no greater quantity than 
+**    needed for the expected duration of pain severe enough to require opioids 
+**    (recommendation category: A; evidence type: 4).
+**
+**  When
+**    Provider is prescribing an opioid analgesic with ambulatory misuse potential in the outpatient setting
+**    Prescription is for treating acute pain.
+**    CDC 2022 guideline general inclusion criteria met for this patient:
+**      Patient is 18 or over
+**      Patient does not have evidence of sickle cell disease
+**      Patient does not have findings indicating limited life expectancy
+**      Patient does not have orders for therapies indicating end of life care
+**      Patient is not undergoing active cancer treatment:
+**        Patient has had at least 2 office visits within the past 12 months with an oncology specialist present, or
+**        Patient has had at least 2 office visits within the past 12 months with a CDC malignant cancer condition diagnosis
+**      Patient does not have conditions likely terminal for opioid prescribing present
+**    Prescription is for more than 7 days
+**  Then
+**    When Treating Acute Pain, Prescribe No Greater Quantity Than Needed:
+**      Document - Will adjust opioid order
+**      Snooze - Benefits of opioid therapy duration outweigh risks, snooze 3 months
+**      Snooze - N/A see comment, snooze 3 months
+**
+*/
+
+// META: Plan Definition: http://fhir.org/guides/cdc/opioid-cds-r4/PlanDefinition/opioid-cds-06
+
+parameter ContextPrescriptions </a:s>
+               <a:s r="217">
+                  <a:s>List&lt;</a:s>
+                  <a:s r="218">
+                     <a:s>MedicationRequest</a:s>
+                  </a:s>
+                  <a:s>></a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <parameterTypeSpecifier localId="217" locator="40:32-40:54" xsi:type="ListTypeSpecifier">
+            <elementType localId="218" locator="40:37-40:53" name="fhir:MedicationRequest" xsi:type="NamedTypeSpecifier"/>
+         </parameterTypeSpecifier>
+      </def>
+   </parameters>
+   <contexts>
+      <def localId="223" locator="42:1-42:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def localId="221" locator="42:1-42:15" name="Patient" context="Patient">
+         <expression localId="222" xsi:type="SingletonFrom">
+            <operand localId="220" locator="42:1-42:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="226" locator="44:1-47:95" name="Acute Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="226">
+               <a:s>define &quot;Acute Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions&quot;:
+  </a:s>
+               <a:s r="239">
+                  <a:s>
+                     <a:s r="227">
+                        <a:s r="230">
+                           <a:s>( </a:s>
+                           <a:s r="230">
+                              <a:s r="228">
+                                 <a:s>Common</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="230">
+                                 <a:s>&quot;Is Opioid Analgesic with Ambulatory Misuse Potential?&quot;( </a:s>
+                                 <a:s r="229">
+                                    <a:s>ContextPrescriptions</a:s>
+                                 </a:s>
+                                 <a:s> )</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> )</a:s>
+                        </a:s>
+                        <a:s> AmbulatoryOpioidPrescription</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="232">
+                     <a:s>where </a:s>
+                     <a:s r="232">
+                        <a:s r="235">
+                           <a:s r="233">
+                              <a:s>Routines</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="235">
+                              <a:s>&quot;Is Acute Pain Prescription?&quot;( </a:s>
+                              <a:s r="234">
+                                 <a:s>AmbulatoryOpioidPrescription</a:s>
+                              </a:s>
+                              <a:s> )</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+      and </a:s>
+                        <a:s r="238">
+                           <a:s r="236">
+                              <a:s>Routines</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="238">
+                              <a:s>&quot;Acute Pain Prescription Greater Than 7 Days?&quot;(</a:s>
+                              <a:s r="237">
+                                 <a:s>AmbulatoryOpioidPrescription</a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="239" locator="45:3-47:95" xsi:type="Query">
+            <source localId="227" locator="45:3-45:121" alias="AmbulatoryOpioidPrescription">
+               <expression localId="230" locator="45:3-45:92" name="Is Opioid Analgesic with Ambulatory Misuse Potential?" libraryName="Common" xsi:type="FunctionRef">
+                  <operand localId="229" locator="45:69-45:88" name="ContextPrescriptions" xsi:type="ParameterRef"/>
+               </expression>
+            </source>
+            <where localId="232" locator="46:5-47:95" xsi:type="And">
+               <operand localId="235" locator="46:11-46:80" name="Is Acute Pain Prescription?" libraryName="Routines" xsi:type="FunctionRef">
+                  <operand localId="234" locator="46:51-46:78" name="AmbulatoryOpioidPrescription" xsi:type="AliasRef"/>
+               </operand>
+               <operand localId="238" locator="47:11-47:95" name="Acute Pain Prescription Greater Than 7 Days?" libraryName="Routines" xsi:type="FunctionRef">
+                  <operand localId="237" locator="47:67-47:94" name="AmbulatoryOpioidPrescription" xsi:type="AliasRef"/>
+               </operand>
+            </where>
+         </expression>
+      </def>
+      <def localId="242" locator="49:1-50:88" name="Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential for Acute Pain" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="242">
+               <a:s>define &quot;Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential for Acute Pain&quot;:
+  </a:s>
+               <a:s r="243">
+                  <a:s>exists</a:s>
+                  <a:s r="244">
+                     <a:s>( </a:s>
+                     <a:s r="244">
+                        <a:s>&quot;Acute Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions&quot;</a:s>
+                     </a:s>
+                     <a:s> )</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="243" locator="50:3-50:88" xsi:type="Exists">
+            <operand localId="244" locator="50:9-50:88" name="Acute Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="247" locator="52:1-57:3" name="Order is for Long-Acting Opioid" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="247">
+               <a:s>define &quot;Order is for Long-Acting Opioid&quot;:
+  </a:s>
+               <a:s r="248">
+                  <a:s>exists </a:s>
+                  <a:s r="270">
+                     <a:s>(
+    </a:s>
+                     <a:s r="270">
+                        <a:s>
+                           <a:s r="249">
+                              <a:s r="250">
+                                 <a:s>
+                                    <a:s>&quot;Acute Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions&quot;</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> AmbulatoryOpioidPrescription</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+      </a:s>
+                        <a:s r="252">
+                           <a:s>where </a:s>
+                           <a:s r="252">
+                              <a:s r="257">
+                                 <a:s r="254">
+                                    <a:s r="253">
+                                       <a:s>AmbulatoryOpioidPrescription</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="254">
+                                       <a:s>medication</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> in </a:s>
+                                 <a:s r="256">
+                                    <a:s r="255">
+                                       <a:s>Common</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="256">
+                                       <a:s>&quot;Extended release opioid with ambulatory misuse potential&quot;</a:s>
+                                    </a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>
+        or </a:s>
+                              <a:s r="261">
+                                 <a:s r="266">
+                                    <a:s r="262">
+                                       <a:s>Common</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="266">
+                                       <a:s>GetDurationInDays( </a:s>
+                                       <a:s r="265">
+                                          <a:s r="264">
+                                             <a:s r="263">
+                                                <a:s>AmbulatoryOpioidPrescription</a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="264">
+                                                <a:s>dispenseRequest</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="265">
+                                             <a:s>expectedSupplyDuration</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s> )</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> > </a:s>
+                                 <a:s r="267">
+                                    <a:s>7 days</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+  )</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="248" locator="53:3-57:3" xsi:type="Exists">
+            <operand localId="270" locator="53:10-57:3" xsi:type="Query">
+               <source localId="249" locator="54:5-54:109" alias="AmbulatoryOpioidPrescription">
+                  <expression localId="250" locator="54:5-54:80" name="Acute Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions" xsi:type="ExpressionRef"/>
+               </source>
+               <where localId="252" locator="55:7-56:115" xsi:type="Or">
+                  <operand localId="257" locator="55:13-55:120" xsi:type="InValueSet">
+                     <signature localId="260" name="t:Concept" xsi:type="NamedTypeSpecifier"/>
+                     <code localId="259" name="ToConcept" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                        <operand localId="258" asType="fhir:CodeableConcept" xsi:type="As">
+                           <operand localId="254" locator="55:13-55:51" path="medication" scope="AmbulatoryOpioidPrescription" xsi:type="Property"/>
+                        </operand>
+                     </code>
+                     <valueset localId="256" locator="55:56-55:120" name="Extended release opioid with ambulatory misuse potential" libraryName="Common" preserve="true"/>
+                  </operand>
+                  <operand localId="261" locator="56:12-56:115" xsi:type="Greater">
+                     <signature localId="268" name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+                     <signature localId="269" name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+                     <operand localId="266" locator="56:12-56:106" name="GetDurationInDays" libraryName="Common" xsi:type="FunctionRef">
+                        <operand localId="265" locator="56:38-56:104" path="expectedSupplyDuration" xsi:type="Property">
+                           <source localId="264" locator="56:38-56:81" path="dispenseRequest" scope="AmbulatoryOpioidPrescription" xsi:type="Property"/>
+                        </operand>
+                     </operand>
+                     <operand localId="267" locator="56:110-56:115" value="7" unit="days" xsi:type="Quantity"/>
+                  </operand>
+               </where>
+            </operand>
+         </expression>
+      </def>
+      <def localId="273" locator="59:1-62:41" name="Inclusion Criteria" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="273">
+               <a:s>define &quot;Inclusion Criteria&quot;:
+  </a:s>
+               <a:s r="274">
+                  <a:s r="275">
+                     <a:s r="276">
+                        <a:s>&quot;Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential for Acute Pain&quot;</a:s>
+                     </a:s>
+                     <a:s>
+    and </a:s>
+                     <a:s r="278">
+                        <a:s r="277">
+                           <a:s>Routines</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="278">
+                           <a:s>&quot;CDC 2022 Guideline General Inclusion Criteria&quot;</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    and </a:s>
+                  <a:s r="279">
+                     <a:s>&quot;Order is for Long-Acting Opioid&quot;</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="274" locator="60:3-62:41" xsi:type="And">
+            <operand localId="275" locator="60:3-61:64" xsi:type="And">
+               <operand localId="276" locator="60:3-60:96" name="Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential for Acute Pain" xsi:type="ExpressionRef"/>
+               <operand localId="278" locator="61:9-61:64" name="CDC 2022 Guideline General Inclusion Criteria" libraryName="Routines" xsi:type="ExpressionRef"/>
+            </operand>
+            <operand localId="279" locator="62:9-62:41" name="Order is for Long-Acting Opioid" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="282" locator="64:1-65:7" name="Exclusion Criteria" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="282">
+               <a:s r="283">define &quot;Exclusion Criteria&quot;:
+  false</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="283" locator="65:3-65:7" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+      </def>
+      <def localId="286" locator="67:1-69:32" name="Is Recommendation Applicable?" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="286">
+               <a:s>define &quot;Is Recommendation Applicable?&quot;:
+  </a:s>
+               <a:s r="287">
+                  <a:s r="288">
+                     <a:s>&quot;Inclusion Criteria&quot;</a:s>
+                  </a:s>
+                  <a:s>
+    and </a:s>
+                  <a:s r="289">
+                     <a:s>not </a:s>
+                     <a:s r="290">
+                        <a:s>&quot;Exclusion Criteria&quot;</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="287" locator="68:3-69:32" xsi:type="And">
+            <operand localId="288" locator="68:3-68:22" name="Inclusion Criteria" xsi:type="ExpressionRef"/>
+            <operand localId="289" locator="69:9-69:32" xsi:type="Not">
+               <operand localId="290" locator="69:13-69:32" name="Exclusion Criteria" xsi:type="ExpressionRef"/>
+            </operand>
+         </expression>
+      </def>
+   </statements>
+</library>

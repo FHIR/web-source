@@ -1,0 +1,1251 @@
+{
+   "library" : {
+      "localId" : "0",
+      "annotation" : [ {
+         "translatorVersion" : "3.25.0",
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "Overloads",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "359",
+            "s" : [ {
+               "value" : [ "","library OpioidCDSREC12PatientView version '2022.1.0'" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "OpioidCDSREC12PatientView",
+         "system" : "http://fhir.org/guides/cdc/opioid-cds",
+         "version" : "2022.1.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localId" : "1",
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "206",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "206",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "208",
+            "locator" : "5:1-5:54",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "208",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'"," called ","FHIRHelpers" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "210",
+            "locator" : "6:1-6:56",
+            "localIdentifier" : "Common",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommon",
+            "version" : "2022.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "210",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "OpioidCDSCommon" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'2022.1.0'"," called ","Common" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "212",
+            "locator" : "7:1-7:62",
+            "localIdentifier" : "Config",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommonConfig",
+            "version" : "2022.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "212",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "OpioidCDSCommonConfig" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'2022.1.0'"," called ","Config" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "localId" : "217",
+            "locator" : "31:1-31:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "localId" : "215",
+            "locator" : "31:1-31:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "localId" : "216",
+               "type" : "SingletonFrom",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "214",
+                  "locator" : "31:1-31:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve",
+                  "include" : [ ],
+                  "codeFilter" : [ ],
+                  "dateFilter" : [ ],
+                  "otherFilter" : [ ]
+               }
+            }
+         }, {
+            "localId" : "220",
+            "locator" : "33:1-34:38",
+            "name" : "Opioid Use Disorder Lookback Period",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "220",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Opioid Use Disorder Lookback Period\"",":\n  " ]
+                  }, {
+                     "r" : "231",
+                     "s" : [ {
+                        "value" : [ "Interval[" ]
+                     }, {
+                        "r" : "221",
+                        "s" : [ {
+                           "r" : "224",
+                           "s" : [ {
+                              "value" : [ "Today","()" ]
+                           } ]
+                        }, {
+                           "value" : [ " - " ]
+                        }, {
+                           "r" : "225",
+                           "s" : [ {
+                              "value" : [ "90 ","days" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ", " ]
+                     }, {
+                        "r" : "230",
+                        "s" : [ {
+                           "value" : [ "Today","()" ]
+                        } ]
+                     }, {
+                        "value" : [ "]" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "231",
+               "locator" : "34:3-34:38",
+               "lowClosed" : true,
+               "highClosed" : true,
+               "type" : "Interval",
+               "low" : {
+                  "localId" : "221",
+                  "locator" : "34:12-34:28",
+                  "type" : "Subtract",
+                  "signature" : [ {
+                     "localId" : "226",
+                     "name" : "{urn:hl7-org:elm-types:r1}Date",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "227",
+                     "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "224",
+                     "locator" : "34:12-34:18",
+                     "type" : "Today",
+                     "signature" : [ ]
+                  }, {
+                     "localId" : "225",
+                     "locator" : "34:22-34:28",
+                     "value" : 90,
+                     "unit" : "days",
+                     "type" : "Quantity"
+                  } ]
+               },
+               "high" : {
+                  "localId" : "230",
+                  "locator" : "34:31-34:37",
+                  "type" : "Today",
+                  "signature" : [ ]
+               }
+            }
+         }, {
+            "localId" : "234",
+            "locator" : "36:1-62:5",
+            "name" : "Not Receiving Evidence-Based Treatment for Opioid Use Disorder",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "234",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Not Receiving Evidence-Based Treatment for Opioid Use Disorder\"",":\n  " ]
+                  }, {
+                     "r" : "235",
+                     "s" : [ {
+                        "r" : "237",
+                        "s" : [ {
+                           "r" : "236",
+                           "s" : [ {
+                              "value" : [ "Config" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "237",
+                           "s" : [ {
+                              "value" : [ "\"Evidence Based Treatment Criteria For Opioid Use Disorder\"" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    and " ]
+                     }, {
+                        "r" : "238",
+                        "s" : [ {
+                           "value" : [ "not " ]
+                        }, {
+                           "r" : "239",
+                           "s" : [ {
+                              "value" : [ "(\n        " ]
+                           }, {
+                              "r" : "239",
+                              "s" : [ {
+                                 "value" : [ "if " ]
+                              }, {
+                                 "r" : "241",
+                                 "s" : [ {
+                                    "r" : "240",
+                                    "s" : [ {
+                                       "value" : [ "Config" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "241",
+                                    "s" : [ {
+                                       "value" : [ "\"Can the implementing EHR support queries for past medications by date range?\"" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " then\n          " ]
+                              }, {
+                                 "r" : "242",
+                                 "s" : [ {
+                                    "value" : [ "exists " ]
+                                 }, {
+                                    "r" : "298",
+                                    "s" : [ {
+                                       "value" : [ "(\n            " ]
+                                    }, {
+                                       "r" : "298",
+                                       "s" : [ {
+                                          "s" : [ {
+                                             "r" : "243",
+                                             "s" : [ {
+                                                "r" : "274",
+                                                "s" : [ {
+                                                   "r" : "274",
+                                                   "s" : [ {
+                                                      "value" : [ "[","MedicationRequest",": " ]
+                                                   }, {
+                                                      "s" : [ {
+                                                         "value" : [ "Common",".","\"Buprenorphine and methadone medications\"" ]
+                                                      } ]
+                                                   }, {
+                                                      "value" : [ "]" ]
+                                                   } ]
+                                                } ]
+                                             }, {
+                                                "value" : [ " ","MR" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "\n              " ]
+                                       }, {
+                                          "r" : "276",
+                                          "s" : [ {
+                                             "value" : [ "where " ]
+                                          }, {
+                                             "r" : "276",
+                                             "s" : [ {
+                                                "r" : "284",
+                                                "s" : [ {
+                                                   "r" : "278",
+                                                   "s" : [ {
+                                                      "r" : "277",
+                                                      "s" : [ {
+                                                         "value" : [ "MR" ]
+                                                      } ]
+                                                   }, {
+                                                      "value" : [ "." ]
+                                                   }, {
+                                                      "r" : "278",
+                                                      "s" : [ {
+                                                         "value" : [ "status" ]
+                                                      } ]
+                                                   } ]
+                                                }, {
+                                                   "value" : [ " in " ]
+                                                }, {
+                                                   "r" : "279",
+                                                   "s" : [ {
+                                                      "value" : [ "{ " ]
+                                                   }, {
+                                                      "r" : "280",
+                                                      "s" : [ {
+                                                         "value" : [ "'active'" ]
+                                                      } ]
+                                                   }, {
+                                                      "value" : [ ", " ]
+                                                   }, {
+                                                      "r" : "282",
+                                                      "s" : [ {
+                                                         "value" : [ "'completed'" ]
+                                                      } ]
+                                                   }, {
+                                                      "value" : [ " }" ]
+                                                   } ]
+                                                } ]
+                                             }, {
+                                                "value" : [ "\n                and " ]
+                                             }, {
+                                                "r" : "294",
+                                                "s" : [ {
+                                                   "r" : "287",
+                                                   "s" : [ {
+                                                      "value" : [ "date from " ]
+                                                   }, {
+                                                      "r" : "289",
+                                                      "s" : [ {
+                                                         "r" : "288",
+                                                         "s" : [ {
+                                                            "value" : [ "MR" ]
+                                                         } ]
+                                                      }, {
+                                                         "value" : [ "." ]
+                                                      }, {
+                                                         "r" : "289",
+                                                         "s" : [ {
+                                                            "value" : [ "authoredOn" ]
+                                                         } ]
+                                                      } ]
+                                                   } ]
+                                                }, {
+                                                   "r" : "294",
+                                                   "value" : [ " ","during day of"," " ]
+                                                }, {
+                                                   "r" : "292",
+                                                   "s" : [ {
+                                                      "value" : [ "\"Opioid Use Disorder Lookback Period\"" ]
+                                                   } ]
+                                                } ]
+                                             } ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "\n          )" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "r" : "299",
+                                 "value" : [ "\n        else\n            ","true" ]
+                              } ]
+                           }, {
+                              "value" : [ "\n    /* update 2022 removes \"behavioral therapy condition\"\n      or exists (\n        [Procedure: Common.\"Substance misuse behavioral counseling\"] P\n          where P.status ~ 'completed'\n            and (\n              case\n                when P.performed is FHIR.dateTime then\n                  Interval[FHIRHelpers.ToDateTime(P.performed as FHIR.dateTime), FHIRHelpers.ToDateTime(P.performed as FHIR.dateTime)]\n                when P.performed is FHIR.Period then\n                  FHIRHelpers.ToInterval(P.performed as FHIR.Period)\n                else\n                  null as Interval<DateTime>\n                end\n            ) during day of \"Opioid Use Disorder Lookback Period\"\n      )*/\n    )" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "235",
+               "locator" : "37:3-62:5",
+               "type" : "And",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "237",
+                  "locator" : "37:3-37:68",
+                  "name" : "Evidence Based Treatment Criteria For Opioid Use Disorder",
+                  "libraryName" : "Config",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "238",
+                  "locator" : "38:9-62:5",
+                  "type" : "Not",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "239",
+                     "locator" : "38:13-62:5",
+                     "type" : "If",
+                     "condition" : {
+                        "localId" : "241",
+                        "locator" : "39:12-39:96",
+                        "name" : "Can the implementing EHR support queries for past medications by date range?",
+                        "libraryName" : "Config",
+                        "type" : "ExpressionRef"
+                     },
+                     "then" : {
+                        "localId" : "242",
+                        "locator" : "40:11-44:11",
+                        "type" : "Exists",
+                        "signature" : [ ],
+                        "operand" : {
+                           "localId" : "298",
+                           "locator" : "40:18-44:11",
+                           "type" : "Query",
+                           "source" : [ {
+                              "localId" : "243",
+                              "locator" : "41:13-41:84",
+                              "alias" : "MR",
+                              "expression" : {
+                                 "localId" : "274",
+                                 "locator" : "41:13-41:81",
+                                 "type" : "Union",
+                                 "signature" : [ ],
+                                 "operand" : [ {
+                                    "localId" : "247",
+                                    "dataType" : "{http://hl7.org/fhir}MedicationRequest",
+                                    "templateId" : "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+                                    "codeProperty" : "medication",
+                                    "codeComparator" : "in",
+                                    "type" : "Retrieve",
+                                    "codes" : {
+                                       "localId" : "246",
+                                       "locator" : "41:33-41:80",
+                                       "name" : "Buprenorphine and methadone medications",
+                                       "libraryName" : "Common",
+                                       "preserve" : true,
+                                       "type" : "ValueSetRef"
+                                    },
+                                    "include" : [ ],
+                                    "codeFilter" : [ ],
+                                    "dateFilter" : [ ],
+                                    "otherFilter" : [ ]
+                                 }, {
+                                    "localId" : "254",
+                                    "locator" : "41:13-41:81",
+                                    "type" : "Query",
+                                    "source" : [ {
+                                       "localId" : "255",
+                                       "locator" : "41:13-41:81",
+                                       "alias" : "MR",
+                                       "expression" : {
+                                          "localId" : "252",
+                                          "dataType" : "{http://hl7.org/fhir}MedicationRequest",
+                                          "templateId" : "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+                                          "type" : "Retrieve",
+                                          "include" : [ ],
+                                          "codeFilter" : [ ],
+                                          "dateFilter" : [ ],
+                                          "otherFilter" : [ ]
+                                       }
+                                    } ],
+                                    "let" : [ ],
+                                    "relationship" : [ {
+                                       "localId" : "256",
+                                       "locator" : "41:13-41:81",
+                                       "alias" : "M",
+                                       "type" : "With",
+                                       "expression" : {
+                                          "localId" : "253",
+                                          "dataType" : "{http://hl7.org/fhir}Medication",
+                                          "templateId" : "http://hl7.org/fhir/StructureDefinition/Medication",
+                                          "type" : "Retrieve",
+                                          "include" : [ ],
+                                          "codeFilter" : [ ],
+                                          "dateFilter" : [ ],
+                                          "otherFilter" : [ ]
+                                       },
+                                       "suchThat" : {
+                                          "localId" : "273",
+                                          "type" : "And",
+                                          "signature" : [ ],
+                                          "operand" : [ {
+                                             "localId" : "264",
+                                             "type" : "Equal",
+                                             "signature" : [ {
+                                                "localId" : "267",
+                                                "name" : "{urn:hl7-org:elm-types:r1}String",
+                                                "type" : "NamedTypeSpecifier"
+                                             }, {
+                                                "localId" : "268",
+                                                "name" : "{urn:hl7-org:elm-types:r1}String",
+                                                "type" : "NamedTypeSpecifier"
+                                             } ],
+                                             "operand" : [ {
+                                                "localId" : "265",
+                                                "name" : "ToString",
+                                                "libraryName" : "FHIRHelpers",
+                                                "type" : "FunctionRef",
+                                                "signature" : [ {
+                                                   "localId" : "266",
+                                                   "name" : "{http://hl7.org/fhir}string",
+                                                   "type" : "NamedTypeSpecifier"
+                                                } ],
+                                                "operand" : [ {
+                                                   "localId" : "257",
+                                                   "path" : "id",
+                                                   "scope" : "M",
+                                                   "type" : "Property"
+                                                } ]
+                                             }, {
+                                                "localId" : "263",
+                                                "type" : "Last",
+                                                "signature" : [ ],
+                                                "source" : {
+                                                   "localId" : "259",
+                                                   "type" : "Split",
+                                                   "signature" : [ ],
+                                                   "stringToSplit" : {
+                                                      "localId" : "261",
+                                                      "name" : "ToString",
+                                                      "libraryName" : "FHIRHelpers",
+                                                      "type" : "FunctionRef",
+                                                      "signature" : [ {
+                                                         "localId" : "262",
+                                                         "name" : "{http://hl7.org/fhir}string",
+                                                         "type" : "NamedTypeSpecifier"
+                                                      } ],
+                                                      "operand" : [ {
+                                                         "localId" : "258",
+                                                         "path" : "medication.reference",
+                                                         "scope" : "MR",
+                                                         "type" : "Property"
+                                                      } ]
+                                                   },
+                                                   "separator" : {
+                                                      "localId" : "260",
+                                                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                                                      "value" : "/",
+                                                      "type" : "Literal"
+                                                   }
+                                                }
+                                             } ]
+                                          }, {
+                                             "localId" : "270",
+                                             "type" : "InValueSet",
+                                             "signature" : [ {
+                                                "localId" : "272",
+                                                "name" : "{urn:hl7-org:elm-types:r1}Concept",
+                                                "type" : "NamedTypeSpecifier"
+                                             } ],
+                                             "code" : {
+                                                "localId" : "271",
+                                                "name" : "ToConcept",
+                                                "libraryName" : "FHIRHelpers",
+                                                "type" : "FunctionRef",
+                                                "signature" : [ ],
+                                                "operand" : [ {
+                                                   "localId" : "269",
+                                                   "path" : "code",
+                                                   "scope" : "M",
+                                                   "type" : "Property"
+                                                } ]
+                                             },
+                                             "valueset" : {
+                                                "localId" : "246",
+                                                "locator" : "41:33-41:80",
+                                                "name" : "Buprenorphine and methadone medications",
+                                                "libraryName" : "Common",
+                                                "preserve" : true
+                                             }
+                                          } ]
+                                       }
+                                    } ]
+                                 } ]
+                              }
+                           } ],
+                           "let" : [ ],
+                           "relationship" : [ ],
+                           "where" : {
+                              "localId" : "276",
+                              "locator" : "42:15-43:95",
+                              "type" : "And",
+                              "signature" : [ ],
+                              "operand" : [ {
+                                 "localId" : "284",
+                                 "locator" : "42:21-42:58",
+                                 "type" : "In",
+                                 "signature" : [ ],
+                                 "operand" : [ {
+                                    "localId" : "285",
+                                    "name" : "ToString",
+                                    "libraryName" : "FHIRHelpers",
+                                    "type" : "FunctionRef",
+                                    "signature" : [ {
+                                       "localId" : "286",
+                                       "name" : "{http://hl7.org/fhir}MedicationRequestStatus",
+                                       "type" : "NamedTypeSpecifier"
+                                    } ],
+                                    "operand" : [ {
+                                       "localId" : "278",
+                                       "locator" : "42:21-42:29",
+                                       "path" : "status",
+                                       "scope" : "MR",
+                                       "type" : "Property"
+                                    } ]
+                                 }, {
+                                    "localId" : "279",
+                                    "locator" : "42:34-42:58",
+                                    "type" : "List",
+                                    "element" : [ {
+                                       "localId" : "280",
+                                       "locator" : "42:36-42:43",
+                                       "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                                       "value" : "active",
+                                       "type" : "Literal"
+                                    }, {
+                                       "localId" : "282",
+                                       "locator" : "42:46-42:56",
+                                       "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                                       "value" : "completed",
+                                       "type" : "Literal"
+                                    } ]
+                                 } ]
+                              }, {
+                                 "localId" : "294",
+                                 "locator" : "43:21-43:95",
+                                 "precision" : "Day",
+                                 "type" : "In",
+                                 "signature" : [ {
+                                    "localId" : "295",
+                                    "name" : "{urn:hl7-org:elm-types:r1}Date",
+                                    "type" : "NamedTypeSpecifier"
+                                 }, {
+                                    "localId" : "296",
+                                    "type" : "IntervalTypeSpecifier",
+                                    "pointType" : {
+                                       "localId" : "297",
+                                       "name" : "{urn:hl7-org:elm-types:r1}Date",
+                                       "type" : "NamedTypeSpecifier"
+                                    }
+                                 } ],
+                                 "operand" : [ {
+                                    "localId" : "287",
+                                    "locator" : "43:21-43:43",
+                                    "type" : "DateFrom",
+                                    "signature" : [ ],
+                                    "operand" : {
+                                       "localId" : "290",
+                                       "name" : "ToDateTime",
+                                       "libraryName" : "FHIRHelpers",
+                                       "type" : "FunctionRef",
+                                       "signature" : [ {
+                                          "localId" : "291",
+                                          "name" : "{http://hl7.org/fhir}dateTime",
+                                          "type" : "NamedTypeSpecifier"
+                                       } ],
+                                       "operand" : [ {
+                                          "localId" : "289",
+                                          "locator" : "43:31-43:43",
+                                          "path" : "authoredOn",
+                                          "scope" : "MR",
+                                          "type" : "Property"
+                                       } ]
+                                    }
+                                 }, {
+                                    "localId" : "292",
+                                    "locator" : "43:59-43:95",
+                                    "name" : "Opioid Use Disorder Lookback Period",
+                                    "type" : "ExpressionRef"
+                                 } ]
+                              } ]
+                           }
+                        }
+                     },
+                     "else" : {
+                        "localId" : "299",
+                        "locator" : "46:13-46:16",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "value" : "true",
+                        "type" : "Literal"
+                     }
+                  }
+               } ]
+            }
+         }, {
+            "localId" : "302",
+            "locator" : "64:1-70:5",
+            "name" : "Presence of Diagnosis of Opioid Use Disorder",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "302",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Presence of Diagnosis of Opioid Use Disorder\"",":\n  " ]
+                  }, {
+                     "r" : "303",
+                     "s" : [ {
+                        "value" : [ "exists " ]
+                     }, {
+                        "r" : "335",
+                        "s" : [ {
+                           "value" : [ "(\n    " ]
+                        }, {
+                           "r" : "335",
+                           "s" : [ {
+                              "s" : [ {
+                                 "r" : "304",
+                                 "s" : [ {
+                                    "r" : "306",
+                                    "s" : [ {
+                                       "s" : [ {
+                                          "value" : [ "Common",".","\"US Core-Categorized Conditions\"" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " ","C" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n      " ]
+                           }, {
+                              "r" : "308",
+                              "s" : [ {
+                                 "value" : [ "where " ]
+                              }, {
+                                 "r" : "308",
+                                 "s" : [ {
+                                    "r" : "309",
+                                    "s" : [ {
+                                       "r" : "314",
+                                       "s" : [ {
+                                          "r" : "311",
+                                          "s" : [ {
+                                             "r" : "310",
+                                             "s" : [ {
+                                                "value" : [ "C" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "311",
+                                             "s" : [ {
+                                                "value" : [ "code" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ " in " ]
+                                       }, {
+                                          "r" : "313",
+                                          "s" : [ {
+                                             "r" : "312",
+                                             "s" : [ {
+                                                "value" : [ "Common" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "313",
+                                             "s" : [ {
+                                                "value" : [ "\"Opioid misuse disorders\"" ]
+                                             } ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "\n        and " ]
+                                    }, {
+                                       "r" : "321",
+                                       "s" : [ {
+                                          "r" : "318",
+                                          "s" : [ {
+                                             "r" : "317",
+                                             "s" : [ {
+                                                "value" : [ "C" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "318",
+                                             "s" : [ {
+                                                "value" : [ "clinicalStatus" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ " in " ]
+                                       }, {
+                                          "r" : "320",
+                                          "s" : [ {
+                                             "r" : "319",
+                                             "s" : [ {
+                                                "value" : [ "Common" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "320",
+                                             "s" : [ {
+                                                "value" : [ "\"Active Condition\"" ]
+                                             } ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "\n        and " ]
+                                 }, {
+                                    "r" : "331",
+                                    "s" : [ {
+                                       "r" : "324",
+                                       "s" : [ {
+                                          "value" : [ "date from " ]
+                                       }, {
+                                          "r" : "326",
+                                          "s" : [ {
+                                             "r" : "325",
+                                             "s" : [ {
+                                                "value" : [ "C" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "326",
+                                             "s" : [ {
+                                                "value" : [ "recordedDate" ]
+                                             } ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "r" : "331",
+                                       "value" : [ " ","during day of"," " ]
+                                    }, {
+                                       "r" : "329",
+                                       "s" : [ {
+                                          "value" : [ "\"Opioid Use Disorder Lookback Period\"" ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    )" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "303",
+               "locator" : "65:3-70:5",
+               "type" : "Exists",
+               "signature" : [ {
+                  "localId" : "336",
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "localId" : "337",
+                     "name" : "{http://hl7.org/fhir}Condition",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               } ],
+               "operand" : {
+                  "localId" : "335",
+                  "locator" : "65:10-70:5",
+                  "type" : "Query",
+                  "source" : [ {
+                     "localId" : "304",
+                     "locator" : "66:5-66:45",
+                     "alias" : "C",
+                     "expression" : {
+                        "localId" : "306",
+                        "locator" : "66:5-66:43",
+                        "name" : "US Core-Categorized Conditions",
+                        "libraryName" : "Common",
+                        "type" : "ExpressionRef"
+                     }
+                  } ],
+                  "let" : [ ],
+                  "relationship" : [ ],
+                  "where" : {
+                     "localId" : "308",
+                     "locator" : "67:7-69:88",
+                     "type" : "And",
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "localId" : "309",
+                        "locator" : "67:13-68:57",
+                        "type" : "And",
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "localId" : "314",
+                           "locator" : "67:13-67:54",
+                           "type" : "InValueSet",
+                           "signature" : [ {
+                              "localId" : "316",
+                              "name" : "{urn:hl7-org:elm-types:r1}Concept",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "code" : {
+                              "localId" : "315",
+                              "name" : "ToConcept",
+                              "libraryName" : "FHIRHelpers",
+                              "type" : "FunctionRef",
+                              "signature" : [ ],
+                              "operand" : [ {
+                                 "localId" : "311",
+                                 "locator" : "67:13-67:18",
+                                 "path" : "code",
+                                 "scope" : "C",
+                                 "type" : "Property"
+                              } ]
+                           },
+                           "valueset" : {
+                              "localId" : "313",
+                              "locator" : "67:23-67:54",
+                              "name" : "Opioid misuse disorders",
+                              "libraryName" : "Common",
+                              "preserve" : true
+                           }
+                        }, {
+                           "localId" : "321",
+                           "locator" : "68:13-68:57",
+                           "type" : "InValueSet",
+                           "signature" : [ {
+                              "localId" : "323",
+                              "name" : "{urn:hl7-org:elm-types:r1}Concept",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "code" : {
+                              "localId" : "322",
+                              "name" : "ToConcept",
+                              "libraryName" : "FHIRHelpers",
+                              "type" : "FunctionRef",
+                              "signature" : [ ],
+                              "operand" : [ {
+                                 "localId" : "318",
+                                 "locator" : "68:13-68:28",
+                                 "path" : "clinicalStatus",
+                                 "scope" : "C",
+                                 "type" : "Property"
+                              } ]
+                           },
+                           "valueset" : {
+                              "localId" : "320",
+                              "locator" : "68:33-68:57",
+                              "name" : "Active Condition",
+                              "libraryName" : "Common",
+                              "preserve" : true
+                           }
+                        } ]
+                     }, {
+                        "localId" : "331",
+                        "locator" : "69:13-69:88",
+                        "precision" : "Day",
+                        "type" : "In",
+                        "signature" : [ {
+                           "localId" : "332",
+                           "name" : "{urn:hl7-org:elm-types:r1}Date",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "localId" : "333",
+                           "type" : "IntervalTypeSpecifier",
+                           "pointType" : {
+                              "localId" : "334",
+                              "name" : "{urn:hl7-org:elm-types:r1}Date",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ],
+                        "operand" : [ {
+                           "localId" : "324",
+                           "locator" : "69:13-69:36",
+                           "type" : "DateFrom",
+                           "signature" : [ ],
+                           "operand" : {
+                              "localId" : "327",
+                              "name" : "ToDateTime",
+                              "libraryName" : "FHIRHelpers",
+                              "type" : "FunctionRef",
+                              "signature" : [ {
+                                 "localId" : "328",
+                                 "name" : "{http://hl7.org/fhir}dateTime",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "326",
+                                 "locator" : "69:23-69:36",
+                                 "path" : "recordedDate",
+                                 "scope" : "C",
+                                 "type" : "Property"
+                              } ]
+                           }
+                        }, {
+                           "localId" : "329",
+                           "locator" : "69:52-69:88",
+                           "name" : "Opioid Use Disorder Lookback Period",
+                           "type" : "ExpressionRef"
+                        } ]
+                     } ]
+                  }
+               }
+            }
+         }, {
+            "localId" : "340",
+            "locator" : "72:1-73:6",
+            "name" : "Positive Result from Opioid Use Disorder Evaluation Tool",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "340",
+                  "s" : [ {
+                     "r" : "341",
+                     "value" : [ "","define ","\"Positive Result from Opioid Use Disorder Evaluation Tool\"",":\n  ","true" ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "341",
+               "locator" : "73:3-73:6",
+               "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "value" : "true",
+               "type" : "Literal"
+            }
+         }, {
+            "localId" : "344",
+            "locator" : "75:1-79:66",
+            "name" : "Inclusion Criteria",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "344",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Inclusion Criteria\"",":\n  " ]
+                  }, {
+                     "r" : "345",
+                     "s" : [ {
+                        "r" : "346",
+                        "s" : [ {
+                           "r" : "347",
+                           "s" : [ {
+                              "r" : "349",
+                              "s" : [ {
+                                 "r" : "348",
+                                 "s" : [ {
+                                    "value" : [ "Common" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "349",
+                                 "s" : [ {
+                                    "value" : [ "\"Patient 18 or Older?\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n    and " ]
+                           }, {
+                              "r" : "350",
+                              "s" : [ {
+                                 "value" : [ "\"Not Receiving Evidence-Based Treatment for Opioid Use Disorder\"" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    and " ]
+                        }, {
+                           "r" : "351",
+                           "s" : [ {
+                              "value" : [ "\"Presence of Diagnosis of Opioid Use Disorder\"" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    and " ]
+                     }, {
+                        "r" : "352",
+                        "s" : [ {
+                           "value" : [ "\"Positive Result from Opioid Use Disorder Evaluation Tool\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "345",
+               "locator" : "76:3-79:66",
+               "type" : "And",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "346",
+                  "locator" : "76:3-78:54",
+                  "type" : "And",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "347",
+                     "locator" : "76:3-77:72",
+                     "type" : "And",
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "localId" : "349",
+                        "locator" : "76:3-76:31",
+                        "name" : "Patient 18 or Older?",
+                        "libraryName" : "Common",
+                        "type" : "ExpressionRef"
+                     }, {
+                        "localId" : "350",
+                        "locator" : "77:9-77:72",
+                        "name" : "Not Receiving Evidence-Based Treatment for Opioid Use Disorder",
+                        "type" : "ExpressionRef"
+                     } ]
+                  }, {
+                     "localId" : "351",
+                     "locator" : "78:9-78:54",
+                     "name" : "Presence of Diagnosis of Opioid Use Disorder",
+                     "type" : "ExpressionRef"
+                  } ]
+               }, {
+                  "localId" : "352",
+                  "locator" : "79:9-79:66",
+                  "name" : "Positive Result from Opioid Use Disorder Evaluation Tool",
+                  "type" : "ExpressionRef"
+               } ]
+            }
+         }, {
+            "localId" : "355",
+            "locator" : "81:1-82:7",
+            "name" : "Exclusion Criteria",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "355",
+                  "s" : [ {
+                     "r" : "356",
+                     "value" : [ "","define ","\"Exclusion Criteria\"",":\n  ","false" ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "356",
+               "locator" : "82:3-82:7",
+               "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "value" : "false",
+               "type" : "Literal"
+            }
+         }, {
+            "localId" : "359",
+            "locator" : "84:1-86:32",
+            "name" : "Is Recommendation Applicable?",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "359",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Is Recommendation Applicable?\"",":\n  " ]
+                  }, {
+                     "r" : "360",
+                     "s" : [ {
+                        "r" : "361",
+                        "s" : [ {
+                           "value" : [ "\"Inclusion Criteria\"" ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    and " ]
+                     }, {
+                        "r" : "362",
+                        "s" : [ {
+                           "value" : [ "not " ]
+                        }, {
+                           "r" : "363",
+                           "s" : [ {
+                              "value" : [ "\"Exclusion Criteria\"" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "360",
+               "locator" : "85:3-86:32",
+               "type" : "And",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "361",
+                  "locator" : "85:3-85:22",
+                  "name" : "Inclusion Criteria",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "362",
+                  "locator" : "86:9-86:32",
+                  "type" : "Not",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "363",
+                     "locator" : "86:13-86:32",
+                     "name" : "Exclusion Criteria",
+                     "type" : "ExpressionRef"
+                  }
+               } ]
+            }
+         } ]
+      }
+   }
+}

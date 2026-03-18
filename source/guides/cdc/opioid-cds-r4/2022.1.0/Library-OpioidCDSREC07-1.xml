@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1" localId="0">
+   <annotation translatorVersion="3.25.0" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="Overloads" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="400">
+         <a:s>library OpioidCDSREC07 version '2022.1.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="OpioidCDSREC07" system="http://fhir.org/guides/cdc/opioid-cds" version="2022.1.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localId="1" localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="206" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="206">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="208" locator="5:1-5:54" localIdentifier="FHIRHelpers" path="http://fhir.org/guides/cdc/opioid-cds/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="208">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1' called FHIRHelpers</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="210" locator="6:1-6:56" localIdentifier="Common" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommon" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="210">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSCommon</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Common</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="212" locator="7:1-7:62" localIdentifier="Config" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommonConfig" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="212">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSCommonConfig</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Config</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="214" locator="8:1-8:60" localIdentifier="Routines" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSRoutines" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="214">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSRoutines</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Routines</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <parameters>
+      <def localId="216" locator="41:1-41:54" name="ContextPrescriptions" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="216">
+               <a:s>/*
+**
+**  Recommendation #7
+**    Clinicians should evaluate benefits and risks with patients within 1-4 weeks of starting 
+**    opioid therapy for subacute or chronic pain or of dosage escalation. Clinicians should 
+**    regularly reevaluate benefits and risks of continued opioid therapy with patients 
+**    (recommendation category: A; evidence type: 4).
+**
+**  When
+**    Provider is prescribing an opioid analgesic with ambulatory misuse potential in the outpatient setting
+**    Prescription is for treating subacute and/or chronic pain.
+**    CDC 2022 guideline general inclusion criteria met for this patient:
+**      Patient is 18 or over
+**      Patient does not have evidence of sickle cell disease
+**      Patient does not have findings indicating limited life expectancy
+**      Patient does not have orders for therapies indicating end of life care
+**      Patient is not undergoing active cancer treatment:
+**        Patient has had at least 2 office visits within the past 12 months with an oncology specialist present, or
+**        Patient has had at least 2 office visits within the past 12 months with a CDC malignant cancer condition diagnosis
+**      Patient does not have conditions likely terminal for opioid prescribing present
+**    Opioid risk benefit assessment has not been performed in the past 90 days
+**  Then
+**    Regularly Evaluate the Benefits and Risks of Opioid Therapy:
+**      Document - Conducted benefit and risk assessment
+**      Snooze - Conducted assessment, snooze 3 months
+**      Snooze - N/A see comment, snooze 3 months
+**
+*/
+
+// META: Plan Definition: http://fhir.org/guides/cdc/opioid-cds-r4/PlanDefinition/opioid-cds-07
+
+parameter ContextPrescriptions </a:s>
+               <a:s r="217">
+                  <a:s>List&lt;</a:s>
+                  <a:s r="218">
+                     <a:s>MedicationRequest</a:s>
+                  </a:s>
+                  <a:s>></a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <parameterTypeSpecifier localId="217" locator="41:32-41:54" xsi:type="ListTypeSpecifier">
+            <elementType localId="218" locator="41:37-41:53" name="fhir:MedicationRequest" xsi:type="NamedTypeSpecifier"/>
+         </parameterTypeSpecifier>
+      </def>
+   </parameters>
+   <contexts>
+      <def localId="223" locator="43:1-43:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def localId="221" locator="43:1-43:15" name="Patient" context="Patient">
+         <expression localId="222" xsi:type="SingletonFrom">
+            <operand localId="220" locator="43:1-43:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="226" locator="45:1-46:46" name="Risk Assessment Interval" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="226">
+               <a:s>define &quot;Risk Assessment Interval&quot;:
+  </a:s>
+               <a:s r="241">
+                  <a:s>Interval[</a:s>
+                  <a:s r="227">
+                     <a:s r="230">
+                        <a:s>Today()</a:s>
+                     </a:s>
+                     <a:s> - </a:s>
+                     <a:s r="231">
+                        <a:s>91 days</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s r="234">
+                     <a:s r="237">
+                        <a:s>Today()</a:s>
+                     </a:s>
+                     <a:s> - </a:s>
+                     <a:s r="238">
+                        <a:s>1 day</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>]</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="241" locator="46:3-46:46" lowClosed="true" highClosed="true" xsi:type="Interval">
+            <low localId="227" locator="46:12-46:28" xsi:type="Subtract">
+               <signature localId="232" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+               <signature localId="233" name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+               <operand localId="230" locator="46:12-46:18" xsi:type="Today"/>
+               <operand localId="231" locator="46:22-46:28" value="91" unit="days" xsi:type="Quantity"/>
+            </low>
+            <high localId="234" locator="46:31-46:45" xsi:type="Subtract">
+               <signature localId="239" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+               <signature localId="240" name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+               <operand localId="237" locator="46:31-46:37" xsi:type="Today"/>
+               <operand localId="238" locator="46:41-46:45" value="1" unit="day" xsi:type="Quantity"/>
+            </high>
+         </expression>
+      </def>
+      <def localId="244" locator="48:1-49:38" name="Previous 10 Days Interval" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="244">
+               <a:s>define &quot;Previous 10 Days Interval&quot;:
+  </a:s>
+               <a:s r="255">
+                  <a:s>Interval[</a:s>
+                  <a:s r="245">
+                     <a:s r="248">
+                        <a:s>Today()</a:s>
+                     </a:s>
+                     <a:s> - </a:s>
+                     <a:s r="249">
+                        <a:s>10 days</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s r="254">
+                     <a:s>Today()</a:s>
+                  </a:s>
+                  <a:s>]</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="255" locator="49:3-49:38" lowClosed="true" highClosed="true" xsi:type="Interval">
+            <low localId="245" locator="49:12-49:28" xsi:type="Subtract">
+               <signature localId="250" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+               <signature localId="251" name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+               <operand localId="248" locator="49:12-49:18" xsi:type="Today"/>
+               <operand localId="249" locator="49:22-49:28" value="10" unit="days" xsi:type="Quantity"/>
+            </low>
+            <high localId="254" locator="49:31-49:37" xsi:type="Today"/>
+         </expression>
+      </def>
+      <def localId="258" locator="51:1-52:57" name="Encounter Interval" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="258">
+               <a:s>define &quot;Encounter Interval&quot;:
+  </a:s>
+               <a:s r="277">
+                  <a:s>Interval[</a:s>
+                  <a:s r="259">
+                     <a:s r="260">
+                        <a:s r="263">
+                           <a:s>Today()</a:s>
+                        </a:s>
+                        <a:s> - </a:s>
+                        <a:s r="264">
+                           <a:s>12 months</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> - </a:s>
+                     <a:s r="267">
+                        <a:s>1 days</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s r="270">
+                     <a:s r="273">
+                        <a:s>Today()</a:s>
+                     </a:s>
+                     <a:s> - </a:s>
+                     <a:s r="274">
+                        <a:s>1 day</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>]</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="277" locator="52:3-52:57" lowClosed="true" highClosed="true" xsi:type="Interval">
+            <low localId="259" locator="52:12-52:39" xsi:type="Subtract">
+               <signature localId="268" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+               <signature localId="269" name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+               <operand localId="260" locator="52:12-52:30" xsi:type="Subtract">
+                  <signature localId="265" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                  <signature localId="266" name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="263" locator="52:12-52:18" xsi:type="Today"/>
+                  <operand localId="264" locator="52:22-52:30" value="12" unit="months" xsi:type="Quantity"/>
+               </operand>
+               <operand localId="267" locator="52:34-52:39" value="1" unit="days" xsi:type="Quantity"/>
+            </low>
+            <high localId="270" locator="52:42-52:56" xsi:type="Subtract">
+               <signature localId="275" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+               <signature localId="276" name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+               <operand localId="273" locator="52:42-52:48" xsi:type="Today"/>
+               <operand localId="274" locator="52:52-52:56" value="1" unit="day" xsi:type="Quantity"/>
+            </high>
+         </expression>
+      </def>
+      <def localId="280" locator="54:1-56:94" name="Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="280">
+               <a:s>define &quot;Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions&quot;:
+  </a:s>
+               <a:s r="289">
+                  <a:s>
+                     <a:s r="281">
+                        <a:s r="284">
+                           <a:s>( </a:s>
+                           <a:s r="284">
+                              <a:s r="282">
+                                 <a:s>Common</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="284">
+                                 <a:s>&quot;Is Opioid Analgesic with Ambulatory Misuse Potential?&quot;( </a:s>
+                                 <a:s r="283">
+                                    <a:s>ContextPrescriptions</a:s>
+                                 </a:s>
+                                 <a:s> )</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> )</a:s>
+                        </a:s>
+                        <a:s> AmbulatoryOpioidPrescription</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="288">
+                     <a:s>where </a:s>
+                     <a:s r="288">
+                        <a:s r="286">
+                           <a:s>Routines</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="288">
+                           <a:s>&quot;Is Subacute or Chronic Pain Prescription?&quot;( </a:s>
+                           <a:s r="287">
+                              <a:s>AmbulatoryOpioidPrescription</a:s>
+                           </a:s>
+                           <a:s> )</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="289" locator="55:3-56:94" xsi:type="Query">
+            <source localId="281" locator="55:3-55:121" alias="AmbulatoryOpioidPrescription">
+               <expression localId="284" locator="55:3-55:92" name="Is Opioid Analgesic with Ambulatory Misuse Potential?" libraryName="Common" xsi:type="FunctionRef">
+                  <operand localId="283" locator="55:69-55:88" name="ContextPrescriptions" xsi:type="ParameterRef"/>
+               </expression>
+            </source>
+            <where localId="288" locator="56:5-56:94" name="Is Subacute or Chronic Pain Prescription?" libraryName="Routines" xsi:type="FunctionRef">
+               <operand localId="287" locator="56:65-56:92" name="AmbulatoryOpioidPrescription" xsi:type="AliasRef"/>
+            </where>
+         </expression>
+      </def>
+      <def localId="292" locator="58:1-59:90" name="Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="292">
+               <a:s>define &quot;Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential&quot;:
+  </a:s>
+               <a:s r="293">
+                  <a:s>exists</a:s>
+                  <a:s r="294">
+                     <a:s>( </a:s>
+                     <a:s r="294">
+                        <a:s>&quot;Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions&quot;</a:s>
+                     </a:s>
+                     <a:s> )</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="293" locator="59:3-59:90" xsi:type="Exists">
+            <operand localId="294" locator="59:9-59:90" name="Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="297" locator="61:1-63:97" name="Opioid Risk Assessment in Past 90 Days" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="297">
+               <a:s>define &quot;Opioid Risk Assessment in Past 90 Days&quot;:
+  </a:s>
+               <a:s r="327">
+                  <a:s>
+                     <a:s r="298">
+                        <a:s r="302">
+                           <a:s r="302">
+                              <a:s>[Procedure: </a:s>
+                              <a:s>
+                                 <a:s>Common.&quot;Opioid misuse assessment procedure&quot;</a:s>
+                              </a:s>
+                              <a:s>]</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> riskAssessment</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="307">
+                     <a:s>where </a:s>
+                     <a:s r="307">
+                        <a:s r="308">
+                           <a:s>start of </a:s>
+                           <a:s r="309">
+                              <a:s>(</a:s>
+                              <a:s r="309">
+                                 <a:s r="311">
+                                    <a:s r="310">
+                                       <a:s>riskAssessment</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="311">
+                                       <a:s>performed</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> as </a:s>
+                                 <a:s r="312">
+                                    <a:s>FHIR.Period</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> in day of </a:s>
+                        <a:s r="315">
+                           <a:s>&quot;Risk Assessment Interval&quot;</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="327" locator="62:3-63:97" xsi:type="Query">
+            <source localId="298" locator="62:3-62:73" alias="riskAssessment">
+               <expression localId="302" locator="62:3-62:58" dataType="fhir:Procedure" templateId="http://hl7.org/fhir/StructureDefinition/Procedure" codeProperty="code" codeComparator="in" xsi:type="Retrieve">
+                  <codes localId="301" locator="62:15-62:57" name="Opioid misuse assessment procedure" libraryName="Common" preserve="true" xsi:type="ValueSetRef"/>
+               </expression>
+            </source>
+            <where localId="307" locator="63:5-63:97" precision="Day" xsi:type="In">
+               <operand localId="308" locator="63:11-63:60" xsi:type="Start">
+                  <operand localId="313" name="ToInterval" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <signature localId="314" name="fhir:Period" xsi:type="NamedTypeSpecifier"/>
+                     <operand localId="309" locator="63:20-63:60" strict="false" xsi:type="As">
+                        <operand localId="311" locator="63:21-63:44" path="performed" scope="riskAssessment" xsi:type="Property"/>
+                        <asTypeSpecifier localId="312" locator="63:49-63:59" name="fhir:Period" xsi:type="NamedTypeSpecifier"/>
+                     </operand>
+                  </operand>
+               </operand>
+               <operand localId="316" xsi:type="Interval">
+                  <low localId="319" xsi:type="ToDateTime">
+                     <signature localId="320" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand localId="317" path="low" xsi:type="Property">
+                        <source localId="315" locator="63:72-63:97" name="Risk Assessment Interval" xsi:type="ExpressionRef"/>
+                     </operand>
+                  </low>
+                  <lowClosedExpression localId="321" path="lowClosed" xsi:type="Property">
+                     <source localId="315" locator="63:72-63:97" name="Risk Assessment Interval" xsi:type="ExpressionRef"/>
+                  </lowClosedExpression>
+                  <high localId="324" xsi:type="ToDateTime">
+                     <signature localId="325" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <operand localId="322" path="high" xsi:type="Property">
+                        <source localId="315" locator="63:72-63:97" name="Risk Assessment Interval" xsi:type="ExpressionRef"/>
+                     </operand>
+                  </high>
+                  <highClosedExpression localId="326" path="highClosed" xsi:type="Property">
+                     <source localId="315" locator="63:72-63:97" name="Risk Assessment Interval" xsi:type="ExpressionRef"/>
+                  </highClosedExpression>
+               </operand>
+            </where>
+         </expression>
+      </def>
+      <def localId="330" locator="65:1-70:5" name="Prescribed Opioids for 7 of Past 10 Days with an Encounter" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="330">
+               <a:s>define &quot;Prescribed Opioids for 7 of Past 10 Days with an Encounter&quot;:
+  </a:s>
+               <a:s r="331">
+                  <a:s r="332">
+                     <a:s r="335">
+                        <a:s r="333">
+                           <a:s>Common</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="335">
+                           <a:s>&quot;Days on Opioids during Period&quot;( </a:s>
+                           <a:s r="334">
+                              <a:s>&quot;Previous 10 Days Interval&quot;</a:s>
+                           </a:s>
+                           <a:s> )</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s r="336"> >= 7</a:s>
+                  </a:s>
+                  <a:s>
+    and </a:s>
+                  <a:s r="339">
+                     <a:s>exists </a:s>
+                     <a:s r="372">
+                        <a:s>(
+      </a:s>
+                        <a:s r="372">
+                           <a:s>
+                              <a:s r="340">
+                                 <a:s r="344">
+                                    <a:s r="344">
+                                       <a:s>[Encounter: </a:s>
+                                       <a:s>
+                                          <a:s>Common.&quot;Office Visit&quot;</a:s>
+                                       </a:s>
+                                       <a:s>]</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> AmbulatoryEncounter</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+        </a:s>
+                           <a:s r="357">
+                              <a:s>where </a:s>
+                              <a:s r="357">
+                                 <a:s r="355">
+                                    <a:s r="354">
+                                       <a:s>AmbulatoryEncounter</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="355">
+                                       <a:s>period</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s r="357"> during </a:s>
+                                 <a:s r="356">
+                                    <a:s>&quot;Encounter Interval&quot;</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+    )</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="331" locator="66:3-70:5" xsi:type="And">
+            <operand localId="332" locator="66:3-66:76" xsi:type="GreaterOrEqual">
+               <signature localId="337" name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+               <signature localId="338" name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+               <operand localId="335" locator="66:3-66:71" name="Days on Opioids during Period" libraryName="Common" xsi:type="FunctionRef">
+                  <operand localId="334" locator="66:43-66:69" name="Previous 10 Days Interval" xsi:type="ExpressionRef"/>
+               </operand>
+               <operand localId="336" locator="66:76" valueType="t:Integer" value="7" xsi:type="Literal"/>
+            </operand>
+            <operand localId="339" locator="67:9-70:5" xsi:type="Exists">
+               <signature localId="373" xsi:type="ListTypeSpecifier">
+                  <elementType localId="374" name="fhir:Encounter" xsi:type="NamedTypeSpecifier"/>
+               </signature>
+               <operand localId="372" locator="67:16-70:5" xsi:type="Query">
+                  <source localId="340" locator="68:7-68:60" alias="AmbulatoryEncounter">
+                     <expression localId="344" locator="68:7-68:40" dataType="fhir:Encounter" templateId="http://hl7.org/fhir/StructureDefinition/Encounter" codeProperty="type" codeComparator="in" xsi:type="Retrieve">
+                        <codes localId="343" locator="68:19-68:39" name="Office Visit" libraryName="Common" preserve="true" xsi:type="ValueSetRef"/>
+                     </expression>
+                  </source>
+                  <where localId="357" locator="69:9-69:68" xsi:type="IncludedIn">
+                     <operand localId="358" name="ToInterval" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                        <signature localId="359" name="fhir:Period" xsi:type="NamedTypeSpecifier"/>
+                        <operand localId="355" locator="69:15-69:40" path="period" scope="AmbulatoryEncounter" xsi:type="Property"/>
+                     </operand>
+                     <operand localId="360" xsi:type="Interval">
+                        <low localId="363" xsi:type="ToDateTime">
+                           <signature localId="364" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                           <operand localId="361" path="low" xsi:type="Property">
+                              <source localId="356" locator="69:49-69:68" name="Encounter Interval" xsi:type="ExpressionRef"/>
+                           </operand>
+                        </low>
+                        <lowClosedExpression localId="365" path="lowClosed" xsi:type="Property">
+                           <source localId="356" locator="69:49-69:68" name="Encounter Interval" xsi:type="ExpressionRef"/>
+                        </lowClosedExpression>
+                        <high localId="368" xsi:type="ToDateTime">
+                           <signature localId="369" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                           <operand localId="366" path="high" xsi:type="Property">
+                              <source localId="356" locator="69:49-69:68" name="Encounter Interval" xsi:type="ExpressionRef"/>
+                           </operand>
+                        </high>
+                        <highClosedExpression localId="370" path="highClosed" xsi:type="Property">
+                           <source localId="356" locator="69:49-69:68" name="Encounter Interval" xsi:type="ExpressionRef"/>
+                        </highClosedExpression>
+                     </operand>
+                  </where>
+               </operand>
+            </operand>
+         </expression>
+      </def>
+      <def localId="377" locator="72:1-79:5" name="Inclusion Criteria" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="377">
+               <a:s>define &quot;Inclusion Criteria&quot;:
+  </a:s>
+               <a:s r="378">
+                  <a:s r="379">
+                     <a:s r="380">
+                        <a:s r="381">
+                           <a:s>&quot;Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential&quot;</a:s>
+                        </a:s>
+                        <a:s>
+    and </a:s>
+                        <a:s r="383">
+                           <a:s r="382">
+                              <a:s>Routines</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="383">
+                              <a:s>&quot;CDC 2022 Guideline General Inclusion Criteria&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    and </a:s>
+                     <a:s r="384">
+                        <a:s>not </a:s>
+                        <a:s r="385">
+                           <a:s>exists </a:s>
+                           <a:s r="386">
+                              <a:s>( </a:s>
+                              <a:s r="386">
+                                 <a:s>&quot;Opioid Risk Assessment in Past 90 Days&quot;</a:s>
+                              </a:s>
+                              <a:s> )</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    and </a:s>
+                  <a:s r="389">
+                     <a:s>(
+      </a:s>
+                     <a:s r="389">
+                        <a:s r="390">
+                           <a:s>&quot;Prescribed Opioids for 7 of Past 10 Days with an Encounter&quot;</a:s>
+                        </a:s>
+                        <a:s>
+        or </a:s>
+                        <a:s r="392">
+                           <a:s r="391">
+                              <a:s>Common</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="392">
+                              <a:s>&quot;Prescribed Opioids for 21 or more of 30 Days for each of the past 3 Months&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    )</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="378" locator="73:3-79:5" xsi:type="And">
+            <operand localId="379" locator="73:3-75:63" xsi:type="And">
+               <operand localId="380" locator="73:3-74:64" xsi:type="And">
+                  <operand localId="381" locator="73:3-73:81" name="Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential" xsi:type="ExpressionRef"/>
+                  <operand localId="383" locator="74:9-74:64" name="CDC 2022 Guideline General Inclusion Criteria" libraryName="Routines" xsi:type="ExpressionRef"/>
+               </operand>
+               <operand localId="384" locator="75:9-75:63" xsi:type="Not">
+                  <operand localId="385" locator="75:13-75:63" xsi:type="Exists">
+                     <signature localId="387" xsi:type="ListTypeSpecifier">
+                        <elementType localId="388" name="fhir:Procedure" xsi:type="NamedTypeSpecifier"/>
+                     </signature>
+                     <operand localId="386" locator="75:20-75:63" name="Opioid Risk Assessment in Past 90 Days" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+            </operand>
+            <operand localId="389" locator="76:9-79:5" xsi:type="Or">
+               <operand localId="390" locator="77:7-77:66" name="Prescribed Opioids for 7 of Past 10 Days with an Encounter" xsi:type="ExpressionRef"/>
+               <operand localId="392" locator="78:12-78:94" name="Prescribed Opioids for 21 or more of 30 Days for each of the past 3 Months" libraryName="Common" xsi:type="ExpressionRef"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="395" locator="81:1-82:33" name="Exclusion Criteria" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="395">
+               <a:s>define &quot;Exclusion Criteria&quot;:
+  </a:s>
+               <a:s r="397">
+                  <a:s r="396">
+                     <a:s>Common</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="397">
+                     <a:s>&quot;End of Life Assessment&quot;</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="397" locator="82:3-82:33" name="End of Life Assessment" libraryName="Common" xsi:type="ExpressionRef"/>
+      </def>
+      <def localId="400" locator="84:1-86:32" name="Is Recommendation Applicable?" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="400">
+               <a:s>define &quot;Is Recommendation Applicable?&quot;:
+  </a:s>
+               <a:s r="401">
+                  <a:s r="402">
+                     <a:s>&quot;Inclusion Criteria&quot;</a:s>
+                  </a:s>
+                  <a:s>
+    and </a:s>
+                  <a:s r="403">
+                     <a:s>not </a:s>
+                     <a:s r="404">
+                        <a:s>&quot;Exclusion Criteria&quot;</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="401" locator="85:3-86:32" xsi:type="And">
+            <operand localId="402" locator="85:3-85:22" name="Inclusion Criteria" xsi:type="ExpressionRef"/>
+            <operand localId="403" locator="86:9-86:32" xsi:type="Not">
+               <operand localId="404" locator="86:13-86:32" name="Exclusion Criteria" xsi:type="ExpressionRef"/>
+            </operand>
+         </expression>
+      </def>
+   </statements>
+</library>

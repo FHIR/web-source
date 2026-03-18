@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationDispense xmlns="http://hl7.org/fhir">
+  <id value="ambulatory-opioid"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: MedicationDispense ambulatory-opioid</b></p><a name="ambulatory-opioid"> </a><a name="hcambulatory-opioid"> </a><blockquote><p><b>Data Date-Roller Extension</b></p><ul><li>dateLastUpdated: 2023-05-01</li><li>frequency: No display for Duration  (value: 30.0; unit: days; system: http://unitsofmeasure.org; code: d)</li></ul></blockquote><p><b>status</b>: Completed</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/medicationdispense-category community}">Community</span></p><p><b>medication</b>: <span title="Codes:{http://www.nlm.nih.gov/research/umls/rxnorm 1010603}">Suboxone 2 MG / 0.5 MG Sublingual Film</span></p><p><b>subject</b>: <a href="Patient-example-opioidcds.html">opioidcds example  Male, DoB: 1983-01-10</a></p><p><b>whenHandedOver</b>: 2023-03-31</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Once per 1.0 days</p><p><b>asNeeded</b>: false</p><h3>DoseAndRates</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Dose[x]</b></td></tr><tr><td style="display: none">*</td><td>1.0 film</td></tr></table></blockquote></div>
+  </text>
+  <extension url="http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/dataDateRoller">
+    <extension url="dateLastUpdated">
+      <valueDateTime value="2023-05-01"/>
+    </extension>
+    <extension url="frequency">
+      <valueDuration>
+        <value value="30.0"/>
+        <unit value="days"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="d"/>
+      </valueDuration>
+    </extension>
+  </extension>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/medicationdispense-category"/>
+      <code value="community"/>
+      <display value="Community"/>
+    </coding>
+  </category>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+      <code value="1010603"/>
+      <display value="Suboxone 2 MG / 0.5 MG Sublingual Film"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/example-opioidcds"/>
+  </subject>
+  <whenHandedOver value="2023-03-31"/>
+  <dosageInstruction>
+    <timing>
+      <repeat>
+        <frequency value="1"/>
+        <period value="1.0"/>
+        <periodUnit value="d"/>
+      </repeat>
+    </timing>
+    <asNeededBoolean value="false"/>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="1.0"/>
+        <unit value="film"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+</MedicationDispense>

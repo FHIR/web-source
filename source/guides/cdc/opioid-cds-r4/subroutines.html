@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>2022 CDC Clinical Practice Guideline - Subroutines - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/cqf.css" rel="stylesheet"/>
+
+    <link href="assets/css/opioid.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"8"}
+    h3,h4,h5,h6{--heading-prefix:"8"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <div id="hl7-nav">
+  <img height="100" src="assets/images/opioid-overdose-statistic.png"/>
+</div>
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://confluence.hl7.org/spaces/FCP/pages/227218992/FHIR+Community+Process+Home"><img height="100" alt="This is an approved FHIR Community Process Specification. Visit the FHIR Community Process Site for more information." src="assets/images/HL7-FHIR-Community-Process-Logo_Specification.png"/> </a>
+</div>
+<!-- TODO: Push this into a template so we don't have to state the above, it should be inherited, but the _append. trick only works for templates -->
+<script type="text/javascript" src="assets/js/cql.js"> </script>
+<script type="text/javascript" src="assets/js/prism.js"> </script>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">2022.1.0 - Release 2022.1
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="profiles.html">Profiles</a></li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li><a href="terminology.html">Terminology</a></li>
+  <li><a href="examples.html">Examples</a></li>
+  <li><a href="documentation.html">Documentation</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>2022 CDC Clinical Practice Guideline - Subroutines</b></li>
+
+          <span style="float:right;">
+
+            <a href="user-interaction-alerts.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="acute-pain.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide (v2022.1.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://fhir.org/guides/cdc/opioid-cds/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>2022 CDC Clinical Practice Guideline - Subroutines</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#for-acute-pain" id="markdown-toc-for-acute-pain">For Acute Pain</a></li>
+  <li><a href="#for-subacute-or-chronic-pain" id="markdown-toc-for-subacute-or-chronic-pain">For Subacute or Chronic Pain</a></li>
+  <li><a href="#cdc-2022-general-inclusion-criteria" id="markdown-toc-cdc-2022-general-inclusion-criteria">CDC 2022 General Inclusion Criteria</a></li>
+  <li><a href="#active-cancer-treatment" id="markdown-toc-active-cancer-treatment">Active Cancer Treatment</a></li>
+  <li><a href="#opioid-naive" id="markdown-toc-opioid-naive">Opioid Naive</a></li>
+  <li><a href="#recommendation-specific-subroutines" id="markdown-toc-recommendation-specific-subroutines">Recommendation-specific Subroutines</a></li>
+</ul>
+
+</div>
+<h3 id="for-acute-pain">For Acute Pain</h3>
+
+<ul>
+  <li>Order for opioid analgesic with an expected supply duration less than or equal to 28 days or</li>
+  <li>Order for opioid analgesic with therapy type of "acute"</li>
+</ul>
+
+<div><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="417px" preserveAspectRatio="none" style="width:415px;height:417px;" version="1.1" viewBox="0 0 415 417" width="415px" zoomAndPan="magnify"><defs><linearGradient id="g15v5e7bsykdlc0" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#525252" /><stop offset="100%" stop-color="#262626" /></linearGradient></defs><g><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="20" font-weight="bold" lengthAdjust="spacing" textLength="260" x="76" y="51.38">For Acute Pain Subroutine</text><ellipse cx="207.5" cy="88.24" fill="url(#g15v5e7bsykdlc0)" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;" /><rect fill="#262626" height="6" rx="2.5" ry="2.5" style="stroke:#262626;stroke-width:1.0;" width="393" x="11" y="118.24" /><rect fill="#306516" height="105.3765" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="169" x="23" y="144.24" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="126" x="46" y="177.0681">Opioid analgesic order</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="116" x="49" y="193.4122">with expected supply</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="114" x="52" y="209.7563">duration of less than</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="48" x="79" y="226.1004">28 days?</text><rect fill="#306516" height="89.0323" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="172" x="220" y="152.412" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="126" x="243" y="185.2401">Opioid analgesic order</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="96" x="252" y="201.5842">with therapy type</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="46" x="273" y="217.9284">"acute"?</text><polygon fill="#306516" points="207.5,259.6164,219.5,271.6164,207.5,283.6164,195.5,271.6164,207.5,259.6164" style="stroke:#C6C6C6;stroke-width:0.5;" /><polygon fill="#306516" points="145.5,303.8045,269.5,303.8045,281.5,321.9766,269.5,340.1486,145.5,340.1486,133.5,321.9766,145.5,303.8045" style="stroke:#F4F4F4;stroke-width:0.5;" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="104" x="155.5" y="326.6326">Any answer is yes?</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="19" x="104.5" y="308.4605">yes</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="14" x="291.5" y="308.4605">no</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="100" x="73.5" y="350.1486" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="60" x="93.5" y="382.9767">Return Yes</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="96" x="243.5" y="350.1486" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="56" x="263.5" y="382.9767">Return No</text><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="107.5" x2="107.5" y1="124.24" y2="144.24" /><polygon fill="#C6C6C6" points="103.5,134.24,107.5,144.24,111.5,134.24,107.5,138.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="306" x2="306" y1="124.24" y2="152.412" /><polygon fill="#C6C6C6" points="302,142.412,306,152.412,310,142.412,306,146.412" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="107.5" x2="107.5" y1="249.6164" y2="271.6164" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="107.5" x2="195.5" y1="271.6164" y2="271.6164" /><polygon fill="#C6C6C6" points="185.5,267.6164,195.5,271.6164,185.5,275.6164,189.5,271.6164" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="306" x2="306" y1="241.4444" y2="271.6164" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="306" x2="219.5" y1="271.6164" y2="271.6164" /><polygon fill="#C6C6C6" points="229.5,267.6164,219.5,271.6164,229.5,275.6164,225.5,271.6164" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="207.5" x2="207.5" y1="98.24" y2="118.24" /><polygon fill="#C6C6C6" points="203.5,108.24,207.5,118.24,211.5,108.24,207.5,112.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="133.5" x2="123.5" y1="321.9766" y2="321.9766" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="123.5" x2="123.5" y1="321.9766" y2="350.1486" /><polygon fill="#C6C6C6" points="119.5,340.1486,123.5,350.1486,127.5,340.1486,123.5,344.1486" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="281.5" x2="291.5" y1="321.9766" y2="321.9766" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="291.5" x2="291.5" y1="321.9766" y2="350.1486" /><polygon fill="#C6C6C6" points="287.5,340.1486,291.5,350.1486,295.5,340.1486,291.5,344.1486" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="207.5" x2="207.5" y1="283.6164" y2="303.8045" /><polygon fill="#C6C6C6" points="203.5,293.8045,207.5,303.8045,211.5,293.8045,207.5,297.8045" style="stroke:#C6C6C6;stroke-width:1.0;" /></g></svg></div>
+<table id="dataElements">
+  <tr>
+  <th>Definition</th>
+  <th>Answer to Proceed</th>
+  <th>Details</th>
+  <th>Data (Terminology) Requirement</th>
+  <th>Profile</th>
+  <th>Path</th>
+</tr>
+  <tr>
+    <td>Order for opioid analgesics with ambulatory misuse potential with duration &lt; 28 days</td>
+    <td>Yes</td>
+    <td>Look for an existing prescription (order) for opioid analgesics with ambulatory misuse potential with duration &lt; 28 days</td>
+    <td>Opioid analgesics with ambulatory misuse potential</td>
+    <td><a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest">MedicationRequest</a></td>
+    <td>MedicationRequest.medication, MedicationRequest.category, and MedicationRequest.dispenseRequest.expectedSupplyDuration</td>
+  </tr>
+  <tr>
+    <td>Order for opioid analgesics with ambulatory misuse potential with therapy type of "acute"</td>
+    <td>Yes</td>
+    <td>Look for an existing prescription (order) for opioid analgesics with ambulatory misuse potential with therapy type of "acute"</td>
+    <td>Opioid analgesics with ambulatory misuse potential</td>
+    <td><a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest">MedicationRequest</a></td>
+    <td>MedicationRequest.medication, MedicationRequest.category, and MedicationRequest.therapyType</td>
+  </tr>
+</table>
+
+<p>For more information see the <a href="acute-pain.html">acute pain documentation</a></p>
+
+<h3 id="for-subacute-or-chronic-pain">For Subacute or Chronic Pain</h3>
+
+<ul>
+  <li>Order for opioid analgesic with an expected supply duration of 28 days or longer or</li>
+  <li>Order in the past 90 days for opioid analgesic with therapy type of "continuous" or</li>
+  <li>Order for opioid analgesic for 28 of the past 90 days including today and</li>
+  <li>An active or pending order for opioid analgesic</li>
+</ul>
+
+<div><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="555px" preserveAspectRatio="none" style="width:622px;height:555px;" version="1.1" viewBox="0 0 622 555" width="622px" zoomAndPan="magnify"><defs><linearGradient id="ghk1pxmn5871y0" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#525252" /><stop offset="100%" stop-color="#262626" /></linearGradient></defs><g><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="20" font-weight="bold" lengthAdjust="spacing" textLength="365" x="127" y="51.38">Subacute or Chronic Pain Subroutine</text><ellipse cx="311" cy="88.24" fill="url(#ghk1pxmn5871y0)" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;" /><rect fill="#262626" height="6" rx="2.5" ry="2.5" style="stroke:#262626;stroke-width:1.0;" width="600" x="11" y="118.24" /><rect fill="#306516" height="105.3765" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="182" x="23" y="208.0841" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="126" x="49" y="240.9122">Opioid analgesic order</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="133" x="49" y="257.2563">with an expected supply</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="107" x="55" y="273.6004">duration of 28 days</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="56" x="70" y="289.9445">or longer?</text><rect fill="#306516" height="105.3765" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="169" x="233" y="208.0841" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="126" x="253" y="240.9122">Opioid analgesic order</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="104" x="259" y="257.2563">in the past 90 days</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="97" x="265" y="273.6004">with "continuous"</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="75" x="271" y="289.9445">therapy type?</text><rect fill="#306516" height="89.0323" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="169" x="430" y="144.24" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="126" x="450" y="177.0681">Opioid analgesic order</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="112" x="453" y="193.4122">for 28 of the past 90</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="126" x="453" y="209.7563">days (including today)?</text><rect fill="#306516" height="72.6882" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="169" x="430" y="304.6164" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="97" x="462" y="337.4445">Active or pending</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="129" x="450" y="353.7886">opioid analgesic order?</text><polygon fill="#306516" points="311,397.3047,323,409.3047,311,421.3047,299,409.3047,311,397.3047" style="stroke:#C6C6C6;stroke-width:0.5;" /><polygon fill="#306516" points="249,441.4927,373,441.4927,385,459.6648,373,477.8369,249,477.8369,237,459.6648,249,441.4927" style="stroke:#F4F4F4;stroke-width:0.5;" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="104" x="259" y="464.3208">Any answer is yes?</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="19" x="208" y="446.1488">yes</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="14" x="395" y="446.1488">no</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="100" x="177" y="487.8369" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="60" x="197" y="520.6649">Return Yes</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="96" x="347" y="487.8369" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="56" x="367" y="520.6649">Return No</text><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="514.5" x2="514.5" y1="233.2723" y2="304.6164" /><polygon fill="#C6C6C6" points="510.5,294.6164,514.5,304.6164,518.5,294.6164,514.5,298.6164" style="stroke:#C6C6C6;stroke-width:1.0;" /><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="26" x="528.5" y="273.6004">AND</text><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="114" x2="114" y1="124.24" y2="208.0841" /><polygon fill="#C6C6C6" points="110,198.0841,114,208.0841,118,198.0841,114,202.0841" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="317.5" x2="317.5" y1="124.24" y2="208.0841" /><polygon fill="#C6C6C6" points="313.5,198.0841,317.5,208.0841,321.5,198.0841,317.5,202.0841" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="514.5" x2="514.5" y1="124.24" y2="144.24" /><polygon fill="#C6C6C6" points="510.5,134.24,514.5,144.24,518.5,134.24,514.5,138.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="114" x2="114" y1="313.4605" y2="409.3047" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="114" x2="299" y1="409.3047" y2="409.3047" /><polygon fill="#C6C6C6" points="289,405.3047,299,409.3047,289,413.3047,293,409.3047" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="317.5" x2="317.5" y1="313.4605" y2="397.3047" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="317.5" x2="311" y1="397.3047" y2="397.3047" /><polygon fill="#C6C6C6" points="307,387.3047,311,397.3047,315,387.3047,311,391.3047" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="514.5" x2="514.5" y1="377.3047" y2="409.3047" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="514.5" x2="323" y1="409.3047" y2="409.3047" /><polygon fill="#C6C6C6" points="333,405.3047,323,409.3047,333,413.3047,329,409.3047" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="311" x2="311" y1="98.24" y2="118.24" /><polygon fill="#C6C6C6" points="307,108.24,311,118.24,315,108.24,311,112.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="237" x2="227" y1="459.6648" y2="459.6648" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="227" x2="227" y1="459.6648" y2="487.8369" /><polygon fill="#C6C6C6" points="223,477.8369,227,487.8369,231,477.8369,227,481.8369" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="385" x2="395" y1="459.6648" y2="459.6648" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="395" x2="395" y1="459.6648" y2="487.8369" /><polygon fill="#C6C6C6" points="391,477.8369,395,487.8369,399,477.8369,395,481.8369" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="311" x2="311" y1="421.3047" y2="441.4927" /><polygon fill="#C6C6C6" points="307,431.4927,311,441.4927,315,431.4927,311,435.4927" style="stroke:#C6C6C6;stroke-width:1.0;" /></g></svg></div>
+<table id="dataElements">
+    <tr>
+  <th>Definition</th>
+  <th>Answer to Proceed</th>
+  <th>Details</th>
+  <th>Data (Terminology) Requirement</th>
+  <th>Profile</th>
+  <th>Path</th>
+</tr>
+    <tr>
+        <td>Order for opioid analgesic with expected supply duration &ge; 28 days, or</td>
+        <td>Yes</td>
+        <td>Order for opioid analgesics with ambulatory misuse potential with a supply duration &ge; 28 days<br />
+        &#8226; Subacute definition = order for opioid analgesic with ambulatory misuse potential with a supply duration of one to two months<br />
+        &#8226; Chronic pain definition = order for opioid analgesic with ambulatory misuse potential with a supply duration of &ge; two months</td>
+        <td>Opioid analgesics with ambulatory misuse potential</td>
+        <td><a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest">MedicationRequest</a></td>
+        <td>MedicationRequest.medication and MedicationRequest.dispenseRequest.expectedSupplyDuration or MedicationRequest.dispenseRequest.validityPeriod or MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod</td>
+    </tr>
+    <tr>
+        <td>A present or past order in the last 90 days for opioid analgesic with ambulatory misuse potential with courseOfTherapyType of continuous, or</td>
+        <td>Yes</td>
+        <td>&#8226; Note that <a href="https://hl7.org/fhir/us/core/StructureDefinition-us-core-medicationrequest-definitions.html#MedicationRequest.courseOfTherapyType">courseOfTherapyType</a> is an element of the US Core MedicationRequest resource. In some EHRs, users can populate this element by setting a flag indicating that order is part of long-term care.</td>
+        <td>Opioid analgesics with ambulatory misuse potential</td>
+        <td><a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest">MedicationRequest</a></td>
+        <td>MedicationRequest.medication and MedicationRequest.authoredOn or MedicationRequest.dosageInstruction.timing.event and MedicationRequest.courseOfTherapyType</td>
+    </tr>
+    <tr>
+        <td>Order for opioid analgesic with ambulatory misuse potential prescribed for 28 of the past 90 days from today, and an active or pending order for opioid analgesics with ambulatory misuse potential</td>
+        <td>Yes</td>
+        <td>&#8226; Reviews active and past medications for an indication of recent treatment for chronic pain.</td>
+        <td>Opioid analgesics with ambulatory misuse potential</td>
+        <td><a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest">MedicationRequest</a></td>
+        <td>MedicationRequest.medication and MedicationRequest.dispenseRequest.expectedSupplyDuration or MedicationRequest.dispenseRequest.validityPeriod or MedicationRequest.dosageInstruction.timing.repeat.boundsPeriod and MedicationRequest.status</td>
+    </tr>
+</table>
+
+<p>For more information see the <a href="chronic-pain.html">subacute and/or chronic pain documentation</a></p>
+
+<h3 id="cdc-2022-general-inclusion-criteria">CDC 2022 General Inclusion Criteria</h3>
+
+<ul>
+  <li>Patient is 18 or older</li>
+  <li>Patient does not have evidence of sickle cell disease</li>
+  <li>Patient does not have findings indicating limited life expectancy</li>
+  <li>Patient does not have orders for therapies indicating end of life care</li>
+  <li>Patient is not undergoing active cancer treatment:</li>
+  <ul>
+  <li>Patient problem list includes CDC malignant cancer condition, or</li>
+  <li>Patient has had at least 2 office visits within the past 12 months with a CDC malignant cancer condition diagnosis</li>
+</ul>
+
+  <li>Patient does not have conditions likely terminal for opioid prescribing present</li>
+</ul>
+
+<div><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="417px" preserveAspectRatio="none" style="width:887px;height:417px;" version="1.1" viewBox="0 0 887 417" width="887px" zoomAndPan="magnify"><defs><linearGradient id="gwxeijlsycpp00" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#525252" /><stop offset="100%" stop-color="#262626" /></linearGradient></defs><g><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="20" font-weight="bold" lengthAdjust="spacing" textLength="466" x="209.25" y="51.38">CDC 2022 General Inclusion Criteria Subroutine</text><ellipse cx="435.5" cy="88.24" fill="url(#gwxeijlsycpp00)" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;" /><rect fill="#262626" height="6" rx="2.5" ry="2.5" style="stroke:#262626;stroke-width:1.0;" width="865.5" x="11" y="118.24" /><rect fill="#306516" height="89.0323" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="96" x="23" y="152.412" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="22" x="55" y="185.2401">Age</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="50" x="46" y="201.5842">less than</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="53" x="46" y="217.9284">18 years?</text><rect fill="#306516" height="89.0323" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="107" x="129" y="152.412" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="64" x="152" y="185.2401">Evidence of</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="53" x="155" y="201.5842">sickle cell</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="48" x="158" y="217.9284">disease?</text><rect fill="#306516" height="105.3765" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="126" x="246" y="144.24" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="41" x="284" y="177.0681">Limited</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="83" x="269" y="193.4122">life expectancy</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="57" x="278" y="209.7563">conditions</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="48" x="281" y="226.1004">present?</text><rect fill="#306516" height="105.3765" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="153" x="400" y="144.24" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="52" x="447" y="177.0681">Order for</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="110" x="423" y="193.4122">therapies indicating</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="83" x="432" y="209.7563">end of life care</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="88" x="429" y="226.1004">in past 90 days?</text><rect fill="#306516" height="72.6882" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="118" x="579.5" y="160.5841" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="3" x="599.5" y="209.7563">&#160;</text><a href="subroutines.html#active-cancer-treatment" target="_top" title="subroutines.html#active-cancer-treatment" xlink:actuate="onRequest" xlink:href="subroutines.html#active-cancer-treatment" xlink:show="new" xlink:title="subroutines.html#active-cancer-treatment" xlink:type="simple"><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" text-decoration="underline" textLength="75" x="602.5" y="193.4122">Active cancer</text></a><a href="subroutines.html#active-cancer-treatment" target="_top" title="subroutines.html#active-cancer-treatment" xlink:actuate="onRequest" xlink:href="subroutines.html#active-cancer-treatment" xlink:show="new" xlink:title="subroutines.html#active-cancer-treatment" xlink:type="simple"><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" text-decoration="underline" textLength="61" x="608.5" y="209.7563">treatment?</text></a><rect fill="#306516" height="89.0323" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="157" x="707.5" y="152.412" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="84" x="739.5" y="185.2401">Condition likely</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="103" x="733.5" y="201.5842">terminal for opioid</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="114" x="730.5" y="217.9284">prescribing present?</text><polygon fill="#306516" points="435.5,259.6164,447.5,271.6164,435.5,283.6164,423.5,271.6164,435.5,259.6164" style="stroke:#C6C6C6;stroke-width:0.5;" /><polygon fill="#306516" points="373.5,303.8045,497.5,303.8045,509.5,321.9766,497.5,340.1486,373.5,340.1486,361.5,321.9766,373.5,303.8045" style="stroke:#F4F4F4;stroke-width:0.5;" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="104" x="383.5" y="326.6326">Any answer is yes?</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="19" x="332.5" y="308.4605">yes</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="14" x="519.5" y="308.4605">no</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="96" x="303.5" y="350.1486" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="56" x="323.5" y="382.9767">Return No</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="100" x="469.5" y="350.1486" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="60" x="489.5" y="382.9767">Return Yes</text><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="71" x2="71" y1="124.24" y2="152.412" /><polygon fill="#C6C6C6" points="67,142.412,71,152.412,75,142.412,71,146.412" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="182.5" x2="182.5" y1="124.24" y2="152.412" /><polygon fill="#C6C6C6" points="178.5,142.412,182.5,152.412,186.5,142.412,182.5,146.412" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="309" x2="309" y1="124.24" y2="144.24" /><polygon fill="#C6C6C6" points="305,134.24,309,144.24,313,134.24,309,138.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="476.5" x2="476.5" y1="124.24" y2="144.24" /><polygon fill="#C6C6C6" points="472.5,134.24,476.5,144.24,480.5,134.24,476.5,138.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="638.5" x2="638.5" y1="124.24" y2="160.5841" /><polygon fill="#C6C6C6" points="634.5,150.5841,638.5,160.5841,642.5,150.5841,638.5,154.5841" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="786" x2="786" y1="124.24" y2="152.412" /><polygon fill="#C6C6C6" points="782,142.412,786,152.412,790,142.412,786,146.412" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="71" x2="71" y1="241.4444" y2="271.6164" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="71" x2="423.5" y1="271.6164" y2="271.6164" /><polygon fill="#C6C6C6" points="413.5,267.6164,423.5,271.6164,413.5,275.6164,417.5,271.6164" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="182.5" x2="182.5" y1="241.4444" y2="271.6164" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="182.5" x2="423.5" y1="271.6164" y2="271.6164" /><polygon fill="#C6C6C6" points="413.5,267.6164,423.5,271.6164,413.5,275.6164,417.5,271.6164" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="309" x2="309" y1="249.6164" y2="271.6164" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="309" x2="423.5" y1="271.6164" y2="271.6164" /><polygon fill="#C6C6C6" points="413.5,267.6164,423.5,271.6164,413.5,275.6164,417.5,271.6164" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="476.5" x2="476.5" y1="249.6164" y2="271.6164" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="476.5" x2="447.5" y1="271.6164" y2="271.6164" /><polygon fill="#C6C6C6" points="457.5,267.6164,447.5,271.6164,457.5,275.6164,453.5,271.6164" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="638.5" x2="638.5" y1="233.2723" y2="271.6164" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="638.5" x2="447.5" y1="271.6164" y2="271.6164" /><polygon fill="#C6C6C6" points="457.5,267.6164,447.5,271.6164,457.5,275.6164,453.5,271.6164" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="786" x2="786" y1="241.4444" y2="271.6164" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="786" x2="447.5" y1="271.6164" y2="271.6164" /><polygon fill="#C6C6C6" points="457.5,267.6164,447.5,271.6164,457.5,275.6164,453.5,271.6164" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="435.5" x2="435.5" y1="98.24" y2="118.24" /><polygon fill="#C6C6C6" points="431.5,108.24,435.5,118.24,439.5,108.24,435.5,112.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="361.5" x2="351.5" y1="321.9766" y2="321.9766" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="351.5" x2="351.5" y1="321.9766" y2="350.1486" /><polygon fill="#C6C6C6" points="347.5,340.1486,351.5,350.1486,355.5,340.1486,351.5,344.1486" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="509.5" x2="519.5" y1="321.9766" y2="321.9766" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="519.5" x2="519.5" y1="321.9766" y2="350.1486" /><polygon fill="#C6C6C6" points="515.5,340.1486,519.5,350.1486,523.5,340.1486,519.5,344.1486" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="435.5" x2="435.5" y1="283.6164" y2="303.8045" /><polygon fill="#C6C6C6" points="431.5,293.8045,435.5,303.8045,439.5,293.8045,435.5,297.8045" style="stroke:#C6C6C6;stroke-width:1.0;" /></g></svg></div>
+<table id="dataElements">
+  <tr>
+  <th>Definition</th>
+  <th>Answer to Proceed</th>
+  <th>Details</th>
+  <th>Data (Terminology) Requirement</th>
+  <th>Profile</th>
+  <th>Path</th>
+</tr>
+  <tr>
+    <td>Age &lt; 18 years?</td>
+    <td>No</td>
+    <td>Calculate age from date of birth; exclude patients with age less than 18 years at the time of the prescription</td>
+    <td>Date of birth</td>
+    <td><a href="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-patient">Patient</a></td> 
+    <td>Patient.birthDate</td>
+  </tr>
+  <tr>
+    <td>Evidence of sickle cell disease?</td>
+    <td>No</td>
+    <td>Look for patients with a diagnosis or problem list entry indicating sickle cell disease</td>
+    <td>Sickle cell disease condition</td>
+    <td><a href="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-condition">Condition</a></td>
+    <td>Condition.category, Condition.code, and Condition.clinicalStatus</td>
+  </tr>
+  <tr>
+    <td>Limited life expectancy conditions present?</td>
+    <td>No</td>
+    <td>Look for documented findings consistent with those listed in the limited life expectancy value set (terminal illness, bad prognosis, pre-terminal)</td>
+    <td>Limited life expectancy conditions</td>
+    <td><a href="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-condition">Condition</a></td>
+    <td>Condition.category and Condition.code</td>
+  </tr>
+  <tr>
+    <td>Order for therapies indicating end of life care in past 90 days?</td>
+    <td>No</td>
+    <td>Look for patients with an existing order for therapies indicating end of life care written within past 90 days</td>
+    <td>Therapies indicating end of life care</td>
+    <td><a href="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-servicerequest">ServiceRequest</a></td>
+    <td>ServiceRequest.status, ServiceRequest.intent, ServiceRequest.authoredOn, and ServiceRequest.code</td>
+  </tr>
+  <tr>
+    <td>Active cancer treatment?</td>
+    <td>No</td>
+    <td>See <a href="subroutines.html#active-cancer-treatment">Active Cancer Treatment sub-routine</a></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Conditions Likely Terminal for opioid prescribing present?</td>
+    <td>No</td>
+    <td>Look for patients with <em>active</em> conditions in the value set end-of-life-conditions</td>
+    <td>Conditions likely terminal for opioid prescribing</td>
+    <td><a href="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-condition">Condition</a></td>
+    <td>Condition.category, Condition.code, and Condition.clinicalStatus</td>
+  </tr>
+</table>
+
+<h3 id="active-cancer-treatment">Active Cancer Treatment</h3>
+
+<ul>
+  <li>Patient problem list includes CDC malignant cancer condition, or</li>
+  <li>Patient has had at least 2 office visits within the past 12 months with a CDC malignant cancer condition diagnosis</li>
+</ul>
+
+<div><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="561px" preserveAspectRatio="none" style="width:428px;height:561px;" version="1.1" viewBox="0 0 428 561" width="428px" zoomAndPan="magnify"><defs><linearGradient id="g15j8dflyzprju0" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#525252" /><stop offset="100%" stop-color="#262626" /></linearGradient></defs><g><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="20" font-weight="bold" lengthAdjust="spacing" textLength="365" x="30" y="51.38">Active Cancer Treatment Subroutine</text><ellipse cx="214" cy="88.24" fill="url(#g15j8dflyzprju0)" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;" /><rect fill="#262626" height="6" rx="2.5" ry="2.5" style="stroke:#262626;stroke-width:1.0;" width="336" x="46" y="118.24" /><rect fill="#306516" height="105.3765" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="140" x="58" y="216.2561" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="66" x="93" y="249.0842">Problem list</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="74" x="90" y="265.4284">includes CDC</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="97" x="81" y="281.7725">malignant cancer</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="56" x="96" y="298.1166">condition?</text><rect fill="#306516" height="72.6882" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="144" x="226" y="144.24" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="101" x="249" y="177.0681">Two office visits in</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="91" x="252" y="193.4122">past 12 months?</text><rect fill="#306516" height="105.3765" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="137" x="229.5" y="288.2723" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="58" x="264.5" y="321.1004">Office visit</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="78" x="258.5" y="337.4445">including CDC</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="97" x="249.5" y="353.7886">malignant cancer</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="56" x="261.5" y="370.1328">condition?</text><polygon fill="#306516" points="214,403.6488,226,415.6488,214,427.6488,202,415.6488,214,403.6488" style="stroke:#C6C6C6;stroke-width:0.5;" /><polygon fill="#306516" points="152,447.8369,276,447.8369,288,466.0089,276,484.181,152,484.181,140,466.0089,152,447.8369" style="stroke:#F4F4F4;stroke-width:0.5;" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="104" x="162" y="470.6649">Any answer is yes?</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="19" x="111" y="452.4929">yes</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="14" x="298" y="452.4929">no</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="100" x="80" y="494.181" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="60" x="100" y="527.0091">Return Yes</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="96" x="250" y="494.181" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="56" x="270" y="527.0091">Return No</text><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="298" x2="298" y1="216.9282" y2="288.2723" /><polygon fill="#C6C6C6" points="294,278.2723,298,288.2723,302,278.2723,298,282.2723" style="stroke:#C6C6C6;stroke-width:1.0;" /><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="26" x="312" y="257.2563">AND</text><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="128" x2="128" y1="124.24" y2="216.2561" /><polygon fill="#C6C6C6" points="124,206.2561,128,216.2561,132,206.2561,128,210.2561" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="298" x2="298" y1="124.24" y2="144.24" /><polygon fill="#C6C6C6" points="294,134.24,298,144.24,302,134.24,298,138.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="128" x2="128" y1="321.6326" y2="415.6488" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="128" x2="202" y1="415.6488" y2="415.6488" /><polygon fill="#C6C6C6" points="192,411.6488,202,415.6488,192,419.6488,196,415.6488" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="298" x2="298" y1="393.6488" y2="415.6488" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="298" x2="226" y1="415.6488" y2="415.6488" /><polygon fill="#C6C6C6" points="236,411.6488,226,415.6488,236,419.6488,232,415.6488" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="214" x2="214" y1="98.24" y2="118.24" /><polygon fill="#C6C6C6" points="210,108.24,214,118.24,218,108.24,214,112.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="140" x2="130" y1="466.0089" y2="466.0089" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="130" x2="130" y1="466.0089" y2="494.181" /><polygon fill="#C6C6C6" points="126,484.181,130,494.181,134,484.181,130,488.181" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="288" x2="298" y1="466.0089" y2="466.0089" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="298" x2="298" y1="466.0089" y2="494.181" /><polygon fill="#C6C6C6" points="294,484.181,298,494.181,302,484.181,298,488.181" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="214" x2="214" y1="427.6488" y2="447.8369" /><polygon fill="#C6C6C6" points="210,437.8369,214,447.8369,218,437.8369,214,441.8369" style="stroke:#C6C6C6;stroke-width:1.0;" /></g></svg></div>
+<table id="dataElements">
+  <tr>
+  <th>Definition</th>
+  <th>Answer to Proceed</th>
+  <th>Details</th>
+  <th>Data (Terminology) Requirement</th>
+  <th>Profile</th>
+  <th>Path</th>
+</tr>
+  <tr>
+    <td>Patient problem list includes CDC malignant cancer condition?</td>
+    <td>No</td>
+    <td>&#8226; An active CDC malignant cancer condition entry is present within the Patient's problem list</td>
+    <td>CDC malignant cancer conditions</td>
+    <td>
+      <a href="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-condition">Condition</a>
+    </td>
+    <td>Condition.category and Condition.code</td>
+  </tr>
+  <tr>
+    <td>Two office visits within the past 12 months?</td>
+    <td>No</td>
+    <td>Look for a minimum of two distinct encounters within 12 months of the date of the current visit for which each of the following is true:<br />
+      &#8226; the encounter diagnosis (primary or secondary or co-morbidity diagnosis) is listed in the CDC Malignant Cancer Conditions value set</td>
+    <td>Office Visit</td>
+    <td>
+      <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter">Encounter</a>
+    </td>
+    <td>Encounter.class and Encounter.period.start</td>
+  </tr>
+  <tr>
+    <td>Office visits including CDC malignant cancer condition?</td>
+    <td>No</td>
+    <td>&#8226; The encounter diagnosis (primary or secondary or co-morbidity diagnosis) is listed in the CDC Malignant Cancer Conditions value set</td>
+    <td>CDC malignant cancer conditions</td>
+    <td>      
+      <a href="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-condition">Condition</a> and 
+      <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter">Encounter</a>
+    </td>
+    <td>Condition.category, Condition.code, and Encounter.diagnosis</td>
+  </tr>
+</table>
+
+<h3 id="opioid-naive">Opioid Naive</h3>
+
+<ul>
+  <li>No indication of opioid use in the past 90 days from a prescription, self report (for future implementation), or a dispensing event (for future implementation)</li>
+</ul>
+
+<div><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="427px" preserveAspectRatio="none" style="width:692px;height:427px;" version="1.1" viewBox="0 0 692 427" width="692px" zoomAndPan="magnify"><defs><linearGradient id="g1ukmm71itva5h0" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#525252" /><stop offset="100%" stop-color="#262626" /></linearGradient></defs><g><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="20" font-weight="bold" lengthAdjust="spacing" textLength="128" x="280.5" y="51.38">Opioid Naive</text><ellipse cx="346" cy="88.24" fill="url(#g1ukmm71itva5h0)" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;" /><rect fill="#262626" height="6" rx="2.5" ry="2.5" style="stroke:#262626;stroke-width:1.0;" width="670" x="11" y="118.24" /><rect fill="#306516" height="105.3765" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="196" x="23" y="144.24" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="9" x="43" y="177.0681">&#160;&#160;&#160;</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="73" x="52" y="177.0681">Prescription</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="53" x="128" y="177.0681">for opioid</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="152" x="46" y="193.4122">analgesics with ambulatory</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="153" x="46" y="209.7563">misuse potential in the past</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="143" x="49" y="226.1004">90 days (including today)?</text><rect fill="#306516" height="105.3765" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="198" x="247" y="144.24" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="27" x="267" y="177.0681">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="40" x="294" y="177.0681">Report</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="48" x="337" y="177.0681">of opioid</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="152" x="270" y="193.4122">analgesics with ambulatory</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="153" x="270" y="209.7563">misuse potential in the past</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="143" x="273" y="226.1004">90 days (including today)?</text><rect fill="#306516" height="105.3765" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="196" x="473" y="144.24" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="105" x="493" y="177.0681">Dispensing event</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="48" x="601" y="177.0681">of opioid</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="152" x="496" y="193.4122">analgesics with ambulatory</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="153" x="493" y="209.7563">misuse potential in the past</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="143" x="496" y="226.1004">90 days (including today)?</text><polygon fill="#306516" points="346,269.6164,358,281.6164,346,293.6164,334,281.6164,346,269.6164" style="stroke:#C6C6C6;stroke-width:0.5;" /><polygon fill="#306516" points="284,313.8045,408,313.8045,420,331.9766,408,350.1486,284,350.1486,272,331.9766,284,313.8045" style="stroke:#F4F4F4;stroke-width:0.5;" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="104" x="294" y="336.6326">Any answer is yes?</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="19" x="243" y="318.4605">yes</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="14" x="430" y="318.4605">no</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="96" x="214" y="360.1486" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="56" x="234" y="392.9767">Return No</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="100" x="380" y="360.1486" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="60" x="400" y="392.9767">Return Yes</text><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="121" x2="121" y1="124.24" y2="144.24" /><polygon fill="#C6C6C6" points="117,134.24,121,144.24,125,134.24,121,138.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="346" x2="346" y1="124.24" y2="144.24" /><polygon fill="#C6C6C6" points="342,134.24,346,144.24,350,134.24,346,138.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="571" x2="571" y1="124.24" y2="144.24" /><polygon fill="#C6C6C6" points="567,134.24,571,144.24,575,134.24,571,138.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="121" x2="121" y1="249.6164" y2="281.6164" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="121" x2="334" y1="281.6164" y2="281.6164" /><polygon fill="#C6C6C6" points="324,277.6164,334,281.6164,324,285.6164,328,281.6164" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="346" x2="346" y1="249.6164" y2="269.6164" /><polygon fill="#C6C6C6" points="342,259.6164,346,269.6164,350,259.6164,346,263.6164" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="571" x2="571" y1="249.6164" y2="281.6164" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="571" x2="358" y1="281.6164" y2="281.6164" /><polygon fill="#C6C6C6" points="368,277.6164,358,281.6164,368,285.6164,364,281.6164" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="346" x2="346" y1="98.24" y2="118.24" /><polygon fill="#C6C6C6" points="342,108.24,346,118.24,350,108.24,346,112.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="272" x2="262" y1="331.9766" y2="331.9766" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="262" x2="262" y1="331.9766" y2="360.1486" /><polygon fill="#C6C6C6" points="258,350.1486,262,360.1486,266,350.1486,262,354.1486" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="420" x2="430" y1="331.9766" y2="331.9766" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="430" x2="430" y1="331.9766" y2="360.1486" /><polygon fill="#C6C6C6" points="426,350.1486,430,360.1486,434,350.1486,430,354.1486" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="346" x2="346" y1="293.6164" y2="313.8045" /><polygon fill="#C6C6C6" points="342,303.8045,346,313.8045,350,303.8045,346,307.8045" style="stroke:#C6C6C6;stroke-width:1.0;" /></g></svg></div>
+<div>
+  <p>An evaluation to determine if a patient is opioid naive is not possible when a EHR system does not support queries for past medications by date range.</p>
+</div>
+<table id="dataElements">
+  <tr>
+  <th>Definition</th>
+  <th>Answer to Proceed</th>
+  <th>Details</th>
+  <th>Data (Terminology) Requirement</th>
+  <th>Profile</th>
+  <th>Path</th>
+</tr>
+  <tr>
+    <td>Opioid analgesics with ambulatory misuse potential prescription in past 90 days excluding the last 24 hours?</td>
+    <td>No</td>
+    <td>Look for an existing prescription (order) for opioid that is in the value set for opioid with ambulatory <br />misuse potential authored within the past 90 days (excluding the last 24 hours)</td>
+    <td>Opioid analgesics with ambulatory misuse potential</td>
+    <td><a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest">MedicationRequest</a></td>
+    <td>MedicationRequest.medication, MedicationRequest.category, and MedicationRequest.authoredOn</td>
+  </tr>
+  <tr>
+    <td>Opioid analgesics with ambulatory misuse potential reported as being taken excluding the last 24 hours?*</td>
+    <td>No</td>
+    <td>Look for evidence of active medication on the medication list that is in the value set for opioid with <br />ambulatory care misuse potential (excluding the last 24 hours)</td>
+    <td>Opioid analgesics with ambulatory misuse potential</td>
+    <td><a href="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-medicationstatement">MedicationStatement</a></td>
+    <td>MedicationStatement.medication, MedicationStatement.status, and MedicationStatement.effective</td>
+  </tr>
+  <tr>
+    <td>Opioid analgesics with ambulatory misuse potential dispensing event in past 90 days excluding the last 24 hours?*</td>
+    <td>No</td>
+    <td>Look for evidence of a dispensing event for medication that is in the value set for opioid with ambulatory <br />use potential occurring within the past 90 days (excluding the last 24 hours)</td>
+    <td>Opioid analgesics with ambulatory misuse potential</td>
+    <td><a href="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-medicationdispense">MedicationDispense</a></td>
+    <td>MedicationDispense.medication, MedicationDispense.status, and MedicationDispense.whenHandedOver</td>
+  </tr>
+  <tfoot>
+    <tr>
+      <td colspan="100%">* Future consideration: Current algorithm addresses only orders (prescriptions). <br />
+      
+      1 - Implement one global configuration point to set all past medication queries at each particular site: “Can the
+      implementing EHR support queries for past medications by date range? Yes or No”. An evaluation to determine if a patient
+      is opioid naive is not possible when a EHR system does not support queries for past medications by date range. <br />
+      2 - orders use RxNorm, but medication lists and dispensed medication will require an NDC value set and/or local mapping
+      of NDC to RxNorm to enable this element</td>
+    </tr>
+  </tfoot>
+</table>
+
+<h3 id="recommendation-specific-subroutines">Recommendation-specific Subroutines</h3>
+
+<h4 id="recommendation-8-factors-that-increase-risk-for-opioid-related-harms">Recommendation 8 Factors that Increase Risk for Opioid Related Harms</h4>
+
+<ul>
+  <li>Currently receiving benzodiazepine or other central nervous system depressant medications, or</li>
+  <li>High opioid dosages (MME/day &gt;= 50), or</li>
+  <li>History of substance use disorder, or</li>
+  <li>Diagnosed with sleep-disordered breathing condition</li>
+</ul>
+<div><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="433px" preserveAspectRatio="none" style="width:731px;height:433px;" version="1.1" viewBox="0 0 731 433" width="731px" zoomAndPan="magnify"><defs><linearGradient id="goz3v6va7sx560" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#525252" /><stop offset="100%" stop-color="#262626" /></linearGradient></defs><g><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="20" font-weight="bold" lengthAdjust="spacing" textLength="638" x="45" y="51.38">Factors That Increase Risk For Opioid Related Harms Subroutine</text><ellipse cx="365.5" cy="88.24" fill="url(#goz3v6va7sx560)" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;" /><rect fill="#262626" height="6" rx="2.5" ry="2.5" style="stroke:#262626;stroke-width:1.0;" width="709" x="11" y="118.24" /><rect fill="#306516" height="121.7206" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="179" x="23" y="144.24" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="106" x="55" y="177.0681">Currently receiving</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="103" x="55" y="193.4122">benzodiazepine or</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="72" x="67" y="209.7563">other central</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="88" x="58" y="226.1004">nervous system</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="139" x="43" y="242.4445">depressant medications?</text><rect fill="#306516" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="132" x="212" y="176.9282" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="92" x="232" y="209.7563">Daily MME &#8805; 50?</text><rect fill="#306516" height="89.0323" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="178" x="372" y="160.5841" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="54" x="425" y="193.4122">History of</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="133" x="392" y="209.7563">conditions documenting</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="135" x="395" y="226.1004">substance use disorder?</text><rect fill="#306516" height="89.0323" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="148" x="560" y="160.5841" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="96" x="583" y="193.4122">Sleep-disordered</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="108" x="580" y="209.7563">breathing condition</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="58" x="598" y="226.1004">diagnosis?</text><polygon fill="#306516" points="365.5,275.9605,377.5,287.9605,365.5,299.9605,353.5,287.9605,365.5,275.9605" style="stroke:#C6C6C6;stroke-width:0.5;" /><polygon fill="#306516" points="303.5,320.1486,427.5,320.1486,439.5,338.3207,427.5,356.4927,303.5,356.4927,291.5,338.3207,303.5,320.1486" style="stroke:#F4F4F4;stroke-width:0.5;" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="104" x="313.5" y="342.9767">Any answer is yes?</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="19" x="262.5" y="324.8047">yes</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="14" x="449.5" y="324.8047">no</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="100" x="231.5" y="366.4927" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="60" x="251.5" y="399.3208">Return Yes</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="96" x="401.5" y="366.4927" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="56" x="421.5" y="399.3208">Return No</text><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="112.5" x2="112.5" y1="124.24" y2="144.24" /><polygon fill="#C6C6C6" points="108.5,134.24,112.5,144.24,116.5,134.24,112.5,138.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="278" x2="278" y1="124.24" y2="176.9282" /><polygon fill="#C6C6C6" points="274,166.9282,278,176.9282,282,166.9282,278,170.9282" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="461" x2="461" y1="124.24" y2="160.5841" /><polygon fill="#C6C6C6" points="457,150.5841,461,160.5841,465,150.5841,461,154.5841" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="634" x2="634" y1="124.24" y2="160.5841" /><polygon fill="#C6C6C6" points="630,150.5841,634,160.5841,638,150.5841,634,154.5841" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="112.5" x2="112.5" y1="265.9605" y2="287.9605" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="112.5" x2="353.5" y1="287.9605" y2="287.9605" /><polygon fill="#C6C6C6" points="343.5,283.9605,353.5,287.9605,343.5,291.9605,347.5,287.9605" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="278" x2="278" y1="233.2723" y2="287.9605" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="278" x2="353.5" y1="287.9605" y2="287.9605" /><polygon fill="#C6C6C6" points="343.5,283.9605,353.5,287.9605,343.5,291.9605,347.5,287.9605" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="461" x2="461" y1="249.6164" y2="287.9605" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="461" x2="377.5" y1="287.9605" y2="287.9605" /><polygon fill="#C6C6C6" points="387.5,283.9605,377.5,287.9605,387.5,291.9605,383.5,287.9605" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="634" x2="634" y1="249.6164" y2="287.9605" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="634" x2="377.5" y1="287.9605" y2="287.9605" /><polygon fill="#C6C6C6" points="387.5,283.9605,377.5,287.9605,387.5,291.9605,383.5,287.9605" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="365.5" x2="365.5" y1="98.24" y2="118.24" /><polygon fill="#C6C6C6" points="361.5,108.24,365.5,118.24,369.5,108.24,365.5,112.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="291.5" x2="281.5" y1="338.3207" y2="338.3207" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="281.5" x2="281.5" y1="338.3207" y2="366.4927" /><polygon fill="#C6C6C6" points="277.5,356.4927,281.5,366.4927,285.5,356.4927,281.5,360.4927" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="439.5" x2="449.5" y1="338.3207" y2="338.3207" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="449.5" x2="449.5" y1="338.3207" y2="366.4927" /><polygon fill="#C6C6C6" points="445.5,356.4927,449.5,366.4927,453.5,356.4927,449.5,360.4927" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="365.5" x2="365.5" y1="299.9605" y2="320.1486" /><polygon fill="#C6C6C6" points="361.5,310.1486,365.5,320.1486,369.5,310.1486,365.5,314.1486" style="stroke:#C6C6C6;stroke-width:1.0;" /></g></svg></div>
+<table id="dataElements">
+  <tr>
+  <th>Definition</th>
+  <th>Answer to Proceed</th>
+  <th>Details</th>
+  <th>Data (Terminology) Requirement</th>
+  <th>Profile</th>
+  <th>Path</th>
+</tr>
+  <tr>
+    <td>No evidence of current naloxone medications?</td>
+    <td>Yes</td>
+    <td>Find evidence of naloxone medication prescription (an active medication order for naloxone)</td>
+    <td>Naloxone medications</td>
+    <td><a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest">MedicationRequest</a></td>
+    <td>
+      MedicationRequest.medication, and MedicationRequest.authoredOn
+    </td>
+  </tr>
+  <tr>
+    <td>Currently receiving benzodiazepine or other central nervous system depressant medications?</td>
+    <td>Yes</td>
+    <td>Find evidence of benzodiazepine prescription (an active medication order for benzodiazepine or other central nervous system depressant medications)</td>
+    <td>Benzodiazepine or other central nervous system depressant medications</td>
+    <td><a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest">MedicationRequest</a></td>
+    <td>
+      MedicationRequest.medication, MedicationRequest.category, and MedicationRequest.authoredOn
+    </td>
+  </tr>
+  <tr>
+    <td>MME (morphine milligram equivalents &gt; 50)</td>
+    <td>Yes</td>
+    <td>Determine MME from existing active prescriptions (<a href="recommendation-04-05.html">recommendation 4 &amp; 5</a>), or future scope; dispensed medications, or patient-reported medications</td>
+    <td></td>
+    <td><a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest">MedicationRequest</a></td>
+    <td>
+      MedicationRequest.medication, MedicationRequest.category, MedicationRequest.authoredOn, and MedicationRequest.dosageInstruction
+    </td>  </tr>
+  <tr>
+    <td>History of conditions documenting substance use disorder?</td>
+    <td>Yes</td>
+    <td>Find evidence of conditions documenting substance use in the problem list or past medical history, including history of overdose</td>
+    <td>Conditions documenting substance misuse disorder</td>
+    <td>      
+      <a href="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-condition">Condition</a>
+      <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure">Procedure</a>
+    </td>
+    <td>
+      Condition.code, Condition.category, and Procedure.code
+    </td>
+  </tr>
+  <tr>
+    <td>Diagnosis with a sleep-disordered breathing condition?</td>
+    <td>Yes</td>
+    <td>Find documentation of an active sleep-disordered breathing condition</td>
+    <td>Conditions documenting sleep-disordered breathing</td>
+    <td>TBD</td>
+    <td>TBD</td>
+  </tr>
+</table>
+
+<h4 id="recommendation-9-pdmp-review-in-past-90-days">Recommendation 9 PDMP Review in Past 90 Days</h4>
+
+<ul>
+  <li>PDMP review procedure has been performed in the past 90 days or</li>
+  <li>PDMP data has been reviewed in the past 90 days</li>
+</ul>
+<div><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="384px" preserveAspectRatio="none" style="width:468px;height:384px;" version="1.1" viewBox="0 0 468 384" width="468px" zoomAndPan="magnify"><defs><linearGradient id="gwp2l8n5ppi660" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#525252" /><stop offset="100%" stop-color="#262626" /></linearGradient></defs><g><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="20" font-weight="bold" lengthAdjust="spacing" textLength="405" x="30" y="51.38">PDMP Review in Past 90 Days Subroutine</text><ellipse cx="234" cy="88.24" fill="url(#gwp2l8n5ppi660)" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;" /><rect fill="#262626" height="6" rx="2.5" ry="2.5" style="stroke:#262626;stroke-width:1.0;" width="399" x="34.5" y="118.24" /><rect fill="#306516" height="72.6882" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="175" x="46.5" y="144.24" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="135" x="66.5" y="177.0681">PDMP review procedure</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="88" x="84.5" y="193.4122">in past 90 days?</text><rect fill="#306516" height="72.6882" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="172" x="249.5" y="144.24" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="116" x="275.5" y="177.0681">PDMP data reviewed</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="129" x="272.5" y="193.4122">finding in past 90 days?</text><polygon fill="#306516" points="234,226.9282,246,238.9282,234,250.9282,222,238.9282,234,226.9282" style="stroke:#C6C6C6;stroke-width:0.5;" /><polygon fill="#306516" points="172,271.1163,296,271.1163,308,289.2883,296,307.4604,172,307.4604,160,289.2883,172,271.1163" style="stroke:#F4F4F4;stroke-width:0.5;" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="104" x="182" y="293.9444">Any answer is yes?</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="19" x="131" y="275.7723">yes</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="14" x="318" y="275.7723">no</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="100" x="100" y="317.4604" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="60" x="120" y="350.2885">Return Yes</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="96" x="270" y="317.4604" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="56" x="290" y="350.2885">Return No</text><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="134" x2="134" y1="124.24" y2="144.24" /><polygon fill="#C6C6C6" points="130,134.24,134,144.24,138,134.24,134,138.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="335.5" x2="335.5" y1="124.24" y2="144.24" /><polygon fill="#C6C6C6" points="331.5,134.24,335.5,144.24,339.5,134.24,335.5,138.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="134" x2="134" y1="216.9282" y2="238.9282" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="134" x2="222" y1="238.9282" y2="238.9282" /><polygon fill="#C6C6C6" points="212,234.9282,222,238.9282,212,242.9282,216,238.9282" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="335.5" x2="335.5" y1="216.9282" y2="238.9282" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="335.5" x2="246" y1="238.9282" y2="238.9282" /><polygon fill="#C6C6C6" points="256,234.9282,246,238.9282,256,242.9282,252,238.9282" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="234" x2="234" y1="98.24" y2="118.24" /><polygon fill="#C6C6C6" points="230,108.24,234,118.24,238,108.24,234,112.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="160" x2="150" y1="289.2883" y2="289.2883" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="150" x2="150" y1="289.2883" y2="317.4604" /><polygon fill="#C6C6C6" points="146,307.4604,150,317.4604,154,307.4604,150,311.4604" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="308" x2="318" y1="289.2883" y2="289.2883" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="318" x2="318" y1="289.2883" y2="317.4604" /><polygon fill="#C6C6C6" points="314,307.4604,318,317.4604,322,307.4604,318,311.4604" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="234" x2="234" y1="250.9282" y2="271.1163" /><polygon fill="#C6C6C6" points="230,261.1163,234,271.1163,238,261.1163,234,265.1163" style="stroke:#C6C6C6;stroke-width:1.0;" /></g></svg></div>
+<table id="dataElements">
+  <tr>
+  <th>Definition</th>
+  <th>Answer to Proceed</th>
+  <th>Details</th>
+  <th>Data (Terminology) Requirement</th>
+  <th>Profile</th>
+  <th>Path</th>
+</tr>
+  <tr>
+    <td>PDMP review procedure in past 90 days?</td>
+    <td>No</td>
+    <td>Look for evidence of a prescription drug monitoring program (PDMP) review procedure (may need to modify time
+      interval for review based on local practice / regulation) [Evidence for the PDMP review procedure may potentially
+      originate in
+      a PDMP Smart App that provides the code once PDMP review procedure has been completed]</td>
+    <td>PDMP review procedure</td>
+    <td>
+      <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure">Procedure</a>
+    </td>
+    <td>
+      Procedure.code, Procedure.status, and Procedure.performed
+    </td>
+  </tr>
+  <tr>
+    <td>PDMP data reviewed finding in past 90 days?</td>
+    <td>No</td>
+    <td>Documentation (i.e., a finding that PDMP review has occurred) in last 90 days (may need to modify time interval
+      for review based on local practice / regulation)</td>
+    <td>PDMP data reviewed finding</td>
+    <td>
+      <a href="http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-observation">Observation</a>
+    </td>
+    <td>
+      Observation.status, Observation.code, and Observation.effective
+    </td>
+  </tr>
+</table>
+
+<h4 id="recommendation-10-urine-toxicology-screening">Recommendation 10 Urine Toxicology Screening</h4>
+
+<ul>
+  <li>Opioid urine toxicology screening in past year, or</li>
+  <li>Nonopioid urine toxicology screening in past year
+  </li>
+</ul>
+<div><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="401px" preserveAspectRatio="none" style="width:572px;height:401px;" version="1.1" viewBox="0 0 572 401" width="572px" zoomAndPan="magnify"><defs><linearGradient id="g14n98tyif8f8i0" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#525252" /><stop offset="100%" stop-color="#262626" /></linearGradient></defs><g><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="20" font-weight="bold" lengthAdjust="spacing" textLength="509" x="30" y="51.38">Urine Toxicology Screening in Past Year Subroutine</text><ellipse cx="286" cy="88.24" fill="url(#g14n98tyif8f8i0)" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;" /><rect fill="#262626" height="6" rx="2.5" ry="2.5" style="stroke:#262626;stroke-width:1.0;" width="363" x="104.5" y="118.24" /><rect fill="#306516" height="89.0323" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="154" x="116.5" y="144.24" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="68" x="151.5" y="177.0681">Opioid urine</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="114" x="136.5" y="193.4122">toxicology screening</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="70" x="148.5" y="209.7563">in past year?</text><rect fill="#306516" height="89.0323" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="157" x="298.5" y="144.24" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="89" x="327.5" y="177.0681">Nonopioid urine</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="114" x="321.5" y="193.4122">toxicology screening</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="70" x="336.5" y="209.7563">in past year?</text><polygon fill="#306516" points="286,243.2723,298,255.2723,286,267.2723,274,255.2723,286,243.2723" style="stroke:#C6C6C6;stroke-width:0.5;" /><polygon fill="#306516" points="224,287.4604,348,287.4604,360,305.6325,348,323.8045,224,323.8045,212,305.6325,224,287.4604" style="stroke:#F4F4F4;stroke-width:0.5;" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="104" x="234" y="310.2885">Any answer is yes?</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="19" x="183" y="292.1164">yes</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="14" x="370" y="292.1164">no</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="100" x="152" y="333.8045" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="60" x="172" y="366.6326">Return Yes</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="96" x="322" y="333.8045" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="56" x="342" y="366.6326">Return No</text><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="193.5" x2="193.5" y1="124.24" y2="144.24" /><polygon fill="#C6C6C6" points="189.5,134.24,193.5,144.24,197.5,134.24,193.5,138.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="377" x2="377" y1="124.24" y2="144.24" /><polygon fill="#C6C6C6" points="373,134.24,377,144.24,381,134.24,377,138.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="193.5" x2="193.5" y1="233.2723" y2="255.2723" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="193.5" x2="274" y1="255.2723" y2="255.2723" /><polygon fill="#C6C6C6" points="264,251.2723,274,255.2723,264,259.2723,268,255.2723" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="377" x2="377" y1="233.2723" y2="255.2723" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="377" x2="298" y1="255.2723" y2="255.2723" /><polygon fill="#C6C6C6" points="308,251.2723,298,255.2723,308,259.2723,304,255.2723" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="286" x2="286" y1="98.24" y2="118.24" /><polygon fill="#C6C6C6" points="282,108.24,286,118.24,290,108.24,286,112.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="212" x2="202" y1="305.6325" y2="305.6325" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="202" x2="202" y1="305.6325" y2="333.8045" /><polygon fill="#C6C6C6" points="198,323.8045,202,333.8045,206,323.8045,202,327.8045" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="360" x2="370" y1="305.6325" y2="305.6325" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="370" x2="370" y1="305.6325" y2="333.8045" /><polygon fill="#C6C6C6" points="366,323.8045,370,333.8045,374,323.8045,370,327.8045" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="286" x2="286" y1="267.2723" y2="287.4604" /><polygon fill="#C6C6C6" points="282,277.4604,286,287.4604,290,277.4604,286,281.4604" style="stroke:#C6C6C6;stroke-width:1.0;" /></g></svg></div>
+<table id="dataElements">
+  <tr>
+  <th>Definition</th>
+  <th>Answer to Proceed</th>
+  <th>Details</th>
+  <th>Data (Terminology) Requirement</th>
+  <th>Profile</th>
+  <th>Path</th>
+</tr>
+  <tr>
+    <td>Opioid urine toxicology screening in past year?</td>
+    <td>Yes</td>
+    <td>An opioid urine toxicology screening test performed within the past year</td>
+    <td>Opioid urine toxicology screening</td>
+    <td>
+      <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab">Observation</a>
+    </td>
+    <td>
+      Observation.category, Observation.code, Observation.effective, and Observation.status
+    </td>
+  </tr>
+  <tr>
+    <td>Nonopioid urine toxicology screening in past year?</td>
+    <td>Yes</td>
+    <td>A nonopioid urine toxicology screening test performed within the past year</td>
+    <td>Non-opioid urine toxicology screening</td>
+    <td>
+      <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab">Observation</a>
+    </td>
+    <td>
+      Observation.category, Observation.code, Observation.effective, and Observation.status
+    </td>
+  </tr>
+</table>
+
+<h4 id="recommendation-10-possible-unexpected-results">Recommendation 10 Possible Unexpected Results</h4>
+
+<ul>
+  <li>Positive result for a substance of potential interest in the past year or</li>
+  <li>Negative result for a prescribable substance in the past year and</li>
+  <li>An order for that substance exists in the 30 days prior to the test or</li>
+  <li>Positive result for a prescribable\n substance in the past year and</li>
+  <li>No order for that substance exists\n in the 30 days prior to the test</li>
+</ul>
+<div><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="610px" preserveAspectRatio="none" style="width:764px;height:610px;" version="1.1" viewBox="0 0 764 610" width="764px" zoomAndPan="magnify"><defs><linearGradient id="ghd8vv2z06lnz0" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#525252" /><stop offset="100%" stop-color="#262626" /></linearGradient></defs><g><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="20" font-weight="bold" lengthAdjust="spacing" textLength="701" x="30" y="51.38">Possible Unexpected Results in Urine Toxicology Screening Subroutine</text><ellipse cx="382" cy="88.24" fill="url(#ghd8vv2z06lnz0)" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;" /><rect fill="#262626" height="6" rx="2.5" ry="2.5" style="stroke:#262626;stroke-width:1.0;" width="542" x="111" y="118.24" /><rect fill="#306516" height="105.3765" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="141" x="123" y="240.7723" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="78" x="149" y="273.6004">Positive result</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="100" x="143" y="289.9445">for a substance of</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="95" x="146" y="306.2886">potential interest</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="70" x="152" y="322.6328">in past year?</text><rect fill="#306516" height="105.3765" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="148" x="292" y="144.24" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="85" x="324" y="177.0681">Negative result</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="99" x="321" y="193.4122">for a prescribable</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="57" x="336" y="209.7563">substance</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="70" x="330" y="226.1004">in past year?</text><rect fill="#306516" height="121.7206" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="128" x="302" y="320.9605" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="68" x="331" y="353.7886">An order for</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="82" x="325" y="370.1328">that substance</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="68" x="328" y="386.4769">exists within</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="73" x="325" y="402.821">30 days prior</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="61" x="331" y="419.1651">to the test?</text><rect fill="#306516" height="89.0323" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="173" x="468" y="160.5841" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="107" x="497" y="193.4122">Positive result for a</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="130" x="491" y="209.7563">prescribable substance</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="91" x="500" y="226.1004">in the past year?</text><rect fill="#306516" height="105.3765" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="131" x="489" y="320.9605" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="69" x="512" y="353.7886">No order for</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="82" x="509" y="370.1328">that substance</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="79" x="515" y="386.4769">within 30 days</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="91" x="509" y="402.821">prior to the test?</text><polygon fill="#306516" points="382,452.6811,394,464.6811,382,476.6811,370,464.6811,382,452.6811" style="stroke:#C6C6C6;stroke-width:0.5;" /><polygon fill="#306516" points="320,496.8692,444,496.8692,456,515.0413,444,533.2133,320,533.2133,308,515.0413,320,496.8692" style="stroke:#F4F4F4;stroke-width:0.5;" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="104" x="330" y="519.6973">Any answer is yes?</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="19" x="279" y="501.5252">yes</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="14" x="466" y="501.5252">no</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="100" x="248" y="543.2133" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="60" x="268" y="576.0414">Return Yes</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="96" x="418" y="543.2133" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="56" x="438" y="576.0414">Return No</text><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="366" x2="366" y1="249.6164" y2="320.9605" /><polygon fill="#C6C6C6" points="362,310.9605,366,320.9605,370,310.9605,366,314.9605" style="stroke:#C6C6C6;stroke-width:1.0;" /><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="26" x="380" y="289.9445">AND</text><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="554.5" x2="554.5" y1="249.6164" y2="320.9605" /><polygon fill="#C6C6C6" points="550.5,310.9605,554.5,320.9605,558.5,310.9605,554.5,314.9605" style="stroke:#C6C6C6;stroke-width:1.0;" /><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="26" x="568.5" y="289.9445">AND</text><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="193.5" x2="193.5" y1="124.24" y2="240.7723" /><polygon fill="#C6C6C6" points="189.5,230.7723,193.5,240.7723,197.5,230.7723,193.5,234.7723" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="366" x2="366" y1="124.24" y2="144.24" /><polygon fill="#C6C6C6" points="362,134.24,366,144.24,370,134.24,366,138.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="554.5" x2="554.5" y1="124.24" y2="160.5841" /><polygon fill="#C6C6C6" points="550.5,150.5841,554.5,160.5841,558.5,150.5841,554.5,154.5841" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="193.5" x2="193.5" y1="346.1488" y2="464.6811" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="193.5" x2="370" y1="464.6811" y2="464.6811" /><polygon fill="#C6C6C6" points="360,460.6811,370,464.6811,360,468.6811,364,464.6811" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="366" x2="366" y1="442.6811" y2="464.6811" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="366" x2="370" y1="464.6811" y2="464.6811" /><polygon fill="#C6C6C6" points="360,460.6811,370,464.6811,360,468.6811,364,464.6811" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="554.5" x2="554.5" y1="426.337" y2="464.6811" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="554.5" x2="394" y1="464.6811" y2="464.6811" /><polygon fill="#C6C6C6" points="404,460.6811,394,464.6811,404,468.6811,400,464.6811" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="382" x2="382" y1="98.24" y2="118.24" /><polygon fill="#C6C6C6" points="378,108.24,382,118.24,386,108.24,382,112.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="308" x2="298" y1="515.0413" y2="515.0413" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="298" x2="298" y1="515.0413" y2="543.2133" /><polygon fill="#C6C6C6" points="294,533.2133,298,543.2133,302,533.2133,298,537.2133" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="456" x2="466" y1="515.0413" y2="515.0413" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="466" x2="466" y1="515.0413" y2="543.2133" /><polygon fill="#C6C6C6" points="462,533.2133,466,543.2133,470,533.2133,466,537.2133" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="382" x2="382" y1="476.6811" y2="496.8692" /><polygon fill="#C6C6C6" points="378,486.8692,382,496.8692,386,486.8692,382,490.8692" style="stroke:#C6C6C6;stroke-width:1.0;" /></g></svg></div>
+<table id="dataElements">
+  <tr>
+  <th>Definition</th>
+  <th>Answer to Proceed</th>
+  <th>Details</th>
+  <th>Data (Terminology) Requirement</th>
+  <th>Profile</th>
+  <th>Path</th>
+</tr>
+  <tr>
+    <td>Positive result for a substance of potential interest in the past year?</td>
+    <td>Yes</td>
+    <td>Urine toxicology screen result contains a substance of potential interest</td>
+    <td>
+      Cocaine urine toxicology test result <br />
+      Heroin urine toxicology test result <br />
+      Phencyclidine (PCP) urine toxicology test result <br />
+    </td>
+    <td>
+      <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab">Observation</a>
+    </td>
+    <td>
+      Observation.category, Observation.code, and Observation.value
+    </td>
+  </tr>
+  <tr>
+    <td>Possible unexpected negative result for prescribable substance?</td>
+    <td>Yes</td>
+    <td>Negative result for a prescribable substance in the past year and an order for that substance exists in the 30 days prior to the test</td>
+    <td>
+      Amphetamine urine toxicology test result <br />
+      Barbiturate urine toxicology test result <br />
+      Benzodiazepine urine toxicology test result <br />
+      Buprenorphine urine toxicology test result <br />
+      Fentanyl urine toxicology test result <br />
+      Methadone urine toxicology test result <br />
+      Opiate urine toxicology test result <br />
+      Oxycodone urine toxicology test result <br />
+      Amphetamine medication <br />
+      Barbiturate medication <br />
+      Benzodiazepine medication <br />
+      Buprenorphine medication <br />
+      Fentanyl medication <br />
+      Methadone medication <br />
+      Opiate medication <br />
+      Oxycodone medication
+    </td>
+    <td>
+      <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab">Observation</a>
+      <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest">MedicationRequest</a>
+    </td>
+    <td>
+      Observation.category, Observation.code, and Observation.value, MedicationRequest.status, MedicationRequest.authoredOn, and MedicationRequest.medication
+    </td>
+  </tr>
+  <tr>
+    <td>Possible unexpected positive result for prescribable substance?</td>
+    <td>Yes</td>
+    <td>Positive result for a prescribable substance in the past year and no order for that substance exists in the 30 days prior to the test</td>
+    <td>
+      Amphetamine urine toxicology test result <br />
+      Barbiturate urine toxicology test result <br />
+      Benzodiazepine urine toxicology test result <br />
+      Buprenorphine urine toxicology test result <br />
+      Fentanyl urine toxicology test result <br />
+      Methadone urine toxicology test result <br />
+      Opiate urine toxicology test result <br />
+      Oxycodone urine toxicology test result <br />
+      Amphetamine medication <br />
+      Barbiturate medication <br />
+      Benzodiazepine medication <br />
+      Buprenorphine medication <br />
+      Fentanyl medication <br />
+      Methadone medication <br />
+      Opiate medication <br />
+      Oxycodone medication
+    </td>
+    <td>
+      <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab">Observation</a>
+      <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest">MedicationRequest</a>
+    </td>
+    <td>
+      Observation.category, Observation.code, and Observation.value <br /> 
+      MedicationRequest.status, MedicationRequest.authoredOn, and MedicationRequest.medication
+    </td>
+  </tr>
+</table>
+
+<h4 id="recommendation-11-opioid-analgesic-or-benzodiazepine-or-cns-depressant-order">Recommendation 11 Opioid Analgesic or Benzodiazepine or CNS Depressant Order</h4>
+
+<ul>
+  <li>Provider is prescribing an opioid analgesic with ambulatory misuse potential in the outpatient setting or</li>
+  <li>Provider is prescribing a benzodiazepine or</li>
+  <li>Provider is prescribing a central nervous system depressant medication</li>
+</ul>
+<div><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="411px" preserveAspectRatio="none" style="width:803px;height:411px;" version="1.1" viewBox="0 0 803 411" width="803px" zoomAndPan="magnify"><defs><linearGradient id="g1bb2eqbuquatm0" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#525252" /><stop offset="100%" stop-color="#262626" /></linearGradient></defs><g><text fill="#262626" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="20" font-weight="bold" lengthAdjust="spacing" textLength="740" x="30" y="51.38">Order for Opioid Analgesic, Benzodiazepine or CNS Depressant Subroutine</text><ellipse cx="401.5" cy="88.24" fill="url(#g1bb2eqbuquatm0)" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;" /><rect fill="#262626" height="6" rx="2.5" ry="2.5" style="stroke:#262626;stroke-width:1.0;" width="536" x="133.5" y="118.24" /><rect fill="#306516" height="89.0323" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="169" x="145.5" y="144.24" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="126" x="165.5" y="177.0681">Opioid analgesic order</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="90" x="177.5" y="193.4122">with ambulatory</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="97" x="174.5" y="209.7563">misuse potential?</text><rect fill="#306516" height="72.6882" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="133" x="342.5" y="152.412" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="52" x="374.5" y="185.2401">Order for</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="93" x="362.5" y="201.5842">benzodiazepine?</text><rect fill="#306516" height="89.0323" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="154" x="503.5" y="144.24" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="52" x="544.5" y="177.0681">Order for</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="87" x="532.5" y="193.4122">central nervous</text><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="111" x="526.5" y="209.7563">system depressant?</text><polygon fill="#306516" points="401.5,253.2723,413.5,265.2723,401.5,277.2723,389.5,265.2723,401.5,253.2723" style="stroke:#C6C6C6;stroke-width:0.5;" /><polygon fill="#306516" points="339.5,297.4604,463.5,297.4604,475.5,315.6325,463.5,333.8045,339.5,333.8045,327.5,315.6325,339.5,297.4604" style="stroke:#F4F4F4;stroke-width:0.5;" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="104" x="349.5" y="320.2885">Any answer is yes?</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="19" x="298.5" y="302.1164">yes</text><text fill="#000000" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="14" x="485.5" y="302.1164">no</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="100" x="267.5" y="343.8045" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="60" x="287.5" y="376.6326">Return Yes</text><rect fill="#BC2C73" height="56.3441" rx="25" ry="25" style="stroke:#C6C6C6;stroke-width:0.5;" width="96" x="437.5" y="343.8045" /><text fill="#FFFFFF" font-family="IBM Plex Sans, Noto Sans, Verdana" font-size="12" lengthAdjust="spacing" textLength="56" x="457.5" y="376.6326">Return No</text><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="230" x2="230" y1="124.24" y2="144.24" /><polygon fill="#C6C6C6" points="226,134.24,230,144.24,234,134.24,230,138.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="409" x2="409" y1="124.24" y2="152.412" /><polygon fill="#C6C6C6" points="405,142.412,409,152.412,413,142.412,409,146.412" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="580.5" x2="580.5" y1="124.24" y2="144.24" /><polygon fill="#C6C6C6" points="576.5,134.24,580.5,144.24,584.5,134.24,580.5,138.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="230" x2="230" y1="233.2723" y2="265.2723" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="230" x2="389.5" y1="265.2723" y2="265.2723" /><polygon fill="#C6C6C6" points="379.5,261.2723,389.5,265.2723,379.5,269.2723,383.5,265.2723" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="409" x2="409" y1="225.1003" y2="253.2723" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="409" x2="401.5" y1="253.2723" y2="253.2723" /><polygon fill="#C6C6C6" points="397.5,243.2723,401.5,253.2723,405.5,243.2723,401.5,247.2723" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="580.5" x2="580.5" y1="233.2723" y2="265.2723" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="580.5" x2="413.5" y1="265.2723" y2="265.2723" /><polygon fill="#C6C6C6" points="423.5,261.2723,413.5,265.2723,423.5,269.2723,419.5,265.2723" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="401.5" x2="401.5" y1="98.24" y2="118.24" /><polygon fill="#C6C6C6" points="397.5,108.24,401.5,118.24,405.5,108.24,401.5,112.24" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="327.5" x2="317.5" y1="315.6325" y2="315.6325" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="317.5" x2="317.5" y1="315.6325" y2="343.8045" /><polygon fill="#C6C6C6" points="313.5,333.8045,317.5,343.8045,321.5,333.8045,317.5,337.8045" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="475.5" x2="485.5" y1="315.6325" y2="315.6325" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="485.5" x2="485.5" y1="315.6325" y2="343.8045" /><polygon fill="#C6C6C6" points="481.5,333.8045,485.5,343.8045,489.5,333.8045,485.5,337.8045" style="stroke:#C6C6C6;stroke-width:1.0;" /><line style="stroke:#C6C6C6;stroke-width:1.0;" x1="401.5" x2="401.5" y1="277.2723" y2="297.4604" /><polygon fill="#C6C6C6" points="397.5,287.4604,401.5,297.4604,405.5,287.4604,401.5,291.4604" style="stroke:#C6C6C6;stroke-width:1.0;" /></g></svg></div>
+<table id="dataElements">
+  <caption> The following table describes the flowchart decisions and sub-routines for the recommendation</caption>
+  <tr>
+  <th>Definition</th>
+  <th>Answer to Proceed</th>
+  <th>Details</th>
+  <th>Data (Terminology) Requirement</th>
+  <th>Profile</th>
+  <th>Path</th>
+</tr>
+  <tr>
+    <td>Order for opioid analgesics with ambulatory misuse potential?</td>
+    <td>Yes</td>
+    <td>Trigger based on a new prescription (order) for opioid analgesics with ambulatory misuse potential - ideally the
+      prescription should be selected prior to being committed to the system</td>
+    <td>Opioid analgesics with ambulatory misuse potential</td>
+    <td>
+      <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest">MedicationRequest</a>
+    </td>
+    <td>
+      MedicationRequest.medication, and MedicationRequest.category
+    </td>
+  </tr>
+  <tr>
+    <td>Order for benzodiazepine medications?</td>
+    <td>Yes</td>
+    <td>Trigger based on a new prescription (order) for benzodiazepines in the relevant value sets - ideally the
+      prescription should be selected prior to being committed to the system</td>
+    <td>Benzodiazepine medications</td>
+    <td>
+      <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest">MedicationRequest</a>
+    </td>
+    <td>
+      MedicationRequest.medication, and MedicationRequest.category
+    </td>
+  </tr>
+  <tr>
+    <td>Order for central nervous system depressant medications?</td>
+    <td>Yes</td>
+    <td>Trigger based on a new prescription (order) for central nervous system depressant in the relevant value sets - 
+      ideally the prescription should be selected prior to being committed to the system</td>
+    <td>CNS depressant medications</td>
+    <td>
+      <a href="http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest">MedicationRequest</a>
+    </td>
+    <td>
+      MedicationRequest.medication, and MedicationRequest.category
+    </td>
+  </tr>
+</table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&#xA0;
+
+                <a href="user-interaction-alerts.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&#xA0;
+
+                <a href="acute-pain.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.securityrisksolutions.com">CDC / Security Risk Solutions, Inc. (SRS)</a>.  Package fhir.cdc.opioid-cds-r4#2022.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 18, 2026 16:23+1100">2026-03-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/cqframework/opioid-cds-r4/issues/new">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/cqframework/opioid-cds-r4/issues">Issues</a>
+                
+| <a style="color: #81BEF7" target="_blank" href="http://fhir.org/guides/cdc/opioid-cds/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+<!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,2640 @@
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "fhir.cdc.opioid-cds-r4",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide fhir.cdc.opioid-cds-r4</b></p><a name=\"fhir.cdc.opioid-cds-r4\"> </a><a name=\"hcfhir.cdc.opioid-cds-r4\"> </a><h2>Opioid_CDC</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/cdc/opioid-cds/ImplementationGuide/fhir.cdc.opioid-cds-r4</pre><div><p>2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide</p>\n</div></div>"
+  },
+  "url" : "http://fhir.org/guides/cdc/opioid-cds/ImplementationGuide/fhir.cdc.opioid-cds-r4",
+  "version" : "2022.1.0",
+  "name" : "Opioid_CDC",
+  "title" : "2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-07",
+  "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.securityrisksolutions.com"
+    }]
+  }],
+  "description" : "2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide",
+  "copyright" : "Centers for Disease Control and Prevention (CDC)",
+  "packageId" : "fhir.cdc.opioid-cds-r4",
+  "license" : "CC0-1.0",
+  "fhirVersion" : ["4.0.1"],
+  "dependsOn" : [{
+    "id" : "hl7tx",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+    }],
+    "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+    "packageId" : "hl7.terminology.r4",
+    "version" : "7.1.0"
+  },
+  {
+    "id" : "hl7ext",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+    }],
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r4",
+    "version" : "5.2.0"
+  },
+  {
+    "uri" : "http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg",
+    "packageId" : "hl7.fhir.uv.cpg",
+    "version" : "1.0.0"
+  },
+  {
+    "uri" : "http://fhir.org/guides/cdc/opioid-mme-r4/ImplementationGuide/fhir.cdc.opioid-mme-r4",
+    "packageId" : "fhir.cdc.opioid-mme-r4",
+    "version" : "3.0.0"
+  },
+  {
+    "uri" : "http://hl7.org/fhir/uv/crmi/ImplementationGuide/hl7.fhir.uv.crmi",
+    "packageId" : "hl7.fhir.uv.crmi",
+    "version" : "1.0.0"
+  }],
+  "definition" : {
+    "extension" : [{
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2019+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "Release 2022.1"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "false"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "default-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "shownav"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "templates/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-expansion-params"
+      },
+      {
+        "url" : "value",
+        "valueString" : "resources/parameters/Parameters-manifest.json"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "pin-canonicals"
+      },
+      {
+        "url" : "value",
+        "valueString" : "pin-all"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "pin-manifest"
+      },
+      {
+        "url" : "value",
+        "valueString" : "manifest"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "pin-external"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://fhir.org/guides/cdc/opioid-cds/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters",
+      "valueReference" : {
+        "reference" : "Parameters/expansion-parameters"
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+      "valueCode" : "hl7.fhir.uv.tools.r4#1.1.0"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "copyrightyear"
+      },
+      {
+        "url" : "value",
+        "valueString" : "2019+"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "releaselabel"
+      },
+      {
+        "url" : "value",
+        "valueString" : "Release 2022.1"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "false"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "default-version"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "shownav"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "templates/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-expansion-params"
+      },
+      {
+        "url" : "value",
+        "valueString" : "resources/parameters/Parameters-manifest.json"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "pin-canonicals"
+      },
+      {
+        "url" : "value",
+        "valueString" : "pin-all"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "pin-manifest"
+      },
+      {
+        "url" : "value",
+        "valueString" : "manifest"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "pin-external"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "autoload-resources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-liquid"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/liquid"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-qa"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/qa"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-temp"
+      },
+      {
+        "url" : "value",
+        "valueString" : "temp/pages"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-output"
+      },
+      {
+        "url" : "value",
+        "valueString" : "output"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-suppressed-warnings"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/ignoreWarnings.txt"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "path-history"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://fhir.org/guides/cdc/opioid-cds/history.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-html"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "template-md"
+      },
+      {
+        "url" : "value",
+        "valueString" : "template-page-md.html"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-contact"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-context"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-copyright"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-jurisdiction"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-license"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-publisher"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "apply-wg"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "active-tables"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "fmm-definition"
+      },
+      {
+        "url" : "value",
+        "valueString" : "http://hl7.org/fhir/versions.html#maturity"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "propagate-status"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "excludelogbinaryformat"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "true"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    }],
+    "grouping" : [{
+      "id" : "recommendation-artifact-packages",
+      "name" : "Recommendation Artifact Packages"
+    },
+    {
+      "id" : "common-libraries",
+      "name" : "Common Logic Libraries"
+    },
+    {
+      "id" : "recommendation-libraries",
+      "name" : "Recommendation Logic Libraries"
+    },
+    {
+      "id" : "activitydefinitions",
+      "name" : "ActivityDefinitions"
+    },
+    {
+      "id" : "plandefinitions",
+      "name" : "PlanDefinitions"
+    },
+    {
+      "id" : "valueset-profile-spreadsheet.xml",
+      "name" : "CDC_ValueSet"
+    }],
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CarePlan"
+      }],
+      "reference" : {
+        "reference" : "CarePlan/example-opioidcds"
+      },
+      "name" : "OpioidCDS CarePlan",
+      "description" : "CarePlan Example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/cancer-diagnosis"
+      },
+      "name" : "Cancer Diagnosis Condition",
+      "description" : "Cancer Diagnosis Condition Example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/end-of-life"
+      },
+      "name" : "End of Life Condition",
+      "description" : "End of Life Condition Example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Condition"
+      }],
+      "reference" : {
+        "reference" : "Condition/terminal"
+      },
+      "name" : "Terminal Condition",
+      "description" : "Terminal Condition Example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/cancer-diagnosis"
+      },
+      "name" : "Cancer Diagnosis Encounter",
+      "description" : "Cancer Diagnosis Encounter Example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Encounter"
+      }],
+      "reference" : {
+        "reference" : "Encounter/oncologist-participant"
+      },
+      "name" : "Oncology Participant Encounter",
+      "description" : "Oncology Participant Encounter Example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationDispense"
+      }],
+      "reference" : {
+        "reference" : "MedicationDispense/ambulatory-opioid"
+      },
+      "name" : "Ambulatory Opioid MedicationDispense",
+      "description" : "Ambulatory Opioid MedicationDispense Example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/example-opioidcds"
+      },
+      "name" : "OpioidCDS MedicationRequest",
+      "description" : "MedicationRequest Example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "MedicationRequest"
+      }],
+      "reference" : {
+        "reference" : "MedicationRequest/ambulatory-opioid"
+      },
+      "name" : "Ambulatory Opioid MedicationRequest",
+      "description" : "Ambulatory Opioid MedicationRequest Example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Observation"
+      }],
+      "reference" : {
+        "reference" : "Observation/example-opioidcds"
+      },
+      "name" : "OpioidCDS Observation",
+      "description" : "Observation Example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/example-opioidcds"
+      },
+      "name" : "OpioidCDS Patient",
+      "description" : "Patient Example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PractitionerRole"
+      }],
+      "reference" : {
+        "reference" : "PractitionerRole/oncology-specialist"
+      },
+      "name" : "Oncology Specialist PractitionerRole",
+      "description" : "Oncology Specialist PractitionerRole Example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "RequestGroup"
+      }],
+      "reference" : {
+        "reference" : "RequestGroup/example-opioidcds"
+      },
+      "name" : "OpioidCDS RequestGroup",
+      "description" : "RequestGroup Example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ServiceRequest"
+      }],
+      "reference" : {
+        "reference" : "ServiceRequest/palliative-care"
+      },
+      "name" : "Palliative Care ServiceRequest",
+      "description" : "Palliative Care ServiceRequest Example",
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/dataDateRoller",
+        "display" : "Data Date-Roller Extension"
+      },
+      "name" : "DataDateRollerExtension",
+      "description" : "Declares the DateLastUpdated and Frequency arguments to be used by the Data Date Roller for maintaining/rolling test data dates to keep them from going stale.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/HelloWorld",
+        "display" : "HelloWorld Library"
+      },
+      "name" : "HelloWorld",
+      "description" : "HelloWorld Library",
+      "exampleBoolean" : false,
+      "groupingId" : "common-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/HelloWorldPatientView",
+        "display" : "HelloWorldPatientView Library"
+      },
+      "name" : "HelloWorldPatientView",
+      "description" : "HelloWorldPatientView Library",
+      "exampleBoolean" : false,
+      "groupingId" : "common-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/CDCMMEClinicalConversionFactors",
+        "display" : "CDCMMEClinicalConversionFactors Library"
+      },
+      "name" : "CDCMMEClinicalConversionFactors",
+      "description" : "CDCMMEClinicalConversionFactors Library",
+      "exampleBoolean" : false,
+      "groupingId" : "common-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OpioidCDSRoutines",
+        "display" : "Common Routines Library"
+      },
+      "name" : "OpioidCDSRoutines",
+      "description" : "Common Routines Library",
+      "exampleBoolean" : false,
+      "groupingId" : "common-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OpioidCDSREC10Common",
+        "display" : "Recommendation 10 Common Logic Library"
+      },
+      "name" : "OpioidCDSREC10CommonLibrary",
+      "description" : "Common Logic Library for Recommendation #10 - Urine Drug Testing",
+      "exampleBoolean" : false,
+      "groupingId" : "recommendation-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OpioidCDSCommon",
+        "display" : "Common Library"
+      },
+      "name" : "OpioidCDSCommon",
+      "description" : "Common Logic Library",
+      "exampleBoolean" : false,
+      "groupingId" : "common-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OpioidCDSCommonConfig",
+        "display" : "Common Configuration Library"
+      },
+      "name" : "OpioidCDSCommonConfig",
+      "description" : "Common Configuration Library",
+      "exampleBoolean" : false,
+      "groupingId" : "common-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OMTKLogicMK2020",
+        "display" : "OMTK Logic MK (2020) Library"
+      },
+      "name" : "OpioidLogicMK2020",
+      "description" : "OMTK Logic MK (2020) Library",
+      "exampleBoolean" : false,
+      "groupingId" : "common-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OMTKData2020",
+        "display" : "OMTK Data (2020) Library"
+      },
+      "name" : "OpioidData2020",
+      "description" : "OMTK Data (2020) Library",
+      "exampleBoolean" : false,
+      "groupingId" : "common-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/FHIRHelpers",
+        "display" : "FHIR Helpers Library"
+      },
+      "name" : "FHIRHelpers",
+      "description" : "FHIR Helpers Library",
+      "exampleBoolean" : false,
+      "groupingId" : "common-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/FHIR-ModelInfo",
+        "display" : "FHIR ModelInfo Library"
+      },
+      "name" : "FHIRModelInfo",
+      "description" : "FHIR ModelInfo Library",
+      "exampleBoolean" : false,
+      "groupingId" : "common-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OpioidCDSREC01",
+        "display" : "Recommendation 1 (order-sign) Logic Library"
+      },
+      "name" : "OpioidCDSREC01Library",
+      "description" : "Logic Library for Recommendation #1 (order-sign) - Nonpharmacologic and Nonopioid Pharmacologic Therapy Consideration",
+      "exampleBoolean" : false,
+      "groupingId" : "recommendation-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OpioidCDSREC02",
+        "display" : "Recommendation 2 (order-sign) Logic Library"
+      },
+      "name" : "OpioidCDSREC02Library",
+      "description" : "Logic Library for Recommendation #2 (order-sign) - Opioid Therapy Goals Discussion",
+      "exampleBoolean" : false,
+      "groupingId" : "recommendation-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OpioidCDSREC03",
+        "display" : "Recommendation 3 (order-sign) Logic Library"
+      },
+      "name" : "OpioidCDSREC03Library",
+      "description" : "Logic Library for Recommendation #3 (order-sign) - Opioid Immediate Release Form When Starting Opioid Therapy",
+      "exampleBoolean" : false,
+      "groupingId" : "recommendation-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OpioidCDSREC04And05",
+        "display" : "Recommendations 4 and 5 (order-sign) Logic Library"
+      },
+      "name" : "OpioidCDSREC04And05Library",
+      "description" : "Logic Library for Recommendations #4 and #5 (order-sign) - Lowest Effective Dose",
+      "exampleBoolean" : false,
+      "groupingId" : "recommendation-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OpioidCDSREC06",
+        "display" : "Recommendation 6 (order-sign) Logic Library"
+      },
+      "name" : "OpioidCDSREC06Library",
+      "description" : "Logic Library for Recommendation #6 (order-sign) - Prescribe Lowest Effective Dose and Duration",
+      "exampleBoolean" : false,
+      "groupingId" : "recommendation-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OpioidCDSREC07",
+        "display" : "Recommendation 7 (order-sign) Logic Library"
+      },
+      "name" : "OpioidCDSREC07Library",
+      "description" : "Logic Library for Recommendation #7 (order-sign) - Opioid Therapy Risk Assessment",
+      "exampleBoolean" : false,
+      "groupingId" : "recommendation-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OpioidCDSREC08",
+        "display" : "Recommendation 8 (order-sign) Logic Library"
+      },
+      "name" : "OpioidCDSREC08Library",
+      "description" : "Logic Library for Recommendation #8 (order-sign) - Naloxone Consideration",
+      "exampleBoolean" : false,
+      "groupingId" : "recommendation-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OpioidCDSREC09",
+        "display" : "Recommendation 9 (order-sign) Logic Library"
+      },
+      "name" : "OpioidCDSREC09Library",
+      "description" : "Logic Library for Recommendation #9 (order-sign) - Consider Patient's History of Controlled Substance Prescriptions",
+      "exampleBoolean" : false,
+      "groupingId" : "recommendation-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OpioidCDSREC10OrderSign",
+        "display" : "Recommendation 10 (order-sign) Logic Library"
+      },
+      "name" : "OpioidCDSREC10OrderSignLibrary",
+      "description" : "Logic Library for Recommendation #10 (order-sign) - Urine Drug Testing",
+      "exampleBoolean" : false,
+      "groupingId" : "recommendation-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OpioidCDSREC10PatientView",
+        "display" : "Recommendation 10 (patient-view) Logic Library"
+      },
+      "name" : "OpioidCDSREC10PatientViewLibrary",
+      "description" : "Logic Library for Recommendation #10 (patient-view) - Urine Drug Testing",
+      "exampleBoolean" : false,
+      "groupingId" : "recommendation-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OpioidCDSREC11OrderSelect",
+        "display" : "Recommendation 11 (order-select) Logic Library"
+      },
+      "name" : "OpioidCDSREC11OrderSelectLibrary",
+      "description" : "Logic Library for Recommendation #11 (order-select) - Concurrent Use of Opioids and Benzodiazepines",
+      "exampleBoolean" : false,
+      "groupingId" : "recommendation-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OpioidCDSREC11PatientView",
+        "display" : "Recommendation 11 (patient-view) Logic Library"
+      },
+      "name" : "OpioidCDSREC11PatientViewLibrary",
+      "description" : "Logic Library for Recommendation #11 (patient-view) - Concurrent Use of Opioids and Benzodiazepines",
+      "exampleBoolean" : false,
+      "groupingId" : "recommendation-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OpioidCDSREC12PatientView",
+        "display" : "Recommendation 12 (patient-view) Logic Library"
+      },
+      "name" : "OpioidCDSREC12PatientViewLibrary",
+      "description" : "Logic Library for Recommendation #12 (patient-view) - Evidence-based Treatment for Patients with Opioid Use Disorder",
+      "exampleBoolean" : false,
+      "groupingId" : "recommendation-libraries"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/opioidcds-risk-assessment-request",
+        "display" : "Risk Assessment ActivityDefinition"
+      },
+      "name" : "OpioidRiskAssessmentActivityDefinition",
+      "description" : "An ActivityDefinition for recommendation of risk assessment",
+      "exampleBoolean" : false,
+      "groupingId" : "activitydefinitions"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/opioidcds-urine-screening-request",
+        "display" : "Urine Screening ActivityDefinition"
+      },
+      "name" : "OpioidUrineScreeningActivityDefinition",
+      "description" : "An ActivityDefinition for recommendation of urine screening",
+      "exampleBoolean" : false,
+      "groupingId" : "activitydefinitions"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/opioidcds-urine-screening-request-1",
+        "display" : "Urine Screening ActivityDefinition 1"
+      },
+      "name" : "OpioidUrineScreeningActivityDefinition",
+      "description" : "An ActivityDefinition for recommendation of urine screening",
+      "exampleBoolean" : false,
+      "groupingId" : "activitydefinitions"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ActivityDefinition"
+      }],
+      "reference" : {
+        "reference" : "ActivityDefinition/opioidcds-urine-screening-request-2",
+        "display" : "Urine Screening ActivityDefinition 2"
+      },
+      "name" : "OpioidUrineScreeningActivityDefinition",
+      "description" : "An ActivityDefinition for recommendation of urine screening",
+      "exampleBoolean" : false,
+      "groupingId" : "activitydefinitions"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Parameters"
+      }],
+      "reference" : {
+        "reference" : "Parameters/manifest"
+      },
+      "name" : "Input Expansion Parameters",
+      "description" : "The input expansion parameters resource for this implementation guide, specifying SNOMED Edition and version. This resource will be contained within the published implementation guide with all pinned references.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Device"
+      }],
+      "reference" : {
+        "reference" : "Device/cqf-tooling",
+        "display" : "CQF Tooling Device"
+      },
+      "name" : "CQFToolingDevice",
+      "description" : "A Device that represents a CQF Tooling version.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/cdc-valueset-clinical-focus"
+      },
+      "name" : "CDC 2022 Opioid Guidance Clinical Focus Extension",
+      "description" : "Describes the clinical focus for the ValueSet."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/cdc-valueset-dataelement-scope"
+      },
+      "name" : "CDC 2022 Opioid Guidance Data Element Extension",
+      "description" : "Describes the data element scope for the ValueSet."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/cdc-valueset-exclusion-criteria"
+      },
+      "name" : "CDC 2022 Opioid Guidance exclusion Criteria Extension",
+      "description" : "Describes the clinical focus for the ValueSet."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/cdc-valueset-inclusion-criteria"
+      },
+      "name" : "CDC 2022 Opioid Guidance Inclusion Criteria Extension",
+      "description" : "Describes the clinical focus for the ValueSet."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/ConversionFactors"
+      },
+      "name" : "Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4",
+      "description" : "This library contains logic to expose configurable conversion factors for the MME calculation functionality provided by the OMTKLogic library."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/MMECalculator"
+      },
+      "name" : "Morphine Milligram Equivalent (MME) Calculator for FHIR R4",
+      "description" : "This library contains logic to surface the MME calculation functionality provided by the OMTKLogic library by extracting appropriate information from FHIR R4 MedicationRequest resource."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OMTKData"
+      },
+      "name" : "Opioid Management Terminology Knowledge Data",
+      "description" : "This library contains drug ingredient data for opioid ingredients of combinations drugs as determined using the [RxNav](https://rxnav.nlm.nih.gov/) API.\r\nThe content was produced using the process described [here](http://build.fhir.org/ig/cqframework/opioid-cds-r4/service-documentation.html#solution-component-1-medication-and-terminology-knowledge-base)."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/OMTKLogic"
+      },
+      "name" : "Opioid Management Terminology Knowledge Logic",
+      "description" : "This library provides functionality for calculating Morphine Milligram Equivalents (MME) for opioid medications, as described in the CDC Opioid Prescribing Guideline."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/opioidcds-01"
+      },
+      "name" : "Recommendation #1 - Nonpharmacologic and Nonopioid Pharmacologic Therapy Consideration",
+      "description" : "Nonopioid therapies are at least as effective as opioids for many common types of acute pain. Clinicians should maximize use of nonpharmacologic and nonopioid pharmacologic therapies as appropriate for the specific condition and patient and only consider opioid therapy for acute pain if benefits are anticipated to outweigh risks to the patient. Before prescribing opioid therapy for acute pain, clinicians should discuss with patients the realistic benefits and known risks of opioid therapy."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/opioidcds-02"
+      },
+      "name" : "Recommendation #2 - Opioid Therapy Goals Discussion",
+      "description" : "Nonopioid therapies are preferred for subacute and chronic pain. Clinicians should maximize use of nonpharmacologic and nonopioid pharmacologic therapies as appropriate for the specific condition and patient and only consider initiating opioid therapy if expected benefits for pain and function are anticipated to outweigh risks to the patient. Before starting opioid therapy for subacute or chronic pain, clinicians should discuss with patients the realistic benefits and known risks of opioid therapy, should work with patients to establish treatment goals for pain and function, and should consider how opioid therapy will be discontinued if benefits do not outweigh risks."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/opioidcds-03"
+      },
+      "name" : "Recommendation #3 - Opioid Immediate Release Form When Starting Opioid Therapy",
+      "description" : "When starting opioid therapy for acute, subacute, or chronic pain, clinicians should prescribe immediate-release opioids instead of extended-release and long-acting (ER/LA) opioids."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/opioidcds-04-05"
+      },
+      "name" : "Recommendations #4 and #5 - Lowest Effective Dose",
+      "description" : "Recommendation 4: When opioids are initiated for opioid-naïve patients with acute, subacute, or chronic pain, clinicians should prescribe the lowest effective dosage. If opioids are continued for subacute or chronic pain, clinicians should use caution when prescribing opioids at any dosage, should carefully evaluate individual benefits and risks when considering increasing dosage, and should avoid increasing dosage above levels likely to yield diminishing returns in benefits relative to risks to patients. Recommendation 5: For patients already receiving opioid therapy, clinicians should carefully weigh benefits and risks and exercise care when changing opioid dosage. If benefits outweigh risks of continued opioid therapy, clinicians should work closely with patients to optimize nonopioid therapies while continuing opioid therapy. If benefits do not outweigh risks of continued opioid therapy, clinicians should optimize other therapies and work closely with patients to gradually taper to lower dosages or, if warranted based on the individual circumstances of the patient, appropriately taper and discontinue opioids. Unless there are indications of a life-threatening issue such as warning signs of impending overdose (e.g., confusion, sedation, or slurred speech), opioid therapy should not be discontinued abruptly, and clinicians should not rapidly reduce opioid dosages from higher dosages."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/opioidcds-06"
+      },
+      "name" : "Recommendation #6 - Prescribe Lowest Effective Dose and Duration",
+      "description" : "When opioids are needed for acute pain, clinicians should prescribe no greater quantity than needed for the expected duration of pain severe enough to require opioids."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/opioidcds-07"
+      },
+      "name" : "Recommendation #7 - Opioid Therapy Risk Assessment",
+      "description" : "Clinicians should evaluate benefits and risks with patients within 1-4 weeks of starting opioid therapy for subacute or chronic pain or of dosage escalation. Clinicians should regularly reevaluate benefits and risks of continued opioid therapy with patients."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/opioidcds-08"
+      },
+      "name" : "Recommendation #8 - Naloxone Consideration",
+      "description" : "Before starting and periodically during continuation of opioid therapy, clinicians should evaluate risk for opioid-related harms and discuss risk with patients. Clinicians should work with patients to incorporate into the management plan strategies to mitigate risk, including offering naloxone."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/opioidcds-09"
+      },
+      "name" : "Recommendation #9 - Consider Patient's History of Controlled Substance Prescriptions",
+      "description" : "When prescribing initial opioid therapy for acute, subacute, or chronic pain, and periodically during opioid therapy for chronic pain, clinicians should review the patient's history of controlled substance prescriptions using state prescription drug monitoring program (PDMP) data to determine whether the patient is receiving opioid dosages or combinations that put the patient at high risk for overdose."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/opioidcds-10-order-sign"
+      },
+      "name" : "Recommendation #10 - Urine Drug Testing (order-sign)",
+      "description" : "When prescribing opioids for subacute or chronic pain, clinicians should consider the benefits and risks of toxicology testing to assess for prescribed medications as well as other prescribed and nonprescribed controlled substances."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/opioidcds-10-patient-view"
+      },
+      "name" : "Recommendation #10 - Urine Drug Testing (patient-view)",
+      "description" : "When prescribing opioids for subacute or chronic pain, clinicians should consider the benefits and risks of toxicology testing to assess for prescribed medications as well as other prescribed and nonprescribed controlled substances."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/opioidcds-11-order-select"
+      },
+      "name" : "Recommendation #11 - Concurrent Use of Opioids and Benzodiazepines (order-select)",
+      "description" : "Clinicians should use particular caution when prescribing opioid pain medication and benzodiazepines concurrently and consider whether benefits outweigh risks of concurrent prescribing of opioids and other central nervous system depressants."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/opioidcds-11-patient-view"
+      },
+      "name" : "Recommendation #11 - Concurrent Use of Opioids and Benzodiazepines (patient-view)",
+      "description" : "Clinicians should use particular caution when prescribing opioid pain medication and benzodiazepines concurrently and consider whether benefits outweigh risks of concurrent prescribing of opioids and other central nervous system depressants."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/opioidcds-12-patient-view"
+      },
+      "name" : "Recommendation #12 - Evidence-based Treatment for Patients with Opioid Use Disorder (patient-view)",
+      "description" : "Clinicians should offer or arrange treatment with evidence-based medications to treat patients with opioid use disorder. Detoxification on its own, without medications for opioid use disorder, is not recommended for opioid use disorder because of increased risks for resuming drug use, overdose, and overdose death."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/opioidcds-indicator"
+      },
+      "name" : "CodeSystem - CDC 2022 Opioid Indicator",
+      "description" : "Indicates the urgency/importance of the recommended action"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/opioidcds-overrideReasons"
+      },
+      "name" : "CDC Opioid Override Reasons",
+      "description" : "Override reasons for the 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/all-urine-drug-screening-tests"
+      },
+      "name" : "All urine drug screening tests",
+      "description" : "Urine tests to all opioid and non-opioid drugs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/amphetamine-urine-drug-screening-tests"
+      },
+      "name" : "Amphetamine-class drugs and metabolite urine tests",
+      "description" : "Urine tests, both quantitative and qualitative, including confirmatory, that detect Amphetamine-class drugs and metabolites"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/amphetamines-class-medications"
+      },
+      "name" : "Amphetamine class medications",
+      "description" : "Amphetamine class medications based upon the mapping of SNOMED CT drug class to ingredient then linked to RXNorm"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/barbiturate-medications"
+      },
+      "name" : "Barbiturate Medications",
+      "description" : "All Barbiturate medications"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/barbiturate-urine-drug-screening-tests"
+      },
+      "name" : "Barbiturate urine drug screening tests",
+      "description" : "Presumed general urine tests for barbiturates that are not specific to a particular substance."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/benzodiazepine-medications"
+      },
+      "name" : "Benzodiazepine medications",
+      "description" : "All benzodiazepine clinical drugs"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/benzodiazepine-urine-drug-screening-tests"
+      },
+      "name" : "Benzodiazepine urine drug screening tests",
+      "description" : "Presumed general urine tests for benzodiazepines that are not specific to a particular substance."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/buprenorphine-and-methadone-medications"
+      },
+      "name" : "Buprenorphine and Methadone medications",
+      "description" : "All Buprenorphine and Methadone medications"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/buprenorphine-medications"
+      },
+      "name" : "Buprenorphine Medications",
+      "description" : "All Buprenorphine medications"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/buprenorphine-urine-drug-screening-tests"
+      },
+      "name" : "Buprenorphine urine drug screening tests",
+      "description" : "Presumed general urine tests for buprenorphine."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/cannabinoid-urine-drug-screening-tests"
+      },
+      "name" : "Cannabinoid class urine drug screening",
+      "description" : "Cannabinoid, including synthetic and THC, urine tests"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/cdc-malignant-cancer-conditions"
+      },
+      "name" : "CDC malignant cancer conditions",
+      "description" : "All neoplastic and malignant conditions, including pain due to neoplasm."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/cns-depressant-medications"
+      },
+      "name" : "CNS depressant medications",
+      "description" : "Medications considered to have an ingredient considered to be a CNS depressant, some of which may be mild. Removed from this set are cough medications and bowl transit modifiers."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/cocaine-urine-drug-screening-tests"
+      },
+      "name" : "Cocaine urine drug screening tests",
+      "description" : "Urine tests for cocaine and cocaine metabolites"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/conditions-documenting-sleep-disordered-breathing"
+      },
+      "name" : "Sleep disordered breathing",
+      "description" : "Conditions associated with sleep-related breathing disorders."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/conditions-documenting-substance-misuse"
+      },
+      "name" : "Conditions documenting substance misuse",
+      "description" : "Any finding or condition that indicate problematic misuse of a substance other than tobacco or laxatives, including \"history of\" conditions."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/conditions-likely-terminal-for-opioid-prescribing"
+      },
+      "name" : "Conditions likely terminal for opioid prescribing",
+      "description" : "Conditions that generally are thought to have terminal prognosis"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/extended-release-opioid-with-ambulatory-misuse-potential"
+      },
+      "name" : "Extended release opioid with ambulatory misuse potential",
+      "description" : "All opioid clinical drugs except those restricted to surgical use only, and that are in an extended release dose form code"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fentanyl-type-medications"
+      },
+      "name" : "Fentanyl-type medications",
+      "description" : "Fentanyl and similar medications (sufentanil, alfentanil, remifentanil)"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/fentanyl-type-urine-drug-screening-tests"
+      },
+      "name" : "Fentanyl-type urine drug screening tests",
+      "description" : "Urine tests for fentanyl-type drugs and metabolites"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/general-opiate-urine-drug-screening-tests"
+      },
+      "name" : "General opiate urine drug screening tests",
+      "description" : "Presumed general urine tests for naturally occurring opioids (i.e. opiates) that are not specific to a particular substance based upon the inclusion of the word 'opiates' in the long name."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/heroin-urine-drug-screening-tests"
+      },
+      "name" : "Heroin urine drug screening tests",
+      "description" : "Presumed general urine tests for heroin and metabolites."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/hospice-finding"
+      },
+      "name" : "Hospice Finding",
+      "description" : "Finding codes for receiving hospice care"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/hospice-procedure"
+      },
+      "name" : "Hospice Procedure",
+      "description" : "Procedure codes for referral, admission, or transfer to a hospice"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/limited-life-expectancy-conditions"
+      },
+      "name" : "Limited life expectancy conditions",
+      "description" : "A finding that documents a terminal prognosis"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/methadone-medications"
+      },
+      "name" : "Methadone medications",
+      "description" : "Medication codes representing methadone medications"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/methadone-urine-drug-screening-tests"
+      },
+      "name" : "Methadone urine drug screening tests",
+      "description" : "Urine tests to identify methadone and metabolites"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/naloxone-medications"
+      },
+      "name" : "Naloxone medications",
+      "description" : "All naloxone medications"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/non-opioid-urine-drug-screening"
+      },
+      "name" : "Non-opioid drug urine screening",
+      "description" : "Individual tests and panels of tests of urine for illicit drugs EXCEPT those for opioids."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/non-synthetic-opioid-medications"
+      },
+      "name" : "Non-synthetic opioid medications",
+      "description" : "Medications derived from the opium plant that are not synthetically created . All metabolize to morphine."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/oncology-specialty-designations"
+      },
+      "name" : "Oncology specialty designations (NUCC)",
+      "description" : "NUCC oncology provider types who may provide encounters to patients with cancer"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/opiate-specific-urine-drug-screening-tests"
+      },
+      "name" : "Opiate specific urine drug screening tests",
+      "description" : "Urine tests for naturally occurring opioids (i.e. opiates) that are specific to a particular naturally occurring opioid and therefore do not have the general word 'opiates' in the long name."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/opioid-analgesics-with-ambulatory-misuse-potential"
+      },
+      "name" : "Opioid analgesics with ambulatory misuse potential",
+      "description" : "All opioid clinical drugs except cough medications, antispasmodics, or those restricted to surgical use only as identified by those using an injectable form."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/opioid-counseling-procedure"
+      },
+      "name" : "Opioid counseling procedure",
+      "description" : "Procedure for counseling on opioid use"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/opioid-misuse-assessment-procedure"
+      },
+      "name" : "Opioid misuse assessment procedure",
+      "description" : "Procedure to assess the risk of opioid abuse occurring by a patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/opioid-misuse-disorders"
+      },
+      "name" : "Opioid misuse disorders",
+      "description" : "Conditions indicating opioid misuse"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/opioid-treatment-assessment-procedure"
+      },
+      "name" : "Opioid treatment assessment procedure",
+      "description" : "Broad set of concepts that may represent a procedure to assess the risk of opioid abuse occurring by a patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/opioid-urine-drug-screening"
+      },
+      "name" : "Opioid drug urine screening",
+      "description" : "Individual tests and panels of tests of urine for opioids"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/oxycodone-medications"
+      },
+      "name" : "Oxycodone Medications",
+      "description" : "All Oxycodone medications"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/oxycodone-urine-drug-screening-tests"
+      },
+      "name" : "Oxycodone urine drug screening tests",
+      "description" : "Presumed general urine tests for oxycodone."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pain-management-procedure"
+      },
+      "name" : "Pain management procedure",
+      "description" : "Procedure for subacute or chronic pain control management"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pain-treatment-plan"
+      },
+      "name" : "Pain treatment plan",
+      "description" : "A Pain medicine Plan of care note"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pdmp-data-reviewed-finding"
+      },
+      "name" : "PDMP data reviewed finding",
+      "description" : "Finding indicating that the Prescription Drug Monitoring Program (PDMP) data was reviewed"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/pdmp-review-procedure"
+      },
+      "name" : "PDMP review procedure",
+      "description" : "Procedure for Prescription Drug Monitoring Program (PDMP) review"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/phencyclidine-urine-drug-screening-tests"
+      },
+      "name" : "Phencyclidine urine drug screening tests",
+      "description" : "Urine tests for phencyclidine"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/sickle-cell-diseases"
+      },
+      "name" : "Sickle-cell diseases",
+      "description" : "Sickle-cell disorders that cause painful crisis"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/substance-misuse-behavioral-counseling"
+      },
+      "name" : "Substance misuse behavioral counseling",
+      "description" : "Counseling and associated procedures for substance misuse"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/synthetic-opioid-medications"
+      },
+      "name" : "Synthetic opioid medications",
+      "description" : "Opioid medications that are not exclusively and solely derived from the opium plant. These are synthetic or semisynthetic opioids."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/synthetic-opioid-urine-drug-screening-tests"
+      },
+      "name" : "Synthetic opioid urine drug screening tests",
+      "description" : "Urine tests for synthetic and semi-synthetic (non-opiate) substances"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/therapies-indicating-end-of-life-care"
+      },
+      "name" : "Therapies indicating end of life care",
+      "description" : "Therapeutic activities indicating end of life. Include procedures or therapies specific to a terminal patient, exclude procedures or therapies performed on a deceased patient"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/condition-clinical-status-active"
+      },
+      "name" : "Condition Clinical Status Active",
+      "description" : "The subject is currently experiencing the condition or situation, there is evidence of the condition or situation, or considered to be a significant risk."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/condition-encounter-diagnosis-category"
+      },
+      "name" : "Encounter Diagnosis Condition Category",
+      "description" : "Encounter Diagnosis condition category."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/condition-problem-list-category"
+      },
+      "name" : "Problem List Condition Category",
+      "description" : "Problem list condition category."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/condition-us-core-health-concern-category"
+      },
+      "name" : "US Core Health Concern Condition Category",
+      "description" : "US Core Health Concern Condition Category."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/hospice-disposition"
+      },
+      "name" : "Hospice Disposition",
+      "description" : "This value set contains concepts that represent patients receiving hospice care outside of a hospital or long term care facility."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/medicationrequest-category-community"
+      },
+      "name" : "ValueSet - Medication Request Category Community",
+      "description" : "Includes requests for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.)."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/medicationrequest-status-active"
+      },
+      "name" : "ValueSet - Medication Request Status Active",
+      "description" : "The prescription is 'actionable', but not all actions that are implied by it have occurred yet."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/observation-category-laboratory"
+      },
+      "name" : "Observation Category Laboratory",
+      "description" : "Laboratory Observation Category"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/observation-category-procedure"
+      },
+      "name" : "Observation Category Procedure",
+      "description" : "Procedure Observation Category"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/office-visit"
+      },
+      "name" : "Office Visit",
+      "description" : "Codes specifying outpatient encounters"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/xylazine-urine-drug-screening-tests"
+      },
+      "name" : "Xylazine drug urine screening tests",
+      "description" : "Individual tests and panels of tests of urine for xylazine"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/cdc-valueset"
+      },
+      "name" : "CDC_ValueSet",
+      "description" : "Profile of ValueSet for use with 2022 CDC Clinical Practice Guideline",
+      "groupingId" : "valueset-profile-spreadsheet.xml"
+    }],
+    "page" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+        "valueUrl" : "toc.html"
+      }],
+      "nameUrl" : "toc.html",
+      "title" : "Table of Contents",
+      "generation" : "html",
+      "page" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "index.html"
+        }],
+        "nameUrl" : "index.html",
+        "title" : "Home",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "profiles.html"
+        }],
+        "nameUrl" : "profiles.html",
+        "title" : "2022 CDC Clinical Practice Guideline - Profiles",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "terminology.html"
+        }],
+        "nameUrl" : "terminology.html",
+        "title" : "2022 CDC Clinical Practice Guideline - Terminology",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "examples.html"
+        }],
+        "nameUrl" : "examples.html",
+        "title" : "2022 CDC Clinical Practice Guideline - Examples",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "documentation.html"
+        }],
+        "nameUrl" : "documentation.html",
+        "title" : "2022 CDC Clinical Practice Guideline - Documentation",
+        "generation" : "markdown",
+        "page" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+            "valueUrl" : "process-documentation.html"
+          }],
+          "nameUrl" : "process-documentation.html",
+          "title" : "2022 CDC Clinical Practice Guideline - Process Documentation",
+          "generation" : "html"
+        }]
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "downloads.html"
+        }],
+        "nameUrl" : "downloads.html",
+        "title" : "2022 CDC Clinical Practice Guideline - Downloads",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "user-interaction-alerts.html"
+        }],
+        "nameUrl" : "user-interaction-alerts.html",
+        "title" : "2022 CDC Clinical Practice Guideline - User Interaction Alerts",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "subroutines.html"
+        }],
+        "nameUrl" : "subroutines.html",
+        "title" : "2022 CDC Clinical Practice Guideline - Subroutines",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "acute-pain.html"
+        }],
+        "nameUrl" : "acute-pain.html",
+        "title" : "2022 CDC Clinical Practice Guideline - Acute Pain",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "chronic-pain.html"
+        }],
+        "nameUrl" : "chronic-pain.html",
+        "title" : "Chronic Pain Decision Documentation",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "recommendation-01.html"
+        }],
+        "nameUrl" : "recommendation-01.html",
+        "title" : "Recommendation #1 - Nonpharmacologic and Nonopioid Pharmacologic Therapy Consideration",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "recommendation-02.html"
+        }],
+        "nameUrl" : "recommendation-02.html",
+        "title" : "Recommendation #2 - Prioritize Nonopioid Pain Therapies",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "recommendation-03.html"
+        }],
+        "nameUrl" : "recommendation-03.html",
+        "title" : "Recommendation #3 - Opioid Immediate Release Form When Starting Opioid Therapy",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "recommendation-04-05.html"
+        }],
+        "nameUrl" : "recommendation-04-05.html",
+        "title" : "Recommendations #4 and #5 - Lowest Effective Dose",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "recommendation-06.html"
+        }],
+        "nameUrl" : "recommendation-06.html",
+        "title" : "Recommendation #6 - Prescribe Lowest Effective Dose and Duration",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "recommendation-07.html"
+        }],
+        "nameUrl" : "recommendation-07.html",
+        "title" : "Recommendation #7 - Opioid Therapy Risk Assessment",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "recommendation-08.html"
+        }],
+        "nameUrl" : "recommendation-08.html",
+        "title" : "Recommendation #8 - Naloxone Consideration",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "recommendation-09.html"
+        }],
+        "nameUrl" : "recommendation-09.html",
+        "title" : "Recommendation #9 - Consider Patient's History of Controlled Substance Prescriptions",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "recommendation-10.html"
+        }],
+        "nameUrl" : "recommendation-10.html",
+        "title" : "Recommendation #10 - Urine Drug Testing",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "recommendation-11.html"
+        }],
+        "nameUrl" : "recommendation-11.html",
+        "title" : "Recommendation #11 - Concurrent Use of Opioids and Benzodiazepines",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "recommendation-12.html"
+        }],
+        "nameUrl" : "recommendation-12.html",
+        "title" : "Recommendation #12 - Evidence-based Treatment for Patients with Opioid Use Disorder",
+        "generation" : "html"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "license.html"
+        }],
+        "nameUrl" : "license.html",
+        "title" : "License and Legal Terms",
+        "generation" : "html"
+      }]
+    },
+    "parameter" : [{
+      "code" : "path-pages",
+      "value" : "input/pagecontent"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/extensions"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/resources/activitydefinition"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/resources/device"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/resources/library"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/resources/plandefinition"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/vocabulary/codesystem"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/vocabulary/valueset"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/resources/parameters"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/capabilities"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/examples"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/models"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/operations"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/profiles"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/resources"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/vocabulary"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/testing"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "input/history"
+    },
+    {
+      "code" : "path-resource",
+      "value" : "fsh-generated/resources"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "template/config"
+    },
+    {
+      "code" : "path-pages",
+      "value" : "input/images"
+    },
+    {
+      "code" : "path-tx-cache",
+      "value" : "input-cache/txcache"
+    }]
+  }
+}

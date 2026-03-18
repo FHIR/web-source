@@ -1,0 +1,1341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1" localId="0">
+   <annotation translatorVersion="3.25.0" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="Overloads" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="210">
+         <a:s>library CDCMMEClinicalConversionFactors version '3.0.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="CDCMMEClinicalConversionFactors" system="http://fhir.org/guides/cdc/opioid-cds" version="3.0.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localId="1" localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="206" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="206">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <statements>
+      <def localId="210" locator="5:1-103:5" name="CDCMMEClinicalConversionFactorsCodeSystem" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="210">
+               <a:s>define CDCMMEClinicalConversionFactorsCodeSystem:
+    </a:s>
+               <a:s r="211">
+                  <a:s>CodeSystem {
+        </a:s>
+                  <a:s>
+                     <a:s>name: </a:s>
+                     <a:s r="213">
+                        <a:s>string { </a:s>
+                        <a:s>
+                           <a:s>value: </a:s>
+                           <a:s r="215">
+                              <a:s>'CDCMMEClinicalConversionFactors'</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> }</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>,
+        </a:s>
+                  <a:s>
+                     <a:s>supplements: </a:s>
+                     <a:s r="217">
+                        <a:s>canonical { </a:s>
+                        <a:s>
+                           <a:s>value: </a:s>
+                           <a:s r="219">
+                              <a:s>'http://www.nlm.nih.gov/research/umls/rxnorm'</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> }</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>,
+        </a:s>
+                  <a:s>
+                     <a:s>concept: </a:s>
+                     <a:s r="222">
+                        <a:s>List&lt;</a:s>
+                        <a:s r="221">
+                           <a:s>FHIR.CodeSystem.Concept</a:s>
+                        </a:s>
+                        <a:s>> {
+            </a:s>
+                        <a:s r="224">
+                           <a:s>FHIR.CodeSystem.Concept {
+                </a:s>
+                           <a:s>
+                              <a:s>code: </a:s>
+                              <a:s r="226">
+                                 <a:s>code { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="228">
+                                       <a:s>'2670'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+                </a:s>
+                           <a:s>
+                              <a:s>display: </a:s>
+                              <a:s r="230">
+                                 <a:s>string { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="232">
+                                       <a:s>'Codeine'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+                </a:s>
+                           <a:s>
+                              <a:s>property: </a:s>
+                              <a:s r="235">
+                                 <a:s>List&lt;</a:s>
+                                 <a:s r="234">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot;</a:s>
+                                 </a:s>
+                                 <a:s>> {
+                    </a:s>
+                                 <a:s r="237">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot; {
+                            </a:s>
+                                    <a:s>
+                                       <a:s>code: </a:s>
+                                       <a:s r="239">
+                                          <a:s>code { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="241">
+                                                <a:s>'conversion-factor'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>,
+                            </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="243">
+                                          <a:s>decimal { </a:s>
+                                          <a:s>
+                                             <a:s r="245">value: 0.15</a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>
+                    }</a:s>
+                                 </a:s>
+                                 <a:s>
+                }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+            }</a:s>
+                        </a:s>
+                        <a:s>,
+            </a:s>
+                        <a:s r="255">
+                           <a:s>FHIR.CodeSystem.Concept {
+                </a:s>
+                           <a:s>
+                              <a:s>code: </a:s>
+                              <a:s r="257">
+                                 <a:s>code { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="259">
+                                       <a:s>'4337'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+                </a:s>
+                           <a:s>
+                              <a:s>display: </a:s>
+                              <a:s r="261">
+                                 <a:s>string { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="263">
+                                       <a:s>'Fentanyl'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+                </a:s>
+                           <a:s>
+                              <a:s>property: </a:s>
+                              <a:s r="266">
+                                 <a:s>List&lt;</a:s>
+                                 <a:s r="265">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot;</a:s>
+                                 </a:s>
+                                 <a:s>> {
+                    </a:s>
+                                 <a:s r="268">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot; {
+                            </a:s>
+                                    <a:s>
+                                       <a:s>code: </a:s>
+                                       <a:s r="270">
+                                          <a:s>code { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="272">
+                                                <a:s>'dose-form-conversion-factor'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>,
+                            </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="274">
+                                          <a:s>string { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="276">
+                                                <a:s>'316987:7200@0.33333333'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>
+                    }</a:s>
+                                 </a:s>
+                                 <a:s>
+                }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+            }</a:s>
+                        </a:s>
+                        <a:s>,
+            </a:s>
+                        <a:s r="287">
+                           <a:s>FHIR.CodeSystem.Concept {
+                </a:s>
+                           <a:s>
+                              <a:s>code: </a:s>
+                              <a:s r="289">
+                                 <a:s>code { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="291">
+                                       <a:s>'3423'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+                </a:s>
+                           <a:s>
+                              <a:s>display: </a:s>
+                              <a:s r="293">
+                                 <a:s>string { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="295">
+                                       <a:s>'Hydromorphone'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+                </a:s>
+                           <a:s>
+                              <a:s>property: </a:s>
+                              <a:s r="298">
+                                 <a:s>List&lt;</a:s>
+                                 <a:s r="297">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot;</a:s>
+                                 </a:s>
+                                 <a:s>> {
+                    </a:s>
+                                 <a:s r="300">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot; {
+                            </a:s>
+                                    <a:s>
+                                       <a:s>code: </a:s>
+                                       <a:s r="302">
+                                          <a:s>code { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="304">
+                                                <a:s>'conversion-factor'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>,
+                            </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="306">
+                                          <a:s>decimal { </a:s>
+                                          <a:s>
+                                             <a:s r="308">value: 4</a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>
+                    }</a:s>
+                                 </a:s>
+                                 <a:s>
+                }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+            }</a:s>
+                        </a:s>
+                        <a:s>,
+            </a:s>
+                        <a:s r="321">
+                           <a:s>FHIR.CodeSystem.Concept {
+                </a:s>
+                           <a:s>
+                              <a:s>code: </a:s>
+                              <a:s r="323">
+                                 <a:s>code { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="325">
+                                       <a:s>'5489'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+                </a:s>
+                           <a:s>
+                              <a:s>display: </a:s>
+                              <a:s r="327">
+                                 <a:s>string { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="329">
+                                       <a:s>'Hydrocodone'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+                </a:s>
+                           <a:s>
+                              <a:s>property: </a:s>
+                              <a:s r="332">
+                                 <a:s>List&lt;</a:s>
+                                 <a:s r="331">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot;</a:s>
+                                 </a:s>
+                                 <a:s>> {
+                    </a:s>
+                                 <a:s r="334">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot; {
+                            </a:s>
+                                    <a:s>
+                                       <a:s>code: </a:s>
+                                       <a:s r="336">
+                                          <a:s>code { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="338">
+                                                <a:s>'conversion-factor'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>,
+                            </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="340">
+                                          <a:s>decimal { </a:s>
+                                          <a:s>
+                                             <a:s r="342">value: 1</a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>
+                    }</a:s>
+                                 </a:s>
+                                 <a:s>
+                }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+            }</a:s>
+                        </a:s>
+                        <a:s>,
+            </a:s>
+                        <a:s r="355">
+                           <a:s>FHIR.CodeSystem.Concept {
+                </a:s>
+                           <a:s>
+                              <a:s>code: </a:s>
+                              <a:s r="357">
+                                 <a:s>code { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="359">
+                                       <a:s>'6813'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+                </a:s>
+                           <a:s>
+                              <a:s>display: </a:s>
+                              <a:s r="361">
+                                 <a:s>string { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="363">
+                                       <a:s>'Methadone'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+                </a:s>
+                           <a:s>
+                              <a:s>property: </a:s>
+                              <a:s r="366">
+                                 <a:s>List&lt;</a:s>
+                                 <a:s r="365">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot;</a:s>
+                                 </a:s>
+                                 <a:s>> {
+                    </a:s>
+                                 <a:s r="368">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot; {
+                            </a:s>
+                                    <a:s>
+                                       <a:s>code: </a:s>
+                                       <a:s r="370">
+                                          <a:s>code { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="372">
+                                                <a:s>'dose-range-conversion-factor'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>,
+                            </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="374">
+                                          <a:s>string { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="376">
+                                                <a:s>'1-20:4'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>
+                    }</a:s>
+                                 </a:s>
+                                 <a:s>,
+                    </a:s>
+                                 <a:s r="387">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot; {
+                            </a:s>
+                                    <a:s>
+                                       <a:s>code: </a:s>
+                                       <a:s r="389">
+                                          <a:s>code { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="391">
+                                                <a:s>'dose-range-conversion-factor'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>,
+                            </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="393">
+                                          <a:s>string { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="395">
+                                                <a:s>'21-40:8'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>
+                    }</a:s>
+                                 </a:s>
+                                 <a:s>,
+                    </a:s>
+                                 <a:s r="406">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot; {
+                            </a:s>
+                                    <a:s>
+                                       <a:s>code: </a:s>
+                                       <a:s r="408">
+                                          <a:s>code { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="410">
+                                                <a:s>'dose-range-conversion-factor'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>,
+                            </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="412">
+                                          <a:s>string { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="414">
+                                                <a:s>'41-60:10'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>
+                    }</a:s>
+                                 </a:s>
+                                 <a:s>,
+                    </a:s>
+                                 <a:s r="425">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot; {
+                            </a:s>
+                                    <a:s>
+                                       <a:s>code: </a:s>
+                                       <a:s r="427">
+                                          <a:s>code { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="429">
+                                                <a:s>'dose-range-conversion-factor'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>,
+                            </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="431">
+                                          <a:s>string { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="433">
+                                                <a:s>'61-*:12'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>
+                    }</a:s>
+                                 </a:s>
+                                 <a:s>
+                }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+            }</a:s>
+                        </a:s>
+                        <a:s>,
+            </a:s>
+                        <a:s r="444">
+                           <a:s>FHIR.CodeSystem.Concept {
+                </a:s>
+                           <a:s>
+                              <a:s>code: </a:s>
+                              <a:s r="446">
+                                 <a:s>code { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="448">
+                                       <a:s>'7052'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+                </a:s>
+                           <a:s>
+                              <a:s>display: </a:s>
+                              <a:s r="450">
+                                 <a:s>string { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="452">
+                                       <a:s>'Morphine'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+                </a:s>
+                           <a:s>
+                              <a:s>property: </a:s>
+                              <a:s r="455">
+                                 <a:s>List&lt;</a:s>
+                                 <a:s r="454">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot;</a:s>
+                                 </a:s>
+                                 <a:s>> {
+                    </a:s>
+                                 <a:s r="457">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot; {
+                            </a:s>
+                                    <a:s>
+                                       <a:s>code: </a:s>
+                                       <a:s r="459">
+                                          <a:s>code { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="461">
+                                                <a:s>'conversion-factor'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>,
+                            </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="463">
+                                          <a:s>decimal { </a:s>
+                                          <a:s>
+                                             <a:s r="465">value: 1</a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>
+                    }</a:s>
+                                 </a:s>
+                                 <a:s>
+                }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+            }</a:s>
+                        </a:s>
+                        <a:s>,
+            </a:s>
+                        <a:s r="478">
+                           <a:s>FHIR.CodeSystem.Concept {
+                </a:s>
+                           <a:s>
+                              <a:s>code: </a:s>
+                              <a:s r="480">
+                                 <a:s>code { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="482">
+                                       <a:s>'7804'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+                </a:s>
+                           <a:s>
+                              <a:s>display: </a:s>
+                              <a:s r="484">
+                                 <a:s>string { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="486">
+                                       <a:s>'Oxycodone'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+                </a:s>
+                           <a:s>
+                              <a:s>property: </a:s>
+                              <a:s r="489">
+                                 <a:s>List&lt;</a:s>
+                                 <a:s r="488">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot;</a:s>
+                                 </a:s>
+                                 <a:s>> {
+                    </a:s>
+                                 <a:s r="491">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot; {
+                            </a:s>
+                                    <a:s>
+                                       <a:s>code: </a:s>
+                                       <a:s r="493">
+                                          <a:s>code { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="495">
+                                                <a:s>'conversion-factor'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>,
+                            </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="497">
+                                          <a:s>decimal { </a:s>
+                                          <a:s>
+                                             <a:s r="499">value: 1.5</a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>
+                    }</a:s>
+                                 </a:s>
+                                 <a:s>
+                }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+            }</a:s>
+                        </a:s>
+                        <a:s>,
+            </a:s>
+                        <a:s r="509">
+                           <a:s>FHIR.CodeSystem.Concept {
+                </a:s>
+                           <a:s>
+                              <a:s>code: </a:s>
+                              <a:s r="511">
+                                 <a:s>code { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="513">
+                                       <a:s>'7814'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+                </a:s>
+                           <a:s>
+                              <a:s>display: </a:s>
+                              <a:s r="515">
+                                 <a:s>string { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="517">
+                                       <a:s>'Oxymorphone'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+                </a:s>
+                           <a:s>
+                              <a:s>property: </a:s>
+                              <a:s r="520">
+                                 <a:s>List&lt;</a:s>
+                                 <a:s r="519">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot;</a:s>
+                                 </a:s>
+                                 <a:s>> {
+                    </a:s>
+                                 <a:s r="522">
+                                    <a:s>FHIR.CodeSystem.&quot;Concept&quot;.&quot;Property&quot; {
+                            </a:s>
+                                    <a:s>
+                                       <a:s>code: </a:s>
+                                       <a:s r="524">
+                                          <a:s>code { </a:s>
+                                          <a:s>
+                                             <a:s>value: </a:s>
+                                             <a:s r="526">
+                                                <a:s>'conversion-factor'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>,
+                            </a:s>
+                                    <a:s>
+                                       <a:s>value: </a:s>
+                                       <a:s r="528">
+                                          <a:s>decimal { </a:s>
+                                          <a:s>
+                                             <a:s r="530">value: 3</a:s>
+                                          </a:s>
+                                          <a:s> }</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>
+                    }</a:s>
+                                 </a:s>
+                                 <a:s>
+                }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+            }</a:s>
+                        </a:s>
+                        <a:s>
+        }</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    }</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="211" locator="6:5-103:5" classType="fhir:CodeSystem" xsi:type="Instance">
+            <element name="name">
+               <value localId="213" locator="7:15-7:65" classType="fhir:string" xsi:type="Instance">
+                  <element name="value">
+                     <value localId="215" locator="7:31-7:63" valueType="t:String" value="CDCMMEClinicalConversionFactors" xsi:type="Literal"/>
+                  </element>
+               </value>
+            </element>
+            <element name="supplements">
+               <value localId="217" locator="8:22-8:87" classType="fhir:canonical" xsi:type="Instance">
+                  <element name="value">
+                     <value localId="219" locator="8:41-8:85" valueType="t:String" value="http://www.nlm.nih.gov/research/umls/rxnorm" xsi:type="Literal"/>
+                  </element>
+               </value>
+            </element>
+            <element name="concept">
+               <value localId="222" locator="9:18-102:9" xsi:type="List">
+                  <element localId="224" locator="10:13-19:13" classType="fhir:CodeSystem.Concept" xsi:type="Instance">
+                     <element name="code">
+                        <value localId="226" locator="11:23-11:44" classType="fhir:code" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="228" locator="11:37-11:42" valueType="t:String" value="2670" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="display">
+                        <value localId="230" locator="12:26-12:52" classType="fhir:string" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="232" locator="12:42-12:50" valueType="t:String" value="Codeine" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="property">
+                        <value localId="235" locator="13:27-18:17" xsi:type="List">
+                           <element localId="237" locator="14:21-17:21" classType="fhir:CodeSystem.Concept.Property" xsi:type="Instance">
+                              <element name="code">
+                                 <value localId="239" locator="15:35-15:69" classType="fhir:code" xsi:type="Instance">
+                                    <element name="value">
+                                       <value localId="241" locator="15:49-15:67" valueType="t:String" value="conversion-factor" xsi:type="Literal"/>
+                                    </element>
+                                 </value>
+                              </element>
+                              <element name="value">
+                                 <value localId="246" xsi:type="As">
+                                    <operand localId="243" locator="16:36-16:58" classType="fhir:decimal" xsi:type="Instance">
+                                       <element name="value">
+                                          <value localId="245" locator="16:53-16:56" valueType="t:Decimal" value="0.15" xsi:type="Literal"/>
+                                       </element>
+                                    </operand>
+                                    <asTypeSpecifier localId="247" xsi:type="ChoiceTypeSpecifier">
+                                       <choice localId="248" name="fhir:code" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="249" name="fhir:Coding" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="250" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="251" name="fhir:integer" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="252" name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="253" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="254" name="fhir:decimal" xsi:type="NamedTypeSpecifier"/>
+                                    </asTypeSpecifier>
+                                 </value>
+                              </element>
+                           </element>
+                        </value>
+                     </element>
+                  </element>
+                  <element localId="255" locator="20:13-29:13" classType="fhir:CodeSystem.Concept" xsi:type="Instance">
+                     <element name="code">
+                        <value localId="257" locator="21:23-21:44" classType="fhir:code" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="259" locator="21:37-21:42" valueType="t:String" value="4337" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="display">
+                        <value localId="261" locator="22:26-22:53" classType="fhir:string" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="263" locator="22:42-22:51" valueType="t:String" value="Fentanyl" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="property">
+                        <value localId="266" locator="23:27-28:17" xsi:type="List">
+                           <element localId="268" locator="24:21-27:21" classType="fhir:CodeSystem.Concept.Property" xsi:type="Instance">
+                              <element name="code">
+                                 <value localId="270" locator="25:35-25:79" classType="fhir:code" xsi:type="Instance">
+                                    <element name="value">
+                                       <value localId="272" locator="25:49-25:77" valueType="t:String" value="dose-form-conversion-factor" xsi:type="Literal"/>
+                                    </element>
+                                 </value>
+                              </element>
+                              <element name="value">
+                                 <value localId="278" xsi:type="As">
+                                    <operand localId="274" locator="26:36-26:77" classType="fhir:string" xsi:type="Instance">
+                                       <element name="value">
+                                          <value localId="276" locator="26:52-26:75" valueType="t:String" value="316987:7200@0.33333333" xsi:type="Literal"/>
+                                       </element>
+                                    </operand>
+                                    <asTypeSpecifier localId="279" xsi:type="ChoiceTypeSpecifier">
+                                       <choice localId="280" name="fhir:code" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="281" name="fhir:Coding" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="282" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="283" name="fhir:integer" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="284" name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="285" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="286" name="fhir:decimal" xsi:type="NamedTypeSpecifier"/>
+                                    </asTypeSpecifier>
+                                 </value>
+                              </element>
+                           </element>
+                        </value>
+                     </element>
+                  </element>
+                  <element localId="287" locator="30:13-39:13" classType="fhir:CodeSystem.Concept" xsi:type="Instance">
+                     <element name="code">
+                        <value localId="289" locator="31:23-31:44" classType="fhir:code" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="291" locator="31:37-31:42" valueType="t:String" value="3423" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="display">
+                        <value localId="293" locator="32:26-32:58" classType="fhir:string" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="295" locator="32:42-32:56" valueType="t:String" value="Hydromorphone" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="property">
+                        <value localId="298" locator="33:27-38:17" xsi:type="List">
+                           <element localId="300" locator="34:21-37:21" classType="fhir:CodeSystem.Concept.Property" xsi:type="Instance">
+                              <element name="code">
+                                 <value localId="302" locator="35:35-35:69" classType="fhir:code" xsi:type="Instance">
+                                    <element name="value">
+                                       <value localId="304" locator="35:49-35:67" valueType="t:String" value="conversion-factor" xsi:type="Literal"/>
+                                    </element>
+                                 </value>
+                              </element>
+                              <element name="value">
+                                 <value localId="312" xsi:type="As">
+                                    <operand localId="306" locator="36:36-36:55" classType="fhir:decimal" xsi:type="Instance">
+                                       <element name="value">
+                                          <value localId="310" xsi:type="ToDecimal">
+                                             <signature localId="311" name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                                             <operand localId="308" locator="36:53" valueType="t:Integer" value="4" xsi:type="Literal"/>
+                                          </value>
+                                       </element>
+                                    </operand>
+                                    <asTypeSpecifier localId="313" xsi:type="ChoiceTypeSpecifier">
+                                       <choice localId="314" name="fhir:code" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="315" name="fhir:Coding" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="316" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="317" name="fhir:integer" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="318" name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="319" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="320" name="fhir:decimal" xsi:type="NamedTypeSpecifier"/>
+                                    </asTypeSpecifier>
+                                 </value>
+                              </element>
+                           </element>
+                        </value>
+                     </element>
+                  </element>
+                  <element localId="321" locator="40:13-49:13" classType="fhir:CodeSystem.Concept" xsi:type="Instance">
+                     <element name="code">
+                        <value localId="323" locator="41:23-41:44" classType="fhir:code" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="325" locator="41:37-41:42" valueType="t:String" value="5489" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="display">
+                        <value localId="327" locator="42:26-42:56" classType="fhir:string" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="329" locator="42:42-42:54" valueType="t:String" value="Hydrocodone" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="property">
+                        <value localId="332" locator="43:27-48:17" xsi:type="List">
+                           <element localId="334" locator="44:21-47:21" classType="fhir:CodeSystem.Concept.Property" xsi:type="Instance">
+                              <element name="code">
+                                 <value localId="336" locator="45:35-45:69" classType="fhir:code" xsi:type="Instance">
+                                    <element name="value">
+                                       <value localId="338" locator="45:49-45:67" valueType="t:String" value="conversion-factor" xsi:type="Literal"/>
+                                    </element>
+                                 </value>
+                              </element>
+                              <element name="value">
+                                 <value localId="346" xsi:type="As">
+                                    <operand localId="340" locator="46:36-46:55" classType="fhir:decimal" xsi:type="Instance">
+                                       <element name="value">
+                                          <value localId="344" xsi:type="ToDecimal">
+                                             <signature localId="345" name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                                             <operand localId="342" locator="46:53" valueType="t:Integer" value="1" xsi:type="Literal"/>
+                                          </value>
+                                       </element>
+                                    </operand>
+                                    <asTypeSpecifier localId="347" xsi:type="ChoiceTypeSpecifier">
+                                       <choice localId="348" name="fhir:code" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="349" name="fhir:Coding" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="350" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="351" name="fhir:integer" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="352" name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="353" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="354" name="fhir:decimal" xsi:type="NamedTypeSpecifier"/>
+                                    </asTypeSpecifier>
+                                 </value>
+                              </element>
+                           </element>
+                        </value>
+                     </element>
+                  </element>
+                  <element localId="355" locator="50:13-71:13" classType="fhir:CodeSystem.Concept" xsi:type="Instance">
+                     <element name="code">
+                        <value localId="357" locator="51:23-51:44" classType="fhir:code" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="359" locator="51:37-51:42" valueType="t:String" value="6813" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="display">
+                        <value localId="361" locator="52:26-52:54" classType="fhir:string" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="363" locator="52:42-52:52" valueType="t:String" value="Methadone" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="property">
+                        <value localId="366" locator="53:27-70:17" xsi:type="List">
+                           <element localId="368" locator="54:21-57:21" classType="fhir:CodeSystem.Concept.Property" xsi:type="Instance">
+                              <element name="code">
+                                 <value localId="370" locator="55:35-55:80" classType="fhir:code" xsi:type="Instance">
+                                    <element name="value">
+                                       <value localId="372" locator="55:49-55:78" valueType="t:String" value="dose-range-conversion-factor" xsi:type="Literal"/>
+                                    </element>
+                                 </value>
+                              </element>
+                              <element name="value">
+                                 <value localId="378" xsi:type="As">
+                                    <operand localId="374" locator="56:36-56:61" classType="fhir:string" xsi:type="Instance">
+                                       <element name="value">
+                                          <value localId="376" locator="56:52-56:59" valueType="t:String" value="1-20:4" xsi:type="Literal"/>
+                                       </element>
+                                    </operand>
+                                    <asTypeSpecifier localId="379" xsi:type="ChoiceTypeSpecifier">
+                                       <choice localId="380" name="fhir:code" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="381" name="fhir:Coding" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="382" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="383" name="fhir:integer" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="384" name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="385" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="386" name="fhir:decimal" xsi:type="NamedTypeSpecifier"/>
+                                    </asTypeSpecifier>
+                                 </value>
+                              </element>
+                           </element>
+                           <element localId="387" locator="58:21-61:21" classType="fhir:CodeSystem.Concept.Property" xsi:type="Instance">
+                              <element name="code">
+                                 <value localId="389" locator="59:35-59:80" classType="fhir:code" xsi:type="Instance">
+                                    <element name="value">
+                                       <value localId="391" locator="59:49-59:78" valueType="t:String" value="dose-range-conversion-factor" xsi:type="Literal"/>
+                                    </element>
+                                 </value>
+                              </element>
+                              <element name="value">
+                                 <value localId="397" xsi:type="As">
+                                    <operand localId="393" locator="60:36-60:62" classType="fhir:string" xsi:type="Instance">
+                                       <element name="value">
+                                          <value localId="395" locator="60:52-60:60" valueType="t:String" value="21-40:8" xsi:type="Literal"/>
+                                       </element>
+                                    </operand>
+                                    <asTypeSpecifier localId="398" xsi:type="ChoiceTypeSpecifier">
+                                       <choice localId="399" name="fhir:code" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="400" name="fhir:Coding" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="401" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="402" name="fhir:integer" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="403" name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="404" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="405" name="fhir:decimal" xsi:type="NamedTypeSpecifier"/>
+                                    </asTypeSpecifier>
+                                 </value>
+                              </element>
+                           </element>
+                           <element localId="406" locator="62:21-65:21" classType="fhir:CodeSystem.Concept.Property" xsi:type="Instance">
+                              <element name="code">
+                                 <value localId="408" locator="63:35-63:80" classType="fhir:code" xsi:type="Instance">
+                                    <element name="value">
+                                       <value localId="410" locator="63:49-63:78" valueType="t:String" value="dose-range-conversion-factor" xsi:type="Literal"/>
+                                    </element>
+                                 </value>
+                              </element>
+                              <element name="value">
+                                 <value localId="416" xsi:type="As">
+                                    <operand localId="412" locator="64:36-64:63" classType="fhir:string" xsi:type="Instance">
+                                       <element name="value">
+                                          <value localId="414" locator="64:52-64:61" valueType="t:String" value="41-60:10" xsi:type="Literal"/>
+                                       </element>
+                                    </operand>
+                                    <asTypeSpecifier localId="417" xsi:type="ChoiceTypeSpecifier">
+                                       <choice localId="418" name="fhir:code" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="419" name="fhir:Coding" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="420" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="421" name="fhir:integer" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="422" name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="423" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="424" name="fhir:decimal" xsi:type="NamedTypeSpecifier"/>
+                                    </asTypeSpecifier>
+                                 </value>
+                              </element>
+                           </element>
+                           <element localId="425" locator="66:21-69:21" classType="fhir:CodeSystem.Concept.Property" xsi:type="Instance">
+                              <element name="code">
+                                 <value localId="427" locator="67:35-67:80" classType="fhir:code" xsi:type="Instance">
+                                    <element name="value">
+                                       <value localId="429" locator="67:49-67:78" valueType="t:String" value="dose-range-conversion-factor" xsi:type="Literal"/>
+                                    </element>
+                                 </value>
+                              </element>
+                              <element name="value">
+                                 <value localId="435" xsi:type="As">
+                                    <operand localId="431" locator="68:36-68:62" classType="fhir:string" xsi:type="Instance">
+                                       <element name="value">
+                                          <value localId="433" locator="68:52-68:60" valueType="t:String" value="61-*:12" xsi:type="Literal"/>
+                                       </element>
+                                    </operand>
+                                    <asTypeSpecifier localId="436" xsi:type="ChoiceTypeSpecifier">
+                                       <choice localId="437" name="fhir:code" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="438" name="fhir:Coding" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="439" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="440" name="fhir:integer" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="441" name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="442" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="443" name="fhir:decimal" xsi:type="NamedTypeSpecifier"/>
+                                    </asTypeSpecifier>
+                                 </value>
+                              </element>
+                           </element>
+                        </value>
+                     </element>
+                  </element>
+                  <element localId="444" locator="72:13-81:13" classType="fhir:CodeSystem.Concept" xsi:type="Instance">
+                     <element name="code">
+                        <value localId="446" locator="73:23-73:44" classType="fhir:code" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="448" locator="73:37-73:42" valueType="t:String" value="7052" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="display">
+                        <value localId="450" locator="74:26-74:53" classType="fhir:string" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="452" locator="74:42-74:51" valueType="t:String" value="Morphine" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="property">
+                        <value localId="455" locator="75:27-80:17" xsi:type="List">
+                           <element localId="457" locator="76:21-79:21" classType="fhir:CodeSystem.Concept.Property" xsi:type="Instance">
+                              <element name="code">
+                                 <value localId="459" locator="77:35-77:69" classType="fhir:code" xsi:type="Instance">
+                                    <element name="value">
+                                       <value localId="461" locator="77:49-77:67" valueType="t:String" value="conversion-factor" xsi:type="Literal"/>
+                                    </element>
+                                 </value>
+                              </element>
+                              <element name="value">
+                                 <value localId="469" xsi:type="As">
+                                    <operand localId="463" locator="78:36-78:55" classType="fhir:decimal" xsi:type="Instance">
+                                       <element name="value">
+                                          <value localId="467" xsi:type="ToDecimal">
+                                             <signature localId="468" name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                                             <operand localId="465" locator="78:53" valueType="t:Integer" value="1" xsi:type="Literal"/>
+                                          </value>
+                                       </element>
+                                    </operand>
+                                    <asTypeSpecifier localId="470" xsi:type="ChoiceTypeSpecifier">
+                                       <choice localId="471" name="fhir:code" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="472" name="fhir:Coding" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="473" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="474" name="fhir:integer" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="475" name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="476" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="477" name="fhir:decimal" xsi:type="NamedTypeSpecifier"/>
+                                    </asTypeSpecifier>
+                                 </value>
+                              </element>
+                           </element>
+                        </value>
+                     </element>
+                  </element>
+                  <element localId="478" locator="82:13-91:13" classType="fhir:CodeSystem.Concept" xsi:type="Instance">
+                     <element name="code">
+                        <value localId="480" locator="83:23-83:44" classType="fhir:code" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="482" locator="83:37-83:42" valueType="t:String" value="7804" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="display">
+                        <value localId="484" locator="84:26-84:54" classType="fhir:string" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="486" locator="84:42-84:52" valueType="t:String" value="Oxycodone" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="property">
+                        <value localId="489" locator="85:27-90:17" xsi:type="List">
+                           <element localId="491" locator="86:21-89:21" classType="fhir:CodeSystem.Concept.Property" xsi:type="Instance">
+                              <element name="code">
+                                 <value localId="493" locator="87:35-87:69" classType="fhir:code" xsi:type="Instance">
+                                    <element name="value">
+                                       <value localId="495" locator="87:49-87:67" valueType="t:String" value="conversion-factor" xsi:type="Literal"/>
+                                    </element>
+                                 </value>
+                              </element>
+                              <element name="value">
+                                 <value localId="500" xsi:type="As">
+                                    <operand localId="497" locator="88:36-88:57" classType="fhir:decimal" xsi:type="Instance">
+                                       <element name="value">
+                                          <value localId="499" locator="88:53-88:55" valueType="t:Decimal" value="1.5" xsi:type="Literal"/>
+                                       </element>
+                                    </operand>
+                                    <asTypeSpecifier localId="501" xsi:type="ChoiceTypeSpecifier">
+                                       <choice localId="502" name="fhir:code" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="503" name="fhir:Coding" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="504" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="505" name="fhir:integer" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="506" name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="507" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="508" name="fhir:decimal" xsi:type="NamedTypeSpecifier"/>
+                                    </asTypeSpecifier>
+                                 </value>
+                              </element>
+                           </element>
+                        </value>
+                     </element>
+                  </element>
+                  <element localId="509" locator="92:13-101:13" classType="fhir:CodeSystem.Concept" xsi:type="Instance">
+                     <element name="code">
+                        <value localId="511" locator="93:23-93:44" classType="fhir:code" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="513" locator="93:37-93:42" valueType="t:String" value="7814" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="display">
+                        <value localId="515" locator="94:26-94:56" classType="fhir:string" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="517" locator="94:42-94:54" valueType="t:String" value="Oxymorphone" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="property">
+                        <value localId="520" locator="95:27-100:17" xsi:type="List">
+                           <element localId="522" locator="96:21-99:21" classType="fhir:CodeSystem.Concept.Property" xsi:type="Instance">
+                              <element name="code">
+                                 <value localId="524" locator="97:35-97:69" classType="fhir:code" xsi:type="Instance">
+                                    <element name="value">
+                                       <value localId="526" locator="97:49-97:67" valueType="t:String" value="conversion-factor" xsi:type="Literal"/>
+                                    </element>
+                                 </value>
+                              </element>
+                              <element name="value">
+                                 <value localId="534" xsi:type="As">
+                                    <operand localId="528" locator="98:36-98:55" classType="fhir:decimal" xsi:type="Instance">
+                                       <element name="value">
+                                          <value localId="532" xsi:type="ToDecimal">
+                                             <signature localId="533" name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                                             <operand localId="530" locator="98:53" valueType="t:Integer" value="3" xsi:type="Literal"/>
+                                          </value>
+                                       </element>
+                                    </operand>
+                                    <asTypeSpecifier localId="535" xsi:type="ChoiceTypeSpecifier">
+                                       <choice localId="536" name="fhir:code" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="537" name="fhir:Coding" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="538" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="539" name="fhir:integer" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="540" name="fhir:boolean" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="541" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                                       <choice localId="542" name="fhir:decimal" xsi:type="NamedTypeSpecifier"/>
+                                    </asTypeSpecifier>
+                                 </value>
+                              </element>
+                           </element>
+                        </value>
+                     </element>
+                  </element>
+               </value>
+            </element>
+         </expression>
+      </def>
+   </statements>
+</library>

@@ -1,0 +1,552 @@
+{
+   "library" : {
+      "localId" : "0",
+      "annotation" : [ {
+         "translatorVersion" : "3.25.0",
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "Overloads",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "257",
+            "s" : [ {
+               "value" : [ "","library OpioidCDSREC01 version '2022.1.0'" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "OpioidCDSREC01",
+         "system" : "http://fhir.org/guides/cdc/opioid-cds",
+         "version" : "2022.1.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localId" : "1",
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "206",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "206",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "208",
+            "locator" : "5:1-5:54",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "208",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'"," called ","FHIRHelpers" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "210",
+            "locator" : "6:1-6:56",
+            "localIdentifier" : "Common",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommon",
+            "version" : "2022.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "210",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "OpioidCDSCommon" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'2022.1.0'"," called ","Common" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "212",
+            "locator" : "7:1-7:62",
+            "localIdentifier" : "Config",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommonConfig",
+            "version" : "2022.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "212",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "OpioidCDSCommonConfig" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'2022.1.0'"," called ","Config" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "214",
+            "locator" : "8:1-8:60",
+            "localIdentifier" : "Routines",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/OpioidCDSRoutines",
+            "version" : "2022.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "214",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "OpioidCDSRoutines" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'2022.1.0'"," called ","Routines" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "parameters" : {
+         "def" : [ {
+            "localId" : "216",
+            "locator" : "46:1-46:59",
+            "name" : "ContextPrescriptions",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "216",
+                  "s" : [ {
+                     "value" : [ "/*\n**\n**  Recommendation #1\n**    Nonopioid therapies are at least as effective as opioids for many common types of acute pain. \n**    Clinicians should maximize use of nonpharmacologic and nonopioid pharmacologic therapies as \n**    appropriate for the specific condition and patient and only consider opioid therapy for acute \n**    pain if benefits are anticipated to outweigh risks to the patient. Before prescribing opioid \n**    therapy for acute pain, clinicians should discuss with patients the realistic benefits and \n**    known risks of opioid therapy (recommendation category: B; evidence type: 3).\n**\n**  When\n**    Provider is prescribing an opioid analgesic with ambulatory misuse potential in the outpatient setting\n**    Prescription is for treating acute pain.\n**    CDC 2022 guideline general inclusion criteria met for this patient:\n**      Patient is 18 or over\n**      Patient does not have evidence of sickle cell disease\n**      Patient does not have findings indicating limited life expectancy\n**      Patient does not have orders for therapies indicating end of life care\n**      Patient is not undergoing active cancer treatment:\n**        Patient has had at least 2 office visits within the past 12 months with an oncology specialist present, or\n**        Patient has had at least 2 office visits within the past 12 months with a CDC malignant cancer condition diagnosis\n**      Patient does not have conditions likely terminal for opioid prescribing present\n**    Patient is opioid naive:\n**      No indication of opioid use in the past 90 days from a prescription, self report (for future implementation), or a dispensing event (for future implementation)\n**  Then\n**    Consider Nonopioid Treatment Options for Acute Pain:\n**      Document - Record reason for opioid therapy\n**      Snooze - Attempt alternative therapy, snooze 3 months\n**      Order - Select alternative therapies from order set\n**      Snooze - N/A see comment, snooze 3 months\n**      Remove - Will remove triggering medication order\n**\n*/\n\n// META: Plan Definition: http://fhir.org/guides/cdc/opioid-cds-r4/PlanDefinition/opioid-cds-01\n\n","parameter ","ContextPrescriptions"," " ]
+                  }, {
+                     "r" : "217",
+                     "s" : [ {
+                        "value" : [ "List<" ]
+                     }, {
+                        "r" : "218",
+                        "s" : [ {
+                           "value" : [ "FHIR",".","MedicationRequest" ]
+                        } ]
+                     }, {
+                        "value" : [ ">" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "parameterTypeSpecifier" : {
+               "localId" : "217",
+               "locator" : "46:32-46:59",
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "localId" : "218",
+                  "locator" : "46:37-46:58",
+                  "name" : "{http://hl7.org/fhir}MedicationRequest",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "localId" : "223",
+            "locator" : "48:1-48:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "localId" : "221",
+            "locator" : "48:1-48:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "localId" : "222",
+               "type" : "SingletonFrom",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "220",
+                  "locator" : "48:1-48:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve",
+                  "include" : [ ],
+                  "codeFilter" : [ ],
+                  "dateFilter" : [ ],
+                  "otherFilter" : [ ]
+               }
+            }
+         }, {
+            "localId" : "226",
+            "locator" : "50:1-52:80",
+            "name" : "Acute Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "226",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Acute Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions\"",":\n  " ]
+                  }, {
+                     "r" : "235",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "227",
+                           "s" : [ {
+                              "r" : "230",
+                              "s" : [ {
+                                 "value" : [ "( " ]
+                              }, {
+                                 "r" : "230",
+                                 "s" : [ {
+                                    "r" : "228",
+                                    "s" : [ {
+                                       "value" : [ "Common" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "230",
+                                    "s" : [ {
+                                       "value" : [ "\"Is Opioid Analgesic with Ambulatory Misuse Potential?\"","( " ]
+                                    }, {
+                                       "r" : "229",
+                                       "s" : [ {
+                                          "value" : [ "ContextPrescriptions" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " )" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " )" ]
+                              } ]
+                           }, {
+                              "value" : [ " ","AmbulatoryOpioidPrescription" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    " ]
+                     }, {
+                        "r" : "234",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "234",
+                           "s" : [ {
+                              "r" : "232",
+                              "s" : [ {
+                                 "value" : [ "Routines" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "234",
+                              "s" : [ {
+                                 "value" : [ "\"Is Acute Pain Prescription?\"","( " ]
+                              }, {
+                                 "r" : "233",
+                                 "s" : [ {
+                                    "value" : [ "AmbulatoryOpioidPrescription" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " )" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "235",
+               "locator" : "51:3-52:80",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "227",
+                  "locator" : "51:3-51:121",
+                  "alias" : "AmbulatoryOpioidPrescription",
+                  "expression" : {
+                     "localId" : "230",
+                     "locator" : "51:3-51:92",
+                     "name" : "Is Opioid Analgesic with Ambulatory Misuse Potential?",
+                     "libraryName" : "Common",
+                     "type" : "FunctionRef",
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "localId" : "229",
+                        "locator" : "51:69-51:88",
+                        "name" : "ContextPrescriptions",
+                        "type" : "ParameterRef"
+                     } ]
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "234",
+                  "locator" : "52:5-52:80",
+                  "name" : "Is Acute Pain Prescription?",
+                  "libraryName" : "Routines",
+                  "type" : "FunctionRef",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "233",
+                     "locator" : "52:51-52:78",
+                     "name" : "AmbulatoryOpioidPrescription",
+                     "type" : "AliasRef"
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "238",
+            "locator" : "54:1-55:88",
+            "name" : "Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "238",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential\"",":\n  " ]
+                  }, {
+                     "r" : "239",
+                     "s" : [ {
+                        "value" : [ "exists" ]
+                     }, {
+                        "r" : "240",
+                        "s" : [ {
+                           "value" : [ "( " ]
+                        }, {
+                           "r" : "240",
+                           "s" : [ {
+                              "value" : [ "\"Acute Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions\"" ]
+                           } ]
+                        }, {
+                           "value" : [ " )" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "239",
+               "locator" : "55:3-55:88",
+               "type" : "Exists",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "240",
+                  "locator" : "55:9-55:88",
+                  "name" : "Acute Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions",
+                  "type" : "ExpressionRef"
+               }
+            }
+         }, {
+            "localId" : "243",
+            "locator" : "57:1-60:35",
+            "name" : "Inclusion Criteria",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "243",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Inclusion Criteria\"",":\n  " ]
+                  }, {
+                     "r" : "244",
+                     "s" : [ {
+                        "r" : "245",
+                        "s" : [ {
+                           "r" : "246",
+                           "s" : [ {
+                              "value" : [ "\"Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential\"" ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    and " ]
+                        }, {
+                           "r" : "248",
+                           "s" : [ {
+                              "r" : "247",
+                              "s" : [ {
+                                 "value" : [ "Routines" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "248",
+                              "s" : [ {
+                                 "value" : [ "\"CDC 2022 Guideline General Inclusion Criteria\"" ]
+                              } ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    and " ]
+                     }, {
+                        "r" : "250",
+                        "s" : [ {
+                           "r" : "249",
+                           "s" : [ {
+                              "value" : [ "Routines" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "250",
+                           "s" : [ {
+                              "value" : [ "\"Is Opioid Naive?\"" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "244",
+               "locator" : "58:3-60:35",
+               "type" : "And",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "245",
+                  "locator" : "58:3-59:64",
+                  "type" : "And",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "246",
+                     "locator" : "58:3-58:81",
+                     "name" : "Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "248",
+                     "locator" : "59:9-59:64",
+                     "name" : "CDC 2022 Guideline General Inclusion Criteria",
+                     "libraryName" : "Routines",
+                     "type" : "ExpressionRef"
+                  } ]
+               }, {
+                  "localId" : "250",
+                  "locator" : "60:9-60:35",
+                  "name" : "Is Opioid Naive?",
+                  "libraryName" : "Routines",
+                  "type" : "ExpressionRef"
+               } ]
+            }
+         }, {
+            "localId" : "253",
+            "locator" : "62:1-63:7",
+            "name" : "Exclusion Criteria",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "253",
+                  "s" : [ {
+                     "r" : "254",
+                     "value" : [ "","define ","\"Exclusion Criteria\"",":\n  ","false" ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "254",
+               "locator" : "63:3-63:7",
+               "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "value" : "false",
+               "type" : "Literal"
+            }
+         }, {
+            "localId" : "257",
+            "locator" : "65:1-67:32",
+            "name" : "Is Recommendation Applicable?",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "257",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Is Recommendation Applicable?\"",":\n  " ]
+                  }, {
+                     "r" : "258",
+                     "s" : [ {
+                        "r" : "259",
+                        "s" : [ {
+                           "value" : [ "\"Inclusion Criteria\"" ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    and " ]
+                     }, {
+                        "r" : "260",
+                        "s" : [ {
+                           "value" : [ "not " ]
+                        }, {
+                           "r" : "261",
+                           "s" : [ {
+                              "value" : [ "\"Exclusion Criteria\"" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "258",
+               "locator" : "66:3-67:32",
+               "type" : "And",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "259",
+                  "locator" : "66:3-66:22",
+                  "name" : "Inclusion Criteria",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "260",
+                  "locator" : "67:9-67:32",
+                  "type" : "Not",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "261",
+                     "locator" : "67:13-67:32",
+                     "name" : "Exclusion Criteria",
+                     "type" : "ExpressionRef"
+                  }
+               } ]
+            }
+         } ]
+      }
+   }
+}

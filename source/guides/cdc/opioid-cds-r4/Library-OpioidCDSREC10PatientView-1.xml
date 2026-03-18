@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1" localId="0">
+   <annotation translatorVersion="3.25.0" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="Overloads" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="294">
+         <a:s>library OpioidCDSREC10PatientView version '2022.1.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="OpioidCDSREC10PatientView" system="http://fhir.org/guides/cdc/opioid-cds" version="2022.1.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localId="1" localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="206" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="206">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="208" locator="5:1-5:54" localIdentifier="FHIRHelpers" path="http://fhir.org/guides/cdc/opioid-cds/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="208">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1' called FHIRHelpers</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="210" locator="6:1-6:56" localIdentifier="Common" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommon" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="210">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSCommon</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Common</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="212" locator="7:1-7:66" localIdentifier="Rec10Common" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSREC10Common" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="212">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSREC10Common</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Rec10Common</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="214" locator="8:1-8:62" localIdentifier="Config" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommonConfig" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="214">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSCommonConfig</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Config</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="216" locator="9:1-9:60" localIdentifier="Routines" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSRoutines" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="216">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSRoutines</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Routines</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <codes>
+      <def localId="218" locator="11:1-11:102" name="Urine Drug Screening" id="310627008" display="Urine drug screening (procedure)" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="218">
+               <a:s>code &quot;Urine Drug Screening&quot;: '310627008' from </a:s>
+               <a:s r="219">
+                  <a:s>Common.SNOMED</a:s>
+               </a:s>
+               <a:s> display 'Urine drug screening (procedure)'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="219" locator="11:47-11:59" name="SNOMED" libraryName="Common"/>
+      </def>
+   </codes>
+   <contexts>
+      <def localId="224" locator="72:1-72:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def localId="222" locator="72:1-72:15" name="Patient" context="Patient">
+         <expression localId="223" xsi:type="SingletonFrom">
+            <operand localId="221" locator="72:1-72:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="227" locator="74:1-76:92" name="Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="227">
+               <a:s>define &quot;Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions&quot;:
+  </a:s>
+               <a:s r="235">
+                  <a:s>
+                     <a:s r="228">
+                        <a:s r="230">
+                           <a:s>
+                              <a:s>Common.&quot;Active Ambulatory Opioid Rx&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> AmbulatoryOpioidPrescription</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="234">
+                     <a:s>where </a:s>
+                     <a:s r="234">
+                        <a:s r="232">
+                           <a:s>Routines</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="234">
+                           <a:s>&quot;Is Subacute or Chronic Pain Prescription?&quot;(</a:s>
+                           <a:s r="233">
+                              <a:s>AmbulatoryOpioidPrescription</a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="235" locator="75:3-76:92" xsi:type="Query">
+            <source localId="228" locator="75:3-75:67" alias="AmbulatoryOpioidPrescription">
+               <expression localId="230" locator="75:3-75:38" name="Active Ambulatory Opioid Rx" libraryName="Common" xsi:type="ExpressionRef"/>
+            </source>
+            <where localId="234" locator="76:5-76:92" name="Is Subacute or Chronic Pain Prescription?" libraryName="Routines" xsi:type="FunctionRef">
+               <operand localId="233" locator="76:64-76:91" name="AmbulatoryOpioidPrescription" xsi:type="AliasRef"/>
+            </where>
+         </expression>
+      </def>
+      <def localId="238" locator="78:1-79:89" name="Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="238">
+               <a:s>define &quot;Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential&quot;:
+  </a:s>
+               <a:s r="239">
+                  <a:s>exists </a:s>
+                  <a:s r="240">
+                     <a:s>(</a:s>
+                     <a:s r="240">
+                        <a:s>&quot;Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions&quot;</a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="239" locator="79:3-79:89" xsi:type="Exists">
+            <operand localId="240" locator="79:10-79:89" name="Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="243" locator="81:1-84:44" name="Is Perform Drug Screen Recommendation Applicable?" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="243">
+               <a:s>define &quot;Is Perform Drug Screen Recommendation Applicable?&quot;:
+  </a:s>
+               <a:s r="244">
+                  <a:s r="245">
+                     <a:s r="246">
+                        <a:s>&quot;Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential&quot;</a:s>
+                     </a:s>
+                     <a:s>
+    and </a:s>
+                     <a:s r="248">
+                        <a:s r="247">
+                           <a:s>Rec10Common</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="248">
+                           <a:s>&quot;Inclusion Criteria For UDS Recommendation&quot;</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    and </a:s>
+                  <a:s r="249">
+                     <a:s>not </a:s>
+                     <a:s r="251">
+                        <a:s r="250">
+                           <a:s>Rec10Common</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="251">
+                           <a:s>&quot;Exclusion Criteria&quot;</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="244" locator="82:3-84:44" xsi:type="And">
+            <operand localId="245" locator="82:3-83:63" xsi:type="And">
+               <operand localId="246" locator="82:3-82:81" name="Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential" xsi:type="ExpressionRef"/>
+               <operand localId="248" locator="83:9-83:63" name="Inclusion Criteria For UDS Recommendation" libraryName="Rec10Common" xsi:type="ExpressionRef"/>
+            </operand>
+            <operand localId="249" locator="84:9-84:44" xsi:type="Not">
+               <operand localId="251" locator="84:13-84:44" name="Exclusion Criteria" libraryName="Rec10Common" xsi:type="ExpressionRef"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="254" locator="86:1-89:44" name="Applicable Because of Unexpected Results" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="254">
+               <a:s>define &quot;Applicable Because of Unexpected Results&quot;:
+  </a:s>
+               <a:s r="255">
+                  <a:s r="256">
+                     <a:s r="257">
+                        <a:s>&quot;Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential&quot;</a:s>
+                     </a:s>
+                     <a:s>
+    and </a:s>
+                     <a:s r="259">
+                        <a:s r="258">
+                           <a:s>Rec10Common</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="259">
+                           <a:s>&quot;Inclusion Criteria For Unexpected Results&quot;</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    and </a:s>
+                  <a:s r="260">
+                     <a:s>not </a:s>
+                     <a:s r="262">
+                        <a:s r="261">
+                           <a:s>Rec10Common</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="262">
+                           <a:s>&quot;Exclusion Criteria&quot;</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="255" locator="87:3-89:44" xsi:type="And">
+            <operand localId="256" locator="87:3-88:63" xsi:type="And">
+               <operand localId="257" locator="87:3-87:81" name="Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential" xsi:type="ExpressionRef"/>
+               <operand localId="259" locator="88:9-88:63" name="Inclusion Criteria For Unexpected Results" libraryName="Rec10Common" xsi:type="ExpressionRef"/>
+            </operand>
+            <operand localId="260" locator="89:9-89:44" xsi:type="Not">
+               <operand localId="262" locator="89:13-89:44" name="Exclusion Criteria" libraryName="Rec10Common" xsi:type="ExpressionRef"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="265" locator="91:1-92:32" name="Detail" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="265">
+               <a:s>define &quot;Detail&quot;:
+  </a:s>
+               <a:s r="267">
+                  <a:s r="266">
+                     <a:s>Rec10Common</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="267">
+                     <a:s>&quot;Get HTML Details&quot;</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="267" locator="92:3-92:32" name="Get HTML Details" libraryName="Rec10Common" xsi:type="ExpressionRef"/>
+      </def>
+      <def localId="294" locator="113:1-119:3" name="ToCoding" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="294">
+               <a:s>define function ToCoding(code System.Code):
+  </a:s>
+               <a:s r="366">
+                  <a:s r="366">
+                     <a:s>FHIR.Coding {
+    </a:s>
+                     <a:s>
+                        <a:s>code: </a:s>
+                        <a:s r="368">
+                           <a:s>FHIR.code { </a:s>
+                           <a:s>
+                              <a:s>value: </a:s>
+                              <a:s r="371">
+                                 <a:s r="370">
+                                    <a:s>code</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="371">
+                                    <a:s>code</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> }</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>,
+    </a:s>
+                     <a:s>
+                        <a:s>system: </a:s>
+                        <a:s r="372">
+                           <a:s>FHIR.uri { </a:s>
+                           <a:s>
+                              <a:s>value: </a:s>
+                              <a:s r="375">
+                                 <a:s r="374">
+                                    <a:s>code</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="375">
+                                    <a:s>system</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> }</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>,
+    </a:s>
+                     <a:s>
+                        <a:s>version: </a:s>
+                        <a:s r="376">
+                           <a:s>FHIR.string { </a:s>
+                           <a:s>
+                              <a:s>value: </a:s>
+                              <a:s r="379">
+                                 <a:s r="378">
+                                    <a:s>code</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="379">
+                                    <a:s>version</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> }</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>,
+    </a:s>
+                     <a:s>
+                        <a:s>display: </a:s>
+                        <a:s r="380">
+                           <a:s>FHIR.string { </a:s>
+                           <a:s>
+                              <a:s>value: </a:s>
+                              <a:s r="383">
+                                 <a:s r="382">
+                                    <a:s>code</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="383">
+                                    <a:s>display</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> }</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+  }</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="366" locator="114:3-119:3" classType="fhir:Coding" xsi:type="Instance">
+            <element name="code">
+               <value localId="368" locator="115:11-115:40" classType="fhir:code" xsi:type="Instance">
+                  <element name="value">
+                     <value localId="371" locator="115:30-115:38" path="code" xsi:type="Property">
+                        <source localId="370" locator="115:30-115:33" name="code" xsi:type="OperandRef"/>
+                     </value>
+                  </element>
+               </value>
+            </element>
+            <element name="system">
+               <value localId="372" locator="116:13-116:43" classType="fhir:uri" xsi:type="Instance">
+                  <element name="value">
+                     <value localId="375" locator="116:31-116:41" path="system" xsi:type="Property">
+                        <source localId="374" locator="116:31-116:34" name="code" xsi:type="OperandRef"/>
+                     </value>
+                  </element>
+               </value>
+            </element>
+            <element name="version">
+               <value localId="376" locator="117:14-117:48" classType="fhir:string" xsi:type="Instance">
+                  <element name="value">
+                     <value localId="379" locator="117:35-117:46" path="version" xsi:type="Property">
+                        <source localId="378" locator="117:35-117:38" name="code" xsi:type="OperandRef"/>
+                     </value>
+                  </element>
+               </value>
+            </element>
+            <element name="display">
+               <value localId="380" locator="118:14-118:48" classType="fhir:string" xsi:type="Instance">
+                  <element name="value">
+                     <value localId="383" locator="118:35-118:46" path="display" xsi:type="Property">
+                        <source localId="382" locator="118:35-118:38" name="code" xsi:type="OperandRef"/>
+                     </value>
+                  </element>
+               </value>
+            </element>
+         </expression>
+         <operand localId="296" name="code">
+            <operandTypeSpecifier localId="295" locator="113:31-113:41" name="t:Code" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+      <def localId="270" locator="98:1-111:5" name="Urine Drug Screening Request" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="270">
+               <a:s>// Service Request - Urine Screening
+// Detected Issue - Opioids found in urine screening
+// Detected Issue - Illicit drugs found in urine screening
+
+define &quot;Urine Drug Screening Request&quot;:
+    </a:s>
+               <a:s r="271">
+                  <a:s>ServiceRequest {
+      //identifier:,
+      </a:s>
+                  <a:s>
+                     <a:s>instantiatesCanonical: </a:s>
+                     <a:s r="273">
+                        <a:s>{ </a:s>
+                        <a:s r="274">
+                           <a:s>FHIR.canonical { </a:s>
+                           <a:s>
+                              <a:s>value: </a:s>
+                              <a:s r="276">
+                                 <a:s>'http://fhir.org/guides/cdc/activitydefinition/urine-screening-request'</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> }</a:s>
+                        </a:s>
+                        <a:s> }</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>,
+      </a:s>
+                  <a:s>
+                     <a:s>status: </a:s>
+                     <a:s r="278">
+                        <a:s>FHIR.ServiceRequestStatus { </a:s>
+                        <a:s>
+                           <a:s>value: </a:s>
+                           <a:s r="280">
+                              <a:s>'draft'</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> }</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>,
+      </a:s>
+                  <a:s>
+                     <a:s>intent: </a:s>
+                     <a:s r="282">
+                        <a:s>FHIR.ServiceRequestIntent { </a:s>
+                        <a:s>
+                           <a:s>value: </a:s>
+                           <a:s r="284">
+                              <a:s>'proposal'</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> }</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>,
+      </a:s>
+                  <a:s>
+                     <a:s>priority: </a:s>
+                     <a:s r="286">
+                        <a:s>FHIR.ServiceRequestPriority { </a:s>
+                        <a:s>
+                           <a:s>value: </a:s>
+                           <a:s r="288">
+                              <a:s>'routine'</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> }</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>,
+      </a:s>
+                  <a:s>
+                     <a:s>code: </a:s>
+                     <a:s r="290">
+                        <a:s>FHIR.CodeableConcept { </a:s>
+                        <a:s>
+                           <a:s>coding: </a:s>
+                           <a:s r="292">
+                              <a:s>{ </a:s>
+                              <a:s r="297">
+                                 <a:s>ToCoding(</a:s>
+                                 <a:s r="293">
+                                    <a:s>&quot;Urine Drug Screening&quot;</a:s>
+                                 </a:s>
+                                 <a:s>)</a:s>
+                              </a:s>
+                              <a:s> }</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> }</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>,
+      </a:s>
+                  <a:s>
+                     <a:s>subject: </a:s>
+                     <a:s r="318">
+                        <a:s>FHIR.Reference { </a:s>
+                        <a:s>
+                           <a:s>reference: </a:s>
+                           <a:s r="320">
+                              <a:s>FHIR.string { </a:s>
+                              <a:s>
+                                 <a:s>value: </a:s>
+                                 <a:s r="331">
+                                    <a:s r="323">
+                                       <a:s>'Patient/'</a:s>
+                                    </a:s>
+                                    <a:s> + </a:s>
+                                    <a:s r="326">
+                                       <a:s r="325">
+                                          <a:s>Patient</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="326">
+                                          <a:s>id</a:s>
+                                       </a:s>
+                                    </a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> }</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> }</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>,
+      </a:s>
+                  <a:s>
+                     <a:s>occurrence: </a:s>
+                     <a:s r="332">
+                        <a:s>FHIR.Period { </a:s>
+                        <a:s>
+                           <a:s>start: </a:s>
+                           <a:s r="334">
+                              <a:s>FHIR.dateTime { </a:s>
+                              <a:s>
+                                 <a:s>value: </a:s>
+                                 <a:s r="338">
+                                    <a:s>Today()</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> }</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s>
+                           <a:s>end: </a:s>
+                           <a:s r="342">
+                              <a:s>FHIR.dateTime { </a:s>
+                              <a:s>
+                                 <a:s>value: </a:s>
+                                 <a:s r="344">
+                                    <a:s r="347">
+                                       <a:s>Today()</a:s>
+                                    </a:s>
+                                    <a:s> + </a:s>
+                                    <a:s r="348">
+                                       <a:s>7 days</a:s>
+                                    </a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> }</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> }</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>,
+      </a:s>
+                  <a:s>
+                     <a:s>authoredOn: </a:s>
+                     <a:s r="359">
+                        <a:s>FHIR.dateTime { </a:s>
+                        <a:s>
+                           <a:s>value: </a:s>
+                           <a:s r="363">
+                              <a:s>Now()</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> }</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+      // doesn't really work, need a relatedArtifact here...
+      //reasonCode: { FHIR.CodeableConcept { text: FHIR.string { value: 'https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#Recommendation10' } } }
+    }</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="271" locator="99:5-111:5" classType="fhir:ServiceRequest" xsi:type="Instance">
+            <element name="instantiatesCanonical">
+               <value localId="273" locator="101:30-101:130" xsi:type="List">
+                  <element localId="274" locator="101:32-101:128" classType="fhir:canonical" xsi:type="Instance">
+                     <element name="value">
+                        <value localId="276" locator="101:56-101:126" valueType="t:String" value="http://fhir.org/guides/cdc/activitydefinition/urine-screening-request" xsi:type="Literal"/>
+                     </element>
+                  </element>
+               </value>
+            </element>
+            <element name="status">
+               <value localId="278" locator="102:15-102:58" classType="fhir:ServiceRequestStatus" xsi:type="Instance">
+                  <element name="value">
+                     <value localId="280" locator="102:50-102:56" valueType="t:String" value="draft" xsi:type="Literal"/>
+                  </element>
+               </value>
+            </element>
+            <element name="intent">
+               <value localId="282" locator="103:15-103:61" classType="fhir:ServiceRequestIntent" xsi:type="Instance">
+                  <element name="value">
+                     <value localId="284" locator="103:50-103:59" valueType="t:String" value="proposal" xsi:type="Literal"/>
+                  </element>
+               </value>
+            </element>
+            <element name="priority">
+               <value localId="286" locator="104:17-104:64" classType="fhir:ServiceRequestPriority" xsi:type="Instance">
+                  <element name="value">
+                     <value localId="288" locator="104:54-104:62" valueType="t:String" value="routine" xsi:type="Literal"/>
+                  </element>
+               </value>
+            </element>
+            <element name="code">
+               <value localId="290" locator="105:13-105:81" classType="fhir:CodeableConcept" xsi:type="Instance">
+                  <element name="coding">
+                     <value localId="292" locator="105:44-105:79" xsi:type="List">
+                        <element localId="297" locator="105:46-105:77" name="ToCoding" xsi:type="FunctionRef">
+                           <operand localId="293" locator="105:55-105:76" name="Urine Drug Screening" xsi:type="CodeRef"/>
+                        </element>
+                     </value>
+                  </element>
+               </value>
+            </element>
+            <element name="subject">
+               <value localId="318" locator="106:16-106:91" classType="fhir:Reference" xsi:type="Instance">
+                  <element name="reference">
+                     <value localId="320" locator="106:44-106:89" classType="fhir:string" xsi:type="Instance">
+                        <element name="value">
+                           <value localId="331" locator="106:65-106:87" xsi:type="Concatenate">
+                              <operand localId="323" locator="106:65-106:74" valueType="t:String" value="Patient/" xsi:type="Literal"/>
+                              <operand localId="327" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                                 <signature localId="328" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                 <operand localId="326" locator="106:78-106:87" path="id" xsi:type="Property">
+                                    <source localId="325" locator="106:78-106:84" name="Patient" xsi:type="ExpressionRef"/>
+                                 </operand>
+                              </operand>
+                           </value>
+                        </element>
+                     </value>
+                  </element>
+               </value>
+            </element>
+            <element name="occurrence">
+               <value localId="354" xsi:type="As">
+                  <operand localId="332" locator="107:19-107:121" classType="fhir:Period" xsi:type="Instance">
+                     <element name="start">
+                        <value localId="334" locator="107:40-107:71" classType="fhir:dateTime" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="340" xsi:type="ToDateTime">
+                                 <signature localId="341" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                                 <operand localId="338" locator="107:63-107:69" xsi:type="Today"/>
+                              </value>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="end">
+                        <value localId="342" locator="107:79-107:119" classType="fhir:dateTime" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="352" xsi:type="ToDateTime">
+                                 <signature localId="353" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                                 <operand localId="344" locator="107:102-107:117" xsi:type="Add">
+                                    <signature localId="349" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                                    <signature localId="350" name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+                                    <operand localId="347" locator="107:102-107:108" xsi:type="Today"/>
+                                    <operand localId="348" locator="107:112-107:117" value="7" unit="days" xsi:type="Quantity"/>
+                                 </operand>
+                              </value>
+                           </element>
+                        </value>
+                     </element>
+                  </operand>
+                  <asTypeSpecifier localId="355" xsi:type="ChoiceTypeSpecifier">
+                     <choice localId="356" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                     <choice localId="357" name="fhir:Period" xsi:type="NamedTypeSpecifier"/>
+                     <choice localId="358" name="fhir:Timing" xsi:type="NamedTypeSpecifier"/>
+                  </asTypeSpecifier>
+               </value>
+            </element>
+            <element name="authoredOn">
+               <value localId="359" locator="108:19-108:48" classType="fhir:dateTime" xsi:type="Instance">
+                  <element name="value">
+                     <value localId="363" locator="108:42-108:46" xsi:type="Now"/>
+                  </element>
+               </value>
+            </element>
+         </expression>
+      </def>
+   </statements>
+</library>

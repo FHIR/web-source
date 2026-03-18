@@ -1,0 +1,1212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PlanDefinition xmlns="http://hl7.org/fhir">
+  <id value="opioidcds-12-patient-view"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition"/>
+    <profile value="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishableplandefinition"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">
+    <table class="grid dict">
+        
+        <tr>
+            <th scope="row"><b>Id: </b></th>
+            <td style="padding-left: 4px;">opioidcds-12-patient-view</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Url: </b></th>
+            <td style="padding-left: 4px;"><a href="PlanDefinition-opioidcds-12-patient-view.html">Recommendation #12 - Evidence-based Treatment for Patients with Opioid Use Disorder (patient-view)</a></td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Version: </b></th>
+            <td style="padding-left: 4px;">2022.1.0</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Identifier: </b></th>
+            <td style="padding-left: 4px;">
+                
+                
+                <p style="margin-bottom: 5px;">
+                    <b>value: </b> <span>cdc-opioid-guidance</span>
+                </p>
+                
+            </td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Name: </b></th>
+            <td style="padding-left: 4px;">PlanDefinition_Recommendation_12_Patient_View</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Title: </b></th>
+            <td style="padding-left: 4px;">Recommendation #12 - Evidence-based Treatment for Patients with Opioid Use Disorder (patient-view)</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Status: </b></th>
+            <td style="padding-left: 4px;">active</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Experimental: </b></th>
+            <td style="padding-left: 4px;">false</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Type: </b></th>
+            <td style="padding-left: 4px;">
+                
+                    
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>system: </b> <span><a href="http://terminology.hl7.org/7.1.0/CodeSystem-plan-definition-type.html">http://terminology.hl7.org/CodeSystem/plan-definition-type</a></span>
+                        </p>
+                        
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>code: </b> <span>eca-rule</span>
+                        </p>
+                        
+                        
+                        <p style="margin-bottom: 5px;">
+                            <b>display: </b> <span>ECA Rule</span>
+                        </p>
+                        
+                    
+                
+                
+            </td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Date: </b></th>
+            <td style="padding-left: 4px;">2025-08-06</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Publisher: </b></th>
+            <td style="padding-left: 4px;">CDC / Security Risk Solutions, Inc. (SRS)</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Description: </b></th>
+            <td style="padding-left: 4px;">Clinicians should offer or arrange treatment with evidence-based medications to treat patients with opioid use disorder. Detoxification on its own, without medications for opioid use disorder, is not recommended for opioid use disorder because of increased risks for resuming drug use, overdose, and overdose death.</td>
+        </tr>
+        
+        
+            <tr>
+                <th scope="row"><a name="effective-data-requirements"> </a><b>Logic Definitions: </b></th>
+                <td style="padding-left: 4px;">
+                    
+                        <table class="grid-dict">
+                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>
+                            <tr>
+                                
+                                    <td>OpioidCDSCommonConfig</td>
+                                
+                                
+                                    <td>Age Less than 18 Years Is Enabled</td>
+                                
+                                
+                                    <td>0</td>
+                                
+                            </tr>
+                        </table>
+                        
+                            <pre style="max-width: 990px;"><code class="language-cql">// CDC 2022 General Inclusion Criteria
+define &quot;Age Less than 18 Years Is Enabled&quot;:
+  true</code></pre>
+                        
+                        <br/><br/>
+                    
+                        <table class="grid-dict">
+                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>
+                            <tr>
+                                
+                                    <td>OpioidCDSCommon</td>
+                                
+                                
+                                    <td>Patient 18 or Older?</td>
+                                
+                                
+                                    <td>1</td>
+                                
+                            </tr>
+                        </table>
+                        
+                            <pre style="max-width: 990px;"><code class="language-cql">define &quot;Patient 18 or Older?&quot;:
+  Config.&quot;Age Less than 18 Years Is Enabled&quot;
+    and AgeInYears() &gt;= 18</code></pre>
+                        
+                        <br/><br/>
+                    
+                        <table class="grid-dict">
+                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>
+                            <tr>
+                                
+                                    <td>OpioidCDSCommonConfig</td>
+                                
+                                
+                                    <td>Evidence Based Treatment Criteria For Opioid Use Disorder</td>
+                                
+                                
+                                    <td>2</td>
+                                
+                            </tr>
+                        </table>
+                        
+                            <pre style="max-width: 990px;"><code class="language-cql">// Recommendation 12
+define &quot;Evidence Based Treatment Criteria For Opioid Use Disorder&quot;:
+  true</code></pre>
+                        
+                        <br/><br/>
+                    
+                        <table class="grid-dict">
+                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>
+                            <tr>
+                                
+                                    <td>OpioidCDSCommonConfig</td>
+                                
+                                
+                                    <td>Can the implementing EHR support queries for past medications by date range?</td>
+                                
+                                
+                                    <td>3</td>
+                                
+                            </tr>
+                        </table>
+                        
+                            <pre style="max-width: 990px;"><code class="language-cql">// Subroutine 2 - Past Medications
+define &quot;Can the implementing EHR support queries for past medications by date range?&quot;:
+  true</code></pre>
+                        
+                        <br/><br/>
+                    
+                        <table class="grid-dict">
+                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>
+                            <tr>
+                                
+                                    <td>OpioidCDSREC12PatientView</td>
+                                
+                                
+                                    <td>Opioid Use Disorder Lookback Period</td>
+                                
+                                
+                                    <td>4</td>
+                                
+                            </tr>
+                        </table>
+                        
+                            <pre style="max-width: 990px;"><code class="language-cql">define &quot;Opioid Use Disorder Lookback Period&quot;:
+  Interval[Today() - 90 days, Today()]</code></pre>
+                        
+                        <br/><br/>
+                    
+                        <table class="grid-dict">
+                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>
+                            <tr>
+                                
+                                    <td>OpioidCDSREC12PatientView</td>
+                                
+                                
+                                    <td>Not Receiving Evidence-Based Treatment for Opioid Use Disorder</td>
+                                
+                                
+                                    <td>5</td>
+                                
+                            </tr>
+                        </table>
+                        
+                            <pre style="max-width: 990px;"><code class="language-cql">define &quot;Not Receiving Evidence-Based Treatment for Opioid Use Disorder&quot;:
+  Config.&quot;Evidence Based Treatment Criteria For Opioid Use Disorder&quot;
+    and not (
+        if Config.&quot;Can the implementing EHR support queries for past medications by date range?&quot; then
+          exists (
+            [MedicationRequest: Common.&quot;Buprenorphine and methadone medications&quot;] MR
+              where MR.status in { 'active', 'completed' }
+                and date from MR.authoredOn during day of &quot;Opioid Use Disorder Lookback Period&quot;
+          )
+        else
+            true
+    /* update 2022 removes &quot;behavioral therapy condition&quot;
+      or exists (
+        [Procedure: Common.&quot;Substance misuse behavioral counseling&quot;] P
+          where P.status ~ 'completed'
+            and (
+              case
+                when P.performed is FHIR.dateTime then
+                  Interval[FHIRHelpers.ToDateTime(P.performed as FHIR.dateTime), FHIRHelpers.ToDateTime(P.performed as FHIR.dateTime)]
+                when P.performed is FHIR.Period then
+                  FHIRHelpers.ToInterval(P.performed as FHIR.Period)
+                else
+                  null as Interval&lt;DateTime&gt;
+                end
+            ) during day of &quot;Opioid Use Disorder Lookback Period&quot;
+      )*/
+    )</code></pre>
+                        
+                        <br/><br/>
+                    
+                        <table class="grid-dict">
+                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>
+                            <tr>
+                                
+                                    <td>OpioidCDSCommon</td>
+                                
+                                
+                                    <td>US Core-Categorized Conditions</td>
+                                
+                                
+                                    <td>6</td>
+                                
+                            </tr>
+                        </table>
+                        
+                            <pre style="max-width: 990px;"><code class="language-cql">// 3. Medications indicating end of life
+    /* or exists (
+      &quot;Medications Indicating End of Life&quot;
+    ) */
+
+define &quot;US Core-Categorized Conditions&quot;:
+  [Condition: category in &quot;Encounter Diagnosis Condition Category&quot;]
+    union [Condition: category in &quot;Problem List Condition Category&quot;]
+    union [Condition: category in &quot;US Core Health Concern Condition Category&quot;]</code></pre>
+                        
+                        <br/><br/>
+                    
+                        <table class="grid-dict">
+                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>
+                            <tr>
+                                
+                                    <td>OpioidCDSREC12PatientView</td>
+                                
+                                
+                                    <td>Presence of Diagnosis of Opioid Use Disorder</td>
+                                
+                                
+                                    <td>7</td>
+                                
+                            </tr>
+                        </table>
+                        
+                            <pre style="max-width: 990px;"><code class="language-cql">define &quot;Presence of Diagnosis of Opioid Use Disorder&quot;:
+  exists (
+    Common.&quot;US Core-Categorized Conditions&quot; C
+      where C.code in Common.&quot;Opioid misuse disorders&quot;
+        and C.clinicalStatus in Common.&quot;Active Condition&quot;
+        and date from C.recordedDate during day of &quot;Opioid Use Disorder Lookback Period&quot;
+    )</code></pre>
+                        
+                        <br/><br/>
+                    
+                        <table class="grid-dict">
+                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>
+                            <tr>
+                                
+                                    <td>OpioidCDSREC12PatientView</td>
+                                
+                                
+                                    <td>Positive Result from Opioid Use Disorder Evaluation Tool</td>
+                                
+                                
+                                    <td>8</td>
+                                
+                            </tr>
+                        </table>
+                        
+                            <pre style="max-width: 990px;"><code class="language-cql">define &quot;Positive Result from Opioid Use Disorder Evaluation Tool&quot;:
+  true</code></pre>
+                        
+                        <br/><br/>
+                    
+                        <table class="grid-dict">
+                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>
+                            <tr>
+                                
+                                    <td>OpioidCDSREC12PatientView</td>
+                                
+                                
+                                    <td>Inclusion Criteria</td>
+                                
+                                
+                                    <td>9</td>
+                                
+                            </tr>
+                        </table>
+                        
+                            <pre style="max-width: 990px;"><code class="language-cql">define &quot;Inclusion Criteria&quot;:
+  Common.&quot;Patient 18 or Older?&quot;
+    and &quot;Not Receiving Evidence-Based Treatment for Opioid Use Disorder&quot;
+    and &quot;Presence of Diagnosis of Opioid Use Disorder&quot;
+    and &quot;Positive Result from Opioid Use Disorder Evaluation Tool&quot;</code></pre>
+                        
+                        <br/><br/>
+                    
+                        <table class="grid-dict">
+                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>
+                            <tr>
+                                
+                                    <td>OpioidCDSREC12PatientView</td>
+                                
+                                
+                                    <td>Exclusion Criteria</td>
+                                
+                                
+                                    <td>10</td>
+                                
+                            </tr>
+                        </table>
+                        
+                            <pre style="max-width: 990px;"><code class="language-cql">define &quot;Exclusion Criteria&quot;:
+  false</code></pre>
+                        
+                        <br/><br/>
+                    
+                        <table class="grid-dict">
+                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>
+                            <tr>
+                                
+                                    <td>OpioidCDSREC12PatientView</td>
+                                
+                                
+                                    <td>Is Recommendation Applicable?</td>
+                                
+                                
+                                    <td>11</td>
+                                
+                            </tr>
+                        </table>
+                        
+                            <pre style="max-width: 990px;"><code class="language-cql">define &quot;Is Recommendation Applicable?&quot;:
+  &quot;Inclusion Criteria&quot;
+    and not &quot;Exclusion Criteria&quot;</code></pre>
+                        
+                        <br/><br/>
+                    
+                        <table class="grid-dict">
+                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>
+                            <tr>
+                                
+                                    <td>FHIRHelpers</td>
+                                
+                                
+                                    <td>ToString</td>
+                                
+                                
+                                    <td>12</td>
+                                
+                            </tr>
+                        </table>
+                        
+                            <pre style="max-width: 990px;"><code class="language-cql">define function ToString(value string): value.value</code></pre>
+                        
+                        <br/><br/>
+                    
+                        <table class="grid-dict">
+                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>
+                            <tr>
+                                
+                                    <td>FHIRHelpers</td>
+                                
+                                
+                                    <td>ToConcept</td>
+                                
+                                
+                                    <td>13</td>
+                                
+                            </tr>
+                        </table>
+                        
+                            <pre style="max-width: 990px;"><code class="language-cql">define function ToConcept(concept FHIR.CodeableConcept):
+    if concept is null then
+        null
+    else
+        System.Concept {
+            codes: concept.coding C return ToCode(C),
+            display: concept.text.value
+        }</code></pre>
+                        
+                        <br/><br/>
+                    
+                        <table class="grid-dict">
+                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>
+                            <tr>
+                                
+                                    <td>FHIRHelpers</td>
+                                
+                                
+                                    <td>ToCode</td>
+                                
+                                
+                                    <td>14</td>
+                                
+                            </tr>
+                        </table>
+                        
+                            <pre style="max-width: 990px;"><code class="language-cql">define function ToCode(coding FHIR.Coding):
+    if coding is null then
+        null
+    else
+        System.Code {
+          code: coding.code.value,
+          system: coding.system.value,
+          version: coding.version.value,
+          display: coding.display.value
+        }</code></pre>
+                        
+                        <br/><br/>
+                    
+                        <table class="grid-dict">
+                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>
+                            <tr>
+                                
+                                    <td>FHIRHelpers</td>
+                                
+                                
+                                    <td>ToString</td>
+                                
+                                
+                                    <td>15</td>
+                                
+                            </tr>
+                        </table>
+                        
+                            <pre style="max-width: 990px;"><code class="language-cql">define function ToString(value MedicationRequestStatus): value.value</code></pre>
+                        
+                        <br/><br/>
+                    
+                        <table class="grid-dict">
+                            <tr><th><b>Library Name</b></th><th><b>Name</b></th><th><b>sequence</b></th></tr>
+                            <tr>
+                                
+                                    <td>FHIRHelpers</td>
+                                
+                                
+                                    <td>ToDateTime</td>
+                                
+                                
+                                    <td>16</td>
+                                
+                            </tr>
+                        </table>
+                        
+                            <pre style="max-width: 990px;"><code class="language-cql">define function ToDateTime(value dateTime): value.value</code></pre>
+                        
+                        <br/><br/>
+                    
+                </td>
+            </tr>
+        
+        
+        <tr>
+          <th scope="row"><b>Knowledge Capability: </b></th>
+          <td style="padding-left: 4px;">
+            shareable computable executable publishable 
+          </td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Use Context: </b></th>
+            <td style="padding-left: 4px;">
+                <table class="grid-dict">
+                    <tr><th><b>code</b></th><th><b>value</b></th><th><b>display</b></th></tr>
+                    
+                      <tr>
+                        <td>focus</td>
+                        <td>1336192000</td>
+                        <td>Opioid use disorder (disorder)</td>
+                      </tr>
+                    
+                </table>
+            </td>
+        </tr>
+        
+        
+        
+        <tr>
+            <th scope="row"><b>Purpose: </b></th>
+            <td style="padding-left: 4px;"><div><p>The 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain is intended to improve communication between clinicians and patients about the benefits and risks of pain treatments, including opioid therapy; improve the effectiveness and safety of pain treatment; mitigate pain; improve function and quality of life for patients with pain; and reduce risks associated with opioid pain therapy, including opioid use disorder, overdose, and death. The recommendations do not apply to pain related to sickle cell disease or cancer or to patients receiving palliative or end-of-life care.</p>
+</div></td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Usage: </b></th>
+            <td style="padding-left: 4px;">Medication treatment of opioid use disorder has been associated with reduced risk for overdose and overall deaths. Identification of opioid use disorder represents an opportunity for a clinician to initiate potentially life-saving interventions, and the clinician should collaborate with the patient regarding their safety to increase the likelihood of successful treatment.</td>
+        </tr>
+        
+        
+        <tr>
+            <th scope="row"><b>Copyright: </b></th>
+            <td style="padding-left: 4px;"><div><p>© CDC 2016+.</p>
+</div></td>
+        </tr>
+        
+        
+        
+        
+        
+        
+        <tr>
+          <th scope="row"><b>Related Artifacts: </b></th>
+          <td style="padding-left: 4px;">
+            
+            <p><b>Documentation</b></p>
+            <ul>
+              
+                  <li>
+                    <a href="https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm"> 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain</a>
+                  </li>
+              
+            </ul>
+            
+            
+            
+            
+            
+            
+            
+          </td>
+        </tr>
+        
+
+        
+        <tr>
+          <th scope="row"><b>Libraries: </b></th>
+          <td style="padding-left: 4px;">
+            <table class="grid-dict">
+              
+                <tr><td><a href="Library-OpioidCDSREC12PatientView.html">Library - Recommendation #12 (patient-view) - Evidence-based Treatment for Patients with Opioid Use Disorder</a></td></tr>
+              
+            </table>
+          </td>
+        </tr>
+        
+
+        
+        <tr>
+          <th scope="row"><b>Actions: </b></th>
+          <td style="padding-left: 4px;">
+            <table class="grid-dict">
+              
+                <tr>
+                  <td>
+                    <b> Offer Evidence-based Medications to Treat Patients with Opioid Use Disorder:</b> For patients diagnosed with opioid use disorder, consider opioid agonist or partial agonist treatment with methadone or buprenorphine maintenance therapy. Detoxification on its own, without medications for opioid use disorder, is not recommended for opioid use disorder because of increased risks of resuming drug use, overdose, and overdose death. 
+
+For guidance regarding diagnosing and treating opioid use disorder, see [Recommendation 12 of the 2022 CDC Clinical Practice Guideline](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#:~:text=evidence%20type%3A%201).-,Implementation%20Considerations,-Although%20stigma%20can).
+
+[CDC recommends against releasing patients from care due to diagnosis of opioid use disorder](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#:~:text=opioid%20use%20disorder.-,Clinicians%20should%20not%20dismiss%20patients%20from%20their%20practice%20because%20of%20opioid%20use%20disorder%20because%20this%20can%20adversely%20affect%20patient%20safety.,-Medication%20treatment%20of).
+
+[MME conversion factors should not be applied to dosage decisions related to the management of opioid use disorder](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#:~:text=These%20conversion%20factors%20should%20not%20be%20applied%20to%20dosage%20decisions%20related%20to%20the%20management%20of%20opioid%20use%20disorder.).
+
+[Do not use the calculated dose in MMEs to determine the doses to use when converting one opioid to another; when converting opioids, the new opioid is typically dosed at a substantially lower dose than the calculated MME dose to avoid overdose because of incomplete cross-tolerance and individual variability in opioid pharmacokinetics](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#:~:text=Do%20not%20use%20the,variability%20in%20opioid%20pharmacokinetics.). Consult the FDA approved product labeling for specific guidance on medications.<br/>
+                    <b>When:</b> <i>Named Event:</i> patient-view<br/>
+                    <b>If:</b> <i>Applicability:</i> Check whether the patient is 18 or older with an active condition of opioid misuse disorder and doesn't have an active prescription (order) for buprenorphine or methadone medications. <i>(Is Recommendation Applicable?)</i><br/>
+                    <b>Then:</b>
+                    
+                      <table class="grid-dict">
+                        
+                          <tr>
+                            <td>
+                              <b> :</b> Snooze* - Patient already provided medication elsewhere to treat opioid use disorder, snooze 3 months<br/>
+                              
+                              
+                              <b>Then:</b>
+                              
+                                
+                                
+                              
+                            </td>
+                          </tr>
+                        
+                          <tr>
+                            <td>
+                              <b> :</b> Snooze* - Patient declined medication therapy, snooze 3 months<br/>
+                              
+                              
+                              <b>Then:</b>
+                              
+                                
+                                
+                              
+                            </td>
+                          </tr>
+                        
+                          <tr>
+                            <td>
+                              <b> :</b> Document - Will order medication to treat opioid use disorder<br/>
+                              
+                              
+                              <b>Then:</b>
+                              
+                                
+                                
+                              
+                            </td>
+                          </tr>
+                        
+                          <tr>
+                            <td>
+                              <b> :</b> Refer - Will refer patient to SUD specialist<br/>
+                              
+                              
+                              <b>Then:</b>
+                              
+                                
+                                
+                              
+                            </td>
+                          </tr>
+                        
+                          <tr>
+                            <td>
+                              <b> :</b> Snooze* - N/A see comments, snooze 3 months<br/>
+                              
+                              
+                              <b>Then:</b>
+                              
+                                
+                                
+                              
+                            </td>
+                          </tr>
+                        
+                      </table>
+                    
+                  </td>
+                </tr>
+              
+            </table>
+          </td>
+        </tr>
+        
+    </table>
+</div>
+  </text>
+  <contained>
+    <Library>
+      <id value="effective-data-requirements"/>
+      <name value="EffectiveDataRequirements"/>
+      <status value="active"/>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/library-type"/>
+          <code value="module-definition"/>
+        </coding>
+      </type>
+      <relatedArtifact>
+        <type value="depends-on"/>
+        <display value="Library Common"/>
+        <resource value="http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSCommon|2022.1.0"/>
+      </relatedArtifact>
+      <relatedArtifact>
+        <type value="depends-on"/>
+        <display value="Library Config"/>
+        <resource value="http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSCommonConfig|2022.1.0"/>
+      </relatedArtifact>
+      <relatedArtifact>
+        <type value="depends-on"/>
+        <display value="Library FHIRHelpers"/>
+        <resource value="http://fhir.org/guides/cdc/opioid-cds/Library/FHIRHelpers|4.0.1"/>
+      </relatedArtifact>
+      <relatedArtifact>
+        <type value="depends-on"/>
+        <display value="Value set Buprenorphine and methadone medications"/>
+        <resource value="http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-and-methadone-medications"/>
+      </relatedArtifact>
+      <relatedArtifact>
+        <type value="depends-on"/>
+        <display value="Value set Encounter Diagnosis Condition Category"/>
+        <resource value="http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-encounter-diagnosis-category"/>
+      </relatedArtifact>
+      <relatedArtifact>
+        <type value="depends-on"/>
+        <display value="Value set Problem List Condition Category"/>
+        <resource value="http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-problem-list-category"/>
+      </relatedArtifact>
+      <relatedArtifact>
+        <type value="depends-on"/>
+        <display value="Value set US Core Health Concern Condition Category"/>
+        <resource value="http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-us-core-health-concern-category"/>
+      </relatedArtifact>
+      <relatedArtifact>
+        <type value="depends-on"/>
+        <display value="Value set Opioid misuse disorders"/>
+        <resource value="http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-misuse-disorders"/>
+      </relatedArtifact>
+      <relatedArtifact>
+        <type value="depends-on"/>
+        <display value="Value set Active Condition"/>
+        <resource value="http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-clinical-status-active"/>
+      </relatedArtifact>
+      <parameter>
+        <name value="Is Recommendation Applicable?"/>
+        <use value="out"/>
+        <min value="0"/>
+        <max value="1"/>
+        <type value="boolean"/>
+      </parameter>
+      <dataRequirement>
+        <type value="Patient"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+      </dataRequirement>
+      <dataRequirement>
+        <type value="MedicationRequest"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
+        <mustSupport value="medication"/>
+        <mustSupport value="status"/>
+        <mustSupport value="authoredOn"/>
+        <codeFilter>
+          <path value="medication"/>
+          <valueSet value="http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-and-methadone-medications"/>
+        </codeFilter>
+      </dataRequirement>
+      <dataRequirement>
+        <type value="MedicationRequest"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
+        <mustSupport value="medication.reference"/>
+        <mustSupport value="status"/>
+        <mustSupport value="authoredOn"/>
+      </dataRequirement>
+      <dataRequirement>
+        <type value="Medication"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Medication"/>
+        <mustSupport value="id"/>
+        <mustSupport value="code"/>
+      </dataRequirement>
+      <dataRequirement>
+        <type value="Condition"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+        <mustSupport value="category"/>
+        <mustSupport value="code"/>
+        <mustSupport value="clinicalStatus"/>
+        <mustSupport value="recordedDate"/>
+        <codeFilter>
+          <path value="category"/>
+          <valueSet value="http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-encounter-diagnosis-category"/>
+        </codeFilter>
+      </dataRequirement>
+      <dataRequirement>
+        <type value="Condition"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+        <mustSupport value="category"/>
+        <mustSupport value="code"/>
+        <mustSupport value="clinicalStatus"/>
+        <mustSupport value="recordedDate"/>
+        <codeFilter>
+          <path value="category"/>
+          <valueSet value="http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-problem-list-category"/>
+        </codeFilter>
+      </dataRequirement>
+      <dataRequirement>
+        <type value="Condition"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/Condition"/>
+        <mustSupport value="category"/>
+        <mustSupport value="code"/>
+        <mustSupport value="clinicalStatus"/>
+        <mustSupport value="recordedDate"/>
+        <codeFilter>
+          <path value="category"/>
+          <valueSet value="http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-us-core-health-concern-category"/>
+        </codeFilter>
+      </dataRequirement>
+    </Library>
+  </contained>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="shareable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="computable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="executable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
+    <valueCode value="publishable"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+    <extension url="libraryName">
+      <valueString value="OpioidCDSCommonConfig"/>
+    </extension>
+    <extension url="name">
+      <valueString value="Age Less than 18 Years Is Enabled"/>
+    </extension>
+    <extension url="statement">
+      <valueString value="// CDC 2022 General Inclusion Criteria&#xA;define &quot;Age Less than 18 Years Is Enabled&quot;:&#xA;  true"/>
+    </extension>
+    <extension url="displaySequence">
+      <valueInteger value="0"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+    <extension url="libraryName">
+      <valueString value="OpioidCDSCommon"/>
+    </extension>
+    <extension url="name">
+      <valueString value="Patient 18 or Older?"/>
+    </extension>
+    <extension url="statement">
+      <valueString value="define &quot;Patient 18 or Older?&quot;:&#xA;  Config.&quot;Age Less than 18 Years Is Enabled&quot;&#xA;    and AgeInYears() &gt;= 18"/>
+    </extension>
+    <extension url="displaySequence">
+      <valueInteger value="1"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+    <extension url="libraryName">
+      <valueString value="OpioidCDSCommonConfig"/>
+    </extension>
+    <extension url="name">
+      <valueString value="Evidence Based Treatment Criteria For Opioid Use Disorder"/>
+    </extension>
+    <extension url="statement">
+      <valueString value="// Recommendation 12&#xA;define &quot;Evidence Based Treatment Criteria For Opioid Use Disorder&quot;:&#xA;  true"/>
+    </extension>
+    <extension url="displaySequence">
+      <valueInteger value="2"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+    <extension url="libraryName">
+      <valueString value="OpioidCDSCommonConfig"/>
+    </extension>
+    <extension url="name">
+      <valueString value="Can the implementing EHR support queries for past medications by date range?"/>
+    </extension>
+    <extension url="statement">
+      <valueString value="// Subroutine 2 - Past Medications&#xA;define &quot;Can the implementing EHR support queries for past medications by date range?&quot;:&#xA;  true"/>
+    </extension>
+    <extension url="displaySequence">
+      <valueInteger value="3"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+    <extension url="libraryName">
+      <valueString value="OpioidCDSREC12PatientView"/>
+    </extension>
+    <extension url="name">
+      <valueString value="Opioid Use Disorder Lookback Period"/>
+    </extension>
+    <extension url="statement">
+      <valueString value="define &quot;Opioid Use Disorder Lookback Period&quot;:&#xA;  Interval[Today() - 90 days, Today()]"/>
+    </extension>
+    <extension url="displaySequence">
+      <valueInteger value="4"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+    <extension url="libraryName">
+      <valueString value="OpioidCDSREC12PatientView"/>
+    </extension>
+    <extension url="name">
+      <valueString value="Not Receiving Evidence-Based Treatment for Opioid Use Disorder"/>
+    </extension>
+    <extension url="statement">
+      <valueString value="define &quot;Not Receiving Evidence-Based Treatment for Opioid Use Disorder&quot;:&#xA;  Config.&quot;Evidence Based Treatment Criteria For Opioid Use Disorder&quot;&#xA;    and not (&#xA;        if Config.&quot;Can the implementing EHR support queries for past medications by date range?&quot; then&#xA;          exists (&#xA;            [MedicationRequest: Common.&quot;Buprenorphine and methadone medications&quot;] MR&#xA;              where MR.status in { 'active', 'completed' }&#xA;                and date from MR.authoredOn during day of &quot;Opioid Use Disorder Lookback Period&quot;&#xA;          )&#xA;        else&#xA;            true&#xA;    /* update 2022 removes &quot;behavioral therapy condition&quot;&#xA;      or exists (&#xA;        [Procedure: Common.&quot;Substance misuse behavioral counseling&quot;] P&#xA;          where P.status ~ 'completed'&#xA;            and (&#xA;              case&#xA;                when P.performed is FHIR.dateTime then&#xA;                  Interval[FHIRHelpers.ToDateTime(P.performed as FHIR.dateTime), FHIRHelpers.ToDateTime(P.performed as FHIR.dateTime)]&#xA;                when P.performed is FHIR.Period then&#xA;                  FHIRHelpers.ToInterval(P.performed as FHIR.Period)&#xA;                else&#xA;                  null as Interval&lt;DateTime&gt;&#xA;                end&#xA;            ) during day of &quot;Opioid Use Disorder Lookback Period&quot;&#xA;      )*/&#xA;    )"/>
+    </extension>
+    <extension url="displaySequence">
+      <valueInteger value="5"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+    <extension url="libraryName">
+      <valueString value="OpioidCDSCommon"/>
+    </extension>
+    <extension url="name">
+      <valueString value="US Core-Categorized Conditions"/>
+    </extension>
+    <extension url="statement">
+      <valueString value="// 3. Medications indicating end of life&#xA;    /* or exists (&#xA;      &quot;Medications Indicating End of Life&quot;&#xA;    ) */&#xA;&#xA;define &quot;US Core-Categorized Conditions&quot;:&#xA;  [Condition: category in &quot;Encounter Diagnosis Condition Category&quot;]&#xA;    union [Condition: category in &quot;Problem List Condition Category&quot;]&#xA;    union [Condition: category in &quot;US Core Health Concern Condition Category&quot;]"/>
+    </extension>
+    <extension url="displaySequence">
+      <valueInteger value="6"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+    <extension url="libraryName">
+      <valueString value="OpioidCDSREC12PatientView"/>
+    </extension>
+    <extension url="name">
+      <valueString value="Presence of Diagnosis of Opioid Use Disorder"/>
+    </extension>
+    <extension url="statement">
+      <valueString value="define &quot;Presence of Diagnosis of Opioid Use Disorder&quot;:&#xA;  exists (&#xA;    Common.&quot;US Core-Categorized Conditions&quot; C&#xA;      where C.code in Common.&quot;Opioid misuse disorders&quot;&#xA;        and C.clinicalStatus in Common.&quot;Active Condition&quot;&#xA;        and date from C.recordedDate during day of &quot;Opioid Use Disorder Lookback Period&quot;&#xA;    )"/>
+    </extension>
+    <extension url="displaySequence">
+      <valueInteger value="7"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+    <extension url="libraryName">
+      <valueString value="OpioidCDSREC12PatientView"/>
+    </extension>
+    <extension url="name">
+      <valueString value="Positive Result from Opioid Use Disorder Evaluation Tool"/>
+    </extension>
+    <extension url="statement">
+      <valueString value="define &quot;Positive Result from Opioid Use Disorder Evaluation Tool&quot;:&#xA;  true"/>
+    </extension>
+    <extension url="displaySequence">
+      <valueInteger value="8"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+    <extension url="libraryName">
+      <valueString value="OpioidCDSREC12PatientView"/>
+    </extension>
+    <extension url="name">
+      <valueString value="Inclusion Criteria"/>
+    </extension>
+    <extension url="statement">
+      <valueString value="define &quot;Inclusion Criteria&quot;:&#xA;  Common.&quot;Patient 18 or Older?&quot;&#xA;    and &quot;Not Receiving Evidence-Based Treatment for Opioid Use Disorder&quot;&#xA;    and &quot;Presence of Diagnosis of Opioid Use Disorder&quot;&#xA;    and &quot;Positive Result from Opioid Use Disorder Evaluation Tool&quot;"/>
+    </extension>
+    <extension url="displaySequence">
+      <valueInteger value="9"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+    <extension url="libraryName">
+      <valueString value="OpioidCDSREC12PatientView"/>
+    </extension>
+    <extension url="name">
+      <valueString value="Exclusion Criteria"/>
+    </extension>
+    <extension url="statement">
+      <valueString value="define &quot;Exclusion Criteria&quot;:&#xA;  false"/>
+    </extension>
+    <extension url="displaySequence">
+      <valueInteger value="10"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+    <extension url="libraryName">
+      <valueString value="OpioidCDSREC12PatientView"/>
+    </extension>
+    <extension url="name">
+      <valueString value="Is Recommendation Applicable?"/>
+    </extension>
+    <extension url="statement">
+      <valueString value="define &quot;Is Recommendation Applicable?&quot;:&#xA;  &quot;Inclusion Criteria&quot;&#xA;    and not &quot;Exclusion Criteria&quot;"/>
+    </extension>
+    <extension url="displaySequence">
+      <valueInteger value="11"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+    <extension url="libraryName">
+      <valueString value="FHIRHelpers"/>
+    </extension>
+    <extension url="name">
+      <valueString value="ToString"/>
+    </extension>
+    <extension url="statement">
+      <valueString value="define function ToString(value string): value.value"/>
+    </extension>
+    <extension url="displaySequence">
+      <valueInteger value="12"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+    <extension url="libraryName">
+      <valueString value="FHIRHelpers"/>
+    </extension>
+    <extension url="name">
+      <valueString value="ToConcept"/>
+    </extension>
+    <extension url="statement">
+      <valueString value="define function ToConcept(concept FHIR.CodeableConcept):&#xA;    if concept is null then&#xA;        null&#xA;    else&#xA;        System.Concept {&#xA;            codes: concept.coding C return ToCode(C),&#xA;            display: concept.text.value&#xA;        }"/>
+    </extension>
+    <extension url="displaySequence">
+      <valueInteger value="13"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+    <extension url="libraryName">
+      <valueString value="FHIRHelpers"/>
+    </extension>
+    <extension url="name">
+      <valueString value="ToCode"/>
+    </extension>
+    <extension url="statement">
+      <valueString value="define function ToCode(coding FHIR.Coding):&#xA;    if coding is null then&#xA;        null&#xA;    else&#xA;        System.Code {&#xA;          code: coding.code.value,&#xA;          system: coding.system.value,&#xA;          version: coding.version.value,&#xA;          display: coding.display.value&#xA;        }"/>
+    </extension>
+    <extension url="displaySequence">
+      <valueInteger value="14"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+    <extension url="libraryName">
+      <valueString value="FHIRHelpers"/>
+    </extension>
+    <extension url="name">
+      <valueString value="ToString"/>
+    </extension>
+    <extension url="statement">
+      <valueString value="define function ToString(value MedicationRequestStatus): value.value"/>
+    </extension>
+    <extension url="displaySequence">
+      <valueInteger value="15"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+    <extension url="libraryName">
+      <valueString value="FHIRHelpers"/>
+    </extension>
+    <extension url="name">
+      <valueString value="ToDateTime"/>
+    </extension>
+    <extension url="statement">
+      <valueString value="define function ToDateTime(value dateTime): value.value"/>
+    </extension>
+    <extension url="displaySequence">
+      <valueInteger value="16"/>
+    </extension>
+  </extension>
+  <extension id="effective-data-requirements" url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-effectiveDataRequirements">
+    <valueCanonical value="#effective-data-requirements"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-softwaresystem">
+    <valueReference>
+      <reference value="Device/cqf-tooling"/>
+    </valueReference>
+  </extension>
+  <url value="http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-12-patient-view"/>
+  <identifier>
+    <use value="official"/>
+    <value value="cdc-opioid-guidance"/>
+  </identifier>
+  <version value="2022.1.0"/>
+  <name value="PlanDefinition_Recommendation_12_Patient_View"/>
+  <title value="Recommendation #12 - Evidence-based Treatment for Patients with Opioid Use Disorder (patient-view)"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/plan-definition-type"/>
+      <code value="eca-rule"/>
+      <display value="ECA Rule"/>
+    </coding>
+  </type>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2025-08-06"/>
+  <publisher value="CDC / Security Risk Solutions, Inc. (SRS)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.securityrisksolutions.com"/>
+    </telecom>
+  </contact>
+  <description value="Clinicians should offer or arrange treatment with evidence-based medications to treat patients with opioid use disorder. Detoxification on its own, without medications for opioid use disorder, is not recommended for opioid use disorder because of increased risks for resuming drug use, overdose, and overdose death."/>
+  <useContext>
+    <code>
+      <system value="http://terminology.hl7.org/CodeSystem/usage-context-type"/>
+      <code value="focus"/>
+      <display value="Clinical Focus"/>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="1336192000"/>
+        <display value="Opioid use disorder (disorder)"/>
+      </coding>
+    </valueCodeableConcept>
+  </useContext>
+  <purpose value="The 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain is intended to improve communication between clinicians and patients about the benefits and risks of pain treatments, including opioid therapy; improve the effectiveness and safety of pain treatment; mitigate pain; improve function and quality of life for patients with pain; and reduce risks associated with opioid pain therapy, including opioid use disorder, overdose, and death. The recommendations do not apply to pain related to sickle cell disease or cancer or to patients receiving palliative or end-of-life care."/>
+  <usage value="Medication treatment of opioid use disorder has been associated with reduced risk for overdose and overall deaths. Identification of opioid use disorder represents an opportunity for a clinician to initiate potentially life-saving interventions, and the clinician should collaborate with the patient regarding their safety to increase the likelihood of successful treatment."/>
+  <copyright value="© CDC 2016+."/>
+  <topic>
+    <text value="Opioid Prescribing"/>
+  </topic>
+  <author>
+    <name value="Kensaku Kawamoto, MD, PhD, MHS"/>
+  </author>
+  <author>
+    <name value="Bryn Rhodes"/>
+  </author>
+  <author>
+    <name value="Floyd Eisenberg, MD, MPH"/>
+  </author>
+  <author>
+    <name value="Robert McClure, MD, MPH"/>
+  </author>
+  <relatedArtifact>
+    <type value="documentation"/>
+    <display value="2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain"/>
+    <url value="https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm"/>
+    <document>
+      <url value="https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm"/>
+    </document>
+  </relatedArtifact>
+  <library value="http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC12PatientView"/>
+  <action>
+    <extension url="http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/recommendation-strength"/>
+          <code value="strong"/>
+          <display value="Strong"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/cqf-qualityOfEvidence">
+      <valueCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/evidence-quality"/>
+          <code value="high"/>
+          <display value="High quality"/>
+        </coding>
+      </valueCodeableConcept>
+    </extension>
+    <title value="Offer Evidence-based Medications to Treat Patients with Opioid Use Disorder"/>
+    <description value="For patients diagnosed with opioid use disorder, consider opioid agonist or partial agonist treatment with methadone or buprenorphine maintenance therapy. Detoxification on its own, without medications for opioid use disorder, is not recommended for opioid use disorder because of increased risks of resuming drug use, overdose, and overdose death. &#xD;&#xA;&#xD;&#xA;For guidance regarding diagnosing and treating opioid use disorder, see [Recommendation 12 of the 2022 CDC Clinical Practice Guideline](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#:~:text=evidence%20type%3A%201).-,Implementation%20Considerations,-Although%20stigma%20can).&#xD;&#xA;&#xD;&#xA;[CDC recommends against releasing patients from care due to diagnosis of opioid use disorder](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#:~:text=opioid%20use%20disorder.-,Clinicians%20should%20not%20dismiss%20patients%20from%20their%20practice%20because%20of%20opioid%20use%20disorder%20because%20this%20can%20adversely%20affect%20patient%20safety.,-Medication%20treatment%20of).&#xD;&#xA;&#xD;&#xA;[MME conversion factors should not be applied to dosage decisions related to the management of opioid use disorder](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#:~:text=These%20conversion%20factors%20should%20not%20be%20applied%20to%20dosage%20decisions%20related%20to%20the%20management%20of%20opioid%20use%20disorder.).&#xD;&#xA;&#xD;&#xA;[Do not use the calculated dose in MMEs to determine the doses to use when converting one opioid to another; when converting opioids, the new opioid is typically dosed at a substantially lower dose than the calculated MME dose to avoid overdose because of incomplete cross-tolerance and individual variability in opioid pharmacokinetics](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#:~:text=Do%20not%20use%20the,variability%20in%20opioid%20pharmacokinetics.). Consult the FDA approved product labeling for specific guidance on medications."/>
+    <priority value="urgent"/>
+    <trigger>
+      <type value="named-event"/>
+      <name value="patient-view"/>
+    </trigger>
+    <condition>
+      <kind value="applicability"/>
+      <expression>
+        <description value="Check whether the patient is 18 or older with an active condition of opioid misuse disorder and doesn't have an active prescription (order) for buprenorphine or methadone medications."/>
+        <language value="text/cql.identifier"/>
+        <expression value="Is Recommendation Applicable?"/>
+      </expression>
+    </condition>
+    <groupingBehavior value="visual-group"/>
+    <selectionBehavior value="any"/>
+    <action>
+      <description value="Snooze* - Patient already provided medication elsewhere to treat opioid use disorder, snooze 3 months"/>
+    </action>
+    <action>
+      <description value="Snooze* - Patient declined medication therapy, snooze 3 months"/>
+    </action>
+    <action>
+      <description value="Document - Will order medication to treat opioid use disorder"/>
+    </action>
+    <action>
+      <description value="Refer - Will refer patient to SUD specialist"/>
+    </action>
+    <action>
+      <description value="Snooze* - N/A see comments, snooze 3 months"/>
+    </action>
+  </action>
+</PlanDefinition>

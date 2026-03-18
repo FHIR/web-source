@@ -1,0 +1,685 @@
+{
+   "library" : {
+      "localId" : "0",
+      "annotation" : [ {
+         "translatorVersion" : "3.25.0",
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "Overloads",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "270",
+            "s" : [ {
+               "value" : [ "","library OpioidCDSREC11OrderSelect version '2022.1.0'" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "OpioidCDSREC11OrderSelect",
+         "system" : "http://fhir.org/guides/cdc/opioid-cds",
+         "version" : "2022.1.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localId" : "1",
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "206",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "206",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "208",
+            "locator" : "5:1-5:54",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "208",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'"," called ","FHIRHelpers" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "210",
+            "locator" : "6:1-6:56",
+            "localIdentifier" : "Common",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommon",
+            "version" : "2022.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "210",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "OpioidCDSCommon" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'2022.1.0'"," called ","Common" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "212",
+            "locator" : "7:1-7:62",
+            "localIdentifier" : "Config",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommonConfig",
+            "version" : "2022.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "212",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "OpioidCDSCommonConfig" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'2022.1.0'"," called ","Config" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "214",
+            "locator" : "8:1-8:60",
+            "localIdentifier" : "Routines",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/OpioidCDSRoutines",
+            "version" : "2022.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "214",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "OpioidCDSRoutines" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'2022.1.0'"," called ","Routines" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "parameters" : {
+         "def" : [ {
+            "localId" : "216",
+            "locator" : "40:1-40:54",
+            "name" : "ContextPrescriptions",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "216",
+                  "s" : [ {
+                     "value" : [ "/*\n**\n**  Recommendation #11\n**    Clinicians should use particular caution when prescribing opioid pain medication and benzodiazepines concurrently \n**    and consider whether benefits outweigh risks of concurrent prescribing of opioids and other central nervous system \n**    depressants  (recommendation category: B; evidence type: 3).\n**\n**  When\n**    Provider is prescribing an opioid analgesic with ambulatory misuse potential in the outpatient setting or\n**    Provider is prescribing a benzodiazepine or other central nervous system depressant medication\n**    CDC 2022 guideline general inclusion criteria met for this patient:\n**      Patient is 18 or over\n**      Patient does not have evidence of sickle cell disease\n**      Patient does not have findings indicating limited life expectancy\n**      Patient does not have orders for therapies indicating end of life care\n**      Patient is not undergoing active cancer treatment:\n**        Patient has had at least 2 office visits within the past 12 months with an oncology specialist present, or\n**        Patient has had at least 2 office visits within the past 12 months with a CDC malignant cancer condition diagnosis\n**      Patient does not have conditions likely terminal for opioid prescribing present\n**    Patient prescribed opioid analgesic with ambulatory misuse potential and benzodiazepine or other central nervous system depressant medication concurrently\n**  Then\n**    Use particular caution when prescribing opioid pain medication and benzodiazepines concurrently:\n**      Document - Will modify prescription\n**      Snooze - Benefits outweigh risks, snooze 3 months\n**      Snooze - N/A see comment, snooze 3 months\n**\n*/\n\n// META: Plan Definition: http://fhir.org/guides/cdc/opioid-cds-r4/PlanDefinition/opioid-cds-11-order-select\n\n","parameter ","ContextPrescriptions"," " ]
+                  }, {
+                     "r" : "217",
+                     "s" : [ {
+                        "value" : [ "List<" ]
+                     }, {
+                        "r" : "218",
+                        "s" : [ {
+                           "value" : [ "MedicationRequest" ]
+                        } ]
+                     }, {
+                        "value" : [ ">" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "parameterTypeSpecifier" : {
+               "localId" : "217",
+               "locator" : "40:32-40:54",
+               "type" : "ListTypeSpecifier",
+               "elementType" : {
+                  "localId" : "218",
+                  "locator" : "40:37-40:53",
+                  "name" : "{http://hl7.org/fhir}MedicationRequest",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "localId" : "223",
+            "locator" : "42:1-42:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "localId" : "221",
+            "locator" : "42:1-42:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "localId" : "222",
+               "type" : "SingletonFrom",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "220",
+                  "locator" : "42:1-42:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve",
+                  "include" : [ ],
+                  "codeFilter" : [ ],
+                  "dateFilter" : [ ],
+                  "otherFilter" : [ ]
+               }
+            }
+         }, {
+            "localId" : "226",
+            "locator" : "44:1-45:88",
+            "name" : "Opioid Analgesic with Ambulatory Misuse Potential Prescriptions",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "226",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Opioid Analgesic with Ambulatory Misuse Potential Prescriptions\"",":\n  " ]
+                  }, {
+                     "r" : "229",
+                     "s" : [ {
+                        "r" : "227",
+                        "s" : [ {
+                           "value" : [ "Common" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "229",
+                        "s" : [ {
+                           "value" : [ "\"Is Opioid Analgesic with Ambulatory Misuse Potential?\"","( " ]
+                        }, {
+                           "r" : "228",
+                           "s" : [ {
+                              "value" : [ "ContextPrescriptions" ]
+                           } ]
+                        }, {
+                           "value" : [ " )" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "229",
+               "locator" : "45:3-45:88",
+               "name" : "Is Opioid Analgesic with Ambulatory Misuse Potential?",
+               "libraryName" : "Common",
+               "type" : "FunctionRef",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "228",
+                  "locator" : "45:67-45:86",
+                  "name" : "ContextPrescriptions",
+                  "type" : "ParameterRef"
+               } ]
+            }
+         }, {
+            "localId" : "232",
+            "locator" : "47:1-48:71",
+            "name" : "Benzodiazepine or CNS Depressant Prescriptions",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "232",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Benzodiazepine or CNS Depressant Prescriptions\"",":\n  " ]
+                  }, {
+                     "r" : "235",
+                     "s" : [ {
+                        "r" : "233",
+                        "s" : [ {
+                           "value" : [ "Common" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "235",
+                        "s" : [ {
+                           "value" : [ "\"Is Benzodiazepine or CNS Depressant?\"","( " ]
+                        }, {
+                           "r" : "234",
+                           "s" : [ {
+                              "value" : [ "ContextPrescriptions" ]
+                           } ]
+                        }, {
+                           "value" : [ " )" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "235",
+               "locator" : "48:3-48:71",
+               "name" : "Is Benzodiazepine or CNS Depressant?",
+               "libraryName" : "Common",
+               "type" : "FunctionRef",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "234",
+                  "locator" : "48:50-48:69",
+                  "name" : "ContextPrescriptions",
+                  "type" : "ParameterRef"
+               } ]
+            }
+         }, {
+            "localId" : "238",
+            "locator" : "50:1-51:77",
+            "name" : "Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "238",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential\"",":\n  " ]
+                  }, {
+                     "r" : "239",
+                     "s" : [ {
+                        "value" : [ "exists" ]
+                     }, {
+                        "r" : "240",
+                        "s" : [ {
+                           "value" : [ "( " ]
+                        }, {
+                           "r" : "240",
+                           "s" : [ {
+                              "value" : [ "\"Opioid Analgesic with Ambulatory Misuse Potential Prescriptions\"" ]
+                           } ]
+                        }, {
+                           "value" : [ " )" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "239",
+               "locator" : "51:3-51:77",
+               "type" : "Exists",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "240",
+                  "locator" : "51:9-51:77",
+                  "name" : "Opioid Analgesic with Ambulatory Misuse Potential Prescriptions",
+                  "type" : "ExpressionRef"
+               }
+            }
+         }, {
+            "localId" : "243",
+            "locator" : "53:1-54:60",
+            "name" : "Patient Is Being Prescribed Benzodiazepine or CNS Depressant",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "243",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Patient Is Being Prescribed Benzodiazepine or CNS Depressant\"",":\n  " ]
+                  }, {
+                     "r" : "244",
+                     "s" : [ {
+                        "value" : [ "exists" ]
+                     }, {
+                        "r" : "245",
+                        "s" : [ {
+                           "value" : [ "( " ]
+                        }, {
+                           "r" : "245",
+                           "s" : [ {
+                              "value" : [ "\"Benzodiazepine or CNS Depressant Prescriptions\"" ]
+                           } ]
+                        }, {
+                           "value" : [ " )" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "244",
+               "locator" : "54:3-54:60",
+               "type" : "Exists",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "245",
+                  "locator" : "54:9-54:60",
+                  "name" : "Benzodiazepine or CNS Depressant Prescriptions",
+                  "type" : "ExpressionRef"
+               }
+            }
+         }, {
+            "localId" : "248",
+            "locator" : "56:1-67:64",
+            "name" : "Inclusion Criteria",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "248",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Inclusion Criteria\"",":\n  " ]
+                  }, {
+                     "r" : "249",
+                     "s" : [ {
+                        "r" : "250",
+                        "s" : [ {
+                           "value" : [ "(\n    " ]
+                        }, {
+                           "r" : "250",
+                           "s" : [ {
+                              "r" : "251",
+                              "s" : [ {
+                                 "value" : [ "(\n      " ]
+                              }, {
+                                 "r" : "251",
+                                 "s" : [ {
+                                    "r" : "252",
+                                    "s" : [ {
+                                       "value" : [ "\"Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential\"" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "\n        and " ]
+                                 }, {
+                                    "r" : "253",
+                                    "s" : [ {
+                                       "value" : [ "exists " ]
+                                    }, {
+                                       "r" : "255",
+                                       "s" : [ {
+                                          "r" : "254",
+                                          "s" : [ {
+                                             "value" : [ "Common" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "255",
+                                          "s" : [ {
+                                             "value" : [ "\"Active Ambulatory Benzodiazepine or CNS Depressant Rx\"" ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ "\n    )" ]
+                              } ]
+                           }, {
+                              "value" : [ "\n      or " ]
+                           }, {
+                              "r" : "256",
+                              "s" : [ {
+                                 "value" : [ "(\n        " ]
+                              }, {
+                                 "r" : "256",
+                                 "s" : [ {
+                                    "r" : "257",
+                                    "s" : [ {
+                                       "value" : [ "\"Patient Is Being Prescribed Benzodiazepine or CNS Depressant\"" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "\n          and " ]
+                                 }, {
+                                    "r" : "258",
+                                    "s" : [ {
+                                       "value" : [ "exists " ]
+                                    }, {
+                                       "r" : "260",
+                                       "s" : [ {
+                                          "r" : "259",
+                                          "s" : [ {
+                                             "value" : [ "Common" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "260",
+                                          "s" : [ {
+                                             "value" : [ "\"Active Ambulatory Opioid Rx\"" ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ "\n      )" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n  )" ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    and " ]
+                     }, {
+                        "r" : "262",
+                        "s" : [ {
+                           "r" : "261",
+                           "s" : [ {
+                              "value" : [ "Routines" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "262",
+                           "s" : [ {
+                              "value" : [ "\"CDC 2022 Guideline General Inclusion Criteria\"" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "249",
+               "locator" : "57:3-67:64",
+               "type" : "And",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "250",
+                  "locator" : "57:3-66:3",
+                  "type" : "Or",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "251",
+                     "locator" : "58:5-61:5",
+                     "type" : "And",
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "localId" : "252",
+                        "locator" : "59:7-59:85",
+                        "name" : "Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential",
+                        "type" : "ExpressionRef"
+                     }, {
+                        "localId" : "253",
+                        "locator" : "60:13-60:81",
+                        "type" : "Exists",
+                        "signature" : [ ],
+                        "operand" : {
+                           "localId" : "255",
+                           "locator" : "60:20-60:81",
+                           "name" : "Active Ambulatory Benzodiazepine or CNS Depressant Rx",
+                           "libraryName" : "Common",
+                           "type" : "ExpressionRef"
+                        }
+                     } ]
+                  }, {
+                     "localId" : "256",
+                     "locator" : "62:10-65:7",
+                     "type" : "And",
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "localId" : "257",
+                        "locator" : "63:9-63:70",
+                        "name" : "Patient Is Being Prescribed Benzodiazepine or CNS Depressant",
+                        "type" : "ExpressionRef"
+                     }, {
+                        "localId" : "258",
+                        "locator" : "64:15-64:57",
+                        "type" : "Exists",
+                        "signature" : [ ],
+                        "operand" : {
+                           "localId" : "260",
+                           "locator" : "64:22-64:57",
+                           "name" : "Active Ambulatory Opioid Rx",
+                           "libraryName" : "Common",
+                           "type" : "ExpressionRef"
+                        }
+                     } ]
+                  } ]
+               }, {
+                  "localId" : "262",
+                  "locator" : "67:9-67:64",
+                  "name" : "CDC 2022 Guideline General Inclusion Criteria",
+                  "libraryName" : "Routines",
+                  "type" : "ExpressionRef"
+               } ]
+            }
+         }, {
+            "localId" : "265",
+            "locator" : "69:1-70:33",
+            "name" : "Exclusion Criteria",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "265",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Exclusion Criteria\"",":\n  " ]
+                  }, {
+                     "r" : "267",
+                     "s" : [ {
+                        "r" : "266",
+                        "s" : [ {
+                           "value" : [ "Common" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "267",
+                        "s" : [ {
+                           "value" : [ "\"End of Life Assessment\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "267",
+               "locator" : "70:3-70:33",
+               "name" : "End of Life Assessment",
+               "libraryName" : "Common",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "localId" : "270",
+            "locator" : "72:1-74:32",
+            "name" : "Is Recommendation Applicable?",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "270",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Is Recommendation Applicable?\"",":\n  " ]
+                  }, {
+                     "r" : "271",
+                     "s" : [ {
+                        "r" : "272",
+                        "s" : [ {
+                           "value" : [ "\"Inclusion Criteria\"" ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    and " ]
+                     }, {
+                        "r" : "273",
+                        "s" : [ {
+                           "value" : [ "not " ]
+                        }, {
+                           "r" : "274",
+                           "s" : [ {
+                              "value" : [ "\"Exclusion Criteria\"" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "271",
+               "locator" : "73:3-74:32",
+               "type" : "And",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "272",
+                  "locator" : "73:3-73:22",
+                  "name" : "Inclusion Criteria",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "273",
+                  "locator" : "74:9-74:32",
+                  "type" : "Not",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "274",
+                     "locator" : "74:13-74:32",
+                     "name" : "Exclusion Criteria",
+                     "type" : "ExpressionRef"
+                  }
+               } ]
+            }
+         } ]
+      }
+   }
+}

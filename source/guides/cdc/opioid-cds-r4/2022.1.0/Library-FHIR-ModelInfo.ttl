@@ -1,0 +1,65 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/Library/FHIR-ModelInfo> a fhir:Library ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "FHIR-ModelInfo"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <table class=\"grid dict\">\n        \n        <tr>\n            <th scope=\"row\"><b>Id: </b></th>\n            <td style=\"padding-left: 4px;\">FHIR-ModelInfo</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Url: </b></th>\n            <td style=\"padding-left: 4px;\"><a href=\"Library-FHIR-ModelInfo.html\">FHIR Model Definition</a></td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Version: </b></th>\n            <td style=\"padding-left: 4px;\">4.0.1</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Identifier: </b></th>\n            <td style=\"padding-left: 4px;\">\n                \n                \n                <p style=\"margin-bottom: 5px;\">\n                    <b>value: </b> <span>FHIR</span>\n                </p>\n                \n            </td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Name: </b></th>\n            <td style=\"padding-left: 4px;\">FHIR</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Title: </b></th>\n            <td style=\"padding-left: 4px;\">FHIR Model Definition</td>\n        </tr>\n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Status: </b></th>\n            <td style=\"padding-left: 4px;\">active</td>\n        </tr>\n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Type: </b></th>\n            <td style=\"padding-left: 4px;\">\n                \n                    \n                        \n                        <p style=\"margin-bottom: 5px;\">\n                            <b>system: </b> <span><a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-library-type.html\">http://terminology.hl7.org/CodeSystem/library-type</a></span>\n                        </p>\n                        \n                        \n                        <p style=\"margin-bottom: 5px;\">\n                            <b>code: </b> <span>model-definition</span>\n                        </p>\n                        \n                        \n                    \n                \n                \n            </td>\n        </tr>\n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Date: </b></th>\n            <td style=\"padding-left: 4px;\">2019-08-08</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Publisher: </b></th>\n            <td style=\"padding-left: 4px;\">CDC / Security Risk Solutions, Inc. (SRS)</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Description: </b></th>\n            <td style=\"padding-left: 4px;\"><div><p>Model definition for the FHIR R4 (v4.0.1) Model</p>\n</div></td>\n        </tr>\n        \n        \n        \n        \n        \n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Copyright: </b></th>\n            <td style=\"padding-left: 4px;\"><div><p>Centers for Disease Control and Prevention (CDC)</p>\n</div></td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Approval Date: </b></th>\n            <td style=\"padding-left: 4px;\">2019-08-08</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Last Review Date: </b></th>\n            <td style=\"padding-left: 4px;\">2020-06-19</td>\n        </tr>\n        \n        \n        \n        \n        \n        \n        \n        \n        <tr>\n          <td colspan=\"2\">\n            <table>\n              <tr><th><b>Content: </b> application/xml</th></tr>\n              <tr><td><pre style=\"max-width: 1084px;\"><code/></pre></td></tr>\n            </table>\n          </td>\n        </tr>\n        \n        \n    </table>\n</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://fhir.org/guides/cdc/opioid-cds/Library/FHIR-ModelInfo"^^xsd:anyURI ;
+     fhir:l <http://fhir.org/guides/cdc/opioid-cds/Library/FHIR-ModelInfo>
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [
+       fhir:v "http://example.org/fhir/cqi/ecqm/Library/Identifier"^^xsd:anyURI ;
+       fhir:l <http://example.org/fhir/cqi/ecqm/Library/Identifier>
+     ] ;
+     fhir:value [ fhir:v "FHIR" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "4.0.1"] ; # 
+  fhir:name [ fhir:v "FHIR"] ; # 
+  fhir:title [ fhir:v "FHIR Model Definition"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/library-type"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/library-type>
+       ] ;
+       fhir:code [ fhir:v "model-definition" ]
+     ] )
+  ] ; # 
+  fhir:date [ fhir:v "2019-08-08"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "CDC / Security Risk Solutions, Inc. (SRS)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.securityrisksolutions.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Model definition for the FHIR R4 (v4.0.1) Model"] ; # 
+  fhir:copyright [ fhir:v "Centers for Disease Control and Prevention (CDC)"] ; # 
+  fhir:approvalDate [ fhir:v "2019-08-08"^^xsd:date] ; # 
+  fhir:lastReviewDate [ fhir:v "2020-06-19"^^xsd:date] ; # 
+  fhir:topic ( [
+     fhir:text [ fhir:v "FHIR" ]
+  ] ) ; # 
+  fhir:content ( [
+     fhir:contentType [ fhir:v "application/xml" ] ;
+     fhir:url [
+       fhir:v "https://github.com/cqframework/clinical_quality_language/blob/master/Src/java/quick/src/main/resources/org/hl7/fhir/fhir-modelinfo-4.0.1.xml"^^xsd:anyURI ;
+       fhir:l <https://github.com/cqframework/clinical_quality_language/blob/master/Src/java/quick/src/main/resources/org/hl7/fhir/fhir-modelinfo-4.0.1.xml>
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

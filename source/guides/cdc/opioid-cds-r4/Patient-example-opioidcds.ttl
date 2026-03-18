@@ -1,0 +1,64 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/Patient/example-opioidcds> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-opioidcds"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient example-opioidcds</b></p><a name=\"example-opioidcds\"> </a><a name=\"hcexample-opioidcds\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">opioidcds example  Male, DoB: 1983-01-10</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\">751 E Apple Drive Novi MI 48376 (home)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Declares the DateLastUpdated and Frequency arguments to be used by the Data Date Roller for maintaining/rolling test data dates to keep them from going stale.\">Data Date-Roller Extension:</td><td colspan=\"3\"><ul><li>dateLastUpdated: 2023-05-01</li><li>frequency: No display for Duration </li></ul></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "dateLastUpdated"^^xsd:anyURI ;
+         fhir:l fhir:dateLastUpdated
+       ] ;
+       fhir:value [
+         a fhir:DateTime ;
+         fhir:v "2023-05-01"^^xsd:date
+       ]
+     ] [
+       fhir:url [
+         fhir:v "frequency"^^xsd:anyURI ;
+         fhir:l fhir:frequency
+       ] ;
+       fhir:value [
+         a fhir:Duration ;
+         fhir:value [ fhir:v 30.0 ] ;
+         fhir:unit [ fhir:v "days" ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "d" ]
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/dataDateRoller"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/dataDateRoller>
+     ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "example" ] ;
+     fhir:given ( [ fhir:v "opioidcds" ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "1983-01-10"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:use [ fhir:v "home" ] ;
+     fhir:type [ fhir:v "postal" ] ;
+     fhir:line ( [ fhir:v "751 E Apple Drive" ] ) ;
+     fhir:city [ fhir:v "Novi" ] ;
+     fhir:district [ fhir:v "Oakland County" ] ;
+     fhir:state [ fhir:v "MI" ] ;
+     fhir:postalCode [ fhir:v "48376" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

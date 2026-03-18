@@ -1,0 +1,151 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/ValueSet/pdmp-data-reviewed-finding> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pdmp-data-reviewed-finding"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet pdmp-data-reviewed-finding</b></p><a name=\"pdmp-data-reviewed-finding\"> </a><a name=\"hcpdmp-data-reviewed-finding\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-computablevalueset.html\">CPGComputableValueSet</a>, <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-executablevalueset.html\">CPGExecutableValueSet</a></p></div><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT United States edition 01-Mar 2023</p><p>This value set contains 1 concepts</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"pdmp-data-reviewed-finding-http://snomed.info/sct-461651000124104\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/461651000124104\">461651000124104</a></td><td>Review of prescription drug monitoring program record done (situation)</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-author"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/valueset-author>
+     ] ;
+     fhir:value [
+       a fhir:ContactDetail ;
+       fhir:name [ fhir:v "MD Partners, Inc." ] ;
+       fhir:telecom ( [
+         fhir:system [ fhir:v "email" ] ;
+         fhir:value [ fhir:v "info@mdpartners.com" ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "computable"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "structured"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "executable"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "executable"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-author"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/valueset-author>
+     ] ;
+     fhir:value [
+       a fhir:ContactDetail ;
+       fhir:name [ fhir:v "MD Partners, Inc." ] ;
+       fhir:telecom ( [
+         fhir:system [ fhir:v "email" ] ;
+         fhir:value [ fhir:v "info@mdpartners.com" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/pdmp-data-reviewed-finding"^^xsd:anyURI ;
+     fhir:l <http://fhir.org/guides/cdc/opioid-cds/ValueSet/pdmp-data-reviewed-finding>
+  ] ; # 
+  fhir:version [ fhir:v "2022.1.0"] ; # 
+  fhir:name [ fhir:v "PDMP_DATA_REVIEWED_FINDING"] ; # 
+  fhir:title [ fhir:v "PDMP data reviewed finding"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2023-05-25T18:08:12-06:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "CDC / Security Risk Solutions, Inc. (SRS)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.securityrisksolutions.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Finding indicating that the Prescription Drug Monitoring Program (PDMP) data was reviewed"] ; # 
+  fhir:purpose [ fhir:v "Finding indicating that the Prescription Drug Monitoring Program (PDMP) data was reviewed"] ; # 
+  fhir:copyright [ fhir:v "© CDC 2016+."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:version [ fhir:v "http://snomed.info/sct/731000124108" ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "461651000124104" ]
+       ] )
+     ] )
+  ] ; # 
+  fhir:expansion [
+     fhir:timestamp [ fhir:v "2023-05-26T00:30:13.118Z"^^xsd:dateTime ] ;
+     fhir:total [ fhir:v 1 ] ;
+     fhir:parameter ( [
+       fhir:name [ fhir:v "version" ] ;
+       fhir:value [
+         a fhir:Uri ;
+         fhir:v "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20230301"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct?version=http://snomed.info/sct/731000124108/version/20230301>
+       ]
+     ] ) ;
+     fhir:contains ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "461651000124104" ] ;
+       fhir:display [ fhir:v "Review of prescription drug monitoring program record done (situation)" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

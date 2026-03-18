@@ -1,0 +1,277 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/ValueSet/substance-misuse-behavioral-counseling> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "substance-misuse-behavioral-counseling"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet substance-misuse-behavioral-counseling</b></p><a name=\"substance-misuse-behavioral-counseling\"> </a><a name=\"hcsubstance-misuse-behavioral-counseling\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-computablevalueset.html\">CPGComputableValueSet</a>, <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-executablevalueset.html\">CPGExecutableValueSet</a></p></div><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on SNOMED CT United States edition 01-Mar 2023</p><p>This value set expansion contains 6 concepts.</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"substance-misuse-behavioral-counseling-http://snomed.info/sct-313071005\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/313071005\">313071005</a></td><td>Counseling for substance abuse (procedure)</td></tr><tr><td><a name=\"substance-misuse-behavioral-counseling-http://snomed.info/sct-60112009\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/60112009\">60112009</a></td><td>Drug addiction counseling (procedure)</td></tr><tr><td><a name=\"substance-misuse-behavioral-counseling-http://snomed.info/sct-424407005\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/424407005\">424407005</a></td><td>Substance use cessation education, guidance, and counseling (procedure)</td></tr><tr><td><a name=\"substance-misuse-behavioral-counseling-http://snomed.info/sct-423416000\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/423416000\">423416000</a></td><td>Substance use cessation case management (procedure)</td></tr><tr><td><a name=\"substance-misuse-behavioral-counseling-http://snomed.info/sct-720174008\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/720174008\">720174008</a></td><td>Drug harm reduction program (regime/therapy)</td></tr><tr><td><a name=\"substance-misuse-behavioral-counseling-http://snomed.info/sct-720177001\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/720177001\">720177001</a></td><td>Drug relapse prevention program (regime/therapy)</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "Counseling and associated procedures for substance misuse"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "Procedure"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "Counseling and associated procedures for substance misuse"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "none"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-author"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/valueset-author>
+     ] ;
+     fhir:value [
+       a fhir:ContactDetail ;
+       fhir:name [ fhir:v "MD Partners, Inc." ] ;
+       fhir:telecom ( [
+         fhir:system [ fhir:v "email" ] ;
+         fhir:value [ fhir:v "info@mdpartners.com" ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "computable"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "structured"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "executable"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "executable"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-author"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/valueset-author>
+     ] ;
+     fhir:value [
+       a fhir:ContactDetail ;
+       fhir:name [ fhir:v "MD Partners, Inc." ] ;
+       fhir:telecom ( [
+         fhir:system [ fhir:v "email" ] ;
+         fhir:value [ fhir:v "info@mdpartners.com" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/substance-misuse-behavioral-counseling"^^xsd:anyURI ;
+     fhir:l <http://fhir.org/guides/cdc/opioid-cds/ValueSet/substance-misuse-behavioral-counseling>
+  ] ; # 
+  fhir:version [ fhir:v "2022.1.0"] ; # 
+  fhir:name [ fhir:v "SUBSTANCE_MISUSE_BEHAVIORAL_COUNSELING"] ; # 
+  fhir:title [ fhir:v "Substance misuse behavioral counseling"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2023-05-25T18:08:12-06:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "CDC / Security Risk Solutions, Inc. (SRS)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.securityrisksolutions.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Counseling and associated procedures for substance misuse"] ; # 
+  fhir:purpose [ fhir:v "Counseling and associated procedures for substance misuse that may be used for opioid management"] ; # 
+  fhir:copyright [ fhir:v "© CDC 2016+."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:version [ fhir:v "http://snomed.info/sct/731000124108" ] ;
+       fhir:filter ( [
+         fhir:property [ fhir:v "concept" ] ;
+         fhir:op [ fhir:v "is-a" ] ;
+         fhir:value [ fhir:v "313071005" ]
+       ] )
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:version [ fhir:v "http://snomed.info/sct/731000124108" ] ;
+       fhir:filter ( [
+         fhir:property [ fhir:v "concept" ] ;
+         fhir:op [ fhir:v "is-a" ] ;
+         fhir:value [ fhir:v "424407005" ]
+       ] )
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:version [ fhir:v "http://snomed.info/sct/731000124108" ] ;
+       fhir:filter ( [
+         fhir:property [ fhir:v "concept" ] ;
+         fhir:op [ fhir:v "is-a" ] ;
+         fhir:value [ fhir:v "423416000" ]
+       ] )
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:version [ fhir:v "http://snomed.info/sct/731000124108" ] ;
+       fhir:filter ( [
+         fhir:property [ fhir:v "concept" ] ;
+         fhir:op [ fhir:v "is-a" ] ;
+         fhir:value [ fhir:v "720174008" ]
+       ] )
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:version [ fhir:v "http://snomed.info/sct/731000124108" ] ;
+       fhir:filter ( [
+         fhir:property [ fhir:v "concept" ] ;
+         fhir:op [ fhir:v "is-a" ] ;
+         fhir:value [ fhir:v "720177001" ]
+       ] )
+     ] )
+  ] ; # 
+  fhir:expansion [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-unclosed"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/StructureDefinition/valueset-unclosed>
+       ] ;
+       fhir:value [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] ) ;
+     fhir:timestamp [ fhir:v "2023-05-26T00:30:05.540Z"^^xsd:dateTime ] ;
+     fhir:parameter ( [
+       fhir:name [ fhir:v "version" ] ;
+       fhir:value [
+         a fhir:Uri ;
+         fhir:v "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20230301"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct?version=http://snomed.info/sct/731000124108/version/20230301>
+       ]
+     ] ) ;
+     fhir:contains ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "313071005" ] ;
+       fhir:display [ fhir:v "Counseling for substance abuse (procedure)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "60112009" ] ;
+       fhir:display [ fhir:v "Drug addiction counseling (procedure)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "424407005" ] ;
+       fhir:display [ fhir:v "Substance use cessation education, guidance, and counseling (procedure)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "423416000" ] ;
+       fhir:display [ fhir:v "Substance use cessation case management (procedure)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "720174008" ] ;
+       fhir:display [ fhir:v "Drug harm reduction program (regime/therapy)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "720177001" ] ;
+       fhir:display [ fhir:v "Drug relapse prevention program (regime/therapy)" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

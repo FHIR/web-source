@@ -1,0 +1,828 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-medications> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "oxycodone-medications"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet oxycodone-medications</b></p><a name=\"oxycodone-medications\"> </a><a name=\"hcoxycodone-medications\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-computablevalueset.html\">CPGComputableValueSet</a>, <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-executablevalueset.html\">CPGExecutableValueSet</a></p></div><p>This value set contains 96 concepts</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049216\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049216</td><td>acetaminophen 325 MG / oxycodone hydrochloride 10 MG Oral Tablet [Endocet]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049223\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049223</td><td>acetaminophen 325 MG / oxycodone hydrochloride 5 MG Oral Tablet [Endocet]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049227\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049227</td><td>acetaminophen 325 MG / oxycodone hydrochloride 7.5 MG Oral Tablet [Endocet]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049504\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049504</td><td>Abuse-Deterrent 12 HR oxycodone hydrochloride 10 MG Extended Release Oral Tablet [Oxycontin]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049545\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049545</td><td>Abuse-Deterrent 12 HR oxycodone hydrochloride 15 MG Extended Release Oral Tablet [Oxycontin]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049565\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049565</td><td>Abuse-Deterrent 12 HR oxycodone hydrochloride 20 MG Extended Release Oral Tablet [Oxycontin]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049576\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049576</td><td>Abuse-Deterrent 12 HR oxycodone hydrochloride 30 MG Extended Release Oral Tablet [Oxycontin]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049586\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049586</td><td>Abuse-Deterrent 12 HR oxycodone hydrochloride 40 MG Extended Release Oral Tablet [Oxycontin]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049595\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049595</td><td>Abuse-Deterrent 12 HR oxycodone hydrochloride 60 MG Extended Release Oral Tablet [Oxycontin]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049601\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049601</td><td>Abuse-Deterrent 12 HR oxycodone hydrochloride 80 MG Extended Release Oral Tablet [Oxycontin]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049613\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049613</td><td>oxycodone hydrochloride 15 MG Oral Tablet [Roxicodone]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049620\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049620</td><td>oxycodone hydrochloride 30 MG Oral Tablet [Roxicodone]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049623\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049623</td><td>oxycodone hydrochloride 5 MG Oral Tablet [Roxicodone]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049625\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049625</td><td>acetaminophen 325 MG / oxycodone hydrochloride 10 MG Oral Tablet [Percocet]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049637\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049637</td><td>acetaminophen 325 MG / oxycodone hydrochloride 2.5 MG Oral Tablet [Percocet]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049640\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049640</td><td>acetaminophen 325 MG / oxycodone hydrochloride 5 MG Oral Tablet [Percocet]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049642\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049642</td><td>acetaminophen 325 MG / oxycodone hydrochloride 7.5 MG Oral Tablet [Percocet]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1487288\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1487288</td><td>acetaminophen 325 MG / oxycodone hydrochloride 2.5 MG Oral Tablet [Endocet]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1537116\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1537116</td><td>acetaminophen 300 MG / oxycodone hydrochloride 5 MG Oral Tablet [Primlev]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1537120\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1537120</td><td>acetaminophen 300 MG / oxycodone hydrochloride 10 MG Oral Tablet [Primlev]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1537122\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1537122</td><td>acetaminophen 300 MG / oxycodone hydrochloride 7.5 MG Oral Tablet [Primlev]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1664448\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1664448</td><td>oxycodone hydrochloride 5 MG Oral Tablet [Oxaydo]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1664634\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1664634</td><td>oxycodone hydrochloride 7.5 MG Oral Tablet [Oxaydo]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1790533\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1790533</td><td>Abuse-Deterrent 12 HR oxycodone 9 MG Extended Release Oral Capsule [Xtampza]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1791560\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1791560</td><td>Abuse-Deterrent 12 HR oxycodone 13.5 MG Extended Release Oral Capsule [Xtampza]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1791569\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1791569</td><td>Abuse-Deterrent 12 HR oxycodone 18 MG Extended Release Oral Capsule [Xtampza]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1791576\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1791576</td><td>Abuse-Deterrent 12 HR oxycodone 27 MG Extended Release Oral Capsule [Xtampza]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1791582\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1791582</td><td>Abuse-Deterrent 12 HR oxycodone 36 MG Extended Release Oral Capsule [Xtampza]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1944535\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1944535</td><td>Abuse-Deterrent oxycodone hydrochloride 15 MG Oral Tablet [Roxybond]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1944540\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1944540</td><td>Abuse-Deterrent oxycodone hydrochloride 30 MG Oral Tablet [Roxybond]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1944543\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1944543</td><td>Abuse-Deterrent oxycodone hydrochloride 5 MG Oral Tablet [Roxybond]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2045500\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2045500</td><td>acetaminophen 300 MG / oxycodone hydrochloride 2.5 MG Oral Tablet [Nalocet]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2279510\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2279510</td><td>acetaminophen 300 MG / oxycodone hydrochloride 10 MG Oral Tablet [Prolate]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2279512\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2279512</td><td>acetaminophen 300 MG / oxycodone hydrochloride 5 MG Oral Tablet [Prolate]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2279514\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2279514</td><td>acetaminophen 300 MG / oxycodone hydrochloride 7.5 MG Oral Tablet [Prolate]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2281851\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2281851</td><td>acetaminophen 60 MG/ML / oxycodone hydrochloride 2 MG/ML Oral Solution [Prolate]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2693196\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2693196</td><td>Abuse-Deterrent oxycodone hydrochloride 10 MG Oral Tablet [Roxybond]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-848928\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  848928</td><td>aspirin 325 MG / oxycodone hydrochloride 4.84 MG Oral Tablet [Endodan Reformulated May 2009]</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1014599\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1014599</td><td>acetaminophen 300 MG / oxycodone hydrochloride 10 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1014615\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1014615</td><td>acetaminophen 300 MG / oxycodone hydrochloride 5 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1014632\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1014632</td><td>acetaminophen 300 MG / oxycodone hydrochloride 7.5 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1037259\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1037259</td><td>acetaminophen 300 MG / oxycodone hydrochloride 2.5 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049214\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049214</td><td>acetaminophen 325 MG / oxycodone hydrochloride 10 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049221\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049221</td><td>acetaminophen 325 MG / oxycodone hydrochloride 5 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049225\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049225</td><td>acetaminophen 325 MG / oxycodone hydrochloride 7.5 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049233\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049233</td><td>acetaminophen 500 MG / oxycodone hydrochloride 7.5 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049251\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049251</td><td>acetaminophen 400 MG / oxycodone hydrochloride 10 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049260\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049260</td><td>acetaminophen 400 MG / oxycodone hydrochloride 5 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049267\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049267</td><td>acetaminophen 400 MG / oxycodone hydrochloride 7.5 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049270\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049270</td><td>acetaminophen 650 MG / oxycodone hydrochloride 10 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049502\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049502</td><td>12 HR oxycodone hydrochloride 10 MG Extended Release Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049543\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049543</td><td>12 HR oxycodone hydrochloride 15 MG Extended Release Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049563\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049563</td><td>12 HR oxycodone hydrochloride 20 MG Extended Release Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049574\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049574</td><td>12 HR oxycodone hydrochloride 30 MG Extended Release Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049580\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049580</td><td>acetaminophen 65 MG/ML / oxycodone hydrochloride 1 MG/ML Oral Solution</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049584\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049584</td><td>12 HR oxycodone hydrochloride 40 MG Extended Release Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049589\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049589</td><td>ibuprofen 400 MG / oxycodone hydrochloride 5 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049593\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049593</td><td>12 HR oxycodone hydrochloride 60 MG Extended Release Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049599\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049599</td><td>12 HR oxycodone hydrochloride 80 MG Extended Release Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049604\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049604</td><td>oxycodone hydrochloride 1 MG/ML Oral Solution</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049611\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049611</td><td>oxycodone hydrochloride 15 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049615\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049615</td><td>oxycodone hydrochloride 20 MG/ML Oral Solution</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049618\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049618</td><td>oxycodone hydrochloride 30 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049621\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049621</td><td>oxycodone hydrochloride 5 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049635\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049635</td><td>acetaminophen 325 MG / oxycodone hydrochloride 2.5 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049651\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049651</td><td>acetaminophen 500 MG / oxycodone hydrochloride 10 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049658\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049658</td><td>acetaminophen 500 MG / oxycodone hydrochloride 5 MG Oral Capsule</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049683\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049683</td><td>oxycodone hydrochloride 10 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049686\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049686</td><td>oxycodone hydrochloride 20 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049696\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049696</td><td>oxycodone hydrochloride 5 MG Oral Capsule</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049717\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049717</td><td>oxycodone hydrochloride 10 MG Oral Capsule</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049719\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049719</td><td>oxycodone hydrochloride 10 MG/ML Injectable Solution</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049720\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049720</td><td>oxycodone hydrochloride 10 MG/ML Oral Solution</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049721\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049721</td><td>oxycodone hydrochloride 20 MG Oral Capsule</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1049727\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1049727</td><td>oxycodone hydrochloride 5 MG Extended Release Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1113314\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1113314</td><td>oxycodone hydrochloride 7.5 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1790527\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1790527</td><td>Abuse-Deterrent 12 HR oxycodone 9 MG Extended Release Oral Capsule</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1791558\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1791558</td><td>Abuse-Deterrent 12 HR oxycodone 13.5 MG Extended Release Oral Capsule</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1791567\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1791567</td><td>Abuse-Deterrent 12 HR oxycodone 18 MG Extended Release Oral Capsule</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1791574\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1791574</td><td>Abuse-Deterrent 12 HR oxycodone 27 MG Extended Release Oral Capsule</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1791580\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1791580</td><td>Abuse-Deterrent 12 HR oxycodone 36 MG Extended Release Oral Capsule</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1860127\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1860127</td><td>Abuse-Deterrent 12 HR oxycodone hydrochloride 60 MG Extended Release Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1860129\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1860129</td><td>Abuse-Deterrent 12 HR oxycodone hydrochloride 20 MG Extended Release Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1860137\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1860137</td><td>Abuse-Deterrent 12 HR oxycodone hydrochloride 40 MG Extended Release Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1860148\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1860148</td><td>Abuse-Deterrent 12 HR oxycodone hydrochloride 80 MG Extended Release Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1860151\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1860151</td><td>Abuse-Deterrent 12 HR oxycodone hydrochloride 30 MG Extended Release Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1860154\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1860154</td><td>Abuse-Deterrent 12 HR oxycodone hydrochloride 15 MG Extended Release Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1860157\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1860157</td><td>Abuse-Deterrent 12 HR oxycodone hydrochloride 10 MG Extended Release Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1944529\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1944529</td><td>Abuse-Deterrent oxycodone hydrochloride 15 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1944538\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1944538</td><td>Abuse-Deterrent oxycodone hydrochloride 30 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1944541\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1944541</td><td>Abuse-Deterrent oxycodone hydrochloride 5 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2105822\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2105822</td><td>acetaminophen 60 MG/ML / oxycodone hydrochloride 2 MG/ML Oral Solution</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2693194\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2693194</td><td>Abuse-Deterrent oxycodone hydrochloride 10 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-637540\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  637540</td><td>aspirin 325 MG / oxycodone hydrochloride 4.5 MG / oxycodone terephthalate 0.38 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-724614\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  724614</td><td>aspirin 325 MG / oxycodone hydrochloride 2.25 MG / oxycodone terephthalate 0.19 MG Oral Tablet</td></tr><tr><td><a name=\"oxycodone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-848768\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  848768</td><td>aspirin 325 MG / oxycodone hydrochloride 4.84 MG Oral Tablet</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "Oxycodone medications"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "Medication"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "All Oxycodone medications"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "None"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-author"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/valueset-author>
+     ] ;
+     fhir:value [
+       a fhir:ContactDetail ;
+       fhir:name [ fhir:v "MD Partners, Inc." ] ;
+       fhir:telecom ( [
+         fhir:system [ fhir:v "email" ] ;
+         fhir:value [ fhir:v "info@mdpartners.com" ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "computable"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "executable"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "structured"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "executable"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-rules-text"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/valueset-rules-text>
+     ] ;
+     fhir:value [
+       a fhir:Markdown ;
+       fhir:v "https://mor.nlm.nih.gov/RxMix/ Script: \r\nStep 1 Upload to RxMix a workflow config file  named GetRelatedByType.config containing the following workflow text: <WFE><filteredOutputs>RXCUI|name|term_type</filteredOutputs><input>NOINPUT</input><FS><service>NOINPUT</service><function>getRelatedByType</function><level>0</level><paramSize>2</paramSize><param order ='0'>?</param><param order ='1'>BPCK,GPCK,SBD,SCD</param></FS></WFE> \r\n\r\nStep 2 Create Batch text input file (Ingredients.txt) with following RxNorm Oxycodone as an input within the file:\r\n7804\r\n\r\nStep 3 Upload the batch text input file Ingredients.txt created in step 2. \r\n\r\nStep 4 Submit the batch which will run the workflow using the input codes to generate a combined set of all the concepts needed..\r\n"
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-medications"^^xsd:anyURI ;
+     fhir:l <http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-medications>
+  ] ; # 
+  fhir:version [ fhir:v "2022.1.0"] ; # 
+  fhir:name [ fhir:v "OXYCODONE_MEDICATIONS"] ; # 
+  fhir:title [ fhir:v "Oxycodone Medications"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-02-24T13:06:49-07:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "CDC / Security Risk Solutions, Inc. (SRS)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.securityrisksolutions.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "All Oxycodone medications"] ; # 
+  fhir:purpose [ fhir:v "Oxycodone medications for opioid management"] ; # 
+  fhir:copyright [ fhir:v "© CDC 2016+."] ; # 
+  fhir:expansion [
+     fhir:timestamp [ fhir:v "2025-02-24T13:06:49-07:00"^^xsd:dateTime ] ;
+     fhir:total [ fhir:v 96 ] ;
+     fhir:contains ( [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049216" ] ;
+       fhir:display [ fhir:v "acetaminophen 325 MG / oxycodone hydrochloride 10 MG Oral Tablet [Endocet]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049223" ] ;
+       fhir:display [ fhir:v "acetaminophen 325 MG / oxycodone hydrochloride 5 MG Oral Tablet [Endocet]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049227" ] ;
+       fhir:display [ fhir:v "acetaminophen 325 MG / oxycodone hydrochloride 7.5 MG Oral Tablet [Endocet]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049504" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone hydrochloride 10 MG Extended Release Oral Tablet [Oxycontin]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049545" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone hydrochloride 15 MG Extended Release Oral Tablet [Oxycontin]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049565" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone hydrochloride 20 MG Extended Release Oral Tablet [Oxycontin]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049576" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone hydrochloride 30 MG Extended Release Oral Tablet [Oxycontin]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049586" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone hydrochloride 40 MG Extended Release Oral Tablet [Oxycontin]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049595" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone hydrochloride 60 MG Extended Release Oral Tablet [Oxycontin]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049601" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone hydrochloride 80 MG Extended Release Oral Tablet [Oxycontin]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049613" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 15 MG Oral Tablet [Roxicodone]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049620" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 30 MG Oral Tablet [Roxicodone]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049623" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 5 MG Oral Tablet [Roxicodone]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049625" ] ;
+       fhir:display [ fhir:v "acetaminophen 325 MG / oxycodone hydrochloride 10 MG Oral Tablet [Percocet]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049637" ] ;
+       fhir:display [ fhir:v "acetaminophen 325 MG / oxycodone hydrochloride 2.5 MG Oral Tablet [Percocet]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049640" ] ;
+       fhir:display [ fhir:v "acetaminophen 325 MG / oxycodone hydrochloride 5 MG Oral Tablet [Percocet]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049642" ] ;
+       fhir:display [ fhir:v "acetaminophen 325 MG / oxycodone hydrochloride 7.5 MG Oral Tablet [Percocet]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1487288" ] ;
+       fhir:display [ fhir:v "acetaminophen 325 MG / oxycodone hydrochloride 2.5 MG Oral Tablet [Endocet]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1537116" ] ;
+       fhir:display [ fhir:v "acetaminophen 300 MG / oxycodone hydrochloride 5 MG Oral Tablet [Primlev]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1537120" ] ;
+       fhir:display [ fhir:v "acetaminophen 300 MG / oxycodone hydrochloride 10 MG Oral Tablet [Primlev]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1537122" ] ;
+       fhir:display [ fhir:v "acetaminophen 300 MG / oxycodone hydrochloride 7.5 MG Oral Tablet [Primlev]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1664448" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 5 MG Oral Tablet [Oxaydo]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1664634" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 7.5 MG Oral Tablet [Oxaydo]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1790533" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone 9 MG Extended Release Oral Capsule [Xtampza]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1791560" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone 13.5 MG Extended Release Oral Capsule [Xtampza]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1791569" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone 18 MG Extended Release Oral Capsule [Xtampza]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1791576" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone 27 MG Extended Release Oral Capsule [Xtampza]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1791582" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone 36 MG Extended Release Oral Capsule [Xtampza]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1944535" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent oxycodone hydrochloride 15 MG Oral Tablet [Roxybond]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1944540" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent oxycodone hydrochloride 30 MG Oral Tablet [Roxybond]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1944543" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent oxycodone hydrochloride 5 MG Oral Tablet [Roxybond]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2045500" ] ;
+       fhir:display [ fhir:v "acetaminophen 300 MG / oxycodone hydrochloride 2.5 MG Oral Tablet [Nalocet]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2279510" ] ;
+       fhir:display [ fhir:v "acetaminophen 300 MG / oxycodone hydrochloride 10 MG Oral Tablet [Prolate]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2279512" ] ;
+       fhir:display [ fhir:v "acetaminophen 300 MG / oxycodone hydrochloride 5 MG Oral Tablet [Prolate]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2279514" ] ;
+       fhir:display [ fhir:v "acetaminophen 300 MG / oxycodone hydrochloride 7.5 MG Oral Tablet [Prolate]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2281851" ] ;
+       fhir:display [ fhir:v "acetaminophen 60 MG/ML / oxycodone hydrochloride 2 MG/ML Oral Solution [Prolate]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2693196" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent oxycodone hydrochloride 10 MG Oral Tablet [Roxybond]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "848928" ] ;
+       fhir:display [ fhir:v "aspirin 325 MG / oxycodone hydrochloride 4.84 MG Oral Tablet [Endodan Reformulated May 2009]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1014599" ] ;
+       fhir:display [ fhir:v "acetaminophen 300 MG / oxycodone hydrochloride 10 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1014615" ] ;
+       fhir:display [ fhir:v "acetaminophen 300 MG / oxycodone hydrochloride 5 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1014632" ] ;
+       fhir:display [ fhir:v "acetaminophen 300 MG / oxycodone hydrochloride 7.5 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1037259" ] ;
+       fhir:display [ fhir:v "acetaminophen 300 MG / oxycodone hydrochloride 2.5 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049214" ] ;
+       fhir:display [ fhir:v "acetaminophen 325 MG / oxycodone hydrochloride 10 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049221" ] ;
+       fhir:display [ fhir:v "acetaminophen 325 MG / oxycodone hydrochloride 5 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049225" ] ;
+       fhir:display [ fhir:v "acetaminophen 325 MG / oxycodone hydrochloride 7.5 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049233" ] ;
+       fhir:display [ fhir:v "acetaminophen 500 MG / oxycodone hydrochloride 7.5 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049251" ] ;
+       fhir:display [ fhir:v "acetaminophen 400 MG / oxycodone hydrochloride 10 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049260" ] ;
+       fhir:display [ fhir:v "acetaminophen 400 MG / oxycodone hydrochloride 5 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049267" ] ;
+       fhir:display [ fhir:v "acetaminophen 400 MG / oxycodone hydrochloride 7.5 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049270" ] ;
+       fhir:display [ fhir:v "acetaminophen 650 MG / oxycodone hydrochloride 10 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049502" ] ;
+       fhir:display [ fhir:v "12 HR oxycodone hydrochloride 10 MG Extended Release Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049543" ] ;
+       fhir:display [ fhir:v "12 HR oxycodone hydrochloride 15 MG Extended Release Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049563" ] ;
+       fhir:display [ fhir:v "12 HR oxycodone hydrochloride 20 MG Extended Release Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049574" ] ;
+       fhir:display [ fhir:v "12 HR oxycodone hydrochloride 30 MG Extended Release Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049580" ] ;
+       fhir:display [ fhir:v "acetaminophen 65 MG/ML / oxycodone hydrochloride 1 MG/ML Oral Solution" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049584" ] ;
+       fhir:display [ fhir:v "12 HR oxycodone hydrochloride 40 MG Extended Release Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049589" ] ;
+       fhir:display [ fhir:v "ibuprofen 400 MG / oxycodone hydrochloride 5 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049593" ] ;
+       fhir:display [ fhir:v "12 HR oxycodone hydrochloride 60 MG Extended Release Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049599" ] ;
+       fhir:display [ fhir:v "12 HR oxycodone hydrochloride 80 MG Extended Release Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049604" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 1 MG/ML Oral Solution" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049611" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 15 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049615" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 20 MG/ML Oral Solution" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049618" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 30 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049621" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 5 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049635" ] ;
+       fhir:display [ fhir:v "acetaminophen 325 MG / oxycodone hydrochloride 2.5 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049651" ] ;
+       fhir:display [ fhir:v "acetaminophen 500 MG / oxycodone hydrochloride 10 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049658" ] ;
+       fhir:display [ fhir:v "acetaminophen 500 MG / oxycodone hydrochloride 5 MG Oral Capsule" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049683" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 10 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049686" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 20 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049696" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 5 MG Oral Capsule" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049717" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 10 MG Oral Capsule" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049719" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 10 MG/ML Injectable Solution" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049720" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 10 MG/ML Oral Solution" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049721" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 20 MG Oral Capsule" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1049727" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 5 MG Extended Release Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1113314" ] ;
+       fhir:display [ fhir:v "oxycodone hydrochloride 7.5 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1790527" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone 9 MG Extended Release Oral Capsule" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1791558" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone 13.5 MG Extended Release Oral Capsule" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1791567" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone 18 MG Extended Release Oral Capsule" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1791574" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone 27 MG Extended Release Oral Capsule" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1791580" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone 36 MG Extended Release Oral Capsule" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1860127" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone hydrochloride 60 MG Extended Release Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1860129" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone hydrochloride 20 MG Extended Release Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1860137" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone hydrochloride 40 MG Extended Release Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1860148" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone hydrochloride 80 MG Extended Release Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1860151" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone hydrochloride 30 MG Extended Release Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1860154" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone hydrochloride 15 MG Extended Release Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1860157" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent 12 HR oxycodone hydrochloride 10 MG Extended Release Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1944529" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent oxycodone hydrochloride 15 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1944538" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent oxycodone hydrochloride 30 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1944541" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent oxycodone hydrochloride 5 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2105822" ] ;
+       fhir:display [ fhir:v "acetaminophen 60 MG/ML / oxycodone hydrochloride 2 MG/ML Oral Solution" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2693194" ] ;
+       fhir:display [ fhir:v "Abuse-Deterrent oxycodone hydrochloride 10 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "637540" ] ;
+       fhir:display [ fhir:v "aspirin 325 MG / oxycodone hydrochloride 4.5 MG / oxycodone terephthalate 0.38 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "724614" ] ;
+       fhir:display [ fhir:v "aspirin 325 MG / oxycodone hydrochloride 2.25 MG / oxycodone terephthalate 0.19 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "848768" ] ;
+       fhir:display [ fhir:v "aspirin 325 MG / oxycodone hydrochloride 4.84 MG Oral Tablet" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

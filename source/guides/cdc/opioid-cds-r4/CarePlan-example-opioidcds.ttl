@@ -1,0 +1,30 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/CarePlan/example-opioidcds> a fhir:CarePlan ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-opioidcds"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CarePlan example-opioidcds</b></p><a name=\"example-opioidcds\"> </a><a name=\"hcexample-opioidcds\"> </a><p><b>status</b>: Active</p><p><b>intent</b>: Proposal</p><p><b>subject</b>: <a href=\"Patient-example-opioidcds.html\">opioidcds example  Male, DoB: 1983-01-10</a></p><h3>Activities</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Reference</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"RequestGroup-example-opioidcds.html\">RequestGroup: status = active; intent = proposal</a></td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "proposal"] ; # 
+  fhir:subject [
+     fhir:l <http://fhir.org/guides/cdc/opioid-cds/Patient/example-opioidcds> ;
+     fhir:reference [ fhir:v "Patient/example-opioidcds" ]
+  ] ; # 
+  fhir:activity ( [
+     fhir:reference [
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/RequestGroup/example-opioidcds> ;
+       fhir:reference [ fhir:v "RequestGroup/example-opioidcds" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
