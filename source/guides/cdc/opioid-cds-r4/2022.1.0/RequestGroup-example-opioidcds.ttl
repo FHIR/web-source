@@ -1,0 +1,37 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/RequestGroup/example-opioidcds> a fhir:RequestGroup ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-opioidcds"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: RequestGroup example-opioidcds</b></p><a name=\"example-opioidcds\"> </a><a name=\"hcexample-opioidcds\"> </a><p><b>status</b>: Active</p><p><b>intent</b>: Proposal</p><blockquote><p><b>action</b></p><p><b>title</b>: High risk for opioid overdose - taper now</p><p><b>description</b>: Total morphine milligram equivalent (MME) is 179.99999820mg/d. Taper to less than 50.</p><p><b>priority</b>: Urgent</p><h3>Documentations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Display</b></td><td><b>Url</b></td></tr><tr><td style=\"display: none\">*</td><td>Documentation</td><td>2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain</td><td><a href=\"https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm\">https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm</a></td></tr></table><p><b>resource</b>: <a href=\"ActivityDefinition-opioidcds-risk-assessment-request.html\">ActivityDefinition - Risk Assessment ServiceRequest</a></p></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "proposal"] ; # 
+  fhir:action ( [
+     fhir:title [ fhir:v "High risk for opioid overdose - taper now" ] ;
+     fhir:description [ fhir:v "Total morphine milligram equivalent (MME) is 179.99999820mg/d. Taper to less than 50." ] ;
+     fhir:priority [ fhir:v "urgent" ] ;
+     fhir:documentation ( [
+       fhir:type [ fhir:v "documentation" ] ;
+       fhir:display [ fhir:v "2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain" ] ;
+       fhir:url [
+         fhir:v "https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm"^^xsd:anyURI ;
+         fhir:l <https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm>
+       ]
+     ] ) ;
+     fhir:resource [
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/ActivityDefinition/opioidcds-risk-assessment-request> ;
+       fhir:reference [ fhir:v "ActivityDefinition/opioidcds-risk-assessment-request" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,4039 @@
+{
+   "library" : {
+      "localId" : "0",
+      "annotation" : [ {
+         "translatorVersion" : "3.25.0",
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "Overloads",
+         "type" : "CqlToElmInfo"
+      }, {
+         "message" : "An operand identifier prescription is hiding another identifier of the same name.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "An operand identifier prescription is hiding another identifier of the same name.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "708",
+            "s" : [ {
+               "value" : [ "","library OpioidCDSRoutines version '2022.1.0'" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "OpioidCDSRoutines",
+         "system" : "http://fhir.org/guides/cdc/opioid-cds",
+         "version" : "2022.1.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localId" : "1",
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "206",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "206",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "208",
+            "locator" : "5:1-5:54",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "208",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'"," called ","FHIRHelpers" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "210",
+            "locator" : "6:1-6:56",
+            "localIdentifier" : "Common",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommon",
+            "version" : "2022.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "210",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "OpioidCDSCommon" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'2022.1.0'"," called ","Common" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "212",
+            "locator" : "7:1-7:62",
+            "localIdentifier" : "Config",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommonConfig",
+            "version" : "2022.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "212",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "OpioidCDSCommonConfig" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'2022.1.0'"," called ","Config" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "localId" : "217",
+            "locator" : "9:1-9:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "localId" : "215",
+            "locator" : "9:1-9:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "localId" : "216",
+               "type" : "SingletonFrom",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "214",
+                  "locator" : "9:1-9:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve",
+                  "include" : [ ],
+                  "codeFilter" : [ ],
+                  "dateFilter" : [ ],
+                  "otherFilter" : [ ]
+               }
+            }
+         }, {
+            "localId" : "220",
+            "locator" : "35:1-36:38",
+            "name" : "Palliative Care Lookback Period",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "220",
+                  "s" : [ {
+                     "value" : [ "/*\n**  Routine #1\n**  CDC 2022 General Inclusion Criteria Routine\n**\n**  Definition              | Answer to Proceed   | Details                                      | Data (Terminology) Requirement\n**  ------------------------------------------------------------------------------------------------------------------------------------\n**  Age < 18 years?         | No                  | Calculate age from date of birth; exclude    | Date of birth\n**                          |                     | patients with age less than 18 years at the  |\n**                          |                     | time of the prescription                     |\n**  ------------------------------------------------------------------------------------------------------------------------------------\n**  Evidence of             | No                  | Look for documented findings consistent      | Sickle cell disease conditions\n**  sickle cell disease?    |                     | with those listed in the sickle cell         |\n**                          |                     | value set                                    |\n**  ------------------------------------------------------------------------------------------------------------------------------------\n**  Active cancer           | No                  | See sub-routine 3                            | See sub-routine 3\n**  treatment?              |                     |                                              |\n**  ------------------------------------------------------------------------------------------------------------------------------------\n**  Conditions Likely       | No                  | Look for patients with active conditions in  | Conditions likely terminal for opioid\n**  Terminal for opioid     |                     | the value set end-of-life-conditions         | prescribing\n**  prescribing present?    |                     |                                              |\n**  ------------------------------------------------------------------------------------------------------------------------------------\n**\n*/\n\n","define ","\"Palliative Care Lookback Period\"",":\n  " ]
+                  }, {
+                     "r" : "231",
+                     "s" : [ {
+                        "value" : [ "Interval[" ]
+                     }, {
+                        "r" : "221",
+                        "s" : [ {
+                           "r" : "224",
+                           "s" : [ {
+                              "value" : [ "Today","()" ]
+                           } ]
+                        }, {
+                           "value" : [ " - " ]
+                        }, {
+                           "r" : "225",
+                           "s" : [ {
+                              "value" : [ "90 ","days" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ", " ]
+                     }, {
+                        "r" : "230",
+                        "s" : [ {
+                           "value" : [ "Today","()" ]
+                        } ]
+                     }, {
+                        "value" : [ "]" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "231",
+               "locator" : "36:3-36:38",
+               "lowClosed" : true,
+               "highClosed" : true,
+               "type" : "Interval",
+               "low" : {
+                  "localId" : "221",
+                  "locator" : "36:12-36:28",
+                  "type" : "Subtract",
+                  "signature" : [ {
+                     "localId" : "226",
+                     "name" : "{urn:hl7-org:elm-types:r1}Date",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "227",
+                     "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "224",
+                     "locator" : "36:12-36:18",
+                     "type" : "Today",
+                     "signature" : [ ]
+                  }, {
+                     "localId" : "225",
+                     "locator" : "36:22-36:28",
+                     "value" : 90,
+                     "unit" : "days",
+                     "type" : "Quantity"
+                  } ]
+               },
+               "high" : {
+                  "localId" : "230",
+                  "locator" : "36:31-36:37",
+                  "type" : "Today",
+                  "signature" : [ ]
+               }
+            }
+         }, {
+            "localId" : "241",
+            "locator" : "44:1-47:12",
+            "name" : "Patient Age Less Than 18",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "241",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Patient Age Less Than 18\"",":\n  " ]
+                  }, {
+                     "r" : "242",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "244",
+                        "s" : [ {
+                           "value" : [ "(" ]
+                        }, {
+                           "r" : "244",
+                           "s" : [ {
+                              "r" : "243",
+                              "s" : [ {
+                                 "value" : [ "Config" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "244",
+                              "s" : [ {
+                                 "value" : [ "\"Age Less than 18 Years Is Enabled\"" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     }, {
+                        "value" : [ " then\n    " ]
+                     }, {
+                        "r" : "245",
+                        "s" : [ {
+                           "r" : "253",
+                           "s" : [ {
+                              "value" : [ "AgeInYearsAt","(" ]
+                           }, {
+                              "r" : "248",
+                              "s" : [ {
+                                 "value" : [ "Today","()" ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        }, {
+                           "r" : "256",
+                           "value" : [ " ","<"," ","18" ]
+                        } ]
+                     }, {
+                        "r" : "259",
+                        "value" : [ "\n  else ","false" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "242",
+               "locator" : "45:3-47:12",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "244",
+                  "locator" : "45:6-45:49",
+                  "name" : "Age Less than 18 Years Is Enabled",
+                  "libraryName" : "Config",
+                  "type" : "ExpressionRef"
+               },
+               "then" : {
+                  "localId" : "245",
+                  "locator" : "46:5-46:30",
+                  "type" : "Less",
+                  "signature" : [ {
+                     "localId" : "257",
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "258",
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "253",
+                     "locator" : "46:5-46:25",
+                     "precision" : "Year",
+                     "type" : "CalculateAgeAt",
+                     "signature" : [ {
+                        "localId" : "254",
+                        "name" : "{urn:hl7-org:elm-types:r1}Date",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "255",
+                        "name" : "{urn:hl7-org:elm-types:r1}Date",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "252",
+                        "path" : "birthDate.value",
+                        "type" : "Property",
+                        "source" : {
+                           "localId" : "251",
+                           "name" : "Patient",
+                           "type" : "ExpressionRef"
+                        }
+                     }, {
+                        "localId" : "248",
+                        "locator" : "46:18-46:24",
+                        "type" : "Today",
+                        "signature" : [ ]
+                     } ]
+                  }, {
+                     "localId" : "256",
+                     "locator" : "46:29-46:30",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "18",
+                     "type" : "Literal"
+                  } ]
+               },
+               "else" : {
+                  "localId" : "259",
+                  "locator" : "47:8-47:12",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "false",
+                  "type" : "Literal"
+               }
+            }
+         }, {
+            "localId" : "264",
+            "locator" : "49:1-54:12",
+            "name" : "Condition Positive for Sickle Cell",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "264",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Condition Positive for Sickle Cell\"",":\n  " ]
+                  }, {
+                     "r" : "265",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "267",
+                        "s" : [ {
+                           "value" : [ "(" ]
+                        }, {
+                           "r" : "267",
+                           "s" : [ {
+                              "r" : "266",
+                              "s" : [ {
+                                 "value" : [ "Config" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "267",
+                              "s" : [ {
+                                 "value" : [ "\"Sickle Cell Check Enabled\"" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     }, {
+                        "value" : [ " then\n    " ]
+                     }, {
+                        "r" : "268",
+                        "s" : [ {
+                           "value" : [ "exists" ]
+                        }, {
+                           "r" : "270",
+                           "s" : [ {
+                              "value" : [ "(\n      " ]
+                           }, {
+                              "r" : "270",
+                              "s" : [ {
+                                 "r" : "269",
+                                 "s" : [ {
+                                    "value" : [ "Common" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "270",
+                                 "s" : [ {
+                                    "value" : [ "\"Positive Sickle Cell Condition\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n    )" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "271",
+                        "value" : [ " \n  else ","false" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "265",
+               "locator" : "50:3-54:12",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "267",
+                  "locator" : "50:6-50:41",
+                  "name" : "Sickle Cell Check Enabled",
+                  "libraryName" : "Config",
+                  "type" : "ExpressionRef"
+               },
+               "then" : {
+                  "localId" : "268",
+                  "locator" : "51:5-53:5",
+                  "type" : "Exists",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "270",
+                     "locator" : "51:11-53:5",
+                     "name" : "Positive Sickle Cell Condition",
+                     "libraryName" : "Common",
+                     "type" : "ExpressionRef"
+                  }
+               },
+               "else" : {
+                  "localId" : "271",
+                  "locator" : "54:8-54:12",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "false",
+                  "type" : "Literal"
+               }
+            }
+         }, {
+            "localId" : "304",
+            "locator" : "170:1-171:40",
+            "name" : "Encounter Period",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "304",
+                  "s" : [ {
+                     "value" : [ "// End of Opioid Naive Routine\n\n/*\n**  Routine #3\n**  Active Cancer Treatment Routine\n**\n**  Definition                    | Answer to Proceed   | Details                                    | Data (Terminology) Requirement\n**  ---------------------------------------------------------------------------------------------------------------------------------\n**  Two office visits within the  | No                  | Look for a minimum of two distinct         | Office Visit\n**  past 12 months                |                     | encounters within 12 months of the date    |\n**                                |                     | of the current visit for which each of the |\n**                                |                     | following is true:                         |\n**                                |                     |   - the encounter diagnosis (primary or    |\n**                                |                     |     secondary or co-morbidity diagnosis)   |\n**                                |                     |     is listed in the CDC Malignant Cancer  |\n**                                |                     |     Conditions value set                   |\n**  ---------------------------------------------------------------------------------------------------------------------------------\n**  Office visits with an         | No                  | The encounter is performed by an           | Oncology specialty\n**  oncology specialist           |                     | oncologist as defined in the oncology      | designations (NUCC)\n**  present                       |                     | specialty designations using the           |\n**                                |                     | National Uniform Claim Committee           |\n**                                |                     | (NUCC) classifications                     |\n**  ---------------------------------------------------------------------------------------------------------------------------------\n**  Office visits including CDC   | No                  | The encounter diagnosis (primary or        | CDC malignant cancer\n**  malignant cancer              |                     | secondary or co-morbidity diagnosis)       | conditions\n**  condition                     |                     | is listed in the CDC Malignant Cancer      |\n**                                |                     | Conditions value set                       |\n**  ----------------------------------------------------------------------------------------------------------------------------------\n**\n*/\n\n","define ","\"Encounter Period\"",":\n  " ]
+                  }, {
+                     "r" : "315",
+                     "s" : [ {
+                        "value" : [ "Interval[" ]
+                     }, {
+                        "r" : "305",
+                        "s" : [ {
+                           "r" : "308",
+                           "s" : [ {
+                              "value" : [ "Today","()" ]
+                           } ]
+                        }, {
+                           "value" : [ " - " ]
+                        }, {
+                           "r" : "309",
+                           "s" : [ {
+                              "value" : [ "12 ","months" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ", " ]
+                     }, {
+                        "r" : "314",
+                        "s" : [ {
+                           "value" : [ "Today","()" ]
+                        } ]
+                     }, {
+                        "value" : [ ")" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "315",
+               "locator" : "171:3-171:40",
+               "lowClosed" : true,
+               "highClosed" : false,
+               "type" : "Interval",
+               "low" : {
+                  "localId" : "305",
+                  "locator" : "171:12-171:30",
+                  "type" : "Subtract",
+                  "signature" : [ {
+                     "localId" : "310",
+                     "name" : "{urn:hl7-org:elm-types:r1}Date",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "311",
+                     "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "308",
+                     "locator" : "171:12-171:18",
+                     "type" : "Today",
+                     "signature" : [ ]
+                  }, {
+                     "localId" : "309",
+                     "locator" : "171:22-171:30",
+                     "value" : 12,
+                     "unit" : "months",
+                     "type" : "Quantity"
+                  } ]
+               },
+               "high" : {
+                  "localId" : "314",
+                  "locator" : "171:33-171:39",
+                  "type" : "Today",
+                  "signature" : [ ]
+               }
+            }
+         }, {
+            "localId" : "290",
+            "locator" : "190:1-196:7",
+            "name" : "Encounters with Cancer Diagnosis During Encounter Period",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "290",
+                  "s" : [ {
+                     "value" : [ "// encounter-diagnosis, problem-list and health-concern Conditions\n// define \"US Core-Categorized Cancer Diagnoses\":\n//   Common.\"US Core-Categorized Conditions\" C\n//     where C.code in Common.\"CDC malignant cancer conditions\"\n\n// define \"Encounters with Cancer Diagnosis During Encounter Period\":\n//   [Encounter] Encounter\n//     with \"US Core-Categorized Cancer Diagnoses\" CancerDiagnosis\n//     such that date from Encounter.period.\"start\".value in day of \"Encounter Period\"\n//       and EndsWith(CancerDiagnosis.encounter.reference, Encounter.id)\n\n","define ","\"Encounters with Cancer Diagnosis During Encounter Period\"",":\n  " ]
+                  }, {
+                     "r" : "339",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "291",
+                           "s" : [ {
+                              "r" : "292",
+                              "s" : [ {
+                                 "r" : "292",
+                                 "s" : [ {
+                                    "value" : [ "[","Encounter","]" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","Encounters" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    " ]
+                     }, {
+                        "r" : "294",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "294",
+                           "s" : [ {
+                              "r" : "295",
+                              "s" : [ {
+                                 "r" : "296",
+                                 "s" : [ {
+                                    "value" : [ "date from " ]
+                                 }, {
+                                    "r" : "299",
+                                    "s" : [ {
+                                       "r" : "298",
+                                       "s" : [ {
+                                          "r" : "297",
+                                          "s" : [ {
+                                             "value" : [ "Encounters" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "298",
+                                          "s" : [ {
+                                             "value" : [ "period" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "299",
+                                       "s" : [ {
+                                          "value" : [ "\"start\"" ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " in day of " ]
+                              }, {
+                                 "r" : "316",
+                                 "s" : [ {
+                                    "value" : [ "\"Encounter Period\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n      and " ]
+                           }, {
+                              "r" : "317",
+                              "s" : [ {
+                                 "value" : [ "exists " ]
+                              }, {
+                                 "r" : "338",
+                                 "s" : [ {
+                                    "value" : [ "(\n        " ]
+                                 }, {
+                                    "r" : "338",
+                                    "s" : [ {
+                                       "s" : [ {
+                                          "r" : "318",
+                                          "s" : [ {
+                                             "r" : "320",
+                                             "s" : [ {
+                                                "s" : [ {
+                                                   "value" : [ "Common",".","\"USCore Encounter Cancer Diagnoses\"" ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ " ","CancerDiagnoses" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "\n          " ]
+                                    }, {
+                                       "r" : "333",
+                                       "s" : [ {
+                                          "value" : [ "where " ]
+                                       }, {
+                                          "r" : "333",
+                                          "s" : [ {
+                                             "value" : [ "EndsWith","(" ]
+                                          }, {
+                                             "r" : "324",
+                                             "s" : [ {
+                                                "r" : "323",
+                                                "s" : [ {
+                                                   "r" : "322",
+                                                   "s" : [ {
+                                                      "value" : [ "CancerDiagnoses" ]
+                                                   } ]
+                                                }, {
+                                                   "value" : [ "." ]
+                                                }, {
+                                                   "r" : "323",
+                                                   "s" : [ {
+                                                      "value" : [ "encounter" ]
+                                                   } ]
+                                                } ]
+                                             }, {
+                                                "value" : [ "." ]
+                                             }, {
+                                                "r" : "324",
+                                                "s" : [ {
+                                                   "value" : [ "reference" ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ ", " ]
+                                          }, {
+                                             "r" : "326",
+                                             "s" : [ {
+                                                "r" : "325",
+                                                "s" : [ {
+                                                   "value" : [ "Encounters" ]
+                                                } ]
+                                             }, {
+                                                "value" : [ "." ]
+                                             }, {
+                                                "r" : "326",
+                                                "s" : [ {
+                                                   "value" : [ "id" ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ ")" ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "\n      )" ]
+                                 } ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "339",
+               "locator" : "191:3-196:7",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "291",
+                  "locator" : "191:3-191:24",
+                  "alias" : "Encounters",
+                  "expression" : {
+                     "localId" : "292",
+                     "locator" : "191:3-191:13",
+                     "dataType" : "{http://hl7.org/fhir}Encounter",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Encounter",
+                     "type" : "Retrieve",
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "294",
+                  "locator" : "192:5-196:7",
+                  "type" : "And",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "295",
+                     "locator" : "192:11-192:74",
+                     "precision" : "Day",
+                     "type" : "In",
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "localId" : "296",
+                        "locator" : "192:11-192:45",
+                        "type" : "DateFrom",
+                        "signature" : [ ],
+                        "operand" : {
+                           "localId" : "300",
+                           "name" : "ToDateTime",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "signature" : [ {
+                              "localId" : "301",
+                              "name" : "{http://hl7.org/fhir}dateTime",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : [ {
+                              "localId" : "299",
+                              "locator" : "192:21-192:45",
+                              "path" : "start",
+                              "type" : "Property",
+                              "source" : {
+                                 "localId" : "298",
+                                 "locator" : "192:21-192:37",
+                                 "path" : "period",
+                                 "scope" : "Encounters",
+                                 "type" : "Property"
+                              }
+                           } ]
+                        }
+                     }, {
+                        "localId" : "316",
+                        "locator" : "192:57-192:74",
+                        "name" : "Encounter Period",
+                        "type" : "ExpressionRef"
+                     } ]
+                  }, {
+                     "localId" : "317",
+                     "locator" : "193:11-196:7",
+                     "type" : "Exists",
+                     "signature" : [ ],
+                     "operand" : {
+                        "localId" : "338",
+                        "locator" : "193:18-196:7",
+                        "type" : "Query",
+                        "source" : [ {
+                           "localId" : "318",
+                           "locator" : "194:9-194:66",
+                           "alias" : "CancerDiagnoses",
+                           "expression" : {
+                              "localId" : "320",
+                              "locator" : "194:9-194:50",
+                              "name" : "USCore Encounter Cancer Diagnoses",
+                              "libraryName" : "Common",
+                              "type" : "ExpressionRef"
+                           }
+                        } ],
+                        "let" : [ ],
+                        "relationship" : [ ],
+                        "where" : {
+                           "localId" : "333",
+                           "locator" : "195:11-195:76",
+                           "type" : "EndsWith",
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "localId" : "334",
+                              "name" : "ToString",
+                              "libraryName" : "FHIRHelpers",
+                              "type" : "FunctionRef",
+                              "signature" : [ {
+                                 "localId" : "335",
+                                 "name" : "{http://hl7.org/fhir}string",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "324",
+                                 "locator" : "195:26-195:60",
+                                 "path" : "reference",
+                                 "type" : "Property",
+                                 "source" : {
+                                    "localId" : "323",
+                                    "locator" : "195:26-195:50",
+                                    "path" : "encounter",
+                                    "scope" : "CancerDiagnoses",
+                                    "type" : "Property"
+                                 }
+                              } ]
+                           }, {
+                              "localId" : "336",
+                              "name" : "ToString",
+                              "libraryName" : "FHIRHelpers",
+                              "type" : "FunctionRef",
+                              "signature" : [ {
+                                 "localId" : "337",
+                                 "name" : "{http://hl7.org/fhir}string",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "326",
+                                 "locator" : "195:63-195:75",
+                                 "path" : "id",
+                                 "scope" : "Encounters",
+                                 "type" : "Property"
+                              } ]
+                           } ]
+                        }
+                     }
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "287",
+            "locator" : "198:1-199:68",
+            "name" : "Number of Encounters with Cancer Diagnosis During Encounter Period",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "287",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Number of Encounters with Cancer Diagnosis During Encounter Period\"",":\n  " ]
+                  }, {
+                     "r" : "343",
+                     "s" : [ {
+                        "value" : [ "Count"," (" ]
+                     }, {
+                        "r" : "340",
+                        "s" : [ {
+                           "value" : [ "\"Encounters with Cancer Diagnosis During Encounter Period\"" ]
+                        } ]
+                     }, {
+                        "value" : [ ")" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "343",
+               "locator" : "199:3-199:68",
+               "type" : "Count",
+               "signature" : [ ],
+               "source" : {
+                  "localId" : "340",
+                  "locator" : "199:10-199:67",
+                  "name" : "Encounters with Cancer Diagnosis During Encounter Period",
+                  "type" : "ExpressionRef"
+               }
+            }
+         }, {
+            "localId" : "283",
+            "locator" : "201:1-202:75",
+            "name" : "Has Two or More Encounters with Cancer Diagnosis During Encounter Period",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "283",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Has Two or More Encounters with Cancer Diagnosis During Encounter Period\"",":\n  " ]
+                  }, {
+                     "r" : "284",
+                     "s" : [ {
+                        "r" : "344",
+                        "s" : [ {
+                           "value" : [ "\"Number of Encounters with Cancer Diagnosis During Encounter Period\"" ]
+                        } ]
+                     }, {
+                        "r" : "345",
+                        "value" : [ " ",">="," ","2" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "284",
+               "locator" : "202:3-202:75",
+               "type" : "GreaterOrEqual",
+               "signature" : [ {
+                  "localId" : "346",
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "347",
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "344",
+                  "locator" : "202:3-202:70",
+                  "name" : "Number of Encounters with Cancer Diagnosis During Encounter Period",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "345",
+                  "locator" : "202:75",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "2",
+                  "type" : "Literal"
+               } ]
+            }
+         }, {
+            "localId" : "351",
+            "locator" : "204:1-212:3",
+            "name" : "Has Active Cancer Diagnosis on Problem List",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "351",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Has Active Cancer Diagnosis on Problem List\"",":\n  " ]
+                  }, {
+                     "r" : "352",
+                     "s" : [ {
+                        "value" : [ "exists " ]
+                     }, {
+                        "r" : "388",
+                        "s" : [ {
+                           "value" : [ "(\n    " ]
+                        }, {
+                           "r" : "388",
+                           "s" : [ {
+                              "s" : [ {
+                                 "r" : "353",
+                                 "s" : [ {
+                                    "r" : "355",
+                                    "s" : [ {
+                                       "s" : [ {
+                                          "value" : [ "Common",".","\"USCore Problem List Cancer Diagnoses\"" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " ","CancerDiagnoses" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n      " ]
+                           }, {
+                              "r" : "357",
+                              "s" : [ {
+                                 "value" : [ "where " ]
+                              }, {
+                                 "r" : "357",
+                                 "s" : [ {
+                                    "r" : "362",
+                                    "s" : [ {
+                                       "r" : "359",
+                                       "s" : [ {
+                                          "r" : "358",
+                                          "s" : [ {
+                                             "value" : [ "CancerDiagnoses" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "359",
+                                          "s" : [ {
+                                             "value" : [ "category" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " in " ]
+                                    }, {
+                                       "r" : "361",
+                                       "s" : [ {
+                                          "r" : "360",
+                                          "s" : [ {
+                                             "value" : [ "Common" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "361",
+                                          "s" : [ {
+                                             "value" : [ "\"Problem List Condition Category\"" ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "\n        and " ]
+                                 }, {
+                                    "r" : "370",
+                                    "s" : [ {
+                                       "value" : [ "exists" ]
+                                    }, {
+                                       "r" : "385",
+                                       "s" : [ {
+                                          "value" : [ "(\n          " ]
+                                       }, {
+                                          "r" : "385",
+                                          "s" : [ {
+                                             "s" : [ {
+                                                "r" : "371",
+                                                "s" : [ {
+                                                   "r" : "374",
+                                                   "s" : [ {
+                                                      "s" : [ {
+                                                         "value" : [ "CancerDiagnoses",".","clinicalStatus",".","coding" ]
+                                                      } ]
+                                                   } ]
+                                                }, {
+                                                   "value" : [ " ","ClinicalStatus" ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "\n            " ]
+                                          }, {
+                                             "r" : "376",
+                                             "s" : [ {
+                                                "value" : [ "where " ]
+                                             }, {
+                                                "r" : "376",
+                                                "s" : [ {
+                                                   "r" : "378",
+                                                   "s" : [ {
+                                                      "r" : "377",
+                                                      "s" : [ {
+                                                         "value" : [ "ClinicalStatus" ]
+                                                      } ]
+                                                   }, {
+                                                      "value" : [ "." ]
+                                                   }, {
+                                                      "r" : "378",
+                                                      "s" : [ {
+                                                         "value" : [ "code" ]
+                                                      } ]
+                                                   } ]
+                                                }, {
+                                                   "value" : [ " ","~"," " ]
+                                                }, {
+                                                   "r" : "379",
+                                                   "s" : [ {
+                                                      "value" : [ "'active'" ]
+                                                   } ]
+                                                } ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "\n        )" ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n  )" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "352",
+               "locator" : "205:3-212:3",
+               "type" : "Exists",
+               "signature" : [ {
+                  "localId" : "389",
+                  "type" : "ListTypeSpecifier",
+                  "elementType" : {
+                     "localId" : "390",
+                     "name" : "{http://hl7.org/fhir}Condition",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               } ],
+               "operand" : {
+                  "localId" : "388",
+                  "locator" : "205:10-212:3",
+                  "type" : "Query",
+                  "source" : [ {
+                     "localId" : "353",
+                     "locator" : "206:5-206:65",
+                     "alias" : "CancerDiagnoses",
+                     "expression" : {
+                        "localId" : "355",
+                        "locator" : "206:5-206:49",
+                        "name" : "USCore Problem List Cancer Diagnoses",
+                        "libraryName" : "Common",
+                        "type" : "ExpressionRef"
+                     }
+                  } ],
+                  "let" : [ ],
+                  "relationship" : [ ],
+                  "where" : {
+                     "localId" : "357",
+                     "locator" : "207:7-211:9",
+                     "type" : "And",
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "localId" : "362",
+                        "locator" : "207:13-207:80",
+                        "type" : "AnyInValueSet",
+                        "signature" : [ {
+                           "localId" : "368",
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "localId" : "369",
+                              "name" : "{urn:hl7-org:elm-types:r1}Concept",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ],
+                        "codes" : {
+                           "localId" : "363",
+                           "type" : "Query",
+                           "source" : [ {
+                              "localId" : "364",
+                              "alias" : "X",
+                              "expression" : {
+                                 "localId" : "359",
+                                 "locator" : "207:13-207:36",
+                                 "path" : "category",
+                                 "scope" : "CancerDiagnoses",
+                                 "type" : "Property"
+                              }
+                           } ],
+                           "let" : [ ],
+                           "relationship" : [ ],
+                           "return" : {
+                              "localId" : "365",
+                              "distinct" : false,
+                              "expression" : {
+                                 "localId" : "367",
+                                 "name" : "ToConcept",
+                                 "libraryName" : "FHIRHelpers",
+                                 "type" : "FunctionRef",
+                                 "signature" : [ ],
+                                 "operand" : [ {
+                                    "localId" : "366",
+                                    "name" : "X",
+                                    "type" : "AliasRef"
+                                 } ]
+                              }
+                           }
+                        },
+                        "valueset" : {
+                           "localId" : "361",
+                           "locator" : "207:41-207:80",
+                           "name" : "Problem List Condition Category",
+                           "libraryName" : "Common",
+                           "preserve" : true
+                        }
+                     }, {
+                        "localId" : "370",
+                        "locator" : "208:13-211:9",
+                        "type" : "Exists",
+                        "signature" : [ {
+                           "localId" : "386",
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "localId" : "387",
+                              "name" : "{http://hl7.org/fhir}Coding",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ],
+                        "operand" : {
+                           "localId" : "385",
+                           "locator" : "208:19-211:9",
+                           "type" : "Query",
+                           "source" : [ {
+                              "localId" : "371",
+                              "locator" : "209:11-209:62",
+                              "alias" : "ClinicalStatus",
+                              "expression" : {
+                                 "localId" : "374",
+                                 "locator" : "209:11-209:47",
+                                 "path" : "coding",
+                                 "type" : "Property",
+                                 "source" : {
+                                    "localId" : "373",
+                                    "path" : "clinicalStatus",
+                                    "scope" : "CancerDiagnoses",
+                                    "type" : "Property"
+                                 }
+                              }
+                           } ],
+                           "let" : [ ],
+                           "relationship" : [ ],
+                           "where" : {
+                              "localId" : "376",
+                              "locator" : "210:13-210:48",
+                              "type" : "Equivalent",
+                              "signature" : [ {
+                                 "localId" : "383",
+                                 "name" : "{urn:hl7-org:elm-types:r1}String",
+                                 "type" : "NamedTypeSpecifier"
+                              }, {
+                                 "localId" : "384",
+                                 "name" : "{urn:hl7-org:elm-types:r1}String",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "381",
+                                 "name" : "ToString",
+                                 "libraryName" : "FHIRHelpers",
+                                 "type" : "FunctionRef",
+                                 "signature" : [ {
+                                    "localId" : "382",
+                                    "name" : "{http://hl7.org/fhir}string",
+                                    "type" : "NamedTypeSpecifier"
+                                 } ],
+                                 "operand" : [ {
+                                    "localId" : "378",
+                                    "locator" : "210:19-210:37",
+                                    "path" : "code",
+                                    "scope" : "ClinicalStatus",
+                                    "type" : "Property"
+                                 } ]
+                              }, {
+                                 "localId" : "379",
+                                 "locator" : "210:41-210:48",
+                                 "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                                 "value" : "active",
+                                 "type" : "Literal"
+                              } ]
+                           }
+                        }
+                     } ]
+                  }
+               }
+            }
+         }, {
+            "localId" : "276",
+            "locator" : "173:1-177:12",
+            "name" : "Is Active Cancer Treatment?",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "276",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Is Active Cancer Treatment?\"",":\n  " ]
+                  }, {
+                     "r" : "277",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "279",
+                        "s" : [ {
+                           "value" : [ "(" ]
+                        }, {
+                           "r" : "279",
+                           "s" : [ {
+                              "r" : "278",
+                              "s" : [ {
+                                 "value" : [ "Config" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "279",
+                              "s" : [ {
+                                 "value" : [ "\"Active Cancer Treatment Encounters Condition Is Enabled\"" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     }, {
+                        "value" : [ " \n    then " ]
+                     }, {
+                        "r" : "280",
+                        "s" : [ {
+                           "r" : "348",
+                           "s" : [ {
+                              "value" : [ "\"Has Two or More Encounters with Cancer Diagnosis During Encounter Period\"" ]
+                           } ]
+                        }, {
+                           "value" : [ "\n      or " ]
+                        }, {
+                           "r" : "391",
+                           "s" : [ {
+                              "value" : [ "\"Has Active Cancer Diagnosis on Problem List\"" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "392",
+                        "value" : [ "\n  else ","false" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "277",
+               "locator" : "174:3-177:12",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "279",
+                  "locator" : "174:6-174:71",
+                  "name" : "Active Cancer Treatment Encounters Condition Is Enabled",
+                  "libraryName" : "Config",
+                  "type" : "ExpressionRef"
+               },
+               "then" : {
+                  "localId" : "280",
+                  "locator" : "175:10-176:54",
+                  "type" : "Or",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "348",
+                     "locator" : "175:10-175:83",
+                     "name" : "Has Two or More Encounters with Cancer Diagnosis During Encounter Period",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "391",
+                     "locator" : "176:10-176:54",
+                     "name" : "Has Active Cancer Diagnosis on Problem List",
+                     "type" : "ExpressionRef"
+                  } ]
+               },
+               "else" : {
+                  "localId" : "392",
+                  "locator" : "177:8-177:12",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "false",
+                  "type" : "Literal"
+               }
+            }
+         }, {
+            "localId" : "397",
+            "locator" : "56:1-63:12",
+            "name" : "Conditions Likely Terminal for Opioid Prescribing",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "397",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Conditions Likely Terminal for Opioid Prescribing\"",":\n  " ]
+                  }, {
+                     "r" : "398",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "400",
+                        "s" : [ {
+                           "value" : [ "(" ]
+                        }, {
+                           "r" : "400",
+                           "s" : [ {
+                              "r" : "399",
+                              "s" : [ {
+                                 "value" : [ "Config" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "400",
+                              "s" : [ {
+                                 "value" : [ "\"End-Stage Disease Criteria Enabled\"" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     }, {
+                        "value" : [ " then\n    " ]
+                     }, {
+                        "r" : "401",
+                        "s" : [ {
+                           "value" : [ "exists " ]
+                        }, {
+                           "r" : "413",
+                           "s" : [ {
+                              "value" : [ "(\n      " ]
+                           }, {
+                              "r" : "413",
+                              "s" : [ {
+                                 "s" : [ {
+                                    "r" : "402",
+                                    "s" : [ {
+                                       "r" : "404",
+                                       "s" : [ {
+                                          "s" : [ {
+                                             "value" : [ "Common",".","\"US Core-Categorized Conditions\"" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " ","EOLC" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ "\n        " ]
+                              }, {
+                                 "r" : "410",
+                                 "s" : [ {
+                                    "value" : [ "where " ]
+                                 }, {
+                                    "r" : "410",
+                                    "s" : [ {
+                                       "r" : "407",
+                                       "s" : [ {
+                                          "r" : "406",
+                                          "s" : [ {
+                                             "value" : [ "EOLC" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "407",
+                                          "s" : [ {
+                                             "value" : [ "code" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " in " ]
+                                    }, {
+                                       "r" : "409",
+                                       "s" : [ {
+                                          "r" : "408",
+                                          "s" : [ {
+                                             "value" : [ "Common" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "409",
+                                          "s" : [ {
+                                             "value" : [ "\"Conditions likely terminal for opioid prescribing\"" ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n          // and EOLC.clinicalStatus in Common.\"Active Condition\"\n    )" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "416",
+                        "value" : [ "\n  else ","false" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "398",
+               "locator" : "57:3-63:12",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "400",
+                  "locator" : "57:6-57:50",
+                  "name" : "End-Stage Disease Criteria Enabled",
+                  "libraryName" : "Config",
+                  "type" : "ExpressionRef"
+               },
+               "then" : {
+                  "localId" : "401",
+                  "locator" : "58:5-62:5",
+                  "type" : "Exists",
+                  "signature" : [ {
+                     "localId" : "414",
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "localId" : "415",
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ],
+                  "operand" : {
+                     "localId" : "413",
+                     "locator" : "58:12-62:5",
+                     "type" : "Query",
+                     "source" : [ {
+                        "localId" : "402",
+                        "locator" : "59:7-59:50",
+                        "alias" : "EOLC",
+                        "expression" : {
+                           "localId" : "404",
+                           "locator" : "59:7-59:45",
+                           "name" : "US Core-Categorized Conditions",
+                           "libraryName" : "Common",
+                           "type" : "ExpressionRef"
+                        }
+                     } ],
+                     "let" : [ ],
+                     "relationship" : [ ],
+                     "where" : {
+                        "localId" : "410",
+                        "locator" : "60:9-60:85",
+                        "type" : "InValueSet",
+                        "signature" : [ {
+                           "localId" : "412",
+                           "name" : "{urn:hl7-org:elm-types:r1}Concept",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "code" : {
+                           "localId" : "411",
+                           "name" : "ToConcept",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "localId" : "407",
+                              "locator" : "60:15-60:23",
+                              "path" : "code",
+                              "scope" : "EOLC",
+                              "type" : "Property"
+                           } ]
+                        },
+                        "valueset" : {
+                           "localId" : "409",
+                           "locator" : "60:28-60:85",
+                           "name" : "Conditions likely terminal for opioid prescribing",
+                           "libraryName" : "Common",
+                           "preserve" : true
+                        }
+                     }
+                  }
+               },
+               "else" : {
+                  "localId" : "416",
+                  "locator" : "63:8-63:12",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "false",
+                  "type" : "Literal"
+               }
+            }
+         }, {
+            "localId" : "234",
+            "locator" : "38:1-42:63",
+            "name" : "CDC 2022 Guideline General Inclusion Criteria",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "234",
+                  "s" : [ {
+                     "value" : [ "","define ","\"CDC 2022 Guideline General Inclusion Criteria\"",":\n  " ]
+                  }, {
+                     "r" : "235",
+                     "s" : [ {
+                        "r" : "236",
+                        "s" : [ {
+                           "r" : "237",
+                           "s" : [ {
+                              "r" : "238",
+                              "s" : [ {
+                                 "value" : [ "not " ]
+                              }, {
+                                 "r" : "260",
+                                 "s" : [ {
+                                    "value" : [ "\"Patient Age Less Than 18\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n    and " ]
+                           }, {
+                              "r" : "261",
+                              "s" : [ {
+                                 "value" : [ "not " ]
+                              }, {
+                                 "r" : "272",
+                                 "s" : [ {
+                                    "value" : [ "\"Condition Positive for Sickle Cell\"" ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    and " ]
+                        }, {
+                           "r" : "273",
+                           "s" : [ {
+                              "value" : [ "not " ]
+                           }, {
+                              "r" : "393",
+                              "s" : [ {
+                                 "value" : [ "\"Is Active Cancer Treatment?\"" ]
+                              } ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    and " ]
+                     }, {
+                        "r" : "394",
+                        "s" : [ {
+                           "value" : [ "not " ]
+                        }, {
+                           "r" : "417",
+                           "s" : [ {
+                              "value" : [ "\"Conditions Likely Terminal for Opioid Prescribing\"" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "235",
+               "locator" : "39:3-42:63",
+               "type" : "And",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "236",
+                  "locator" : "39:3-41:41",
+                  "type" : "And",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "237",
+                     "locator" : "39:3-40:48",
+                     "type" : "And",
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "localId" : "238",
+                        "locator" : "39:3-39:32",
+                        "type" : "Not",
+                        "signature" : [ ],
+                        "operand" : {
+                           "localId" : "260",
+                           "locator" : "39:7-39:32",
+                           "name" : "Patient Age Less Than 18",
+                           "type" : "ExpressionRef"
+                        }
+                     }, {
+                        "localId" : "261",
+                        "locator" : "40:9-40:48",
+                        "type" : "Not",
+                        "signature" : [ ],
+                        "operand" : {
+                           "localId" : "272",
+                           "locator" : "40:13-40:48",
+                           "name" : "Condition Positive for Sickle Cell",
+                           "type" : "ExpressionRef"
+                        }
+                     } ]
+                  }, {
+                     "localId" : "273",
+                     "locator" : "41:9-41:41",
+                     "type" : "Not",
+                     "signature" : [ ],
+                     "operand" : {
+                        "localId" : "393",
+                        "locator" : "41:13-41:41",
+                        "name" : "Is Active Cancer Treatment?",
+                        "type" : "ExpressionRef"
+                     }
+                  } ]
+               }, {
+                  "localId" : "394",
+                  "locator" : "42:9-42:63",
+                  "type" : "Not",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "417",
+                     "locator" : "42:13-42:63",
+                     "name" : "Conditions Likely Terminal for Opioid Prescribing",
+                     "type" : "ExpressionRef"
+                  }
+               } ]
+            }
+         }, {
+            "localId" : "420",
+            "locator" : "97:1-98:45",
+            "name" : "Prescription/Dispense Inclusion Period",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "420",
+                  "s" : [ {
+                     "value" : [ "// End of CDC 2022 General Inclusion Criteria Routine\n\n/*\n**  Routine #2\n**  Opioid Naive Routine\n**\n**  Definition                    | Answer to Proceed   | Details                                           | Data (Terminology) Requirement\n**  ----------------------------------------------------------------------------------------------------------------------------------------\n**  Opioid analgesics with        | No                  | Look for an existing prescription (order) for     | Opioid analgesics with\n**  ambulatory misuse potential   |                     | opioid that is in the value set for opioid with   | ambulatory misuse potential\n**  prescription in past 90 days  |                     | ambulatory abuse potential authored               |\n**  excluding the previous 24     |                     | within the past 90 days (excluding previous 24    |\n**  hours                         |                     | hours)                                            |\n**  ----------------------------------------------------------------------------------------------------------------------------------------\n**  Opioid analgesics with        | No                  | Look for evidence of active medication on         | Opioid analgesics with\n**  ambulatory misuse potential   |                     | the medication list that is in the value set      | ambulatory misuse potential\n**  reported in past 90 days      |                     | for opioid with ambulatory care abuse             |\n**  excluding previous 24 hours*  |                     | potential                                         |\n**  ----------------------------------------------------------------------------------------------------------------------------------------\n**  Opioid analgesics with        | No                  | Look for evidence of a dispensing event for       | Opioid analgesics with\n**  ambulatory misuse potential   |                     | medication that is in the value set for opioid    | ambulatory misuse potential\n**  dispensing event in past 90   |                     | with ambulatory use potential occurring           |\n**  days excluding previous 24    |                     | within the past 90 days (excluding previous 24    |\n**  hours                         |                     | hours)                                            |\n**  ----------------------------------------------------------------------------------------------------------------------------------------\n**  *Future consideration: Current algorithm addresses only orders (prescriptions).\n**\n**  Note – orders use RxNorm, but medication lists and dispensed medication will\n**  require an NDC value set and/or local mapping of NDC to RxNorm to enable this element\n**\n*/\n\n","define ","\"Prescription/Dispense Inclusion Period\"",":\n  " ]
+                  }, {
+                     "r" : "435",
+                     "s" : [ {
+                        "value" : [ "Interval[" ]
+                     }, {
+                        "r" : "421",
+                        "s" : [ {
+                           "r" : "424",
+                           "s" : [ {
+                              "value" : [ "Now","()" ]
+                           } ]
+                        }, {
+                           "value" : [ " - " ]
+                        }, {
+                           "r" : "425",
+                           "s" : [ {
+                              "value" : [ "90 ","days" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ", " ]
+                     }, {
+                        "r" : "428",
+                        "s" : [ {
+                           "r" : "431",
+                           "s" : [ {
+                              "value" : [ "Now","()" ]
+                           } ]
+                        }, {
+                           "value" : [ " - " ]
+                        }, {
+                           "r" : "432",
+                           "s" : [ {
+                              "value" : [ "24 ","hours" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "]" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "435",
+               "locator" : "98:3-98:45",
+               "lowClosed" : true,
+               "highClosed" : true,
+               "type" : "Interval",
+               "low" : {
+                  "localId" : "421",
+                  "locator" : "98:12-98:26",
+                  "type" : "Subtract",
+                  "signature" : [ {
+                     "localId" : "426",
+                     "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "427",
+                     "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "424",
+                     "locator" : "98:12-98:16",
+                     "type" : "Now",
+                     "signature" : [ ]
+                  }, {
+                     "localId" : "425",
+                     "locator" : "98:20-98:26",
+                     "value" : 90,
+                     "unit" : "days",
+                     "type" : "Quantity"
+                  } ]
+               },
+               "high" : {
+                  "localId" : "428",
+                  "locator" : "98:29-98:44",
+                  "type" : "Subtract",
+                  "signature" : [ {
+                     "localId" : "433",
+                     "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "434",
+                     "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "431",
+                     "locator" : "98:29-98:33",
+                     "type" : "Now",
+                     "signature" : [ ]
+                  }, {
+                     "localId" : "432",
+                     "locator" : "98:37-98:44",
+                     "value" : 24,
+                     "unit" : "hours",
+                     "type" : "Quantity"
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "438",
+            "locator" : "100:1-101:45",
+            "name" : "Report Inclusion Period",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "438",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Report Inclusion Period\"",":\n  " ]
+                  }, {
+                     "r" : "453",
+                     "s" : [ {
+                        "value" : [ "Interval[" ]
+                     }, {
+                        "r" : "439",
+                        "s" : [ {
+                           "r" : "442",
+                           "s" : [ {
+                              "value" : [ "Now","()" ]
+                           } ]
+                        }, {
+                           "value" : [ " - " ]
+                        }, {
+                           "r" : "443",
+                           "s" : [ {
+                              "value" : [ "90 ","days" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ", " ]
+                     }, {
+                        "r" : "446",
+                        "s" : [ {
+                           "r" : "449",
+                           "s" : [ {
+                              "value" : [ "Now","()" ]
+                           } ]
+                        }, {
+                           "value" : [ " - " ]
+                        }, {
+                           "r" : "450",
+                           "s" : [ {
+                              "value" : [ "24 ","hours" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ")" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "453",
+               "locator" : "101:3-101:45",
+               "lowClosed" : true,
+               "highClosed" : false,
+               "type" : "Interval",
+               "low" : {
+                  "localId" : "439",
+                  "locator" : "101:12-101:26",
+                  "type" : "Subtract",
+                  "signature" : [ {
+                     "localId" : "444",
+                     "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "445",
+                     "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "442",
+                     "locator" : "101:12-101:16",
+                     "type" : "Now",
+                     "signature" : [ ]
+                  }, {
+                     "localId" : "443",
+                     "locator" : "101:20-101:26",
+                     "value" : 90,
+                     "unit" : "days",
+                     "type" : "Quantity"
+                  } ]
+               },
+               "high" : {
+                  "localId" : "446",
+                  "locator" : "101:29-101:44",
+                  "type" : "Subtract",
+                  "signature" : [ {
+                     "localId" : "451",
+                     "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "452",
+                     "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "449",
+                     "locator" : "101:29-101:33",
+                     "type" : "Now",
+                     "signature" : [ ]
+                  }, {
+                     "localId" : "450",
+                     "locator" : "101:37-101:44",
+                     "value" : 24,
+                     "unit" : "hours",
+                     "type" : "Quantity"
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "468",
+            "locator" : "109:1-111:80",
+            "name" : "Opioid RX with Ambulatory Abuse Potential In Past 90 Days",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "468",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Opioid RX with Ambulatory Abuse Potential In Past 90 Days\"",":\n  " ]
+                  }, {
+                     "r" : "483",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "469",
+                           "s" : [ {
+                              "r" : "471",
+                              "s" : [ {
+                                 "s" : [ {
+                                    "value" : [ "Common",".","\"Active Ambulatory Opioid Rx\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","Rx" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n      " ]
+                     }, {
+                        "r" : "477",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "477",
+                           "s" : [ {
+                              "r" : "474",
+                              "s" : [ {
+                                 "r" : "473",
+                                 "s" : [ {
+                                    "value" : [ "Rx" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "474",
+                                 "s" : [ {
+                                    "value" : [ "authoredOn" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "r" : "477",
+                              "value" : [ " ","during day of"," " ]
+                           }, {
+                              "r" : "475",
+                              "s" : [ {
+                                 "value" : [ "\"Prescription/Dispense Inclusion Period\"" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "483",
+               "locator" : "110:3-111:80",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "469",
+                  "locator" : "110:3-110:41",
+                  "alias" : "Rx",
+                  "expression" : {
+                     "localId" : "471",
+                     "locator" : "110:3-110:38",
+                     "name" : "Active Ambulatory Opioid Rx",
+                     "libraryName" : "Common",
+                     "type" : "ExpressionRef"
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "477",
+                  "locator" : "111:7-111:80",
+                  "precision" : "Day",
+                  "type" : "In",
+                  "signature" : [ {
+                     "localId" : "480",
+                     "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "481",
+                     "type" : "IntervalTypeSpecifier",
+                     "pointType" : {
+                        "localId" : "482",
+                        "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ],
+                  "operand" : [ {
+                     "localId" : "478",
+                     "name" : "ToDateTime",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "signature" : [ {
+                        "localId" : "479",
+                        "name" : "{http://hl7.org/fhir}dateTime",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "474",
+                        "locator" : "111:13-111:25",
+                        "path" : "authoredOn",
+                        "scope" : "Rx",
+                        "type" : "Property"
+                     } ]
+                  }, {
+                     "localId" : "475",
+                     "locator" : "111:41-111:80",
+                     "name" : "Prescription/Dispense Inclusion Period",
+                     "type" : "ExpressionRef"
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "461",
+            "locator" : "113:1-116:14",
+            "name" : "Has Opioid RX with Ambulatory Abuse Potential In Past 90 Days",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "461",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Has Opioid RX with Ambulatory Abuse Potential In Past 90 Days\"",":\n    " ]
+                  }, {
+                     "r" : "462",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "464",
+                        "s" : [ {
+                           "value" : [ "(" ]
+                        }, {
+                           "r" : "464",
+                           "s" : [ {
+                              "r" : "463",
+                              "s" : [ {
+                                 "value" : [ "Config" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "464",
+                              "s" : [ {
+                                 "value" : [ "\"Opioid Naive Prescription Condition Is Enabled\"" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     }, {
+                        "value" : [ " then\n      " ]
+                     }, {
+                        "r" : "465",
+                        "s" : [ {
+                           "value" : [ "exists " ]
+                        }, {
+                           "r" : "484",
+                           "s" : [ {
+                              "value" : [ "(" ]
+                           }, {
+                              "r" : "484",
+                              "s" : [ {
+                                 "value" : [ "\"Opioid RX with Ambulatory Abuse Potential In Past 90 Days\"" ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "487",
+                        "value" : [ "\n    else ","false" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "462",
+               "locator" : "114:5-116:14",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "464",
+                  "locator" : "114:8-114:64",
+                  "name" : "Opioid Naive Prescription Condition Is Enabled",
+                  "libraryName" : "Config",
+                  "type" : "ExpressionRef"
+               },
+               "then" : {
+                  "localId" : "465",
+                  "locator" : "115:7-115:74",
+                  "type" : "Exists",
+                  "signature" : [ {
+                     "localId" : "485",
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "localId" : "486",
+                        "name" : "{http://hl7.org/fhir}MedicationRequest",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ],
+                  "operand" : {
+                     "localId" : "484",
+                     "locator" : "115:14-115:74",
+                     "name" : "Opioid RX with Ambulatory Abuse Potential In Past 90 Days",
+                     "type" : "ExpressionRef"
+                  }
+               },
+               "else" : {
+                  "localId" : "487",
+                  "locator" : "116:10-116:14",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "false",
+                  "type" : "Literal"
+               }
+            }
+         }, {
+            "localId" : "499",
+            "locator" : "129:1-132:51",
+            "name" : "Opioid Dispense with Ambulatory Abuse Potential In Past 90 Days",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "499",
+                  "s" : [ {
+                     "value" : [ "// NOTE: 2020-02-05: Review direction of MedicationStatement resource (US-Core focusing on MedicationRequest i/o Statement)\n// NOTE: 2020-04-21: MedicationStatement a) Shouldn't be use since guidance/direction from USCore is targeting MedicationUse in R5, and b) Breaks in the publisher\n/* define \"Reports of Opioid with Ambulatory Care Abuse Potential Reported in Past 90 Days\":\n    [MedicationStatement: Common.\"Opioid analgesics with ambulatory misuse potential\"] Statement\n        where Statement.status in {'active', 'completed'}\n            and Statement.effective during day of \"Report Inclusion Period\" */\n\n/* define \"Has Report of Opioid with Ambulatory Care Abuse Potential Reported in Past 90 Days\":\n    Config.\"Opioid Naive Report Condition Is Enabled\"\n        and exists (\"Reports of Opioid with Ambulatory Care Abuse Potential Reported in Past 90 Days\") */\n\n","define ","\"Opioid Dispense with Ambulatory Abuse Potential In Past 90 Days\"",":\n    " ]
+                  }, {
+                     "r" : "553",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "500",
+                           "s" : [ {
+                              "r" : "531",
+                              "s" : [ {
+                                 "r" : "531",
+                                 "s" : [ {
+                                    "value" : [ "[","MedicationDispense",": " ]
+                                 }, {
+                                    "s" : [ {
+                                       "value" : [ "Common",".","\"Opioid analgesics with ambulatory misuse potential\"" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "]" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","OpioidDispense" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n        " ]
+                     }, {
+                        "r" : "533",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "533",
+                           "s" : [ {
+                              "r" : "538",
+                              "s" : [ {
+                                 "r" : "535",
+                                 "s" : [ {
+                                    "r" : "534",
+                                    "s" : [ {
+                                       "value" : [ "OpioidDispense" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "535",
+                                    "s" : [ {
+                                       "value" : [ "whenHandedOver" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "r" : "538",
+                                 "value" : [ " ","during day of"," " ]
+                              }, {
+                                 "r" : "536",
+                                 "s" : [ {
+                                    "value" : [ "\"Prescription/Dispense Inclusion Period\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n            and " ]
+                           }, {
+                              "r" : "544",
+                              "s" : [ {
+                                 "r" : "546",
+                                 "s" : [ {
+                                    "r" : "545",
+                                    "s" : [ {
+                                       "value" : [ "OpioidDispense" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "546",
+                                    "s" : [ {
+                                       "value" : [ "status" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " ","="," " ]
+                              }, {
+                                 "r" : "547",
+                                 "s" : [ {
+                                    "value" : [ "'completed'" ]
+                                 } ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "553",
+               "locator" : "130:5-132:51",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "500",
+                  "locator" : "130:5-130:100",
+                  "alias" : "OpioidDispense",
+                  "expression" : {
+                     "localId" : "531",
+                     "locator" : "130:5-130:85",
+                     "type" : "Union",
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "localId" : "504",
+                        "dataType" : "{http://hl7.org/fhir}MedicationDispense",
+                        "templateId" : "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
+                        "codeProperty" : "medication",
+                        "codeComparator" : "in",
+                        "type" : "Retrieve",
+                        "codes" : {
+                           "localId" : "503",
+                           "locator" : "130:26-130:84",
+                           "name" : "Opioid analgesics with ambulatory misuse potential",
+                           "libraryName" : "Common",
+                           "preserve" : true,
+                           "type" : "ValueSetRef"
+                        },
+                        "include" : [ ],
+                        "codeFilter" : [ ],
+                        "dateFilter" : [ ],
+                        "otherFilter" : [ ]
+                     }, {
+                        "localId" : "511",
+                        "locator" : "130:5-130:85",
+                        "type" : "Query",
+                        "source" : [ {
+                           "localId" : "512",
+                           "locator" : "130:5-130:85",
+                           "alias" : "MR",
+                           "expression" : {
+                              "localId" : "509",
+                              "dataType" : "{http://hl7.org/fhir}MedicationDispense",
+                              "templateId" : "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
+                              "type" : "Retrieve",
+                              "include" : [ ],
+                              "codeFilter" : [ ],
+                              "dateFilter" : [ ],
+                              "otherFilter" : [ ]
+                           }
+                        } ],
+                        "let" : [ ],
+                        "relationship" : [ {
+                           "localId" : "513",
+                           "locator" : "130:5-130:85",
+                           "alias" : "M",
+                           "type" : "With",
+                           "expression" : {
+                              "localId" : "510",
+                              "dataType" : "{http://hl7.org/fhir}Medication",
+                              "templateId" : "http://hl7.org/fhir/StructureDefinition/Medication",
+                              "type" : "Retrieve",
+                              "include" : [ ],
+                              "codeFilter" : [ ],
+                              "dateFilter" : [ ],
+                              "otherFilter" : [ ]
+                           },
+                           "suchThat" : {
+                              "localId" : "530",
+                              "type" : "And",
+                              "signature" : [ ],
+                              "operand" : [ {
+                                 "localId" : "521",
+                                 "type" : "Equal",
+                                 "signature" : [ {
+                                    "localId" : "524",
+                                    "name" : "{urn:hl7-org:elm-types:r1}String",
+                                    "type" : "NamedTypeSpecifier"
+                                 }, {
+                                    "localId" : "525",
+                                    "name" : "{urn:hl7-org:elm-types:r1}String",
+                                    "type" : "NamedTypeSpecifier"
+                                 } ],
+                                 "operand" : [ {
+                                    "localId" : "522",
+                                    "name" : "ToString",
+                                    "libraryName" : "FHIRHelpers",
+                                    "type" : "FunctionRef",
+                                    "signature" : [ {
+                                       "localId" : "523",
+                                       "name" : "{http://hl7.org/fhir}string",
+                                       "type" : "NamedTypeSpecifier"
+                                    } ],
+                                    "operand" : [ {
+                                       "localId" : "514",
+                                       "path" : "id",
+                                       "scope" : "M",
+                                       "type" : "Property"
+                                    } ]
+                                 }, {
+                                    "localId" : "520",
+                                    "type" : "Last",
+                                    "signature" : [ ],
+                                    "source" : {
+                                       "localId" : "516",
+                                       "type" : "Split",
+                                       "signature" : [ ],
+                                       "stringToSplit" : {
+                                          "localId" : "518",
+                                          "name" : "ToString",
+                                          "libraryName" : "FHIRHelpers",
+                                          "type" : "FunctionRef",
+                                          "signature" : [ {
+                                             "localId" : "519",
+                                             "name" : "{http://hl7.org/fhir}string",
+                                             "type" : "NamedTypeSpecifier"
+                                          } ],
+                                          "operand" : [ {
+                                             "localId" : "515",
+                                             "path" : "medication.reference",
+                                             "scope" : "MR",
+                                             "type" : "Property"
+                                          } ]
+                                       },
+                                       "separator" : {
+                                          "localId" : "517",
+                                          "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                                          "value" : "/",
+                                          "type" : "Literal"
+                                       }
+                                    }
+                                 } ]
+                              }, {
+                                 "localId" : "527",
+                                 "type" : "InValueSet",
+                                 "signature" : [ {
+                                    "localId" : "529",
+                                    "name" : "{urn:hl7-org:elm-types:r1}Concept",
+                                    "type" : "NamedTypeSpecifier"
+                                 } ],
+                                 "code" : {
+                                    "localId" : "528",
+                                    "name" : "ToConcept",
+                                    "libraryName" : "FHIRHelpers",
+                                    "type" : "FunctionRef",
+                                    "signature" : [ ],
+                                    "operand" : [ {
+                                       "localId" : "526",
+                                       "path" : "code",
+                                       "scope" : "M",
+                                       "type" : "Property"
+                                    } ]
+                                 },
+                                 "valueset" : {
+                                    "localId" : "503",
+                                    "locator" : "130:26-130:84",
+                                    "name" : "Opioid analgesics with ambulatory misuse potential",
+                                    "libraryName" : "Common",
+                                    "preserve" : true
+                                 }
+                              } ]
+                           }
+                        } ]
+                     } ]
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "533",
+                  "locator" : "131:9-132:51",
+                  "type" : "And",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "538",
+                     "locator" : "131:15-131:98",
+                     "precision" : "Day",
+                     "type" : "In",
+                     "signature" : [ {
+                        "localId" : "541",
+                        "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "542",
+                        "type" : "IntervalTypeSpecifier",
+                        "pointType" : {
+                           "localId" : "543",
+                           "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ],
+                     "operand" : [ {
+                        "localId" : "539",
+                        "name" : "ToDateTime",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "signature" : [ {
+                           "localId" : "540",
+                           "name" : "{http://hl7.org/fhir}dateTime",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "535",
+                           "locator" : "131:15-131:43",
+                           "path" : "whenHandedOver",
+                           "scope" : "OpioidDispense",
+                           "type" : "Property"
+                        } ]
+                     }, {
+                        "localId" : "536",
+                        "locator" : "131:59-131:98",
+                        "name" : "Prescription/Dispense Inclusion Period",
+                        "type" : "ExpressionRef"
+                     } ]
+                  }, {
+                     "localId" : "544",
+                     "locator" : "132:17-132:51",
+                     "type" : "Equal",
+                     "signature" : [ {
+                        "localId" : "551",
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "552",
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "549",
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "signature" : [ {
+                           "localId" : "550",
+                           "name" : "{http://hl7.org/fhir}MedicationDispenseStatus",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "546",
+                           "locator" : "132:17-132:37",
+                           "path" : "status",
+                           "scope" : "OpioidDispense",
+                           "type" : "Property"
+                        } ]
+                     }, {
+                        "localId" : "547",
+                        "locator" : "132:41-132:51",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "completed",
+                        "type" : "Literal"
+                     } ]
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "492",
+            "locator" : "134:1-137:12",
+            "name" : "Has Opioid Dispense with Ambulatory Abuse Potential In Past 90 Days",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "492",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Has Opioid Dispense with Ambulatory Abuse Potential In Past 90 Days\"",":\n  " ]
+                  }, {
+                     "r" : "493",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "495",
+                        "s" : [ {
+                           "value" : [ "(" ]
+                        }, {
+                           "r" : "495",
+                           "s" : [ {
+                              "r" : "494",
+                              "s" : [ {
+                                 "value" : [ "Config" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "495",
+                              "s" : [ {
+                                 "value" : [ "\"Opioid Naive Prescription Condition Is Enabled\"" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     }, {
+                        "value" : [ " then\n    " ]
+                     }, {
+                        "r" : "496",
+                        "s" : [ {
+                           "value" : [ "exists " ]
+                        }, {
+                           "r" : "554",
+                           "s" : [ {
+                              "value" : [ "(" ]
+                           }, {
+                              "r" : "554",
+                              "s" : [ {
+                                 "value" : [ "\"Opioid Dispense with Ambulatory Abuse Potential In Past 90 Days\"" ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "557",
+                        "value" : [ "\n  else ","false" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "493",
+               "locator" : "135:3-137:12",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "495",
+                  "locator" : "135:6-135:62",
+                  "name" : "Opioid Naive Prescription Condition Is Enabled",
+                  "libraryName" : "Config",
+                  "type" : "ExpressionRef"
+               },
+               "then" : {
+                  "localId" : "496",
+                  "locator" : "136:5-136:78",
+                  "type" : "Exists",
+                  "signature" : [ {
+                     "localId" : "555",
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "localId" : "556",
+                        "name" : "{http://hl7.org/fhir}MedicationDispense",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ],
+                  "operand" : {
+                     "localId" : "554",
+                     "locator" : "136:12-136:78",
+                     "name" : "Opioid Dispense with Ambulatory Abuse Potential In Past 90 Days",
+                     "type" : "ExpressionRef"
+                  }
+               },
+               "else" : {
+                  "localId" : "557",
+                  "locator" : "137:8-137:12",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "false",
+                  "type" : "Literal"
+               }
+            }
+         }, {
+            "localId" : "456",
+            "locator" : "104:1-107:83",
+            "name" : "Is Opioid Naive?",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "456",
+                  "s" : [ {
+                     "value" : [ "// NOTE: MedicationStatement-dependent logic comment out due to bug in Publisher not supporting MedicationStatement in AllTypes.\n","define ","\"Is Opioid Naive?\"",":\n    " ]
+                  }, {
+                     "r" : "457",
+                     "s" : [ {
+                        "r" : "458",
+                        "s" : [ {
+                           "value" : [ "not " ]
+                        }, {
+                           "r" : "488",
+                           "s" : [ {
+                              "value" : [ "(" ]
+                           }, {
+                              "r" : "488",
+                              "s" : [ {
+                                 "value" : [ "\"Has Opioid RX with Ambulatory Abuse Potential In Past 90 Days\"" ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    /* and not (\"Has Report of Opioid with Ambulatory Care Abuse Potential Reported in Past 90 Days\") */\n    and " ]
+                     }, {
+                        "r" : "489",
+                        "s" : [ {
+                           "value" : [ "not " ]
+                        }, {
+                           "r" : "558",
+                           "s" : [ {
+                              "value" : [ "(" ]
+                           }, {
+                              "r" : "558",
+                              "s" : [ {
+                                 "value" : [ "\"Has Opioid Dispense with Ambulatory Abuse Potential In Past 90 Days\"" ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "457",
+               "locator" : "105:5-107:83",
+               "type" : "And",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "458",
+                  "locator" : "105:5-105:73",
+                  "type" : "Not",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "488",
+                     "locator" : "105:9-105:73",
+                     "name" : "Has Opioid RX with Ambulatory Abuse Potential In Past 90 Days",
+                     "type" : "ExpressionRef"
+                  }
+               }, {
+                  "localId" : "489",
+                  "locator" : "107:9-107:83",
+                  "type" : "Not",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "558",
+                     "locator" : "107:13-107:83",
+                     "name" : "Has Opioid Dispense with Ambulatory Abuse Potential In Past 90 Days",
+                     "type" : "ExpressionRef"
+                  }
+               } ]
+            }
+         }, {
+            "localId" : "559",
+            "locator" : "238:1-240:72",
+            "name" : "Is Subacute or Chronic Pain Prescription?",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "559",
+                  "s" : [ {
+                     "value" : [ "// End of Active Cancer Treatment Routine\n\n/*\n**  Routine #4\n**  For Subacute or Chronic Pain Routine\n**\n**  Definition                  | Answer to Proceed   | Details                                        | Data (Terminology) Requirement\n**  -----------------------------------------------------------------------------------------------------------------------------------\n**  Order for opioid analgesic  | Yes                 | Order for opioid analgesics with ambulatory    | Opioid analgesics with\n**  with expected supply        |                     | misuse potential with a supply duration of >=  | ambulatory misuse potential\n**  duration >= 28 days         |                     | 28 days                                        |\n**                              |                     |                                                |\n**                              |                     | - Subacute definition = order for opioid       |\n**                              |                     |   analgesics with ambulatory misuse            |\n**                              |                     |   potential with a supply duration of one to   |\n**                              |                     |   two months.                                  |\n**                              |                     | - Chronic pain definition = order for opioid   |\n**                              |                     |   analgesics with ambulatory misuse            |\n**                              |                     |   potential with a supply duration of >= two   |\n**                              |                     |   months.                                      |\n**  -----------------------------------------------------------------------------------------------------------------------------------\n**\n*/\n\n","define function \"Is Subacute or Chronic Pain Prescription?\"(prescription FHIR.MedicationRequest):\n  " ]
+                  }, {
+                     "r" : "564",
+                     "s" : [ {
+                        "r" : "564",
+                        "s" : [ {
+                           "r" : "569",
+                           "s" : [ {
+                              "value" : [ "\"Is Subacute or Chronic Pain Using Expected Supply Duration\"","(" ]
+                           }, {
+                              "r" : "565",
+                              "s" : [ {
+                                 "value" : [ "prescription" ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    or " ]
+                        }, {
+                           "r" : "596",
+                           "s" : [ {
+                              "value" : [ "\"Is Subacute or Chronic Pain Using Validity Period\"","(" ]
+                           }, {
+                              "r" : "592",
+                              "s" : [ {
+                                 "value" : [ "prescription" ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "564",
+               "locator" : "239:3-240:72",
+               "type" : "Or",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "569",
+                  "locator" : "239:3-239:76",
+                  "name" : "Is Subacute or Chronic Pain Using Expected Supply Duration",
+                  "type" : "FunctionRef",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "565",
+                     "locator" : "239:64-239:75",
+                     "name" : "prescription",
+                     "type" : "OperandRef"
+                  } ]
+               }, {
+                  "localId" : "596",
+                  "locator" : "240:8-240:72",
+                  "name" : "Is Subacute or Chronic Pain Using Validity Period",
+                  "type" : "FunctionRef",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "592",
+                     "locator" : "240:60-240:71",
+                     "name" : "prescription",
+                     "type" : "OperandRef"
+                  } ]
+               } ]
+            },
+            "operand" : [ {
+               "localId" : "561",
+               "name" : "prescription",
+               "operandTypeSpecifier" : {
+                  "localId" : "560",
+                  "locator" : "238:74-238:95",
+                  "name" : "{http://hl7.org/fhir}MedicationRequest",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         }, {
+            "localId" : "566",
+            "locator" : "242:1-249:3",
+            "name" : "Is Subacute or Chronic Pain Using Expected Supply Duration",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "566",
+                  "s" : [ {
+                     "value" : [ "","define function \"Is Subacute or Chronic Pain Using Expected Supply Duration\"(prescription FHIR.MedicationRequest):\n  " ]
+                  }, {
+                     "r" : "631",
+                     "s" : [ {
+                        "r" : "631",
+                        "s" : [ {
+                           "value" : [ "(\n    " ]
+                        }, {
+                           "r" : "631",
+                           "s" : [ {
+                              "r" : "632",
+                              "s" : [ {
+                                 "r" : "636",
+                                 "s" : [ {
+                                    "r" : "634",
+                                    "s" : [ {
+                                       "r" : "633",
+                                       "s" : [ {
+                                          "value" : [ "prescription" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "634",
+                                       "s" : [ {
+                                          "value" : [ "dispenseRequest" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " is not null" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "\n      and " ]
+                              }, {
+                                 "r" : "641",
+                                 "s" : [ {
+                                    "r" : "639",
+                                    "s" : [ {
+                                       "r" : "638",
+                                       "s" : [ {
+                                          "r" : "637",
+                                          "s" : [ {
+                                             "value" : [ "prescription" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "638",
+                                          "s" : [ {
+                                             "value" : [ "dispenseRequest" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "639",
+                                       "s" : [ {
+                                          "value" : [ "expectedSupplyDuration" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " is not null" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n      and " ]
+                           }, {
+                              "r" : "642",
+                              "s" : [ {
+                                 "value" : [ "(\n        " ]
+                              }, {
+                                 "r" : "642",
+                                 "s" : [ {
+                                    "r" : "647",
+                                    "s" : [ {
+                                       "r" : "643",
+                                       "s" : [ {
+                                          "value" : [ "Common" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "647",
+                                       "s" : [ {
+                                          "value" : [ "GetDurationInDays","(" ]
+                                       }, {
+                                          "r" : "646",
+                                          "s" : [ {
+                                             "r" : "645",
+                                             "s" : [ {
+                                                "r" : "644",
+                                                "s" : [ {
+                                                   "value" : [ "prescription" ]
+                                                } ]
+                                             }, {
+                                                "value" : [ "." ]
+                                             }, {
+                                                "r" : "645",
+                                                "s" : [ {
+                                                   "value" : [ "dispenseRequest" ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "646",
+                                             "s" : [ {
+                                                "value" : [ "expectedSupplyDuration" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ ")" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " ",">="," " ]
+                                 }, {
+                                    "r" : "648",
+                                    "s" : [ {
+                                       "value" : [ "28 ","days" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " \n      )" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n  )" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "631",
+               "locator" : "243:3-249:3",
+               "type" : "And",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "632",
+                  "locator" : "244:5-245:73",
+                  "type" : "And",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "636",
+                     "locator" : "244:5-244:44",
+                     "type" : "Not",
+                     "signature" : [ ],
+                     "operand" : {
+                        "localId" : "635",
+                        "locator" : "244:5-244:44",
+                        "type" : "IsNull",
+                        "signature" : [ ],
+                        "operand" : {
+                           "localId" : "634",
+                           "locator" : "244:5-244:32",
+                           "path" : "dispenseRequest",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "633",
+                              "locator" : "244:5-244:16",
+                              "name" : "prescription",
+                              "type" : "OperandRef"
+                           }
+                        }
+                     }
+                  }, {
+                     "localId" : "641",
+                     "locator" : "245:11-245:73",
+                     "type" : "Not",
+                     "signature" : [ ],
+                     "operand" : {
+                        "localId" : "640",
+                        "locator" : "245:11-245:73",
+                        "type" : "IsNull",
+                        "signature" : [ ],
+                        "operand" : {
+                           "localId" : "639",
+                           "locator" : "245:11-245:61",
+                           "path" : "expectedSupplyDuration",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "638",
+                              "locator" : "245:11-245:38",
+                              "path" : "dispenseRequest",
+                              "type" : "Property",
+                              "source" : {
+                                 "localId" : "637",
+                                 "locator" : "245:11-245:22",
+                                 "name" : "prescription",
+                                 "type" : "OperandRef"
+                              }
+                           }
+                        }
+                     }
+                  } ]
+               }, {
+                  "localId" : "642",
+                  "locator" : "246:11-248:7",
+                  "type" : "GreaterOrEqual",
+                  "signature" : [ {
+                     "localId" : "649",
+                     "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "650",
+                     "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "647",
+                     "locator" : "247:9-247:85",
+                     "name" : "GetDurationInDays",
+                     "libraryName" : "Common",
+                     "type" : "FunctionRef",
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "localId" : "646",
+                        "locator" : "247:34-247:84",
+                        "path" : "expectedSupplyDuration",
+                        "type" : "Property",
+                        "source" : {
+                           "localId" : "645",
+                           "locator" : "247:34-247:61",
+                           "path" : "dispenseRequest",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "644",
+                              "locator" : "247:34-247:45",
+                              "name" : "prescription",
+                              "type" : "OperandRef"
+                           }
+                        }
+                     } ]
+                  }, {
+                     "localId" : "648",
+                     "locator" : "247:90-247:96",
+                     "value" : 28,
+                     "unit" : "days",
+                     "type" : "Quantity"
+                  } ]
+               } ]
+            },
+            "operand" : [ {
+               "localId" : "568",
+               "name" : "prescription",
+               "operandTypeSpecifier" : {
+                  "localId" : "567",
+                  "locator" : "242:91-242:112",
+                  "name" : "{http://hl7.org/fhir}MedicationRequest",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         }, {
+            "localId" : "593",
+            "locator" : "251:1-258:3",
+            "name" : "Is Subacute or Chronic Pain Using Validity Period",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "593",
+                  "s" : [ {
+                     "value" : [ "","define function \"Is Subacute or Chronic Pain Using Validity Period\"(prescription FHIR.MedicationRequest):\n  " ]
+                  }, {
+                     "r" : "653",
+                     "s" : [ {
+                        "r" : "653",
+                        "s" : [ {
+                           "value" : [ "(\n    " ]
+                        }, {
+                           "r" : "653",
+                           "s" : [ {
+                              "r" : "654",
+                              "s" : [ {
+                                 "r" : "658",
+                                 "s" : [ {
+                                    "r" : "656",
+                                    "s" : [ {
+                                       "r" : "655",
+                                       "s" : [ {
+                                          "value" : [ "prescription" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "656",
+                                       "s" : [ {
+                                          "value" : [ "dispenseRequest" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " is not null" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "\n      and " ]
+                              }, {
+                                 "r" : "663",
+                                 "s" : [ {
+                                    "r" : "661",
+                                    "s" : [ {
+                                       "r" : "660",
+                                       "s" : [ {
+                                          "r" : "659",
+                                          "s" : [ {
+                                             "value" : [ "prescription" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "660",
+                                          "s" : [ {
+                                             "value" : [ "dispenseRequest" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "661",
+                                       "s" : [ {
+                                          "value" : [ "validityPeriod" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " is not null" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n      and " ]
+                           }, {
+                              "r" : "664",
+                              "s" : [ {
+                                 "value" : [ "(\n        " ]
+                              }, {
+                                 "r" : "664",
+                                 "s" : [ {
+                                    "r" : "665",
+                                    "s" : [ {
+                                       "value" : [ "days between " ]
+                                    }, {
+                                       "r" : "669",
+                                       "s" : [ {
+                                          "r" : "668",
+                                          "s" : [ {
+                                             "r" : "667",
+                                             "s" : [ {
+                                                "r" : "666",
+                                                "s" : [ {
+                                                   "value" : [ "prescription" ]
+                                                } ]
+                                             }, {
+                                                "value" : [ "." ]
+                                             }, {
+                                                "r" : "667",
+                                                "s" : [ {
+                                                   "value" : [ "dispenseRequest" ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "668",
+                                             "s" : [ {
+                                                "value" : [ "validityPeriod" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "669",
+                                          "s" : [ {
+                                             "value" : [ "start" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " and " ]
+                                    }, {
+                                       "r" : "673",
+                                       "s" : [ {
+                                          "r" : "672",
+                                          "s" : [ {
+                                             "r" : "671",
+                                             "s" : [ {
+                                                "r" : "670",
+                                                "s" : [ {
+                                                   "value" : [ "prescription" ]
+                                                } ]
+                                             }, {
+                                                "value" : [ "." ]
+                                             }, {
+                                                "r" : "671",
+                                                "s" : [ {
+                                                   "value" : [ "dispenseRequest" ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "672",
+                                             "s" : [ {
+                                                "value" : [ "validityPeriod" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "673",
+                                          "s" : [ {
+                                             "value" : [ "end" ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "r" : "680",
+                                    "value" : [ " ",">="," ","28" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " \n      )" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n  )" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "653",
+               "locator" : "252:3-258:3",
+               "type" : "And",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "654",
+                  "locator" : "253:5-254:65",
+                  "type" : "And",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "658",
+                     "locator" : "253:5-253:44",
+                     "type" : "Not",
+                     "signature" : [ ],
+                     "operand" : {
+                        "localId" : "657",
+                        "locator" : "253:5-253:44",
+                        "type" : "IsNull",
+                        "signature" : [ ],
+                        "operand" : {
+                           "localId" : "656",
+                           "locator" : "253:5-253:32",
+                           "path" : "dispenseRequest",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "655",
+                              "locator" : "253:5-253:16",
+                              "name" : "prescription",
+                              "type" : "OperandRef"
+                           }
+                        }
+                     }
+                  }, {
+                     "localId" : "663",
+                     "locator" : "254:11-254:65",
+                     "type" : "Not",
+                     "signature" : [ ],
+                     "operand" : {
+                        "localId" : "662",
+                        "locator" : "254:11-254:65",
+                        "type" : "IsNull",
+                        "signature" : [ ],
+                        "operand" : {
+                           "localId" : "661",
+                           "locator" : "254:11-254:53",
+                           "path" : "validityPeriod",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "660",
+                              "locator" : "254:11-254:38",
+                              "path" : "dispenseRequest",
+                              "type" : "Property",
+                              "source" : {
+                                 "localId" : "659",
+                                 "locator" : "254:11-254:22",
+                                 "name" : "prescription",
+                                 "type" : "OperandRef"
+                              }
+                           }
+                        }
+                     }
+                  } ]
+               }, {
+                  "localId" : "664",
+                  "locator" : "255:11-257:7",
+                  "type" : "GreaterOrEqual",
+                  "signature" : [ {
+                     "localId" : "681",
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "682",
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "665",
+                     "locator" : "256:9-256:122",
+                     "precision" : "Day",
+                     "type" : "DurationBetween",
+                     "signature" : [ {
+                        "localId" : "678",
+                        "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "679",
+                        "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "674",
+                        "name" : "ToDateTime",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "signature" : [ {
+                           "localId" : "675",
+                           "name" : "{http://hl7.org/fhir}dateTime",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "669",
+                           "locator" : "256:22-256:70",
+                           "path" : "start",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "668",
+                              "locator" : "256:22-256:64",
+                              "path" : "validityPeriod",
+                              "type" : "Property",
+                              "source" : {
+                                 "localId" : "667",
+                                 "locator" : "256:22-256:49",
+                                 "path" : "dispenseRequest",
+                                 "type" : "Property",
+                                 "source" : {
+                                    "localId" : "666",
+                                    "locator" : "256:22-256:33",
+                                    "name" : "prescription",
+                                    "type" : "OperandRef"
+                                 }
+                              }
+                           }
+                        } ]
+                     }, {
+                        "localId" : "676",
+                        "name" : "ToDateTime",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "signature" : [ {
+                           "localId" : "677",
+                           "name" : "{http://hl7.org/fhir}dateTime",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "673",
+                           "locator" : "256:76-256:122",
+                           "path" : "end",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "672",
+                              "locator" : "256:76-256:118",
+                              "path" : "validityPeriod",
+                              "type" : "Property",
+                              "source" : {
+                                 "localId" : "671",
+                                 "locator" : "256:76-256:103",
+                                 "path" : "dispenseRequest",
+                                 "type" : "Property",
+                                 "source" : {
+                                    "localId" : "670",
+                                    "locator" : "256:76-256:87",
+                                    "name" : "prescription",
+                                    "type" : "OperandRef"
+                                 }
+                              }
+                           }
+                        } ]
+                     } ]
+                  }, {
+                     "localId" : "680",
+                     "locator" : "256:127-256:128",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "28",
+                     "type" : "Literal"
+                  } ]
+               } ]
+            },
+            "operand" : [ {
+               "localId" : "595",
+               "name" : "prescription",
+               "operandTypeSpecifier" : {
+                  "localId" : "594",
+                  "locator" : "251:82-251:103",
+                  "name" : "{http://hl7.org/fhir}MedicationRequest",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         }, {
+            "localId" : "683",
+            "locator" : "277:1-280:97",
+            "name" : "Is Acute Pain Prescription?",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "683",
+                  "s" : [ {
+                     "value" : [ "// End of For Subacute or Chronic Pain Routine\n\n/*\n**  Routine #5\n**  For Acute Pain Routine\n**\n**  Definition                  | Answer to Proceed   | Details                                        | Data (Terminology) Requirement\n**  -----------------------------------------------------------------------------------------------------------------------------------\n**  Order for opioid analgesics | Yes                 | Look for an existing prescription (order) for  | Opioid analgesics with\n**  with ambulatory misuse      |                     | opioid analgesics with ambulatory abuse        | ambulatory misuse potential\n**  potential of duration < 28  |                     | potential of duration < 28 days                |\n**  days                        |                     |                                                |\n**  -----------------------------------------------------------------------------------------------------------------------------------\n**\n*/\n\n// should allow DateTime precision, but not working in the Ruler specifically\n","define function \"Is Acute Pain Prescription?\"(prescription FHIR.MedicationRequest):\n  " ]
+                  }, {
+                     "r" : "688",
+                     "s" : [ {
+                        "r" : "688",
+                        "s" : [ {
+                           "r" : "689",
+                           "s" : [ {
+                              "r" : "693",
+                              "s" : [ {
+                                 "r" : "691",
+                                 "s" : [ {
+                                    "r" : "690",
+                                    "s" : [ {
+                                       "value" : [ "prescription" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "691",
+                                    "s" : [ {
+                                       "value" : [ "dispenseRequest" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " is not null" ]
+                              } ]
+                           }, {
+                              "value" : [ "\n    and " ]
+                           }, {
+                              "r" : "698",
+                              "s" : [ {
+                                 "r" : "696",
+                                 "s" : [ {
+                                    "r" : "695",
+                                    "s" : [ {
+                                       "r" : "694",
+                                       "s" : [ {
+                                          "value" : [ "prescription" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "695",
+                                       "s" : [ {
+                                          "value" : [ "dispenseRequest" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "696",
+                                    "s" : [ {
+                                       "value" : [ "expectedSupplyDuration" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " is not null" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    and " ]
+                        }, {
+                           "r" : "699",
+                           "s" : [ {
+                              "r" : "704",
+                              "s" : [ {
+                                 "r" : "700",
+                                 "s" : [ {
+                                    "value" : [ "Common" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "704",
+                                 "s" : [ {
+                                    "value" : [ "GetDurationInDays","( " ]
+                                 }, {
+                                    "r" : "703",
+                                    "s" : [ {
+                                       "r" : "702",
+                                       "s" : [ {
+                                          "r" : "701",
+                                          "s" : [ {
+                                             "value" : [ "prescription" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "702",
+                                          "s" : [ {
+                                             "value" : [ "dispenseRequest" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "703",
+                                       "s" : [ {
+                                          "value" : [ "expectedSupplyDuration" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " )" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","<"," " ]
+                           }, {
+                              "r" : "705",
+                              "s" : [ {
+                                 "value" : [ "28 ","days" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "688",
+               "locator" : "278:3-280:97",
+               "type" : "And",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "689",
+                  "locator" : "278:3-279:71",
+                  "type" : "And",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "693",
+                     "locator" : "278:3-278:42",
+                     "type" : "Not",
+                     "signature" : [ ],
+                     "operand" : {
+                        "localId" : "692",
+                        "locator" : "278:3-278:42",
+                        "type" : "IsNull",
+                        "signature" : [ ],
+                        "operand" : {
+                           "localId" : "691",
+                           "locator" : "278:3-278:30",
+                           "path" : "dispenseRequest",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "690",
+                              "locator" : "278:3-278:14",
+                              "name" : "prescription",
+                              "type" : "OperandRef"
+                           }
+                        }
+                     }
+                  }, {
+                     "localId" : "698",
+                     "locator" : "279:9-279:71",
+                     "type" : "Not",
+                     "signature" : [ ],
+                     "operand" : {
+                        "localId" : "697",
+                        "locator" : "279:9-279:71",
+                        "type" : "IsNull",
+                        "signature" : [ ],
+                        "operand" : {
+                           "localId" : "696",
+                           "locator" : "279:9-279:59",
+                           "path" : "expectedSupplyDuration",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "695",
+                              "locator" : "279:9-279:36",
+                              "path" : "dispenseRequest",
+                              "type" : "Property",
+                              "source" : {
+                                 "localId" : "694",
+                                 "locator" : "279:9-279:20",
+                                 "name" : "prescription",
+                                 "type" : "OperandRef"
+                              }
+                           }
+                        }
+                     }
+                  } ]
+               }, {
+                  "localId" : "699",
+                  "locator" : "280:9-280:97",
+                  "type" : "Less",
+                  "signature" : [ {
+                     "localId" : "706",
+                     "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "707",
+                     "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "704",
+                     "locator" : "280:9-280:87",
+                     "name" : "GetDurationInDays",
+                     "libraryName" : "Common",
+                     "type" : "FunctionRef",
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "localId" : "703",
+                        "locator" : "280:35-280:85",
+                        "path" : "expectedSupplyDuration",
+                        "type" : "Property",
+                        "source" : {
+                           "localId" : "702",
+                           "locator" : "280:35-280:62",
+                           "path" : "dispenseRequest",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "701",
+                              "locator" : "280:35-280:46",
+                              "name" : "prescription",
+                              "type" : "OperandRef"
+                           }
+                        }
+                     } ]
+                  }, {
+                     "localId" : "705",
+                     "locator" : "280:91-280:97",
+                     "value" : 28,
+                     "unit" : "days",
+                     "type" : "Quantity"
+                  } ]
+               } ]
+            },
+            "operand" : [ {
+               "localId" : "685",
+               "name" : "prescription",
+               "operandTypeSpecifier" : {
+                  "localId" : "684",
+                  "locator" : "277:60-277:81",
+                  "name" : "{http://hl7.org/fhir}MedicationRequest",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         }, {
+            "localId" : "708",
+            "locator" : "283:1-287:97",
+            "name" : "Acute Pain Prescription Greater Than 7 Days?",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "708",
+                  "s" : [ {
+                     "value" : [ "// should allow DateTime precision, but not working in the Ruler specifically\n","define function \"Acute Pain Prescription Greater Than 7 Days?\"(prescription FHIR.MedicationRequest):\n      " ]
+                  }, {
+                     "r" : "713",
+                     "s" : [ {
+                        "r" : "713",
+                        "s" : [ {
+                           "r" : "714",
+                           "s" : [ {
+                              "r" : "715",
+                              "s" : [ {
+                                 "r" : "719",
+                                 "s" : [ {
+                                    "r" : "717",
+                                    "s" : [ {
+                                       "r" : "716",
+                                       "s" : [ {
+                                          "value" : [ "prescription" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "717",
+                                       "s" : [ {
+                                          "value" : [ "dispenseRequest" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " is not null" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "\n    and " ]
+                              }, {
+                                 "r" : "724",
+                                 "s" : [ {
+                                    "r" : "722",
+                                    "s" : [ {
+                                       "r" : "721",
+                                       "s" : [ {
+                                          "r" : "720",
+                                          "s" : [ {
+                                             "value" : [ "prescription" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "721",
+                                          "s" : [ {
+                                             "value" : [ "dispenseRequest" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "722",
+                                       "s" : [ {
+                                          "value" : [ "expectedSupplyDuration" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " is not null" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n    and " ]
+                           }, {
+                              "r" : "725",
+                              "s" : [ {
+                                 "r" : "730",
+                                 "s" : [ {
+                                    "r" : "726",
+                                    "s" : [ {
+                                       "value" : [ "Common" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "730",
+                                    "s" : [ {
+                                       "value" : [ "GetDurationInDays","( " ]
+                                    }, {
+                                       "r" : "729",
+                                       "s" : [ {
+                                          "r" : "728",
+                                          "s" : [ {
+                                             "r" : "727",
+                                             "s" : [ {
+                                                "value" : [ "prescription" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "728",
+                                             "s" : [ {
+                                                "value" : [ "dispenseRequest" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "729",
+                                          "s" : [ {
+                                             "value" : [ "expectedSupplyDuration" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " )" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " ",">"," " ]
+                              }, {
+                                 "r" : "731",
+                                 "s" : [ {
+                                    "value" : [ "7 ","days" ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    and " ]
+                        }, {
+                           "r" : "734",
+                           "s" : [ {
+                              "r" : "739",
+                              "s" : [ {
+                                 "r" : "735",
+                                 "s" : [ {
+                                    "value" : [ "Common" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "739",
+                                 "s" : [ {
+                                    "value" : [ "GetDurationInDays","( " ]
+                                 }, {
+                                    "r" : "738",
+                                    "s" : [ {
+                                       "r" : "737",
+                                       "s" : [ {
+                                          "r" : "736",
+                                          "s" : [ {
+                                             "value" : [ "prescription" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "737",
+                                          "s" : [ {
+                                             "value" : [ "dispenseRequest" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "738",
+                                       "s" : [ {
+                                          "value" : [ "expectedSupplyDuration" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " )" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","<"," " ]
+                           }, {
+                              "r" : "740",
+                              "s" : [ {
+                                 "value" : [ "28 ","days" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "713",
+               "locator" : "284:7-287:97",
+               "type" : "And",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "714",
+                  "locator" : "284:7-286:96",
+                  "type" : "And",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "715",
+                     "locator" : "284:7-285:71",
+                     "type" : "And",
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "localId" : "719",
+                        "locator" : "284:7-284:46",
+                        "type" : "Not",
+                        "signature" : [ ],
+                        "operand" : {
+                           "localId" : "718",
+                           "locator" : "284:7-284:46",
+                           "type" : "IsNull",
+                           "signature" : [ ],
+                           "operand" : {
+                              "localId" : "717",
+                              "locator" : "284:7-284:34",
+                              "path" : "dispenseRequest",
+                              "type" : "Property",
+                              "source" : {
+                                 "localId" : "716",
+                                 "locator" : "284:7-284:18",
+                                 "name" : "prescription",
+                                 "type" : "OperandRef"
+                              }
+                           }
+                        }
+                     }, {
+                        "localId" : "724",
+                        "locator" : "285:9-285:71",
+                        "type" : "Not",
+                        "signature" : [ ],
+                        "operand" : {
+                           "localId" : "723",
+                           "locator" : "285:9-285:71",
+                           "type" : "IsNull",
+                           "signature" : [ ],
+                           "operand" : {
+                              "localId" : "722",
+                              "locator" : "285:9-285:59",
+                              "path" : "expectedSupplyDuration",
+                              "type" : "Property",
+                              "source" : {
+                                 "localId" : "721",
+                                 "locator" : "285:9-285:36",
+                                 "path" : "dispenseRequest",
+                                 "type" : "Property",
+                                 "source" : {
+                                    "localId" : "720",
+                                    "locator" : "285:9-285:20",
+                                    "name" : "prescription",
+                                    "type" : "OperandRef"
+                                 }
+                              }
+                           }
+                        }
+                     } ]
+                  }, {
+                     "localId" : "725",
+                     "locator" : "286:9-286:96",
+                     "type" : "Greater",
+                     "signature" : [ {
+                        "localId" : "732",
+                        "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "733",
+                        "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "730",
+                        "locator" : "286:9-286:87",
+                        "name" : "GetDurationInDays",
+                        "libraryName" : "Common",
+                        "type" : "FunctionRef",
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "localId" : "729",
+                           "locator" : "286:35-286:85",
+                           "path" : "expectedSupplyDuration",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "728",
+                              "locator" : "286:35-286:62",
+                              "path" : "dispenseRequest",
+                              "type" : "Property",
+                              "source" : {
+                                 "localId" : "727",
+                                 "locator" : "286:35-286:46",
+                                 "name" : "prescription",
+                                 "type" : "OperandRef"
+                              }
+                           }
+                        } ]
+                     }, {
+                        "localId" : "731",
+                        "locator" : "286:91-286:96",
+                        "value" : 7,
+                        "unit" : "days",
+                        "type" : "Quantity"
+                     } ]
+                  } ]
+               }, {
+                  "localId" : "734",
+                  "locator" : "287:9-287:97",
+                  "type" : "Less",
+                  "signature" : [ {
+                     "localId" : "741",
+                     "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "742",
+                     "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "739",
+                     "locator" : "287:9-287:87",
+                     "name" : "GetDurationInDays",
+                     "libraryName" : "Common",
+                     "type" : "FunctionRef",
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "localId" : "738",
+                        "locator" : "287:35-287:85",
+                        "path" : "expectedSupplyDuration",
+                        "type" : "Property",
+                        "source" : {
+                           "localId" : "737",
+                           "locator" : "287:35-287:62",
+                           "path" : "dispenseRequest",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "736",
+                              "locator" : "287:35-287:46",
+                              "name" : "prescription",
+                              "type" : "OperandRef"
+                           }
+                        }
+                     } ]
+                  }, {
+                     "localId" : "740",
+                     "locator" : "287:91-287:97",
+                     "value" : 28,
+                     "unit" : "days",
+                     "type" : "Quantity"
+                  } ]
+               } ]
+            },
+            "operand" : [ {
+               "localId" : "710",
+               "name" : "prescription",
+               "operandTypeSpecifier" : {
+                  "localId" : "709",
+                  "locator" : "283:77-283:98",
+                  "name" : "{http://hl7.org/fhir}MedicationRequest",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         } ]
+      }
+   }
+}

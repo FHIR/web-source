@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Naloxone medications - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/cqf.css" rel="stylesheet"/>
+
+    <link href="assets/css/opioid.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"23.79"}
+    h3,h4,h5,h6{--heading-prefix:"23.79"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <div id="hl7-nav">
+  <img height="100" src="assets/images/opioid-overdose-statistic.png"/>
+</div>
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://confluence.hl7.org/spaces/FCP/pages/227218992/FHIR+Community+Process+Home"><img height="100" alt="This is an approved FHIR Community Process Specification. Visit the FHIR Community Process Site for more information." src="assets/images/HL7-FHIR-Community-Process-Logo_Specification.png"/> </a>
+</div>
+<!-- TODO: Push this into a template so we don't have to state the above, it should be inherited, but the _append. trick only works for templates -->
+<script type="text/javascript" src="assets/js/cql.js"> </script>
+<script type="text/javascript" src="assets/js/prism.js"> </script>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">2022.1.0 - Release 2022.1
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="profiles.html">Profiles</a></li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li><a href="terminology.html">Terminology</a></li>
+  <li><a href="examples.html">Examples</a></li>
+  <li><a href="documentation.html">Documentation</a></li>
+  <li><a href="downloads.html">Downloads</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Naloxone medications</b></li>
+
+          <span style="float:right;">
+
+            <a href="ValueSet-methadone-urine-drug-screening-tests.ttl.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="ValueSet-naloxone-medications-testing.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide (v2022.1.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a data-no-external="true" href="http://fhir.org/guides/cdc/opioid-cds/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-naloxone-medications.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-naloxone-medications.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-naloxone-medications.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+  <h2 id="root">ValueSet: Naloxone medications
+
+  </h2>
+  <table class="colsi">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://fhir.org/guides/cdc/opioid-cds/ValueSet/naloxone-medications<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://fhir.org/guides/cdc/opioid-cds/ValueSet/naloxone-medications"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">2022.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://fhir.org/guides/cdc/opioid-cds/ValueSet/naloxone-medications|2022.1.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Active
+          
+            as of 2025-02-24
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">NALOXONE_MEDICATIONS</span></td>
+    </tr>
+
+
+
+
+    <tr>
+      <td colspan="5"><p><em>Copyright/Legal</em>: © CDC 2016+.</p>
+</td>
+    </tr>
+
+  </table>
+
+<p>
+<p>All naloxone medications</p>
+
+</p>
+
+<p>
+<p>Naloxone medications for opioid management</p>
+
+</p>
+
+
+  <p>
+    <b>References</b>
+  </p>
+  
+<p>This value set is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)</p>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <a name="definition"> </a>
+
+<!-- Content Logical Definition heading in the fragment -->
+  <h3>Logical Definition (CLD)</h3>
+<p>No formal definition provided for this value set</p>
+
+
+  <p>&#160;</p>
+  <a name="expansion"> </a>
+  <h3 id="expansion">Expansion</h3>
+
+  <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"/><a name="x-naloxone-medications"> </a><a name="x-hcnaloxone-medications"> </a><p>This value set contains 50 concepts</p><table class="codes" data-fhir="generated"><tr><td><b>System</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1010603"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1010603</td><td>buprenorphine 2 MG / naloxone 0.5 MG Sublingual Film [Suboxone]</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1010603&quot;, &quot;display&quot;: &quot;buprenorphine 2 MG / naloxone 0.5 MG Sublingual Film [Suboxone]&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1010603&quot;&gt;&lt;display value=&quot;buprenorphine 2 MG / naloxone 0.5 MG Sublingual Film [Suboxone]&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1010606"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1010606</td><td>buprenorphine 8 MG / naloxone 2 MG Sublingual Film [Suboxone]</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1010606&quot;, &quot;display&quot;: &quot;buprenorphine 8 MG / naloxone 2 MG Sublingual Film [Suboxone]&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1010606&quot;&gt;&lt;display value=&quot;buprenorphine 8 MG / naloxone 2 MG Sublingual Film [Suboxone]&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1307058"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1307058</td><td>buprenorphine 4 MG / naloxone 1 MG Sublingual Film [Suboxone]</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1307058&quot;, &quot;display&quot;: &quot;buprenorphine 4 MG / naloxone 1 MG Sublingual Film [Suboxone]&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1307058&quot;&gt;&lt;display value=&quot;buprenorphine 4 MG / naloxone 1 MG Sublingual Film [Suboxone]&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1307063"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1307063</td><td>buprenorphine 12 MG / naloxone 3 MG Sublingual Film [Suboxone]</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1307063&quot;, &quot;display&quot;: &quot;buprenorphine 12 MG / naloxone 3 MG Sublingual Film [Suboxone]&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1307063&quot;&gt;&lt;display value=&quot;buprenorphine 12 MG / naloxone 3 MG Sublingual Film [Suboxone]&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1431083"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1431083</td><td>buprenorphine 1.4 MG / naloxone 0.36 MG Sublingual Tablet [Zubsolv]</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1431083&quot;, &quot;display&quot;: &quot;buprenorphine 1.4 MG / naloxone 0.36 MG Sublingual Tablet [Zubsolv]&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1431083&quot;&gt;&lt;display value=&quot;buprenorphine 1.4 MG / naloxone 0.36 MG Sublingual Tablet [Zubsolv]&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1431104"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1431104</td><td>buprenorphine 5.7 MG / naloxone 1.4 MG Sublingual Tablet [Zubsolv]</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1431104&quot;, &quot;display&quot;: &quot;buprenorphine 5.7 MG / naloxone 1.4 MG Sublingual Tablet [Zubsolv]&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1431104&quot;&gt;&lt;display value=&quot;buprenorphine 5.7 MG / naloxone 1.4 MG Sublingual Tablet [Zubsolv]&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1542396"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1542396</td><td>buprenorphine 2.1 MG / naloxone 0.3 MG Buccal Film [Bunavail]</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1542396&quot;, &quot;display&quot;: &quot;buprenorphine 2.1 MG / naloxone 0.3 MG Buccal Film [Bunavail]&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1542396&quot;&gt;&lt;display value=&quot;buprenorphine 2.1 MG / naloxone 0.3 MG Buccal Film [Bunavail]&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1544853"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1544853</td><td>buprenorphine 4.2 MG / naloxone 0.7 MG Buccal Film [Bunavail]</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1544853&quot;, &quot;display&quot;: &quot;buprenorphine 4.2 MG / naloxone 0.7 MG Buccal Film [Bunavail]&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1544853&quot;&gt;&lt;display value=&quot;buprenorphine 4.2 MG / naloxone 0.7 MG Buccal Film [Bunavail]&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1544856"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1544856</td><td>buprenorphine 6.3 MG / naloxone 1 MG Buccal Film [Bunavail]</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1544856&quot;, &quot;display&quot;: &quot;buprenorphine 6.3 MG / naloxone 1 MG Buccal Film [Bunavail]&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1544856&quot;&gt;&lt;display value=&quot;buprenorphine 6.3 MG / naloxone 1 MG Buccal Film [Bunavail]&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1597570"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1597570</td><td>buprenorphine 11.4 MG / naloxone 2.9 MG Sublingual Tablet [Zubsolv]</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1597570&quot;, &quot;display&quot;: &quot;buprenorphine 11.4 MG / naloxone 2.9 MG Sublingual Tablet [Zubsolv]&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1597570&quot;&gt;&lt;display value=&quot;buprenorphine 11.4 MG / naloxone 2.9 MG Sublingual Tablet [Zubsolv]&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1597575"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1597575</td><td>buprenorphine 8.6 MG / naloxone 2.1 MG Sublingual Tablet [Zubsolv]</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1597575&quot;, &quot;display&quot;: &quot;buprenorphine 8.6 MG / naloxone 2.1 MG Sublingual Tablet [Zubsolv]&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1597575&quot;&gt;&lt;display value=&quot;buprenorphine 8.6 MG / naloxone 2.1 MG Sublingual Tablet [Zubsolv]&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1666385"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1666385</td><td>buprenorphine 2.9 MG / naloxone 0.71 MG Sublingual Tablet [Zubsolv]</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1666385&quot;, &quot;display&quot;: &quot;buprenorphine 2.9 MG / naloxone 0.71 MG Sublingual Tablet [Zubsolv]&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1666385&quot;&gt;&lt;display value=&quot;buprenorphine 2.9 MG / naloxone 0.71 MG Sublingual Tablet [Zubsolv]&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1725064"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1725064</td><td>naloxone hydrochloride 40 MG/ML Nasal Spray [Narcan]</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1725064&quot;, &quot;display&quot;: &quot;naloxone hydrochloride 40 MG/ML Nasal Spray [Narcan]&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1725064&quot;&gt;&lt;display value=&quot;naloxone hydrochloride 40 MG/ML Nasal Spray [Narcan]&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1864414"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1864414</td><td>buprenorphine 0.7 MG / naloxone 0.18 MG Sublingual Tablet [Zubsolv]</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1864414&quot;, &quot;display&quot;: &quot;buprenorphine 0.7 MG / naloxone 0.18 MG Sublingual Tablet [Zubsolv]&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1864414&quot;&gt;&lt;display value=&quot;buprenorphine 0.7 MG / naloxone 0.18 MG Sublingual Tablet [Zubsolv]&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1870935"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1870935</td><td>naloxone hydrochloride 20 MG/ML Nasal Spray [Narcan]</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1870935&quot;, &quot;display&quot;: &quot;naloxone hydrochloride 20 MG/ML Nasal Spray [Narcan]&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1870935&quot;&gt;&lt;display value=&quot;naloxone hydrochloride 20 MG/ML Nasal Spray [Narcan]&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2540709"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  2540709</td><td>naloxone hydrochloride 80 MG/ML Nasal Spray [Kloxxado]</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;2540709&quot;, &quot;display&quot;: &quot;naloxone hydrochloride 80 MG/ML Nasal Spray [Kloxxado]&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;2540709&quot;&gt;&lt;display value=&quot;naloxone hydrochloride 80 MG/ML Nasal Spray [Kloxxado]&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2589618"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  2589618</td><td>0.5 ML naloxone hydrochloride 10 MG/ML Prefilled Syringe [Zimhi]</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;2589618&quot;, &quot;display&quot;: &quot;0.5 ML naloxone hydrochloride 10 MG/ML Prefilled Syringe [Zimhi]&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;2589618&quot;&gt;&lt;display value=&quot;0.5 ML naloxone hydrochloride 10 MG/ML Prefilled Syringe [Zimhi]&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2680741"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  2680741</td><td>naloxone hydrochloride 16 MG/ML Nasal Spray [Rextovy]</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;2680741&quot;, &quot;display&quot;: &quot;naloxone hydrochloride 16 MG/ML Nasal Spray [Rextovy]&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;2680741&quot;&gt;&lt;display value=&quot;naloxone hydrochloride 16 MG/ML Nasal Spray [Rextovy]&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1010600"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1010600</td><td>buprenorphine 2 MG / naloxone 0.5 MG Sublingual Film</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1010600&quot;, &quot;display&quot;: &quot;buprenorphine 2 MG / naloxone 0.5 MG Sublingual Film&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1010600&quot;&gt;&lt;display value=&quot;buprenorphine 2 MG / naloxone 0.5 MG Sublingual Film&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1010604"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1010604</td><td>buprenorphine 8 MG / naloxone 2 MG Sublingual Film</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1010604&quot;, &quot;display&quot;: &quot;buprenorphine 8 MG / naloxone 2 MG Sublingual Film&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1010604&quot;&gt;&lt;display value=&quot;buprenorphine 8 MG / naloxone 2 MG Sublingual Film&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1191212"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1191212</td><td>naloxone hydrochloride 0.02 MG/ML Injectable Solution</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1191212&quot;, &quot;display&quot;: &quot;naloxone hydrochloride 0.02 MG/ML Injectable Solution&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1191212&quot;&gt;&lt;display value=&quot;naloxone hydrochloride 0.02 MG/ML Injectable Solution&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1191222"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1191222</td><td>naloxone hydrochloride 0.4 MG/ML Injectable Solution</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1191222&quot;, &quot;display&quot;: &quot;naloxone hydrochloride 0.4 MG/ML Injectable Solution&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1191222&quot;&gt;&lt;display value=&quot;naloxone hydrochloride 0.4 MG/ML Injectable Solution&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1191228"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1191228</td><td>naloxone hydrochloride 1 MG/ML Injectable Solution</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1191228&quot;, &quot;display&quot;: &quot;naloxone hydrochloride 1 MG/ML Injectable Solution&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1191228&quot;&gt;&lt;display value=&quot;naloxone hydrochloride 1 MG/ML Injectable Solution&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1191234"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1191234</td><td>1 ML naloxone hydrochloride 0.4 MG/ML Cartridge</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1191234&quot;, &quot;display&quot;: &quot;1 ML naloxone hydrochloride 0.4 MG/ML Cartridge&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1191234&quot;&gt;&lt;display value=&quot;1 ML naloxone hydrochloride 0.4 MG/ML Cartridge&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1191250"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1191250</td><td>2 ML naloxone hydrochloride 1 MG/ML Prefilled Syringe</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1191250&quot;, &quot;display&quot;: &quot;2 ML naloxone hydrochloride 1 MG/ML Prefilled Syringe&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1191250&quot;&gt;&lt;display value=&quot;2 ML naloxone hydrochloride 1 MG/ML Prefilled Syringe&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1307056"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1307056</td><td>buprenorphine 4 MG / naloxone 1 MG Sublingual Film</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1307056&quot;, &quot;display&quot;: &quot;buprenorphine 4 MG / naloxone 1 MG Sublingual Film&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1307056&quot;&gt;&lt;display value=&quot;buprenorphine 4 MG / naloxone 1 MG Sublingual Film&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1307061"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1307061</td><td>buprenorphine 12 MG / naloxone 3 MG Sublingual Film</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1307061&quot;, &quot;display&quot;: &quot;buprenorphine 12 MG / naloxone 3 MG Sublingual Film&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1307061&quot;&gt;&lt;display value=&quot;buprenorphine 12 MG / naloxone 3 MG Sublingual Film&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1431076"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1431076</td><td>buprenorphine 1.4 MG / naloxone 0.36 MG Sublingual Tablet</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1431076&quot;, &quot;display&quot;: &quot;buprenorphine 1.4 MG / naloxone 0.36 MG Sublingual Tablet&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1431076&quot;&gt;&lt;display value=&quot;buprenorphine 1.4 MG / naloxone 0.36 MG Sublingual Tablet&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1431102"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1431102</td><td>buprenorphine 5.7 MG / naloxone 1.4 MG Sublingual Tablet</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1431102&quot;, &quot;display&quot;: &quot;buprenorphine 5.7 MG / naloxone 1.4 MG Sublingual Tablet&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1431102&quot;&gt;&lt;display value=&quot;buprenorphine 5.7 MG / naloxone 1.4 MG Sublingual Tablet&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1542390"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1542390</td><td>buprenorphine 2.1 MG / naloxone 0.3 MG Buccal Film</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1542390&quot;, &quot;display&quot;: &quot;buprenorphine 2.1 MG / naloxone 0.3 MG Buccal Film&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1542390&quot;&gt;&lt;display value=&quot;buprenorphine 2.1 MG / naloxone 0.3 MG Buccal Film&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1544851"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1544851</td><td>buprenorphine 4.2 MG / naloxone 0.7 MG Buccal Film</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1544851&quot;, &quot;display&quot;: &quot;buprenorphine 4.2 MG / naloxone 0.7 MG Buccal Film&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1544851&quot;&gt;&lt;display value=&quot;buprenorphine 4.2 MG / naloxone 0.7 MG Buccal Film&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1544854"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1544854</td><td>buprenorphine 6.3 MG / naloxone 1 MG Buccal Film</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1544854&quot;, &quot;display&quot;: &quot;buprenorphine 6.3 MG / naloxone 1 MG Buccal Film&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1544854&quot;&gt;&lt;display value=&quot;buprenorphine 6.3 MG / naloxone 1 MG Buccal Film&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1597568"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1597568</td><td>buprenorphine 11.4 MG / naloxone 2.9 MG Sublingual Tablet</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1597568&quot;, &quot;display&quot;: &quot;buprenorphine 11.4 MG / naloxone 2.9 MG Sublingual Tablet&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1597568&quot;&gt;&lt;display value=&quot;buprenorphine 11.4 MG / naloxone 2.9 MG Sublingual Tablet&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1597573"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1597573</td><td>buprenorphine 8.6 MG / naloxone 2.1 MG Sublingual Tablet</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1597573&quot;, &quot;display&quot;: &quot;buprenorphine 8.6 MG / naloxone 2.1 MG Sublingual Tablet&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1597573&quot;&gt;&lt;display value=&quot;buprenorphine 8.6 MG / naloxone 2.1 MG Sublingual Tablet&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1659929"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1659929</td><td>1 ML naloxone hydrochloride 0.4 MG/ML Injection</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1659929&quot;, &quot;display&quot;: &quot;1 ML naloxone hydrochloride 0.4 MG/ML Injection&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1659929&quot;&gt;&lt;display value=&quot;1 ML naloxone hydrochloride 0.4 MG/ML Injection&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1666338"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1666338</td><td>buprenorphine 2.9 MG / naloxone 0.71 MG Sublingual Tablet</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1666338&quot;, &quot;display&quot;: &quot;buprenorphine 2.9 MG / naloxone 0.71 MG Sublingual Tablet&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1666338&quot;&gt;&lt;display value=&quot;buprenorphine 2.9 MG / naloxone 0.71 MG Sublingual Tablet&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1725059"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1725059</td><td>naloxone hydrochloride 40 MG/ML Nasal Spray</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1725059&quot;, &quot;display&quot;: &quot;naloxone hydrochloride 40 MG/ML Nasal Spray&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1725059&quot;&gt;&lt;display value=&quot;naloxone hydrochloride 40 MG/ML Nasal Spray&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1855730"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1855730</td><td>0.4 ML naloxone hydrochloride 5 MG/ML Auto-Injector</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1855730&quot;, &quot;display&quot;: &quot;0.4 ML naloxone hydrochloride 5 MG/ML Auto-Injector&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1855730&quot;&gt;&lt;display value=&quot;0.4 ML naloxone hydrochloride 5 MG/ML Auto-Injector&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1864412"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1864412</td><td>buprenorphine 0.7 MG / naloxone 0.18 MG Sublingual Tablet</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1864412&quot;, &quot;display&quot;: &quot;buprenorphine 0.7 MG / naloxone 0.18 MG Sublingual Tablet&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1864412&quot;&gt;&lt;display value=&quot;buprenorphine 0.7 MG / naloxone 0.18 MG Sublingual Tablet&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1870933"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  1870933</td><td>naloxone hydrochloride 20 MG/ML Nasal Spray</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;1870933&quot;, &quot;display&quot;: &quot;naloxone hydrochloride 20 MG/ML Nasal Spray&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;1870933&quot;&gt;&lt;display value=&quot;naloxone hydrochloride 20 MG/ML Nasal Spray&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2540703"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  2540703</td><td>naloxone hydrochloride 80 MG/ML Nasal Spray</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;2540703&quot;, &quot;display&quot;: &quot;naloxone hydrochloride 80 MG/ML Nasal Spray&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;2540703&quot;&gt;&lt;display value=&quot;naloxone hydrochloride 80 MG/ML Nasal Spray&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2589612"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  2589612</td><td>0.5 ML naloxone hydrochloride 10 MG/ML Prefilled Syringe</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;2589612&quot;, &quot;display&quot;: &quot;0.5 ML naloxone hydrochloride 10 MG/ML Prefilled Syringe&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;2589612&quot;&gt;&lt;display value=&quot;0.5 ML naloxone hydrochloride 10 MG/ML Prefilled Syringe&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2596175"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  2596175</td><td>0.4 ML naloxone hydrochloride 25 MG/ML Auto-Injector</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;2596175&quot;, &quot;display&quot;: &quot;0.4 ML naloxone hydrochloride 25 MG/ML Auto-Injector&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;2596175&quot;&gt;&lt;display value=&quot;0.4 ML naloxone hydrochloride 25 MG/ML Auto-Injector&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2637879"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  2637879</td><td>naloxone hydrochloride 16 MG/ML Nasal Spray</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;2637879&quot;, &quot;display&quot;: &quot;naloxone hydrochloride 16 MG/ML Nasal Spray&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;2637879&quot;&gt;&lt;display value=&quot;naloxone hydrochloride 16 MG/ML Nasal Spray&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2673091"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  2673091</td><td>naloxone hydrochloride 30 MG/ML Nasal Spray</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;2673091&quot;, &quot;display&quot;: &quot;naloxone hydrochloride 30 MG/ML Nasal Spray&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;2673091&quot;&gt;&lt;display value=&quot;naloxone hydrochloride 30 MG/ML Nasal Spray&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2679504"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  2679504</td><td>1 ML naloxone hydrochloride 0.4 MG/ML Prefilled Syringe</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;2679504&quot;, &quot;display&quot;: &quot;1 ML naloxone hydrochloride 0.4 MG/ML Prefilled Syringe&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;2679504&quot;&gt;&lt;display value=&quot;1 ML naloxone hydrochloride 0.4 MG/ML Prefilled Syringe&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2685612"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  2685612</td><td>naloxone hydrochloride 100 MG/ML Nasal Spray</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;2685612&quot;, &quot;display&quot;: &quot;naloxone hydrochloride 100 MG/ML Nasal Spray&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;2685612&quot;&gt;&lt;display value=&quot;naloxone hydrochloride 100 MG/ML Nasal Spray&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-312289"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  312289</td><td>naloxone 0.5 MG / pentazocine 50 MG Oral Tablet</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;312289&quot;, &quot;display&quot;: &quot;naloxone 0.5 MG / pentazocine 50 MG Oral Tablet&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;312289&quot;&gt;&lt;display value=&quot;naloxone 0.5 MG / pentazocine 50 MG Oral Tablet&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-351266"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  351266</td><td>buprenorphine 2 MG / naloxone 0.5 MG Sublingual Tablet</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;351266&quot;, &quot;display&quot;: &quot;buprenorphine 2 MG / naloxone 0.5 MG Sublingual Tablet&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;351266&quot;&gt;&lt;display value=&quot;buprenorphine 2 MG / naloxone 0.5 MG Sublingual Tablet&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-351267"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style="white-space:nowrap">  351267</td><td>buprenorphine 8 MG / naloxone 2 MG Sublingual Tablet</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;, &quot;code&quot;: &quot;351267&quot;, &quot;display&quot;: &quot;buprenorphine 8 MG / naloxone 2 MG Sublingual Tablet&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://www.nlm.nih.gov/research/umls/rxnorm&quot;&gt;&lt;code value=&quot;351267&quot;&gt;&lt;display value=&quot;buprenorphine 8 MG / naloxone 2 MG Sublingual Tablet&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr></table></div>
+
+  <hr/>
+  <p>
+    Explanation of the columns that may appear on this page:
+  </p>
+  <table class="grid">
+    <tr>
+      <td>Level</td>
+      <td>A few code lists that FHIR defines are hierarchical - each code is assigned a level.
+          In this scheme, some codes are under other codes, and imply that the code they are under also applies</td>
+    </tr>
+    <tr>
+      <td>System</td>
+      <td>The source of the definition of the code (when the value set draws in codes defined elsewhere)</td>
+    </tr>
+    <tr>
+      <td>Code</td>
+      <td>The code (used as the code in the resource instance)</td>
+    </tr>
+    <tr>
+      <td>Display</td>
+      <td>The display (used in the <i>display</i> element of a <a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a>). If there is no display, implementers should not simply display the code, but map the concept into their application</td>
+    </tr>
+    <tr>
+      <td>Definition</td>
+      <td>An explanation of the meaning of the concept</td>
+    </tr>
+    <tr>
+      <td>Comments</td>
+      <td>Additional notes about how to use the code</td>
+    </tr>
+  </table>
+
+  
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&#xA0;
+
+                <a href="ValueSet-methadone-urine-drug-screening-tests.ttl.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&#xA0;
+
+                <a href="ValueSet-naloxone-medications-testing.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.securityrisksolutions.com">CDC / Security Risk Solutions, Inc. (SRS)</a>.  Package fhir.cdc.opioid-cds-r4#2022.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 18, 2026 16:10+1100">2026-03-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/cqframework/opioid-cds-r4/issues/new">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/cqframework/opioid-cds-r4/issues">Issues</a>
+                
+| <a style="color: #81BEF7" target="_blank" href="http://fhir.org/guides/cdc/opioid-cds/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
+<!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

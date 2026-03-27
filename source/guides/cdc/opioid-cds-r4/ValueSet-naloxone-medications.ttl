@@ -1,0 +1,488 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/ValueSet/naloxone-medications> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "naloxone-medications"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet naloxone-medications</b></p><a name=\"naloxone-medications\"> </a><a name=\"hcnaloxone-medications\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-computablevalueset.html\">CPGComputableValueSet</a>, <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-executablevalueset.html\">CPGExecutableValueSet</a></p></div><p>This value set contains 50 concepts</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1010603\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1010603</td><td>buprenorphine 2 MG / naloxone 0.5 MG Sublingual Film [Suboxone]</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1010606\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1010606</td><td>buprenorphine 8 MG / naloxone 2 MG Sublingual Film [Suboxone]</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1307058\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1307058</td><td>buprenorphine 4 MG / naloxone 1 MG Sublingual Film [Suboxone]</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1307063\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1307063</td><td>buprenorphine 12 MG / naloxone 3 MG Sublingual Film [Suboxone]</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1431083\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1431083</td><td>buprenorphine 1.4 MG / naloxone 0.36 MG Sublingual Tablet [Zubsolv]</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1431104\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1431104</td><td>buprenorphine 5.7 MG / naloxone 1.4 MG Sublingual Tablet [Zubsolv]</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1542396\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1542396</td><td>buprenorphine 2.1 MG / naloxone 0.3 MG Buccal Film [Bunavail]</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1544853\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1544853</td><td>buprenorphine 4.2 MG / naloxone 0.7 MG Buccal Film [Bunavail]</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1544856\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1544856</td><td>buprenorphine 6.3 MG / naloxone 1 MG Buccal Film [Bunavail]</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1597570\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1597570</td><td>buprenorphine 11.4 MG / naloxone 2.9 MG Sublingual Tablet [Zubsolv]</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1597575\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1597575</td><td>buprenorphine 8.6 MG / naloxone 2.1 MG Sublingual Tablet [Zubsolv]</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1666385\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1666385</td><td>buprenorphine 2.9 MG / naloxone 0.71 MG Sublingual Tablet [Zubsolv]</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1725064\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1725064</td><td>naloxone hydrochloride 40 MG/ML Nasal Spray [Narcan]</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1864414\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1864414</td><td>buprenorphine 0.7 MG / naloxone 0.18 MG Sublingual Tablet [Zubsolv]</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1870935\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1870935</td><td>naloxone hydrochloride 20 MG/ML Nasal Spray [Narcan]</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2540709\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2540709</td><td>naloxone hydrochloride 80 MG/ML Nasal Spray [Kloxxado]</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2589618\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2589618</td><td>0.5 ML naloxone hydrochloride 10 MG/ML Prefilled Syringe [Zimhi]</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2680741\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2680741</td><td>naloxone hydrochloride 16 MG/ML Nasal Spray [Rextovy]</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1010600\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1010600</td><td>buprenorphine 2 MG / naloxone 0.5 MG Sublingual Film</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1010604\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1010604</td><td>buprenorphine 8 MG / naloxone 2 MG Sublingual Film</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1191212\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1191212</td><td>naloxone hydrochloride 0.02 MG/ML Injectable Solution</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1191222\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1191222</td><td>naloxone hydrochloride 0.4 MG/ML Injectable Solution</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1191228\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1191228</td><td>naloxone hydrochloride 1 MG/ML Injectable Solution</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1191234\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1191234</td><td>1 ML naloxone hydrochloride 0.4 MG/ML Cartridge</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1191250\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1191250</td><td>2 ML naloxone hydrochloride 1 MG/ML Prefilled Syringe</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1307056\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1307056</td><td>buprenorphine 4 MG / naloxone 1 MG Sublingual Film</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1307061\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1307061</td><td>buprenorphine 12 MG / naloxone 3 MG Sublingual Film</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1431076\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1431076</td><td>buprenorphine 1.4 MG / naloxone 0.36 MG Sublingual Tablet</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1431102\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1431102</td><td>buprenorphine 5.7 MG / naloxone 1.4 MG Sublingual Tablet</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1542390\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1542390</td><td>buprenorphine 2.1 MG / naloxone 0.3 MG Buccal Film</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1544851\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1544851</td><td>buprenorphine 4.2 MG / naloxone 0.7 MG Buccal Film</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1544854\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1544854</td><td>buprenorphine 6.3 MG / naloxone 1 MG Buccal Film</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1597568\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1597568</td><td>buprenorphine 11.4 MG / naloxone 2.9 MG Sublingual Tablet</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1597573\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1597573</td><td>buprenorphine 8.6 MG / naloxone 2.1 MG Sublingual Tablet</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1659929\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1659929</td><td>1 ML naloxone hydrochloride 0.4 MG/ML Injection</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1666338\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1666338</td><td>buprenorphine 2.9 MG / naloxone 0.71 MG Sublingual Tablet</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1725059\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1725059</td><td>naloxone hydrochloride 40 MG/ML Nasal Spray</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1855730\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1855730</td><td>0.4 ML naloxone hydrochloride 5 MG/ML Auto-Injector</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1864412\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1864412</td><td>buprenorphine 0.7 MG / naloxone 0.18 MG Sublingual Tablet</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1870933\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1870933</td><td>naloxone hydrochloride 20 MG/ML Nasal Spray</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2540703\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2540703</td><td>naloxone hydrochloride 80 MG/ML Nasal Spray</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2589612\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2589612</td><td>0.5 ML naloxone hydrochloride 10 MG/ML Prefilled Syringe</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2596175\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2596175</td><td>0.4 ML naloxone hydrochloride 25 MG/ML Auto-Injector</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2637879\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2637879</td><td>naloxone hydrochloride 16 MG/ML Nasal Spray</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2673091\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2673091</td><td>naloxone hydrochloride 30 MG/ML Nasal Spray</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2679504\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2679504</td><td>1 ML naloxone hydrochloride 0.4 MG/ML Prefilled Syringe</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2685612\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2685612</td><td>naloxone hydrochloride 100 MG/ML Nasal Spray</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-312289\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  312289</td><td>naloxone 0.5 MG / pentazocine 50 MG Oral Tablet</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-351266\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  351266</td><td>buprenorphine 2 MG / naloxone 0.5 MG Sublingual Tablet</td></tr><tr><td><a name=\"naloxone-medications-http://www.nlm.nih.gov/research/umls/rxnorm-351267\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  351267</td><td>buprenorphine 8 MG / naloxone 2 MG Sublingual Tablet</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "All naloxone medications"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "Medication"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "All naloxone medications"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "None"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-author"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/valueset-author>
+     ] ;
+     fhir:value [
+       a fhir:ContactDetail ;
+       fhir:name [ fhir:v "MD Partners, Inc." ] ;
+       fhir:telecom ( [
+         fhir:system [ fhir:v "email" ] ;
+         fhir:value [ fhir:v "info@mdpartners.com" ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "computable"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "executable"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-rules-text"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/valueset-rules-text>
+     ] ;
+     fhir:value [
+       a fhir:Markdown ;
+       fhir:v "https://mor.nlm.nih.gov/RxMix/ \r\nScript:\r\nStep 1 \r\nCreate Batch text input file (Naloxone.txt) with following RxNorm identifier for the ingredient (TTY=IN) as the only concept within the file: \r\n7242       \r\n\r\nStep 2\r\nSubmit batch job using the above Naloxone.txt as the input file to following workflow by uploading a workflow file (naloxone-wf.config) with the following text in the file:  <WFE><filteredOutputs>RXCUI|name|term_type</filteredOutputs><input>NOINPUT</input><FS><service>NOINPUT</service><function>getRelatedByType</function><level>0</level><paramSize>2</paramSize><param order ='0'>?</param><param order ='1'>BPCK,GPCK,SBD,SCD</param></FS></WFE>"
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/naloxone-medications"^^xsd:anyURI ;
+     fhir:l <http://fhir.org/guides/cdc/opioid-cds/ValueSet/naloxone-medications>
+  ] ; # 
+  fhir:version [ fhir:v "2022.1.0"] ; # 
+  fhir:name [ fhir:v "NALOXONE_MEDICATIONS"] ; # 
+  fhir:title [ fhir:v "Naloxone medications"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-02-24T13:06:52-07:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "CDC / Security Risk Solutions, Inc. (SRS)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.securityrisksolutions.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "All naloxone medications"] ; # 
+  fhir:purpose [ fhir:v "Naloxone medications for opioid management"] ; # 
+  fhir:copyright [ fhir:v "© CDC 2016+."] ; # 
+  fhir:expansion [
+     fhir:timestamp [ fhir:v "2025-02-24T13:06:52-07:00"^^xsd:dateTime ] ;
+     fhir:total [ fhir:v 50 ] ;
+     fhir:contains ( [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1010603" ] ;
+       fhir:display [ fhir:v "buprenorphine 2 MG / naloxone 0.5 MG Sublingual Film [Suboxone]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1010606" ] ;
+       fhir:display [ fhir:v "buprenorphine 8 MG / naloxone 2 MG Sublingual Film [Suboxone]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1307058" ] ;
+       fhir:display [ fhir:v "buprenorphine 4 MG / naloxone 1 MG Sublingual Film [Suboxone]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1307063" ] ;
+       fhir:display [ fhir:v "buprenorphine 12 MG / naloxone 3 MG Sublingual Film [Suboxone]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1431083" ] ;
+       fhir:display [ fhir:v "buprenorphine 1.4 MG / naloxone 0.36 MG Sublingual Tablet [Zubsolv]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1431104" ] ;
+       fhir:display [ fhir:v "buprenorphine 5.7 MG / naloxone 1.4 MG Sublingual Tablet [Zubsolv]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1542396" ] ;
+       fhir:display [ fhir:v "buprenorphine 2.1 MG / naloxone 0.3 MG Buccal Film [Bunavail]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1544853" ] ;
+       fhir:display [ fhir:v "buprenorphine 4.2 MG / naloxone 0.7 MG Buccal Film [Bunavail]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1544856" ] ;
+       fhir:display [ fhir:v "buprenorphine 6.3 MG / naloxone 1 MG Buccal Film [Bunavail]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1597570" ] ;
+       fhir:display [ fhir:v "buprenorphine 11.4 MG / naloxone 2.9 MG Sublingual Tablet [Zubsolv]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1597575" ] ;
+       fhir:display [ fhir:v "buprenorphine 8.6 MG / naloxone 2.1 MG Sublingual Tablet [Zubsolv]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1666385" ] ;
+       fhir:display [ fhir:v "buprenorphine 2.9 MG / naloxone 0.71 MG Sublingual Tablet [Zubsolv]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1725064" ] ;
+       fhir:display [ fhir:v "naloxone hydrochloride 40 MG/ML Nasal Spray [Narcan]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1864414" ] ;
+       fhir:display [ fhir:v "buprenorphine 0.7 MG / naloxone 0.18 MG Sublingual Tablet [Zubsolv]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1870935" ] ;
+       fhir:display [ fhir:v "naloxone hydrochloride 20 MG/ML Nasal Spray [Narcan]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2540709" ] ;
+       fhir:display [ fhir:v "naloxone hydrochloride 80 MG/ML Nasal Spray [Kloxxado]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2589618" ] ;
+       fhir:display [ fhir:v "0.5 ML naloxone hydrochloride 10 MG/ML Prefilled Syringe [Zimhi]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2680741" ] ;
+       fhir:display [ fhir:v "naloxone hydrochloride 16 MG/ML Nasal Spray [Rextovy]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1010600" ] ;
+       fhir:display [ fhir:v "buprenorphine 2 MG / naloxone 0.5 MG Sublingual Film" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1010604" ] ;
+       fhir:display [ fhir:v "buprenorphine 8 MG / naloxone 2 MG Sublingual Film" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1191212" ] ;
+       fhir:display [ fhir:v "naloxone hydrochloride 0.02 MG/ML Injectable Solution" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1191222" ] ;
+       fhir:display [ fhir:v "naloxone hydrochloride 0.4 MG/ML Injectable Solution" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1191228" ] ;
+       fhir:display [ fhir:v "naloxone hydrochloride 1 MG/ML Injectable Solution" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1191234" ] ;
+       fhir:display [ fhir:v "1 ML naloxone hydrochloride 0.4 MG/ML Cartridge" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1191250" ] ;
+       fhir:display [ fhir:v "2 ML naloxone hydrochloride 1 MG/ML Prefilled Syringe" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1307056" ] ;
+       fhir:display [ fhir:v "buprenorphine 4 MG / naloxone 1 MG Sublingual Film" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1307061" ] ;
+       fhir:display [ fhir:v "buprenorphine 12 MG / naloxone 3 MG Sublingual Film" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1431076" ] ;
+       fhir:display [ fhir:v "buprenorphine 1.4 MG / naloxone 0.36 MG Sublingual Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1431102" ] ;
+       fhir:display [ fhir:v "buprenorphine 5.7 MG / naloxone 1.4 MG Sublingual Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1542390" ] ;
+       fhir:display [ fhir:v "buprenorphine 2.1 MG / naloxone 0.3 MG Buccal Film" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1544851" ] ;
+       fhir:display [ fhir:v "buprenorphine 4.2 MG / naloxone 0.7 MG Buccal Film" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1544854" ] ;
+       fhir:display [ fhir:v "buprenorphine 6.3 MG / naloxone 1 MG Buccal Film" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1597568" ] ;
+       fhir:display [ fhir:v "buprenorphine 11.4 MG / naloxone 2.9 MG Sublingual Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1597573" ] ;
+       fhir:display [ fhir:v "buprenorphine 8.6 MG / naloxone 2.1 MG Sublingual Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1659929" ] ;
+       fhir:display [ fhir:v "1 ML naloxone hydrochloride 0.4 MG/ML Injection" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1666338" ] ;
+       fhir:display [ fhir:v "buprenorphine 2.9 MG / naloxone 0.71 MG Sublingual Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1725059" ] ;
+       fhir:display [ fhir:v "naloxone hydrochloride 40 MG/ML Nasal Spray" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1855730" ] ;
+       fhir:display [ fhir:v "0.4 ML naloxone hydrochloride 5 MG/ML Auto-Injector" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1864412" ] ;
+       fhir:display [ fhir:v "buprenorphine 0.7 MG / naloxone 0.18 MG Sublingual Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1870933" ] ;
+       fhir:display [ fhir:v "naloxone hydrochloride 20 MG/ML Nasal Spray" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2540703" ] ;
+       fhir:display [ fhir:v "naloxone hydrochloride 80 MG/ML Nasal Spray" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2589612" ] ;
+       fhir:display [ fhir:v "0.5 ML naloxone hydrochloride 10 MG/ML Prefilled Syringe" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2596175" ] ;
+       fhir:display [ fhir:v "0.4 ML naloxone hydrochloride 25 MG/ML Auto-Injector" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2637879" ] ;
+       fhir:display [ fhir:v "naloxone hydrochloride 16 MG/ML Nasal Spray" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2673091" ] ;
+       fhir:display [ fhir:v "naloxone hydrochloride 30 MG/ML Nasal Spray" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2679504" ] ;
+       fhir:display [ fhir:v "1 ML naloxone hydrochloride 0.4 MG/ML Prefilled Syringe" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2685612" ] ;
+       fhir:display [ fhir:v "naloxone hydrochloride 100 MG/ML Nasal Spray" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "312289" ] ;
+       fhir:display [ fhir:v "naloxone 0.5 MG / pentazocine 50 MG Oral Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "351266" ] ;
+       fhir:display [ fhir:v "buprenorphine 2 MG / naloxone 0.5 MG Sublingual Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "351267" ] ;
+       fhir:display [ fhir:v "buprenorphine 8 MG / naloxone 2 MG Sublingual Tablet" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

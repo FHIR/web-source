@@ -1,0 +1,2028 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1" localId="0">
+   <annotation translatorVersion="3.25.0" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="Overloads" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="681">
+         <a:s>library MMECalculator version '3.0.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="MMECalculator" system="http://fhir.org/guides/cdc/opioid-cds" version="3.0.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localId="1" localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="206" locator="9:1-9:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="206">
+               <a:s>/*
+This library contains logic to surface the MME calculation functionality provided
+by the OMTKLogic library by extracting appropriate information from FHIR R4
+MedicationRequest resource.
+*/
+
+using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="208" locator="11:1-11:35" localIdentifier="FHIRHelpers" path="http://fhir.org/guides/cdc/opioid-cds/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="208">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="210" locator="12:1-12:33" localIdentifier="OMTKLogic" path="http://fhir.org/guides/cdc/opioid-cds/OMTKLogic" version="3.0.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="210">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OMTKLogic</a:s>
+               </a:s>
+               <a:s> version '3.0.0'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <parameters>
+      <def localId="212" locator="14:1-14:45" name="ErrorLevel" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="212">
+               <a:s>parameter ErrorLevel </a:s>
+               <a:s r="215">
+                  <a:s>String</a:s>
+               </a:s>
+               <a:s> default </a:s>
+               <a:s r="213">
+                  <a:s>'Warning'</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <default localId="213" locator="14:37-14:45" valueType="t:String" value="Warning" xsi:type="Literal"/>
+         <parameterTypeSpecifier localId="215" locator="14:22-14:27" name="t:String" xsi:type="NamedTypeSpecifier"/>
+      </def>
+   </parameters>
+   <contexts>
+      <def localId="220" locator="16:1-16:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def localId="218" locator="16:1-16:15" name="Patient" context="Patient">
+         <expression localId="219" xsi:type="SingletonFrom">
+            <operand localId="217" locator="16:1-16:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="221" locator="23:1-24:7" name="ToFHIRRange" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="221">
+               <a:s>/*
+Helper function to force the choice of the FHIR.Range value.
+This avoids the need for the _is_ and _as_ operators on choices,
+which is not implemented in the JavaScript CQL engine.
+*/
+define function ToFHIRRange(range FHIR.Range):
+  </a:s>
+               <a:s r="226">
+                  <a:s r="226">
+                     <a:s>range</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="226" locator="24:3-24:7" name="range" xsi:type="OperandRef"/>
+         <operand localId="223" name="range">
+            <operandTypeSpecifier localId="222" locator="23:35-23:44" name="fhir:Range" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+      <def localId="227" locator="31:1-32:10" name="ToFHIRQuantity" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="227">
+               <a:s>/*
+Helper function to force the choice of the FHIR.SimpleQuantity value.
+This avoids the need for the _is_ and _as_ operators on choices,
+which is not implemented in the JavaScript CQL engine.
+*/
+define function ToFHIRQuantity(quantity FHIR.SimpleQuantity):
+  </a:s>
+               <a:s r="232">
+                  <a:s r="232">
+                     <a:s>quantity</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="232" locator="32:3-32:10" name="quantity" xsi:type="OperandRef"/>
+         <operand localId="229" name="quantity">
+            <operandTypeSpecifier localId="228" locator="31:41-31:59" name="fhir:SimpleQuantity" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+      <def localId="233" locator="39:1-40:17" name="ToFHIRCodeableConcept" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="233">
+               <a:s>/*
+Helper function to force the choice of the FHIR.CodeableConcept value.
+This avoids the need for the _is_ and _as_ operators on choices,
+which is not implemented in the JavaScript CQL engine.
+*/
+define function ToFHIRCodeableConcept(codeableConcept FHIR.CodeableConcept):
+  </a:s>
+               <a:s r="238">
+                  <a:s r="238">
+                     <a:s>codeableConcept</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="238" locator="40:3-40:17" name="codeableConcept" xsi:type="OperandRef"/>
+         <operand localId="235" name="codeableConcept">
+            <operandTypeSpecifier localId="234" locator="39:55-39:74" name="fhir:CodeableConcept" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+      <def localId="239" locator="49:1-62:3" name="ToQuantity" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="239">
+               <a:s>/*
+FHIRHelpers ToQuantity logic incorrectly uses the unit element of the FHIR Quantity,
+when it should be using the code element as the actual coded unit.
+https://github.com/cqframework/clinical_quality_language/issues/557
+
+Until the above issue is addressed, this function provides ToQuantity functionality for this library
+*/
+define function ToQuantity(quantity FHIR.SimpleQuantity):
+  </a:s>
+               <a:s r="244">
+                  <a:s r="244">
+                     <a:s>case
+    </a:s>
+                     <a:s r="245">
+                        <a:s>when </a:s>
+                        <a:s r="247">
+                           <a:s r="246">
+                              <a:s>quantity</a:s>
+                           </a:s>
+                           <a:s> is null</a:s>
+                        </a:s>
+                        <a:s r="248"> then null</a:s>
+                     </a:s>
+                     <a:s>
+    </a:s>
+                     <a:s r="249">
+                        <a:s>when </a:s>
+                        <a:s r="252">
+                           <a:s r="251">
+                              <a:s r="250">
+                                 <a:s>quantity</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="251">
+                                 <a:s>value</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> is null</a:s>
+                        </a:s>
+                        <a:s r="253"> then null</a:s>
+                     </a:s>
+                     <a:s>
+    </a:s>
+                     <a:s r="254">
+                        <a:s>when </a:s>
+                        <a:s r="255">
+                           <a:s r="258">
+                              <a:s r="257">
+                                 <a:s r="256">
+                                    <a:s>quantity</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="257">
+                                    <a:s>system</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> is null</a:s>
+                           </a:s>
+                           <a:s> or </a:s>
+                           <a:s r="259">
+                              <a:s r="261">
+                                 <a:s r="260">
+                                    <a:s>quantity</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="261">
+                                    <a:s>system</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> = </a:s>
+                              <a:s r="262">
+                                 <a:s>'http://unitsofmeasure.org'</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> then
+      </a:s>
+                        <a:s r="268">
+                           <a:s>System.Quantity {
+        </a:s>
+                           <a:s>
+                              <a:s>value: </a:s>
+                              <a:s r="272">
+                                 <a:s r="271">
+                                    <a:s r="270">
+                                       <a:s>quantity</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="271">
+                                       <a:s>value</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="272">
+                                    <a:s>value</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+        </a:s>
+                           <a:s>
+                              <a:s>unit: </a:s>
+                              <a:s r="275">
+                                 <a:s r="274">
+                                    <a:s r="273">
+                                       <a:s>quantity</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="274">
+                                       <a:s>code</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="275">
+                                    <a:s>value</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+      }</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+   </a:s>
+                     <a:s r="276">
+                        <a:s>when </a:s>
+                        <a:s r="277">
+                           <a:s r="280">
+                              <a:s r="279">
+                                 <a:s r="278">
+                                    <a:s>quantity</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="279">
+                                    <a:s>system</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="280">
+                                 <a:s>value</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> = </a:s>
+                           <a:s r="281">
+                              <a:s>'http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm'</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> then
+    </a:s>
+                        <a:s r="285">
+                           <a:s>System.Quantity { </a:s>
+                           <a:s>
+                              <a:s>value: </a:s>
+                              <a:s r="289">
+                                 <a:s r="288">
+                                    <a:s r="287">
+                                       <a:s>quantity</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="288">
+                                       <a:s>value</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="289">
+                                    <a:s>value</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>, </a:s>
+                           <a:s>
+                              <a:s>unit: </a:s>
+                              <a:s r="298">
+                                 <a:s>Coalesce(</a:s>
+                                 <a:s r="292">
+                                    <a:s r="291">
+                                       <a:s r="290">
+                                          <a:s>quantity</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="291">
+                                          <a:s>code</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="292">
+                                       <a:s>value</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>, </a:s>
+                                 <a:s r="295">
+                                    <a:s r="294">
+                                       <a:s r="293">
+                                          <a:s>quantity</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="294">
+                                          <a:s>unit</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="295">
+                                       <a:s>value</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>)</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>}</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+   else
+      </a:s>
+                     <a:s r="320">
+                        <a:s r="299">Message(null, true, </a:s>
+                        <a:s r="301">
+                           <a:s>'MMECalculator.ToQuantity.InvalidFHIRQuantity'</a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s r="303">
+                           <a:s>ErrorLevel</a:s>
+                        </a:s>
+                        <a:s>, </a:s>
+                        <a:s r="304">
+                           <a:s r="305">
+                              <a:s>'Invalid FHIR Quantity code: '</a:s>
+                           </a:s>
+                           <a:s> &amp; </a:s>
+                           <a:s r="309">
+                              <a:s r="308">
+                                 <a:s r="307">
+                                    <a:s>quantity</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="308">
+                                    <a:s>code</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="309">
+                                 <a:s>value</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                     <a:s>
+end</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="244" locator="50:3-62:3" xsi:type="Case">
+            <caseItem localId="245" locator="51:5-51:35">
+               <when localId="247" locator="51:10-51:25" xsi:type="IsNull">
+                  <operand localId="246" locator="51:10-51:17" name="quantity" xsi:type="OperandRef"/>
+               </when>
+               <then localId="321" asType="t:Quantity" xsi:type="As">
+                  <operand localId="248" locator="51:32-51:35" xsi:type="Null"/>
+               </then>
+            </caseItem>
+            <caseItem localId="249" locator="52:5-52:41">
+               <when localId="252" locator="52:10-52:31" xsi:type="IsNull">
+                  <operand localId="251" locator="52:10-52:23" path="value" xsi:type="Property">
+                     <source localId="250" locator="52:10-52:17" name="quantity" xsi:type="OperandRef"/>
+                  </operand>
+               </when>
+               <then localId="322" asType="t:Quantity" xsi:type="As">
+                  <operand localId="253" locator="52:38-52:41" xsi:type="Null"/>
+               </then>
+            </caseItem>
+            <caseItem localId="254" locator="53:5-57:7">
+               <when localId="255" locator="53:10-53:81" xsi:type="Or">
+                  <operand localId="258" locator="53:10-53:32" xsi:type="IsNull">
+                     <operand localId="257" locator="53:10-53:24" path="system" xsi:type="Property">
+                        <source localId="256" locator="53:10-53:17" name="quantity" xsi:type="OperandRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="259" locator="53:37-53:81" xsi:type="Equal">
+                     <signature localId="266" name="t:String" xsi:type="NamedTypeSpecifier"/>
+                     <signature localId="267" name="t:String" xsi:type="NamedTypeSpecifier"/>
+                     <operand localId="264" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                        <signature localId="265" name="fhir:uri" xsi:type="NamedTypeSpecifier"/>
+                        <operand localId="261" locator="53:37-53:51" path="system" xsi:type="Property">
+                           <source localId="260" locator="53:37-53:44" name="quantity" xsi:type="OperandRef"/>
+                        </operand>
+                     </operand>
+                     <operand localId="262" locator="53:55-53:81" valueType="t:String" value="http://unitsofmeasure.org" xsi:type="Literal"/>
+                  </operand>
+               </when>
+               <then localId="268" locator="54:7-57:7" classType="t:Quantity" xsi:type="Instance">
+                  <element name="value">
+                     <value localId="272" locator="55:16-55:35" path="value" xsi:type="Property">
+                        <source localId="271" locator="55:16-55:29" path="value" xsi:type="Property">
+                           <source localId="270" locator="55:16-55:23" name="quantity" xsi:type="OperandRef"/>
+                        </source>
+                     </value>
+                  </element>
+                  <element name="unit">
+                     <value localId="275" locator="56:15-56:33" path="value" xsi:type="Property">
+                        <source localId="274" locator="56:15-56:27" path="code" xsi:type="Property">
+                           <source localId="273" locator="56:15-56:22" name="quantity" xsi:type="OperandRef"/>
+                        </source>
+                     </value>
+                  </element>
+               </then>
+            </caseItem>
+            <caseItem localId="276" locator="58:4-59:108">
+               <when localId="277" locator="58:9-58:92" xsi:type="Equal">
+                  <signature localId="283" name="t:String" xsi:type="NamedTypeSpecifier"/>
+                  <signature localId="284" name="t:String" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="280" locator="58:9-58:29" path="value" xsi:type="Property">
+                     <source localId="279" locator="58:9-58:23" path="system" xsi:type="Property">
+                        <source localId="278" locator="58:9-58:16" name="quantity" xsi:type="OperandRef"/>
+                     </source>
+                  </operand>
+                  <operand localId="281" locator="58:33-58:92" valueType="t:String" value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm" xsi:type="Literal"/>
+               </when>
+               <then localId="285" locator="59:5-59:108" classType="t:Quantity" xsi:type="Instance">
+                  <element name="value">
+                     <value localId="289" locator="59:30-59:49" path="value" xsi:type="Property">
+                        <source localId="288" locator="59:30-59:43" path="value" xsi:type="Property">
+                           <source localId="287" locator="59:30-59:37" name="quantity" xsi:type="OperandRef"/>
+                        </source>
+                     </value>
+                  </element>
+                  <element name="unit">
+                     <value localId="298" locator="59:58-59:107" xsi:type="Coalesce">
+                        <operand localId="292" locator="59:67-59:85" path="value" xsi:type="Property">
+                           <source localId="291" locator="59:67-59:79" path="code" xsi:type="Property">
+                              <source localId="290" locator="59:67-59:74" name="quantity" xsi:type="OperandRef"/>
+                           </source>
+                        </operand>
+                        <operand localId="295" locator="59:88-59:106" path="value" xsi:type="Property">
+                           <source localId="294" locator="59:88-59:100" path="unit" xsi:type="Property">
+                              <source localId="293" locator="59:88-59:95" name="quantity" xsi:type="OperandRef"/>
+                           </source>
+                        </operand>
+                     </value>
+                  </element>
+               </then>
+            </caseItem>
+            <else localId="323" asType="t:Quantity" xsi:type="As">
+               <operand localId="320" locator="61:7-61:139" xsi:type="Message">
+                  <source localId="299" locator="61:15-61:18" xsi:type="Null"/>
+                  <condition localId="300" locator="61:21-61:24" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+                  <code localId="301" locator="61:27-61:72" valueType="t:String" value="MMECalculator.ToQuantity.InvalidFHIRQuantity" xsi:type="Literal"/>
+                  <severity localId="303" locator="61:75-61:84" name="ErrorLevel" xsi:type="ParameterRef"/>
+                  <message localId="304" locator="61:87-61:138" xsi:type="Concatenate">
+                     <operand localId="313" xsi:type="Coalesce">
+                        <operand localId="305" locator="61:87-61:116" valueType="t:String" value="Invalid FHIR Quantity code: " xsi:type="Literal"/>
+                        <operand localId="310" valueType="t:String" value="" xsi:type="Literal"/>
+                     </operand>
+                     <operand localId="317" xsi:type="Coalesce">
+                        <operand localId="309" locator="61:120-61:138" path="value" xsi:type="Property">
+                           <source localId="308" locator="61:120-61:132" path="code" xsi:type="Property">
+                              <source localId="307" locator="61:120-61:127" name="quantity" xsi:type="OperandRef"/>
+                           </source>
+                        </operand>
+                        <operand localId="314" valueType="t:String" value="" xsi:type="Literal"/>
+                     </operand>
+                  </message>
+               </operand>
+            </else>
+         </expression>
+         <operand localId="241" name="quantity">
+            <operandTypeSpecifier localId="240" locator="49:37-49:55" name="fhir:SimpleQuantity" xsi:type="NamedTypeSpecifier"/>
+         </operand>
+      </def>
+      <def localId="324" locator="79:1-125:5" name="Prescriptions" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="324">
+               <a:s>/*
+Extracts the relevant information for prescription calculation from a list of
+FHIR MedicationRequest resources. This assumes a MedicationRequest that conforms
+to the MMEMedicationRequest profile, specifically:
+* 1 and only 1 dosageInstruction
+* 1 and only 1 doseAndRate
+* 1 timing with 1 repeat
+* frequency, frequencyMax, defaulting to 1
+* period, periodUnit, defaulting to 1 'd'
+* doseQuantity or doseRange
+* timeOfDay
+
+Note that if timeOfDay is specified in addition to frequency and period, it is ignored (i.e. assumed to be consistent with the specified frequency and period).
+TimeOfDay is only used to determine timesPerDay if frequency and period are not specified.
+*/
+define function Prescriptions(Orders List&lt;MedicationRequest>):
+  </a:s>
+               <a:s r="621">
+                  <a:s r="621">
+                     <a:s>
+                        <a:s r="330">
+                           <a:s r="331">
+                              <a:s>
+                                 <a:s>Orders</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> O</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    </a:s>
+                     <a:s>
+                        <a:s>let
+      </a:s>
+                        <a:s r="333">
+                           <a:s>rxNormCode: </a:s>
+                           <a:s r="337">
+                              <a:s r="334">
+                                 <a:s>OMTKLogic</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="337">
+                                 <a:s>GetMedicationCode(</a:s>
+                                 <a:s r="336">
+                                    <a:s r="335">
+                                       <a:s>O</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="336">
+                                       <a:s>medication</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>)</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>,
+      </a:s>
+                        <a:s r="340">
+                           <a:s>medicationName: </a:s>
+                           <a:s r="343">
+                              <a:s r="341">
+                                 <a:s>OMTKLogic</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="343">
+                                 <a:s>GetMedicationName(</a:s>
+                                 <a:s r="342">
+                                    <a:s>rxNormCode</a:s>
+                                 </a:s>
+                                 <a:s>)</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>,
+      // NOTE: Assuming a single dosage instruction element
+      </a:s>
+                        <a:s r="344">
+                           <a:s>dosageInstruction: </a:s>
+                           <a:s r="345">
+                              <a:s>singleton from </a:s>
+                              <a:s r="347">
+                                 <a:s r="346">
+                                    <a:s>O</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="347">
+                                    <a:s>dosageInstruction</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>,
+      //  NOTE: Some systems return multiple doseAndRate entries, with system-specific codes for the types. In those cases,
+      //  this logic should select the most appropriate dose and rate, but standardization on doseAndRate type codes is
+      //  needed to make this logic shareable
+      </a:s>
+                        <a:s r="348">
+                           <a:s>doseAndRate: </a:s>
+                           <a:s r="349">
+                              <a:s>singleton from </a:s>
+                              <a:s r="368">
+                                 <a:s>(</a:s>
+                                 <a:s r="368">
+                                    <a:s>
+                                       <a:s r="350">
+                                          <a:s r="352">
+                                             <a:s>
+                                                <a:s>dosageInstruction.doseAndRate</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> DR</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> </a:s>
+                                    <a:s r="354">
+                                       <a:s>where </a:s>
+                                       <a:s r="354">
+                                          <a:s r="357">
+                                             <a:s r="356">
+                                                <a:s r="355">
+                                                   <a:s>DR</a:s>
+                                                </a:s>
+                                                <a:s>.</a:s>
+                                                <a:s r="356">
+                                                   <a:s>type</a:s>
+                                                </a:s>
+                                             </a:s>
+                                             <a:s> is null</a:s>
+                                          </a:s>
+                                          <a:s> or </a:s>
+                                          <a:s r="358">
+                                             <a:s r="361">
+                                                <a:s r="360">
+                                                   <a:s r="359">
+                                                      <a:s>DR</a:s>
+                                                   </a:s>
+                                                   <a:s>.</a:s>
+                                                   <a:s r="360">
+                                                      <a:s>type</a:s>
+                                                   </a:s>
+                                                </a:s>
+                                                <a:s>.</a:s>
+                                                <a:s r="361">
+                                                   <a:s>text</a:s>
+                                                </a:s>
+                                             </a:s>
+                                             <a:s> = </a:s>
+                                             <a:s r="362">
+                                                <a:s>'ordered'</a:s>
+                                             </a:s>
+                                          </a:s>
+                                       </a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>)</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>,
+      </a:s>
+                        <a:s r="371">
+                           <a:s>repeat: </a:s>
+                           <a:s r="374">
+                              <a:s r="373">
+                                 <a:s r="372">
+                                    <a:s>dosageInstruction</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="373">
+                                    <a:s>timing</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="374">
+                                 <a:s>repeat</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>,
+      </a:s>
+                        <a:s r="375">
+                           <a:s>frequency: </a:s>
+                           <a:s r="386">
+                              <a:s>Coalesce(</a:s>
+                              <a:s r="378">
+                                 <a:s r="377">
+                                    <a:s r="376">
+                                       <a:s>repeat</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="377">
+                                       <a:s>frequencyMax</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="378">
+                                    <a:s>value</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>, </a:s>
+                              <a:s r="381">
+                                 <a:s r="380">
+                                    <a:s r="379">
+                                       <a:s>repeat</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="380">
+                                       <a:s>frequency</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="381">
+                                    <a:s>value</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>,
+      </a:s>
+                        <a:s r="389">
+                           <a:s>period: </a:s>
+                           <a:s r="397">
+                              <a:s r="390">
+                                 <a:s>OMTKLogic</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="397">
+                                 <a:s>Quantity(</a:s>
+                                 <a:s r="393">
+                                    <a:s r="392">
+                                       <a:s r="391">
+                                          <a:s>repeat</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="392">
+                                          <a:s>period</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="393">
+                                       <a:s>value</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>, </a:s>
+                                 <a:s r="396">
+                                    <a:s r="395">
+                                       <a:s r="394">
+                                          <a:s>repeat</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="395">
+                                          <a:s>periodUnit</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="396">
+                                       <a:s>value</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>)</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>,
+      </a:s>
+                        <a:s r="398">
+                           <a:s>doseRange: </a:s>
+                           <a:s r="401">
+                              <a:s>ToFHIRRange(</a:s>
+                              <a:s r="400">
+                                 <a:s r="399">
+                                    <a:s>doseAndRate</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="400">
+                                    <a:s>dose</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>,
+      </a:s>
+                        <a:s r="403">
+                           <a:s>doseQuantity: </a:s>
+                           <a:s r="406">
+                              <a:s>ToFHIRQuantity(</a:s>
+                              <a:s r="405">
+                                 <a:s r="404">
+                                    <a:s>doseAndRate</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="405">
+                                    <a:s>dose</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>,
+      </a:s>
+                        <a:s r="408">
+                           <a:s>doseHigh: </a:s>
+                           <a:s r="413">
+                              <a:s>ToQuantity(</a:s>
+                              <a:s r="409">
+                                 <a:s r="411">
+                                    <a:s r="410">
+                                       <a:s>doseRange</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="411">
+                                       <a:s>high</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> as </a:s>
+                                 <a:s r="412">
+                                    <a:s>FHIR.SimpleQuantity</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>,
+      </a:s>
+                        <a:s r="414">
+                           <a:s>timesPerDay: </a:s>
+                           <a:s r="419">
+                              <a:s>Count(</a:s>
+                              <a:s r="416">
+                                 <a:s r="415">
+                                    <a:s>repeat</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="416">
+                                    <a:s>timeOfDay</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>,
+      </a:s>
+                        <a:s r="420">
+                           <a:s>doseDescription:
+        </a:s>
+                           <a:s r="474">
+                              <a:s>Coalesce(
+          </a:s>
+                              <a:s r="426">
+                                 <a:s>ToString(</a:s>
+                                 <a:s r="422">
+                                    <a:s>ToQuantity(</a:s>
+                                    <a:s r="421">
+                                       <a:s>doseQuantity</a:s>
+                                    </a:s>
+                                    <a:s>)</a:s>
+                                 </a:s>
+                                 <a:s>)</a:s>
+                              </a:s>
+                              <a:s>,
+          </a:s>
+                              <a:s r="469">
+                                 <a:s r="462">
+                                    <a:s r="457">
+                                       <a:s r="445">
+                                          <a:s r="439">
+                                             <a:s>ToString(</a:s>
+                                             <a:s r="435">
+                                                <a:s r="434">
+                                                   <a:s r="433">
+                                                      <a:s r="432">
+                                                         <a:s>doseRange</a:s>
+                                                      </a:s>
+                                                      <a:s>.</a:s>
+                                                      <a:s r="433">
+                                                         <a:s>low</a:s>
+                                                      </a:s>
+                                                   </a:s>
+                                                   <a:s>.</a:s>
+                                                   <a:s r="434">
+                                                      <a:s>value</a:s>
+                                                   </a:s>
+                                                </a:s>
+                                                <a:s>.</a:s>
+                                                <a:s r="435">
+                                                   <a:s>value</a:s>
+                                                </a:s>
+                                             </a:s>
+                                             <a:s>)</a:s>
+                                          </a:s>
+                                          <a:s> + </a:s>
+                                          <a:s r="441">
+                                             <a:s>'-'</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s> + </a:s>
+                                       <a:s r="453">
+                                          <a:s>ToString(</a:s>
+                                          <a:s r="449">
+                                             <a:s r="448">
+                                                <a:s r="447">
+                                                   <a:s r="446">
+                                                      <a:s>doseRange</a:s>
+                                                   </a:s>
+                                                   <a:s>.</a:s>
+                                                   <a:s r="447">
+                                                      <a:s>high</a:s>
+                                                   </a:s>
+                                                </a:s>
+                                                <a:s>.</a:s>
+                                                <a:s r="448">
+                                                   <a:s>value</a:s>
+                                                </a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="449">
+                                                <a:s>value</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>)</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> + </a:s>
+                                    <a:s r="458">
+                                       <a:s>' '</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> + </a:s>
+                                 <a:s r="466">
+                                    <a:s r="465">
+                                       <a:s r="464">
+                                          <a:s r="463">
+                                             <a:s>doseRange</a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="464">
+                                             <a:s>high</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="465">
+                                          <a:s>unit</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="466">
+                                       <a:s>value</a:s>
+                                    </a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>
+        )</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>,
+      </a:s>
+                        <a:s r="477">
+                           <a:s>frequencyDescription:
+        </a:s>
+                           <a:s r="516">
+                              <a:s r="487">
+                                 <a:s>ToString(</a:s>
+                                 <a:s r="483">
+                                    <a:s r="482">
+                                       <a:s r="481">
+                                          <a:s r="480">
+                                             <a:s r="479">
+                                                <a:s>dosageInstruction</a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="480">
+                                                <a:s>timing</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="481">
+                                             <a:s>repeat</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="482">
+                                          <a:s>frequency</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="483">
+                                       <a:s>value</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>)</a:s>
+                              </a:s>
+                              <a:s> +
+          </a:s>
+                              <a:s r="511">
+                                 <a:s>Coalesce(
+            </a:s>
+                                 <a:s r="504">
+                                    <a:s r="490">
+                                       <a:s>'-'</a:s>
+                                    </a:s>
+                                    <a:s> + </a:s>
+                                    <a:s r="500">
+                                       <a:s>ToString(</a:s>
+                                       <a:s r="496">
+                                          <a:s r="495">
+                                             <a:s r="494">
+                                                <a:s r="493">
+                                                   <a:s r="492">
+                                                      <a:s>dosageInstruction</a:s>
+                                                   </a:s>
+                                                   <a:s>.</a:s>
+                                                   <a:s r="493">
+                                                      <a:s>timing</a:s>
+                                                   </a:s>
+                                                </a:s>
+                                                <a:s>.</a:s>
+                                                <a:s r="494">
+                                                   <a:s>repeat</a:s>
+                                                </a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="495">
+                                                <a:s>frequencyMax</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="496">
+                                             <a:s>value</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>)</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>,
+            </a:s>
+                                 <a:s r="505">
+                                    <a:s>''</a:s>
+                                 </a:s>
+                                 <a:s>
+          )</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    </a:s>
+                     <a:s r="530">
+                        <a:s>return </a:s>
+                        <a:s r="531">
+                           <a:s>{
+      </a:s>
+                           <a:s>
+                              <a:s>rxNormCode: </a:s>
+                              <a:s r="532">
+                                 <a:s>rxNormCode</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+      </a:s>
+                           <a:s>
+                              <a:s>isDraft: </a:s>
+                              <a:s r="533">
+                                 <a:s r="536">
+                                    <a:s r="535">
+                                       <a:s r="534">
+                                          <a:s>O</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="535">
+                                          <a:s>status</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="536">
+                                       <a:s>value</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> = </a:s>
+                                 <a:s r="537">
+                                    <a:s>'draft'</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+      // NOTE: Assuming asNeeded is expressed as a boolean
+      </a:s>
+                           <a:s>
+                              <a:s>isPRN: </a:s>
+                              <a:s r="542">
+                                 <a:s r="541">
+                                    <a:s>dosageInstruction</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="542">
+                                    <a:s>asNeeded</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+      </a:s>
+                           <a:s>
+                              <a:s>prescription:
+        </a:s>
+                              <a:s r="543">
+                                 <a:s>if </a:s>
+                                 <a:s r="547">
+                                    <a:s r="545">
+                                       <a:s r="544">
+                                          <a:s>dosageInstruction</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="545">
+                                          <a:s>text</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> is not null</a:s>
+                                 </a:s>
+                                 <a:s> then
+          </a:s>
+                                 <a:s r="561">
+                                    <a:s r="555">
+                                       <a:s r="550">
+                                          <a:s>medicationName</a:s>
+                                       </a:s>
+                                       <a:s> + </a:s>
+                                       <a:s r="551">
+                                          <a:s>' '</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> + </a:s>
+                                    <a:s r="558">
+                                       <a:s r="557">
+                                          <a:s r="556">
+                                             <a:s>dosageInstruction</a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="557">
+                                             <a:s>text</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="558">
+                                          <a:s>value</a:s>
+                                       </a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>
+        else
+          // TODO: Shouldn't need the .value here on asNeededBoolean
+          </a:s>
+                                 <a:s r="597">
+                                    <a:s r="585">
+                                       <a:s r="581">
+                                          <a:s r="576">
+                                             <a:s r="572">
+                                                <a:s r="567">
+                                                   <a:s>medicationName</a:s>
+                                                </a:s>
+                                                <a:s> + </a:s>
+                                                <a:s r="568">
+                                                   <a:s>' '</a:s>
+                                                </a:s>
+                                             </a:s>
+                                             <a:s> + </a:s>
+                                             <a:s r="573">
+                                                <a:s>doseDescription</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> + </a:s>
+                                          <a:s r="577">
+                                             <a:s>' q'</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s> + </a:s>
+                                       <a:s r="582">
+                                          <a:s>frequencyDescription</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> + </a:s>
+                                    <a:s r="586">
+                                       <a:s>(</a:s>
+                                       <a:s r="586">
+                                          <a:s>if </a:s>
+                                          <a:s r="588">
+                                             <a:s r="587">
+                                                <a:s>dosageInstruction</a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="588">
+                                                <a:s>asNeeded</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> then </a:s>
+                                          <a:s r="589">
+                                             <a:s>' PRN'</a:s>
+                                          </a:s>
+                                          <a:s> else </a:s>
+                                          <a:s r="591">
+                                             <a:s>''</a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>)</a:s>
+                                    </a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+     </a:s>
+                           <a:s>
+                              <a:s>dose:
+        </a:s>
+                              <a:s r="598">
+                                 <a:s>if </a:s>
+                                 <a:s r="602">
+                                    <a:s r="600">
+                                       <a:s r="599">
+                                          <a:s>doseAndRate</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="600">
+                                          <a:s>dose</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> is not null</a:s>
+                                 </a:s>
+                                 <a:s> then
+            </a:s>
+                                 <a:s r="604">
+                                    <a:s>ToQuantity(</a:s>
+                                    <a:s r="603">
+                                       <a:s>doseQuantity</a:s>
+                                    </a:s>
+                                    <a:s>)</a:s>
+                                 </a:s>
+                                 <a:s>
+        else
+            </a:s>
+                                 <a:s r="605">
+                                    <a:s>doseHigh</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+      </a:s>
+                           <a:s>
+                              <a:s>dosesPerDay: </a:s>
+                              <a:s r="617">
+                                 <a:s>Coalesce(</a:s>
+                                 <a:s r="609">
+                                    <a:s r="606">
+                                       <a:s>OMTKLogic</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="609">
+                                       <a:s>ToDaily(</a:s>
+                                       <a:s r="607">
+                                          <a:s>frequency</a:s>
+                                       </a:s>
+                                       <a:s>, </a:s>
+                                       <a:s r="608">
+                                          <a:s>period</a:s>
+                                       </a:s>
+                                       <a:s>)</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>, </a:s>
+                                 <a:s r="610">
+                                    <a:s>timesPerDay</a:s>
+                                 </a:s>
+                                 <a:s r="611">, 1.0)</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+    }</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="621" locator="80:3-125:5" xsi:type="Query">
+            <source localId="330" locator="80:3-80:10" alias="O">
+               <expression localId="331" locator="80:3-80:8" name="Orders" xsi:type="OperandRef"/>
+            </source>
+            <let localId="333" locator="82:7-82:59" identifier="rxNormCode">
+               <expression localId="337" locator="82:19-82:59" name="GetMedicationCode" libraryName="OMTKLogic" xsi:type="FunctionRef">
+                  <operand localId="339" name="ToConcept" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <operand localId="338" asType="fhir:CodeableConcept" xsi:type="As">
+                        <operand localId="336" locator="82:47-82:58" path="medication" scope="O" xsi:type="Property"/>
+                     </operand>
+                  </operand>
+               </expression>
+            </let>
+            <let localId="340" locator="83:7-83:61" identifier="medicationName">
+               <expression localId="343" locator="83:23-83:61" name="GetMedicationName" libraryName="OMTKLogic" xsi:type="FunctionRef">
+                  <operand localId="342" locator="83:51-83:60" name="rxNormCode" xsi:type="QueryLetRef"/>
+               </expression>
+            </let>
+            <let localId="344" locator="85:7-85:59" identifier="dosageInstruction">
+               <expression localId="345" locator="85:26-85:59" xsi:type="SingletonFrom">
+                  <operand localId="347" locator="85:41-85:59" path="dosageInstruction" scope="O" xsi:type="Property"/>
+               </expression>
+            </let>
+            <let localId="348" locator="89:7-89:118" identifier="doseAndRate">
+               <expression localId="349" locator="89:20-89:118" xsi:type="SingletonFrom">
+                  <signature localId="369" xsi:type="ListTypeSpecifier">
+                     <elementType localId="370" name="fhir:Dosage.DoseAndRate" xsi:type="NamedTypeSpecifier"/>
+                  </signature>
+                  <operand localId="368" locator="89:35-89:118" xsi:type="Query">
+                     <source localId="350" locator="89:36-89:67" alias="DR">
+                        <expression localId="352" locator="89:36-89:64" path="doseAndRate" xsi:type="Property">
+                           <source localId="351" name="dosageInstruction" xsi:type="QueryLetRef"/>
+                        </expression>
+                     </source>
+                     <where localId="354" locator="89:69-89:117" xsi:type="Or">
+                        <operand localId="357" locator="89:75-89:89" xsi:type="IsNull">
+                           <operand localId="356" locator="89:75-89:81" path="type" scope="DR" xsi:type="Property"/>
+                        </operand>
+                        <operand localId="358" locator="89:94-89:117" xsi:type="Equal">
+                           <signature localId="366" name="t:String" xsi:type="NamedTypeSpecifier"/>
+                           <signature localId="367" name="t:String" xsi:type="NamedTypeSpecifier"/>
+                           <operand localId="364" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                              <signature localId="365" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                              <operand localId="361" locator="89:94-89:105" path="text" xsi:type="Property">
+                                 <source localId="360" locator="89:94-89:100" path="type" scope="DR" xsi:type="Property"/>
+                              </operand>
+                           </operand>
+                           <operand localId="362" locator="89:109-89:117" valueType="t:String" value="ordered" xsi:type="Literal"/>
+                        </operand>
+                     </where>
+                  </operand>
+               </expression>
+            </let>
+            <let localId="371" locator="90:7-90:45" identifier="repeat">
+               <expression localId="374" locator="90:15-90:45" path="repeat" xsi:type="Property">
+                  <source localId="373" locator="90:15-90:38" path="timing" xsi:type="Property">
+                     <source localId="372" locator="90:15-90:31" name="dosageInstruction" xsi:type="QueryLetRef"/>
+                  </source>
+               </expression>
+            </let>
+            <let localId="375" locator="91:7-91:76" identifier="frequency">
+               <expression localId="386" locator="91:18-91:76" xsi:type="Coalesce">
+                  <signature localId="387" name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <signature localId="388" name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="378" locator="91:27-91:51" path="value" xsi:type="Property">
+                     <source localId="377" locator="91:27-91:45" path="frequencyMax" xsi:type="Property">
+                        <source localId="376" locator="91:27-91:32" name="repeat" xsi:type="QueryLetRef"/>
+                     </source>
+                  </operand>
+                  <operand localId="381" locator="91:54-91:75" path="value" xsi:type="Property">
+                     <source localId="380" locator="91:54-91:69" path="frequency" xsi:type="Property">
+                        <source localId="379" locator="91:54-91:59" name="repeat" xsi:type="QueryLetRef"/>
+                     </source>
+                  </operand>
+               </expression>
+            </let>
+            <let localId="389" locator="92:7-92:78" identifier="period">
+               <expression localId="397" locator="92:15-92:78" name="Quantity" libraryName="OMTKLogic" xsi:type="FunctionRef">
+                  <operand localId="393" locator="92:34-92:52" path="value" xsi:type="Property">
+                     <source localId="392" locator="92:34-92:46" path="period" xsi:type="Property">
+                        <source localId="391" locator="92:34-92:39" name="repeat" xsi:type="QueryLetRef"/>
+                     </source>
+                  </operand>
+                  <operand localId="396" locator="92:55-92:77" path="value" xsi:type="Property">
+                     <source localId="395" locator="92:55-92:71" path="periodUnit" xsi:type="Property">
+                        <source localId="394" locator="92:55-92:60" name="repeat" xsi:type="QueryLetRef"/>
+                     </source>
+                  </operand>
+               </expression>
+            </let>
+            <let localId="398" locator="93:7-93:46" identifier="doseRange">
+               <expression localId="401" locator="93:18-93:46" name="ToFHIRRange" xsi:type="FunctionRef">
+                  <operand localId="402" asType="fhir:Range" xsi:type="As">
+                     <operand localId="400" locator="93:30-93:45" path="dose" xsi:type="Property">
+                        <source localId="399" locator="93:30-93:40" name="doseAndRate" xsi:type="QueryLetRef"/>
+                     </operand>
+                  </operand>
+               </expression>
+            </let>
+            <let localId="403" locator="94:7-94:52" identifier="doseQuantity">
+               <expression localId="406" locator="94:21-94:52" name="ToFHIRQuantity" xsi:type="FunctionRef">
+                  <operand localId="407" asType="fhir:SimpleQuantity" xsi:type="As">
+                     <operand localId="405" locator="94:36-94:51" path="dose" xsi:type="Property">
+                        <source localId="404" locator="94:36-94:46" name="doseAndRate" xsi:type="QueryLetRef"/>
+                     </operand>
+                  </operand>
+               </expression>
+            </let>
+            <let localId="408" locator="95:7-95:65" identifier="doseHigh">
+               <expression localId="413" locator="95:17-95:65" name="ToQuantity" xsi:type="FunctionRef">
+                  <operand localId="409" locator="95:28-95:64" strict="false" xsi:type="As">
+                     <operand localId="411" locator="95:28-95:41" path="high" xsi:type="Property">
+                        <source localId="410" locator="95:28-95:36" name="doseRange" xsi:type="QueryLetRef"/>
+                     </operand>
+                     <asTypeSpecifier localId="412" locator="95:46-95:64" name="fhir:SimpleQuantity" xsi:type="NamedTypeSpecifier"/>
+                  </operand>
+               </expression>
+            </let>
+            <let localId="414" locator="96:7-96:42" identifier="timesPerDay">
+               <expression localId="419" locator="96:20-96:42" xsi:type="Count">
+                  <source localId="416" locator="96:26-96:41" path="timeOfDay" xsi:type="Property">
+                     <source localId="415" locator="96:26-96:31" name="repeat" xsi:type="QueryLetRef"/>
+                  </source>
+               </expression>
+            </let>
+            <let localId="420" locator="97:7-101:9" identifier="doseDescription">
+               <expression localId="474" locator="98:9-101:9" xsi:type="Coalesce">
+                  <signature localId="475" name="t:String" xsi:type="NamedTypeSpecifier"/>
+                  <signature localId="476" name="t:String" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="426" locator="99:11-99:44" xsi:type="ToString">
+                     <signature localId="427" name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+                     <operand localId="422" locator="99:20-99:43" name="ToQuantity" xsi:type="FunctionRef">
+                        <operand localId="421" locator="99:31-99:42" name="doseQuantity" xsi:type="QueryLetRef"/>
+                     </operand>
+                  </operand>
+                  <operand localId="469" locator="100:11-100:124" xsi:type="Concatenate">
+                     <operand localId="462" locator="100:11-100:96" xsi:type="Concatenate">
+                        <operand localId="457" locator="100:11-100:90" xsi:type="Concatenate">
+                           <operand localId="445" locator="100:11-100:51" xsi:type="Concatenate">
+                              <operand localId="439" locator="100:11-100:45" xsi:type="ToString">
+                                 <signature localId="440" name="t:Decimal" xsi:type="NamedTypeSpecifier"/>
+                                 <operand localId="435" locator="100:20-100:44" path="value" xsi:type="Property">
+                                    <source localId="434" locator="100:20-100:38" path="value" xsi:type="Property">
+                                       <source localId="433" locator="100:20-100:32" path="low" xsi:type="Property">
+                                          <source localId="432" locator="100:20-100:28" name="doseRange" xsi:type="QueryLetRef"/>
+                                       </source>
+                                    </source>
+                                 </operand>
+                              </operand>
+                              <operand localId="441" locator="100:49-100:51" valueType="t:String" value="-" xsi:type="Literal"/>
+                           </operand>
+                           <operand localId="453" locator="100:55-100:90" xsi:type="ToString">
+                              <signature localId="454" name="t:Decimal" xsi:type="NamedTypeSpecifier"/>
+                              <operand localId="449" locator="100:64-100:89" path="value" xsi:type="Property">
+                                 <source localId="448" locator="100:64-100:83" path="value" xsi:type="Property">
+                                    <source localId="447" locator="100:64-100:77" path="high" xsi:type="Property">
+                                       <source localId="446" locator="100:64-100:72" name="doseRange" xsi:type="QueryLetRef"/>
+                                    </source>
+                                 </source>
+                              </operand>
+                           </operand>
+                        </operand>
+                        <operand localId="458" locator="100:94-100:96" valueType="t:String" value=" " xsi:type="Literal"/>
+                     </operand>
+                     <operand localId="466" locator="100:100-100:124" path="value" xsi:type="Property">
+                        <source localId="465" locator="100:100-100:118" path="unit" xsi:type="Property">
+                           <source localId="464" locator="100:100-100:113" path="high" xsi:type="Property">
+                              <source localId="463" locator="100:100-100:108" name="doseRange" xsi:type="QueryLetRef"/>
+                           </source>
+                        </source>
+                     </operand>
+                  </operand>
+               </expression>
+            </let>
+            <let localId="477" locator="102:7-107:11" identifier="frequencyDescription">
+               <expression localId="516" locator="103:9-107:11" xsi:type="Concatenate">
+                  <operand localId="487" locator="103:9-103:65" xsi:type="ToString">
+                     <signature localId="488" name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                     <operand localId="483" locator="103:18-103:64" path="value" xsi:type="Property">
+                        <source localId="482" locator="103:18-103:58" path="frequency" xsi:type="Property">
+                           <source localId="481" locator="103:18-103:48" path="repeat" xsi:type="Property">
+                              <source localId="480" locator="103:18-103:41" path="timing" xsi:type="Property">
+                                 <source localId="479" locator="103:18-103:34" name="dosageInstruction" xsi:type="QueryLetRef"/>
+                              </source>
+                           </source>
+                        </source>
+                     </operand>
+                  </operand>
+                  <operand localId="511" locator="104:11-107:11" xsi:type="Coalesce">
+                     <signature localId="512" name="t:String" xsi:type="NamedTypeSpecifier"/>
+                     <signature localId="513" name="t:String" xsi:type="NamedTypeSpecifier"/>
+                     <operand localId="504" locator="105:13-105:78" xsi:type="Concatenate">
+                        <operand localId="490" locator="105:13-105:15" valueType="t:String" value="-" xsi:type="Literal"/>
+                        <operand localId="500" locator="105:19-105:78" xsi:type="ToString">
+                           <signature localId="501" name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                           <operand localId="496" locator="105:28-105:77" path="value" xsi:type="Property">
+                              <source localId="495" locator="105:28-105:71" path="frequencyMax" xsi:type="Property">
+                                 <source localId="494" locator="105:28-105:58" path="repeat" xsi:type="Property">
+                                    <source localId="493" locator="105:28-105:51" path="timing" xsi:type="Property">
+                                       <source localId="492" locator="105:28-105:44" name="dosageInstruction" xsi:type="QueryLetRef"/>
+                                    </source>
+                                 </source>
+                              </source>
+                           </operand>
+                        </operand>
+                     </operand>
+                     <operand localId="505" locator="106:13-106:14" valueType="t:String" value="" xsi:type="Literal"/>
+                  </operand>
+               </expression>
+            </let>
+            <return localId="530" locator="108:5-125:5">
+               <expression localId="531" locator="108:12-125:5" xsi:type="Tuple">
+                  <element name="rxNormCode">
+                     <value localId="532" locator="109:19-109:28" name="rxNormCode" xsi:type="QueryLetRef"/>
+                  </element>
+                  <element name="isDraft">
+                     <value localId="533" locator="110:16-110:39" xsi:type="Equal">
+                        <signature localId="539" name="t:String" xsi:type="NamedTypeSpecifier"/>
+                        <signature localId="540" name="t:String" xsi:type="NamedTypeSpecifier"/>
+                        <operand localId="536" locator="110:16-110:29" path="value" xsi:type="Property">
+                           <source localId="535" locator="110:16-110:23" path="status" scope="O" xsi:type="Property"/>
+                        </operand>
+                        <operand localId="537" locator="110:33-110:39" valueType="t:String" value="draft" xsi:type="Literal"/>
+                     </value>
+                  </element>
+                  <element name="isPRN">
+                     <value localId="542" locator="112:14-112:39" path="asNeeded" xsi:type="Property">
+                        <source localId="541" locator="112:14-112:30" name="dosageInstruction" xsi:type="QueryLetRef"/>
+                     </value>
+                  </element>
+                  <element name="prescription">
+                     <value localId="543" locator="114:9-118:132" xsi:type="If">
+                        <condition localId="547" locator="114:12-114:45" xsi:type="Not">
+                           <operand localId="546" locator="114:12-114:45" xsi:type="IsNull">
+                              <operand localId="545" locator="114:12-114:33" path="text" xsi:type="Property">
+                                 <source localId="544" locator="114:12-114:28" name="dosageInstruction" xsi:type="QueryLetRef"/>
+                              </operand>
+                           </operand>
+                        </condition>
+                        <then localId="561" locator="115:11-115:61" xsi:type="Concatenate">
+                           <operand localId="555" locator="115:11-115:30" xsi:type="Concatenate">
+                              <operand localId="550" locator="115:11-115:24" name="medicationName" xsi:type="QueryLetRef"/>
+                              <operand localId="551" locator="115:28-115:30" valueType="t:String" value=" " xsi:type="Literal"/>
+                           </operand>
+                           <operand localId="558" locator="115:34-115:61" path="value" xsi:type="Property">
+                              <source localId="557" locator="115:34-115:55" path="text" xsi:type="Property">
+                                 <source localId="556" locator="115:34-115:50" name="dosageInstruction" xsi:type="QueryLetRef"/>
+                              </source>
+                           </operand>
+                        </then>
+                        <else localId="597" locator="118:11-118:132" xsi:type="Concatenate">
+                           <operand localId="585" locator="118:11-118:78" xsi:type="Concatenate">
+                              <operand localId="581" locator="118:11-118:55" xsi:type="Concatenate">
+                                 <operand localId="576" locator="118:11-118:48" xsi:type="Concatenate">
+                                    <operand localId="572" locator="118:11-118:30" xsi:type="Concatenate">
+                                       <operand localId="567" locator="118:11-118:24" name="medicationName" xsi:type="QueryLetRef"/>
+                                       <operand localId="568" locator="118:28-118:30" valueType="t:String" value=" " xsi:type="Literal"/>
+                                    </operand>
+                                    <operand localId="573" locator="118:34-118:48" name="doseDescription" xsi:type="QueryLetRef"/>
+                                 </operand>
+                                 <operand localId="577" locator="118:52-118:55" valueType="t:String" value=" q" xsi:type="Literal"/>
+                              </operand>
+                              <operand localId="582" locator="118:59-118:78" name="frequencyDescription" xsi:type="QueryLetRef"/>
+                           </operand>
+                           <operand localId="586" locator="118:82-118:132" xsi:type="If">
+                              <condition localId="594" name="ToBoolean" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                                 <operand localId="593" asType="fhir:boolean" xsi:type="As">
+                                    <operand localId="588" locator="118:86-118:111" path="asNeeded" xsi:type="Property">
+                                       <source localId="587" locator="118:86-118:102" name="dosageInstruction" xsi:type="QueryLetRef"/>
+                                    </operand>
+                                 </operand>
+                              </condition>
+                              <then localId="589" locator="118:118-118:123" valueType="t:String" value=" PRN" xsi:type="Literal"/>
+                              <else localId="591" locator="118:130-118:131" valueType="t:String" value="" xsi:type="Literal"/>
+                           </operand>
+                        </else>
+                     </value>
+                  </element>
+                  <element name="dose">
+                     <value localId="598" locator="120:9-123:20" xsi:type="If">
+                        <condition localId="602" locator="120:12-120:39" xsi:type="Not">
+                           <operand localId="601" locator="120:12-120:39" xsi:type="IsNull">
+                              <operand localId="600" locator="120:12-120:27" path="dose" xsi:type="Property">
+                                 <source localId="599" locator="120:12-120:22" name="doseAndRate" xsi:type="QueryLetRef"/>
+                              </operand>
+                           </operand>
+                        </condition>
+                        <then localId="604" locator="121:13-121:36" name="ToQuantity" xsi:type="FunctionRef">
+                           <operand localId="603" locator="121:24-121:35" name="doseQuantity" xsi:type="QueryLetRef"/>
+                        </then>
+                        <else localId="605" locator="123:13-123:20" name="doseHigh" xsi:type="QueryLetRef"/>
+                     </value>
+                  </element>
+                  <element name="dosesPerDay">
+                     <value localId="617" locator="124:20-124:83" xsi:type="Coalesce">
+                        <operand localId="609" locator="124:29-124:64" name="ToDaily" libraryName="OMTKLogic" xsi:type="FunctionRef">
+                           <operand localId="607" locator="124:47-124:55" name="frequency" xsi:type="QueryLetRef"/>
+                           <operand localId="608" locator="124:58-124:63" name="period" xsi:type="QueryLetRef"/>
+                        </operand>
+                        <operand localId="619" xsi:type="ToDecimal">
+                           <signature localId="620" name="t:Integer" xsi:type="NamedTypeSpecifier"/>
+                           <operand localId="610" locator="124:67-124:77" name="timesPerDay" xsi:type="QueryLetRef"/>
+                        </operand>
+                        <operand localId="611" locator="124:80-124:82" valueType="t:Decimal" value="1.0" xsi:type="Literal"/>
+                     </value>
+                  </element>
+               </expression>
+            </return>
+         </expression>
+         <operand localId="327" name="Orders">
+            <operandTypeSpecifier localId="325" locator="79:38-79:60" xsi:type="ListTypeSpecifier">
+               <elementType localId="326" locator="79:43-79:59" name="fhir:MedicationRequest" xsi:type="NamedTypeSpecifier"/>
+            </operandTypeSpecifier>
+         </operand>
+      </def>
+      <def localId="622" locator="132:1-142:5" name="MME" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="622">
+               <a:s>/*
+Calculates Morphine Milligram Equivalent (MME) for each medication in the given
+list. The calculation assumes the most aggresive dosing, and is performed for all
+medications in the given list (i.e. no additional filtering for status is performed).
+*/
+define function MME(prescriptions List&lt;MedicationRequest>):
+  </a:s>
+               <a:s r="680">
+                  <a:s r="680">
+                     <a:s>
+                        <a:s r="628">
+                           <a:s r="630">
+                              <a:s>(</a:s>
+                              <a:s r="630">
+                                 <a:s>Prescriptions(</a:s>
+                                 <a:s r="629">
+                                    <a:s>prescriptions</a:s>
+                                 </a:s>
+                                 <a:s>)</a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                           <a:s> P</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    </a:s>
+                     <a:s>
+                        <a:s>let </a:s>
+                        <a:s r="632">
+                           <a:s>mmePerIngredient: </a:s>
+                           <a:s r="642">
+                              <a:s r="633">
+                                 <a:s>OMTKLogic</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="642">
+                                 <a:s>CalculateMMEs(</a:s>
+                                 <a:s r="634">
+                                    <a:s>{ </a:s>
+                                    <a:s r="635">
+                                       <a:s>{ </a:s>
+                                       <a:s>
+                                          <a:s>rxNormCode: </a:s>
+                                          <a:s r="637">
+                                             <a:s r="636">
+                                                <a:s>P</a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="637">
+                                                <a:s>rxNormCode</a:s>
+                                             </a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>, </a:s>
+                                       <a:s>
+                                          <a:s>doseQuantity: </a:s>
+                                          <a:s r="639">
+                                             <a:s r="638">
+                                                <a:s>P</a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="639">
+                                                <a:s>dose</a:s>
+                                             </a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s>, </a:s>
+                                       <a:s>
+                                          <a:s>dosesPerDay: </a:s>
+                                          <a:s r="641">
+                                             <a:s r="640">
+                                                <a:s>P</a:s>
+                                             </a:s>
+                                             <a:s>.</a:s>
+                                             <a:s r="641">
+                                                <a:s>dosesPerDay</a:s>
+                                             </a:s>
+                                          </a:s>
+                                       </a:s>
+                                       <a:s> }</a:s>
+                                    </a:s>
+                                    <a:s> }</a:s>
+                                 </a:s>
+                                 <a:s>)</a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    </a:s>
+                     <a:s r="644">
+                        <a:s>return </a:s>
+                        <a:s r="645">
+                           <a:s>{
+      </a:s>
+                           <a:s>
+                              <a:s>rxNormCode: </a:s>
+                              <a:s r="647">
+                                 <a:s r="646">
+                                    <a:s>P</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="647">
+                                    <a:s>rxNormCode</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+      </a:s>
+                           <a:s>
+                              <a:s>isDraft: </a:s>
+                              <a:s r="649">
+                                 <a:s r="648">
+                                    <a:s>P</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="649">
+                                    <a:s>isDraft</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+      </a:s>
+                           <a:s>
+                              <a:s>isPRN: </a:s>
+                              <a:s r="651">
+                                 <a:s r="650">
+                                    <a:s>P</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="651">
+                                    <a:s>isPRN</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+      </a:s>
+                           <a:s>
+                              <a:s>prescription: </a:s>
+                              <a:s r="653">
+                                 <a:s r="652">
+                                    <a:s>P</a:s>
+                                 </a:s>
+                                 <a:s>.</a:s>
+                                 <a:s r="653">
+                                    <a:s>prescription</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+      </a:s>
+                           <a:s>
+                              <a:s>dailyDose: </a:s>
+                              <a:s r="665">
+                                 <a:s>Combine(</a:s>
+                                 <a:s r="660">
+                                    <a:s>
+                                       <a:s r="654">
+                                          <a:s r="655">
+                                             <a:s>
+                                                <a:s>mmePerIngredient</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> X</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> </a:s>
+                                    <a:s r="657">
+                                       <a:s>return </a:s>
+                                       <a:s r="659">
+                                          <a:s r="658">
+                                             <a:s>X</a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="659">
+                                             <a:s>dailyDoseDescription</a:s>
+                                          </a:s>
+                                       </a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>, </a:s>
+                                 <a:s r="661">
+                                    <a:s>'\r\n'</a:s>
+                                 </a:s>
+                                 <a:s>)</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+      </a:s>
+                           <a:s>
+                              <a:s>mme: </a:s>
+                              <a:s r="677">
+                                 <a:s>Sum(</a:s>
+                                 <a:s r="672">
+                                    <a:s>
+                                       <a:s r="666">
+                                          <a:s r="667">
+                                             <a:s>
+                                                <a:s>mmePerIngredient</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> X</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> </a:s>
+                                    <a:s r="669">
+                                       <a:s>return </a:s>
+                                       <a:s r="671">
+                                          <a:s r="670">
+                                             <a:s>X</a:s>
+                                          </a:s>
+                                          <a:s>.</a:s>
+                                          <a:s r="671">
+                                             <a:s>mme</a:s>
+                                          </a:s>
+                                       </a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>)</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+    }</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="680" locator="133:3-142:5" xsi:type="Query">
+            <source localId="628" locator="133:3-133:34" alias="P">
+               <expression localId="630" locator="133:3-133:32" name="Prescriptions" xsi:type="FunctionRef">
+                  <operand localId="629" locator="133:18-133:30" name="prescriptions" xsi:type="OperandRef"/>
+               </expression>
+            </source>
+            <let localId="632" locator="134:9-134:133" identifier="mmePerIngredient">
+               <expression localId="642" locator="134:27-134:133" name="CalculateMMEs" libraryName="OMTKLogic" xsi:type="FunctionRef">
+                  <operand localId="634" locator="134:51-134:132" xsi:type="List">
+                     <element localId="635" locator="134:53-134:130" xsi:type="Tuple">
+                        <element name="rxNormCode">
+                           <value localId="637" locator="134:67-134:78" path="rxNormCode" scope="P" xsi:type="Property"/>
+                        </element>
+                        <element name="doseQuantity">
+                           <value localId="639" locator="134:95-134:100" path="dose" scope="P" xsi:type="Property"/>
+                        </element>
+                        <element name="dosesPerDay">
+                           <value localId="641" locator="134:116-134:128" path="dosesPerDay" scope="P" xsi:type="Property"/>
+                        </element>
+                     </element>
+                  </operand>
+               </expression>
+            </let>
+            <return localId="644" locator="135:5-142:5">
+               <expression localId="645" locator="135:12-142:5" xsi:type="Tuple">
+                  <element name="rxNormCode">
+                     <value localId="647" locator="136:19-136:30" path="rxNormCode" scope="P" xsi:type="Property"/>
+                  </element>
+                  <element name="isDraft">
+                     <value localId="649" locator="137:16-137:24" path="isDraft" scope="P" xsi:type="Property"/>
+                  </element>
+                  <element name="isPRN">
+                     <value localId="651" locator="138:14-138:20" path="isPRN" scope="P" xsi:type="Property"/>
+                  </element>
+                  <element name="prescription">
+                     <value localId="653" locator="139:21-139:34" path="prescription" scope="P" xsi:type="Property"/>
+                  </element>
+                  <element name="dailyDose">
+                     <value localId="665" locator="140:18-140:82" xsi:type="Combine">
+                        <source localId="660" locator="140:26-140:73" xsi:type="Query">
+                           <source localId="654" locator="140:26-140:43" alias="X">
+                              <expression localId="655" locator="140:26-140:41" name="mmePerIngredient" xsi:type="QueryLetRef"/>
+                           </source>
+                           <return localId="657" locator="140:45-140:73">
+                              <expression localId="659" locator="140:52-140:73" path="dailyDoseDescription" scope="X" xsi:type="Property"/>
+                           </return>
+                        </source>
+                        <separator localId="661" locator="140:76-140:81" valueType="t:String" value="&#xd;&#xa;" xsi:type="Literal"/>
+                     </value>
+                  </element>
+                  <element name="mme">
+                     <value localId="677" locator="141:12-141:47" xsi:type="Sum">
+                        <signature localId="678" xsi:type="ListTypeSpecifier">
+                           <elementType localId="679" name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+                        </signature>
+                        <source localId="672" locator="141:16-141:46" xsi:type="Query">
+                           <source localId="666" locator="141:16-141:33" alias="X">
+                              <expression localId="667" locator="141:16-141:31" name="mmePerIngredient" xsi:type="QueryLetRef"/>
+                           </source>
+                           <return localId="669" locator="141:35-141:46">
+                              <expression localId="671" locator="141:42-141:46" path="mme" scope="X" xsi:type="Property"/>
+                           </return>
+                        </source>
+                     </value>
+                  </element>
+               </expression>
+            </return>
+         </expression>
+         <operand localId="625" name="prescriptions">
+            <operandTypeSpecifier localId="623" locator="132:35-132:57" xsi:type="ListTypeSpecifier">
+               <elementType localId="624" locator="132:40-132:56" name="fhir:MedicationRequest" xsi:type="NamedTypeSpecifier"/>
+            </operandTypeSpecifier>
+         </operand>
+      </def>
+      <def localId="681" locator="149:1-153:3" name="TotalMME" context="Patient" accessLevel="Public" xsi:type="FunctionDef">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="681">
+               <a:s>/*
+Calculates total Morphine Milligram Equivalent (MME) for the given list of medications.
+The calculation assumes the most aggressive dosing, and is performed for all
+medications in the given list (i.e. no additional filtering for status is performed).
+*/
+define function TotalMME(prescriptions List&lt;MedicationRequest>):
+  </a:s>
+               <a:s r="706">
+                  <a:s r="706">
+                     <a:s r="687">
+                        <a:s>OMTKLogic</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="706">
+                        <a:s>Quantity(
+    </a:s>
+                        <a:s r="701">
+                           <a:s>Sum(</a:s>
+                           <a:s r="696">
+                              <a:s>
+                                 <a:s r="688">
+                                    <a:s r="690">
+                                       <a:s>(</a:s>
+                                       <a:s r="690">
+                                          <a:s>MME(</a:s>
+                                          <a:s r="689">
+                                             <a:s>prescriptions</a:s>
+                                          </a:s>
+                                          <a:s>)</a:s>
+                                       </a:s>
+                                       <a:s>)</a:s>
+                                    </a:s>
+                                    <a:s> M</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> </a:s>
+                              <a:s r="692">
+                                 <a:s>return </a:s>
+                                 <a:s r="695">
+                                    <a:s r="694">
+                                       <a:s r="693">
+                                          <a:s>M</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="694">
+                                          <a:s>mme</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="695">
+                                       <a:s>value</a:s>
+                                    </a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>)</a:s>
+                        </a:s>
+                        <a:s>,
+    </a:s>
+                        <a:s r="704">
+                           <a:s>'{MME}/d'</a:s>
+                        </a:s>
+                        <a:s>
+  )</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="706" locator="150:3-153:3" name="Quantity" libraryName="OMTKLogic" xsi:type="FunctionRef">
+            <operand localId="701" locator="151:5-151:50" xsi:type="Sum">
+               <signature localId="702" xsi:type="ListTypeSpecifier">
+                  <elementType localId="703" name="t:Decimal" xsi:type="NamedTypeSpecifier"/>
+               </signature>
+               <source localId="696" locator="151:9-151:49" xsi:type="Query">
+                  <source localId="688" locator="151:9-151:30" alias="M">
+                     <expression localId="690" locator="151:9-151:28" name="MME" xsi:type="FunctionRef">
+                        <operand localId="689" locator="151:14-151:26" name="prescriptions" xsi:type="OperandRef"/>
+                     </expression>
+                  </source>
+                  <return localId="692" locator="151:32-151:49">
+                     <expression localId="695" locator="151:39-151:49" path="value" xsi:type="Property">
+                        <source localId="694" locator="151:39-151:43" path="mme" scope="M" xsi:type="Property"/>
+                     </expression>
+                  </return>
+               </source>
+            </operand>
+            <operand localId="704" locator="152:5-152:13" valueType="t:String" value="{MME}/d" xsi:type="Literal"/>
+         </expression>
+         <operand localId="684" name="prescriptions">
+            <operandTypeSpecifier localId="682" locator="149:40-149:62" xsi:type="ListTypeSpecifier">
+               <elementType localId="683" locator="149:45-149:61" name="fhir:MedicationRequest" xsi:type="NamedTypeSpecifier"/>
+            </operandTypeSpecifier>
+         </operand>
+      </def>
+   </statements>
+</library>

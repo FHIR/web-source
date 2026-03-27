@@ -1,0 +1,822 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/ValueSet/sickle-cell-diseases> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "sickle-cell-diseases"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet sickle-cell-diseases</b></p><a name=\"sickle-cell-diseases\"> </a><a name=\"hcsickle-cell-diseases\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-computablevalueset.html\">CPGComputableValueSet</a>, <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-executablevalueset.html\">CPGExecutableValueSet</a></p></div><div style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\"><p>Expansion based on:</p><ul><li>codesystem International Classification of Diseases, 10th Revision, Clinical Modification (ICD-10-CM) version 2024</li><li>SNOMED CT United States edition 01-Sep 2024</li></ul></div><p>This value set expansion contains 81 concepts.</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-417357006\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/417357006\">417357006</a></td><td>Sickling disorder due to hemoglobin S (disorder)</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-23269001\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/23269001\">23269001</a></td><td>Double heterozygous sickling disorder</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-25472008\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/25472008\">25472008</a></td><td>Sickle cell-hemoglobin D disease</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-35434009\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/35434009\">35434009</a></td><td>Sickle cell-hemoglobin C disease</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-36472007\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/36472007\">36472007</a></td><td>Hemoglobin S-F disease</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-47024008\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/47024008\">47024008</a></td><td>Sickle cell-hemoglobin E disease</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-127040003\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/127040003\">127040003</a></td><td>Sickle cell anemia</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-127041004\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/127041004\">127041004</a></td><td>Sickle cell-beta-thalassemia</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-127042006\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/127042006\">127042006</a></td><td>Sickle cell beta plus thalassaemia</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-127043001\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/127043001\">127043001</a></td><td>Sickle cell-beta^0^-thalassemia</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-127044007\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/127044007\">127044007</a></td><td>Sickle cell-delta beta^0^-thalassemia</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-127045008\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/127045008\">127045008</a></td><td>Sickle cell anemia with coexistent alpha-thalassemia</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-127047000\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/127047000\">127047000</a></td><td>Sickle cell-hemoglobin Lepore disease</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-127048005\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/127048005\">127048005</a></td><td>Sickle cell-Hemoglobin O Arab disease</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-234391009\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/234391009\">234391009</a></td><td>Sickle cell anemia with high hemoglobin F</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-416484003\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/416484003\">416484003</a></td><td>Sickle cell-hemoglobin E disease with crisis (disorder)</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-416826005\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/416826005\">416826005</a></td><td>Sickle cell-thalassemia disease with crisis (disorder)</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-417048006\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/417048006\">417048006</a></td><td>Sickle cell-thalassemia disease without crisis (disorder)</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-417279003\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/417279003\">417279003</a></td><td>Hemoglobin S sickling disorder with crisis (disorder)</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-417425009\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/417425009\">417425009</a></td><td>Hemoglobin SS disease with crisis (disorder)</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-417517009\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/417517009\">417517009</a></td><td>Sickle cell-hemoglobin C disease with crisis (disorder)</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-417748003\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/417748003\">417748003</a></td><td>Sickle cell-hemoglobin D disease with crisis (disorder)</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-440206000\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/440206000\">440206000</a></td><td>Hemoglobin SS disease with vasoocclusive crisis (disorder)</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-444108000\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/444108000\">444108000</a></td><td>Acute sickle cell splenic sequestration crisis (disorder)</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-783254003\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/783254003\">783254003</a></td><td>Hereditary persistence of fetal hemoglobin with sickle cell disease syndrome</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-1153413001\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/1153413001\">1153413001</a></td><td>Acute sequestration of spleen due to sickle cell thalassemia with crisis (disorder)</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-1153415008\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/1153415008\">1153415008</a></td><td>Acute splenic sequestration due to sickle cell hemoglobin C disease with crisis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-10759351000119103\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/10759351000119103\">10759351000119103</a></td><td>Sickle cell anaemia in mother complicating childbirth</td></tr><tr><td><a name=\"sickle-cell-diseases-http://snomed.info/sct-441482006\"> </a><code>http://snomed.info/sct</code></td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/441482006\">441482006</a></td><td>History of sickle cell anaemia</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57</td><td>Sickle-cell disorders</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.0\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.0</td><td>Hb-SS disease with crisis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.00\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.00</td><td>Hb-SS disease with crisis, unspecified</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.01\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.01</td><td>Hb-SS disease with acute chest syndrome</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.02\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.02</td><td>Hb-SS disease with splenic sequestration</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.03\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.03</td><td>Hb-SS disease with cerebral vascular involvement</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.04\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.04</td><td>Hb-SS disease with dactylitis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.09\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.09</td><td>Hb-SS disease with crisis with other specified complication</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.2\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.2</td><td>Sickle-cell/Hb-C disease</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.20\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.20</td><td>Sickle-cell/Hb-C disease without crisis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.21\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.21</td><td>Sickle-cell/Hb-C disease with crisis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.211\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.211</td><td>Sickle-cell/Hb-C disease with acute chest syndrome</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.212\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.212</td><td>Sickle-cell/Hb-C disease with splenic sequestration</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.213\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.213</td><td>Sickle-cell/Hb-C disease with cerebral vascular involvement</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.214\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.214</td><td>Sickle-cell/Hb-C disease with dactylitis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.218\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.218</td><td>Sickle-cell/Hb-C disease with crisis with other specified complication</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.219\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.219</td><td>Sickle-cell/Hb-C disease with crisis, unspecified</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.3\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.3</td><td>Sickle-cell trait</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.4\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.4</td><td>Sickle-cell thalassemia</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.40\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.40</td><td>Sickle-cell thalassemia without crisis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.41\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.41</td><td>Sickle-cell thalassemia, unspecified, with crisis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.411\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.411</td><td>Sickle-cell thalassemia, unspecified, with acute chest syndrome</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.412\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.412</td><td>Sickle-cell thalassemia, unspecified, with splenic sequestration</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.413\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.413</td><td>Sickle-cell thalassemia, unspecified, with cerebral vascular involvement</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.414\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.414</td><td>Sickle-cell thalassemia, unspecified, with dactylitis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.418\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.418</td><td>Sickle-cell thalassemia, unspecified, with crisis with other specified complication</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.419\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.419</td><td>Sickle-cell thalassemia, unspecified, with crisis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.42\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.42</td><td>Sickle-cell thalassemia beta zero without crisis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.43\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.43</td><td>Sickle-cell thalassemia beta zero with crisis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.431\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.431</td><td>Sickle-cell thalassemia beta zero with acute chest syndrome</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.432\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.432</td><td>Sickle-cell thalassemia beta zero with splenic sequestration</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.433\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.433</td><td>Sickle-cell thalassemia beta zero with cerebral vascular involvement</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.434\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.434</td><td>Sickle-cell thalassemia beta zero with dactylitis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.438\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.438</td><td>Sickle-cell thalassemia beta zero with crisis with other specified complication</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.439\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.439</td><td>Sickle-cell thalassemia beta zero with crisis, unspecified</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.44\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.44</td><td>Sickle-cell thalassemia beta plus without crisis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.45\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.45</td><td>Sickle-cell thalassemia beta plus with crisis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.451\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.451</td><td>Sickle-cell thalassemia beta plus with acute chest syndrome</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.452\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.452</td><td>Sickle-cell thalassemia beta plus with splenic sequestration</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.453\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.453</td><td>Sickle-cell thalassemia beta plus with cerebral vascular involvement</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.454\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.454</td><td>Sickle-cell thalassemia beta plus with dactylitis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.458\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.458</td><td>Sickle-cell thalassemia beta plus with crisis with other specified complication</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.459\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.459</td><td>Sickle-cell thalassemia beta plus with crisis, unspecified</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.8\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.8</td><td>Other sickle-cell disorders</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.80\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.80</td><td>Other sickle-cell disorders without crisis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.81\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.81</td><td>Other sickle-cell disorders with crisis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.811\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.811</td><td>Other sickle-cell disorders with acute chest syndrome</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.812\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.812</td><td>Other sickle-cell disorders with splenic sequestration</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.813\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.813</td><td>Other sickle-cell disorders with cerebral vascular involvement</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.814\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.814</td><td>Other sickle-cell disorders with dactylitis</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.818\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.818</td><td>Other sickle-cell disorders with crisis with other specified complication</td></tr><tr><td><a name=\"sickle-cell-diseases-http://hl7.org/fhir/sid/icd-10-cm-D57.819\"> </a><code>http://hl7.org/fhir/sid/icd-10-cm</code></td><td style=\"white-space:nowrap\">  D57.819</td><td>Other sickle-cell disorders with crisis, unspecified</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "Conditions due to Sickle-cell that can cause painful crisis to be used as exclusions for opioid use recommendations"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "Condition"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "Coditions that cause red blood cell sickling"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "Any sickle-cell disorder that does not result in painful crisis"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-author"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/valueset-author>
+     ] ;
+     fhir:value [
+       a fhir:ContactDetail ;
+       fhir:name [ fhir:v "MD Partners, Inc." ] ;
+       fhir:telecom ( [
+         fhir:system [ fhir:v "email" ] ;
+         fhir:value [ fhir:v "info@mdpartners.com" ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "computable"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "structured"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "executable"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "executable"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-author"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/valueset-author>
+     ] ;
+     fhir:value [
+       a fhir:ContactDetail ;
+       fhir:name [ fhir:v "MD Partners, Inc." ] ;
+       fhir:telecom ( [
+         fhir:system [ fhir:v "email" ] ;
+         fhir:value [ fhir:v "info@mdpartners.com" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/sickle-cell-diseases"^^xsd:anyURI ;
+     fhir:l <http://fhir.org/guides/cdc/opioid-cds/ValueSet/sickle-cell-diseases>
+  ] ; # 
+  fhir:version [ fhir:v "2022.1.0"] ; # 
+  fhir:name [ fhir:v "SICKLE_CELL_DISEASES"] ; # 
+  fhir:title [ fhir:v "Sickle-cell diseases"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2023-05-25T18:08:12-06:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "CDC / Security Risk Solutions, Inc. (SRS)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.securityrisksolutions.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Sickle-cell disorders that cause painful crisis"] ; # 
+  fhir:purpose [ fhir:v "Conditions due to Sickle-cell that can cause painful crisis to be used as exclusions for opioid use recommendations"] ; # 
+  fhir:copyright [ fhir:v "© CDC 2016+."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:version [ fhir:v "http://snomed.info/sct/731000124108" ] ;
+       fhir:filter ( [
+         fhir:property [ fhir:v "concept" ] ;
+         fhir:op [ fhir:v "is-a" ] ;
+         fhir:value [ fhir:v "417357006" ]
+       ] )
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:version [ fhir:v "http://snomed.info/sct/731000124108" ] ;
+       fhir:filter ( [
+         fhir:property [ fhir:v "concept" ] ;
+         fhir:op [ fhir:v "is-a" ] ;
+         fhir:value [ fhir:v "441482006" ]
+       ] )
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:filter ( [
+         fhir:property [ fhir:v "concept" ] ;
+         fhir:op [ fhir:v "is-a" ] ;
+         fhir:value [ fhir:v "D57" ]
+       ] )
+     ] ) ;
+     fhir:exclude ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:version [ fhir:v "http://snomed.info/sct/731000124108" ] ;
+       fhir:filter ( [
+         fhir:property [ fhir:v "concept" ] ;
+         fhir:op [ fhir:v "is-a" ] ;
+         fhir:value [ fhir:v "416290001" ]
+       ] )
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:filter ( [
+         fhir:property [ fhir:v "concept" ] ;
+         fhir:op [ fhir:v "is-a" ] ;
+         fhir:value [ fhir:v "D57.1" ]
+       ] )
+     ] )
+  ] ; # 
+  fhir:expansion [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-unclosed"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/StructureDefinition/valueset-unclosed>
+       ] ;
+       fhir:value [
+         a fhir:Boolean ;
+         fhir:v true
+       ]
+     ] ) ;
+     fhir:timestamp [ fhir:v "2025-01-21T18:47:48.636Z"^^xsd:dateTime ] ;
+     fhir:parameter ( [
+       fhir:name [ fhir:v "used-codesystem" ] ;
+       fhir:value [
+         a fhir:Uri ;
+         fhir:v "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20240901"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct?version=http://snomed.info/sct/731000124108/version/20240901>
+       ]
+     ] [
+       fhir:name [ fhir:v "version" ] ;
+       fhir:value [
+         a fhir:Uri ;
+         fhir:v "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20240901"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct?version=http://snomed.info/sct/731000124108/version/20240901>
+       ]
+     ] [
+       fhir:name [ fhir:v "used-codesystem" ] ;
+       fhir:value [
+         a fhir:Uri ;
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm|2024"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm?version=2024>
+       ]
+     ] [
+       fhir:name [ fhir:v "version" ] ;
+       fhir:value [
+         a fhir:Uri ;
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm|2024"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm?version=2024>
+       ]
+     ] ) ;
+     fhir:contains ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "417357006" ] ;
+       fhir:display [ fhir:v "Sickling disorder due to hemoglobin S (disorder)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "23269001" ] ;
+       fhir:display [ fhir:v "Double heterozygous sickling disorder" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "25472008" ] ;
+       fhir:display [ fhir:v "Sickle cell-hemoglobin D disease" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "35434009" ] ;
+       fhir:display [ fhir:v "Sickle cell-hemoglobin C disease" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "36472007" ] ;
+       fhir:display [ fhir:v "Hemoglobin S-F disease" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "47024008" ] ;
+       fhir:display [ fhir:v "Sickle cell-hemoglobin E disease" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "127040003" ] ;
+       fhir:display [ fhir:v "Sickle cell anemia" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "127041004" ] ;
+       fhir:display [ fhir:v "Sickle cell-beta-thalassemia" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "127042006" ] ;
+       fhir:display [ fhir:v "Sickle cell beta plus thalassaemia" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "127043001" ] ;
+       fhir:display [ fhir:v "Sickle cell-beta^0^-thalassemia" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "127044007" ] ;
+       fhir:display [ fhir:v "Sickle cell-delta beta^0^-thalassemia" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "127045008" ] ;
+       fhir:display [ fhir:v "Sickle cell anemia with coexistent alpha-thalassemia" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "127047000" ] ;
+       fhir:display [ fhir:v "Sickle cell-hemoglobin Lepore disease" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "127048005" ] ;
+       fhir:display [ fhir:v "Sickle cell-Hemoglobin O Arab disease" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "234391009" ] ;
+       fhir:display [ fhir:v "Sickle cell anemia with high hemoglobin F" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "416484003" ] ;
+       fhir:display [ fhir:v "Sickle cell-hemoglobin E disease with crisis (disorder)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "416826005" ] ;
+       fhir:display [ fhir:v "Sickle cell-thalassemia disease with crisis (disorder)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "417048006" ] ;
+       fhir:display [ fhir:v "Sickle cell-thalassemia disease without crisis (disorder)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "417279003" ] ;
+       fhir:display [ fhir:v "Hemoglobin S sickling disorder with crisis (disorder)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "417425009" ] ;
+       fhir:display [ fhir:v "Hemoglobin SS disease with crisis (disorder)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "417517009" ] ;
+       fhir:display [ fhir:v "Sickle cell-hemoglobin C disease with crisis (disorder)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "417748003" ] ;
+       fhir:display [ fhir:v "Sickle cell-hemoglobin D disease with crisis (disorder)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "440206000" ] ;
+       fhir:display [ fhir:v "Hemoglobin SS disease with vasoocclusive crisis (disorder)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "444108000" ] ;
+       fhir:display [ fhir:v "Acute sickle cell splenic sequestration crisis (disorder)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "783254003" ] ;
+       fhir:display [ fhir:v "Hereditary persistence of fetal hemoglobin with sickle cell disease syndrome" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "1153413001" ] ;
+       fhir:display [ fhir:v "Acute sequestration of spleen due to sickle cell thalassemia with crisis (disorder)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "1153415008" ] ;
+       fhir:display [ fhir:v "Acute splenic sequestration due to sickle cell hemoglobin C disease with crisis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "10759351000119103" ] ;
+       fhir:display [ fhir:v "Sickle cell anaemia in mother complicating childbirth" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:code [ fhir:v "441482006" ] ;
+       fhir:display [ fhir:v "History of sickle cell anaemia" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57" ] ;
+       fhir:display [ fhir:v "Sickle-cell disorders" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.0" ] ;
+       fhir:display [ fhir:v "Hb-SS disease with crisis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.00" ] ;
+       fhir:display [ fhir:v "Hb-SS disease with crisis, unspecified" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.01" ] ;
+       fhir:display [ fhir:v "Hb-SS disease with acute chest syndrome" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.02" ] ;
+       fhir:display [ fhir:v "Hb-SS disease with splenic sequestration" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.03" ] ;
+       fhir:display [ fhir:v "Hb-SS disease with cerebral vascular involvement" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.04" ] ;
+       fhir:display [ fhir:v "Hb-SS disease with dactylitis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.09" ] ;
+       fhir:display [ fhir:v "Hb-SS disease with crisis with other specified complication" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.2" ] ;
+       fhir:display [ fhir:v "Sickle-cell/Hb-C disease" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.20" ] ;
+       fhir:display [ fhir:v "Sickle-cell/Hb-C disease without crisis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.21" ] ;
+       fhir:display [ fhir:v "Sickle-cell/Hb-C disease with crisis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.211" ] ;
+       fhir:display [ fhir:v "Sickle-cell/Hb-C disease with acute chest syndrome" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.212" ] ;
+       fhir:display [ fhir:v "Sickle-cell/Hb-C disease with splenic sequestration" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.213" ] ;
+       fhir:display [ fhir:v "Sickle-cell/Hb-C disease with cerebral vascular involvement" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.214" ] ;
+       fhir:display [ fhir:v "Sickle-cell/Hb-C disease with dactylitis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.218" ] ;
+       fhir:display [ fhir:v "Sickle-cell/Hb-C disease with crisis with other specified complication" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.219" ] ;
+       fhir:display [ fhir:v "Sickle-cell/Hb-C disease with crisis, unspecified" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.3" ] ;
+       fhir:display [ fhir:v "Sickle-cell trait" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.4" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.40" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia without crisis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.41" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia, unspecified, with crisis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.411" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia, unspecified, with acute chest syndrome" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.412" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia, unspecified, with splenic sequestration" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.413" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia, unspecified, with cerebral vascular involvement" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.414" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia, unspecified, with dactylitis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.418" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia, unspecified, with crisis with other specified complication" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.419" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia, unspecified, with crisis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.42" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia beta zero without crisis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.43" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia beta zero with crisis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.431" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia beta zero with acute chest syndrome" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.432" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia beta zero with splenic sequestration" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.433" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia beta zero with cerebral vascular involvement" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.434" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia beta zero with dactylitis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.438" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia beta zero with crisis with other specified complication" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.439" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia beta zero with crisis, unspecified" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.44" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia beta plus without crisis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.45" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia beta plus with crisis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.451" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia beta plus with acute chest syndrome" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.452" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia beta plus with splenic sequestration" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.453" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia beta plus with cerebral vascular involvement" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.454" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia beta plus with dactylitis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.458" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia beta plus with crisis with other specified complication" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.459" ] ;
+       fhir:display [ fhir:v "Sickle-cell thalassemia beta plus with crisis, unspecified" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.8" ] ;
+       fhir:display [ fhir:v "Other sickle-cell disorders" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.80" ] ;
+       fhir:display [ fhir:v "Other sickle-cell disorders without crisis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.81" ] ;
+       fhir:display [ fhir:v "Other sickle-cell disorders with crisis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.811" ] ;
+       fhir:display [ fhir:v "Other sickle-cell disorders with acute chest syndrome" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.812" ] ;
+       fhir:display [ fhir:v "Other sickle-cell disorders with splenic sequestration" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.813" ] ;
+       fhir:display [ fhir:v "Other sickle-cell disorders with cerebral vascular involvement" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.814" ] ;
+       fhir:display [ fhir:v "Other sickle-cell disorders with dactylitis" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.818" ] ;
+       fhir:display [ fhir:v "Other sickle-cell disorders with crisis with other specified complication" ]
+     ] [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:code [ fhir:v "D57.819" ] ;
+       fhir:display [ fhir:v "Other sickle-cell disorders with crisis, unspecified" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

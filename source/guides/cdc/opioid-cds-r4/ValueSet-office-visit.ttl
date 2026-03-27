@@ -1,0 +1,180 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/ValueSet/office-visit> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "office-visit"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet office-visit</b></p><a name=\"office-visit\"> </a><a name=\"hcoffice-visit\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-executablevalueset.html\">CPGExecutableValueSet</a></p></div><p>This value set expansion contains 13 concepts.</p><table class=\"codes\"><tr><td><b>System</b></td><td><b>Version</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"office-visit-http://snomed.info/sct-185463005\"> </a><code>http://snomed.info/sct</code></td><td>2020-09</td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/185463005\">185463005</a></td><td>Visit out of hours (procedure)</td></tr><tr><td><a name=\"office-visit-http://snomed.info/sct-185464004\"> </a><code>http://snomed.info/sct</code></td><td>2020-09</td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/185464004\">185464004</a></td><td>Out of hours visit - not night visit (procedure)</td></tr><tr><td><a name=\"office-visit-http://snomed.info/sct-185465003\"> </a><code>http://snomed.info/sct</code></td><td>2020-09</td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/185465003\">185465003</a></td><td>Weekend visit (procedure)</td></tr><tr><td><a name=\"office-visit-http://snomed.info/sct-3391000175108\"> </a><code>http://snomed.info/sct</code></td><td>2020-09</td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/3391000175108\">3391000175108</a></td><td>Office visit for pediatric care and assessment (procedure)</td></tr><tr><td><a name=\"office-visit-http://snomed.info/sct-439740005\"> </a><code>http://snomed.info/sct</code></td><td>2020-09</td><td style=\"white-space:nowrap\">  <a href=\"http://snomed.info/id/439740005\">439740005</a></td><td>Postoperative follow-up visit (procedure)</td></tr><tr><td><a name=\"office-visit-http://www.ama-assn.org/go/cpt-99202\"> </a><code>http://www.ama-assn.org/go/cpt</code></td><td>2021</td><td style=\"white-space:nowrap\">  99202</td><td>Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using time for code selection, 15-29 minutes of total time is spent on the date of the encounter.</td></tr><tr><td><a name=\"office-visit-http://www.ama-assn.org/go/cpt-99203\"> </a><code>http://www.ama-assn.org/go/cpt</code></td><td>2021</td><td style=\"white-space:nowrap\">  99203</td><td>Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using time for code selection, 30-44 minutes of total time is spent on the date of the encounter.</td></tr><tr><td><a name=\"office-visit-http://www.ama-assn.org/go/cpt-99204\"> </a><code>http://www.ama-assn.org/go/cpt</code></td><td>2021</td><td style=\"white-space:nowrap\">  99204</td><td>Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and moderate level of medical decision making. When using time for code selection, 45-59 minutes of total time is spent on the date of the encounter.</td></tr><tr><td><a name=\"office-visit-http://www.ama-assn.org/go/cpt-99205\"> </a><code>http://www.ama-assn.org/go/cpt</code></td><td>2021</td><td style=\"white-space:nowrap\">  99205</td><td>Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and high level of medical decision making. When using time for code selection, 60-74 minutes of total time is spent on the date of the encounter.</td></tr><tr><td><a name=\"office-visit-http://www.ama-assn.org/go/cpt-99212\"> </a><code>http://www.ama-assn.org/go/cpt</code></td><td>2021</td><td style=\"white-space:nowrap\">  99212</td><td>Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using time for code selection, 10-19 minutes of total time is spent on the date of the encounter.</td></tr><tr><td><a name=\"office-visit-http://www.ama-assn.org/go/cpt-99213\"> </a><code>http://www.ama-assn.org/go/cpt</code></td><td>2021</td><td style=\"white-space:nowrap\">  99213</td><td>Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using time for code selection, 20-29 minutes of total time is spent on the date of the encounter.</td></tr><tr><td><a name=\"office-visit-http://www.ama-assn.org/go/cpt-99214\"> </a><code>http://www.ama-assn.org/go/cpt</code></td><td>2021</td><td style=\"white-space:nowrap\">  99214</td><td>Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and moderate level of medical decision making. When using time for code selection, 30-39 minutes of total time is spent on the date of the encounter.</td></tr><tr><td><a name=\"office-visit-http://www.ama-assn.org/go/cpt-99215\"> </a><code>http://www.ama-assn.org/go/cpt</code></td><td>2021</td><td style=\"white-space:nowrap\">  99215</td><td>Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and high level of medical decision making. When using time for code selection, 40-54 minutes of total time is spent on the date of the encounter.</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "executable"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "executable"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/office-visit"^^xsd:anyURI ;
+     fhir:l <http://fhir.org/guides/cdc/opioid-cds/ValueSet/office-visit>
+  ] ; # 
+  fhir:version [ fhir:v "0.2.0"] ; # 
+  fhir:name [ fhir:v "OFFICE_VISIT"] ; # 
+  fhir:title [ fhir:v "Office Visit"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2023-05-25T18:08:12-06:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "CDC / Security Risk Solutions, Inc. (SRS)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.securityrisksolutions.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Codes specifying outpatient encounters"] ; # 
+  fhir:purpose [ fhir:v "Codes specifying outpatient encounters"] ; # 
+  fhir:copyright [ fhir:v "Centers for Disease Control and Prevention (CDC)"] ; # 
+  fhir:expansion [
+     fhir:timestamp [ fhir:v "2021-02-08T13:46:02-07:00"^^xsd:dateTime ] ;
+     fhir:contains ( [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:version [ fhir:v "2020-09" ] ;
+       fhir:code [ fhir:v "185463005" ] ;
+       fhir:display [ fhir:v "Visit out of hours (procedure)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:version [ fhir:v "2020-09" ] ;
+       fhir:code [ fhir:v "185464004" ] ;
+       fhir:display [ fhir:v "Out of hours visit - not night visit (procedure)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:version [ fhir:v "2020-09" ] ;
+       fhir:code [ fhir:v "185465003" ] ;
+       fhir:display [ fhir:v "Weekend visit (procedure)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:version [ fhir:v "2020-09" ] ;
+       fhir:code [ fhir:v "3391000175108" ] ;
+       fhir:display [ fhir:v "Office visit for pediatric care and assessment (procedure)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:version [ fhir:v "2020-09" ] ;
+       fhir:code [ fhir:v "439740005" ] ;
+       fhir:display [ fhir:v "Postoperative follow-up visit (procedure)" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.ama-assn.org/go/cpt"^^xsd:anyURI ;
+         fhir:l <http://www.ama-assn.org/go/cpt>
+       ] ;
+       fhir:version [ fhir:v "2021" ] ;
+       fhir:code [ fhir:v "99202" ] ;
+       fhir:display [ fhir:v "Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using time for code selection, 15-29 minutes of total time is spent on the date of the encounter." ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.ama-assn.org/go/cpt"^^xsd:anyURI ;
+         fhir:l <http://www.ama-assn.org/go/cpt>
+       ] ;
+       fhir:version [ fhir:v "2021" ] ;
+       fhir:code [ fhir:v "99203" ] ;
+       fhir:display [ fhir:v "Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using time for code selection, 30-44 minutes of total time is spent on the date of the encounter." ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.ama-assn.org/go/cpt"^^xsd:anyURI ;
+         fhir:l <http://www.ama-assn.org/go/cpt>
+       ] ;
+       fhir:version [ fhir:v "2021" ] ;
+       fhir:code [ fhir:v "99204" ] ;
+       fhir:display [ fhir:v "Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and moderate level of medical decision making. When using time for code selection, 45-59 minutes of total time is spent on the date of the encounter." ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.ama-assn.org/go/cpt"^^xsd:anyURI ;
+         fhir:l <http://www.ama-assn.org/go/cpt>
+       ] ;
+       fhir:version [ fhir:v "2021" ] ;
+       fhir:code [ fhir:v "99205" ] ;
+       fhir:display [ fhir:v "Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and high level of medical decision making. When using time for code selection, 60-74 minutes of total time is spent on the date of the encounter." ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.ama-assn.org/go/cpt"^^xsd:anyURI ;
+         fhir:l <http://www.ama-assn.org/go/cpt>
+       ] ;
+       fhir:version [ fhir:v "2021" ] ;
+       fhir:code [ fhir:v "99212" ] ;
+       fhir:display [ fhir:v "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and straightforward medical decision making. When using time for code selection, 10-19 minutes of total time is spent on the date of the encounter." ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.ama-assn.org/go/cpt"^^xsd:anyURI ;
+         fhir:l <http://www.ama-assn.org/go/cpt>
+       ] ;
+       fhir:version [ fhir:v "2021" ] ;
+       fhir:code [ fhir:v "99213" ] ;
+       fhir:display [ fhir:v "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using time for code selection, 20-29 minutes of total time is spent on the date of the encounter." ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.ama-assn.org/go/cpt"^^xsd:anyURI ;
+         fhir:l <http://www.ama-assn.org/go/cpt>
+       ] ;
+       fhir:version [ fhir:v "2021" ] ;
+       fhir:code [ fhir:v "99214" ] ;
+       fhir:display [ fhir:v "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and moderate level of medical decision making. When using time for code selection, 30-39 minutes of total time is spent on the date of the encounter." ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.ama-assn.org/go/cpt"^^xsd:anyURI ;
+         fhir:l <http://www.ama-assn.org/go/cpt>
+       ] ;
+       fhir:version [ fhir:v "2021" ] ;
+       fhir:code [ fhir:v "99215" ] ;
+       fhir:display [ fhir:v "Office or other outpatient visit for the evaluation and management of an established patient, which requires a medically appropriate history and/or examination and high level of medical decision making. When using time for code selection, 40-54 minutes of total time is spent on the date of the encounter." ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

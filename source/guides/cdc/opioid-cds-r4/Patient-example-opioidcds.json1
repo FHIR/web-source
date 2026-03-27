@@ -1,0 +1,39 @@
+{
+  "resourceType" : "Patient",
+  "id" : "example-opioidcds",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient example-opioidcds</b></p><a name=\"example-opioidcds\"> </a><a name=\"hcexample-opioidcds\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">opioidcds example  Male, DoB: 1983-01-10</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\">751 E Apple Drive Novi MI 48376 (home)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Declares the DateLastUpdated and Frequency arguments to be used by the Data Date Roller for maintaining/rolling test data dates to keep them from going stale.\">Data Date-Roller Extension:</td><td colspan=\"3\"><ul><li>dateLastUpdated: 2023-05-01</li><li>frequency: No display for Duration </li></ul></td></tr></table></div>"
+  },
+  "extension" : [{
+    "extension" : [{
+      "url" : "dateLastUpdated",
+      "valueDateTime" : "2023-05-01"
+    },
+    {
+      "url" : "frequency",
+      "valueDuration" : {
+        "value" : 30.0,
+        "unit" : "days",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "d"
+      }
+    }],
+    "url" : "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/dataDateRoller"
+  }],
+  "name" : [{
+    "family" : "example",
+    "given" : ["opioidcds"]
+  }],
+  "gender" : "male",
+  "birthDate" : "1983-01-10",
+  "address" : [{
+    "use" : "home",
+    "type" : "postal",
+    "line" : ["751 E Apple Drive"],
+    "city" : "Novi",
+    "district" : "Oakland County",
+    "state" : "MI",
+    "postalCode" : "48376"
+  }]
+}

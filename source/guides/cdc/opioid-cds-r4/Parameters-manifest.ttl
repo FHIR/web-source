@@ -1,0 +1,652 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/Parameters/manifest> a fhir:Parameters ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "manifest"] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "system-version" ] ;
+     fhir:value [
+       a fhir:Uri ;
+       fhir:v "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901"^^xsd:anyURI ;
+       fhir:l <http://snomed.info/sct?version=http://snomed.info/sct/731000124108/version/20250901>
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset|1.0.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset|1.0.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "system-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/sid/icd-10-cm|2.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "system-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://nucc.org/provider-taxonomy|4.0.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablelibrary|1.0.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary|1.0.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablelibrary|1.0.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary|1.0.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "system-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://terminology.hl7.org/CodeSystem/usage-context-type|2.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "system-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes|3.0.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Patient|4.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "system-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm|3.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "system-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://loinc.org|3.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/limited-life-expectancy-conditions|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/therapies-indicating-end-of-life-care|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/conditions-likely-terminal-for-opioid-prescribing|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/cdc-malignant-cancer-conditions|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/oncology-specialty-designations|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-misuse-disorders|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/substance-misuse-behavioral-counseling|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/conditions-documenting-substance-misuse|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/office-visit|0.2.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-counseling-procedure|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-misuse-assessment-procedure|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-disposition|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-finding|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/observation-category-laboratory|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/observation-category-procedure|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/pain-treatment-plan|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/pain-management-procedure|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/pdmp-review-procedure|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/pdmp-data-reviewed-finding|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/conditions-documenting-sleep-disordered-breathing|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-analgesics-with-ambulatory-misuse-potential|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/extended-release-opioid-with-ambulatory-misuse-potential|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-medications|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-and-methadone-medications|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/non-synthetic-opioid-medications|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/barbiturate-medications|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/benzodiazepine-medications|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/naloxone-medications|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/fentanyl-type-medications|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/amphetamines-class-medications|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/methadone-medications|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-medications|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/synthetic-opioid-medications|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/cns-depressant-medications|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/all-urine-drug-screening-tests|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/non-opioid-urine-drug-screening|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/opiate-specific-urine-drug-screening-tests|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/general-opiate-urine-drug-screening-tests|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-urine-drug-screening|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/cocaine-urine-drug-screening-tests|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/phencyclidine-urine-drug-screening-tests|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/fentanyl-type-urine-drug-screening-tests|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/amphetamine-urine-drug-screening-tests|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/cannabinoid-urine-drug-screening-tests|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/methadone-urine-drug-screening-tests|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/synthetic-opioid-urine-drug-screening-tests|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/barbiturate-urine-drug-screening-tests|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/benzodiazepine-urine-drug-screening-tests|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-urine-drug-screening-tests|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/heroin-urine-drug-screening-tests|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-urine-drug-screening-tests|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/medicationrequest-category-community|0.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-clinical-status-active|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/medicationrequest-status-active|0.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-encounter-diagnosis-category|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-problem-list-category|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-us-core-health-concern-category|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/sickle-cell-diseases|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/StructureDefinition/MedicationRequest|4.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Medication|4.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Condition|4.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Observation|4.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/StructureDefinition/CarePlan|4.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Procedure|4.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/StructureDefinition/MedicationDispense|4.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition|1.0.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishableplandefinition|1.0.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC01|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC02|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC03|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC04And05|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC06|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC07|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ActivityDefinition/opioidcds-risk-assessment-request|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC08|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC09|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC10OrderSign|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC10PatientView|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/ActivityDefinition/opioidcds-urine-screening-request|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC11OrderSelect|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC11PatientView|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC12PatientView|2022.1.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Extension|4.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/StructureDefinition/Element|4.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/StructureDefinition/ValueSet|4.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/StructureDefinition/DomainResource|4.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-valueset-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://hl7.org/fhir/ValueSet/all-languages|4.0.1"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus|1.0.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope|1.0.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria|1.0.0"
+     ]
+  ] [
+     fhir:name [ fhir:v "default-canonical-version" ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria|1.0.0"
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

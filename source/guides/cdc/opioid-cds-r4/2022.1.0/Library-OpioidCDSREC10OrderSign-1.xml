@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1" localId="0">
+   <annotation translatorVersion="3.25.0" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="Overloads" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="277">
+         <a:s>library OpioidCDSREC10OrderSign version '2022.1.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="OpioidCDSREC10OrderSign" system="http://fhir.org/guides/cdc/opioid-cds" version="2022.1.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localId="1" localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="206" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="206">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="208" locator="5:1-5:54" localIdentifier="FHIRHelpers" path="http://fhir.org/guides/cdc/opioid-cds/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="208">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1' called FHIRHelpers</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="210" locator="6:1-6:56" localIdentifier="Common" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommon" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="210">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSCommon</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Common</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="212" locator="7:1-7:62" localIdentifier="Config" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommonConfig" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="212">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSCommonConfig</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Config</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="214" locator="8:1-8:60" localIdentifier="Routines" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSRoutines" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="214">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSRoutines</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Routines</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="216" locator="9:1-9:66" localIdentifier="Rec10Common" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSREC10Common" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="216">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSREC10Common</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Rec10Common</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <parameters>
+      <def localId="218" locator="70:1-70:54" name="ContextPrescriptions" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="218">
+               <a:s>/*
+**  Recommendation #10
+**    When prescribing opioids for subacute or chronic pain, clinicians should consider the benefits 
+**    and risks of toxicology testing to assess for prescribed medications as well as other prescribed 
+**    and nonprescribed controlled substances (recommendation category: B; evidence type: 4).
+**
+**  When
+**    Provider is prescribing an opioid analgesic with ambulatory misuse potential in the outpatient setting:
+**    Prescription is for treating subacute and/or chronic pain.
+**    CDC 2022 guideline general inclusion criteria met for this patient:
+**      Patient is 18 or over
+**      Patient does not have evidence of sickle cell disease
+**      Patient does not have findings indicating limited life expectancy
+**      Patient does not have orders for therapies indicating end of life care
+**      Patient is not undergoing active cancer treatment:
+**        Patient has had at least 2 office visits within the past 12 months with an oncology specialist present, or
+**        Patient has had at least 2 office visits within the past 12 months with a CDC malignant cancer condition diagnosis
+**      Patient does not have conditions likely terminal for opioid prescribing present
+**    Nonopioid drug urine screening has not been performed in last 12 months or
+**    Opioid drug urine screening has not been performed in last 12 months
+**  Then
+**    Consider the benefits and risks of conducting a urine toxicology screen:
+**      Document - Order toxicology screen
+**      Document risks outweigh benefits
+**      Snooze - N/A see comment, snooze 3 months
+**  When
+**    Provider is prescribing an opioid analgesic with ambulatory misuse potential in the outpatient setting:
+**    Prescription is for treating subacute and/or chronic pain.
+**    CDC 2022 guideline general inclusion criteria met for this patient:
+**      Patient is 18 or over
+**      Patient does not have evidence of sickle cell disease
+**      Patient does not have findings indicating limited life expectancy
+**      Patient does not have orders for therapies indicating end of life care
+**      Patient is not undergoing active cancer treatment:
+**        Patient has had at least 2 office visits within the past 12 months with an oncology specialist present, or
+**        Patient has had at least 2 office visits within the past 12 months with a CDC malignant cancer condition diagnosis
+**      Patient does not have conditions likely terminal for opioid prescribing present
+**    Nonopioid drug urine screening has been performed in last 12 months and
+**    Opioid drug urine screening has been performed in last 12 months and
+**    Positive result for synthetic opioid in the past year and not currently prescribed synthetic opioid or
+**    Positive result for phencyclidine(PCP) in the past year or
+**    Positive result for fentanyl in the past year and not currently prescribed fentanyl or
+**    Positive result for cocaine in the past year or
+**    Positive result for amphetamine in the past year and not currently prescribed amphetamine or
+**    Positive result for tetrahydrocannabinol (THC) in the past year and not currently prescribed tetrahydrocannabinol (THC) or
+**    Positive result for opiate in the past year and not currently prescribed natural opiate or
+**    Positive result for alcohol in the past year or
+**    Positive result for methadone in the past year and not currently prescribed methadone
+**  Then
+**    Patient may have unexpected toxicology test results:
+**      Document - Will repeat urine drug screening more frequently
+**      Document - Will assess patient for substance use disorder
+**      Snooze - Patient's test results were expected, snooze for 3 months
+**      Snooze - N/A snooze for 3 months
+**
+*/
+
+// META: Plan Definition: http://fhir.org/guides/cdc/opioid-cds-r4/PlanDefinition/opioid-cds-10-order-sign
+
+parameter ContextPrescriptions </a:s>
+               <a:s r="219">
+                  <a:s>List&lt;</a:s>
+                  <a:s r="220">
+                     <a:s>MedicationRequest</a:s>
+                  </a:s>
+                  <a:s>></a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <parameterTypeSpecifier localId="219" locator="70:32-70:54" xsi:type="ListTypeSpecifier">
+            <elementType localId="220" locator="70:37-70:53" name="fhir:MedicationRequest" xsi:type="NamedTypeSpecifier"/>
+         </parameterTypeSpecifier>
+      </def>
+   </parameters>
+   <contexts>
+      <def localId="225" locator="72:1-72:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def localId="223" locator="72:1-72:15" name="Patient" context="Patient">
+         <expression localId="224" xsi:type="SingletonFrom">
+            <operand localId="222" locator="72:1-72:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="228" locator="74:1-76:94" name="Subacute or Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="228">
+               <a:s>define &quot;Subacute or Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions&quot;:
+  </a:s>
+               <a:s r="237">
+                  <a:s>
+                     <a:s r="229">
+                        <a:s r="232">
+                           <a:s>( </a:s>
+                           <a:s r="232">
+                              <a:s r="230">
+                                 <a:s>Common</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="232">
+                                 <a:s>&quot;Is Opioid Analgesic with Ambulatory Misuse Potential?&quot;( </a:s>
+                                 <a:s r="231">
+                                    <a:s>ContextPrescriptions</a:s>
+                                 </a:s>
+                                 <a:s> )</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> )</a:s>
+                        </a:s>
+                        <a:s> AmbulatoryOpioidPrescription</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="236">
+                     <a:s>where </a:s>
+                     <a:s r="236">
+                        <a:s r="234">
+                           <a:s>Routines</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="236">
+                           <a:s>&quot;Is Subacute or Chronic Pain Prescription?&quot;( </a:s>
+                           <a:s r="235">
+                              <a:s>AmbulatoryOpioidPrescription</a:s>
+                           </a:s>
+                           <a:s> )</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="237" locator="75:3-76:94" xsi:type="Query">
+            <source localId="229" locator="75:3-75:121" alias="AmbulatoryOpioidPrescription">
+               <expression localId="232" locator="75:3-75:92" name="Is Opioid Analgesic with Ambulatory Misuse Potential?" libraryName="Common" xsi:type="FunctionRef">
+                  <operand localId="231" locator="75:69-75:88" name="ContextPrescriptions" xsi:type="ParameterRef"/>
+               </expression>
+            </source>
+            <where localId="236" locator="76:5-76:94" name="Is Subacute or Chronic Pain Prescription?" libraryName="Routines" xsi:type="FunctionRef">
+               <operand localId="235" locator="76:65-76:92" name="AmbulatoryOpioidPrescription" xsi:type="AliasRef"/>
+            </where>
+         </expression>
+      </def>
+      <def localId="240" locator="78:1-79:102" name="Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="240">
+               <a:s>define &quot;Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential&quot;:
+  </a:s>
+               <a:s r="241">
+                  <a:s>exists</a:s>
+                  <a:s r="242">
+                     <a:s>( </a:s>
+                     <a:s r="242">
+                        <a:s>&quot;Subacute or Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions&quot;</a:s>
+                     </a:s>
+                     <a:s> )</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="241" locator="79:3-79:102" xsi:type="Exists">
+            <operand localId="242" locator="79:9-79:102" name="Subacute or Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="245" locator="81:1-83:63" name="Is Perform Drug Screen Recommendation Applicable?" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="245">
+               <a:s>define &quot;Is Perform Drug Screen Recommendation Applicable?&quot;:
+  </a:s>
+               <a:s r="246">
+                  <a:s r="247">
+                     <a:s>&quot;Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential&quot;</a:s>
+                  </a:s>
+                  <a:s>
+    and </a:s>
+                  <a:s r="249">
+                     <a:s r="248">
+                        <a:s>Rec10Common</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="249">
+                        <a:s>&quot;Inclusion Criteria For UDS Recommendation&quot;</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="246" locator="82:3-83:63" xsi:type="And">
+            <operand localId="247" locator="82:3-82:81" name="Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential" xsi:type="ExpressionRef"/>
+            <operand localId="249" locator="83:9-83:63" name="Inclusion Criteria For UDS Recommendation" libraryName="Rec10Common" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="252" locator="85:1-87:63" name="Applicable Because of Unexpected Results" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="252">
+               <a:s>define &quot;Applicable Because of Unexpected Results&quot;:
+  </a:s>
+               <a:s r="253">
+                  <a:s r="254">
+                     <a:s>&quot;Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential&quot;</a:s>
+                  </a:s>
+                  <a:s>
+    and </a:s>
+                  <a:s r="256">
+                     <a:s r="255">
+                        <a:s>Rec10Common</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="256">
+                        <a:s>&quot;Inclusion Criteria For Unexpected Results&quot;</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="253" locator="86:3-87:63" xsi:type="And">
+            <operand localId="254" locator="86:3-86:81" name="Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential" xsi:type="ExpressionRef"/>
+            <operand localId="256" locator="87:9-87:63" name="Inclusion Criteria For Unexpected Results" libraryName="Rec10Common" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="259" locator="89:1-90:32" name="Detail" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="259">
+               <a:s>define &quot;Detail&quot;:
+  </a:s>
+               <a:s r="261">
+                  <a:s r="260">
+                     <a:s>Rec10Common</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="261">
+                     <a:s>&quot;Get HTML Details&quot;</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="261" locator="90:3-90:32" name="Get HTML Details" libraryName="Rec10Common" xsi:type="ExpressionRef"/>
+      </def>
+      <def localId="264" locator="92:1-93:25" name="Get Subject" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="264">
+               <a:s>define &quot;Get Subject&quot;:
+  </a:s>
+               <a:s r="274">
+                  <a:s r="266">
+                     <a:s>'Patient/'</a:s>
+                  </a:s>
+                  <a:s> + </a:s>
+                  <a:s r="269">
+                     <a:s r="268">
+                        <a:s>Patient</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="269">
+                        <a:s>id</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="274" locator="93:3-93:25" xsi:type="Concatenate">
+            <operand localId="266" locator="93:3-93:12" valueType="t:String" value="Patient/" xsi:type="Literal"/>
+            <operand localId="270" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+               <signature localId="271" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+               <operand localId="269" locator="93:16-93:25" path="id" xsi:type="Property">
+                  <source localId="268" locator="93:16-93:22" name="Patient" xsi:type="ExpressionRef"/>
+               </operand>
+            </operand>
+         </expression>
+      </def>
+      <def localId="277" locator="105:1-114:3" name="Get Lab Category" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="277">
+               <a:s>/*
+&lt;category>
+    &lt;coding>
+        &lt;system value=&quot;urn:oid:1.2.840.114350.1.13.861.1.7.10.798268.30&quot; />
+        &lt;code value=&quot;7&quot; />
+        &lt;display value=&quot;Lab&quot; />
+    &lt;/coding>
+    &lt;text value=&quot;Lab&quot; />
+&lt;/category>
+*/
+define &quot;Get Lab Category&quot;:
+  </a:s>
+               <a:s r="278">
+                  <a:s>FHIR.CodeableConcept {
+    </a:s>
+                  <a:s>
+                     <a:s>coding: </a:s>
+                     <a:s r="280">
+                        <a:s>{
+      </a:s>
+                        <a:s r="281">
+                           <a:s>FHIR.Coding {
+        </a:s>
+                           <a:s>
+                              <a:s>system: </a:s>
+                              <a:s r="283">
+                                 <a:s>FHIR.uri { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="285">
+                                       <a:s>'urn:oid:1.2.840.114350.1.13.861.1.7.10.798268.30'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>}</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+        </a:s>
+                           <a:s>
+                              <a:s>code: </a:s>
+                              <a:s r="287">
+                                 <a:s>FHIR.code { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="289">
+                                       <a:s>'7'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>,
+        </a:s>
+                           <a:s>
+                              <a:s>display: </a:s>
+                              <a:s r="291">
+                                 <a:s>FHIR.string { </a:s>
+                                 <a:s>
+                                    <a:s>value: </a:s>
+                                    <a:s r="293">
+                                       <a:s>'Lab'</a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s> }</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+      }</a:s>
+                        </a:s>
+                        <a:s>
+    }</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+  }</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="278" locator="106:3-114:3" classType="fhir:CodeableConcept" xsi:type="Instance">
+            <element name="coding">
+               <value localId="280" locator="107:13-113:5" xsi:type="List">
+                  <element localId="281" locator="108:7-112:7" classType="fhir:Coding" xsi:type="Instance">
+                     <element name="system">
+                        <value localId="283" locator="109:17-109:85" classType="fhir:uri" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="285" locator="109:35-109:84" valueType="t:String" value="urn:oid:1.2.840.114350.1.13.861.1.7.10.798268.30" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="code">
+                        <value localId="287" locator="110:15-110:38" classType="fhir:code" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="289" locator="110:34-110:36" valueType="t:String" value="7" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                     <element name="display">
+                        <value localId="291" locator="111:18-111:45" classType="fhir:string" xsi:type="Instance">
+                           <element name="value">
+                              <value localId="293" locator="111:39-111:43" valueType="t:String" value="Lab" xsi:type="Literal"/>
+                           </element>
+                        </value>
+                     </element>
+                  </element>
+               </value>
+            </element>
+         </expression>
+      </def>
+   </statements>
+</library>

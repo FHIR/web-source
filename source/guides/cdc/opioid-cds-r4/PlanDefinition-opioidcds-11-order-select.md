@@ -1,0 +1,1261 @@
+# Recommendation #11 - Concurrent Use of Opioids and Benzodiazepines (order-select) - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Recommendation #11 - Concurrent Use of Opioids and Benzodiazepines (order-select)**
+
+## PlanDefinition: Recommendation #11 - Concurrent Use of Opioids and Benzodiazepines (order-select) 
+
+| | |
+| :--- | :--- |
+| *Official URL*:http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-11-order-select | *Version*:2022.1.0 |
+| Active as of 2025-08-06 | *Computable Name*:PlanDefinition_Recommendation_11_Order_Select |
+| *Other Identifiers:*cdc-opioid-guidance (use: official, ) | |
+| **Usage:**Clinical Focus: Medication requested (situation), Clinical Focus: Chronic pain (finding) | |
+| **Copyright/Legal**: © CDC 2016+. | |
+
+ 
+Clinicians should use particular caution when prescribing opioid pain medication and benzodiazepines concurrently and consider whether benefits outweigh risks of concurrent prescribing of opioids and other central nervous system depressants. 
+
+ 
+The 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain is intended to improve communication between clinicians and patients about the benefits and risks of pain treatments, including opioid therapy; improve the effectiveness and safety of pain treatment; mitigate pain; improve function and quality of life for patients with pain; and reduce risks associated with opioid pain therapy, including opioid use disorder, overdose, and death. The recommendations do not apply to pain related to sickle cell disease or cancer or to patients receiving palliative or end-of-life care. 
+
+* **Actions: **: **Url: **
+  * : [Recommendation #11 - Concurrent Use of Opioids and Benzodiazepines (order-select)](PlanDefinition-opioidcds-11-order-select.md)
+* **Actions: **: **Version: **
+  * : 2022.1.0
+* **Actions: **: **Name: **
+  * : PlanDefinition_Recommendation_11_Order_Select
+* **Actions: **: **Title: **
+  * : Recommendation #11 - Concurrent Use of Opioids and Benzodiazepines (order-select)
+* **Actions: **: **Status: **
+  * : active
+* **Actions: **: **Experimental: **
+  * : false
+* **Actions: **: **Date: **
+  * : 2025-08-06
+* **Actions: **: **Publisher: **
+  * : CDC / Security Risk Solutions, Inc. (SRS)
+* **Actions: **: **Description: **
+  * : Clinicians should use particular caution when prescribing opioid pain medication and benzodiazepines concurrently and consider whether benefits outweigh risks of concurrent prescribing of opioids and other central nervous system depressants.
+* **Actions: **: **Knowledge Capability: **
+  * : shareable computable executable publishable
+* **Actions: **: **Purpose: **
+  * : The 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain is intended to improve communication between clinicians and patients about the benefits and risks of pain treatments, including opioid therapy; improve the effectiveness and safety of pain treatment; mitigate pain; improve function and quality of life for patients with pain; and reduce risks associated with opioid pain therapy, including opioid use disorder, overdose, and death. The recommendations do not apply to pain related to sickle cell disease or cancer or to patients receiving palliative or end-of-life care.
+* **Actions: **: **Usage: **
+  * : Clinicians should use particular caution when prescribing opioid pain medication and benzodiazepines concurrently. In addition, clinicians should consider whether benefits outweigh risks for concurrent use of opioids with other central nervous system depressants.
+* **Actions: **: **Copyright: **
+  * : © CDC 2016+.
+* **Actions: **: **Libraries: **
+  * : 
+| |
+| :--- |
+| [Library - Recommendation #11 - Concurrent Use of Opioids and Benzodiazepines](Library-OpioidCDSREC11OrderSelect.md) |
+
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "PlanDefinition",
+  "id" : "opioidcds-11-order-select",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition",
+    "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishableplandefinition"]
+  },
+  "contained" : [{
+    "resourceType" : "Library",
+    "id" : "effective-data-requirements",
+    "name" : "EffectiveDataRequirements",
+    "status" : "active",
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/library-type",
+        "code" : "module-definition"
+      }]
+    },
+    "relatedArtifact" : [{
+      "type" : "depends-on",
+      "display" : "Library Common",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSCommon|2022.1.0"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Library FHIRHelpers",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/Library/FHIRHelpers|4.0.1"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Library Config",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSCommonConfig|2022.1.0"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Library Routines",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSRoutines|2022.1.0"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Opioid analgesics with ambulatory misuse potential",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-analgesics-with-ambulatory-misuse-potential"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Community",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/medicationrequest-category-community"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Benzodiazepine medications",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/benzodiazepine-medications"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set CNS Depressant Medications",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/cns-depressant-medications"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Encounter Diagnosis Condition Category",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-encounter-diagnosis-category"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Problem List Condition Category",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-problem-list-category"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set US Core Health Concern Condition Category",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-us-core-health-concern-category"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Sickle Cell Diseases",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/sickle-cell-diseases"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Active Condition",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-clinical-status-active"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set CDC malignant cancer conditions",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/cdc-malignant-cancer-conditions"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Conditions likely terminal for opioid prescribing",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/conditions-likely-terminal-for-opioid-prescribing"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Limited life expectancy conditions",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/limited-life-expectancy-conditions"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Hospice Finding Codes",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-finding"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Hospice Disposition",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-disposition"
+    }],
+    "parameter" : [{
+      "name" : "ContextPrescriptions",
+      "use" : "in",
+      "min" : 0,
+      "max" : "*",
+      "type" : "MedicationRequest"
+    },
+    {
+      "name" : "Is Recommendation Applicable?",
+      "use" : "out",
+      "min" : 0,
+      "max" : "1",
+      "type" : "boolean"
+    }],
+    "dataRequirement" : [{
+      "type" : "Medication",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Medication"],
+      "mustSupport" : ["id", "code"]
+    },
+    {
+      "type" : "MedicationRequest",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/MedicationRequest"],
+      "mustSupport" : ["status",
+      "category",
+      "medication",
+      "medication.reference",
+      "id",
+      "intent",
+      "subject",
+      "authoredOn",
+      "recorder",
+      "dosageInstruction",
+      "dispenseRequest",
+      "status.value"],
+      "codeFilter" : [{
+        "path" : "status",
+        "code" : [{
+          "code" : "active"
+        }]
+      }]
+    },
+    {
+      "type" : "MedicationRequest",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/MedicationRequest"],
+      "mustSupport" : ["status",
+      "category",
+      "authoredOn",
+      "medication",
+      "medication.reference",
+      "id",
+      "intent",
+      "subject",
+      "recorder",
+      "dosageInstruction",
+      "dispenseRequest",
+      "status.value"],
+      "codeFilter" : [{
+        "path" : "status",
+        "code" : [{
+          "code" : "active"
+        }]
+      }]
+    },
+    {
+      "type" : "MedicationRequest",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/MedicationRequest"],
+      "mustSupport" : ["authoredOn",
+      "medication",
+      "medication.reference",
+      "id",
+      "status",
+      "intent",
+      "category",
+      "subject",
+      "recorder",
+      "dosageInstruction",
+      "dispenseRequest",
+      "status.value"]
+    },
+    {
+      "type" : "Patient",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
+    },
+    {
+      "type" : "Condition",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Condition"],
+      "mustSupport" : ["category", "code", "clinicalStatus"],
+      "codeFilter" : [{
+        "path" : "category",
+        "valueSet" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-us-core-health-concern-category"
+      }]
+    },
+    {
+      "type" : "Condition",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Condition"],
+      "mustSupport" : ["category",
+      "code",
+      "clinicalStatus",
+      "encounter",
+      "encounter.reference"],
+      "codeFilter" : [{
+        "path" : "category",
+        "valueSet" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-encounter-diagnosis-category"
+      }]
+    },
+    {
+      "type" : "Condition",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Condition"],
+      "mustSupport" : ["category", "code", "clinicalStatus", "clinicalStatus.coding"],
+      "codeFilter" : [{
+        "path" : "category",
+        "valueSet" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-problem-list-category"
+      }]
+    },
+    {
+      "type" : "Encounter",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Encounter"],
+      "mustSupport" : ["period",
+      "period.start",
+      "id",
+      "hospitalization",
+      "hospitalization.dischargeDisposition",
+      "hospitalization.dischargeDisposition.coding",
+      "status",
+      "status.value"]
+    },
+    {
+      "type" : "Observation",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Observation"],
+      "mustSupport" : ["code", "status", "status.value"],
+      "codeFilter" : [{
+        "path" : "code",
+        "valueSet" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-finding"
+      }]
+    }]
+  }],
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueCode" : "computable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueCode" : "executable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC11OrderSelect"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Opioid Analgesic with Ambulatory Misuse Potential Prescriptions"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Opioid Analgesic with Ambulatory Misuse Potential Prescriptions\":\n  Common.\"Is Opioid Analgesic with Ambulatory Misuse Potential?\"( ContextPrescriptions )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 0
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC11OrderSelect"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential\":\n  exists( \"Opioid Analgesic with Ambulatory Misuse Potential Prescriptions\" )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 1
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommonConfig"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Can the implementing EHR support queries for past medications by date range?"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// Subroutine 2 - Past Medications\ndefine \"Can the implementing EHR support queries for past medications by date range?\":\n  true"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 2
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Active Medication List"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Active Medication List\":\n  [MedicationRequest: status in { 'active' }] ActiveMeds\n    where ActiveMeds.category in \"Community\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 3
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Active Ambulatory Benzodiazepine or CNS Depressant Rx"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Active Ambulatory Benzodiazepine or CNS Depressant Rx\":\n    if Config.\"Can the implementing EHR support queries for past medications by date range?\" then\n      (\n        \"Get MedicationRequest Medication as Code\"(\"Active Medication List\")\n      ) Rx\n        where date from Rx.authoredOn 2 years or less on or before Today()\n          and Rx.medication in \"Benzodiazepine medications\"\n          or  Rx.medication in \"CNS Depressant Medications\"\n    else\n         List<FHIR.MedicationRequest>{}"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 4
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC11OrderSelect"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Benzodiazepine or CNS Depressant Prescriptions"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Benzodiazepine or CNS Depressant Prescriptions\":\n  Common.\"Is Benzodiazepine or CNS Depressant?\"( ContextPrescriptions )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 5
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC11OrderSelect"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Patient Is Being Prescribed Benzodiazepine or CNS Depressant"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Patient Is Being Prescribed Benzodiazepine or CNS Depressant\":\n  exists( \"Benzodiazepine or CNS Depressant Prescriptions\" )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 6
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Active Ambulatory Opioid Rx"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Active Ambulatory Opioid Rx\":\n    if Config.\"Can the implementing EHR support queries for past medications by date range?\" then\n      (\n        \"Get MedicationRequest Medication as Code\"(\"Get Active Ambulatory Medication Requests\"([MedicationRequest]))\n      ) Rx\n        where date from Rx.authoredOn 2 years or less on or before Today()\n          and Rx.medication in \"Opioid analgesics with ambulatory misuse potential\"\n    else\n        List<FHIR.MedicationRequest>{}"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 7
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommonConfig"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Age Less than 18 Years Is Enabled"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// CDC 2022 General Inclusion Criteria\ndefine \"Age Less than 18 Years Is Enabled\":\n  true"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 8
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Patient Age Less Than 18"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Patient Age Less Than 18\":\n  if (Config.\"Age Less than 18 Years Is Enabled\") then\n    AgeInYearsAt(Today()) < 18\n  else false"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 9
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommonConfig"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Sickle Cell Check Enabled"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// Sickle Cell\ndefine \"Sickle Cell Check Enabled\":\n  true"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 10
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommonConfig"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Sickle Cell Assumed Active"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Sickle Cell Assumed Active\":\n  true"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 11
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "US Core-Categorized Conditions"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// 3. Medications indicating end of life\n    /* or exists (\n      \"Medications Indicating End of Life\"\n    ) */\n\ndefine \"US Core-Categorized Conditions\":\n  [Condition: category in \"Encounter Diagnosis Condition Category\"]\n    union [Condition: category in \"Problem List Condition Category\"]\n    union [Condition: category in \"US Core Health Concern Condition Category\"]"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 12
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Positive Sickle Cell Condition"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Positive Sickle Cell Condition\":\n  if Config.\"Sickle Cell Check Enabled\" and not Config.\"Sickle Cell Assumed Active\"\n    then (\n      \"US Core-Categorized Conditions\" C\n        where C.code in \"Sickle Cell Diseases\"\n          and C.clinicalStatus in \"Active Condition\"\n    ) else if Config.\"Sickle Cell Check Enabled\" and Config.\"Sickle Cell Assumed Active\"\n        then (\n          \"US Core-Categorized Conditions\" C\n            where C.code in \"Sickle Cell Diseases\"\n        )\n      else null"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 13
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Condition Positive for Sickle Cell"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Condition Positive for Sickle Cell\":\n  if (Config.\"Sickle Cell Check Enabled\") then\n    exists(\n      Common.\"Positive Sickle Cell Condition\"\n    ) \n  else false"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 14
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommonConfig"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Active Cancer Treatment Encounters Condition Is Enabled"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// Active Cancer Treatment\ndefine \"Active Cancer Treatment Encounters Condition Is Enabled\":\n  true"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 15
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Encounter Period"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// End of Opioid Naive Routine\n\n/*\n**  Routine #3\n**  Active Cancer Treatment Routine\n**\n**  Definition                    | Answer to Proceed   | Details                                    | Data (Terminology) Requirement\n**  ---------------------------------------------------------------------------------------------------------------------------------\n**  Two office visits within the  | No                  | Look for a minimum of two distinct         | Office Visit\n**  past 12 months                |                     | encounters within 12 months of the date    |\n**                                |                     | of the current visit for which each of the |\n**                                |                     | following is true:                         |\n**                                |                     |   - the encounter diagnosis (primary or    |\n**                                |                     |     secondary or co-morbidity diagnosis)   |\n**                                |                     |     is listed in the CDC Malignant Cancer  |\n**                                |                     |     Conditions value set                   |\n**  ---------------------------------------------------------------------------------------------------------------------------------\n**  Office visits with an         | No                  | The encounter is performed by an           | Oncology specialty\n**  oncology specialist           |                     | oncologist as defined in the oncology      | designations (NUCC)\n**  present                       |                     | specialty designations using the           |\n**                                |                     | National Uniform Claim Committee           |\n**                                |                     | (NUCC) classifications                     |\n**  ---------------------------------------------------------------------------------------------------------------------------------\n**  Office visits including CDC   | No                  | The encounter diagnosis (primary or        | CDC malignant cancer\n**  malignant cancer              |                     | secondary or co-morbidity diagnosis)       | conditions\n**  condition                     |                     | is listed in the CDC Malignant Cancer      |\n**                                |                     | Conditions value set                       |\n**  ----------------------------------------------------------------------------------------------------------------------------------\n**\n*/\n\ndefine \"Encounter Period\":\n  Interval[Today() - 12 months, Today())"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 16
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "USCore Encounter Cancer Diagnoses"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"USCore Encounter Cancer Diagnoses\":\n  [Condition: category in \"Encounter Diagnosis Condition Category\"] CancerDiagnoses\n    where CancerDiagnoses.code in \"CDC malignant cancer conditions\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 17
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Encounters with Cancer Diagnosis During Encounter Period"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// encounter-diagnosis, problem-list and health-concern Conditions\n// define \"US Core-Categorized Cancer Diagnoses\":\n//   Common.\"US Core-Categorized Conditions\" C\n//     where C.code in Common.\"CDC malignant cancer conditions\"\n\n// define \"Encounters with Cancer Diagnosis During Encounter Period\":\n//   [Encounter] Encounter\n//     with \"US Core-Categorized Cancer Diagnoses\" CancerDiagnosis\n//     such that date from Encounter.period.\"start\".value in day of \"Encounter Period\"\n//       and EndsWith(CancerDiagnosis.encounter.reference, Encounter.id)\n\ndefine \"Encounters with Cancer Diagnosis During Encounter Period\":\n  [Encounter] Encounters\n    where date from Encounters.period.\"start\" in day of \"Encounter Period\"\n      and exists (\n        Common.\"USCore Encounter Cancer Diagnoses\" CancerDiagnoses\n          where EndsWith(CancerDiagnoses.encounter.reference, Encounters.id)\n      )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 18
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Number of Encounters with Cancer Diagnosis During Encounter Period"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Number of Encounters with Cancer Diagnosis During Encounter Period\":\n  Count (\"Encounters with Cancer Diagnosis During Encounter Period\")"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 19
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Has Two or More Encounters with Cancer Diagnosis During Encounter Period"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Has Two or More Encounters with Cancer Diagnosis During Encounter Period\":\n  \"Number of Encounters with Cancer Diagnosis During Encounter Period\" >= 2"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 20
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "USCore Problem List Cancer Diagnoses"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"USCore Problem List Cancer Diagnoses\":\n  [Condition: category in \"Problem List Condition Category\"] CancerDiagnoses\n    where CancerDiagnoses.code in \"CDC malignant cancer conditions\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 21
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Has Active Cancer Diagnosis on Problem List"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Has Active Cancer Diagnosis on Problem List\":\n  exists (\n    Common.\"USCore Problem List Cancer Diagnoses\" CancerDiagnoses\n      where CancerDiagnoses.category in Common.\"Problem List Condition Category\"\n        and exists(\n          CancerDiagnoses.clinicalStatus.coding ClinicalStatus\n            where ClinicalStatus.code ~ 'active'\n        )\n  )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 22
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Is Active Cancer Treatment?"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Is Active Cancer Treatment?\":\n  if (Config.\"Active Cancer Treatment Encounters Condition Is Enabled\") \n    then \"Has Two or More Encounters with Cancer Diagnosis During Encounter Period\"\n      or \"Has Active Cancer Diagnosis on Problem List\"\n  else false"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 23
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommonConfig"
+    },
+    {
+      "url" : "name",
+      "valueString" : "End-Stage Disease Criteria Enabled"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// CDC 2022 General Inclusion Criteria\ndefine \"End-Stage Disease Criteria Enabled\":\n  true"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 24
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Conditions Likely Terminal for Opioid Prescribing"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Conditions Likely Terminal for Opioid Prescribing\":\n  if (Config.\"End-Stage Disease Criteria Enabled\") then\n    exists (\n      Common.\"US Core-Categorized Conditions\" EOLC\n        where EOLC.code in Common.\"Conditions likely terminal for opioid prescribing\"\n          // and EOLC.clinicalStatus in Common.\"Active Condition\"\n    )\n  else false"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 25
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSRoutines"
+    },
+    {
+      "url" : "name",
+      "valueString" : "CDC 2022 Guideline General Inclusion Criteria"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"CDC 2022 Guideline General Inclusion Criteria\":\n  not \"Patient Age Less Than 18\"\n    and not \"Condition Positive for Sickle Cell\"\n    and not \"Is Active Cancer Treatment?\"\n    and not \"Conditions Likely Terminal for Opioid Prescribing\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 26
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC11OrderSelect"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Inclusion Criteria"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Inclusion Criteria\":\n  (\n    (\n      \"Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential\"\n        and exists Common.\"Active Ambulatory Benzodiazepine or CNS Depressant Rx\"\n    )\n      or (\n        \"Patient Is Being Prescribed Benzodiazepine or CNS Depressant\"\n          and exists Common.\"Active Ambulatory Opioid Rx\"\n      )\n  )\n    and Routines.\"CDC 2022 Guideline General Inclusion Criteria\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 27
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Conditions Indicating End of Life or With Limited Life Expectancy"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Conditions Indicating End of Life or With Limited Life Expectancy\":\n  (\n    \"US Core-Categorized Conditions\" C\n      where C.code in \"Conditions likely terminal for opioid prescribing\"\n        and C.clinicalStatus in \"Active Condition\"\n  )\n  union\n  (\n    \"US Core-Categorized Conditions\" C\n      where C.code in \"Limited life expectancy conditions\"\n        and C.clinicalStatus in \"Active Condition\"\n  )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 28
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommonConfig"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Hospice Findings Exclusion Enabled"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// OpioidCDSCommon\ndefine \"Hospice Findings Exclusion Enabled\":\n  false"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 29
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Admitted/Referred/Discharged to Hospice Care"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Admitted/Referred/Discharged to Hospice Care\":\n  (\n    if (Config.\"Hospice Findings Exclusion Enabled\") then\n      [Observation: code in \"Hospice Finding Codes\"] O\n        where not (O.status.value in { 'unknown', 'entered-in-error', 'cancelled' })\n    else\n      {}\n  )\n  union\n  (\n    [Encounter] E\n      where date from E.period.start 1 year or less on or before Today()\n        and (\n          if E.hospitalization.dischargeDisposition.coding is null\n              or not exists (E.hospitalization.dischargeDisposition.coding)\n            then false\n          else E.hospitalization.dischargeDisposition in \"Hospice Disposition\"\n        )\n        and E.status.value in { 'planned', 'arrived', 'in-progress', 'finished', 'onleave' }\n  )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 30
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "End of Life Assessment"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"End of Life Assessment\":\n    // 1. Conditions indicating end of life or with limited life expectancy\n    exists (\n      \"Conditions Indicating End of Life or With Limited Life Expectancy\"\n    )\n    // 2. Admitted/referred/discharged to hospice care\n    or exists (\n      \"Admitted/Referred/Discharged to Hospice Care\"\n    )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 31
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC11OrderSelect"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Exclusion Criteria"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Exclusion Criteria\":\n  Common.\"End of Life Assessment\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 32
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC11OrderSelect"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Is Recommendation Applicable?"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Is Recommendation Applicable?\":\n  \"Inclusion Criteria\"\n    and not \"Exclusion Criteria\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 33
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Is Opioid Analgesic with Ambulatory Misuse Potential?"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function \"Is Opioid Analgesic with Ambulatory Misuse Potential?\"(value List<MedicationRequest>):\n  (\"Get MedicationRequest Medication as Code\"(value)) Rx\n    where Rx.medication in \"Opioid analgesics with ambulatory misuse potential\" \n      and Rx.category in \"Community\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 34
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Get MedicationRequest Medication as Code"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function \"Get MedicationRequest Medication as Code\"(value List<MedicationRequest>):\n  value Rx\n    let Med: \n      if Rx.medication is Reference then singleton from (\n        [Medication] M\n          where M.id = (Last(Split((Rx.medication as FHIR.Reference).reference, '/')))\n      ) else null\n    return \n      MedicationRequest {\n        id: Rx.id,\n        status: Rx.status,\n        intent: Rx.intent,\n        category: Rx.category,\n        medication: if Rx.medication is Reference then Med.code else Rx.medication as CodeableConcept,\n        subject: Rx.subject,\n        authoredOn: Rx.authoredOn,\n        recorder: Rx.recorder,\n        dosageInstruction: Rx.dosageInstruction,\n        dispenseRequest: Rx.dispenseRequest\n      }"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 35
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "FHIRHelpers"
+    },
+    {
+      "url" : "name",
+      "valueString" : "ToString"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function ToString(value string): value.value"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 36
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "FHIRHelpers"
+    },
+    {
+      "url" : "name",
+      "valueString" : "ToConcept"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function ToConcept(concept FHIR.CodeableConcept):\n    if concept is null then\n        null\n    else\n        System.Concept {\n            codes: concept.coding C return ToCode(C),\n            display: concept.text.value\n        }"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 37
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "FHIRHelpers"
+    },
+    {
+      "url" : "name",
+      "valueString" : "ToCode"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function ToCode(coding FHIR.Coding):\n    if coding is null then\n        null\n    else\n        System.Code {\n          code: coding.code.value,\n          system: coding.system.value,\n          version: coding.version.value,\n          display: coding.display.value\n        }"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 38
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "FHIRHelpers"
+    },
+    {
+      "url" : "name",
+      "valueString" : "ToDateTime"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function ToDateTime(value dateTime): value.value"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 39
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Is Benzodiazepine or CNS Depressant?"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function \"Is Benzodiazepine or CNS Depressant?\"(value List<MedicationRequest>):\n  (\"Get MedicationRequest Medication as Code\"(value)) Rx\n    where Rx.medication in \"Benzodiazepine medications\"\n      or Rx.medication in \"CNS Depressant Medications\"\n      and Rx.category in \"Community\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 40
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Get Active Ambulatory Medication Requests"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function \"Get Active Ambulatory Medication Requests\" (value List<MedicationRequest>) returns List<MedicationRequest>:\n  value Rx\n    where Rx.status.value = 'active'\n      and Rx.category in \"Community\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 41
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "id" : "effective-data-requirements",
+    "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-effectiveDataRequirements",
+    "valueCanonical" : "#effective-data-requirements"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-softwaresystem",
+    "valueReference" : {
+      "reference" : "Device/cqf-tooling"
+    }
+  }],
+  "url" : "http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-11-order-select",
+  "identifier" : [{
+    "use" : "official",
+    "value" : "cdc-opioid-guidance"
+  }],
+  "version" : "2022.1.0",
+  "name" : "PlanDefinition_Recommendation_11_Order_Select",
+  "title" : "Recommendation #11 - Concurrent Use of Opioids and Benzodiazepines (order-select)",
+  "type" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+      "code" : "eca-rule",
+      "display" : "ECA Rule"
+    }]
+  },
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-08-06",
+  "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.securityrisksolutions.com"
+    }]
+  }],
+  "description" : "Clinicians should use particular caution when prescribing opioid pain medication and benzodiazepines concurrently and consider whether benefits outweigh risks of concurrent prescribing of opioids and other central nervous system depressants.",
+  "useContext" : [{
+    "code" : {
+      "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
+      "code" : "focus",
+      "display" : "Clinical Focus"
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "182888003",
+        "display" : "Medication requested (situation)"
+      }]
+    }
+  },
+  {
+    "code" : {
+      "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
+      "code" : "focus",
+      "display" : "Clinical Focus"
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "82423001",
+        "display" : "Chronic pain (finding)"
+      }]
+    }
+  }],
+  "purpose" : "The 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain is intended to improve communication between clinicians and patients about the benefits and risks of pain treatments, including opioid therapy; improve the effectiveness and safety of pain treatment; mitigate pain; improve function and quality of life for patients with pain; and reduce risks associated with opioid pain therapy, including opioid use disorder, overdose, and death. The recommendations do not apply to pain related to sickle cell disease or cancer or to patients receiving palliative or end-of-life care.",
+  "usage" : "Clinicians should use particular caution when prescribing opioid pain medication and benzodiazepines concurrently. In addition, clinicians should consider whether benefits outweigh risks for concurrent use of opioids with other central nervous system depressants.",
+  "copyright" : "© CDC 2016+.",
+  "topic" : [{
+    "text" : "Opioid Prescribing"
+  }],
+  "author" : [{
+    "name" : "Kensaku Kawamoto, MD, PhD, MHS"
+  },
+  {
+    "name" : "Bryn Rhodes"
+  },
+  {
+    "name" : "Floyd Eisenberg, MD, MPH"
+  },
+  {
+    "name" : "Robert McClure, MD, MPH"
+  }],
+  "relatedArtifact" : [{
+    "type" : "documentation",
+    "display" : "2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain",
+    "url" : "https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm",
+    "document" : {
+      "url" : "https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm"
+    }
+  }],
+  "library" : ["http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC11OrderSelect"],
+  "action" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/recommendation-strength",
+          "code" : "weak",
+          "display" : "Weak"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/cqf-qualityOfEvidence",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/evidence-quality",
+          "code" : "low",
+          "display" : "Low quality"
+        }]
+      }
+    }],
+    "title" : "Use Particular Caution When Prescribing Opioid Pain Medication and Benzodiazepines or Other CNS Depressants Concurrently",
+    "description" : "Consider whether the benefits outweigh the risks of concurrently prescribing opioids and benzodiazepines, or other central nervous system depressant medications.\r\n\r\nWhen co-prescribing risks outweigh benefits, consult [Recommendation 11 of the 2022 CDC Clinical Practice Guideline](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#:~:text=evidence%20type%3A%203).-,Implementation%20Considerations,-Although%20in%20some) for further guidance.\r\n\r\n[For patients being treated for opioid use disorder who are also taking benzodiazepines or other medications that depress the central nervous system, the CDC recommends not withholding buprenorphine or methadone](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#:~:text=gabapentin%20and%20pregabalin).-,Buprenorphine%20or%20methadone%20for%20opioid%20use%20disorder%20should%20not%20be%20withheld%20from%20patients%20taking%20benzodiazepines%20or%20other%20medications%20that%20depress%20the%20central%20nervous%20system.,-Clinicians%20should%20check).\r\n\r\nIf the decision is made to taper benzodiazepine medications, [the CDC recommends tapering benzodiazepines gradually prior to discontinuation](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#:~:text=Clinicians%20should%20taper%20benzodiazepines%20gradually%20before%20discontinuation%20because%20abrupt%20withdrawal%20can%20be%20associated%20with%20rebound%20anxiety%2C%20hallucinations%2C%20seizures%2C%20delirium%20tremens%2C%20and%2C%20rarely%2C%20death.%20The%20rate%20of%20tapering%20should%20be%20individualized).",
+    "priority" : "urgent",
+    "trigger" : [{
+      "type" : "named-event",
+      "name" : "order-select"
+    }],
+    "condition" : [{
+      "kind" : "applicability",
+      "expression" : {
+        "description" : "Check whether the current order results in the concurrent use of opioid pain medication and benzodiazepines or other central nervous system depressants and if the 2022 CDC guideline general inclusion criteria is met.",
+        "language" : "text/cql.identifier",
+        "expression" : "Is Recommendation Applicable?"
+      }
+    }],
+    "groupingBehavior" : "visual-group",
+    "selectionBehavior" : "any",
+    "action" : [{
+      "description" : "Document - Will modify prescription"
+    },
+    {
+      "description" : "Snooze* - Benefits outweigh risks, snooze 3 months"
+    },
+    {
+      "description" : "Snooze* - N/A see comments, snooze 3 months"
+    }]
+  }]
+}
+
+```

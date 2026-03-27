@@ -1,0 +1,787 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/ValueSet/fentanyl-type-medications> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "fentanyl-type-medications"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset>
+     ] [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet fentanyl-type-medications</b></p><a name=\"fentanyl-type-medications\"> </a><a name=\"hcfentanyl-type-medications\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-computablevalueset.html\">CPGComputableValueSet</a>, <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-executablevalueset.html\">CPGExecutableValueSet</a></p></div><p>This value set contains 98 concepts</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1740008\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1740008</td><td>{2 (fentanyl 0.6 MG/ACTUAT Mucosal Spray [Subsys]) } Pack [Subsys 1200 MCG]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1740010\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1740010</td><td>{2 (fentanyl 0.8 MG/ACTUAT Mucosal Spray [Subsys]) } Pack [Subsys 1600 MCG]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1740007\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1740007</td><td>{2 (fentanyl 0.6 MG/ACTUAT Mucosal Spray) } Pack</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1740009\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1740009</td><td>{2 (fentanyl 0.8 MG/ACTUAT Mucosal Spray) } Pack</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1053651\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1053651</td><td>fentanyl 0.1 MG Sublingual Tablet [Abstral]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1053654\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1053654</td><td>fentanyl 0.2 MG Sublingual Tablet [Abstral]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1053657\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1053657</td><td>fentanyl 0.3 MG Sublingual Tablet [Abstral]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1053660\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1053660</td><td>fentanyl 0.4 MG Sublingual Tablet [Abstral]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1053663\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1053663</td><td>fentanyl 0.6 MG Sublingual Tablet [Abstral]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1053666\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1053666</td><td>fentanyl 0.8 MG Sublingual Tablet [Abstral]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1115575\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1115575</td><td>fentanyl 0.1 MG/ACTUAT Metered Dose Nasal Spray [Lazanda]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1115579\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1115579</td><td>fentanyl 0.4 MG/ACTUAT Metered Dose Nasal Spray [Lazanda]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1237055\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1237055</td><td>fentanyl 0.1 MG/ACTUAT Mucosal Spray [Subsys]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1237059\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1237059</td><td>fentanyl 0.2 MG/ACTUAT Mucosal Spray [Subsys]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1237062\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1237062</td><td>fentanyl 0.4 MG/ACTUAT Mucosal Spray [Subsys]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1237066\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1237066</td><td>fentanyl 0.6 MG/ACTUAT Mucosal Spray [Subsys]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1237070\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1237070</td><td>fentanyl 0.8 MG/ACTUAT Mucosal Spray [Subsys]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1666837\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1666837</td><td>80 ACTUAT fentanyl 0.04 MG/ACTUAT Transdermal System [Ionsys]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1729322\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1729322</td><td>fentanyl 0.3 MG/ACTUAT Metered Dose Nasal Spray [Lazanda]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-261106\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  261106</td><td>fentanyl 0.2 MG Oral Lozenge [Actiq]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-261107\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  261107</td><td>fentanyl 0.6 MG Oral Lozenge [Actiq]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-261108\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  261108</td><td>fentanyl 0.8 MG Oral Lozenge [Actiq]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-261109\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  261109</td><td>fentanyl 1.2 MG Oral Lozenge [Actiq]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-261110\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  261110</td><td>fentanyl 1.6 MG Oral Lozenge [Actiq]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-262219\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  262219</td><td>fentanyl 0.4 MG Oral Lozenge [Actiq]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-668622\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  668622</td><td>fentanyl 0.1 MG Buccal Tablet [Fentora]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-668624\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  668624</td><td>fentanyl 0.2 MG Buccal Tablet [Fentora]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-668626\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  668626</td><td>fentanyl 0.4 MG Buccal Tablet [Fentora]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-668628\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  668628</td><td>fentanyl 0.6 MG Buccal Tablet [Fentora]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-668630\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  668630</td><td>fentanyl 0.8 MG Buccal Tablet [Fentora]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1053647\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1053647</td><td>fentanyl 0.1 MG Sublingual Tablet</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1053652\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1053652</td><td>fentanyl 0.2 MG Sublingual Tablet</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1053655\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1053655</td><td>fentanyl 0.3 MG Sublingual Tablet</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1053658\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1053658</td><td>fentanyl 0.4 MG Sublingual Tablet</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1053661\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1053661</td><td>fentanyl 0.6 MG Sublingual Tablet</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1053664\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1053664</td><td>fentanyl 0.8 MG Sublingual Tablet</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1115573\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1115573</td><td>fentanyl 0.1 MG/ACTUAT Metered Dose Nasal Spray</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1115577\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1115577</td><td>fentanyl 0.4 MG/ACTUAT Metered Dose Nasal Spray</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1237050\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1237050</td><td>fentanyl 0.1 MG/ACTUAT Mucosal Spray</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1237057\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1237057</td><td>fentanyl 0.2 MG/ACTUAT Mucosal Spray</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1237060\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1237060</td><td>fentanyl 0.4 MG/ACTUAT Mucosal Spray</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1237064\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1237064</td><td>fentanyl 0.6 MG/ACTUAT Mucosal Spray</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1237068\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1237068</td><td>fentanyl 0.8 MG/ACTUAT Mucosal Spray</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1603495\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1603495</td><td>72 HR fentanyl 0.0375 MG/HR Transdermal System</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1603498\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1603498</td><td>72 HR fentanyl 0.0625 MG/HR Transdermal System</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1603501\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1603501</td><td>72 HR fentanyl 0.0875 MG/HR Transdermal System</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1666831\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1666831</td><td>80 ACTUAT fentanyl 0.04 MG/ACTUAT Transdermal System</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1729320\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1729320</td><td>fentanyl 0.3 MG/ACTUAT Metered Dose Nasal Spray</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1735003\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1735003</td><td>2 ML fentanyl 0.05 MG/ML Injection</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1735006\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1735006</td><td>10 ML fentanyl 0.05 MG/ML Injection</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1735007\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1735007</td><td>5 ML fentanyl 0.05 MG/ML Injection</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1735008\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1735008</td><td>20 ML fentanyl 0.05 MG/ML Injection</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1735013\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1735013</td><td>50 ML fentanyl 0.05 MG/ML Injection</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-197696\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  197696</td><td>72 HR fentanyl 0.075 MG/HR Transdermal System</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2168270\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2168270</td><td>1 ML fentanyl 0.05 MG/ML Injection</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-245134\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  245134</td><td>72 HR fentanyl 0.025 MG/HR Transdermal System</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-245135\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  245135</td><td>72 HR fentanyl 0.05 MG/HR Transdermal System</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-245136\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  245136</td><td>72 HR fentanyl 0.1 MG/HR Transdermal System</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2474267\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2474267</td><td>2 ML fentanyl 0.05 MG/ML Prefilled Syringe</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2474269\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2474269</td><td>1 ML fentanyl 0.05 MG/ML Prefilled Syringe</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2629337\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2629337</td><td>0.5 ML fentanyl 0.05 MG/ML Prefilled Syringe</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2635081\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2635081</td><td>100 ML fentanyl 0.05 MG/ML Injection</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-310293\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  310293</td><td>fentanyl 1.2 MG Oral Lozenge</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-310294\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  310294</td><td>fentanyl 1.6 MG Oral Lozenge</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-310295\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  310295</td><td>fentanyl 0.2 MG Oral Lozenge</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-310296\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  310296</td><td>fentanyl 0.3 MG Oral Lozenge</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-310297\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  310297</td><td>fentanyl 0.4 MG Oral Lozenge</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-313992\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  313992</td><td>fentanyl 0.6 MG Oral Lozenge</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-313993\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  313993</td><td>fentanyl 0.8 MG Oral Lozenge</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-577057\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  577057</td><td>72 HR fentanyl 0.012 MG/HR Transdermal System</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-668363\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  668363</td><td>fentanyl 0.1 MG Buccal Tablet</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-668364\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  668364</td><td>fentanyl 0.2 MG Buccal Tablet</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-668365\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  668365</td><td>fentanyl 0.4 MG Buccal Tablet</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-668366\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  668366</td><td>fentanyl 0.6 MG Buccal Tablet</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-668367\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  668367</td><td>fentanyl 0.8 MG Buccal Tablet</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-706898\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  706898</td><td>fentanyl 0.3 MG Buccal Tablet</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-727759\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  727759</td><td>2 ML fentanyl 0.05 MG/ML Cartridge</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-858087\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  858087</td><td>fentanyl 1.2 MG Buccal Film</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-858092\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  858092</td><td>fentanyl 0.2 MG Buccal Film</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-858095\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  858095</td><td>fentanyl 0.4 MG Buccal Film</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-858098\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  858098</td><td>fentanyl 0.6 MG Buccal Film</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-858101\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  858101</td><td>fentanyl 0.8 MG Buccal Film</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2103199\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2103199</td><td>sufentanil 0.03 MG Sublingual Tablet [Dsuvia]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1809097\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1809097</td><td>1 ML sufentanil 0.05 MG/ML Injection</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1809102\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1809102</td><td>2 ML sufentanil 0.05 MG/ML Injection</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1809104\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1809104</td><td>5 ML sufentanil 0.05 MG/ML Injection</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-2103192\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  2103192</td><td>sufentanil 0.03 MG Sublingual Tablet</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-106500\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  106500</td><td>alfentanil 5 MG/ML Injectable Solution</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1723206\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1723206</td><td>2 ML alfentanil 0.5 MG/ML Injection</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1723208\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1723208</td><td>10 ML alfentanil 0.5 MG/ML Injection</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1723209\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1723209</td><td>20 ML alfentanil 0.5 MG/ML Injection</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1723210\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1723210</td><td>5 ML alfentanil 0.5 MG/ML Injection</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1729581\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1729581</td><td>remifentanil 1 MG Injection [Ultiva]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1729586\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1729586</td><td>remifentanil 2 MG Injection [Ultiva]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1729712\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1729712</td><td>remifentanil 5 MG Injection [Ultiva]</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1729578\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1729578</td><td>remifentanil 1 MG Injection</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1729584\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1729584</td><td>remifentanil 2 MG Injection</td></tr><tr><td><a name=\"fentanyl-type-medications-http://www.nlm.nih.gov/research/umls/rxnorm-1729710\"> </a><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></td><td style=\"white-space:nowrap\">  1729710</td><td>remifentanil 5 MG Injection</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-author"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/valueset-author>
+     ] ;
+     fhir:value [
+       a fhir:ContactDetail ;
+       fhir:name [ fhir:v "MD Partners, Inc." ] ;
+       fhir:telecom ( [
+         fhir:system [ fhir:v "email" ] ;
+         fhir:value [ fhir:v "info@mdpartners.com" ]
+       ] )
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "computable"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability>
+     ] ;
+     fhir:value [
+       a fhir:Code ;
+       fhir:v "executable"
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning>
+     ] ;
+     fhir:value [
+       a fhir:String ;
+       fhir:v "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+     ]
+  ] [
+     fhir:url [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/valueset-rules-text"^^xsd:anyURI ;
+       fhir:l <http://hl7.org/fhir/StructureDefinition/valueset-rules-text>
+     ] ;
+     fhir:value [
+       a fhir:Markdown ;
+       fhir:v "https://mor.nlm.nih.gov/RxMix/ Script: \r\nStep 1 Upload to RxMix a workflow config file  named GetRelatedByType.config containing the following workflow text: <WFE><filteredOutputs>RXCUI|name|term_type</filteredOutputs><input>NOINPUT</input><FS><service>NOINPUT</service><function>getRelatedByType</function><level>0</level><paramSize>2</paramSize><param order ='0'>?</param><param order ='1'>BPCK,GPCK,SBD,SCD</param></FS></WFE> \r\n\r\nStep 2 Create Batch text input file (Ingredients.txt) with following RxNorm Fentanyl-type ingredient codes representing fentanyl, sufentanil, alfentanil, remifentanil as an input within the file:\r\n4337\r\n56795\r\n480\r\n73032\r\n\r\nStep 3 Upload the batch text input file Ingredients.txt created in step 2. \r\n\r\nStep 4 Submit the batch which will run the workflow using the input codes to generate a combined set of all the concepts needed..\r\n"
+     ]
+  ] ) ; # 
+  fhir:url [
+     fhir:v "http://fhir.org/guides/cdc/opioid-cds/ValueSet/fentanyl-type-medications"^^xsd:anyURI ;
+     fhir:l <http://fhir.org/guides/cdc/opioid-cds/ValueSet/fentanyl-type-medications>
+  ] ; # 
+  fhir:version [ fhir:v "2022.1.0"] ; # 
+  fhir:name [ fhir:v "FENTANYL_TYPE_MEDICATIONS"] ; # 
+  fhir:title [ fhir:v "Fentanyl-type medications"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v false] ; # 
+  fhir:date [ fhir:v "2025-02-24T13:06:38-07:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "CDC / Security Risk Solutions, Inc. (SRS)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.securityrisksolutions.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Fentanyl and similar medications (sufentanil, alfentanil, remifentanil)"] ; # 
+  fhir:copyright [ fhir:v "© CDC 2016+."] ; # 
+  fhir:expansion [
+     fhir:timestamp [ fhir:v "2025-02-24T13:06:38-07:00"^^xsd:dateTime ] ;
+     fhir:total [ fhir:v 98 ] ;
+     fhir:contains ( [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1740008" ] ;
+       fhir:display [ fhir:v "{2 (fentanyl 0.6 MG/ACTUAT Mucosal Spray [Subsys]) } Pack [Subsys 1200 MCG]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1740010" ] ;
+       fhir:display [ fhir:v "{2 (fentanyl 0.8 MG/ACTUAT Mucosal Spray [Subsys]) } Pack [Subsys 1600 MCG]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1740007" ] ;
+       fhir:display [ fhir:v "{2 (fentanyl 0.6 MG/ACTUAT Mucosal Spray) } Pack" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1740009" ] ;
+       fhir:display [ fhir:v "{2 (fentanyl 0.8 MG/ACTUAT Mucosal Spray) } Pack" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1053651" ] ;
+       fhir:display [ fhir:v "fentanyl 0.1 MG Sublingual Tablet [Abstral]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1053654" ] ;
+       fhir:display [ fhir:v "fentanyl 0.2 MG Sublingual Tablet [Abstral]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1053657" ] ;
+       fhir:display [ fhir:v "fentanyl 0.3 MG Sublingual Tablet [Abstral]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1053660" ] ;
+       fhir:display [ fhir:v "fentanyl 0.4 MG Sublingual Tablet [Abstral]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1053663" ] ;
+       fhir:display [ fhir:v "fentanyl 0.6 MG Sublingual Tablet [Abstral]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1053666" ] ;
+       fhir:display [ fhir:v "fentanyl 0.8 MG Sublingual Tablet [Abstral]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1115575" ] ;
+       fhir:display [ fhir:v "fentanyl 0.1 MG/ACTUAT Metered Dose Nasal Spray [Lazanda]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1115579" ] ;
+       fhir:display [ fhir:v "fentanyl 0.4 MG/ACTUAT Metered Dose Nasal Spray [Lazanda]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1237055" ] ;
+       fhir:display [ fhir:v "fentanyl 0.1 MG/ACTUAT Mucosal Spray [Subsys]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1237059" ] ;
+       fhir:display [ fhir:v "fentanyl 0.2 MG/ACTUAT Mucosal Spray [Subsys]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1237062" ] ;
+       fhir:display [ fhir:v "fentanyl 0.4 MG/ACTUAT Mucosal Spray [Subsys]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1237066" ] ;
+       fhir:display [ fhir:v "fentanyl 0.6 MG/ACTUAT Mucosal Spray [Subsys]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1237070" ] ;
+       fhir:display [ fhir:v "fentanyl 0.8 MG/ACTUAT Mucosal Spray [Subsys]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1666837" ] ;
+       fhir:display [ fhir:v "80 ACTUAT fentanyl 0.04 MG/ACTUAT Transdermal System [Ionsys]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1729322" ] ;
+       fhir:display [ fhir:v "fentanyl 0.3 MG/ACTUAT Metered Dose Nasal Spray [Lazanda]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "261106" ] ;
+       fhir:display [ fhir:v "fentanyl 0.2 MG Oral Lozenge [Actiq]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "261107" ] ;
+       fhir:display [ fhir:v "fentanyl 0.6 MG Oral Lozenge [Actiq]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "261108" ] ;
+       fhir:display [ fhir:v "fentanyl 0.8 MG Oral Lozenge [Actiq]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "261109" ] ;
+       fhir:display [ fhir:v "fentanyl 1.2 MG Oral Lozenge [Actiq]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "261110" ] ;
+       fhir:display [ fhir:v "fentanyl 1.6 MG Oral Lozenge [Actiq]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "262219" ] ;
+       fhir:display [ fhir:v "fentanyl 0.4 MG Oral Lozenge [Actiq]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "668622" ] ;
+       fhir:display [ fhir:v "fentanyl 0.1 MG Buccal Tablet [Fentora]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "668624" ] ;
+       fhir:display [ fhir:v "fentanyl 0.2 MG Buccal Tablet [Fentora]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "668626" ] ;
+       fhir:display [ fhir:v "fentanyl 0.4 MG Buccal Tablet [Fentora]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "668628" ] ;
+       fhir:display [ fhir:v "fentanyl 0.6 MG Buccal Tablet [Fentora]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "668630" ] ;
+       fhir:display [ fhir:v "fentanyl 0.8 MG Buccal Tablet [Fentora]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1053647" ] ;
+       fhir:display [ fhir:v "fentanyl 0.1 MG Sublingual Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1053652" ] ;
+       fhir:display [ fhir:v "fentanyl 0.2 MG Sublingual Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1053655" ] ;
+       fhir:display [ fhir:v "fentanyl 0.3 MG Sublingual Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1053658" ] ;
+       fhir:display [ fhir:v "fentanyl 0.4 MG Sublingual Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1053661" ] ;
+       fhir:display [ fhir:v "fentanyl 0.6 MG Sublingual Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1053664" ] ;
+       fhir:display [ fhir:v "fentanyl 0.8 MG Sublingual Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1115573" ] ;
+       fhir:display [ fhir:v "fentanyl 0.1 MG/ACTUAT Metered Dose Nasal Spray" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1115577" ] ;
+       fhir:display [ fhir:v "fentanyl 0.4 MG/ACTUAT Metered Dose Nasal Spray" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1237050" ] ;
+       fhir:display [ fhir:v "fentanyl 0.1 MG/ACTUAT Mucosal Spray" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1237057" ] ;
+       fhir:display [ fhir:v "fentanyl 0.2 MG/ACTUAT Mucosal Spray" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1237060" ] ;
+       fhir:display [ fhir:v "fentanyl 0.4 MG/ACTUAT Mucosal Spray" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1237064" ] ;
+       fhir:display [ fhir:v "fentanyl 0.6 MG/ACTUAT Mucosal Spray" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1237068" ] ;
+       fhir:display [ fhir:v "fentanyl 0.8 MG/ACTUAT Mucosal Spray" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1603495" ] ;
+       fhir:display [ fhir:v "72 HR fentanyl 0.0375 MG/HR Transdermal System" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1603498" ] ;
+       fhir:display [ fhir:v "72 HR fentanyl 0.0625 MG/HR Transdermal System" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1603501" ] ;
+       fhir:display [ fhir:v "72 HR fentanyl 0.0875 MG/HR Transdermal System" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1666831" ] ;
+       fhir:display [ fhir:v "80 ACTUAT fentanyl 0.04 MG/ACTUAT Transdermal System" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1729320" ] ;
+       fhir:display [ fhir:v "fentanyl 0.3 MG/ACTUAT Metered Dose Nasal Spray" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1735003" ] ;
+       fhir:display [ fhir:v "2 ML fentanyl 0.05 MG/ML Injection" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1735006" ] ;
+       fhir:display [ fhir:v "10 ML fentanyl 0.05 MG/ML Injection" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1735007" ] ;
+       fhir:display [ fhir:v "5 ML fentanyl 0.05 MG/ML Injection" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1735008" ] ;
+       fhir:display [ fhir:v "20 ML fentanyl 0.05 MG/ML Injection" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1735013" ] ;
+       fhir:display [ fhir:v "50 ML fentanyl 0.05 MG/ML Injection" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "197696" ] ;
+       fhir:display [ fhir:v "72 HR fentanyl 0.075 MG/HR Transdermal System" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2168270" ] ;
+       fhir:display [ fhir:v "1 ML fentanyl 0.05 MG/ML Injection" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "245134" ] ;
+       fhir:display [ fhir:v "72 HR fentanyl 0.025 MG/HR Transdermal System" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "245135" ] ;
+       fhir:display [ fhir:v "72 HR fentanyl 0.05 MG/HR Transdermal System" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "245136" ] ;
+       fhir:display [ fhir:v "72 HR fentanyl 0.1 MG/HR Transdermal System" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2474267" ] ;
+       fhir:display [ fhir:v "2 ML fentanyl 0.05 MG/ML Prefilled Syringe" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2474269" ] ;
+       fhir:display [ fhir:v "1 ML fentanyl 0.05 MG/ML Prefilled Syringe" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2629337" ] ;
+       fhir:display [ fhir:v "0.5 ML fentanyl 0.05 MG/ML Prefilled Syringe" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2635081" ] ;
+       fhir:display [ fhir:v "100 ML fentanyl 0.05 MG/ML Injection" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "310293" ] ;
+       fhir:display [ fhir:v "fentanyl 1.2 MG Oral Lozenge" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "310294" ] ;
+       fhir:display [ fhir:v "fentanyl 1.6 MG Oral Lozenge" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "310295" ] ;
+       fhir:display [ fhir:v "fentanyl 0.2 MG Oral Lozenge" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "310296" ] ;
+       fhir:display [ fhir:v "fentanyl 0.3 MG Oral Lozenge" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "310297" ] ;
+       fhir:display [ fhir:v "fentanyl 0.4 MG Oral Lozenge" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "313992" ] ;
+       fhir:display [ fhir:v "fentanyl 0.6 MG Oral Lozenge" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "313993" ] ;
+       fhir:display [ fhir:v "fentanyl 0.8 MG Oral Lozenge" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "577057" ] ;
+       fhir:display [ fhir:v "72 HR fentanyl 0.012 MG/HR Transdermal System" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "668363" ] ;
+       fhir:display [ fhir:v "fentanyl 0.1 MG Buccal Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "668364" ] ;
+       fhir:display [ fhir:v "fentanyl 0.2 MG Buccal Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "668365" ] ;
+       fhir:display [ fhir:v "fentanyl 0.4 MG Buccal Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "668366" ] ;
+       fhir:display [ fhir:v "fentanyl 0.6 MG Buccal Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "668367" ] ;
+       fhir:display [ fhir:v "fentanyl 0.8 MG Buccal Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "706898" ] ;
+       fhir:display [ fhir:v "fentanyl 0.3 MG Buccal Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "727759" ] ;
+       fhir:display [ fhir:v "2 ML fentanyl 0.05 MG/ML Cartridge" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "858087" ] ;
+       fhir:display [ fhir:v "fentanyl 1.2 MG Buccal Film" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "858092" ] ;
+       fhir:display [ fhir:v "fentanyl 0.2 MG Buccal Film" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "858095" ] ;
+       fhir:display [ fhir:v "fentanyl 0.4 MG Buccal Film" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "858098" ] ;
+       fhir:display [ fhir:v "fentanyl 0.6 MG Buccal Film" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "858101" ] ;
+       fhir:display [ fhir:v "fentanyl 0.8 MG Buccal Film" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2103199" ] ;
+       fhir:display [ fhir:v "sufentanil 0.03 MG Sublingual Tablet [Dsuvia]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1809097" ] ;
+       fhir:display [ fhir:v "1 ML sufentanil 0.05 MG/ML Injection" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1809102" ] ;
+       fhir:display [ fhir:v "2 ML sufentanil 0.05 MG/ML Injection" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1809104" ] ;
+       fhir:display [ fhir:v "5 ML sufentanil 0.05 MG/ML Injection" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "2103192" ] ;
+       fhir:display [ fhir:v "sufentanil 0.03 MG Sublingual Tablet" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "106500" ] ;
+       fhir:display [ fhir:v "alfentanil 5 MG/ML Injectable Solution" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1723206" ] ;
+       fhir:display [ fhir:v "2 ML alfentanil 0.5 MG/ML Injection" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1723208" ] ;
+       fhir:display [ fhir:v "10 ML alfentanil 0.5 MG/ML Injection" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1723209" ] ;
+       fhir:display [ fhir:v "20 ML alfentanil 0.5 MG/ML Injection" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1723210" ] ;
+       fhir:display [ fhir:v "5 ML alfentanil 0.5 MG/ML Injection" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1729581" ] ;
+       fhir:display [ fhir:v "remifentanil 1 MG Injection [Ultiva]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1729586" ] ;
+       fhir:display [ fhir:v "remifentanil 2 MG Injection [Ultiva]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1729712" ] ;
+       fhir:display [ fhir:v "remifentanil 5 MG Injection [Ultiva]" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1729578" ] ;
+       fhir:display [ fhir:v "remifentanil 1 MG Injection" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1729584" ] ;
+       fhir:display [ fhir:v "remifentanil 2 MG Injection" ]
+     ] [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1729710" ] ;
+       fhir:display [ fhir:v "remifentanil 5 MG Injection" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

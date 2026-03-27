@@ -1,0 +1,79 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "xylazine-urine-drug-screening-tests",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset",
+    "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet xylazine-urine-drug-screening-tests</b></p><a name=\"xylazine-urine-drug-screening-tests\"> </a><a name=\"hcxylazine-urine-drug-screening-tests\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profiles: <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-computablevalueset.html\">CPGComputableValueSet</a>, <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-executablevalueset.html\">CPGExecutableValueSet</a></p></div><p>This value set contains 3 concepts</p><table class=\"codes\"><tr><td><b>System</b></td><td><b>Version</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a name=\"xylazine-urine-drug-screening-tests-http://loinc.org-101809-2\"> </a><code>http://loinc.org</code></td><td>2.81</td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"https://loinc.org/101809-2/\">101809-2</a></td><td>Xylazine [Presence] in Urine by Confirmatory method</td></tr><tr><td><a name=\"xylazine-urine-drug-screening-tests-http://loinc.org-101808-4\"> </a><code>http://loinc.org</code></td><td>2.81</td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"https://loinc.org/101808-4/\">101808-4</a></td><td>Xylazine [Mass/volume] in Urine by Confirmatory method</td></tr><tr><td><a name=\"xylazine-urine-drug-screening-tests-http://loinc.org-101810-0\"> </a><code>http://loinc.org</code></td><td>2.81</td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"https://loinc.org/101810-0/\">101810-0</a></td><td>Xylazine/Creatinine [Mass Ratio] in Urine by Confirmatory method</td></tr></table></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueCode" : "computable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueCode" : "executable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning",
+    "valueString" : "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+  }],
+  "url" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/xylazine-urine-drug-screening-tests",
+  "version" : "2022.1.0",
+  "name" : "XYLAZINE_URINE_DRUG_SCREENING_TESTS",
+  "title" : "Xylazine drug urine screening tests",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2024-05-09T18:08:12-06:00",
+  "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.securityrisksolutions.com"
+    }]
+  }],
+  "description" : "Individual tests and panels of tests of urine for xylazine",
+  "purpose" : "Identification of xylazine urine drug tests where results can be used when considering opioid therapy",
+  "copyright" : "© CDC 2016+.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://loinc.org",
+      "version" : "2.81",
+      "filter" : [{
+        "property" : "parent",
+        "op" : "=",
+        "value" : "LP436919-7"
+      },
+      {
+        "property" : "SYSTEM",
+        "op" : "=",
+        "value" : "LP7681-2"
+      }]
+    }]
+  },
+  "expansion" : {
+    "timestamp" : "2024-05-09T18:08:12-06:00",
+    "total" : 3,
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "version" : "2.81",
+      "code" : "101809-2",
+      "display" : "Xylazine [Presence] in Urine by Confirmatory method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "version" : "2.81",
+      "code" : "101808-4",
+      "display" : "Xylazine [Mass/volume] in Urine by Confirmatory method"
+    },
+    {
+      "system" : "http://loinc.org",
+      "version" : "2.81",
+      "code" : "101810-0",
+      "display" : "Xylazine/Creatinine [Mass Ratio] in Urine by Confirmatory method"
+    }]
+  }
+}

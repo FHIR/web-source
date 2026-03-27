@@ -1,0 +1,94 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/ActivityDefinition/opioidcds-risk-assessment-request> a fhir:ActivityDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "opioidcds-risk-assessment-request"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <table class=\"grid dict\">\n        \n        <tr>\n            <th scope=\"row\"><b>Id: </b></th>\n            <td style=\"padding-left: 4px;\">opioidcds-risk-assessment-request</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Url: </b></th>\n            <td style=\"padding-left: 4px;\"><a href=\"ActivityDefinition-opioidcds-risk-assessment-request.html\">ActivityDefinition - Risk Assessment ServiceRequest</a></td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Version: </b></th>\n            <td style=\"padding-left: 4px;\">2022.1.0</td>\n        </tr>\n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Name: </b></th>\n            <td style=\"padding-left: 4px;\">ActivityDefinition_Risk_Assessment_ServiceRequest</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Title: </b></th>\n            <td style=\"padding-left: 4px;\">ActivityDefinition - Risk Assessment ServiceRequest</td>\n        </tr>\n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Status: </b></th>\n            <td style=\"padding-left: 4px;\">active</td>\n        </tr>\n        \n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Date: </b></th>\n            <td style=\"padding-left: 4px;\">2024-05-09</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Publisher: </b></th>\n            <td style=\"padding-left: 4px;\">CDC / Security Risk Solutions, Inc. (SRS)</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Description: </b></th>\n            <td style=\"padding-left: 4px;\">As part of the workflow for recommendation 7, it is recommended that a risk assessment be conducted if the inclusion criteria is met.</td>\n        </tr>\n        \n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Use Context: </b></th>\n            <td style=\"padding-left: 4px;\">\n                <table class=\"grid-dict\">\n                    <tr><th><b>code</b></th><th><b>value</b></th><th><b>display</b></th></tr>\n                    \n                      <tr>\n                        <td>focus</td>\n                        <td>225314003</td>\n                        <td>Risk management (procedure)</td>\n                      </tr>\n                    \n                </table>\n            </td>\n        </tr>\n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Purpose: </b></th>\n            <td style=\"padding-left: 4px;\"><div><p>Provides dynamic risk assessment suggestion as part of recommendation 7 workflow.</p>\n</div></td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Usage: </b></th>\n            <td style=\"padding-left: 4px;\">Used to create a risk assessment ServiceRequest when the inclusion criteria is satisfied for recommendation 7.</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Copyright: </b></th>\n            <td style=\"padding-left: 4px;\"><div><p>© CDC 2016+.</p>\n</div></td>\n        </tr>\n        \n        \n        \n        \n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Kind: </b></th>\n            <td style=\"padding-left: 4px;\">ServiceRequest</td>\n        </tr>\n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Type: </b></th>\n            <td style=\"padding-left: 4px;\">\n                \n                    \n                        \n                        <p style=\"margin-bottom: 5px;\">\n                            <b>system: </b> <span><a href=\"https://browser.ihtsdotools.org/\">http://snomed.info/sct</a></span>\n                        </p>\n                        \n                        \n                        <p style=\"margin-bottom: 5px;\">\n                            <b>code: </b> <span>454281000124100</span>\n                        </p>\n                        \n                        \n                        <p style=\"margin-bottom: 5px;\">\n                            <b>display: </b> <span>Assessment of risk for opioid abuse (procedure)</span>\n                        </p>\n                        \n                    \n                \n                \n            </td>\n        </tr>\n        \n        \n        \n        \n        \n        \n        \n        \n    </table>\n</div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://fhir.org/guides/cdc/opioid-cds/ActivityDefinition/opioidcds-risk-assessment-request"^^xsd:anyURI ;
+     fhir:l <http://fhir.org/guides/cdc/opioid-cds/ActivityDefinition/opioidcds-risk-assessment-request>
+  ] ; # 
+  fhir:version [ fhir:v "2022.1.0"] ; # 
+  fhir:name [ fhir:v "ActivityDefinition_Risk_Assessment_ServiceRequest"] ; # 
+  fhir:title [ fhir:v "ActivityDefinition - Risk Assessment ServiceRequest"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2024-05-09"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "CDC / Security Risk Solutions, Inc. (SRS)"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.securityrisksolutions.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "As part of the workflow for recommendation 7, it is recommended that a risk assessment be conducted if the inclusion criteria is met."] ; # 
+  fhir:useContext ( [
+     fhir:code [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/usage-context-type"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/usage-context-type>
+       ] ;
+       fhir:code [ fhir:v "focus" ] ;
+       fhir:display [ fhir:v "Clinical Focus" ]
+     ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         a sct:225314003 ;
+         fhir:system [
+           fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+           fhir:l <http://snomed.info/sct>
+         ] ;
+         fhir:code [ fhir:v "225314003" ] ;
+         fhir:display [ fhir:v "Risk management (procedure)" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:purpose [ fhir:v "Provides dynamic risk assessment suggestion as part of recommendation 7 workflow."] ; # 
+  fhir:usage [ fhir:v "Used to create a risk assessment ServiceRequest when the inclusion criteria is satisfied for recommendation 7."] ; # 
+  fhir:copyright [ fhir:v "© CDC 2016+."] ; # 
+  fhir:topic ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/definition-topic"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/definition-topic>
+       ] ;
+       fhir:code [ fhir:v "assessment" ] ;
+       fhir:display [ fhir:v "Assessment" ]
+     ] ) ;
+     fhir:text [ fhir:v "Opioid Prescribing" ]
+  ] ) ; # 
+  fhir:author ( [
+     fhir:name [ fhir:v "Kensaku Kawamoto, MD, PhD, MHS" ]
+  ] [
+     fhir:name [ fhir:v "Bryn Rhodes" ]
+  ] [
+     fhir:name [ fhir:v "Floyd Eisenberg, MD, MPH" ]
+  ] [
+     fhir:name [ fhir:v "Robert McClure, MD, MPH" ]
+  ] ) ; # 
+  fhir:kind [ fhir:v "ServiceRequest"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:454281000124100 ;
+       fhir:system [
+         fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+         fhir:l <http://snomed.info/sct>
+       ] ;
+       fhir:version [ fhir:v "http://snomed.info/sct/731000124108" ] ;
+       fhir:code [ fhir:v "454281000124100" ] ;
+       fhir:display [ fhir:v "Assessment of risk for opioid abuse (procedure)" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

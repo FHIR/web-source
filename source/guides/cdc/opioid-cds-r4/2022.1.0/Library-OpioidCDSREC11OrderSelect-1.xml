@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1" localId="0">
+   <annotation translatorVersion="3.25.0" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="Overloads" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="270">
+         <a:s>library OpioidCDSREC11OrderSelect version '2022.1.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="OpioidCDSREC11OrderSelect" system="http://fhir.org/guides/cdc/opioid-cds" version="2022.1.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localId="1" localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="206" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="206">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="208" locator="5:1-5:54" localIdentifier="FHIRHelpers" path="http://fhir.org/guides/cdc/opioid-cds/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="208">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1' called FHIRHelpers</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="210" locator="6:1-6:56" localIdentifier="Common" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommon" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="210">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSCommon</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Common</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="212" locator="7:1-7:62" localIdentifier="Config" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommonConfig" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="212">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSCommonConfig</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Config</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="214" locator="8:1-8:60" localIdentifier="Routines" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSRoutines" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="214">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSRoutines</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Routines</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <parameters>
+      <def localId="216" locator="40:1-40:54" name="ContextPrescriptions" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="216">
+               <a:s>/*
+**
+**  Recommendation #11
+**    Clinicians should use particular caution when prescribing opioid pain medication and benzodiazepines concurrently 
+**    and consider whether benefits outweigh risks of concurrent prescribing of opioids and other central nervous system 
+**    depressants  (recommendation category: B; evidence type: 3).
+**
+**  When
+**    Provider is prescribing an opioid analgesic with ambulatory misuse potential in the outpatient setting or
+**    Provider is prescribing a benzodiazepine or other central nervous system depressant medication
+**    CDC 2022 guideline general inclusion criteria met for this patient:
+**      Patient is 18 or over
+**      Patient does not have evidence of sickle cell disease
+**      Patient does not have findings indicating limited life expectancy
+**      Patient does not have orders for therapies indicating end of life care
+**      Patient is not undergoing active cancer treatment:
+**        Patient has had at least 2 office visits within the past 12 months with an oncology specialist present, or
+**        Patient has had at least 2 office visits within the past 12 months with a CDC malignant cancer condition diagnosis
+**      Patient does not have conditions likely terminal for opioid prescribing present
+**    Patient prescribed opioid analgesic with ambulatory misuse potential and benzodiazepine or other central nervous system depressant medication concurrently
+**  Then
+**    Use particular caution when prescribing opioid pain medication and benzodiazepines concurrently:
+**      Document - Will modify prescription
+**      Snooze - Benefits outweigh risks, snooze 3 months
+**      Snooze - N/A see comment, snooze 3 months
+**
+*/
+
+// META: Plan Definition: http://fhir.org/guides/cdc/opioid-cds-r4/PlanDefinition/opioid-cds-11-order-select
+
+parameter ContextPrescriptions </a:s>
+               <a:s r="217">
+                  <a:s>List&lt;</a:s>
+                  <a:s r="218">
+                     <a:s>MedicationRequest</a:s>
+                  </a:s>
+                  <a:s>></a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <parameterTypeSpecifier localId="217" locator="40:32-40:54" xsi:type="ListTypeSpecifier">
+            <elementType localId="218" locator="40:37-40:53" name="fhir:MedicationRequest" xsi:type="NamedTypeSpecifier"/>
+         </parameterTypeSpecifier>
+      </def>
+   </parameters>
+   <contexts>
+      <def localId="223" locator="42:1-42:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def localId="221" locator="42:1-42:15" name="Patient" context="Patient">
+         <expression localId="222" xsi:type="SingletonFrom">
+            <operand localId="220" locator="42:1-42:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="226" locator="44:1-45:88" name="Opioid Analgesic with Ambulatory Misuse Potential Prescriptions" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="226">
+               <a:s>define &quot;Opioid Analgesic with Ambulatory Misuse Potential Prescriptions&quot;:
+  </a:s>
+               <a:s r="229">
+                  <a:s r="227">
+                     <a:s>Common</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="229">
+                     <a:s>&quot;Is Opioid Analgesic with Ambulatory Misuse Potential?&quot;( </a:s>
+                     <a:s r="228">
+                        <a:s>ContextPrescriptions</a:s>
+                     </a:s>
+                     <a:s> )</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="229" locator="45:3-45:88" name="Is Opioid Analgesic with Ambulatory Misuse Potential?" libraryName="Common" xsi:type="FunctionRef">
+            <operand localId="228" locator="45:67-45:86" name="ContextPrescriptions" xsi:type="ParameterRef"/>
+         </expression>
+      </def>
+      <def localId="232" locator="47:1-48:71" name="Benzodiazepine or CNS Depressant Prescriptions" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="232">
+               <a:s>define &quot;Benzodiazepine or CNS Depressant Prescriptions&quot;:
+  </a:s>
+               <a:s r="235">
+                  <a:s r="233">
+                     <a:s>Common</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="235">
+                     <a:s>&quot;Is Benzodiazepine or CNS Depressant?&quot;( </a:s>
+                     <a:s r="234">
+                        <a:s>ContextPrescriptions</a:s>
+                     </a:s>
+                     <a:s> )</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="235" locator="48:3-48:71" name="Is Benzodiazepine or CNS Depressant?" libraryName="Common" xsi:type="FunctionRef">
+            <operand localId="234" locator="48:50-48:69" name="ContextPrescriptions" xsi:type="ParameterRef"/>
+         </expression>
+      </def>
+      <def localId="238" locator="50:1-51:77" name="Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="238">
+               <a:s>define &quot;Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential&quot;:
+  </a:s>
+               <a:s r="239">
+                  <a:s>exists</a:s>
+                  <a:s r="240">
+                     <a:s>( </a:s>
+                     <a:s r="240">
+                        <a:s>&quot;Opioid Analgesic with Ambulatory Misuse Potential Prescriptions&quot;</a:s>
+                     </a:s>
+                     <a:s> )</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="239" locator="51:3-51:77" xsi:type="Exists">
+            <operand localId="240" locator="51:9-51:77" name="Opioid Analgesic with Ambulatory Misuse Potential Prescriptions" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="243" locator="53:1-54:60" name="Patient Is Being Prescribed Benzodiazepine or CNS Depressant" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="243">
+               <a:s>define &quot;Patient Is Being Prescribed Benzodiazepine or CNS Depressant&quot;:
+  </a:s>
+               <a:s r="244">
+                  <a:s>exists</a:s>
+                  <a:s r="245">
+                     <a:s>( </a:s>
+                     <a:s r="245">
+                        <a:s>&quot;Benzodiazepine or CNS Depressant Prescriptions&quot;</a:s>
+                     </a:s>
+                     <a:s> )</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="244" locator="54:3-54:60" xsi:type="Exists">
+            <operand localId="245" locator="54:9-54:60" name="Benzodiazepine or CNS Depressant Prescriptions" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="248" locator="56:1-67:64" name="Inclusion Criteria" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="248">
+               <a:s>define &quot;Inclusion Criteria&quot;:
+  </a:s>
+               <a:s r="249">
+                  <a:s r="250">
+                     <a:s>(
+    </a:s>
+                     <a:s r="250">
+                        <a:s r="251">
+                           <a:s>(
+      </a:s>
+                           <a:s r="251">
+                              <a:s r="252">
+                                 <a:s>&quot;Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential&quot;</a:s>
+                              </a:s>
+                              <a:s>
+        and </a:s>
+                              <a:s r="253">
+                                 <a:s>exists </a:s>
+                                 <a:s r="255">
+                                    <a:s r="254">
+                                       <a:s>Common</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="255">
+                                       <a:s>&quot;Active Ambulatory Benzodiazepine or CNS Depressant Rx&quot;</a:s>
+                                    </a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+    )</a:s>
+                        </a:s>
+                        <a:s>
+      or </a:s>
+                        <a:s r="256">
+                           <a:s>(
+        </a:s>
+                           <a:s r="256">
+                              <a:s r="257">
+                                 <a:s>&quot;Patient Is Being Prescribed Benzodiazepine or CNS Depressant&quot;</a:s>
+                              </a:s>
+                              <a:s>
+          and </a:s>
+                              <a:s r="258">
+                                 <a:s>exists </a:s>
+                                 <a:s r="260">
+                                    <a:s r="259">
+                                       <a:s>Common</a:s>
+                                    </a:s>
+                                    <a:s>.</a:s>
+                                    <a:s r="260">
+                                       <a:s>&quot;Active Ambulatory Opioid Rx&quot;</a:s>
+                                    </a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s>
+      )</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+  )</a:s>
+                  </a:s>
+                  <a:s>
+    and </a:s>
+                  <a:s r="262">
+                     <a:s r="261">
+                        <a:s>Routines</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="262">
+                        <a:s>&quot;CDC 2022 Guideline General Inclusion Criteria&quot;</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="249" locator="57:3-67:64" xsi:type="And">
+            <operand localId="250" locator="57:3-66:3" xsi:type="Or">
+               <operand localId="251" locator="58:5-61:5" xsi:type="And">
+                  <operand localId="252" locator="59:7-59:85" name="Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential" xsi:type="ExpressionRef"/>
+                  <operand localId="253" locator="60:13-60:81" xsi:type="Exists">
+                     <operand localId="255" locator="60:20-60:81" name="Active Ambulatory Benzodiazepine or CNS Depressant Rx" libraryName="Common" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+               <operand localId="256" locator="62:10-65:7" xsi:type="And">
+                  <operand localId="257" locator="63:9-63:70" name="Patient Is Being Prescribed Benzodiazepine or CNS Depressant" xsi:type="ExpressionRef"/>
+                  <operand localId="258" locator="64:15-64:57" xsi:type="Exists">
+                     <operand localId="260" locator="64:22-64:57" name="Active Ambulatory Opioid Rx" libraryName="Common" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+            </operand>
+            <operand localId="262" locator="67:9-67:64" name="CDC 2022 Guideline General Inclusion Criteria" libraryName="Routines" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="265" locator="69:1-70:33" name="Exclusion Criteria" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="265">
+               <a:s>define &quot;Exclusion Criteria&quot;:
+  </a:s>
+               <a:s r="267">
+                  <a:s r="266">
+                     <a:s>Common</a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="267">
+                     <a:s>&quot;End of Life Assessment&quot;</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="267" locator="70:3-70:33" name="End of Life Assessment" libraryName="Common" xsi:type="ExpressionRef"/>
+      </def>
+      <def localId="270" locator="72:1-74:32" name="Is Recommendation Applicable?" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="270">
+               <a:s>define &quot;Is Recommendation Applicable?&quot;:
+  </a:s>
+               <a:s r="271">
+                  <a:s r="272">
+                     <a:s>&quot;Inclusion Criteria&quot;</a:s>
+                  </a:s>
+                  <a:s>
+    and </a:s>
+                  <a:s r="273">
+                     <a:s>not </a:s>
+                     <a:s r="274">
+                        <a:s>&quot;Exclusion Criteria&quot;</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="271" locator="73:3-74:32" xsi:type="And">
+            <operand localId="272" locator="73:3-73:22" name="Inclusion Criteria" xsi:type="ExpressionRef"/>
+            <operand localId="273" locator="74:9-74:32" xsi:type="Not">
+               <operand localId="274" locator="74:13-74:32" name="Exclusion Criteria" xsi:type="ExpressionRef"/>
+            </operand>
+         </expression>
+      </def>
+   </statements>
+</library>

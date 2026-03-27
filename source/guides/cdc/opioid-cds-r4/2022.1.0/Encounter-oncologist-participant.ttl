@@ -1,0 +1,92 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/Encounter/oncologist-participant> a fhir:Encounter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "oncologist-participant"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Encounter oncologist-participant</b></p><a name=\"oncologist-participant\"> </a><a name=\"hconcologist-participant\"> </a><blockquote><p><b>Data Date-Roller Extension</b></p><ul><li>dateLastUpdated: 2023-05-01</li><li>frequency: No display for Duration  (value: 30.0; unit: days; system: http://unitsofmeasure.org; code: d)</li></ul></blockquote><p><b>status</b>: Finished</p><p><b>class</b>: <a href=\"http://terminology.hl7.org/7.1.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>type</b>: <span title=\"Codes:{http://www.ama-assn.org/go/cpt 99203}\">Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using time for code selection, 30-44 minutes of total time is spent on the date of the encounter.</span></p><p><b>subject</b>: <a href=\"Patient-example-opioidcds.html\">opioidcds example  Male, DoB: 1983-01-10</a></p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://nucc.org/provider-taxonomy 207RX0202X}\">Medical Oncology Physician</span></td><td><a href=\"PractitionerRole-oncology-specialist.html\">PractitionerRole: period = 2021-11-24 --&gt; 2023-11-24; specialty = Medical Oncology Physician</a></td></tr></table><p><b>period</b>: 2022-11-29 --&gt; 2022-11-29</p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "dateLastUpdated"^^xsd:anyURI ;
+         fhir:l fhir:dateLastUpdated
+       ] ;
+       fhir:value [
+         a fhir:DateTime ;
+         fhir:v "2023-05-01"^^xsd:date
+       ]
+     ] [
+       fhir:url [
+         fhir:v "frequency"^^xsd:anyURI ;
+         fhir:l fhir:frequency
+       ] ;
+       fhir:value [
+         a fhir:Duration ;
+         fhir:value [ fhir:v 30.0 ] ;
+         fhir:unit [ fhir:v "days" ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "d" ]
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/dataDateRoller"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/dataDateRoller>
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "finished"] ; # 
+  fhir:class [
+     fhir:system [
+       fhir:v "http://terminology.hl7.org/CodeSystem/v3-ActCode"^^xsd:anyURI ;
+       fhir:l <http://terminology.hl7.org/CodeSystem/v3-ActCode>
+     ] ;
+     fhir:code [ fhir:v "AMB" ] ;
+     fhir:display [ fhir:v "ambulatory" ]
+  ] ; # 
+  fhir:type ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://www.ama-assn.org/go/cpt"^^xsd:anyURI ;
+         fhir:l <http://www.ama-assn.org/go/cpt>
+       ] ;
+       fhir:code [ fhir:v "99203" ] ;
+       fhir:display [ fhir:v "Office or other outpatient visit for the evaluation and management of a new patient, which requires a medically appropriate history and/or examination and low level of medical decision making. When using time for code selection, 30-44 minutes of total time is spent on the date of the encounter." ]
+     ] )
+  ] ) ; # 
+  fhir:subject [
+     fhir:l <http://fhir.org/guides/cdc/opioid-cds/Patient/example-opioidcds> ;
+     fhir:reference [ fhir:v "Patient/example-opioidcds" ]
+  ] ; # 
+  fhir:participant ( [
+     fhir:type ( [
+       fhir:coding ( [
+         fhir:system [
+           fhir:v "http://nucc.org/provider-taxonomy"^^xsd:anyURI ;
+           fhir:l <http://nucc.org/provider-taxonomy>
+         ] ;
+         fhir:code [ fhir:v "207RX0202X" ] ;
+         fhir:display [ fhir:v "Medical Oncology Physician" ]
+       ] )
+     ] ) ;
+     fhir:individual [
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/PractitionerRole/oncology-specialist> ;
+       fhir:reference [ fhir:v "PractitionerRole/oncology-specialist" ]
+     ]
+  ] ) ; # 
+  fhir:period [
+     fhir:start [ fhir:v "2022-11-29"^^xsd:date ] ;
+     fhir:end [ fhir:v "2022-11-29"^^xsd:date ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

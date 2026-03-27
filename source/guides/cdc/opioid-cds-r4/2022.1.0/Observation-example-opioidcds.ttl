@@ -1,0 +1,82 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/Observation/example-opioidcds> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-opioidcds"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation example-opioidcds</b></p><a name=\"example-opioidcds\"> </a><a name=\"hcexample-opioidcds\"> </a><blockquote><p><b>Data Date-Roller Extension</b></p><ul><li>dateLastUpdated: 2023-05-01</li><li>frequency: No display for Duration  (value: 30.0; unit: days; system: http://unitsofmeasure.org; code: d)</li></ul></blockquote><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 3779-6}\">Methamphetamine [Presence] in Urine</span></p><p><b>subject</b>: <a href=\"Patient-example-opioidcds.html\">opioidcds example  Male, DoB: 1983-01-10</a></p><p><b>effective</b>: 2023-05-01</p><p><b>performer</b>: <a href=\"PractitionerRole-oncology-specialist.html\">PractitionerRole: period = 2021-11-24 --&gt; 2023-11-24; specialty = Medical Oncology Physician</a></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation POS}\">Positive</span></p></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "dateLastUpdated"^^xsd:anyURI ;
+         fhir:l fhir:dateLastUpdated
+       ] ;
+       fhir:value [
+         a fhir:DateTime ;
+         fhir:v "2023-05-01"^^xsd:date
+       ]
+     ] [
+       fhir:url [
+         fhir:v "frequency"^^xsd:anyURI ;
+         fhir:l fhir:frequency
+       ] ;
+       fhir:value [
+         a fhir:Duration ;
+         fhir:value [ fhir:v 30.0 ] ;
+         fhir:unit [ fhir:v "days" ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "d" ]
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/dataDateRoller"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/dataDateRoller>
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:3779-6 ;
+       fhir:system [
+         fhir:v "http://loinc.org"^^xsd:anyURI ;
+         fhir:l <http://loinc.org>
+       ] ;
+       fhir:code [ fhir:v "3779-6" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://fhir.org/guides/cdc/opioid-cds/Patient/example-opioidcds> ;
+     fhir:reference [ fhir:v "Patient/example-opioidcds" ]
+  ] ; # 
+  fhir:effective [
+     a fhir:DateTime ;
+     fhir:v "2023-05-01"^^xsd:date
+  ] ; # 
+  fhir:performer ( [
+     fhir:l <http://fhir.org/guides/cdc/opioid-cds/PractitionerRole/oncology-specialist> ;
+     fhir:reference [ fhir:v "PractitionerRole/oncology-specialist" ]
+  ] ) ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation>
+       ] ;
+       fhir:code [ fhir:v "POS" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

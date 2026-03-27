@@ -1,0 +1,655 @@
+# Recommendation #12 - Evidence-based Treatment for Patients with Opioid Use Disorder (patient-view) - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **Recommendation #12 - Evidence-based Treatment for Patients with Opioid Use Disorder (patient-view)**
+
+## PlanDefinition: Recommendation #12 - Evidence-based Treatment for Patients with Opioid Use Disorder (patient-view) 
+
+| | |
+| :--- | :--- |
+| *Official URL*:http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-12-patient-view | *Version*:2022.1.0 |
+| Active as of 2025-08-06 | *Computable Name*:PlanDefinition_Recommendation_12_Patient_View |
+| *Other Identifiers:*cdc-opioid-guidance (use: official, ) | |
+| **Usage:**Clinical Focus: Opioid use disorder (disorder) | |
+| **Copyright/Legal**: © CDC 2016+. | |
+
+ 
+Clinicians should offer or arrange treatment with evidence-based medications to treat patients with opioid use disorder. Detoxification on its own, without medications for opioid use disorder, is not recommended for opioid use disorder because of increased risks for resuming drug use, overdose, and overdose death. 
+
+ 
+The 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain is intended to improve communication between clinicians and patients about the benefits and risks of pain treatments, including opioid therapy; improve the effectiveness and safety of pain treatment; mitigate pain; improve function and quality of life for patients with pain; and reduce risks associated with opioid pain therapy, including opioid use disorder, overdose, and death. The recommendations do not apply to pain related to sickle cell disease or cancer or to patients receiving palliative or end-of-life care. 
+
+* **Actions: **: **Url: **
+  * : [Recommendation #12 - Evidence-based Treatment for Patients with Opioid Use Disorder (patient-view)](PlanDefinition-opioidcds-12-patient-view.md)
+* **Actions: **: **Version: **
+  * : 2022.1.0
+* **Actions: **: **Name: **
+  * : PlanDefinition_Recommendation_12_Patient_View
+* **Actions: **: **Title: **
+  * : Recommendation #12 - Evidence-based Treatment for Patients with Opioid Use Disorder (patient-view)
+* **Actions: **: **Status: **
+  * : active
+* **Actions: **: **Experimental: **
+  * : false
+* **Actions: **: **Date: **
+  * : 2025-08-06
+* **Actions: **: **Publisher: **
+  * : CDC / Security Risk Solutions, Inc. (SRS)
+* **Actions: **: **Description: **
+  * : Clinicians should offer or arrange treatment with evidence-based medications to treat patients with opioid use disorder. Detoxification on its own, without medications for opioid use disorder, is not recommended for opioid use disorder because of increased risks for resuming drug use, overdose, and overdose death.
+* **Actions: **: **Knowledge Capability: **
+  * : shareable computable executable publishable
+* **Actions: **: **Purpose: **
+  * : The 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain is intended to improve communication between clinicians and patients about the benefits and risks of pain treatments, including opioid therapy; improve the effectiveness and safety of pain treatment; mitigate pain; improve function and quality of life for patients with pain; and reduce risks associated with opioid pain therapy, including opioid use disorder, overdose, and death. The recommendations do not apply to pain related to sickle cell disease or cancer or to patients receiving palliative or end-of-life care.
+* **Actions: **: **Usage: **
+  * : Medication treatment of opioid use disorder has been associated with reduced risk for overdose and overall deaths. Identification of opioid use disorder represents an opportunity for a clinician to initiate potentially life-saving interventions, and the clinician should collaborate with the patient regarding their safety to increase the likelihood of successful treatment.
+* **Actions: **: **Copyright: **
+  * : © CDC 2016+.
+* **Actions: **: **Libraries: **
+  * : 
+| |
+| :--- |
+| [Library - Recommendation #12 (patient-view) - Evidence-based Treatment for Patients with Opioid Use Disorder](Library-OpioidCDSREC12PatientView.md) |
+
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "PlanDefinition",
+  "id" : "opioidcds-12-patient-view",
+  "meta" : {
+    "profile" : ["http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition",
+    "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishableplandefinition"]
+  },
+  "contained" : [{
+    "resourceType" : "Library",
+    "id" : "effective-data-requirements",
+    "name" : "EffectiveDataRequirements",
+    "status" : "active",
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/library-type",
+        "code" : "module-definition"
+      }]
+    },
+    "relatedArtifact" : [{
+      "type" : "depends-on",
+      "display" : "Library Common",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSCommon|2022.1.0"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Library Config",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSCommonConfig|2022.1.0"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Library FHIRHelpers",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/Library/FHIRHelpers|4.0.1"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Buprenorphine and methadone medications",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-and-methadone-medications"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Encounter Diagnosis Condition Category",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-encounter-diagnosis-category"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Problem List Condition Category",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-problem-list-category"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set US Core Health Concern Condition Category",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-us-core-health-concern-category"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Opioid misuse disorders",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-misuse-disorders"
+    },
+    {
+      "type" : "depends-on",
+      "display" : "Value set Active Condition",
+      "resource" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-clinical-status-active"
+    }],
+    "parameter" : [{
+      "name" : "Is Recommendation Applicable?",
+      "use" : "out",
+      "min" : 0,
+      "max" : "1",
+      "type" : "boolean"
+    }],
+    "dataRequirement" : [{
+      "type" : "Patient",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
+    },
+    {
+      "type" : "MedicationRequest",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/MedicationRequest"],
+      "mustSupport" : ["medication", "status", "authoredOn"],
+      "codeFilter" : [{
+        "path" : "medication",
+        "valueSet" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-and-methadone-medications"
+      }]
+    },
+    {
+      "type" : "MedicationRequest",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/MedicationRequest"],
+      "mustSupport" : ["medication.reference", "status", "authoredOn"]
+    },
+    {
+      "type" : "Medication",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Medication"],
+      "mustSupport" : ["id", "code"]
+    },
+    {
+      "type" : "Condition",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Condition"],
+      "mustSupport" : ["category", "code", "clinicalStatus", "recordedDate"],
+      "codeFilter" : [{
+        "path" : "category",
+        "valueSet" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-encounter-diagnosis-category"
+      }]
+    },
+    {
+      "type" : "Condition",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Condition"],
+      "mustSupport" : ["category", "code", "clinicalStatus", "recordedDate"],
+      "codeFilter" : [{
+        "path" : "category",
+        "valueSet" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-problem-list-category"
+      }]
+    },
+    {
+      "type" : "Condition",
+      "profile" : ["http://hl7.org/fhir/StructureDefinition/Condition"],
+      "mustSupport" : ["category", "code", "clinicalStatus", "recordedDate"],
+      "codeFilter" : [{
+        "path" : "category",
+        "valueSet" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-us-core-health-concern-category"
+      }]
+    }]
+  }],
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueCode" : "shareable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueCode" : "computable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueCode" : "executable"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+    "valueCode" : "publishable"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommonConfig"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Age Less than 18 Years Is Enabled"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// CDC 2022 General Inclusion Criteria\ndefine \"Age Less than 18 Years Is Enabled\":\n  true"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 0
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Patient 18 or Older?"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Patient 18 or Older?\":\n  Config.\"Age Less than 18 Years Is Enabled\"\n    and AgeInYears() >= 18"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 1
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommonConfig"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Evidence Based Treatment Criteria For Opioid Use Disorder"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// Recommendation 12\ndefine \"Evidence Based Treatment Criteria For Opioid Use Disorder\":\n  true"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 2
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommonConfig"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Can the implementing EHR support queries for past medications by date range?"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// Subroutine 2 - Past Medications\ndefine \"Can the implementing EHR support queries for past medications by date range?\":\n  true"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 3
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC12PatientView"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Opioid Use Disorder Lookback Period"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Opioid Use Disorder Lookback Period\":\n  Interval[Today() - 90 days, Today()]"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 4
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC12PatientView"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Not Receiving Evidence-Based Treatment for Opioid Use Disorder"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Not Receiving Evidence-Based Treatment for Opioid Use Disorder\":\n  Config.\"Evidence Based Treatment Criteria For Opioid Use Disorder\"\n    and not (\n        if Config.\"Can the implementing EHR support queries for past medications by date range?\" then\n          exists (\n            [MedicationRequest: Common.\"Buprenorphine and methadone medications\"] MR\n              where MR.status in { 'active', 'completed' }\n                and date from MR.authoredOn during day of \"Opioid Use Disorder Lookback Period\"\n          )\n        else\n            true\n    /* update 2022 removes \"behavioral therapy condition\"\n      or exists (\n        [Procedure: Common.\"Substance misuse behavioral counseling\"] P\n          where P.status ~ 'completed'\n            and (\n              case\n                when P.performed is FHIR.dateTime then\n                  Interval[FHIRHelpers.ToDateTime(P.performed as FHIR.dateTime), FHIRHelpers.ToDateTime(P.performed as FHIR.dateTime)]\n                when P.performed is FHIR.Period then\n                  FHIRHelpers.ToInterval(P.performed as FHIR.Period)\n                else\n                  null as Interval<DateTime>\n                end\n            ) during day of \"Opioid Use Disorder Lookback Period\"\n      )*/\n    )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 5
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSCommon"
+    },
+    {
+      "url" : "name",
+      "valueString" : "US Core-Categorized Conditions"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "// 3. Medications indicating end of life\n    /* or exists (\n      \"Medications Indicating End of Life\"\n    ) */\n\ndefine \"US Core-Categorized Conditions\":\n  [Condition: category in \"Encounter Diagnosis Condition Category\"]\n    union [Condition: category in \"Problem List Condition Category\"]\n    union [Condition: category in \"US Core Health Concern Condition Category\"]"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 6
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC12PatientView"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Presence of Diagnosis of Opioid Use Disorder"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Presence of Diagnosis of Opioid Use Disorder\":\n  exists (\n    Common.\"US Core-Categorized Conditions\" C\n      where C.code in Common.\"Opioid misuse disorders\"\n        and C.clinicalStatus in Common.\"Active Condition\"\n        and date from C.recordedDate during day of \"Opioid Use Disorder Lookback Period\"\n    )"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 7
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC12PatientView"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Positive Result from Opioid Use Disorder Evaluation Tool"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Positive Result from Opioid Use Disorder Evaluation Tool\":\n  true"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 8
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC12PatientView"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Inclusion Criteria"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Inclusion Criteria\":\n  Common.\"Patient 18 or Older?\"\n    and \"Not Receiving Evidence-Based Treatment for Opioid Use Disorder\"\n    and \"Presence of Diagnosis of Opioid Use Disorder\"\n    and \"Positive Result from Opioid Use Disorder Evaluation Tool\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 9
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC12PatientView"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Exclusion Criteria"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Exclusion Criteria\":\n  false"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 10
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "OpioidCDSREC12PatientView"
+    },
+    {
+      "url" : "name",
+      "valueString" : "Is Recommendation Applicable?"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define \"Is Recommendation Applicable?\":\n  \"Inclusion Criteria\"\n    and not \"Exclusion Criteria\""
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 11
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "FHIRHelpers"
+    },
+    {
+      "url" : "name",
+      "valueString" : "ToString"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function ToString(value string): value.value"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 12
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "FHIRHelpers"
+    },
+    {
+      "url" : "name",
+      "valueString" : "ToConcept"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function ToConcept(concept FHIR.CodeableConcept):\n    if concept is null then\n        null\n    else\n        System.Concept {\n            codes: concept.coding C return ToCode(C),\n            display: concept.text.value\n        }"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 13
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "FHIRHelpers"
+    },
+    {
+      "url" : "name",
+      "valueString" : "ToCode"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function ToCode(coding FHIR.Coding):\n    if coding is null then\n        null\n    else\n        System.Code {\n          code: coding.code.value,\n          system: coding.system.value,\n          version: coding.version.value,\n          display: coding.display.value\n        }"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 14
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "FHIRHelpers"
+    },
+    {
+      "url" : "name",
+      "valueString" : "ToString"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function ToString(value MedicationRequestStatus): value.value"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 15
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "extension" : [{
+      "url" : "libraryName",
+      "valueString" : "FHIRHelpers"
+    },
+    {
+      "url" : "name",
+      "valueString" : "ToDateTime"
+    },
+    {
+      "url" : "statement",
+      "valueString" : "define function ToDateTime(value dateTime): value.value"
+    },
+    {
+      "url" : "displaySequence",
+      "valueInteger" : 16
+    }],
+    "url" : "http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition"
+  },
+  {
+    "id" : "effective-data-requirements",
+    "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-effectiveDataRequirements",
+    "valueCanonical" : "#effective-data-requirements"
+  },
+  {
+    "url" : "http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-softwaresystem",
+    "valueReference" : {
+      "reference" : "Device/cqf-tooling"
+    }
+  }],
+  "url" : "http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-12-patient-view",
+  "identifier" : [{
+    "use" : "official",
+    "value" : "cdc-opioid-guidance"
+  }],
+  "version" : "2022.1.0",
+  "name" : "PlanDefinition_Recommendation_12_Patient_View",
+  "title" : "Recommendation #12 - Evidence-based Treatment for Patients with Opioid Use Disorder (patient-view)",
+  "type" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/plan-definition-type",
+      "code" : "eca-rule",
+      "display" : "ECA Rule"
+    }]
+  },
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2025-08-06",
+  "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.securityrisksolutions.com"
+    }]
+  }],
+  "description" : "Clinicians should offer or arrange treatment with evidence-based medications to treat patients with opioid use disorder. Detoxification on its own, without medications for opioid use disorder, is not recommended for opioid use disorder because of increased risks for resuming drug use, overdose, and overdose death.",
+  "useContext" : [{
+    "code" : {
+      "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",
+      "code" : "focus",
+      "display" : "Clinical Focus"
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://snomed.info/sct",
+        "code" : "1336192000",
+        "display" : "Opioid use disorder (disorder)"
+      }]
+    }
+  }],
+  "purpose" : "The 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain is intended to improve communication between clinicians and patients about the benefits and risks of pain treatments, including opioid therapy; improve the effectiveness and safety of pain treatment; mitigate pain; improve function and quality of life for patients with pain; and reduce risks associated with opioid pain therapy, including opioid use disorder, overdose, and death. The recommendations do not apply to pain related to sickle cell disease or cancer or to patients receiving palliative or end-of-life care.",
+  "usage" : "Medication treatment of opioid use disorder has been associated with reduced risk for overdose and overall deaths. Identification of opioid use disorder represents an opportunity for a clinician to initiate potentially life-saving interventions, and the clinician should collaborate with the patient regarding their safety to increase the likelihood of successful treatment.",
+  "copyright" : "© CDC 2016+.",
+  "topic" : [{
+    "text" : "Opioid Prescribing"
+  }],
+  "author" : [{
+    "name" : "Kensaku Kawamoto, MD, PhD, MHS"
+  },
+  {
+    "name" : "Bryn Rhodes"
+  },
+  {
+    "name" : "Floyd Eisenberg, MD, MPH"
+  },
+  {
+    "name" : "Robert McClure, MD, MPH"
+  }],
+  "relatedArtifact" : [{
+    "type" : "documentation",
+    "display" : "2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain",
+    "url" : "https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm",
+    "document" : {
+      "url" : "https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm"
+    }
+  }],
+  "library" : ["http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC12PatientView"],
+  "action" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/recommendation-strength",
+          "code" : "strong",
+          "display" : "Strong"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/cqf-qualityOfEvidence",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://terminology.hl7.org/CodeSystem/evidence-quality",
+          "code" : "high",
+          "display" : "High quality"
+        }]
+      }
+    }],
+    "title" : "Offer Evidence-based Medications to Treat Patients with Opioid Use Disorder",
+    "description" : "For patients diagnosed with opioid use disorder, consider opioid agonist or partial agonist treatment with methadone or buprenorphine maintenance therapy. Detoxification on its own, without medications for opioid use disorder, is not recommended for opioid use disorder because of increased risks of resuming drug use, overdose, and overdose death. \r\n\r\nFor guidance regarding diagnosing and treating opioid use disorder, see [Recommendation 12 of the 2022 CDC Clinical Practice Guideline](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#:~:text=evidence%20type%3A%201).-,Implementation%20Considerations,-Although%20stigma%20can).\r\n\r\n[CDC recommends against releasing patients from care due to diagnosis of opioid use disorder](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#:~:text=opioid%20use%20disorder.-,Clinicians%20should%20not%20dismiss%20patients%20from%20their%20practice%20because%20of%20opioid%20use%20disorder%20because%20this%20can%20adversely%20affect%20patient%20safety.,-Medication%20treatment%20of).\r\n\r\n[MME conversion factors should not be applied to dosage decisions related to the management of opioid use disorder](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#:~:text=These%20conversion%20factors%20should%20not%20be%20applied%20to%20dosage%20decisions%20related%20to%20the%20management%20of%20opioid%20use%20disorder.).\r\n\r\n[Do not use the calculated dose in MMEs to determine the doses to use when converting one opioid to another; when converting opioids, the new opioid is typically dosed at a substantially lower dose than the calculated MME dose to avoid overdose because of incomplete cross-tolerance and individual variability in opioid pharmacokinetics](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#:~:text=Do%20not%20use%20the,variability%20in%20opioid%20pharmacokinetics.). Consult the FDA approved product labeling for specific guidance on medications.",
+    "priority" : "urgent",
+    "trigger" : [{
+      "type" : "named-event",
+      "name" : "patient-view"
+    }],
+    "condition" : [{
+      "kind" : "applicability",
+      "expression" : {
+        "description" : "Check whether the patient is 18 or older with an active condition of opioid misuse disorder and doesn't have an active prescription (order) for buprenorphine or methadone medications.",
+        "language" : "text/cql.identifier",
+        "expression" : "Is Recommendation Applicable?"
+      }
+    }],
+    "groupingBehavior" : "visual-group",
+    "selectionBehavior" : "any",
+    "action" : [{
+      "description" : "Snooze* - Patient already provided medication elsewhere to treat opioid use disorder, snooze 3 months"
+    },
+    {
+      "description" : "Snooze* - Patient declined medication therapy, snooze 3 months"
+    },
+    {
+      "description" : "Document - Will order medication to treat opioid use disorder"
+    },
+    {
+      "description" : "Refer - Will refer patient to SUD specialist"
+    },
+    {
+      "description" : "Snooze* - N/A see comments, snooze 3 months"
+    }]
+  }]
+}
+
+```

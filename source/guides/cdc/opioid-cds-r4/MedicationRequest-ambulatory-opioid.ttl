@@ -1,0 +1,113 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/MedicationRequest/ambulatory-opioid> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ambulatory-opioid"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest ambulatory-opioid</b></p><a name=\"ambulatory-opioid\"> </a><a name=\"hcambulatory-opioid\"> </a><blockquote><p><b>Data Date-Roller Extension</b></p><ul><li>dateLastUpdated: 2023-05-01</li><li>frequency: No display for Duration  (value: 30.0; unit: days; system: http://unitsofmeasure.org; code: d)</li></ul></blockquote><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/medicationrequest-category community}\">Community</span></p><p><b>medication</b>: <span title=\"Codes:{http://www.nlm.nih.gov/research/umls/rxnorm 1010603}\">Suboxone 2 MG / 0.5 MG Sublingual Film</span></p><p><b>subject</b>: <a href=\"Patient-example-opioidcds.html\">opioidcds example  Male, DoB: 1983-01-10</a></p><p><b>authoredOn</b>: 2023-03-31</p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Once per 1.0 days</p><p><b>asNeeded</b>: false</p><h3>DoseAndRates</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Dose[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>1.0 film</td></tr></table></blockquote><blockquote><p><b>dispenseRequest</b></p><p><b>validityPeriod</b>: 2023-03-31 00:00:00-0600 --&gt; 2023-07-01 00:00:00-0600</p><p><b>numberOfRepeatsAllowed</b>: 1</p><h3>ExpectedSupplyDurations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Unit</b></td><td><b>System</b></td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td>30</td><td>days</td><td><a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-v3-ucum.html\">http://unitsofmeasure.org</a></td><td>d</td></tr></table></blockquote></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:extension ( [
+     fhir:extension ( [
+       fhir:url [
+         fhir:v "dateLastUpdated"^^xsd:anyURI ;
+         fhir:l fhir:dateLastUpdated
+       ] ;
+       fhir:value [
+         a fhir:DateTime ;
+         fhir:v "2023-05-01"^^xsd:date
+       ]
+     ] [
+       fhir:url [
+         fhir:v "frequency"^^xsd:anyURI ;
+         fhir:l fhir:frequency
+       ] ;
+       fhir:value [
+         a fhir:Duration ;
+         fhir:value [ fhir:v 30.0 ] ;
+         fhir:unit [ fhir:v "days" ] ;
+         fhir:system [
+           fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+           fhir:l <http://unitsofmeasure.org>
+         ] ;
+         fhir:code [ fhir:v "d" ]
+       ]
+     ] ) ;
+     fhir:url [
+       fhir:v "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/dataDateRoller"^^xsd:anyURI ;
+       fhir:l <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/dataDateRoller>
+     ]
+  ] ) ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://terminology.hl7.org/CodeSystem/medicationrequest-category"^^xsd:anyURI ;
+         fhir:l <http://terminology.hl7.org/CodeSystem/medicationrequest-category>
+       ] ;
+       fhir:code [ fhir:v "community" ] ;
+       fhir:display [ fhir:v "Community" ]
+     ] )
+  ] ) ; # 
+  fhir:medication [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [
+         fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ;
+         fhir:l <http://www.nlm.nih.gov/research/umls/rxnorm>
+       ] ;
+       fhir:code [ fhir:v "1010603" ] ;
+       fhir:display [ fhir:v "Suboxone 2 MG / 0.5 MG Sublingual Film" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:l <http://fhir.org/guides/cdc/opioid-cds/Patient/example-opioidcds> ;
+     fhir:reference [ fhir:v "Patient/example-opioidcds" ]
+  ] ; # 
+  fhir:authoredOn [ fhir:v "2023-03-31"^^xsd:date] ; # 
+  fhir:dosageInstruction ( [
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v 1.0 ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ] ;
+     fhir:asNeeded [
+       a fhir:Boolean ;
+       fhir:v false
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v 1.0 ] ;
+         fhir:unit [ fhir:v "film" ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:dispenseRequest [
+     fhir:validityPeriod [
+       fhir:start [ fhir:v "2023-03-31T00:00:00-06:00"^^xsd:dateTime ] ;
+       fhir:end [ fhir:v "2023-07-01T00:00:00-06:00"^^xsd:dateTime ]
+     ] ;
+     fhir:numberOfRepeatsAllowed [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
+     fhir:expectedSupplyDuration [
+       fhir:value [ fhir:v "30"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "days" ] ;
+       fhir:system [
+         fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ;
+         fhir:l <http://unitsofmeasure.org>
+       ] ;
+       fhir:code [ fhir:v "d" ]
+     ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+
