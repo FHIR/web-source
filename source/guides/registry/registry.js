@@ -57,6 +57,16 @@ function fv(varr) {
   return "";
 }
 
+function findGuideByNpmName(npmName) {
+  if (guides == null || npmName == null) return null;
+  for (var i = 0; i < guides.length; i++) {
+    if (guides[i]['npm-name'] === npmName) {
+      return guides[i];
+    }
+  }
+  return null;
+}
+
 function buildTableDesc(data, release) {
   var table = document.createElement("table");
   table.setAttribute('id', 'content');
@@ -68,45 +78,65 @@ function buildTableDesc(data, release) {
 
   for (var i = 0; i < data.length; i++) {
     var g = data[i];
+    var l = "";
+    var rowBgColor = null;
 
-    if (g.editions != null || g['ci-build'] != null) {
-      var l = "<br/>";
-      var first = true;
-      if (g.editions != null) {
-        for (var ie = 0; ie < g.editions.length; ie++) {
-            var e = g.editions[ie];
-          if (release == 'any' || hasVersion(e['fhir-version'], release)) {
-            if (first) { first = false; } else {  l = l + " | "; }
-            if (release == 'any') {
-              l = l + "<a href=\"" + e.url + "\">" + escapeHTML(e.name) + "<\/a> (" + e['ig-version'] + " "+fv(e['fhir-version'])+")";
-            } else {
-              l = l + "<a href=\"" + e.url + "\">" + escapeHTML(e.name) + "<\/a> (" + e['ig-version']+")";
+    if (g.withdrawn != null) {
+      // Withdrawn IG: light red background, show reason instead of editions
+      rowBgColor = "#ffe0e0";
+      l = "<br/>Withdrawn: " + escapeHTML(g.withdrawn);
+    } else if (g.replacedBy != null) {
+      // Replaced IG: light grey background, show replacement link instead of editions
+      rowBgColor = "#e8e8e8";
+      var replacementGuide = findGuideByNpmName(g.replacedBy);
+      if (replacementGuide != null) {
+        l = "<br/>Replaced by <a href=\"" + replacementGuide.canonical + "/history.html\">" + escapeHTML(replacementGuide.name) + "<\/a>";
+      } else {
+        l = "<br/>Replaced by " + escapeHTML(g.replacedBy);
+      }
+    } else {
+      if (g.editions != null || g['ci-build'] != null) {
+        l = "<br/>";
+        var first = true;
+        if (g.editions != null) {
+          for (var ie = 0; ie < g.editions.length; ie++) {
+              var e = g.editions[ie];
+            if (release == 'any' || hasVersion(e['fhir-version'], release)) {
+              if (first) { first = false; } else {  l = l + " | "; }
+              if (release == 'any') {
+                l = l + "<a href=\"" + e.url + "\">" + escapeHTML(e.name) + "<\/a> (" + e['ig-version'] + " "+fv(e['fhir-version'])+")";
+              } else {
+                l = l + "<a href=\"" + e.url + "\">" + escapeHTML(e.name) + "<\/a> (" + e['ig-version']+")";
+              }
             }
           }
         }
+        if (g['ci-build'] != null && release == 'any') {
+          if (first) { first = false; } else {  l = l + " | "; }
+          l = l + "<a href=\"" + g['ci-build'] + "\">CI Build<\/a>";
+        }
       }
-      if (g['ci-build'] != null && release == 'any') {
-        if (first) { first = false; } else {  l = l + " | "; }
-        l = l + "<a href=\"" + g['ci-build'] + "\">CI Build<\/a>";
-      }
-    }
 
-    if (g.implementations != null) {
-      for (var ie = 0; ie < g.implementations.length; ie++) {
-        if (first) { first = false; } else {  l = l + " | "; }
-        var impl = g.implementations[ie];
-        if (impl['type'] == 'server') {
-          l = l + "<a href=\"" + g['url'] + "\"><img src=\"server.png\"/> "+impl.name+"<\/a>";
-        } else if (impl['type'] == 'client') {
-          l = l + "<a href=\"" + g['url'] + "\"><img src=\"app.png\"/> "+impl.name+"<\/a>";
-        } else if (impl['url'].includes('source')) {
-          l = l + "<a href=\"" + g['url'] + "\"><img src=\"github.png\"/> "+impl.name+"<\/a>";
-        } else {
-          l = l + "<a href=\"" + g['url'] + "\"><img src=\"source.png\"/> "+impl.name+"<\/a>";
+      if (g.implementations != null) {
+        for (var ie = 0; ie < g.implementations.length; ie++) {
+          if (first) { first = false; } else {  l = l + " | "; }
+          var impl = g.implementations[ie];
+          if (impl['type'] == 'server') {
+            l = l + "<a href=\"" + g['url'] + "\"><img src=\"server.png\"/> "+impl.name+"<\/a>";
+          } else if (impl['type'] == 'client') {
+            l = l + "<a href=\"" + g['url'] + "\"><img src=\"app.png\"/> "+impl.name+"<\/a>";
+          } else if (impl['url'].includes('source')) {
+            l = l + "<a href=\"" + g['url'] + "\"><img src=\"github.png\"/> "+impl.name+"<\/a>";
+          } else {
+            l = l + "<a href=\"" + g['url'] + "\"><img src=\"source.png\"/> "+impl.name+"<\/a>";
+          }
         }
       }
     }
     tr = table.insertRow(-1);
+    if (rowBgColor != null) {
+      tr.style.backgroundColor = rowBgColor;
+    }
     var tc = tr.insertCell(-1);
     if (g.history != null)
       tc.innerHTML = "<b><a href=\"" + g.canonical + "\" title=\"" + g['npm-name'] + "\">" + escapeHTML(g.name) + "<\/a><\/b> : " + escapeHTML(g.description)+l;
@@ -116,22 +146,6 @@ function buildTableDesc(data, release) {
     tc.innerHTML = escapeHTML(g.category);
     tc = tr.insertCell(-1);
     tc.innerHTML = escapeHTML(g.authority) + "\/" + escapeHTML(g.country);
-    // tc = tr.insertCell(-1);
-    // if (g.editions != null || g['ci-build'] != null) {
-    //   var l = "<ul>";
-    //   if (g.editions != null) {
-    //     for (var ie = 0; ie < g.editions.length; ie++) {
-    //         var e = g.editions[ie];
-    //       if (release == 'any' || hasVersion(e['fhir-version'], release)) {
-    //          l = l + "<li><a href=\"" + e.url + "\">" + escapeHTML(e.name) + "<\/a> (" + e['ig-version'] + " "+fv(e['fhir-version'])+")<\/li>";
-    //       }
-    //     }
-    //   }
-    //   if (g['ci-build'] != null && release == 'any') {
-    //     l = l + "<li><a href=\"" + g['ci-build'] + "\">CI Build<\/a><\/li>";
-    //   }
-    //   tc.innerHTML = l + "<\/ul>";
-    // }
   }
 
   return table;
@@ -162,7 +176,18 @@ function buildTableNoDesc(data, release) {
     tc = tr.insertCell(-1);
     tc.innerHTML = escapeHTML(g.country);
     tc = tr.insertCell(-1);
-    if (g.editions != null || g['ci-build'] != null || g['history'] != null) {
+    if (g.withdrawn != null) {
+      tr.style.backgroundColor = "#ffe0e0";
+      tc.innerHTML = "Withdrawn: " + escapeHTML(g.withdrawn);
+    } else if (g.replacedBy != null) {
+      tr.style.backgroundColor = "#e8e8e8";
+      var replacementGuide = findGuideByNpmName(g.replacedBy);
+      if (replacementGuide != null) {
+        tc.innerHTML = "Replaced by <a href=\"" + replacementGuide.canonical + "/history.html\">" + escapeHTML(replacementGuide.name) + "<\/a>";
+      } else {
+        tc.innerHTML = "Replaced by " + escapeHTML(g.replacedBy);
+      }
+    } else if (g.editions != null || g['ci-build'] != null || g['history'] != null) {
       var l = "";
       if (g['history'] != null && release == 'any') {
         l = l + "| <a href=\"" + g['history'] + "\">History<\/a> ";
