@@ -1,7 +1,47 @@
-function th(tr, caption) {
-  var th = document.createElement("th");
-  th.innerHTML = caption;
-  tr.appendChild(th);
+var currentSort = { column: null, direction: 'asc' };
+
+function th(tr, caption, sortKey) {
+  var thEl = document.createElement("th");
+  if (sortKey) {
+    thEl.style.cursor = "pointer";
+    thEl.style.userSelect = "none";
+    thEl.setAttribute("data-sort-key", sortKey);
+    var arrow = "";
+    if (currentSort.column === sortKey) {
+      arrow = currentSort.direction === 'asc' ? ' \u25B2' : ' \u25BC';
+    }
+    thEl.innerHTML = caption + '<span class="sort-arrow">' + arrow + '</span>';
+    thEl.addEventListener("click", function() {
+      if (currentSort.column === sortKey) {
+        currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+      } else {
+        currentSort.column = sortKey;
+        currentSort.direction = 'asc';
+      }
+      var selection = applyFilters();
+      sortGuides(selection);
+      updateCount(selection);
+      var table = buildTable(selection);
+      replaceContent(table);
+    });
+  } else {
+    thEl.innerHTML = caption;
+  }
+  tr.appendChild(thEl);
+}
+
+function sortGuides(list) {
+  if (!currentSort.column) return list;
+  var key = currentSort.column;
+  var dir = currentSort.direction === 'asc' ? 1 : -1;
+  list.sort(function(a, b) {
+    var valA = (a[key] || '').toLowerCase();
+    var valB = (b[key] || '').toLowerCase();
+    if (valA < valB) return -1 * dir;
+    if (valA > valB) return 1 * dir;
+    return 0;
+  });
+  return list;
 }
 
 function escapeHTML(s) {
@@ -71,9 +111,9 @@ function buildTableDesc(data, release) {
   var table = document.createElement("table");
   table.setAttribute('id', 'content');
   var tr = table.insertRow(-1);
-  th(tr, "Specification");
-  th(tr, "Category");
-  th(tr, "Authority");
+  th(tr, "Specification", "name");
+  th(tr, "Category", "category");
+  th(tr, "Authority", "authority");
  // th(tr, "Editions");
 
   for (var i = 0; i < data.length; i++) {
@@ -155,11 +195,11 @@ function buildTableNoDesc(data, release) {
   var table = document.createElement("table");
   table.setAttribute('id', 'content');
   var tr = table.insertRow(-1);
-  th(tr, "Specification");
-  th(tr, "Category");
-  th(tr, "Package Id");
-  th(tr, "Authority");
-  th(tr, "Country");
+  th(tr, "Specification", "name");
+  th(tr, "Category", "category");
+  th(tr, "Package Id", "npm-name");
+  th(tr, "Authority", "authority");
+  th(tr, "Country", "country");
   th(tr, "Links");
 
   for (var i = 0; i < data.length; i++) {
@@ -565,12 +605,15 @@ function loadRegistry() {
 
     var isFiltered = false;
     var filteredGuides = [];
-    var allGuidesTable = buildTable(guides);
+    var guidesToShow = guides.slice();
+    sortGuides(guidesToShow);
+    var allGuidesTable = buildTable(guidesToShow);
     div.appendChild(allGuidesTable);
 
     var searchFilter = document.getElementById('search-filter');
     searchFilter.addEventListener('input', function(event) {
       var selection = applyFilters();
+      sortGuides(selection);
       updateCount(selection);
       var table = buildTable(selection);
       replaceContent(table);
@@ -578,6 +621,7 @@ function loadRegistry() {
 
     function dropdownFilterHandler(event) {
       var selection = applyFilters();
+      sortGuides(selection);
       updateCount(selection);
       var table = buildTable(selection);
       replaceContent(table);
