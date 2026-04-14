@@ -48,7 +48,10 @@ function escapeHTML(s) {
   if (s == null) {
     return "";
   }
-  return s.replace('//&', '&amp;').replace('//<', '&lt;').replace('/ />', '&gt;');
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
 }
 
 let url = 'https://fhir.github.io/ig-registry/fhir-ig-list.json';
