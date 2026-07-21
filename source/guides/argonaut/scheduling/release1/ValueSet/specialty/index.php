@@ -7,11 +7,11 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'json') !== false)
-  Redirect('http://fhir.org/guides/argonaut/scheduling/release1/ValueSet-specialty.json');
+  Redirect('https://fhir.org/guides/argonaut/scheduling/release1/ValueSet-specialty.json');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://fhir.org/guides/argonaut/scheduling/release1/ValueSet-specialty.html');
+  Redirect('https://fhir.org/guides/argonaut/scheduling/release1/ValueSet-specialty.html');
 else 
-  Redirect('http://fhir.org/guides/argonaut/scheduling/release1/ValueSet-specialty.xml');
+  Redirect('https://fhir.org/guides/argonaut/scheduling/release1/ValueSet-specialty.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

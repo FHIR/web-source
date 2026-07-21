@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('http://fhir.org/guides/argonaut/questionnaire/1.0.0/CapabilityStatement-adaptive-questionnaire-service.json2');
+  Redirect('https://fhir.org/guides/argonaut/questionnaire/1.0.0/CapabilityStatement-adaptive-questionnaire-service.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('http://fhir.org/guides/argonaut/questionnaire/1.0.0/CapabilityStatement-adaptive-questionnaire-service.json1');
+  Redirect('https://fhir.org/guides/argonaut/questionnaire/1.0.0/CapabilityStatement-adaptive-questionnaire-service.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('http://fhir.org/guides/argonaut/questionnaire/1.0.0/CapabilityStatement-adaptive-questionnaire-service.json');
+  Redirect('https://fhir.org/guides/argonaut/questionnaire/1.0.0/CapabilityStatement-adaptive-questionnaire-service.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('http://fhir.org/guides/argonaut/questionnaire/1.0.0/CapabilityStatement-adaptive-questionnaire-service.xml2');
+  Redirect('https://fhir.org/guides/argonaut/questionnaire/1.0.0/CapabilityStatement-adaptive-questionnaire-service.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('http://fhir.org/guides/argonaut/questionnaire/1.0.0/CapabilityStatement-adaptive-questionnaire-service.xml1');
+  Redirect('https://fhir.org/guides/argonaut/questionnaire/1.0.0/CapabilityStatement-adaptive-questionnaire-service.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://fhir.org/guides/argonaut/questionnaire/1.0.0/CapabilityStatement-adaptive-questionnaire-service.html');
+  Redirect('https://fhir.org/guides/argonaut/questionnaire/1.0.0/CapabilityStatement-adaptive-questionnaire-service.html');
 else 
-  Redirect('http://fhir.org/guides/argonaut/questionnaire/1.0.0/CapabilityStatement-adaptive-questionnaire-service.xml');
+  Redirect('https://fhir.org/guides/argonaut/questionnaire/1.0.0/CapabilityStatement-adaptive-questionnaire-service.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

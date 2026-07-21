@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-VERSIONED-PARTY.json2');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-VERSIONED-PARTY.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-VERSIONED-PARTY.json1');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-VERSIONED-PARTY.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-VERSIONED-PARTY.json');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-VERSIONED-PARTY.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-VERSIONED-PARTY.xml2');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-VERSIONED-PARTY.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-VERSIONED-PARTY.xml1');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-VERSIONED-PARTY.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-VERSIONED-PARTY.html');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-VERSIONED-PARTY.html');
 else 
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-VERSIONED-PARTY.xml');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-VERSIONED-PARTY.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

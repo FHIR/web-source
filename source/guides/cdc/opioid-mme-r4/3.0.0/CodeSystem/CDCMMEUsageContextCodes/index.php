@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-mme-r4/3.0.0/CodeSystem-CDCMMEUsageContextCodes.json2');
+  Redirect('https://fhir.org/guides/cdc/opioid-mme-r4/3.0.0/CodeSystem-CDCMMEUsageContextCodes.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-mme-r4/3.0.0/CodeSystem-CDCMMEUsageContextCodes.json1');
+  Redirect('https://fhir.org/guides/cdc/opioid-mme-r4/3.0.0/CodeSystem-CDCMMEUsageContextCodes.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-mme-r4/3.0.0/CodeSystem-CDCMMEUsageContextCodes.json');
+  Redirect('https://fhir.org/guides/cdc/opioid-mme-r4/3.0.0/CodeSystem-CDCMMEUsageContextCodes.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-mme-r4/3.0.0/CodeSystem-CDCMMEUsageContextCodes.xml2');
+  Redirect('https://fhir.org/guides/cdc/opioid-mme-r4/3.0.0/CodeSystem-CDCMMEUsageContextCodes.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-mme-r4/3.0.0/CodeSystem-CDCMMEUsageContextCodes.xml1');
+  Redirect('https://fhir.org/guides/cdc/opioid-mme-r4/3.0.0/CodeSystem-CDCMMEUsageContextCodes.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-mme-r4/3.0.0/CodeSystem-CDCMMEUsageContextCodes.html');
+  Redirect('https://fhir.org/guides/cdc/opioid-mme-r4/3.0.0/CodeSystem-CDCMMEUsageContextCodes.html');
 else 
-  Redirect('http://fhir.org/guides/cdc/opioid-mme-r4/3.0.0/CodeSystem-CDCMMEUsageContextCodes.xml');
+  Redirect('https://fhir.org/guides/cdc/opioid-mme-r4/3.0.0/CodeSystem-CDCMMEUsageContextCodes.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-opioid-misuse-disorders.json2');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-opioid-misuse-disorders.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-opioid-misuse-disorders.json1');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-opioid-misuse-disorders.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-opioid-misuse-disorders.json');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-opioid-misuse-disorders.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-opioid-misuse-disorders.xml2');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-opioid-misuse-disorders.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-opioid-misuse-disorders.xml1');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-opioid-misuse-disorders.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-opioid-misuse-disorders.html');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-opioid-misuse-disorders.html');
 else 
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-opioid-misuse-disorders.xml');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-opioid-misuse-disorders.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

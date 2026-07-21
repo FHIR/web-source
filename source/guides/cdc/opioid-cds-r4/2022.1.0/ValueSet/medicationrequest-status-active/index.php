@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-medicationrequest-status-active.json2');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-medicationrequest-status-active.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-medicationrequest-status-active.json1');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-medicationrequest-status-active.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-medicationrequest-status-active.json');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-medicationrequest-status-active.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-medicationrequest-status-active.xml2');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-medicationrequest-status-active.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-medicationrequest-status-active.xml1');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-medicationrequest-status-active.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-medicationrequest-status-active.html');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-medicationrequest-status-active.html');
 else 
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-medicationrequest-status-active.xml');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-medicationrequest-status-active.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

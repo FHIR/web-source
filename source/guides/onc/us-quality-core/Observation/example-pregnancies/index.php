@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('http://fhir.org/guides/onc/us-quality-core/0.5.0/Observation-example-pregnancies.json2');
+  Redirect('https://fhir.org/guides/onc/us-quality-core/0.5.0/Observation-example-pregnancies.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('http://fhir.org/guides/onc/us-quality-core/0.5.0/Observation-example-pregnancies.json1');
+  Redirect('https://fhir.org/guides/onc/us-quality-core/0.5.0/Observation-example-pregnancies.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('http://fhir.org/guides/onc/us-quality-core/0.5.0/Observation-example-pregnancies.json');
+  Redirect('https://fhir.org/guides/onc/us-quality-core/0.5.0/Observation-example-pregnancies.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('http://fhir.org/guides/onc/us-quality-core/0.5.0/Observation-example-pregnancies.xml2');
+  Redirect('https://fhir.org/guides/onc/us-quality-core/0.5.0/Observation-example-pregnancies.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('http://fhir.org/guides/onc/us-quality-core/0.5.0/Observation-example-pregnancies.xml1');
+  Redirect('https://fhir.org/guides/onc/us-quality-core/0.5.0/Observation-example-pregnancies.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://fhir.org/guides/onc/us-quality-core/0.5.0/Observation-example-pregnancies.html');
+  Redirect('https://fhir.org/guides/onc/us-quality-core/0.5.0/Observation-example-pregnancies.html');
 else 
-  Redirect('http://fhir.org/guides/onc/us-quality-core/0.5.0/Observation-example-pregnancies.xml');
+  Redirect('https://fhir.org/guides/onc/us-quality-core/0.5.0/Observation-example-pregnancies.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

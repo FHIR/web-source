@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-participation-mode.json2');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-participation-mode.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-participation-mode.json1');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-participation-mode.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-participation-mode.json');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-participation-mode.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-participation-mode.xml2');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-participation-mode.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-participation-mode.xml1');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-participation-mode.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-participation-mode.html');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-participation-mode.html');
 else 
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-participation-mode.xml');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-participation-mode.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

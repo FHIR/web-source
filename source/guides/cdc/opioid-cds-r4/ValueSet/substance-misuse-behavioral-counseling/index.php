@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-substance-misuse-behavioral-counseling.json2');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-substance-misuse-behavioral-counseling.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-substance-misuse-behavioral-counseling.json1');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-substance-misuse-behavioral-counseling.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-substance-misuse-behavioral-counseling.json');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-substance-misuse-behavioral-counseling.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-substance-misuse-behavioral-counseling.xml2');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-substance-misuse-behavioral-counseling.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-substance-misuse-behavioral-counseling.xml1');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-substance-misuse-behavioral-counseling.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-substance-misuse-behavioral-counseling.html');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-substance-misuse-behavioral-counseling.html');
 else 
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-substance-misuse-behavioral-counseling.xml');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-substance-misuse-behavioral-counseling.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

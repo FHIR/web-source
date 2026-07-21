@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/CodeSystem-item-rmtype.json2');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/CodeSystem-item-rmtype.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/CodeSystem-item-rmtype.json1');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/CodeSystem-item-rmtype.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/CodeSystem-item-rmtype.json');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/CodeSystem-item-rmtype.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/CodeSystem-item-rmtype.xml2');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/CodeSystem-item-rmtype.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/CodeSystem-item-rmtype.xml1');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/CodeSystem-item-rmtype.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/CodeSystem-item-rmtype.html');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/CodeSystem-item-rmtype.html');
 else 
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/CodeSystem-item-rmtype.xml');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/CodeSystem-item-rmtype.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

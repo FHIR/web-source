@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-hospice-finding.json2');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-hospice-finding.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-hospice-finding.json1');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-hospice-finding.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-hospice-finding.json');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-hospice-finding.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-hospice-finding.xml2');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-hospice-finding.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-hospice-finding.xml1');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-hospice-finding.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-hospice-finding.html');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-hospice-finding.html');
 else 
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-hospice-finding.xml');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/ValueSet-hospice-finding.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

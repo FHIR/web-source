@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-extract-update-trigger-event-type.json2');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-extract-update-trigger-event-type.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-extract-update-trigger-event-type.json1');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-extract-update-trigger-event-type.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-extract-update-trigger-event-type.json');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-extract-update-trigger-event-type.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-extract-update-trigger-event-type.xml2');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-extract-update-trigger-event-type.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-extract-update-trigger-event-type.xml1');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-extract-update-trigger-event-type.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-extract-update-trigger-event-type.html');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-extract-update-trigger-event-type.html');
 else 
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-extract-update-trigger-event-type.xml');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/ValueSet-extract-update-trigger-event-type.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

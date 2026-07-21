@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('http://fhir.org/guides/hrsa/uds-plus/STU2/StructureDefinition-uds-plus-medicationstatement.json2');
+  Redirect('https://fhir.org/guides/hrsa/uds-plus/STU2/StructureDefinition-uds-plus-medicationstatement.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('http://fhir.org/guides/hrsa/uds-plus/STU2/StructureDefinition-uds-plus-medicationstatement.json1');
+  Redirect('https://fhir.org/guides/hrsa/uds-plus/STU2/StructureDefinition-uds-plus-medicationstatement.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('http://fhir.org/guides/hrsa/uds-plus/STU2/StructureDefinition-uds-plus-medicationstatement.json');
+  Redirect('https://fhir.org/guides/hrsa/uds-plus/STU2/StructureDefinition-uds-plus-medicationstatement.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('http://fhir.org/guides/hrsa/uds-plus/STU2/StructureDefinition-uds-plus-medicationstatement.xml2');
+  Redirect('https://fhir.org/guides/hrsa/uds-plus/STU2/StructureDefinition-uds-plus-medicationstatement.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('http://fhir.org/guides/hrsa/uds-plus/STU2/StructureDefinition-uds-plus-medicationstatement.xml1');
+  Redirect('https://fhir.org/guides/hrsa/uds-plus/STU2/StructureDefinition-uds-plus-medicationstatement.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://fhir.org/guides/hrsa/uds-plus/STU2/StructureDefinition-uds-plus-medicationstatement.html');
+  Redirect('https://fhir.org/guides/hrsa/uds-plus/STU2/StructureDefinition-uds-plus-medicationstatement.html');
 else 
-  Redirect('http://fhir.org/guides/hrsa/uds-plus/STU2/StructureDefinition-uds-plus-medicationstatement.xml');
+  Redirect('https://fhir.org/guides/hrsa/uds-plus/STU2/StructureDefinition-uds-plus-medicationstatement.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

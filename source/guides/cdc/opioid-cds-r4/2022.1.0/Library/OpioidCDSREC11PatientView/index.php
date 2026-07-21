@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/Library-OpioidCDSREC11PatientView.json2');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/Library-OpioidCDSREC11PatientView.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/Library-OpioidCDSREC11PatientView.json1');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/Library-OpioidCDSREC11PatientView.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/Library-OpioidCDSREC11PatientView.json');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/Library-OpioidCDSREC11PatientView.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/Library-OpioidCDSREC11PatientView.xml2');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/Library-OpioidCDSREC11PatientView.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/Library-OpioidCDSREC11PatientView.xml1');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/Library-OpioidCDSREC11PatientView.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/Library-OpioidCDSREC11PatientView.html');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/Library-OpioidCDSREC11PatientView.html');
 else 
-  Redirect('http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/Library-OpioidCDSREC11PatientView.xml');
+  Redirect('https://fhir.org/guides/cdc/opioid-cds-r4/2022.1.0/Library-OpioidCDSREC11PatientView.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

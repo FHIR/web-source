@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('http://fhir.org/guides/acme/HotBeverage/1.4.2022/CodeSystem-HBSyrups.json2');
+  Redirect('https://fhir.org/guides/acme/HotBeverage/1.4.2022/CodeSystem-HBSyrups.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('http://fhir.org/guides/acme/HotBeverage/1.4.2022/CodeSystem-HBSyrups.json1');
+  Redirect('https://fhir.org/guides/acme/HotBeverage/1.4.2022/CodeSystem-HBSyrups.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('http://fhir.org/guides/acme/HotBeverage/1.4.2022/CodeSystem-HBSyrups.json');
+  Redirect('https://fhir.org/guides/acme/HotBeverage/1.4.2022/CodeSystem-HBSyrups.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('http://fhir.org/guides/acme/HotBeverage/1.4.2022/CodeSystem-HBSyrups.xml2');
+  Redirect('https://fhir.org/guides/acme/HotBeverage/1.4.2022/CodeSystem-HBSyrups.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('http://fhir.org/guides/acme/HotBeverage/1.4.2022/CodeSystem-HBSyrups.xml1');
+  Redirect('https://fhir.org/guides/acme/HotBeverage/1.4.2022/CodeSystem-HBSyrups.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://fhir.org/guides/acme/HotBeverage/1.4.2022/CodeSystem-HBSyrups.html');
+  Redirect('https://fhir.org/guides/acme/HotBeverage/1.4.2022/CodeSystem-HBSyrups.html');
 else 
-  Redirect('http://fhir.org/guides/acme/HotBeverage/1.4.2022/CodeSystem-HBSyrups.xml');
+  Redirect('https://fhir.org/guides/acme/HotBeverage/1.4.2022/CodeSystem-HBSyrups.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.

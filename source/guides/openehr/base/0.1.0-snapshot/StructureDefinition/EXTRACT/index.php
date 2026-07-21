@@ -7,19 +7,19 @@ function Redirect($url)
 
 $accept = $_SERVER['HTTP_ACCEPT'];
 if (strpos($accept, 'application/json+fhir') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-EXTRACT.json2');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-EXTRACT.json2');
 elseif (strpos($accept, 'application/fhir+json') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-EXTRACT.json1');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-EXTRACT.json1');
 elseif (strpos($accept, 'json') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-EXTRACT.json');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-EXTRACT.json');
 elseif (strpos($accept, 'application/xml+fhir') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-EXTRACT.xml2');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-EXTRACT.xml2');
 elseif (strpos($accept, 'application/fhir+xml') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-EXTRACT.xml1');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-EXTRACT.xml1');
 elseif (strpos($accept, 'html') !== false)
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-EXTRACT.html');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-EXTRACT.html');
 else 
-  Redirect('http://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-EXTRACT.xml');
+  Redirect('https://fhir.org/guides/openehr/base/0.1.0-snapshot/StructureDefinition-EXTRACT.xml');
 ?>
     
 You should not be seeing this page. If you do, PHP has failed badly.
