@@ -1,0 +1,1444 @@
+{
+   "library" : {
+      "localId" : "0",
+      "annotation" : [ {
+         "translatorVersion" : "3.25.0",
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "Overloads",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "294",
+            "s" : [ {
+               "value" : [ "","library OpioidCDSREC10PatientView version '2022.1.0'" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "OpioidCDSREC10PatientView",
+         "system" : "http://fhir.org/guides/cdc/opioid-cds",
+         "version" : "2022.1.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localId" : "1",
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "206",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "206",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "208",
+            "locator" : "5:1-5:54",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "208",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'"," called ","FHIRHelpers" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "210",
+            "locator" : "6:1-6:56",
+            "localIdentifier" : "Common",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommon",
+            "version" : "2022.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "210",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "OpioidCDSCommon" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'2022.1.0'"," called ","Common" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "212",
+            "locator" : "7:1-7:66",
+            "localIdentifier" : "Rec10Common",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/OpioidCDSREC10Common",
+            "version" : "2022.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "212",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "OpioidCDSREC10Common" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'2022.1.0'"," called ","Rec10Common" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "214",
+            "locator" : "8:1-8:62",
+            "localIdentifier" : "Config",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommonConfig",
+            "version" : "2022.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "214",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "OpioidCDSCommonConfig" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'2022.1.0'"," called ","Config" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "216",
+            "locator" : "9:1-9:60",
+            "localIdentifier" : "Routines",
+            "path" : "http://fhir.org/guides/cdc/opioid-cds/OpioidCDSRoutines",
+            "version" : "2022.1.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "216",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "OpioidCDSRoutines" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'2022.1.0'"," called ","Routines" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "codes" : {
+         "def" : [ {
+            "localId" : "218",
+            "locator" : "11:1-11:102",
+            "name" : "Urine Drug Screening",
+            "id" : "310627008",
+            "display" : "Urine drug screening (procedure)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "218",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Urine Drug Screening\"",": ","'310627008'"," from " ]
+                  }, {
+                     "r" : "219",
+                     "s" : [ {
+                        "value" : [ "Common",".","SNOMED" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Urine drug screening (procedure)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "219",
+               "locator" : "11:47-11:59",
+               "name" : "SNOMED",
+               "libraryName" : "Common"
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "localId" : "224",
+            "locator" : "72:1-72:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "localId" : "222",
+            "locator" : "72:1-72:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "localId" : "223",
+               "type" : "SingletonFrom",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "221",
+                  "locator" : "72:1-72:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve",
+                  "include" : [ ],
+                  "codeFilter" : [ ],
+                  "dateFilter" : [ ],
+                  "otherFilter" : [ ]
+               }
+            }
+         }, {
+            "localId" : "227",
+            "locator" : "74:1-76:92",
+            "name" : "Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "227",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions\"",":\n  " ]
+                  }, {
+                     "r" : "235",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "228",
+                           "s" : [ {
+                              "r" : "230",
+                              "s" : [ {
+                                 "s" : [ {
+                                    "value" : [ "Common",".","\"Active Ambulatory Opioid Rx\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","AmbulatoryOpioidPrescription" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    " ]
+                     }, {
+                        "r" : "234",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "234",
+                           "s" : [ {
+                              "r" : "232",
+                              "s" : [ {
+                                 "value" : [ "Routines" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "234",
+                              "s" : [ {
+                                 "value" : [ "\"Is Subacute or Chronic Pain Prescription?\"","(" ]
+                              }, {
+                                 "r" : "233",
+                                 "s" : [ {
+                                    "value" : [ "AmbulatoryOpioidPrescription" ]
+                                 } ]
+                              }, {
+                                 "value" : [ ")" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "235",
+               "locator" : "75:3-76:92",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "228",
+                  "locator" : "75:3-75:67",
+                  "alias" : "AmbulatoryOpioidPrescription",
+                  "expression" : {
+                     "localId" : "230",
+                     "locator" : "75:3-75:38",
+                     "name" : "Active Ambulatory Opioid Rx",
+                     "libraryName" : "Common",
+                     "type" : "ExpressionRef"
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "234",
+                  "locator" : "76:5-76:92",
+                  "name" : "Is Subacute or Chronic Pain Prescription?",
+                  "libraryName" : "Routines",
+                  "type" : "FunctionRef",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "233",
+                     "locator" : "76:64-76:91",
+                     "name" : "AmbulatoryOpioidPrescription",
+                     "type" : "AliasRef"
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "238",
+            "locator" : "78:1-79:89",
+            "name" : "Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "238",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential\"",":\n  " ]
+                  }, {
+                     "r" : "239",
+                     "s" : [ {
+                        "value" : [ "exists " ]
+                     }, {
+                        "r" : "240",
+                        "s" : [ {
+                           "value" : [ "(" ]
+                        }, {
+                           "r" : "240",
+                           "s" : [ {
+                              "value" : [ "\"Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions\"" ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "239",
+               "locator" : "79:3-79:89",
+               "type" : "Exists",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "240",
+                  "locator" : "79:10-79:89",
+                  "name" : "Chronic Pain Opioid Analgesic with Ambulatory Misuse Potential Prescriptions",
+                  "type" : "ExpressionRef"
+               }
+            }
+         }, {
+            "localId" : "243",
+            "locator" : "81:1-84:44",
+            "name" : "Is Perform Drug Screen Recommendation Applicable?",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "243",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Is Perform Drug Screen Recommendation Applicable?\"",":\n  " ]
+                  }, {
+                     "r" : "244",
+                     "s" : [ {
+                        "r" : "245",
+                        "s" : [ {
+                           "r" : "246",
+                           "s" : [ {
+                              "value" : [ "\"Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential\"" ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    and " ]
+                        }, {
+                           "r" : "248",
+                           "s" : [ {
+                              "r" : "247",
+                              "s" : [ {
+                                 "value" : [ "Rec10Common" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "248",
+                              "s" : [ {
+                                 "value" : [ "\"Inclusion Criteria For UDS Recommendation\"" ]
+                              } ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    and " ]
+                     }, {
+                        "r" : "249",
+                        "s" : [ {
+                           "value" : [ "not " ]
+                        }, {
+                           "r" : "251",
+                           "s" : [ {
+                              "r" : "250",
+                              "s" : [ {
+                                 "value" : [ "Rec10Common" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "251",
+                              "s" : [ {
+                                 "value" : [ "\"Exclusion Criteria\"" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "244",
+               "locator" : "82:3-84:44",
+               "type" : "And",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "245",
+                  "locator" : "82:3-83:63",
+                  "type" : "And",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "246",
+                     "locator" : "82:3-82:81",
+                     "name" : "Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "248",
+                     "locator" : "83:9-83:63",
+                     "name" : "Inclusion Criteria For UDS Recommendation",
+                     "libraryName" : "Rec10Common",
+                     "type" : "ExpressionRef"
+                  } ]
+               }, {
+                  "localId" : "249",
+                  "locator" : "84:9-84:44",
+                  "type" : "Not",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "251",
+                     "locator" : "84:13-84:44",
+                     "name" : "Exclusion Criteria",
+                     "libraryName" : "Rec10Common",
+                     "type" : "ExpressionRef"
+                  }
+               } ]
+            }
+         }, {
+            "localId" : "254",
+            "locator" : "86:1-89:44",
+            "name" : "Applicable Because of Unexpected Results",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "254",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Applicable Because of Unexpected Results\"",":\n  " ]
+                  }, {
+                     "r" : "255",
+                     "s" : [ {
+                        "r" : "256",
+                        "s" : [ {
+                           "r" : "257",
+                           "s" : [ {
+                              "value" : [ "\"Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential\"" ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    and " ]
+                        }, {
+                           "r" : "259",
+                           "s" : [ {
+                              "r" : "258",
+                              "s" : [ {
+                                 "value" : [ "Rec10Common" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "259",
+                              "s" : [ {
+                                 "value" : [ "\"Inclusion Criteria For Unexpected Results\"" ]
+                              } ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    and " ]
+                     }, {
+                        "r" : "260",
+                        "s" : [ {
+                           "value" : [ "not " ]
+                        }, {
+                           "r" : "262",
+                           "s" : [ {
+                              "r" : "261",
+                              "s" : [ {
+                                 "value" : [ "Rec10Common" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "262",
+                              "s" : [ {
+                                 "value" : [ "\"Exclusion Criteria\"" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "255",
+               "locator" : "87:3-89:44",
+               "type" : "And",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "256",
+                  "locator" : "87:3-88:63",
+                  "type" : "And",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "257",
+                     "locator" : "87:3-87:81",
+                     "name" : "Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "259",
+                     "locator" : "88:9-88:63",
+                     "name" : "Inclusion Criteria For Unexpected Results",
+                     "libraryName" : "Rec10Common",
+                     "type" : "ExpressionRef"
+                  } ]
+               }, {
+                  "localId" : "260",
+                  "locator" : "89:9-89:44",
+                  "type" : "Not",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "262",
+                     "locator" : "89:13-89:44",
+                     "name" : "Exclusion Criteria",
+                     "libraryName" : "Rec10Common",
+                     "type" : "ExpressionRef"
+                  }
+               } ]
+            }
+         }, {
+            "localId" : "265",
+            "locator" : "91:1-92:32",
+            "name" : "Detail",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "265",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Detail\"",":\n  " ]
+                  }, {
+                     "r" : "267",
+                     "s" : [ {
+                        "r" : "266",
+                        "s" : [ {
+                           "value" : [ "Rec10Common" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "267",
+                        "s" : [ {
+                           "value" : [ "\"Get HTML Details\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "267",
+               "locator" : "92:3-92:32",
+               "name" : "Get HTML Details",
+               "libraryName" : "Rec10Common",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "localId" : "294",
+            "locator" : "113:1-119:3",
+            "name" : "ToCoding",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "294",
+                  "s" : [ {
+                     "value" : [ "","define function ToCoding(code System.Code):\n  " ]
+                  }, {
+                     "r" : "366",
+                     "s" : [ {
+                        "r" : "366",
+                        "s" : [ {
+                           "value" : [ "FHIR",".","Coding"," {\n    " ]
+                        }, {
+                           "s" : [ {
+                              "value" : [ "code",": " ]
+                           }, {
+                              "r" : "368",
+                              "s" : [ {
+                                 "value" : [ "FHIR",".","code"," { " ]
+                              }, {
+                                 "s" : [ {
+                                    "value" : [ "value",": " ]
+                                 }, {
+                                    "r" : "371",
+                                    "s" : [ {
+                                       "r" : "370",
+                                       "s" : [ {
+                                          "value" : [ "code" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "371",
+                                       "s" : [ {
+                                          "value" : [ "code" ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " }" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ",\n    " ]
+                        }, {
+                           "s" : [ {
+                              "value" : [ "system",": " ]
+                           }, {
+                              "r" : "372",
+                              "s" : [ {
+                                 "value" : [ "FHIR",".","uri"," { " ]
+                              }, {
+                                 "s" : [ {
+                                    "value" : [ "value",": " ]
+                                 }, {
+                                    "r" : "375",
+                                    "s" : [ {
+                                       "r" : "374",
+                                       "s" : [ {
+                                          "value" : [ "code" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "375",
+                                       "s" : [ {
+                                          "value" : [ "system" ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " }" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ",\n    " ]
+                        }, {
+                           "s" : [ {
+                              "value" : [ "version",": " ]
+                           }, {
+                              "r" : "376",
+                              "s" : [ {
+                                 "value" : [ "FHIR",".","string"," { " ]
+                              }, {
+                                 "s" : [ {
+                                    "value" : [ "value",": " ]
+                                 }, {
+                                    "r" : "379",
+                                    "s" : [ {
+                                       "r" : "378",
+                                       "s" : [ {
+                                          "value" : [ "code" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "379",
+                                       "s" : [ {
+                                          "value" : [ "version" ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " }" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ",\n    " ]
+                        }, {
+                           "s" : [ {
+                              "value" : [ "display",": " ]
+                           }, {
+                              "r" : "380",
+                              "s" : [ {
+                                 "value" : [ "FHIR",".","string"," { " ]
+                              }, {
+                                 "s" : [ {
+                                    "value" : [ "value",": " ]
+                                 }, {
+                                    "r" : "383",
+                                    "s" : [ {
+                                       "r" : "382",
+                                       "s" : [ {
+                                          "value" : [ "code" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "383",
+                                       "s" : [ {
+                                          "value" : [ "display" ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " }" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n  }" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "366",
+               "locator" : "114:3-119:3",
+               "classType" : "{http://hl7.org/fhir}Coding",
+               "type" : "Instance",
+               "element" : [ {
+                  "name" : "code",
+                  "value" : {
+                     "localId" : "368",
+                     "locator" : "115:11-115:40",
+                     "classType" : "{http://hl7.org/fhir}code",
+                     "type" : "Instance",
+                     "element" : [ {
+                        "name" : "value",
+                        "value" : {
+                           "localId" : "371",
+                           "locator" : "115:30-115:38",
+                           "path" : "code",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "370",
+                              "locator" : "115:30-115:33",
+                              "name" : "code",
+                              "type" : "OperandRef"
+                           }
+                        }
+                     } ]
+                  }
+               }, {
+                  "name" : "system",
+                  "value" : {
+                     "localId" : "372",
+                     "locator" : "116:13-116:43",
+                     "classType" : "{http://hl7.org/fhir}uri",
+                     "type" : "Instance",
+                     "element" : [ {
+                        "name" : "value",
+                        "value" : {
+                           "localId" : "375",
+                           "locator" : "116:31-116:41",
+                           "path" : "system",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "374",
+                              "locator" : "116:31-116:34",
+                              "name" : "code",
+                              "type" : "OperandRef"
+                           }
+                        }
+                     } ]
+                  }
+               }, {
+                  "name" : "version",
+                  "value" : {
+                     "localId" : "376",
+                     "locator" : "117:14-117:48",
+                     "classType" : "{http://hl7.org/fhir}string",
+                     "type" : "Instance",
+                     "element" : [ {
+                        "name" : "value",
+                        "value" : {
+                           "localId" : "379",
+                           "locator" : "117:35-117:46",
+                           "path" : "version",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "378",
+                              "locator" : "117:35-117:38",
+                              "name" : "code",
+                              "type" : "OperandRef"
+                           }
+                        }
+                     } ]
+                  }
+               }, {
+                  "name" : "display",
+                  "value" : {
+                     "localId" : "380",
+                     "locator" : "118:14-118:48",
+                     "classType" : "{http://hl7.org/fhir}string",
+                     "type" : "Instance",
+                     "element" : [ {
+                        "name" : "value",
+                        "value" : {
+                           "localId" : "383",
+                           "locator" : "118:35-118:46",
+                           "path" : "display",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "382",
+                              "locator" : "118:35-118:38",
+                              "name" : "code",
+                              "type" : "OperandRef"
+                           }
+                        }
+                     } ]
+                  }
+               } ]
+            },
+            "operand" : [ {
+               "localId" : "296",
+               "name" : "code",
+               "operandTypeSpecifier" : {
+                  "localId" : "295",
+                  "locator" : "113:31-113:41",
+                  "name" : "{urn:hl7-org:elm-types:r1}Code",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         }, {
+            "localId" : "270",
+            "locator" : "98:1-111:5",
+            "name" : "Urine Drug Screening Request",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "270",
+                  "s" : [ {
+                     "value" : [ "// Service Request - Urine Screening\n// Detected Issue - Opioids found in urine screening\n// Detected Issue - Illicit drugs found in urine screening\n\n","define ","\"Urine Drug Screening Request\"",":\n    " ]
+                  }, {
+                     "r" : "271",
+                     "s" : [ {
+                        "value" : [ "ServiceRequest"," {\n      //identifier:,\n      " ]
+                     }, {
+                        "s" : [ {
+                           "value" : [ "instantiatesCanonical",": " ]
+                        }, {
+                           "r" : "273",
+                           "s" : [ {
+                              "value" : [ "{ " ]
+                           }, {
+                              "r" : "274",
+                              "s" : [ {
+                                 "value" : [ "FHIR",".","canonical"," { " ]
+                              }, {
+                                 "s" : [ {
+                                    "value" : [ "value",": " ]
+                                 }, {
+                                    "r" : "276",
+                                    "s" : [ {
+                                       "value" : [ "'http://fhir.org/guides/cdc/activitydefinition/urine-screening-request'" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " }" ]
+                              } ]
+                           }, {
+                              "value" : [ " }" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ",\n      " ]
+                     }, {
+                        "s" : [ {
+                           "value" : [ "status",": " ]
+                        }, {
+                           "r" : "278",
+                           "s" : [ {
+                              "value" : [ "FHIR",".","ServiceRequestStatus"," { " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "value",": " ]
+                              }, {
+                                 "r" : "280",
+                                 "s" : [ {
+                                    "value" : [ "'draft'" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " }" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ",\n      " ]
+                     }, {
+                        "s" : [ {
+                           "value" : [ "intent",": " ]
+                        }, {
+                           "r" : "282",
+                           "s" : [ {
+                              "value" : [ "FHIR",".","ServiceRequestIntent"," { " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "value",": " ]
+                              }, {
+                                 "r" : "284",
+                                 "s" : [ {
+                                    "value" : [ "'proposal'" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " }" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ",\n      " ]
+                     }, {
+                        "s" : [ {
+                           "value" : [ "priority",": " ]
+                        }, {
+                           "r" : "286",
+                           "s" : [ {
+                              "value" : [ "FHIR",".","ServiceRequestPriority"," { " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "value",": " ]
+                              }, {
+                                 "r" : "288",
+                                 "s" : [ {
+                                    "value" : [ "'routine'" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " }" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ",\n      " ]
+                     }, {
+                        "s" : [ {
+                           "value" : [ "code",": " ]
+                        }, {
+                           "r" : "290",
+                           "s" : [ {
+                              "value" : [ "FHIR",".","CodeableConcept"," { " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "coding",": " ]
+                              }, {
+                                 "r" : "292",
+                                 "s" : [ {
+                                    "value" : [ "{ " ]
+                                 }, {
+                                    "r" : "297",
+                                    "s" : [ {
+                                       "value" : [ "ToCoding","(" ]
+                                    }, {
+                                       "r" : "293",
+                                       "s" : [ {
+                                          "value" : [ "\"Urine Drug Screening\"" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ ")" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " }" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " }" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ",\n      " ]
+                     }, {
+                        "s" : [ {
+                           "value" : [ "subject",": " ]
+                        }, {
+                           "r" : "318",
+                           "s" : [ {
+                              "value" : [ "FHIR",".","Reference"," { " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "reference",": " ]
+                              }, {
+                                 "r" : "320",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","string"," { " ]
+                                 }, {
+                                    "s" : [ {
+                                       "value" : [ "value",": " ]
+                                    }, {
+                                       "r" : "331",
+                                       "s" : [ {
+                                          "r" : "323",
+                                          "s" : [ {
+                                             "value" : [ "'Patient/'" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ " + " ]
+                                       }, {
+                                          "r" : "326",
+                                          "s" : [ {
+                                             "r" : "325",
+                                             "s" : [ {
+                                                "value" : [ "Patient" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "326",
+                                             "s" : [ {
+                                                "value" : [ "id" ]
+                                             } ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " }" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " }" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ",\n      " ]
+                     }, {
+                        "s" : [ {
+                           "value" : [ "occurrence",": " ]
+                        }, {
+                           "r" : "332",
+                           "s" : [ {
+                              "value" : [ "FHIR",".","Period"," { " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "start",": " ]
+                              }, {
+                                 "r" : "334",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","dateTime"," { " ]
+                                 }, {
+                                    "s" : [ {
+                                       "value" : [ "value",": " ]
+                                    }, {
+                                       "r" : "338",
+                                       "s" : [ {
+                                          "value" : [ "Today","()" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " }" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ ", " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "end",": " ]
+                              }, {
+                                 "r" : "342",
+                                 "s" : [ {
+                                    "value" : [ "FHIR",".","dateTime"," { " ]
+                                 }, {
+                                    "s" : [ {
+                                       "value" : [ "value",": " ]
+                                    }, {
+                                       "r" : "344",
+                                       "s" : [ {
+                                          "r" : "347",
+                                          "s" : [ {
+                                             "value" : [ "Today","()" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ " + " ]
+                                       }, {
+                                          "r" : "348",
+                                          "s" : [ {
+                                             "value" : [ "7 ","days" ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " }" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " }" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ",\n      " ]
+                     }, {
+                        "s" : [ {
+                           "value" : [ "authoredOn",": " ]
+                        }, {
+                           "r" : "359",
+                           "s" : [ {
+                              "value" : [ "FHIR",".","dateTime"," { " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "value",": " ]
+                              }, {
+                                 "r" : "363",
+                                 "s" : [ {
+                                    "value" : [ "Now","()" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " }" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n      // doesn't really work, need a relatedArtifact here...\n      //reasonCode: { FHIR.CodeableConcept { text: FHIR.string { value: 'https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#Recommendation10' } } }\n    }" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "271",
+               "locator" : "99:5-111:5",
+               "classType" : "{http://hl7.org/fhir}ServiceRequest",
+               "type" : "Instance",
+               "element" : [ {
+                  "name" : "instantiatesCanonical",
+                  "value" : {
+                     "localId" : "273",
+                     "locator" : "101:30-101:130",
+                     "type" : "List",
+                     "element" : [ {
+                        "localId" : "274",
+                        "locator" : "101:32-101:128",
+                        "classType" : "{http://hl7.org/fhir}canonical",
+                        "type" : "Instance",
+                        "element" : [ {
+                           "name" : "value",
+                           "value" : {
+                              "localId" : "276",
+                              "locator" : "101:56-101:126",
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "http://fhir.org/guides/cdc/activitydefinition/urine-screening-request",
+                              "type" : "Literal"
+                           }
+                        } ]
+                     } ]
+                  }
+               }, {
+                  "name" : "status",
+                  "value" : {
+                     "localId" : "278",
+                     "locator" : "102:15-102:58",
+                     "classType" : "{http://hl7.org/fhir}ServiceRequestStatus",
+                     "type" : "Instance",
+                     "element" : [ {
+                        "name" : "value",
+                        "value" : {
+                           "localId" : "280",
+                           "locator" : "102:50-102:56",
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "draft",
+                           "type" : "Literal"
+                        }
+                     } ]
+                  }
+               }, {
+                  "name" : "intent",
+                  "value" : {
+                     "localId" : "282",
+                     "locator" : "103:15-103:61",
+                     "classType" : "{http://hl7.org/fhir}ServiceRequestIntent",
+                     "type" : "Instance",
+                     "element" : [ {
+                        "name" : "value",
+                        "value" : {
+                           "localId" : "284",
+                           "locator" : "103:50-103:59",
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "proposal",
+                           "type" : "Literal"
+                        }
+                     } ]
+                  }
+               }, {
+                  "name" : "priority",
+                  "value" : {
+                     "localId" : "286",
+                     "locator" : "104:17-104:64",
+                     "classType" : "{http://hl7.org/fhir}ServiceRequestPriority",
+                     "type" : "Instance",
+                     "element" : [ {
+                        "name" : "value",
+                        "value" : {
+                           "localId" : "288",
+                           "locator" : "104:54-104:62",
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "routine",
+                           "type" : "Literal"
+                        }
+                     } ]
+                  }
+               }, {
+                  "name" : "code",
+                  "value" : {
+                     "localId" : "290",
+                     "locator" : "105:13-105:81",
+                     "classType" : "{http://hl7.org/fhir}CodeableConcept",
+                     "type" : "Instance",
+                     "element" : [ {
+                        "name" : "coding",
+                        "value" : {
+                           "localId" : "292",
+                           "locator" : "105:44-105:79",
+                           "type" : "List",
+                           "element" : [ {
+                              "localId" : "297",
+                              "locator" : "105:46-105:77",
+                              "name" : "ToCoding",
+                              "type" : "FunctionRef",
+                              "signature" : [ ],
+                              "operand" : [ {
+                                 "localId" : "293",
+                                 "locator" : "105:55-105:76",
+                                 "name" : "Urine Drug Screening",
+                                 "type" : "CodeRef"
+                              } ]
+                           } ]
+                        }
+                     } ]
+                  }
+               }, {
+                  "name" : "subject",
+                  "value" : {
+                     "localId" : "318",
+                     "locator" : "106:16-106:91",
+                     "classType" : "{http://hl7.org/fhir}Reference",
+                     "type" : "Instance",
+                     "element" : [ {
+                        "name" : "reference",
+                        "value" : {
+                           "localId" : "320",
+                           "locator" : "106:44-106:89",
+                           "classType" : "{http://hl7.org/fhir}string",
+                           "type" : "Instance",
+                           "element" : [ {
+                              "name" : "value",
+                              "value" : {
+                                 "localId" : "331",
+                                 "locator" : "106:65-106:87",
+                                 "type" : "Concatenate",
+                                 "signature" : [ ],
+                                 "operand" : [ {
+                                    "localId" : "323",
+                                    "locator" : "106:65-106:74",
+                                    "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                                    "value" : "Patient/",
+                                    "type" : "Literal"
+                                 }, {
+                                    "localId" : "327",
+                                    "name" : "ToString",
+                                    "libraryName" : "FHIRHelpers",
+                                    "type" : "FunctionRef",
+                                    "signature" : [ {
+                                       "localId" : "328",
+                                       "name" : "{http://hl7.org/fhir}string",
+                                       "type" : "NamedTypeSpecifier"
+                                    } ],
+                                    "operand" : [ {
+                                       "localId" : "326",
+                                       "locator" : "106:78-106:87",
+                                       "path" : "id",
+                                       "type" : "Property",
+                                       "source" : {
+                                          "localId" : "325",
+                                          "locator" : "106:78-106:84",
+                                          "name" : "Patient",
+                                          "type" : "ExpressionRef"
+                                       }
+                                    } ]
+                                 } ]
+                              }
+                           } ]
+                        }
+                     } ]
+                  }
+               }, {
+                  "name" : "occurrence",
+                  "value" : {
+                     "localId" : "354",
+                     "type" : "As",
+                     "signature" : [ ],
+                     "operand" : {
+                        "localId" : "332",
+                        "locator" : "107:19-107:121",
+                        "classType" : "{http://hl7.org/fhir}Period",
+                        "type" : "Instance",
+                        "element" : [ {
+                           "name" : "start",
+                           "value" : {
+                              "localId" : "334",
+                              "locator" : "107:40-107:71",
+                              "classType" : "{http://hl7.org/fhir}dateTime",
+                              "type" : "Instance",
+                              "element" : [ {
+                                 "name" : "value",
+                                 "value" : {
+                                    "localId" : "340",
+                                    "type" : "ToDateTime",
+                                    "signature" : [ {
+                                       "localId" : "341",
+                                       "name" : "{urn:hl7-org:elm-types:r1}Date",
+                                       "type" : "NamedTypeSpecifier"
+                                    } ],
+                                    "operand" : {
+                                       "localId" : "338",
+                                       "locator" : "107:63-107:69",
+                                       "type" : "Today",
+                                       "signature" : [ ]
+                                    }
+                                 }
+                              } ]
+                           }
+                        }, {
+                           "name" : "end",
+                           "value" : {
+                              "localId" : "342",
+                              "locator" : "107:79-107:119",
+                              "classType" : "{http://hl7.org/fhir}dateTime",
+                              "type" : "Instance",
+                              "element" : [ {
+                                 "name" : "value",
+                                 "value" : {
+                                    "localId" : "352",
+                                    "type" : "ToDateTime",
+                                    "signature" : [ {
+                                       "localId" : "353",
+                                       "name" : "{urn:hl7-org:elm-types:r1}Date",
+                                       "type" : "NamedTypeSpecifier"
+                                    } ],
+                                    "operand" : {
+                                       "localId" : "344",
+                                       "locator" : "107:102-107:117",
+                                       "type" : "Add",
+                                       "signature" : [ {
+                                          "localId" : "349",
+                                          "name" : "{urn:hl7-org:elm-types:r1}Date",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "350",
+                                          "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                                          "type" : "NamedTypeSpecifier"
+                                       } ],
+                                       "operand" : [ {
+                                          "localId" : "347",
+                                          "locator" : "107:102-107:108",
+                                          "type" : "Today",
+                                          "signature" : [ ]
+                                       }, {
+                                          "localId" : "348",
+                                          "locator" : "107:112-107:117",
+                                          "value" : 7,
+                                          "unit" : "days",
+                                          "type" : "Quantity"
+                                       } ]
+                                    }
+                                 }
+                              } ]
+                           }
+                        } ]
+                     },
+                     "asTypeSpecifier" : {
+                        "localId" : "355",
+                        "type" : "ChoiceTypeSpecifier",
+                        "choice" : [ {
+                           "localId" : "356",
+                           "name" : "{http://hl7.org/fhir}dateTime",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "localId" : "357",
+                           "name" : "{http://hl7.org/fhir}Period",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "localId" : "358",
+                           "name" : "{http://hl7.org/fhir}Timing",
+                           "type" : "NamedTypeSpecifier"
+                        } ]
+                     }
+                  }
+               }, {
+                  "name" : "authoredOn",
+                  "value" : {
+                     "localId" : "359",
+                     "locator" : "108:19-108:48",
+                     "classType" : "{http://hl7.org/fhir}dateTime",
+                     "type" : "Instance",
+                     "element" : [ {
+                        "name" : "value",
+                        "value" : {
+                           "localId" : "363",
+                           "locator" : "108:42-108:46",
+                           "type" : "Now",
+                           "signature" : [ ]
+                        }
+                     } ]
+                  }
+               } ]
+            }
+         } ]
+      }
+   }
+}

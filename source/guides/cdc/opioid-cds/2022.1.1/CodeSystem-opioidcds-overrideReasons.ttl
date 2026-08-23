@@ -1,0 +1,163 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-overrideReasons> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "opioidcds-overrideReasons"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem opioidcds-overrideReasons</b></p><a name=\"opioidcds-overrideReasons\"> </a><a name=\"hcopioidcds-overrideReasons\"> </a><p>This case-sensitive code system <code>http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-overrideReasons</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">snooze-1-month<a name=\"opioidcds-overrideReasons-snooze-1-month\"> </a></td><td>Snooze Alert for 1 Month</td><td>Disable the alert for 1 month for a particular patient, user(s), department(s), site(s), or organization</td></tr><tr><td style=\"white-space:nowrap\">snooze-3-months<a name=\"opioidcds-overrideReasons-snooze-3-months\"> </a></td><td>Snooze Alert for 3 Months</td><td>Disable the alert for 3 months for a particular patient, user(s), department(s), site(s), or organization</td></tr><tr><td style=\"white-space:nowrap\">snooze-6-months<a name=\"opioidcds-overrideReasons-snooze-6-months\"> </a></td><td>Snooze Alert for 6 Months</td><td>Disable the alert for 6 months for a particular patient, user(s), department(s), site(s), or organization</td></tr><tr><td style=\"white-space:nowrap\">snooze-1-year<a name=\"opioidcds-overrideReasons-snooze-1-year\"> </a></td><td>Snooze Alert for 1 Year</td><td>Disable the alert for 1 year for a particular patient, user(s), department(s), site(s), or organization</td></tr><tr><td style=\"white-space:nowrap\">snooze-1-month-with-comment<a name=\"opioidcds-overrideReasons-snooze-1-month-with-comment\"> </a></td><td>Snooze Alert for 1 Month with a Comment</td><td>Disable the alert for 1 month for a particular patient, user(s), department(s), site(s), or organization. Reasoning and/or justification supplied in an additional comment</td></tr><tr><td style=\"white-space:nowrap\">snooze-3-months-with-comment<a name=\"opioidcds-overrideReasons-snooze-3-months-with-comment\"> </a></td><td>Snooze Alert for 3 Months with a Comment</td><td>Disable the alert for 3 months for a particular patient, user(s), department(s), site(s), or organization. Reasoning and/or justification supplied in an additional comment</td></tr><tr><td style=\"white-space:nowrap\">snooze-6-months-with-comment<a name=\"opioidcds-overrideReasons-snooze-6-months-with-comment\"> </a></td><td>Snooze Alert for 6 Months with a Comment</td><td>Disable the alert for 6 months for a particular patient, user(s), department(s), site(s), or organization. Reasoning and/or justification supplied in an additional comment</td></tr><tr><td style=\"white-space:nowrap\">snooze-1-year-with-comment<a name=\"opioidcds-overrideReasons-snooze-1-year-with-comment\"> </a></td><td>Snooze Alert for 1 Year with a Comment</td><td>Disable the alert for 1 year for a particular patient, user(s), department(s), site(s), or organization. Reasoning and/or justification supplied in an additional comment</td></tr><tr><td style=\"white-space:nowrap\">comment<a name=\"opioidcds-overrideReasons-comment\"> </a></td><td>Comment</td><td>A comment about the received information or suggestion. This can include feedback for improvement/refinement.</td></tr><tr><td style=\"white-space:nowrap\">update-order<a name=\"opioidcds-overrideReasons-update-order\"> </a></td><td>Update Order</td><td>The order will be updated to the order(s) suggested by the service</td></tr><tr><td style=\"white-space:nowrap\">cancel-order<a name=\"opioidcds-overrideReasons-cancel-order\"> </a></td><td>Cancel Order</td><td>The order will be canceled based on the information provided by the service</td></tr><tr><td style=\"white-space:nowrap\">launch-app<a name=\"opioidcds-overrideReasons-launch-app\"> </a></td><td>Launch App</td><td>An application will be used to complete the workflow</td></tr><tr><td style=\"white-space:nowrap\">accept-suggestion<a name=\"opioidcds-overrideReasons-accept-suggestion\"> </a></td><td>Accept Suggestion</td><td>The suggestion provided by the service has been accepted</td></tr><tr><td style=\"white-space:nowrap\">accept-suggestion-with-comment<a name=\"opioidcds-overrideReasons-accept-suggestion-with-comment\"> </a></td><td>Accept Suggestion with Comment</td><td>The suggestion provided by the service has been accepted. Additional action(s) documented in an associated comment</td></tr><tr><td style=\"white-space:nowrap\">decline-suggestion<a name=\"opioidcds-overrideReasons-decline-suggestion\"> </a></td><td>Decline Suggestion</td><td>The suggestion provided by the service has been declined</td></tr><tr><td style=\"white-space:nowrap\">decline-suggestion-with-comment<a name=\"opioidcds-overrideReasons-decline-suggestion-with-comment\"> </a></td><td>Decline Suggestion with Comment</td><td>The suggestion provided by the service has been declined. Reasoning and/or justification supplied in an additional comment</td></tr><tr><td style=\"white-space:nowrap\">UToxAccepted<a name=\"opioidcds-overrideReasons-UToxAccepted\"> </a></td><td>Action Taken</td><td>Action taken on the Recommendation 10 urine toxicology screening recommendation (e.g., toxicology screen was ordered).</td></tr><tr><td style=\"white-space:nowrap\">UToxNA<a name=\"opioidcds-overrideReasons-UToxNA\"> </a></td><td>Alert not appropriate</td><td>The Recommendation 10 urine toxicology screening recommendation is not appropriate for the current patient or context.</td></tr><tr><td style=\"white-space:nowrap\">UToxPDeclined<a name=\"opioidcds-overrideReasons-UToxPDeclined\"> </a></td><td>Action not taken</td><td>Action on the Recommendation 10 urine toxicology screening recommendation was not taken (e.g., patient declined or other reason).</td></tr><tr><td style=\"white-space:nowrap\">UToxWrongProvider<a name=\"opioidcds-overrideReasons-UToxWrongProvider\"> </a></td><td>Wrong clinician</td><td>The Recommendation 10 urine toxicology screening recommendation is not appropriate for this clinician's scope of practice.</td></tr><tr><td style=\"white-space:nowrap\">UnExptResultAccepted<a name=\"opioidcds-overrideReasons-UnExptResultAccepted\"> </a></td><td>Action Taken</td><td>Action taken in response to the unexpected toxicology results alert from Recommendation 10 (e.g., will repeat urine drug screening more frequently or will assess for substance use disorder).</td></tr><tr><td style=\"white-space:nowrap\">UnExptResultNA<a name=\"opioidcds-overrideReasons-UnExptResultNA\"> </a></td><td>Alert not appropriate</td><td>The Recommendation 10 unexpected toxicology results alert is not appropriate for the current patient or context.</td></tr><tr><td style=\"white-space:nowrap\">UnExptResultWrongProvider<a name=\"opioidcds-overrideReasons-UnExptResultWrongProvider\"> </a></td><td>Wrong clinician</td><td>The Recommendation 10 unexpected toxicology results alert is not appropriate for this clinician's scope of practice.</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-overrideReasons"] ;
+  fhir:CodeSystem.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ] ;
+     fhir:Identifier.value [ fhir:value "urn:oid:2.16.840.1.113883.4.642.40.65.16.2" ]
+  ] ;
+  fhir:CodeSystem.version [ fhir:value "2022.1.1"] ;
+  fhir:CodeSystem.name [ fhir:value "CDC_Opioid_Override_Reasons"] ;
+  fhir:CodeSystem.title [ fhir:value "CDC Opioid Override Reasons"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-08-23T19:44:36+10:00"^^xsd:dateTime] ;
+  fhir:CodeSystem.publisher [ fhir:value "CDC / Security Risk Solutions, Inc. (SRS)"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.securityrisksolutions.com" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "Override reasons for the 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain"] ;
+  fhir:CodeSystem.copyright [ fhir:value "Centers for Disease Control and Prevention (CDC)"] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "snooze-1-month" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Snooze Alert for 1 Month" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Disable the alert for 1 month for a particular patient, user(s), department(s), site(s), or organization" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "snooze-3-months" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Snooze Alert for 3 Months" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Disable the alert for 3 months for a particular patient, user(s), department(s), site(s), or organization" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "snooze-6-months" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Snooze Alert for 6 Months" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Disable the alert for 6 months for a particular patient, user(s), department(s), site(s), or organization" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "snooze-1-year" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Snooze Alert for 1 Year" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Disable the alert for 1 year for a particular patient, user(s), department(s), site(s), or organization" ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "snooze-1-month-with-comment" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Snooze Alert for 1 Month with a Comment" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Disable the alert for 1 month for a particular patient, user(s), department(s), site(s), or organization. Reasoning and/or justification supplied in an additional comment" ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "snooze-3-months-with-comment" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Snooze Alert for 3 Months with a Comment" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Disable the alert for 3 months for a particular patient, user(s), department(s), site(s), or organization. Reasoning and/or justification supplied in an additional comment" ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "snooze-6-months-with-comment" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Snooze Alert for 6 Months with a Comment" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Disable the alert for 6 months for a particular patient, user(s), department(s), site(s), or organization. Reasoning and/or justification supplied in an additional comment" ]
+  ], [
+     fhir:index 7 ;
+     fhir:CodeSystem.concept.code [ fhir:value "snooze-1-year-with-comment" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Snooze Alert for 1 Year with a Comment" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Disable the alert for 1 year for a particular patient, user(s), department(s), site(s), or organization. Reasoning and/or justification supplied in an additional comment" ]
+  ], [
+     fhir:index 8 ;
+     fhir:CodeSystem.concept.code [ fhir:value "comment" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Comment" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "A comment about the received information or suggestion. This can include feedback for improvement/refinement." ]
+  ], [
+     fhir:index 9 ;
+     fhir:CodeSystem.concept.code [ fhir:value "update-order" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Update Order" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The order will be updated to the order(s) suggested by the service" ]
+  ], [
+     fhir:index 10 ;
+     fhir:CodeSystem.concept.code [ fhir:value "cancel-order" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Cancel Order" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The order will be canceled based on the information provided by the service" ]
+  ], [
+     fhir:index 11 ;
+     fhir:CodeSystem.concept.code [ fhir:value "launch-app" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Launch App" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "An application will be used to complete the workflow" ]
+  ], [
+     fhir:index 12 ;
+     fhir:CodeSystem.concept.code [ fhir:value "accept-suggestion" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Accept Suggestion" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The suggestion provided by the service has been accepted" ]
+  ], [
+     fhir:index 13 ;
+     fhir:CodeSystem.concept.code [ fhir:value "accept-suggestion-with-comment" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Accept Suggestion with Comment" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The suggestion provided by the service has been accepted. Additional action(s) documented in an associated comment" ]
+  ], [
+     fhir:index 14 ;
+     fhir:CodeSystem.concept.code [ fhir:value "decline-suggestion" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Decline Suggestion" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The suggestion provided by the service has been declined" ]
+  ], [
+     fhir:index 15 ;
+     fhir:CodeSystem.concept.code [ fhir:value "decline-suggestion-with-comment" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Decline Suggestion with Comment" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The suggestion provided by the service has been declined. Reasoning and/or justification supplied in an additional comment" ]
+  ], [
+     fhir:index 16 ;
+     fhir:CodeSystem.concept.code [ fhir:value "UToxAccepted" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Action Taken" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Action taken on the Recommendation 10 urine toxicology screening recommendation (e.g., toxicology screen was ordered)." ]
+  ], [
+     fhir:index 17 ;
+     fhir:CodeSystem.concept.code [ fhir:value "UToxNA" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Alert not appropriate" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The Recommendation 10 urine toxicology screening recommendation is not appropriate for the current patient or context." ]
+  ], [
+     fhir:index 18 ;
+     fhir:CodeSystem.concept.code [ fhir:value "UToxPDeclined" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Action not taken" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Action on the Recommendation 10 urine toxicology screening recommendation was not taken (e.g., patient declined or other reason)." ]
+  ], [
+     fhir:index 19 ;
+     fhir:CodeSystem.concept.code [ fhir:value "UToxWrongProvider" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Wrong clinician" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The Recommendation 10 urine toxicology screening recommendation is not appropriate for this clinician's scope of practice." ]
+  ], [
+     fhir:index 20 ;
+     fhir:CodeSystem.concept.code [ fhir:value "UnExptResultAccepted" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Action Taken" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Action taken in response to the unexpected toxicology results alert from Recommendation 10 (e.g., will repeat urine drug screening more frequently or will assess for substance use disorder)." ]
+  ], [
+     fhir:index 21 ;
+     fhir:CodeSystem.concept.code [ fhir:value "UnExptResultNA" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Alert not appropriate" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The Recommendation 10 unexpected toxicology results alert is not appropriate for the current patient or context." ]
+  ], [
+     fhir:index 22 ;
+     fhir:CodeSystem.concept.code [ fhir:value "UnExptResultWrongProvider" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Wrong clinician" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "The Recommendation 10 unexpected toxicology results alert is not appropriate for this clinician's scope of practice." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-overrideReasons.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

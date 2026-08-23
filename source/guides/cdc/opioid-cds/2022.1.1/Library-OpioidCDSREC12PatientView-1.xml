@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1" localId="0">
+   <annotation translatorVersion="3.25.0" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="Overloads" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="359">
+         <a:s>library OpioidCDSREC12PatientView version '2022.1.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="OpioidCDSREC12PatientView" system="http://fhir.org/guides/cdc/opioid-cds" version="2022.1.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localId="1" localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="206" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="206">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="208" locator="5:1-5:54" localIdentifier="FHIRHelpers" path="http://fhir.org/guides/cdc/opioid-cds/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="208">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1' called FHIRHelpers</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="210" locator="6:1-6:56" localIdentifier="Common" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommon" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="210">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSCommon</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Common</a:s>
+            </a:s>
+         </annotation>
+      </def>
+      <def localId="212" locator="7:1-7:62" localIdentifier="Config" path="http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommonConfig" version="2022.1.0">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="212">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>OpioidCDSCommonConfig</a:s>
+               </a:s>
+               <a:s> version '2022.1.0' called Config</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <contexts>
+      <def localId="217" locator="31:1-31:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def localId="215" locator="31:1-31:15" name="Patient" context="Patient">
+         <expression localId="216" xsi:type="SingletonFrom">
+            <operand localId="214" locator="31:1-31:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="220" locator="33:1-34:38" name="Opioid Use Disorder Lookback Period" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="220">
+               <a:s>define &quot;Opioid Use Disorder Lookback Period&quot;:
+  </a:s>
+               <a:s r="231">
+                  <a:s>Interval[</a:s>
+                  <a:s r="221">
+                     <a:s r="224">
+                        <a:s>Today()</a:s>
+                     </a:s>
+                     <a:s> - </a:s>
+                     <a:s r="225">
+                        <a:s>90 days</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s r="230">
+                     <a:s>Today()</a:s>
+                  </a:s>
+                  <a:s>]</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="231" locator="34:3-34:38" lowClosed="true" highClosed="true" xsi:type="Interval">
+            <low localId="221" locator="34:12-34:28" xsi:type="Subtract">
+               <signature localId="226" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+               <signature localId="227" name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+               <operand localId="224" locator="34:12-34:18" xsi:type="Today"/>
+               <operand localId="225" locator="34:22-34:28" value="90" unit="days" xsi:type="Quantity"/>
+            </low>
+            <high localId="230" locator="34:31-34:37" xsi:type="Today"/>
+         </expression>
+      </def>
+      <def localId="234" locator="36:1-62:5" name="Not Receiving Evidence-Based Treatment for Opioid Use Disorder" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="234">
+               <a:s>define &quot;Not Receiving Evidence-Based Treatment for Opioid Use Disorder&quot;:
+  </a:s>
+               <a:s r="235">
+                  <a:s r="237">
+                     <a:s r="236">
+                        <a:s>Config</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="237">
+                        <a:s>&quot;Evidence Based Treatment Criteria For Opioid Use Disorder&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    and </a:s>
+                  <a:s r="238">
+                     <a:s>not </a:s>
+                     <a:s r="239">
+                        <a:s>(
+        </a:s>
+                        <a:s r="239">
+                           <a:s>if </a:s>
+                           <a:s r="241">
+                              <a:s r="240">
+                                 <a:s>Config</a:s>
+                              </a:s>
+                              <a:s>.</a:s>
+                              <a:s r="241">
+                                 <a:s>&quot;Can the implementing EHR support queries for past medications by date range?&quot;</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s> then
+          </a:s>
+                           <a:s r="242">
+                              <a:s>exists </a:s>
+                              <a:s r="298">
+                                 <a:s>(
+            </a:s>
+                                 <a:s r="298">
+                                    <a:s>
+                                       <a:s r="243">
+                                          <a:s r="274">
+                                             <a:s r="274">
+                                                <a:s>[MedicationRequest: </a:s>
+                                                <a:s>
+                                                   <a:s>Common.&quot;Buprenorphine and methadone medications&quot;</a:s>
+                                                </a:s>
+                                                <a:s>]</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s> MR</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s>
+              </a:s>
+                                    <a:s r="276">
+                                       <a:s>where </a:s>
+                                       <a:s r="276">
+                                          <a:s r="284">
+                                             <a:s r="278">
+                                                <a:s r="277">
+                                                   <a:s>MR</a:s>
+                                                </a:s>
+                                                <a:s>.</a:s>
+                                                <a:s r="278">
+                                                   <a:s>status</a:s>
+                                                </a:s>
+                                             </a:s>
+                                             <a:s> in </a:s>
+                                             <a:s r="279">
+                                                <a:s>{ </a:s>
+                                                <a:s r="280">
+                                                   <a:s>'active'</a:s>
+                                                </a:s>
+                                                <a:s>, </a:s>
+                                                <a:s r="282">
+                                                   <a:s>'completed'</a:s>
+                                                </a:s>
+                                                <a:s> }</a:s>
+                                             </a:s>
+                                          </a:s>
+                                          <a:s>
+                and </a:s>
+                                          <a:s r="294">
+                                             <a:s r="287">
+                                                <a:s>date from </a:s>
+                                                <a:s r="289">
+                                                   <a:s r="288">
+                                                      <a:s>MR</a:s>
+                                                   </a:s>
+                                                   <a:s>.</a:s>
+                                                   <a:s r="289">
+                                                      <a:s>authoredOn</a:s>
+                                                   </a:s>
+                                                </a:s>
+                                             </a:s>
+                                             <a:s r="294"> during day of </a:s>
+                                             <a:s r="292">
+                                                <a:s>&quot;Opioid Use Disorder Lookback Period&quot;</a:s>
+                                             </a:s>
+                                          </a:s>
+                                       </a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>
+          )</a:s>
+                              </a:s>
+                           </a:s>
+                           <a:s r="299">
+        else
+            true</a:s>
+                        </a:s>
+                        <a:s>
+    /* update 2022 removes &quot;behavioral therapy condition&quot;
+      or exists (
+        [Procedure: Common.&quot;Substance misuse behavioral counseling&quot;] P
+          where P.status ~ 'completed'
+            and (
+              case
+                when P.performed is FHIR.dateTime then
+                  Interval[FHIRHelpers.ToDateTime(P.performed as FHIR.dateTime), FHIRHelpers.ToDateTime(P.performed as FHIR.dateTime)]
+                when P.performed is FHIR.Period then
+                  FHIRHelpers.ToInterval(P.performed as FHIR.Period)
+                else
+                  null as Interval&lt;DateTime>
+                end
+            ) during day of &quot;Opioid Use Disorder Lookback Period&quot;
+      )*/
+    )</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="235" locator="37:3-62:5" xsi:type="And">
+            <operand localId="237" locator="37:3-37:68" name="Evidence Based Treatment Criteria For Opioid Use Disorder" libraryName="Config" xsi:type="ExpressionRef"/>
+            <operand localId="238" locator="38:9-62:5" xsi:type="Not">
+               <operand localId="239" locator="38:13-62:5" xsi:type="If">
+                  <condition localId="241" locator="39:12-39:96" name="Can the implementing EHR support queries for past medications by date range?" libraryName="Config" xsi:type="ExpressionRef"/>
+                  <then localId="242" locator="40:11-44:11" xsi:type="Exists">
+                     <operand localId="298" locator="40:18-44:11" xsi:type="Query">
+                        <source localId="243" locator="41:13-41:84" alias="MR">
+                           <expression localId="274" locator="41:13-41:81" xsi:type="Union">
+                              <operand localId="247" dataType="fhir:MedicationRequest" templateId="http://hl7.org/fhir/StructureDefinition/MedicationRequest" codeProperty="medication" codeComparator="in" xsi:type="Retrieve">
+                                 <codes localId="246" locator="41:33-41:80" name="Buprenorphine and methadone medications" libraryName="Common" preserve="true" xsi:type="ValueSetRef"/>
+                              </operand>
+                              <operand localId="254" locator="41:13-41:81" xsi:type="Query">
+                                 <source localId="255" locator="41:13-41:81" alias="MR">
+                                    <expression localId="252" dataType="fhir:MedicationRequest" templateId="http://hl7.org/fhir/StructureDefinition/MedicationRequest" xsi:type="Retrieve"/>
+                                 </source>
+                                 <relationship localId="256" locator="41:13-41:81" alias="M" xsi:type="With">
+                                    <expression localId="253" dataType="fhir:Medication" templateId="http://hl7.org/fhir/StructureDefinition/Medication" xsi:type="Retrieve"/>
+                                    <suchThat localId="273" xsi:type="And">
+                                       <operand localId="264" xsi:type="Equal">
+                                          <signature localId="267" name="t:String" xsi:type="NamedTypeSpecifier"/>
+                                          <signature localId="268" name="t:String" xsi:type="NamedTypeSpecifier"/>
+                                          <operand localId="265" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                                             <signature localId="266" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                             <operand localId="257" path="id" scope="M" xsi:type="Property"/>
+                                          </operand>
+                                          <operand localId="263" xsi:type="Last">
+                                             <source localId="259" xsi:type="Split">
+                                                <stringToSplit localId="261" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                                                   <signature localId="262" name="fhir:string" xsi:type="NamedTypeSpecifier"/>
+                                                   <operand localId="258" path="medication.reference" scope="MR" xsi:type="Property"/>
+                                                </stringToSplit>
+                                                <separator localId="260" valueType="t:String" value="/" xsi:type="Literal"/>
+                                             </source>
+                                          </operand>
+                                       </operand>
+                                       <operand localId="270" xsi:type="InValueSet">
+                                          <signature localId="272" name="t:Concept" xsi:type="NamedTypeSpecifier"/>
+                                          <code localId="271" name="ToConcept" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                                             <operand localId="269" path="code" scope="M" xsi:type="Property"/>
+                                          </code>
+                                          <valueset localId="246" locator="41:33-41:80" name="Buprenorphine and methadone medications" libraryName="Common" preserve="true"/>
+                                       </operand>
+                                    </suchThat>
+                                 </relationship>
+                              </operand>
+                           </expression>
+                        </source>
+                        <where localId="276" locator="42:15-43:95" xsi:type="And">
+                           <operand localId="284" locator="42:21-42:58" xsi:type="In">
+                              <operand localId="285" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                                 <signature localId="286" name="fhir:MedicationRequestStatus" xsi:type="NamedTypeSpecifier"/>
+                                 <operand localId="278" locator="42:21-42:29" path="status" scope="MR" xsi:type="Property"/>
+                              </operand>
+                              <operand localId="279" locator="42:34-42:58" xsi:type="List">
+                                 <element localId="280" locator="42:36-42:43" valueType="t:String" value="active" xsi:type="Literal"/>
+                                 <element localId="282" locator="42:46-42:56" valueType="t:String" value="completed" xsi:type="Literal"/>
+                              </operand>
+                           </operand>
+                           <operand localId="294" locator="43:21-43:95" precision="Day" xsi:type="In">
+                              <signature localId="295" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                              <signature localId="296" xsi:type="IntervalTypeSpecifier">
+                                 <pointType localId="297" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                              </signature>
+                              <operand localId="287" locator="43:21-43:43" xsi:type="DateFrom">
+                                 <operand localId="290" name="ToDateTime" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                                    <signature localId="291" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                                    <operand localId="289" locator="43:31-43:43" path="authoredOn" scope="MR" xsi:type="Property"/>
+                                 </operand>
+                              </operand>
+                              <operand localId="292" locator="43:59-43:95" name="Opioid Use Disorder Lookback Period" xsi:type="ExpressionRef"/>
+                           </operand>
+                        </where>
+                     </operand>
+                  </then>
+                  <else localId="299" locator="46:13-46:16" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+               </operand>
+            </operand>
+         </expression>
+      </def>
+      <def localId="302" locator="64:1-70:5" name="Presence of Diagnosis of Opioid Use Disorder" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="302">
+               <a:s>define &quot;Presence of Diagnosis of Opioid Use Disorder&quot;:
+  </a:s>
+               <a:s r="303">
+                  <a:s>exists </a:s>
+                  <a:s r="335">
+                     <a:s>(
+    </a:s>
+                     <a:s r="335">
+                        <a:s>
+                           <a:s r="304">
+                              <a:s r="306">
+                                 <a:s>
+                                    <a:s>Common.&quot;US Core-Categorized Conditions&quot;</a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s> C</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+      </a:s>
+                        <a:s r="308">
+                           <a:s>where </a:s>
+                           <a:s r="308">
+                              <a:s r="309">
+                                 <a:s r="314">
+                                    <a:s r="311">
+                                       <a:s r="310">
+                                          <a:s>C</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="311">
+                                          <a:s>code</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> in </a:s>
+                                    <a:s r="313">
+                                       <a:s r="312">
+                                          <a:s>Common</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="313">
+                                          <a:s>&quot;Opioid misuse disorders&quot;</a:s>
+                                       </a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s>
+        and </a:s>
+                                 <a:s r="321">
+                                    <a:s r="318">
+                                       <a:s r="317">
+                                          <a:s>C</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="318">
+                                          <a:s>clinicalStatus</a:s>
+                                       </a:s>
+                                    </a:s>
+                                    <a:s> in </a:s>
+                                    <a:s r="320">
+                                       <a:s r="319">
+                                          <a:s>Common</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="320">
+                                          <a:s>&quot;Active Condition&quot;</a:s>
+                                       </a:s>
+                                    </a:s>
+                                 </a:s>
+                              </a:s>
+                              <a:s>
+        and </a:s>
+                              <a:s r="331">
+                                 <a:s r="324">
+                                    <a:s>date from </a:s>
+                                    <a:s r="326">
+                                       <a:s r="325">
+                                          <a:s>C</a:s>
+                                       </a:s>
+                                       <a:s>.</a:s>
+                                       <a:s r="326">
+                                          <a:s>recordedDate</a:s>
+                                       </a:s>
+                                    </a:s>
+                                 </a:s>
+                                 <a:s r="331"> during day of </a:s>
+                                 <a:s r="329">
+                                    <a:s>&quot;Opioid Use Disorder Lookback Period&quot;</a:s>
+                                 </a:s>
+                              </a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    )</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="303" locator="65:3-70:5" xsi:type="Exists">
+            <signature localId="336" xsi:type="ListTypeSpecifier">
+               <elementType localId="337" name="fhir:Condition" xsi:type="NamedTypeSpecifier"/>
+            </signature>
+            <operand localId="335" locator="65:10-70:5" xsi:type="Query">
+               <source localId="304" locator="66:5-66:45" alias="C">
+                  <expression localId="306" locator="66:5-66:43" name="US Core-Categorized Conditions" libraryName="Common" xsi:type="ExpressionRef"/>
+               </source>
+               <where localId="308" locator="67:7-69:88" xsi:type="And">
+                  <operand localId="309" locator="67:13-68:57" xsi:type="And">
+                     <operand localId="314" locator="67:13-67:54" xsi:type="InValueSet">
+                        <signature localId="316" name="t:Concept" xsi:type="NamedTypeSpecifier"/>
+                        <code localId="315" name="ToConcept" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                           <operand localId="311" locator="67:13-67:18" path="code" scope="C" xsi:type="Property"/>
+                        </code>
+                        <valueset localId="313" locator="67:23-67:54" name="Opioid misuse disorders" libraryName="Common" preserve="true"/>
+                     </operand>
+                     <operand localId="321" locator="68:13-68:57" xsi:type="InValueSet">
+                        <signature localId="323" name="t:Concept" xsi:type="NamedTypeSpecifier"/>
+                        <code localId="322" name="ToConcept" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                           <operand localId="318" locator="68:13-68:28" path="clinicalStatus" scope="C" xsi:type="Property"/>
+                        </code>
+                        <valueset localId="320" locator="68:33-68:57" name="Active Condition" libraryName="Common" preserve="true"/>
+                     </operand>
+                  </operand>
+                  <operand localId="331" locator="69:13-69:88" precision="Day" xsi:type="In">
+                     <signature localId="332" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     <signature localId="333" xsi:type="IntervalTypeSpecifier">
+                        <pointType localId="334" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                     </signature>
+                     <operand localId="324" locator="69:13-69:36" xsi:type="DateFrom">
+                        <operand localId="327" name="ToDateTime" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                           <signature localId="328" name="fhir:dateTime" xsi:type="NamedTypeSpecifier"/>
+                           <operand localId="326" locator="69:23-69:36" path="recordedDate" scope="C" xsi:type="Property"/>
+                        </operand>
+                     </operand>
+                     <operand localId="329" locator="69:52-69:88" name="Opioid Use Disorder Lookback Period" xsi:type="ExpressionRef"/>
+                  </operand>
+               </where>
+            </operand>
+         </expression>
+      </def>
+      <def localId="340" locator="72:1-73:6" name="Positive Result from Opioid Use Disorder Evaluation Tool" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="340">
+               <a:s r="341">define &quot;Positive Result from Opioid Use Disorder Evaluation Tool&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="341" locator="73:3-73:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="344" locator="75:1-79:66" name="Inclusion Criteria" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="344">
+               <a:s>define &quot;Inclusion Criteria&quot;:
+  </a:s>
+               <a:s r="345">
+                  <a:s r="346">
+                     <a:s r="347">
+                        <a:s r="349">
+                           <a:s r="348">
+                              <a:s>Common</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="349">
+                              <a:s>&quot;Patient 18 or Older?&quot;</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>
+    and </a:s>
+                        <a:s r="350">
+                           <a:s>&quot;Not Receiving Evidence-Based Treatment for Opioid Use Disorder&quot;</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>
+    and </a:s>
+                     <a:s r="351">
+                        <a:s>&quot;Presence of Diagnosis of Opioid Use Disorder&quot;</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    and </a:s>
+                  <a:s r="352">
+                     <a:s>&quot;Positive Result from Opioid Use Disorder Evaluation Tool&quot;</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="345" locator="76:3-79:66" xsi:type="And">
+            <operand localId="346" locator="76:3-78:54" xsi:type="And">
+               <operand localId="347" locator="76:3-77:72" xsi:type="And">
+                  <operand localId="349" locator="76:3-76:31" name="Patient 18 or Older?" libraryName="Common" xsi:type="ExpressionRef"/>
+                  <operand localId="350" locator="77:9-77:72" name="Not Receiving Evidence-Based Treatment for Opioid Use Disorder" xsi:type="ExpressionRef"/>
+               </operand>
+               <operand localId="351" locator="78:9-78:54" name="Presence of Diagnosis of Opioid Use Disorder" xsi:type="ExpressionRef"/>
+            </operand>
+            <operand localId="352" locator="79:9-79:66" name="Positive Result from Opioid Use Disorder Evaluation Tool" xsi:type="ExpressionRef"/>
+         </expression>
+      </def>
+      <def localId="355" locator="81:1-82:7" name="Exclusion Criteria" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="355">
+               <a:s r="356">define &quot;Exclusion Criteria&quot;:
+  false</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="356" locator="82:3-82:7" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+      </def>
+      <def localId="359" locator="84:1-86:32" name="Is Recommendation Applicable?" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="359">
+               <a:s>define &quot;Is Recommendation Applicable?&quot;:
+  </a:s>
+               <a:s r="360">
+                  <a:s r="361">
+                     <a:s>&quot;Inclusion Criteria&quot;</a:s>
+                  </a:s>
+                  <a:s>
+    and </a:s>
+                  <a:s r="362">
+                     <a:s>not </a:s>
+                     <a:s r="363">
+                        <a:s>&quot;Exclusion Criteria&quot;</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="360" locator="85:3-86:32" xsi:type="And">
+            <operand localId="361" locator="85:3-85:22" name="Inclusion Criteria" xsi:type="ExpressionRef"/>
+            <operand localId="362" locator="86:9-86:32" xsi:type="Not">
+               <operand localId="363" locator="86:13-86:32" name="Exclusion Criteria" xsi:type="ExpressionRef"/>
+            </operand>
+         </expression>
+      </def>
+   </statements>
+</library>

@@ -1,4 +1,4 @@
-# OpioidCDSREC10OrderSignLibrary - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# OpioidCDSREC10OrderSignLibrary - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -9,27 +9,11 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC10OrderSign | *Version*:2022.1.0 |
-| Active as of 2026-03-18 | *Computable Name*:OpioidCDSREC10OrderSign |
+| Active as of 2026-08-23 | *Computable Name*:OpioidCDSREC10OrderSign |
+| *Other Identifiers:*OID:2.16.840.1.113883.4.642.40.65.28.29 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
-* * **Content: **application/elm+json: ````Encoded data (47380 characters)````: **Url: **
-  * ?: [Library - Recommendation #10 - Urine Drug Testing](Library-OpioidCDSREC10OrderSign.md)
-* * **Content: **application/elm+json: ````Encoded data (47380 characters)````: **Version: **
-  * ?: 2022.1.0
-* * **Content: **application/elm+json: ````Encoded data (47380 characters)````: **Name: **
-  * ?: OpioidCDSREC10OrderSign
-* * **Content: **application/elm+json: ````Encoded data (47380 characters)````: **Title: **
-  * ?: Library - Recommendation #10 - Urine Drug Testing
-* * **Content: **application/elm+json: ````Encoded data (47380 characters)````: **Status: **
-  * ?: active
-* * **Content: **application/elm+json: ````Encoded data (47380 characters)````: **Experimental: **
-  * ?: false
-* * **Content: **application/elm+json: ````Encoded data (47380 characters)````: **Date: **
-  * ?: 2026-03-18 16:23:26+1100
-* * **Content: **application/elm+json: ````Encoded data (47380 characters)````: **Publisher: **
-  * ?: CDC / Security Risk Solutions, Inc. (SRS)
-* * **Content: **application/elm+json: ````Encoded data (47380 characters)````: **Copyright: **
-  * ?: Centers for Disease Control and Prevention (CDC)
+**Exception parsing generated Narrative (see /tmp/liquid-19292927-0066-48a8-a7d7-25c6ac4d7d34.html): Malformed XHTML: Found "</code>" expecting "</MedicationRequest>" at line 311 column 11**
 
 
 
@@ -116,6 +100,10 @@
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC10OrderSign",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.113883.4.642.40.65.28.29"
+  }],
   "version" : "2022.1.0",
   "name" : "OpioidCDSREC10OrderSign",
   "title" : "Library - Recommendation #10 - Urine Drug Testing",
@@ -127,7 +115,7 @@
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{

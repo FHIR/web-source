@@ -1,4 +1,4 @@
-# OpioidCDSCommonConfig - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# OpioidCDSCommonConfig - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -9,27 +9,11 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSCommonConfig | *Version*:2022.1.0 |
-| Active as of 2026-03-18 | *Computable Name*:OpioidCDSCommonConfig |
+| Active as of 2026-08-23 | *Computable Name*:OpioidCDSCommonConfig |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.13 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
-* * **Content: **application/elm+json: ````Encoded data (28548 characters)````: **Url: **
-  * ?: [Library - OpioidCDS Common Configuration](Library-OpioidCDSCommonConfig.md)
-* * **Content: **application/elm+json: ````Encoded data (28548 characters)````: **Version: **
-  * ?: 2022.1.0
-* * **Content: **application/elm+json: ````Encoded data (28548 characters)````: **Name: **
-  * ?: OpioidCDSCommonConfig
-* * **Content: **application/elm+json: ````Encoded data (28548 characters)````: **Title: **
-  * ?: Library - OpioidCDS Common Configuration
-* * **Content: **application/elm+json: ````Encoded data (28548 characters)````: **Status: **
-  * ?: active
-* * **Content: **application/elm+json: ````Encoded data (28548 characters)````: **Experimental: **
-  * ?: false
-* * **Content: **application/elm+json: ````Encoded data (28548 characters)````: **Date: **
-  * ?: 2026-03-18 16:23:26+1100
-* * **Content: **application/elm+json: ````Encoded data (28548 characters)````: **Publisher: **
-  * ?: CDC / Security Risk Solutions, Inc. (SRS)
-* * **Content: **application/elm+json: ````Encoded data (28548 characters)````: **Copyright: **
-  * ?: Centers for Disease Control and Prevention (CDC)
+**Exception parsing generated Narrative (see /tmp/liquid-7ac83c38-ec58-46c7-bd5c-374ee63ece05.html): unable to parse character reference ' Risks Discussion in Past 90 Days Criteria Enabled'' (last text = ' ' at line 217 column 74**
 
 
 
@@ -116,6 +100,10 @@
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSCommonConfig",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.13"
+  }],
   "version" : "2022.1.0",
   "name" : "OpioidCDSCommonConfig",
   "title" : "Library - OpioidCDS Common Configuration",
@@ -127,7 +115,7 @@
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{

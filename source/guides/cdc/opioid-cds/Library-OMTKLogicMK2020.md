@@ -1,4 +1,4 @@
-# OpioidLogicMK2020 - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# OpioidLogicMK2020 - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -9,27 +9,11 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/OMTKLogicMK2020 | *Version*:2022.1.0 |
-| Active as of 2026-03-18 | *Computable Name*:OMTKLogicMK2020 |
+| Active as of 2026-08-23 | *Computable Name*:OMTKLogicMK2020 |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.11 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
-* * **Content: **application/elm+json: ````Encoded data (598168 characters)````: **Url: **
-  * ?: [Library - OMTK Data (2020)](Library-OMTKLogicMK2020.md)
-* * **Content: **application/elm+json: ````Encoded data (598168 characters)````: **Version: **
-  * ?: 2022.1.0
-* * **Content: **application/elm+json: ````Encoded data (598168 characters)````: **Name: **
-  * ?: OMTKLogicMK2020
-* * **Content: **application/elm+json: ````Encoded data (598168 characters)````: **Title: **
-  * ?: Library - OMTK Data (2020)
-* * **Content: **application/elm+json: ````Encoded data (598168 characters)````: **Status: **
-  * ?: active
-* * **Content: **application/elm+json: ````Encoded data (598168 characters)````: **Experimental: **
-  * ?: false
-* * **Content: **application/elm+json: ````Encoded data (598168 characters)````: **Date: **
-  * ?: 2026-03-18 16:23:26+1100
-* * **Content: **application/elm+json: ````Encoded data (598168 characters)````: **Publisher: **
-  * ?: CDC / Security Risk Solutions, Inc. (SRS)
-* * **Content: **application/elm+json: ````Encoded data (598168 characters)````: **Copyright: **
-  * ?: Centers for Disease Control and Prevention (CDC)
+**Exception parsing generated Narrative (see /tmp/liquid-23763b43-664f-435e-9410-7ffaf6fcc642.html): unable to parse character reference 'rct=j'' (last text = ' ' at line 196 column 41**
 
 
 
@@ -116,6 +100,10 @@
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/OMTKLogicMK2020",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.11"
+  }],
   "version" : "2022.1.0",
   "name" : "OMTKLogicMK2020",
   "title" : "Library - OMTK Data (2020)",
@@ -127,7 +115,7 @@
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{

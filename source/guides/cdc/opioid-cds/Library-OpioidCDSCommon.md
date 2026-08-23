@@ -1,4 +1,4 @@
-# OpioidCDSCommon - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# OpioidCDSCommon - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -9,7 +9,8 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSCommon | *Version*:2022.1.0 |
-| Active as of 2026-03-18 | *Computable Name*:OpioidCDSCommon |
+| Active as of 2026-08-23 | *Computable Name*:OpioidCDSCommon |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.12 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
 * **Content: **: **Type: **
@@ -105,6 +106,10 @@
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSCommon",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.12"
+  }],
   "version" : "2022.1.0",
   "name" : "OpioidCDSCommon",
   "title" : "Library - OpioidCDS Common",
@@ -116,7 +121,7 @@
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{

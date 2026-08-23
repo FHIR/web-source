@@ -1,4 +1,4 @@
-# Opioid Management Terminology Knowledge Data - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# Opioid Management Terminology Knowledge Data - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -10,40 +10,14 @@
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/OMTKData | *Version*:3.0.0 |
 | Active as of 2022-02-01 | *Computable Name*:OMTKData |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.8 | |
 | **Usage:**Clinical Focus: Medication requested (situation), Clinical Focus: Chronic pain (finding) | |
 | **Copyright/Legal**: Copyright 2019+ Centers for Disease Control and Prevention (CDC) | |
 
  
-This library contains drug ingredient data for opioid ingredients of combinations drugs as determined using the [RxNav](https://rxnav.nlm.nih.gov/) API. The content was produced using the process described [here](https://build.fhir.org/ig/security-rs/opioid-cds-r4/service-documentation.html#solution-component-1-medication-and-terminology-knowledge-base). 
+This library contains drug ingredient data for opioid ingredients of combinations drugs as determined using the [RxNav](https://rxnav.nlm.nih.gov/) API. The content was produced using the process described [here](http://fhir.org/guides/cdc/opioid-cds/service-documentation.html#solution-component-1-medication-and-terminology-knowledge-base). 
 
-* * **Content: **application/elm+json: ````Encoded data (8985292 characters)````: **Url: **
-  * ?: [Opioid Management Terminology Knowledge Data](Library-OMTKData.md)
-* * **Content: **application/elm+json: ````Encoded data (8985292 characters)````: **Version: **
-  * ?: 3.0.0
-* * **Content: **application/elm+json: ````Encoded data (8985292 characters)````: **Name: **
-  * ?: OMTKData
-* * **Content: **application/elm+json: ````Encoded data (8985292 characters)````: **Title: **
-  * ?: Opioid Management Terminology Knowledge Data
-* * **Content: **application/elm+json: ````Encoded data (8985292 characters)````: **Status: **
-  * ?: active
-* * **Content: **application/elm+json: ````Encoded data (8985292 characters)````: **Experimental: **
-  * ?: false
-* * **Content: **application/elm+json: ````Encoded data (8985292 characters)````: **Date: **
-  * ?: 2022-02-01 20:35:24+0000
-* * **Content: **application/elm+json: ````Encoded data (8985292 characters)````: **Publisher: **
-  * ?: CDC / Security Risk Solutions, Inc. (SRS)
-* * **Content: **application/elm+json: ````Encoded data (8985292 characters)````: **Description: **
-  * ?: This library contains drug ingredient data for opioid ingredients of combinations drugs as determined using the [RxNav](https://rxnav.nlm.nih.gov/) API. The content was produced using the process described [here](https://build.fhir.org/ig/security-rs/opioid-cds-r4/service-documentation.html#solution-component-1-medication-and-terminology-knowledge-base).
-* * **Content: **application/elm+json: ````Encoded data (8985292 characters)````: **Knowledge Capability: **
-  * ?: shareable computable publishable executable
-* * **Content: **application/elm+json: ````Encoded data (8985292 characters)````: **Knowledge Representation Level: **
-  * ?: structured
-* * **Content: **application/elm+json: ````Encoded data (8985292 characters)````: **Usage: **
-  * ?: NOTE: Do not use the calculated dose in MMEs to determine dosage for converting one opioid to another—the new opioid should be lower to avoid unintentional overdose caused by incomplete cross-tolerance and individual differences in opioid pharmacokinetics. Consult the medication label.
-* * **Content: **application/elm+json: ````Encoded data (8985292 characters)````: **Copyright: **
-  * ?: Copyright 2019+ Centers for Disease Control and Prevention (CDC)
-* * **Content: **application/elm+json: ````Encoded data (8985292 characters)````: **Last Review Date: **
-  * ?: 2020-10-20
+**Exception parsing generated Narrative (see /tmp/liquid-d5cd192a-a522-4f22-aa2e-671e89094ad0.html): Unable to Parse HTML - node 'code' has unexpected content '{' (last text = 'library OMTKData version '3.0.0' /* This library contains drug ingredient data for opioid ingredients of combinations drugs as determined using the [RxNav](https://rxnav.nlm.nih.gov/) API. The content was produced using the process described [here](http://build.fhir.org/ig/cqframework/opioid-cds-r4/service-documentation.html#solution-component-1-medication-and-terminology-knowledge-base). This version of the content was generated on 2020-10-20 This product uses publicly available data courtesy of the U.S. National Library of Medicine (NLM), National Institutes of Health, Department of Health and Human Services; NLM is not responsible for the product and does not endorse or recommend this or any other product. Nelson SJ, Zeng K, Kilbourne J, Powell T, Moore R. Normalized names for clinical drugs: RxNorm at 6 years. J Am Med Inform Assoc. 2011 Jul-Aug;18(4)441-8. doi: 10.1136/amiajnl-2011-000116. Epub 2011 Apr 21. PubMed PMID: 21515544; PubMed Central PMCID: PMC3128404. [Full text](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3128404/) */ /* DrugIngredients: List' at line 240 column 8**
 
 
 
@@ -150,6 +124,10 @@ This library contains drug ingredient data for opioid ingredients of combination
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/OMTKData",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.8"
+  }],
   "version" : "3.0.0",
   "name" : "OMTKData",
   "title" : "Opioid Management Terminology Knowledge Data",
@@ -169,7 +147,7 @@ This library contains drug ingredient data for opioid ingredients of combination
       "value" : "https://www.securityrisksolutions.com"
     }]
   }],
-  "description" : "This library contains drug ingredient data for opioid ingredients of combinations drugs as determined using the [RxNav](https://rxnav.nlm.nih.gov/) API.\r\nThe content was produced using the process described [here](https://build.fhir.org/ig/security-rs/opioid-cds-r4/service-documentation.html#solution-component-1-medication-and-terminology-knowledge-base).",
+  "description" : "This library contains drug ingredient data for opioid ingredients of combinations drugs as determined using the [RxNav](https://rxnav.nlm.nih.gov/) API.\r\nThe content was produced using the process described [here](http://fhir.org/guides/cdc/opioid-cds/service-documentation.html#solution-component-1-medication-and-terminology-knowledge-base).",
   "useContext" : [{
     "code" : {
       "system" : "http://terminology.hl7.org/CodeSystem/usage-context-type",

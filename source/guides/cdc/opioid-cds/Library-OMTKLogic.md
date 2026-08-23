@@ -1,4 +1,4 @@
-# Opioid Management Terminology Knowledge Logic - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# Opioid Management Terminology Knowledge Logic - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -10,40 +10,14 @@
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/OMTKLogic | *Version*:3.0.0 |
 | Active as of 2022-02-01 | *Computable Name*:OMTKLogic |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.10 | |
 | **Usage:**Clinical Focus: Medication requested (situation), Clinical Focus: Chronic pain (finding) | |
 | **Copyright/Legal**: Copyright 2019+ Centers for Disease Control and Prevention (CDC) | |
 
  
 This library provides functionality for calculating Morphine Milligram Equivalents (MME) for opioid medications, as described in the CDC Opioid Prescribing Guideline. 
 
-* * **Content: **application/elm+json: ````Encoded data (831508 characters)````: **Url: **
-  * ?: [Opioid Management Terminology Knowledge Logic](Library-OMTKLogic.md)
-* * **Content: **application/elm+json: ````Encoded data (831508 characters)````: **Version: **
-  * ?: 3.0.0
-* * **Content: **application/elm+json: ````Encoded data (831508 characters)````: **Name: **
-  * ?: OMTKLogic
-* * **Content: **application/elm+json: ````Encoded data (831508 characters)````: **Title: **
-  * ?: Opioid Management Terminology Knowledge Logic
-* * **Content: **application/elm+json: ````Encoded data (831508 characters)````: **Status: **
-  * ?: active
-* * **Content: **application/elm+json: ````Encoded data (831508 characters)````: **Experimental: **
-  * ?: false
-* * **Content: **application/elm+json: ````Encoded data (831508 characters)````: **Date: **
-  * ?: 2022-02-01 20:35:24+0000
-* * **Content: **application/elm+json: ````Encoded data (831508 characters)````: **Publisher: **
-  * ?: CDC / Security Risk Solutions, Inc. (SRS)
-* * **Content: **application/elm+json: ````Encoded data (831508 characters)````: **Description: **
-  * ?: This library provides functionality for calculating Morphine Milligram Equivalents (MME) for opioid medications, as described in the CDC Opioid Prescribing Guideline.
-* * **Content: **application/elm+json: ````Encoded data (831508 characters)````: **Knowledge Capability: **
-  * ?: shareable computable publishable executable
-* * **Content: **application/elm+json: ````Encoded data (831508 characters)````: **Knowledge Representation Level: **
-  * ?: structured
-* * **Content: **application/elm+json: ````Encoded data (831508 characters)````: **Usage: **
-  * ?: NOTE: Do not use the calculated dose in MMEs to determine dosage for converting one opioid to another—the new opioid should be lower to avoid unintentional overdose caused by incomplete cross-tolerance and individual differences in opioid pharmacokinetics. Consult the medication label.
-* * **Content: **application/elm+json: ````Encoded data (831508 characters)````: **Copyright: **
-  * ?: Copyright 2019+ Centers for Disease Control and Prevention (CDC)
-* * **Content: **application/elm+json: ````Encoded data (831508 characters)````: **Last Review Date: **
-  * ?: 2020-09-26
+**Exception parsing generated Narrative (see /tmp/liquid-22bc1f67-ac4c-43d2-a998-1353670130de.html): unable to parse character reference ' unit) end define function ToUCUM_Msg(unit String): unit U let result: ToUCUM(U) return { result: result, message: if result is null then Msg('' (last text = ' ' at line 305 column 16**
 
 
 
@@ -150,6 +124,10 @@ This library provides functionality for calculating Morphine Milligram Equivalen
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/OMTKLogic",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.10"
+  }],
   "version" : "3.0.0",
   "name" : "OMTKLogic",
   "title" : "Opioid Management Terminology Knowledge Logic",

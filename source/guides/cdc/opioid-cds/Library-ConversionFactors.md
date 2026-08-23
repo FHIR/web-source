@@ -1,4 +1,4 @@
-# Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4 - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4 - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -10,40 +10,14 @@
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/ConversionFactors | *Version*:3.0.0 |
 | Active as of 2022-02-01 | *Computable Name*:ConversionFactors |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.2 | |
 | **Usage:**Clinical Focus: Medication requested (situation), Clinical Focus: Chronic pain (finding) | |
 | **Copyright/Legal**: Copyright 2019+ Centers for Disease Control and Prevention (CDC) | |
 
  
 This library contains logic to expose configurable conversion factors for the MME calculation functionality provided by the OMTKLogic library. 
 
-* * **Content: **application/elm+json: ````Encoded data (337040 characters)````: **Url: **
-  * ?: [Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4](Library-ConversionFactors.md)
-* * **Content: **application/elm+json: ````Encoded data (337040 characters)````: **Version: **
-  * ?: 3.0.0
-* * **Content: **application/elm+json: ````Encoded data (337040 characters)````: **Name: **
-  * ?: ConversionFactors
-* * **Content: **application/elm+json: ````Encoded data (337040 characters)````: **Title: **
-  * ?: Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4
-* * **Content: **application/elm+json: ````Encoded data (337040 characters)````: **Status: **
-  * ?: active
-* * **Content: **application/elm+json: ````Encoded data (337040 characters)````: **Experimental: **
-  * ?: false
-* * **Content: **application/elm+json: ````Encoded data (337040 characters)````: **Date: **
-  * ?: 2022-02-01 20:35:24+0000
-* * **Content: **application/elm+json: ````Encoded data (337040 characters)````: **Publisher: **
-  * ?: CDC / Security Risk Solutions, Inc. (SRS)
-* * **Content: **application/elm+json: ````Encoded data (337040 characters)````: **Description: **
-  * ?: This library contains logic to expose configurable conversion factors for the MME calculation functionality provided by the OMTKLogic library.
-* * **Content: **application/elm+json: ````Encoded data (337040 characters)````: **Knowledge Capability: **
-  * ?: shareable computable publishable executable
-* * **Content: **application/elm+json: ````Encoded data (337040 characters)````: **Knowledge Representation Level: **
-  * ?: structured
-* * **Content: **application/elm+json: ````Encoded data (337040 characters)````: **Usage: **
-  * ?: NOTE: Do not use the calculated dose in MMEs to determine dosage for converting one opioid to another—the new opioid should be lower to avoid unintentional overdose caused by incomplete cross-tolerance and individual differences in opioid pharmacokinetics. Consult the medication label.
-* * **Content: **application/elm+json: ````Encoded data (337040 characters)````: **Copyright: **
-  * ?: Copyright 2019+ Centers for Disease Control and Prevention (CDC)
-* * **Content: **application/elm+json: ````Encoded data (337040 characters)````: **Last Review Date: **
-  * ?: 2020-09-26
+**Exception parsing generated Narrative (see /tmp/liquid-41aa6e22-d51a-4393-82b9-bc4da115ec64.html): unable to parse character reference ' doseFormCode.code) end ) when 5489 then 1 /* Hydrocodone */ when 3423 then 4 /* Hydromorphone */ when 6813 then ( /* Methadone */ case when dailyDose.value between 1 and 20 then 4 when dailyDose.value between 21 and 40 then 8 when dailyDose.value between 41 and 60 then 10 when dailyDose.value '' (last text = ':' at line 370 column 33**
 
 
 
@@ -150,6 +124,10 @@ This library contains logic to expose configurable conversion factors for the MM
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/ConversionFactors",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.2"
+  }],
   "version" : "3.0.0",
   "name" : "ConversionFactors",
   "title" : "Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4",

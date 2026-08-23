@@ -1,0 +1,170 @@
+# CDC Opioid Override Reasons - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
+
+* [**Table of Contents**](toc.md)
+* [**Artifacts Summary**](artifacts.md)
+* **CDC Opioid Override Reasons**
+
+## CodeSystem: CDC Opioid Override Reasons 
+
+| | |
+| :--- | :--- |
+| *Official URL*:http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-overrideReasons | *Version*:2022.1.1 |
+| Active as of 2026-08-23 | *Computable Name*:CDC_Opioid_Override_Reasons |
+| *Other Identifiers:*OID:2.16.840.1.113883.4.642.40.65.16.2 | |
+| **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
+
+ 
+Override reasons for the 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain 
+
+ This Code system is referenced in the content logical definition of the following value sets: 
+
+* This CodeSystem is not used here; it may be used elsewhere (e.g. specifications and/or implementations that use this content)
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "CodeSystem",
+  "id" : "opioidcds-overrideReasons",
+  "url" : "http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-overrideReasons",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.113883.4.642.40.65.16.2"
+  }],
+  "version" : "2022.1.1",
+  "name" : "CDC_Opioid_Override_Reasons",
+  "title" : "CDC Opioid Override Reasons",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-08-23T19:44:36+10:00",
+  "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.securityrisksolutions.com"
+    }]
+  }],
+  "description" : "Override reasons for the 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain",
+  "copyright" : "Centers for Disease Control and Prevention (CDC)",
+  "caseSensitive" : true,
+  "content" : "complete",
+  "concept" : [{
+    "code" : "snooze-1-month",
+    "display" : "Snooze Alert for 1 Month",
+    "definition" : "Disable the alert for 1 month for a particular patient, user(s), department(s), site(s), or organization"
+  },
+  {
+    "code" : "snooze-3-months",
+    "display" : "Snooze Alert for 3 Months",
+    "definition" : "Disable the alert for 3 months for a particular patient, user(s), department(s), site(s), or organization"
+  },
+  {
+    "code" : "snooze-6-months",
+    "display" : "Snooze Alert for 6 Months",
+    "definition" : "Disable the alert for 6 months for a particular patient, user(s), department(s), site(s), or organization"
+  },
+  {
+    "code" : "snooze-1-year",
+    "display" : "Snooze Alert for 1 Year",
+    "definition" : "Disable the alert for 1 year for a particular patient, user(s), department(s), site(s), or organization"
+  },
+  {
+    "code" : "snooze-1-month-with-comment",
+    "display" : "Snooze Alert for 1 Month with a Comment",
+    "definition" : "Disable the alert for 1 month for a particular patient, user(s), department(s), site(s), or organization. Reasoning and/or justification supplied in an additional comment"
+  },
+  {
+    "code" : "snooze-3-months-with-comment",
+    "display" : "Snooze Alert for 3 Months with a Comment",
+    "definition" : "Disable the alert for 3 months for a particular patient, user(s), department(s), site(s), or organization. Reasoning and/or justification supplied in an additional comment"
+  },
+  {
+    "code" : "snooze-6-months-with-comment",
+    "display" : "Snooze Alert for 6 Months with a Comment",
+    "definition" : "Disable the alert for 6 months for a particular patient, user(s), department(s), site(s), or organization. Reasoning and/or justification supplied in an additional comment"
+  },
+  {
+    "code" : "snooze-1-year-with-comment",
+    "display" : "Snooze Alert for 1 Year with a Comment",
+    "definition" : "Disable the alert for 1 year for a particular patient, user(s), department(s), site(s), or organization. Reasoning and/or justification supplied in an additional comment"
+  },
+  {
+    "code" : "comment",
+    "display" : "Comment",
+    "definition" : "A comment about the received information or suggestion. This can include feedback for improvement/refinement."
+  },
+  {
+    "code" : "update-order",
+    "display" : "Update Order",
+    "definition" : "The order will be updated to the order(s) suggested by the service"
+  },
+  {
+    "code" : "cancel-order",
+    "display" : "Cancel Order",
+    "definition" : "The order will be canceled based on the information provided by the service"
+  },
+  {
+    "code" : "launch-app",
+    "display" : "Launch App",
+    "definition" : "An application will be used to complete the workflow"
+  },
+  {
+    "code" : "accept-suggestion",
+    "display" : "Accept Suggestion",
+    "definition" : "The suggestion provided by the service has been accepted"
+  },
+  {
+    "code" : "accept-suggestion-with-comment",
+    "display" : "Accept Suggestion with Comment",
+    "definition" : "The suggestion provided by the service has been accepted. Additional action(s) documented in an associated comment"
+  },
+  {
+    "code" : "decline-suggestion",
+    "display" : "Decline Suggestion",
+    "definition" : "The suggestion provided by the service has been declined"
+  },
+  {
+    "code" : "decline-suggestion-with-comment",
+    "display" : "Decline Suggestion with Comment",
+    "definition" : "The suggestion provided by the service has been declined. Reasoning and/or justification supplied in an additional comment"
+  },
+  {
+    "code" : "UToxAccepted",
+    "display" : "Action Taken",
+    "definition" : "Action taken on the Recommendation 10 urine toxicology screening recommendation (e.g., toxicology screen was ordered)."
+  },
+  {
+    "code" : "UToxNA",
+    "display" : "Alert not appropriate",
+    "definition" : "The Recommendation 10 urine toxicology screening recommendation is not appropriate for the current patient or context."
+  },
+  {
+    "code" : "UToxPDeclined",
+    "display" : "Action not taken",
+    "definition" : "Action on the Recommendation 10 urine toxicology screening recommendation was not taken (e.g., patient declined or other reason)."
+  },
+  {
+    "code" : "UToxWrongProvider",
+    "display" : "Wrong clinician",
+    "definition" : "The Recommendation 10 urine toxicology screening recommendation is not appropriate for this clinician's scope of practice."
+  },
+  {
+    "code" : "UnExptResultAccepted",
+    "display" : "Action Taken",
+    "definition" : "Action taken in response to the unexpected toxicology results alert from Recommendation 10 (e.g., will repeat urine drug screening more frequently or will assess for substance use disorder)."
+  },
+  {
+    "code" : "UnExptResultNA",
+    "display" : "Alert not appropriate",
+    "definition" : "The Recommendation 10 unexpected toxicology results alert is not appropriate for the current patient or context."
+  },
+  {
+    "code" : "UnExptResultWrongProvider",
+    "display" : "Wrong clinician",
+    "definition" : "The Recommendation 10 unexpected toxicology results alert is not appropriate for this clinician's scope of practice."
+  }]
+}
+
+```

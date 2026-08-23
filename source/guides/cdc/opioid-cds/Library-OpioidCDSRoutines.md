@@ -1,4 +1,4 @@
-# OpioidCDSRoutines - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# OpioidCDSRoutines - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -9,27 +9,11 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSRoutines | *Version*:2022.1.0 |
-| Active as of 2026-03-18 | *Computable Name*:OpioidCDSRoutines |
+| Active as of 2026-08-23 | *Computable Name*:OpioidCDSRoutines |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.28 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
-* * **Content: **application/elm+json: ````Encoded data (246800 characters)````: **Url: **
-  * ?: [Library - OpioidCDS Routines](Library-OpioidCDSRoutines.md)
-* * **Content: **application/elm+json: ````Encoded data (246800 characters)````: **Version: **
-  * ?: 2022.1.0
-* * **Content: **application/elm+json: ````Encoded data (246800 characters)````: **Name: **
-  * ?: OpioidCDSRoutines
-* * **Content: **application/elm+json: ````Encoded data (246800 characters)````: **Title: **
-  * ?: Library - OpioidCDS Routines
-* * **Content: **application/elm+json: ````Encoded data (246800 characters)````: **Status: **
-  * ?: active
-* * **Content: **application/elm+json: ````Encoded data (246800 characters)````: **Experimental: **
-  * ?: false
-* * **Content: **application/elm+json: ````Encoded data (246800 characters)````: **Date: **
-  * ?: 2026-03-18 16:23:26+1100
-* * **Content: **application/elm+json: ````Encoded data (246800 characters)````: **Publisher: **
-  * ?: CDC / Security Risk Solutions, Inc. (SRS)
-* * **Content: **application/elm+json: ````Encoded data (246800 characters)````: **Copyright: **
-  * ?: Centers for Disease Control and Prevention (CDC)
+**Exception parsing generated Narrative (see /tmp/liquid-27e34913-4174-4448-b317-bdaf815e8fff.html): Unable to Parse HTML - node 'code' has unexpected content ' ' (last text = 'library OpioidCDSRoutines version '2022.1.0' using FHIR version '4.0.1' include FHIRHelpers version '4.0.1' called FHIRHelpers include OpioidCDSCommon version '2022.1.0' called Common include OpioidCDSCommonConfig version '2022.1.0' called Config context Patient /* ** Routine #1 ** CDC 2022 General Inclusion Criteria Routine ** ** Definition | Answer to Proceed | Details | Data (Terminology) Requirement ** ------------------------------------------------------------------------------------------------------------------------------------ ** Age ' at line 285 column 10**
 
 
 
@@ -116,6 +100,10 @@
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSRoutines",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.28"
+  }],
   "version" : "2022.1.0",
   "name" : "OpioidCDSRoutines",
   "title" : "Library - OpioidCDS Routines",
@@ -127,7 +115,7 @@
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{

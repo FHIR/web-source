@@ -1,4 +1,4 @@
-# ValueSet - Medication Request Category Community - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# ValueSet - Medication Request Category Community - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -9,7 +9,8 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/ValueSet/medicationrequest-category-community | *Version*:0.0.1 |
-| Active as of 2026-03-18 | *Computable Name*:Valueset_medicationrequest_category_community |
+| Active as of 2026-08-23 | *Computable Name*:Valueset_medicationrequest_category_community |
+| *Other Identifiers:*OID:2.16.840.1.114222.48.49 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
  
@@ -64,12 +65,16 @@ No formal definition provided for this value set
     "valueString" : "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/medicationrequest-category-community",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.48.49"
+  }],
   "version" : "0.0.1",
   "name" : "Valueset_medicationrequest_category_community",
   "title" : "ValueSet - Medication Request Category Community",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{
@@ -80,7 +85,16 @@ No formal definition provided for this value set
   "description" : "Includes requests for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.).",
   "copyright" : "Centers for Disease Control and Prevention (CDC)",
   "expansion" : {
+    "identifier" : "urn:uuid:8c90f965-a535-4158-ba3a-735e07a0168d",
     "timestamp" : "2021-05-18T13:47:55-07:00",
+    "parameter" : [{
+      "name" : "used-codesystem",
+      "valueUri" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category|2.0.0"
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category|2.0.0"
+    }],
     "contains" : [{
       "system" : "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
       "code" : "community",

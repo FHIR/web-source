@@ -1,4 +1,4 @@
-# OpioidCDSREC11PatientViewLibrary - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# OpioidCDSREC11PatientViewLibrary - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -9,7 +9,8 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC11PatientView | *Version*:2022.1.0 |
-| Active as of 2026-03-18 | *Computable Name*:OpioidCDSREC11PatientView |
+| Active as of 2026-08-23 | *Computable Name*:OpioidCDSREC11PatientView |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.26 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
 * * **Content: **application/elm+json: ````Encoded data (19848 characters)````: **Url: **
@@ -25,7 +26,7 @@
 * * **Content: **application/elm+json: ````Encoded data (19848 characters)````: **Experimental: **
   * ?: false
 * * **Content: **application/elm+json: ````Encoded data (19848 characters)````: **Date: **
-  * ?: 2026-03-18 16:23:26+1100
+  * ?: 2026-08-23 19:52:23+1000
 * * **Content: **application/elm+json: ````Encoded data (19848 characters)````: **Publisher: **
   * ?: CDC / Security Risk Solutions, Inc. (SRS)
 * * **Content: **application/elm+json: ````Encoded data (19848 characters)````: **Copyright: **
@@ -116,6 +117,10 @@
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC11PatientView",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.26"
+  }],
   "version" : "2022.1.0",
   "name" : "OpioidCDSREC11PatientView",
   "title" : "Library - Recommendation #11 Patient View - Concurrent Use of Opioids and Benzodiazepines",
@@ -127,7 +132,7 @@
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{

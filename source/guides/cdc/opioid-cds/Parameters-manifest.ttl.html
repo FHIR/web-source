@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Input Expansion Parameters - TTL Representation - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0</title>
+    <title>Input Expansion Parameters - TTL Representation - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -44,8 +44,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"23.129"}
-    h3,h4,h5,h6{--heading-prefix:"23.129"}</style>
+    <style type="text/css">h2{--heading-prefix:"24.129"}
+    h3,h4,h5,h6{--heading-prefix:"24.129"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <div id="hl7-nav">
@@ -61,7 +61,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">2022.1.0 - Release 2022.1
+            <span style="display:inline-block;">2022.1.1 - Release 2022.1
 
 
             </span>
@@ -93,6 +93,7 @@
   <li><a href="examples.html">Examples</a></li>
   <li><a href="documentation.html">Documentation</a></li>
   <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Changes</a></li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
       </b>
@@ -139,7 +140,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 9" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">This page is part of the 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide (v2022.1.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://fhir.org/guides/cdc/opioid-cds/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">This page is part of the 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide (v2022.1.1: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://fhir.org/guides/cdc/opioid-cds/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -198,547 +199,768 @@
   <pre class="rdf" data-fhir="generated" style="white-space: pre; overflow: hidden">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 # - resource -------------------------------------------------------------------
 
- a fhir:Parameters ;
+&lt;http://hl7.org/fhir/Parameters/manifest&gt; a fhir:Parameters ;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
-  <a href="http://hl7.org/fhir/R4/resource.html#Parameters.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;manifest&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">fhir:parameter</a> ( [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;system-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">a</a> fhir:Uri ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://snomed.info/sct?version=http://snomed.info/sct/731000124108/version/20250901&gt;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset|1.0.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset|1.0.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;system-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/sid/icd-10-cm|2.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;system-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://nucc.org/provider-taxonomy|4.0.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablelibrary|1.0.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary|1.0.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablelibrary|1.0.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary|1.0.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;system-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/usage-context-type|2.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;system-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes|3.0.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/Patient|4.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;system-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://www.nlm.nih.gov/research/umls/rxnorm|3.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;system-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://loinc.org|3.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/limited-life-expectancy-conditions|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/therapies-indicating-end-of-life-care|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/conditions-likely-terminal-for-opioid-prescribing|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/cdc-malignant-cancer-conditions|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/oncology-specialty-designations|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-misuse-disorders|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/substance-misuse-behavioral-counseling|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/conditions-documenting-substance-misuse|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/office-visit|0.2.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-counseling-procedure|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-misuse-assessment-procedure|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-disposition|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-finding|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/observation-category-laboratory|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/observation-category-procedure|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/pain-treatment-plan|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/pain-management-procedure|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/pdmp-review-procedure|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/pdmp-data-reviewed-finding|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/conditions-documenting-sleep-disordered-breathing|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-analgesics-with-ambulatory-misuse-potential|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/extended-release-opioid-with-ambulatory-misuse-potential|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-medications|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-and-methadone-medications|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/non-synthetic-opioid-medications|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/barbiturate-medications|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/benzodiazepine-medications|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/naloxone-medications|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/fentanyl-type-medications|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/amphetamines-class-medications|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/methadone-medications|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-medications|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/synthetic-opioid-medications|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/cns-depressant-medications|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/all-urine-drug-screening-tests|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/non-opioid-urine-drug-screening|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/opiate-specific-urine-drug-screening-tests|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/general-opiate-urine-drug-screening-tests|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-urine-drug-screening|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/cocaine-urine-drug-screening-tests|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/phencyclidine-urine-drug-screening-tests|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/fentanyl-type-urine-drug-screening-tests|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/amphetamine-urine-drug-screening-tests|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/cannabinoid-urine-drug-screening-tests|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/methadone-urine-drug-screening-tests|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/synthetic-opioid-urine-drug-screening-tests|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/barbiturate-urine-drug-screening-tests|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/benzodiazepine-urine-drug-screening-tests|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-urine-drug-screening-tests|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/heroin-urine-drug-screening-tests|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-urine-drug-screening-tests|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/medicationrequest-category-community|0.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-clinical-status-active|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/medicationrequest-status-active|0.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-encounter-diagnosis-category|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-problem-list-category|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-us-core-health-concern-category|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/sickle-cell-diseases|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/MedicationRequest|4.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/Medication|4.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/Condition|4.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/Observation|4.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/CarePlan|4.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/Procedure|4.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/MedicationDispense|4.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition|1.0.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishableplandefinition|1.0.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC01|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC02|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC03|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC04And05|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC06|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC07|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ActivityDefinition/opioidcds-risk-assessment-request|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC08|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC09|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC10OrderSign|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC10PatientView|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ActivityDefinition/opioidcds-urine-screening-request|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC11OrderSelect|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC11PatientView|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC12PatientView|2022.1.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/Extension|4.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/Element|4.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/ValueSet|4.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/StructureDefinition/DomainResource|4.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-valueset-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://hl7.org/fhir/ValueSet/all-languages|4.0.1&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus|1.0.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope|1.0.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria|1.0.0&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;default-canonical-version&quot; ] ;
-<a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria|1.0.0&quot;     ]
-  ] ) . # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Parameters.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;manifest&quot;] ;
+  <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter">fhir:Parameters.parameter</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;system-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueUri</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueUri</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation|5.3.0&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueUri</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/cqf-qualityOfEvidence|5.3.0&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset|1.0.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset|1.0.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset|1.0.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset|1.0.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;system-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://loinc.org|3.1.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://loinc.org|3.1.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;system-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/sid/icd-10-cm|2.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/sid/icd-10-cm|2.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;system-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/CodeSystem/medicationrequest-status|4.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/CodeSystem/medicationrequest-status|4.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablelibrary|1.0.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablelibrary|1.0.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary|1.0.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary|1.0.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablelibrary|1.0.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablelibrary|1.0.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary|1.0.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary|1.0.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;system-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/usage-context-type|2.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://terminology.hl7.org/CodeSystem/usage-context-type|2.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;system-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes|3.0.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-mme-r4/CodeSystem/CDCMMEUsageContextCodes|3.0.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Patient|4.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/Patient|4.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;system-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://www.nlm.nih.gov/research/umls/rxnorm|3.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://www.nlm.nih.gov/research/umls/rxnorm|3.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/limited-life-expectancy-conditions|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/limited-life-expectancy-conditions|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/therapies-indicating-end-of-life-care|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/therapies-indicating-end-of-life-care|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/conditions-likely-terminal-for-opioid-prescribing|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/conditions-likely-terminal-for-opioid-prescribing|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/cdc-malignant-cancer-conditions|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/cdc-malignant-cancer-conditions|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/oncology-specialty-designations|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/oncology-specialty-designations|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-misuse-disorders|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-misuse-disorders|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/substance-misuse-behavioral-counseling|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/substance-misuse-behavioral-counseling|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/conditions-documenting-substance-misuse|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/conditions-documenting-substance-misuse|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/office-visit|0.2.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/office-visit|0.2.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-counseling-procedure|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-counseling-procedure|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-misuse-assessment-procedure|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-misuse-assessment-procedure|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-disposition|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-disposition|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-finding|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-finding|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/observation-category-laboratory|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/observation-category-laboratory|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/observation-category-procedure|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/observation-category-procedure|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/pain-treatment-plan|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/pain-treatment-plan|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/pain-management-procedure|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/pain-management-procedure|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/pdmp-review-procedure|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/pdmp-review-procedure|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/pdmp-data-reviewed-finding|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/pdmp-data-reviewed-finding|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/conditions-documenting-sleep-disordered-breathing|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/conditions-documenting-sleep-disordered-breathing|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-analgesics-with-ambulatory-misuse-potential|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-analgesics-with-ambulatory-misuse-potential|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/extended-release-opioid-with-ambulatory-misuse-potential|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/extended-release-opioid-with-ambulatory-misuse-potential|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-medications|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-medications|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-and-methadone-medications|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-and-methadone-medications|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/non-synthetic-opioid-medications|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/non-synthetic-opioid-medications|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/barbiturate-medications|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/barbiturate-medications|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/benzodiazepine-medications|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/benzodiazepine-medications|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/naloxone-medications|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/naloxone-medications|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/fentanyl-type-medications|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/fentanyl-type-medications|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/amphetamines-class-medications|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/amphetamines-class-medications|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/methadone-medications|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/methadone-medications|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-medications|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-medications|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/synthetic-opioid-medications|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/synthetic-opioid-medications|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/cns-depressant-medications|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/cns-depressant-medications|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/all-urine-drug-screening-tests|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/all-urine-drug-screening-tests|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/non-opioid-urine-drug-screening|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/non-opioid-urine-drug-screening|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/opiate-specific-urine-drug-screening-tests|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/opiate-specific-urine-drug-screening-tests|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/general-opiate-urine-drug-screening-tests|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/general-opiate-urine-drug-screening-tests|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-urine-drug-screening|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-urine-drug-screening|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/cocaine-urine-drug-screening-tests|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/cocaine-urine-drug-screening-tests|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/phencyclidine-urine-drug-screening-tests|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/phencyclidine-urine-drug-screening-tests|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/fentanyl-type-urine-drug-screening-tests|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/fentanyl-type-urine-drug-screening-tests|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/amphetamine-urine-drug-screening-tests|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/amphetamine-urine-drug-screening-tests|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/cannabinoid-urine-drug-screening-tests|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/cannabinoid-urine-drug-screening-tests|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/methadone-urine-drug-screening-tests|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/methadone-urine-drug-screening-tests|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/synthetic-opioid-urine-drug-screening-tests|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/synthetic-opioid-urine-drug-screening-tests|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/barbiturate-urine-drug-screening-tests|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/barbiturate-urine-drug-screening-tests|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/benzodiazepine-urine-drug-screening-tests|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/benzodiazepine-urine-drug-screening-tests|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-urine-drug-screening-tests|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-urine-drug-screening-tests|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/heroin-urine-drug-screening-tests|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/heroin-urine-drug-screening-tests|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-urine-drug-screening-tests|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-urine-drug-screening-tests|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/medicationrequest-category-community|0.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/medicationrequest-category-community|0.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-clinical-status-active|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-clinical-status-active|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/medicationrequest-status-active|0.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/medicationrequest-status-active|0.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-encounter-diagnosis-category|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-encounter-diagnosis-category|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-problem-list-category|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-problem-list-category|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-us-core-health-concern-category|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-us-core-health-concern-category|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/sickle-cell-diseases|2022.1.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/sickle-cell-diseases|2022.1.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/MedicationRequest|4.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/MedicationRequest|4.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Medication|4.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/Medication|4.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Condition|4.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/Condition|4.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Observation|4.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/Observation|4.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/Encounter|4.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/CarePlan|4.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/CarePlan|4.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Procedure|4.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/Procedure|4.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/MedicationDispense|4.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/MedicationDispense|4.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition|1.0.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition|1.0.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishableplandefinition|1.0.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishableplandefinition|1.0.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC01|2022.1.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC01|2022.1.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC02|2022.1.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC02|2022.1.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC03|2022.1.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC03|2022.1.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC04And05|2022.1.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC04And05|2022.1.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC06|2022.1.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC06|2022.1.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC07|2022.1.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC07|2022.1.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ActivityDefinition/opioidcds-risk-assessment-request|2022.1.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ActivityDefinition/opioidcds-risk-assessment-request|2022.1.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC08|2022.1.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC08|2022.1.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC09|2022.1.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC09|2022.1.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC10OrderSign|2022.1.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC10OrderSign|2022.1.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC10PatientView|2022.1.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC10PatientView|2022.1.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ActivityDefinition/opioidcds-urine-screening-request|2022.1.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ActivityDefinition/opioidcds-urine-screening-request|2022.1.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC11OrderSelect|2022.1.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC11OrderSelect|2022.1.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC11PatientView|2022.1.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC11PatientView|2022.1.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC12PatientView|2022.1.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC12PatientView|2022.1.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Extension|4.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/Extension|4.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Element|4.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/Element|4.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/ValueSet|4.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/ValueSet|4.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/DomainResource|4.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/DomainResource|4.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-valueset-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/ValueSet/all-languages|4.0.1&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/ValueSet/all-languages|4.0.1&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus|1.0.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus|1.0.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope|1.0.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope|1.0.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria|1.0.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria|1.0.0&gt;
+     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> -1 ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.name">fhir:Parameters.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;default-canonical-version&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/parameters.html#Parameters.parameter.value_x_">fhir:Parameters.parameter.valueCanonical</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria|1.0.0&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria|1.0.0&gt;
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/Parameters/manifest.ttl&gt; a owl:Ontology ;
+  owl:imports fhir:fhir.ttl ;
+  owl:versionIRI &lt;http://build.fhir.org/Parameters/manifest.ttl&gt; .
 
 </pre>
 
@@ -787,12 +1009,12 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.securityrisksolutions.com">CDC / Security Risk Solutions, Inc. (SRS)</a>.  Package fhir.cdc.opioid-cds#2022.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 18, 2026 16:23+1100">2026-03-18</span>
+          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.securityrisksolutions.com">CDC / Security Risk Solutions, Inc. (SRS)</a>.  Package fhir.cdc.opioid-cds#2022.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Aug 23, 2026 19:52+1000">2026-08-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
-                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/cqframework/opioid-cds-r4/issues/new">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/cqframework/opioid-cds-r4/issues">Issues</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/security-rs/opioid-cds-r4/issues/new">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/security-rs/opioid-cds-r4/issues">Issues</a>
                 
 | <a style="color: #81BEF7" target="_blank" href="http://fhir.org/guides/cdc/opioid-cds/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->

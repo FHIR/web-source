@@ -1,0 +1,3036 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/ImplementationGuide/fhir.cdc.opioid-cds> a fhir:ImplementationGuide ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "fhir.cdc.opioid-cds"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide fhir.cdc.opioid-cds</b></p><a name=\"fhir.cdc.opioid-cds\"> </a><a name=\"hcfhir.cdc.opioid-cds\"> </a><h2>Opioid_CDC</h2><p>The official URL for this implementation guide is: </p><pre>http://fhir.org/guides/cdc/opioid-cds/ImplementationGuide/fhir.cdc.opioid-cds</pre><div><p>2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide</p>\n</div></div>"
+  ] ;
+  fhir:ImplementationGuide.url [ fhir:value "http://fhir.org/guides/cdc/opioid-cds/ImplementationGuide/fhir.cdc.opioid-cds"] ;
+  fhir:ImplementationGuide.version [ fhir:value "2022.1.1"] ;
+  fhir:ImplementationGuide.name [ fhir:value "Opioid_CDC"] ;
+  fhir:ImplementationGuide.title [ fhir:value "2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide"] ;
+  fhir:ImplementationGuide.status [ fhir:value "active"] ;
+  fhir:ImplementationGuide.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-03-07"^^xsd:date] ;
+  fhir:ImplementationGuide.publisher [ fhir:value "CDC / Security Risk Solutions, Inc. (SRS)"] ;
+  fhir:ImplementationGuide.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.securityrisksolutions.com" ]
+     ]
+  ] ;
+  fhir:ImplementationGuide.description [ fhir:value "2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide"] ;
+  fhir:ImplementationGuide.copyright [ fhir:value "Centers for Disease Control and Prevention (CDC)"] ;
+  fhir:ImplementationGuide.packageId [ fhir:value "fhir.cdc.opioid-cds"] ;
+  fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"] ;
+  fhir:ImplementationGuide.fhirVersion [
+     fhir:value "4.0.1" ;
+     fhir:index 0
+  ] ;
+  fhir:ImplementationGuide.dependsOn [
+     fhir:index 0 ;
+     fhir:Element.id [ fhir:value "hl7tx" ] ;
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment" ] ;
+       fhir:Extension.valueMarkdown [ fhir:value "Automatically added as a dependency - all IGs depend on HL7 Terminology" ]
+     ] ;
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://terminology.hl7.org/ImplementationGuide/hl7.terminology" ;
+       fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ] ;
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.terminology.r4" ] ;
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "7.3.0" ]
+  ], [
+     fhir:index 1 ;
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions" ;
+       fhir:link <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
+     ] ;
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.uv.extensions.r4" ] ;
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "5.3.0" ]
+  ], [
+     fhir:index 2 ;
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg" ;
+       fhir:link <http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg>
+     ] ;
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.uv.cpg" ] ;
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "1.0.0" ]
+  ], [
+     fhir:index 3 ;
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://fhir.org/guides/cdc/opioid-mme-r4/ImplementationGuide/fhir.cdc.opioid-mme-r4" ;
+       fhir:link <http://fhir.org/guides/cdc/opioid-mme-r4/ImplementationGuide/fhir.cdc.opioid-mme-r4>
+     ] ;
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "fhir.cdc.opioid-mme-r4" ] ;
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "3.0.0" ]
+  ], [
+     fhir:index 4 ;
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://hl7.org/fhir/uv/crmi/ImplementationGuide/hl7.fhir.uv.crmi" ;
+       fhir:link <http://hl7.org/fhir/uv/crmi/ImplementationGuide/hl7.fhir.uv.crmi>
+     ] ;
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.uv.crmi" ] ;
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "1.0.0" ]
+  ] ;
+  fhir:ImplementationGuide.definition [
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "copyrightyear" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "2019+" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 1 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "releaselabel" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "Release 2022.1" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 2 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "apply-version" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "false" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 3 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "default-version" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 4 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "shownav" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 5 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "auto-oid-root" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "2.16.840.1.113883.4.642.40.65" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 6 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "templates/liquid" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 7 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "path-expansion-params" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "resources/parameters/Parameters-manifest.json" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 8 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "pin-canonicals" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "pin-all" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 9 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "pin-manifest" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "manifest" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 10 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "autoload-resources" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 11 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "template/liquid" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 12 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "input/liquid" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 13 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "path-qa" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "temp/qa" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 14 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "path-temp" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "temp/pages" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 15 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "path-output" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "output" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 16 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "path-suppressed-warnings" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "input/ignoreWarnings.txt" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 17 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "path-history" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "http://fhir.org/guides/cdc/opioid-cds/history.html" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 18 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "template-html" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "template-page.html" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 19 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "template-md" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "template-page-md.html" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 20 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "apply-contact" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 21 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "apply-context" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 22 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "apply-copyright" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 23 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "apply-jurisdiction" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 24 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "apply-license" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 25 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "apply-publisher" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 26 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "apply-wg" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 27 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "active-tables" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 28 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "fmm-definition" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "http://hl7.org/fhir/versions.html#maturity" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 29 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "propagate-status" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 30 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "excludelogbinaryformat" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 31 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueString [ fhir:value "tabbed-snapshots" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 32 ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters" ] ;
+       fhir:Extension.valueReference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Parameters/expansion-parameters> ;
+         fhir:Reference.reference [ fhir:value "Parameters/expansion-parameters" ]
+       ]
+     ], [
+       fhir:index 33 ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency" ] ;
+       fhir:Extension.valueCode [ fhir:value "hl7.fhir.uv.tools.r4#1.1.2" ]
+     ], [
+       fhir:index 34 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "copyrightyear" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "2019+" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 35 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "releaselabel" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "Release 2022.1" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 36 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "apply-version" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "false" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 37 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "default-version" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 38 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "shownav" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 39 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "auto-oid-root" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "2.16.840.1.113883.4.642.40.65" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 40 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "templates/liquid" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 41 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "path-expansion-params" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "resources/parameters/Parameters-manifest.json" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 42 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "pin-canonicals" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "pin-all" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 43 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "pin-manifest" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "manifest" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 44 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "autoload-resources" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 45 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "template/liquid" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 46 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "input/liquid" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 47 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "path-qa" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "temp/qa" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 48 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "path-temp" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "temp/pages" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 49 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "path-output" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "output" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 50 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "path-suppressed-warnings" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "input/ignoreWarnings.txt" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 51 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "path-history" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "http://fhir.org/guides/cdc/opioid-cds/history.html" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 52 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "template-html" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "template-page.html" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 53 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "template-md" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "template-page-md.html" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 54 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "apply-contact" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 55 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "apply-context" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 56 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "apply-copyright" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 57 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "apply-jurisdiction" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 58 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "apply-license" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 59 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "apply-publisher" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 60 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "apply-wg" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 61 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "active-tables" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 62 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "fmm-definition" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "http://hl7.org/fhir/versions.html#maturity" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 63 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "propagate-status" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 64 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "excludelogbinaryformat" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 65 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "code" ] ;
+         fhir:Extension.valueCode [ fhir:value "tabbed-snapshots" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "value" ] ;
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ] ;
+     fhir:ImplementationGuide.definition.grouping [
+       fhir:index 0 ;
+       fhir:Element.id [ fhir:value "recommendation-artifact-packages" ] ;
+       fhir:ImplementationGuide.definition.grouping.name [ fhir:value "Recommendation Artifact Packages" ]
+     ], [
+       fhir:index 1 ;
+       fhir:Element.id [ fhir:value "common-libraries" ] ;
+       fhir:ImplementationGuide.definition.grouping.name [ fhir:value "Common Logic Libraries" ]
+     ], [
+       fhir:index 2 ;
+       fhir:Element.id [ fhir:value "recommendation-libraries" ] ;
+       fhir:ImplementationGuide.definition.grouping.name [ fhir:value "Recommendation Logic Libraries" ]
+     ], [
+       fhir:index 3 ;
+       fhir:Element.id [ fhir:value "activitydefinitions" ] ;
+       fhir:ImplementationGuide.definition.grouping.name [ fhir:value "ActivityDefinitions" ]
+     ], [
+       fhir:index 4 ;
+       fhir:Element.id [ fhir:value "plandefinitions" ] ;
+       fhir:ImplementationGuide.definition.grouping.name [ fhir:value "PlanDefinitions" ]
+     ], [
+       fhir:index 5 ;
+       fhir:Element.id [ fhir:value "valueset-profile-spreadsheet.xml" ] ;
+       fhir:ImplementationGuide.definition.grouping.name [ fhir:value "CDC_ValueSet" ]
+     ] ;
+     fhir:ImplementationGuide.definition.resource [
+       fhir:index 0 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "CarePlan" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/CarePlan/example-opioidcds> ;
+         fhir:Reference.reference [ fhir:value "CarePlan/example-opioidcds" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDS CarePlan" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CarePlan Example" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 1 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Condition/cancer-diagnosis> ;
+         fhir:Reference.reference [ fhir:value "Condition/cancer-diagnosis" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cancer Diagnosis Condition" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Cancer Diagnosis Condition Example" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 2 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Condition/end-of-life> ;
+         fhir:Reference.reference [ fhir:value "Condition/end-of-life" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "End of Life Condition" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "End of Life Condition Example" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 3 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Condition/terminal> ;
+         fhir:Reference.reference [ fhir:value "Condition/terminal" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Terminal Condition" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Terminal Condition Example" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 4 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Encounter/cancer-diagnosis> ;
+         fhir:Reference.reference [ fhir:value "Encounter/cancer-diagnosis" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cancer Diagnosis Encounter" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Cancer Diagnosis Encounter Example" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 5 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Encounter" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Encounter/oncologist-participant> ;
+         fhir:Reference.reference [ fhir:value "Encounter/oncologist-participant" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Oncology Participant Encounter" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Oncology Participant Encounter Example" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 6 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/MedicationDispense/ambulatory-opioid> ;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/ambulatory-opioid" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Ambulatory Opioid MedicationDispense" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ambulatory Opioid MedicationDispense Example" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 7 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/MedicationRequest/example-opioidcds> ;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/example-opioidcds" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDS MedicationRequest" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "MedicationRequest Example" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 8 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/MedicationRequest/ambulatory-opioid> ;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/ambulatory-opioid" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Ambulatory Opioid MedicationRequest" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Ambulatory Opioid MedicationRequest Example" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 9 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Observation/example-opioidcds> ;
+         fhir:Reference.reference [ fhir:value "Observation/example-opioidcds" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDS Observation" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Observation Example" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 10 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Patient/example-opioidcds> ;
+         fhir:Reference.reference [ fhir:value "Patient/example-opioidcds" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDS Patient" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Patient Example" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 11 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "PractitionerRole" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/PractitionerRole/oncology-specialist> ;
+         fhir:Reference.reference [ fhir:value "PractitionerRole/oncology-specialist" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Oncology Specialist PractitionerRole" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Oncology Specialist PractitionerRole Example" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 12 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "RequestGroup" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/RequestGroup/example-opioidcds> ;
+         fhir:Reference.reference [ fhir:value "RequestGroup/example-opioidcds" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDS RequestGroup" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "RequestGroup Example" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 13 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ServiceRequest" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ServiceRequest/palliative-care> ;
+         fhir:Reference.reference [ fhir:value "ServiceRequest/palliative-care" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Palliative Care ServiceRequest" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Palliative Care ServiceRequest Example" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 14 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/dataDateRoller> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/dataDateRoller" ] ;
+         fhir:Reference.display [ fhir:value "Data Date-Roller Extension" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "DataDateRollerExtension" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Declares the DateLastUpdated and Frequency arguments to be used by the Data Date Roller for maintaining/rolling test data dates to keep them from going stale." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 15 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/HelloWorld> ;
+         fhir:Reference.reference [ fhir:value "Library/HelloWorld" ] ;
+         fhir:Reference.display [ fhir:value "HelloWorld Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HelloWorld" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "HelloWorld Library" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "common-libraries" ]
+     ], [
+       fhir:index 16 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/HelloWorldPatientView> ;
+         fhir:Reference.reference [ fhir:value "Library/HelloWorldPatientView" ] ;
+         fhir:Reference.display [ fhir:value "HelloWorldPatientView Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "HelloWorldPatientView" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "HelloWorldPatientView Library" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "common-libraries" ]
+     ], [
+       fhir:index 17 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/CDCMMEClinicalConversionFactors> ;
+         fhir:Reference.reference [ fhir:value "Library/CDCMMEClinicalConversionFactors" ] ;
+         fhir:Reference.display [ fhir:value "CDCMMEClinicalConversionFactors Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDCMMEClinicalConversionFactors" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CDCMMEClinicalConversionFactors Library" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "common-libraries" ]
+     ], [
+       fhir:index 18 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSRoutines> ;
+         fhir:Reference.reference [ fhir:value "Library/OpioidCDSRoutines" ] ;
+         fhir:Reference.display [ fhir:value "Common Routines Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDSRoutines" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Common Routines Library" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "common-libraries" ]
+     ], [
+       fhir:index 19 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC10Common> ;
+         fhir:Reference.reference [ fhir:value "Library/OpioidCDSREC10Common" ] ;
+         fhir:Reference.display [ fhir:value "Recommendation 10 Common Logic Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDSREC10CommonLibrary" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Common Logic Library for Recommendation #10 - Urine Drug Testing" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "recommendation-libraries" ]
+     ], [
+       fhir:index 20 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSCommon> ;
+         fhir:Reference.reference [ fhir:value "Library/OpioidCDSCommon" ] ;
+         fhir:Reference.display [ fhir:value "Common Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDSCommon" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Common Logic Library" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "common-libraries" ]
+     ], [
+       fhir:index 21 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSCommonConfig> ;
+         fhir:Reference.reference [ fhir:value "Library/OpioidCDSCommonConfig" ] ;
+         fhir:Reference.display [ fhir:value "Common Configuration Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDSCommonConfig" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Common Configuration Library" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "common-libraries" ]
+     ], [
+       fhir:index 22 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OMTKLogicMK2020> ;
+         fhir:Reference.reference [ fhir:value "Library/OMTKLogicMK2020" ] ;
+         fhir:Reference.display [ fhir:value "OMTK Logic MK (2020) Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidLogicMK2020" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "OMTK Logic MK (2020) Library" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "common-libraries" ]
+     ], [
+       fhir:index 23 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OMTKData2020> ;
+         fhir:Reference.reference [ fhir:value "Library/OMTKData2020" ] ;
+         fhir:Reference.display [ fhir:value "OMTK Data (2020) Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidData2020" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "OMTK Data (2020) Library" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "common-libraries" ]
+     ], [
+       fhir:index 24 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/FHIRHelpers> ;
+         fhir:Reference.reference [ fhir:value "Library/FHIRHelpers" ] ;
+         fhir:Reference.display [ fhir:value "FHIR Helpers Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "FHIRHelpers" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "FHIR Helpers Library" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "common-libraries" ]
+     ], [
+       fhir:index 25 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/FHIR-ModelInfo> ;
+         fhir:Reference.reference [ fhir:value "Library/FHIR-ModelInfo" ] ;
+         fhir:Reference.display [ fhir:value "FHIR ModelInfo Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "FHIRModelInfo" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "FHIR ModelInfo Library" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "common-libraries" ]
+     ], [
+       fhir:index 26 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC01> ;
+         fhir:Reference.reference [ fhir:value "Library/OpioidCDSREC01" ] ;
+         fhir:Reference.display [ fhir:value "Recommendation 1 (order-sign) Logic Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDSREC01Library" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Logic Library for Recommendation #1 (order-sign) - Nonpharmacologic and Nonopioid Pharmacologic Therapy Consideration" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "recommendation-libraries" ]
+     ], [
+       fhir:index 27 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC02> ;
+         fhir:Reference.reference [ fhir:value "Library/OpioidCDSREC02" ] ;
+         fhir:Reference.display [ fhir:value "Recommendation 2 (order-sign) Logic Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDSREC02Library" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Logic Library for Recommendation #2 (order-sign) - Opioid Therapy Goals Discussion" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "recommendation-libraries" ]
+     ], [
+       fhir:index 28 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC03> ;
+         fhir:Reference.reference [ fhir:value "Library/OpioidCDSREC03" ] ;
+         fhir:Reference.display [ fhir:value "Recommendation 3 (order-sign) Logic Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDSREC03Library" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Logic Library for Recommendation #3 (order-sign) - Opioid Immediate Release Form When Starting Opioid Therapy" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "recommendation-libraries" ]
+     ], [
+       fhir:index 29 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC04And05> ;
+         fhir:Reference.reference [ fhir:value "Library/OpioidCDSREC04And05" ] ;
+         fhir:Reference.display [ fhir:value "Recommendations 4 and 5 (order-sign) Logic Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDSREC04And05Library" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Logic Library for Recommendations #4 and #5 (order-sign) - Lowest Effective Dose" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "recommendation-libraries" ]
+     ], [
+       fhir:index 30 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC06> ;
+         fhir:Reference.reference [ fhir:value "Library/OpioidCDSREC06" ] ;
+         fhir:Reference.display [ fhir:value "Recommendation 6 (order-sign) Logic Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDSREC06Library" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Logic Library for Recommendation #6 (order-sign) - Prescribe Lowest Effective Dose and Duration" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "recommendation-libraries" ]
+     ], [
+       fhir:index 31 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC07> ;
+         fhir:Reference.reference [ fhir:value "Library/OpioidCDSREC07" ] ;
+         fhir:Reference.display [ fhir:value "Recommendation 7 (order-sign) Logic Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDSREC07Library" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Logic Library for Recommendation #7 (order-sign) - Opioid Therapy Risk Assessment" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "recommendation-libraries" ]
+     ], [
+       fhir:index 32 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC08> ;
+         fhir:Reference.reference [ fhir:value "Library/OpioidCDSREC08" ] ;
+         fhir:Reference.display [ fhir:value "Recommendation 8 (order-sign) Logic Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDSREC08Library" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Logic Library for Recommendation #8 (order-sign) - Naloxone Consideration" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "recommendation-libraries" ]
+     ], [
+       fhir:index 33 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC09> ;
+         fhir:Reference.reference [ fhir:value "Library/OpioidCDSREC09" ] ;
+         fhir:Reference.display [ fhir:value "Recommendation 9 (order-sign) Logic Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDSREC09Library" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Logic Library for Recommendation #9 (order-sign) - Consider Patient's History of Controlled Substance Prescriptions" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "recommendation-libraries" ]
+     ], [
+       fhir:index 34 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC10OrderSign> ;
+         fhir:Reference.reference [ fhir:value "Library/OpioidCDSREC10OrderSign" ] ;
+         fhir:Reference.display [ fhir:value "Recommendation 10 (order-sign) Logic Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDSREC10OrderSignLibrary" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Logic Library for Recommendation #10 (order-sign) - Urine Drug Testing" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "recommendation-libraries" ]
+     ], [
+       fhir:index 35 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC10PatientView> ;
+         fhir:Reference.reference [ fhir:value "Library/OpioidCDSREC10PatientView" ] ;
+         fhir:Reference.display [ fhir:value "Recommendation 10 (patient-view) Logic Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDSREC10PatientViewLibrary" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Logic Library for Recommendation #10 (patient-view) - Urine Drug Testing" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "recommendation-libraries" ]
+     ], [
+       fhir:index 36 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC11OrderSelect> ;
+         fhir:Reference.reference [ fhir:value "Library/OpioidCDSREC11OrderSelect" ] ;
+         fhir:Reference.display [ fhir:value "Recommendation 11 (order-select) Logic Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDSREC11OrderSelectLibrary" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Logic Library for Recommendation #11 (order-select) - Concurrent Use of Opioids and Benzodiazepines" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "recommendation-libraries" ]
+     ], [
+       fhir:index 37 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC11PatientView> ;
+         fhir:Reference.reference [ fhir:value "Library/OpioidCDSREC11PatientView" ] ;
+         fhir:Reference.display [ fhir:value "Recommendation 11 (patient-view) Logic Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDSREC11PatientViewLibrary" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Logic Library for Recommendation #11 (patient-view) - Concurrent Use of Opioids and Benzodiazepines" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "recommendation-libraries" ]
+     ], [
+       fhir:index 38 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC12PatientView> ;
+         fhir:Reference.reference [ fhir:value "Library/OpioidCDSREC12PatientView" ] ;
+         fhir:Reference.display [ fhir:value "Recommendation 12 (patient-view) Logic Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidCDSREC12PatientViewLibrary" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Logic Library for Recommendation #12 (patient-view) - Evidence-based Treatment for Patients with Opioid Use Disorder" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "recommendation-libraries" ]
+     ], [
+       fhir:index 39 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ActivityDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ActivityDefinition/opioidcds-risk-assessment-request> ;
+         fhir:Reference.reference [ fhir:value "ActivityDefinition/opioidcds-risk-assessment-request" ] ;
+         fhir:Reference.display [ fhir:value "Risk Assessment ActivityDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidRiskAssessmentActivityDefinition" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An ActivityDefinition for recommendation of risk assessment" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "activitydefinitions" ]
+     ], [
+       fhir:index 40 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ActivityDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ActivityDefinition/opioidcds-urine-screening-request> ;
+         fhir:Reference.reference [ fhir:value "ActivityDefinition/opioidcds-urine-screening-request" ] ;
+         fhir:Reference.display [ fhir:value "Urine Screening ActivityDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidUrineScreeningActivityDefinition" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An ActivityDefinition for recommendation of urine screening" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "activitydefinitions" ]
+     ], [
+       fhir:index 41 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ActivityDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ActivityDefinition/opioidcds-urine-screening-request-1> ;
+         fhir:Reference.reference [ fhir:value "ActivityDefinition/opioidcds-urine-screening-request-1" ] ;
+         fhir:Reference.display [ fhir:value "Urine Screening ActivityDefinition 1" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidUrineScreeningActivityDefinition" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An ActivityDefinition for recommendation of urine screening" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "activitydefinitions" ]
+     ], [
+       fhir:index 42 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ActivityDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ActivityDefinition/opioidcds-urine-screening-request-2> ;
+         fhir:Reference.reference [ fhir:value "ActivityDefinition/opioidcds-urine-screening-request-2" ] ;
+         fhir:Reference.display [ fhir:value "Urine Screening ActivityDefinition 2" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "OpioidUrineScreeningActivityDefinition" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "An ActivityDefinition for recommendation of urine screening" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "activitydefinitions" ]
+     ], [
+       fhir:index 43 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Parameters" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Parameters/manifest> ;
+         fhir:Reference.reference [ fhir:value "Parameters/manifest" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Input Expansion Parameters" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The input expansion parameters resource for this implementation guide, specifying SNOMED Edition and version. This resource will be contained within the published implementation guide with all pinned references." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 44 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Device" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Device/cqf-tooling> ;
+         fhir:Reference.reference [ fhir:value "Device/cqf-tooling" ] ;
+         fhir:Reference.display [ fhir:value "CQF Tooling Device" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CQFToolingDevice" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Device that represents a CQF Tooling version." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 45 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/cdc-valueset-clinical-focus" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDC 2022 Opioid Guidance Clinical Focus Extension" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Describes the clinical focus for the ValueSet." ]
+     ], [
+       fhir:index 46 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/cdc-valueset-dataelement-scope" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDC 2022 Opioid Guidance Data Element Extension" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Describes the data element scope for the ValueSet." ]
+     ], [
+       fhir:index 47 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/cdc-valueset-exclusion-criteria" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDC 2022 Opioid Guidance exclusion Criteria Extension" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Describes the clinical focus for the ValueSet." ]
+     ], [
+       fhir:index 48 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/cdc-valueset-inclusion-criteria" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDC 2022 Opioid Guidance Inclusion Criteria Extension" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Describes the clinical focus for the ValueSet." ]
+     ], [
+       fhir:index 49 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/ConversionFactors> ;
+         fhir:Reference.reference [ fhir:value "Library/ConversionFactors" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Morphine Milligram Equivalent (MME) Conversion Factors for FHIR R4" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This library contains logic to expose configurable conversion factors for the MME calculation functionality provided by the OMTKLogic library." ]
+     ], [
+       fhir:index 50 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/MMECalculator> ;
+         fhir:Reference.reference [ fhir:value "Library/MMECalculator" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Morphine Milligram Equivalent (MME) Calculator for FHIR R4" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This library contains logic to surface the MME calculation functionality provided by the OMTKLogic library by extracting appropriate information from FHIR R4 MedicationRequest resource." ]
+     ], [
+       fhir:index 51 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OMTKData> ;
+         fhir:Reference.reference [ fhir:value "Library/OMTKData" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Opioid Management Terminology Knowledge Data" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This library contains drug ingredient data for opioid ingredients of combinations drugs as determined using the [RxNav](https://rxnav.nlm.nih.gov/) API.\r\nThe content was produced using the process described [here](http://fhir.org/guides/cdc/opioid-cds/service-documentation.html#solution-component-1-medication-and-terminology-knowledge-base)." ]
+     ], [
+       fhir:index 52 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "Library" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/Library/OMTKLogic> ;
+         fhir:Reference.reference [ fhir:value "Library/OMTKLogic" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Opioid Management Terminology Knowledge Logic" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This library provides functionality for calculating Morphine Milligram Equivalents (MME) for opioid medications, as described in the CDC Opioid Prescribing Guideline." ]
+     ], [
+       fhir:index 53 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-01> ;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/opioidcds-01" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation #1 - Nonpharmacologic and Nonopioid Pharmacologic Therapy Consideration" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Nonopioid therapies are at least as effective as opioids for many common types of acute pain. Clinicians should maximize use of nonpharmacologic and nonopioid pharmacologic therapies as appropriate for the specific condition and patient and only consider opioid therapy for acute pain if benefits are anticipated to outweigh risks to the patient. Before prescribing opioid therapy for acute pain, clinicians should discuss with patients the realistic benefits and known risks of opioid therapy." ]
+     ], [
+       fhir:index 54 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-02> ;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/opioidcds-02" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation #2 - Opioid Therapy Goals Discussion" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Nonopioid therapies are preferred for subacute and chronic pain. Clinicians should maximize use of nonpharmacologic and nonopioid pharmacologic therapies as appropriate for the specific condition and patient and only consider initiating opioid therapy if expected benefits for pain and function are anticipated to outweigh risks to the patient. Before starting opioid therapy for subacute or chronic pain, clinicians should discuss with patients the realistic benefits and known risks of opioid therapy, should work with patients to establish treatment goals for pain and function, and should consider how opioid therapy will be discontinued if benefits do not outweigh risks." ]
+     ], [
+       fhir:index 55 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-03> ;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/opioidcds-03" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation #3 - Opioid Immediate Release Form When Starting Opioid Therapy" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "When starting opioid therapy for acute, subacute, or chronic pain, clinicians should prescribe immediate-release opioids instead of extended-release and long-acting (ER/LA) opioids." ]
+     ], [
+       fhir:index 56 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-04-05> ;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/opioidcds-04-05" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendations #4 and #5 - Lowest Effective Dose" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Recommendation 4: When opioids are initiated for opioid-naïve patients with acute, subacute, or chronic pain, clinicians should prescribe the lowest effective dosage. If opioids are continued for subacute or chronic pain, clinicians should use caution when prescribing opioids at any dosage, should carefully evaluate individual benefits and risks when considering increasing dosage, and should avoid increasing dosage above levels likely to yield diminishing returns in benefits relative to risks to patients. Recommendation 5: For patients already receiving opioid therapy, clinicians should carefully weigh benefits and risks and exercise care when changing opioid dosage. If benefits outweigh risks of continued opioid therapy, clinicians should work closely with patients to optimize nonopioid therapies while continuing opioid therapy. If benefits do not outweigh risks of continued opioid therapy, clinicians should optimize other therapies and work closely with patients to gradually taper to lower dosages or, if warranted based on the individual circumstances of the patient, appropriately taper and discontinue opioids. Unless there are indications of a life-threatening issue such as warning signs of impending overdose (e.g., confusion, sedation, or slurred speech), opioid therapy should not be discontinued abruptly, and clinicians should not rapidly reduce opioid dosages from higher dosages." ]
+     ], [
+       fhir:index 57 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-06> ;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/opioidcds-06" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation #6 - Prescribe Lowest Effective Dose and Duration" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "When opioids are needed for acute pain, clinicians should prescribe no greater quantity than needed for the expected duration of pain severe enough to require opioids." ]
+     ], [
+       fhir:index 58 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-07> ;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/opioidcds-07" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation #7 - Opioid Therapy Risk Assessment" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Clinicians should evaluate benefits and risks with patients within 1-4 weeks of starting opioid therapy for subacute or chronic pain or of dosage escalation. Clinicians should regularly reevaluate benefits and risks of continued opioid therapy with patients." ]
+     ], [
+       fhir:index 59 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-08> ;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/opioidcds-08" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation #8 - Naloxone Consideration" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Before starting and periodically during continuation of opioid therapy, clinicians should evaluate risk for opioid-related harms and discuss risk with patients. Clinicians should work with patients to incorporate into the management plan strategies to mitigate risk, including offering naloxone." ]
+     ], [
+       fhir:index 60 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-09> ;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/opioidcds-09" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation #9 - Consider Patient's History of Controlled Substance Prescriptions" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "When prescribing initial opioid therapy for acute, subacute, or chronic pain, and periodically during opioid therapy for chronic pain, clinicians should review the patient's history of controlled substance prescriptions using state prescription drug monitoring program (PDMP) data to determine whether the patient is receiving opioid dosages or combinations that put the patient at high risk for overdose." ]
+     ], [
+       fhir:index 61 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-10-order-sign> ;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/opioidcds-10-order-sign" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation #10 - Urine Drug Testing (order-sign)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "When prescribing opioids for subacute or chronic pain, clinicians should consider the benefits and risks of toxicology testing to assess for prescribed medications as well as other prescribed and nonprescribed controlled substances." ]
+     ], [
+       fhir:index 62 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-10-patient-view> ;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/opioidcds-10-patient-view" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation #10 - Urine Drug Testing (patient-view)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "When prescribing opioids for subacute or chronic pain, clinicians should consider the benefits and risks of toxicology testing to assess for prescribed medications as well as other prescribed and nonprescribed controlled substances." ]
+     ], [
+       fhir:index 63 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-11-order-select> ;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/opioidcds-11-order-select" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation #11 - Concurrent Use of Opioids and Benzodiazepines (order-select)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Clinicians should use particular caution when prescribing opioid pain medication and benzodiazepines concurrently and consider whether benefits outweigh risks of concurrent prescribing of opioids and other central nervous system depressants." ]
+     ], [
+       fhir:index 64 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-11-patient-view> ;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/opioidcds-11-patient-view" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation #11 - Concurrent Use of Opioids and Benzodiazepines (patient-view)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Clinicians should use particular caution when prescribing opioid pain medication and benzodiazepines concurrently and consider whether benefits outweigh risks of concurrent prescribing of opioids and other central nervous system depressants." ]
+     ], [
+       fhir:index 65 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "PlanDefinition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioidcds-12-patient-view> ;
+         fhir:Reference.reference [ fhir:value "PlanDefinition/opioidcds-12-patient-view" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recommendation #12 - Evidence-based Treatment for Patients with Opioid Use Disorder (patient-view)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Clinicians should offer or arrange treatment with evidence-based medications to treat patients with opioid use disorder. Detoxification on its own, without medications for opioid use disorder, is not recommended for opioid use disorder because of increased risks for resuming drug use, overdose, and overdose death." ]
+     ], [
+       fhir:index 66 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-indicator> ;
+         fhir:Reference.reference [ fhir:value "CodeSystem/opioidcds-indicator" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CodeSystem - CDC 2022 Opioid Indicator" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Indicates the urgency/importance of the recommended action" ]
+     ], [
+       fhir:index 67 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-overrideReasons> ;
+         fhir:Reference.reference [ fhir:value "CodeSystem/opioidcds-overrideReasons" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDC Opioid Override Reasons" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Override reasons for the 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain" ]
+     ], [
+       fhir:index 68 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/all-urine-drug-screening-tests> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/all-urine-drug-screening-tests" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "All urine drug screening tests" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Urine tests to all opioid and non-opioid drugs" ]
+     ], [
+       fhir:index 69 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/amphetamine-urine-drug-screening-tests> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/amphetamine-urine-drug-screening-tests" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Amphetamine-class drugs and metabolite urine tests" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Urine tests, both quantitative and qualitative, including confirmatory, that detect Amphetamine-class drugs and metabolites" ]
+     ], [
+       fhir:index 70 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/amphetamines-class-medications> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/amphetamines-class-medications" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Amphetamine class medications" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Amphetamine class medications based upon the mapping of SNOMED CT drug class to ingredient then linked to RXNorm" ]
+     ], [
+       fhir:index 71 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/barbiturate-medications> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/barbiturate-medications" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Barbiturate Medications" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "All Barbiturate medications" ]
+     ], [
+       fhir:index 72 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/barbiturate-urine-drug-screening-tests> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/barbiturate-urine-drug-screening-tests" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Barbiturate urine drug screening tests" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Presumed general urine tests for barbiturates screening and any substance that is in the class." ]
+     ], [
+       fhir:index 73 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/benzodiazepine-medications> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/benzodiazepine-medications" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Benzodiazepine medications" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "All benzodiazepine clinical drugs" ]
+     ], [
+       fhir:index 74 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/benzodiazepine-urine-drug-screening-tests> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/benzodiazepine-urine-drug-screening-tests" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Benzodiazepine urine drug screening tests" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Presumed general urine tests for benzodiazepines screening and any substance that is in the class." ]
+     ], [
+       fhir:index 75 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-and-methadone-medications> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/buprenorphine-and-methadone-medications" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Buprenorphine and Methadone medications" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "All Buprenorphine and Methadone medications" ]
+     ], [
+       fhir:index 76 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-medications> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/buprenorphine-medications" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Buprenorphine Medications" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "All Buprenorphine medications" ]
+     ], [
+       fhir:index 77 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-urine-drug-screening-tests> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/buprenorphine-urine-drug-screening-tests" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Buprenorphine urine drug screening tests" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Presumed general urine tests for buprenorphine screening." ]
+     ], [
+       fhir:index 78 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/cannabinoid-urine-drug-screening-tests> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/cannabinoid-urine-drug-screening-tests" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cannabinoid class urine drug screening" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Cannabinoid, including synthetic and THC, urine tests" ]
+     ], [
+       fhir:index 79 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/cdc-malignant-cancer-conditions> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/cdc-malignant-cancer-conditions" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDC malignant cancer conditions" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "All neoplastic and malignant conditions, including pain due to neoplasm." ]
+     ], [
+       fhir:index 80 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/cns-depressant-medications> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/cns-depressant-medications" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CNS depressant medications" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medications considered to have an ingredient considered to be a CNS depressant, some of which may be mild. Removed from this set are cough medications and bowl transit modifiers." ]
+     ], [
+       fhir:index 81 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/cocaine-urine-drug-screening-tests> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/cocaine-urine-drug-screening-tests" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Cocaine urine drug screening tests" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Urine screening tests for cocaine and cocaine metabolites" ]
+     ], [
+       fhir:index 82 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/conditions-documenting-sleep-disordered-breathing> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/conditions-documenting-sleep-disordered-breathing" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Sleep disordered breathing" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Conditions associated with sleep-related breathing disorders." ]
+     ], [
+       fhir:index 83 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/conditions-documenting-substance-misuse> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/conditions-documenting-substance-misuse" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Conditions documenting substance misuse" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Any finding or condition that indicate problematic misuse of a substance other than tobacco or laxatives, including \"history of\" conditions." ]
+     ], [
+       fhir:index 84 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/conditions-likely-terminal-for-opioid-prescribing> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/conditions-likely-terminal-for-opioid-prescribing" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Conditions likely terminal for opioid prescribing" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Conditions that generally are thought to have terminal prognosis" ]
+     ], [
+       fhir:index 85 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/extended-release-opioid-with-ambulatory-misuse-potential> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/extended-release-opioid-with-ambulatory-misuse-potential" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Extended release opioid with ambulatory misuse potential" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "All opioid clinical drugs except those restricted to surgical use only, and that are in an extended release dose form code" ]
+     ], [
+       fhir:index 86 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/fentanyl-type-medications> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/fentanyl-type-medications" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Fentanyl-type medications" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Fentanyl and similar medications (sufentanil, alfentanil, remifentanil)" ]
+     ], [
+       fhir:index 87 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/fentanyl-type-urine-drug-screening-tests> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/fentanyl-type-urine-drug-screening-tests" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Fentanyl-type urine drug screening tests" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Urine screening tests for fentanyl-type drugs and metabolites" ]
+     ], [
+       fhir:index 88 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/general-opiate-urine-drug-screening-tests> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/general-opiate-urine-drug-screening-tests" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "General opiate urine drug screening tests" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Presumed general urine tests for naturally occurring opioids (i.e. opiates) that are not specific to a particular substance based upon the inclusion of the word 'opiates' in the long name." ]
+     ], [
+       fhir:index 89 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/heroin-urine-drug-screening-tests> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/heroin-urine-drug-screening-tests" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Heroin urine drug screening tests" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Presumed general urine screening tests for heroin and metabolites." ]
+     ], [
+       fhir:index 90 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-finding> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/hospice-finding" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Hospice Finding" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Finding codes for receiving hospice care" ]
+     ], [
+       fhir:index 91 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-procedure> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/hospice-procedure" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Hospice Procedure" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Procedure codes for referral, admission, or transfer to a hospice" ]
+     ], [
+       fhir:index 92 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/limited-life-expectancy-conditions> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/limited-life-expectancy-conditions" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Limited life expectancy conditions" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A finding that documents a terminal prognosis" ]
+     ], [
+       fhir:index 93 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/methadone-medications> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/methadone-medications" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Methadone medications" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication codes representing methadone medications" ]
+     ], [
+       fhir:index 94 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/methadone-urine-drug-screening-tests> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/methadone-urine-drug-screening-tests" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Methadone urine drug screening tests" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Urine tests to identify methadone and metabolites" ]
+     ], [
+       fhir:index 95 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/naloxone-medications> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/naloxone-medications" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Naloxone medications" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "All naloxone medications" ]
+     ], [
+       fhir:index 96 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/non-opioid-urine-drug-screening> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/non-opioid-urine-drug-screening" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Non-opioid drug urine screening" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Individual tests and panels of tests of urine for illicit drugs EXCEPT those for opioids." ]
+     ], [
+       fhir:index 97 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/non-synthetic-opioid-medications> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/non-synthetic-opioid-medications" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Non-synthetic opioid medications" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medications derived from the opium plant that are not synthetically created . All metabolize to morphine." ]
+     ], [
+       fhir:index 98 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/oncology-specialty-designations> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/oncology-specialty-designations" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Oncology specialty designations (NUCC)" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "NUCC oncology provider types who may provide encounters to patients with cancer" ]
+     ], [
+       fhir:index 99 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/opiate-specific-urine-drug-screening-tests> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/opiate-specific-urine-drug-screening-tests" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Opiate specific urine drug screening tests" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Urine tests for naturally occurring opioids (i.e. opiates) that are specific to a particular naturally occurring opioid and therefore do not have the general word 'opiates' in the long name." ]
+     ], [
+       fhir:index 100 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-analgesics-with-ambulatory-misuse-potential> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/opioid-analgesics-with-ambulatory-misuse-potential" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Opioid analgesics with ambulatory misuse potential" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "All opioid clinical drugs except cough medications, antispasmodics, or those restricted to surgical use only as identified by those using an injectable form." ]
+     ], [
+       fhir:index 101 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-counseling-procedure> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/opioid-counseling-procedure" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Opioid counseling procedure" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Procedure for counseling on opioid use" ]
+     ], [
+       fhir:index 102 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-misuse-assessment-procedure> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/opioid-misuse-assessment-procedure" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Opioid misuse assessment procedure" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Procedure to assess the risk of opioid abuse occurring by a patient" ]
+     ], [
+       fhir:index 103 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-misuse-disorders> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/opioid-misuse-disorders" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Opioid misuse disorders" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Conditions indicating opioid misuse" ]
+     ], [
+       fhir:index 104 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-treatment-assessment-procedure> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/opioid-treatment-assessment-procedure" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Opioid treatment assessment procedure" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Broad set of concepts that may represent a procedure to assess the risk of opioid abuse occurring by a patient" ]
+     ], [
+       fhir:index 105 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/opioid-urine-drug-screening> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/opioid-urine-drug-screening" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Opioid drug urine screening" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Individual tests and panels of tests of urine for opioids" ]
+     ], [
+       fhir:index 106 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-medications> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/oxycodone-medications" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Oxycodone Medications" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "All Oxycodone medications" ]
+     ], [
+       fhir:index 107 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-urine-drug-screening-tests> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/oxycodone-urine-drug-screening-tests" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Oxycodone urine drug screening tests" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Presumed general urine screening tests for oxycodone." ]
+     ], [
+       fhir:index 108 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/pain-management-procedure> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/pain-management-procedure" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Pain management procedure" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Procedure for subacute or chronic pain control management" ]
+     ], [
+       fhir:index 109 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/pain-treatment-plan> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/pain-treatment-plan" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Pain treatment plan" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Pain medicine Plan of care note" ]
+     ], [
+       fhir:index 110 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/pdmp-data-reviewed-finding> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/pdmp-data-reviewed-finding" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PDMP data reviewed finding" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Finding indicating that the Prescription Drug Monitoring Program (PDMP) data was reviewed" ]
+     ], [
+       fhir:index 111 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/pdmp-review-procedure> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/pdmp-review-procedure" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PDMP review procedure" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Procedure for Prescription Drug Monitoring Program (PDMP) review" ]
+     ], [
+       fhir:index 112 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/phencyclidine-urine-drug-screening-tests> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/phencyclidine-urine-drug-screening-tests" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Phencyclidine urine drug screening tests" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Urine screening tests for phencyclidine" ]
+     ], [
+       fhir:index 113 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/sickle-cell-diseases> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/sickle-cell-diseases" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Sickle-cell diseases" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Sickle-cell disorders that cause painful crisis" ]
+     ], [
+       fhir:index 114 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/substance-misuse-behavioral-counseling> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/substance-misuse-behavioral-counseling" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Substance misuse behavioral counseling" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Counseling and associated procedures for substance misuse" ]
+     ], [
+       fhir:index 115 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/synthetic-opioid-medications> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/synthetic-opioid-medications" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Synthetic opioid medications" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Opioid medications that are not exclusively and solely derived from the opium plant. These are synthetic or semisynthetic opioids." ]
+     ], [
+       fhir:index 116 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/synthetic-opioid-urine-drug-screening-tests> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/synthetic-opioid-urine-drug-screening-tests" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Synthetic opioid urine drug screening tests" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Urine tests for synthetic and semi-synthetic (non-opiate) substances" ]
+     ], [
+       fhir:index 117 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/therapies-indicating-end-of-life-care> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/therapies-indicating-end-of-life-care" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Therapies indicating end of life care" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Therapeutic activities indicating end of life. Include procedures or therapies specific to a terminal patient, exclude procedures or therapies performed on a deceased patient" ]
+     ], [
+       fhir:index 118 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-clinical-status-active> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/condition-clinical-status-active" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Condition Clinical Status Active" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The subject is currently experiencing the condition or situation, there is evidence of the condition or situation, or considered to be a significant risk." ]
+     ], [
+       fhir:index 119 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-encounter-diagnosis-category> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/condition-encounter-diagnosis-category" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Encounter Diagnosis Condition Category" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Encounter Diagnosis condition category." ]
+     ], [
+       fhir:index 120 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-problem-list-category> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/condition-problem-list-category" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Problem List Condition Category" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Problem list condition category." ]
+     ], [
+       fhir:index 121 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/condition-us-core-health-concern-category> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/condition-us-core-health-concern-category" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Health Concern Condition Category" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "US Core Health Concern Condition Category." ]
+     ], [
+       fhir:index 122 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-disposition> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/hospice-disposition" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Hospice Disposition" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This value set contains concepts that represent patients receiving hospice care outside of a hospital or long term care facility." ]
+     ], [
+       fhir:index 123 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/medicationrequest-category-community> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/medicationrequest-category-community" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ValueSet - Medication Request Category Community" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Includes requests for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.)." ]
+     ], [
+       fhir:index 124 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/medicationrequest-status-active> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/medicationrequest-status-active" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ValueSet - Medication Request Status Active" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The prescription is 'actionable', but not all actions that are implied by it have occurred yet." ]
+     ], [
+       fhir:index 125 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/observation-category-laboratory> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/observation-category-laboratory" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Observation Category Laboratory" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Laboratory Observation Category" ]
+     ], [
+       fhir:index 126 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/observation-category-procedure> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/observation-category-procedure" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Observation Category Procedure" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Procedure Observation Category" ]
+     ], [
+       fhir:index 127 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/office-visit> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/office-visit" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Office Visit" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes specifying outpatient encounters" ]
+     ], [
+       fhir:index 128 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/ValueSet/xylazine-urine-drug-screening-tests> ;
+         fhir:Reference.reference [ fhir:value "ValueSet/xylazine-urine-drug-screening-tests" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Xylazine drug urine screening tests" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Individual tests and panels of tests of urine for xylazine" ]
+     ], [
+       fhir:index 129 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/cdc-valueset" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDC_ValueSet" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profile of ValueSet for use with 2022 CDC Clinical Practice Guideline" ] ;
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "valueset-profile-spreadsheet.xml" ]
+     ] ;
+     fhir:ImplementationGuide.definition.page [
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+         fhir:Extension.valueUrl [ fhir:value "toc.html" ]
+       ] ;
+       fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ] ;
+       fhir:ImplementationGuide.definition.page.title [ fhir:value "Table of Contents" ] ;
+       fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ] ;
+       fhir:ImplementationGuide.definition.page.page [
+         fhir:index 0 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "index.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "index.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Home" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "profiles.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "profiles.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "2022 CDC Clinical Practice Guideline - Profiles" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 2 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "terminology.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "terminology.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "2022 CDC Clinical Practice Guideline - Terminology" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 3 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "examples.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "examples.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "2022 CDC Clinical Practice Guideline - Examples" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 4 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "documentation.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "documentation.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "2022 CDC Clinical Practice Guideline - Documentation" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ] ;
+         fhir:ImplementationGuide.definition.page.page [
+           fhir:index 0 ;
+           fhir:Element.extension [
+             fhir:index 0 ;
+             fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+             fhir:Extension.valueUrl [ fhir:value "process-documentation.html" ]
+           ] ;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "process-documentation.html" ] ;
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "2022 CDC Clinical Practice Guideline - Process Documentation" ] ;
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+         ]
+       ], [
+         fhir:index 5 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "downloads.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "downloads.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "2022 CDC Clinical Practice Guideline - Downloads" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 6 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "user-interaction-alerts.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "user-interaction-alerts.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "2022 CDC Clinical Practice Guideline - User Interaction Alerts" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 7 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "subroutines.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "subroutines.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "2022 CDC Clinical Practice Guideline - Subroutines" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 8 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "acute-pain.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "acute-pain.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "2022 CDC Clinical Practice Guideline - Acute Pain" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 9 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "chronic-pain.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "chronic-pain.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Chronic Pain Decision Documentation" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 10 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "recommendation-01.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "recommendation-01.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Recommendation #1 - Nonpharmacologic and Nonopioid Pharmacologic Therapy Consideration" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 11 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "recommendation-02.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "recommendation-02.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Recommendation #2 - Prioritize Nonopioid Pain Therapies" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 12 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "recommendation-03.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "recommendation-03.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Recommendation #3 - Opioid Immediate Release Form When Starting Opioid Therapy" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 13 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "recommendation-04-05.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "recommendation-04-05.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Recommendations #4 and #5 - Lowest Effective Dose" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 14 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "recommendation-06.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "recommendation-06.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Recommendation #6 - Prescribe Lowest Effective Dose and Duration" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 15 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "recommendation-07.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "recommendation-07.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Recommendation #7 - Opioid Therapy Risk Assessment" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 16 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "recommendation-08.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "recommendation-08.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Recommendation #8 - Naloxone Consideration" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 17 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "recommendation-09.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "recommendation-09.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Recommendation #9 - Consider Patient's History of Controlled Substance Prescriptions" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 18 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "recommendation-10.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "recommendation-10.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Recommendation #10 - Urine Drug Testing" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 19 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "recommendation-11.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "recommendation-11.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Recommendation #11 - Concurrent Use of Opioids and Benzodiazepines" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 20 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "recommendation-12.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "recommendation-12.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Recommendation #12 - Evidence-based Treatment for Patients with Opioid Use Disorder" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 21 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "license.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "license.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "License and Legal Terms" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 22 ;
+         fhir:Element.extension [
+           fhir:index 0 ;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ] ;
+           fhir:Extension.valueUrl [ fhir:value "changes.html" ]
+         ] ;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "changes.html" ] ;
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Changes" ] ;
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ]
+     ] ;
+     fhir:ImplementationGuide.definition.parameter [
+       fhir:index 0 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/pagecontent" ]
+     ], [
+       fhir:index 1 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/extensions" ]
+     ], [
+       fhir:index 2 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources/activitydefinition" ]
+     ], [
+       fhir:index 3 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources/device" ]
+     ], [
+       fhir:index 4 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources/library" ]
+     ], [
+       fhir:index 5 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources/plandefinition" ]
+     ], [
+       fhir:index 6 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/vocabulary/codesystem" ]
+     ], [
+       fhir:index 7 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/vocabulary/valueset" ]
+     ], [
+       fhir:index 8 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources/parameters" ]
+     ], [
+       fhir:index 9 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/capabilities" ]
+     ], [
+       fhir:index 10 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/examples" ]
+     ], [
+       fhir:index 11 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/models" ]
+     ], [
+       fhir:index 12 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/operations" ]
+     ], [
+       fhir:index 13 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/profiles" ]
+     ], [
+       fhir:index 14 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources" ]
+     ], [
+       fhir:index 15 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/vocabulary" ]
+     ], [
+       fhir:index 16 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/testing" ]
+     ], [
+       fhir:index 17 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/history" ]
+     ], [
+       fhir:index 18 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "fsh-generated/resources" ]
+     ], [
+       fhir:index 19 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template/config" ]
+     ], [
+       fhir:index 20 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/images" ]
+     ], [
+       fhir:index 21 ;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-tx-cache" ] ;
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input-cache/txcache" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/cdc/opioid-cds/ImplementationGuide/fhir.cdc.opioid-cds.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

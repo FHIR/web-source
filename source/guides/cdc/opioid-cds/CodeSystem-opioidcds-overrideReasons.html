@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>CDC Opioid Override Reasons - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0</title>
+    <title>CDC Opioid Override Reasons - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -42,8 +42,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"23.114"}
-    h3,h4,h5,h6{--heading-prefix:"23.114"}</style>
+    <style type="text/css">h2{--heading-prefix:"24.114"}
+    h3,h4,h5,h6{--heading-prefix:"24.114"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <div id="hl7-nav">
@@ -59,7 +59,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">2022.1.0 - Release 2022.1
+            <span style="display:inline-block;">2022.1.1 - Release 2022.1
 
 
             </span>
@@ -91,6 +91,7 @@
   <li><a href="examples.html">Examples</a></li>
   <li><a href="documentation.html">Documentation</a></li>
   <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Changes</a></li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
       </b>
@@ -137,7 +138,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">This page is part of the 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide (v2022.1.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://fhir.org/guides/cdc/opioid-cds/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">This page is part of the 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide (v2022.1.1: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://fhir.org/guides/cdc/opioid-cds/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -190,7 +191,7 @@
       <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-overrideReasons<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-overrideReasons"/></span>
       </td>
       <td><i>Version</i>:
-      <span class="copy-text">2022.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-overrideReasons|2022.1.0"/></span>
+      <span class="copy-text">2022.1.1<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-overrideReasons|2022.1.1"/></span>
       </td>
     </tr>
 
@@ -206,7 +207,7 @@
         
           Active
           
-            as of 2026-03-18
+            as of 2026-08-23
           
         
       </td>
@@ -214,6 +215,12 @@
 
 
       <td><i>Computable Name</i>: <span style="font-family: monospace;">CDC_Opioid_Override_Reasons</span></td>
+    </tr>
+
+    <tr>
+      <td colspan="5">
+        <i>Other Identifiers:</i> OID:2.16.840.1.113883.4.642.40.65.16.2
+      </td>
     </tr>
 
 
@@ -293,7 +300,28 @@
 <td>The suggestion provided by the service has been declined</td></tr>
 <tr><td style="white-space:nowrap">decline-suggestion-with-comment<a name="opioidcds-overrideReasons-decline-suggestion-with-comment"> </a></td>
 <td>Decline Suggestion with Comment</td>
-<td>The suggestion provided by the service has been declined. Reasoning and/or justification supplied in an additional comment</td></tr></table></div>
+<td>The suggestion provided by the service has been declined. Reasoning and/or justification supplied in an additional comment</td></tr>
+<tr><td style="white-space:nowrap">UToxAccepted<a name="opioidcds-overrideReasons-UToxAccepted"> </a></td>
+<td>Action Taken</td>
+<td>Action taken on the Recommendation 10 urine toxicology screening recommendation (e.g., toxicology screen was ordered).</td></tr>
+<tr><td style="white-space:nowrap">UToxNA<a name="opioidcds-overrideReasons-UToxNA"> </a></td>
+<td>Alert not appropriate</td>
+<td>The Recommendation 10 urine toxicology screening recommendation is not appropriate for the current patient or context.</td></tr>
+<tr><td style="white-space:nowrap">UToxPDeclined<a name="opioidcds-overrideReasons-UToxPDeclined"> </a></td>
+<td>Action not taken</td>
+<td>Action on the Recommendation 10 urine toxicology screening recommendation was not taken (e.g., patient declined or other reason).</td></tr>
+<tr><td style="white-space:nowrap">UToxWrongProvider<a name="opioidcds-overrideReasons-UToxWrongProvider"> </a></td>
+<td>Wrong clinician</td>
+<td>The Recommendation 10 urine toxicology screening recommendation is not appropriate for this clinician's scope of practice.</td></tr>
+<tr><td style="white-space:nowrap">UnExptResultAccepted<a name="opioidcds-overrideReasons-UnExptResultAccepted"> </a></td>
+<td>Action Taken</td>
+<td>Action taken in response to the unexpected toxicology results alert from Recommendation 10 (e.g., will repeat urine drug screening more frequently or will assess for substance use disorder).</td></tr>
+<tr><td style="white-space:nowrap">UnExptResultNA<a name="opioidcds-overrideReasons-UnExptResultNA"> </a></td>
+<td>Alert not appropriate</td>
+<td>The Recommendation 10 unexpected toxicology results alert is not appropriate for the current patient or context.</td></tr>
+<tr><td style="white-space:nowrap">UnExptResultWrongProvider<a name="opioidcds-overrideReasons-UnExptResultWrongProvider"> </a></td>
+<td>Wrong clinician</td>
+<td>The Recommendation 10 unexpected toxicology results alert is not appropriate for this clinician's scope of practice.</td></tr></table></div>
 
   
 
@@ -342,12 +370,12 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.securityrisksolutions.com">CDC / Security Risk Solutions, Inc. (SRS)</a>.  Package fhir.cdc.opioid-cds#2022.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 18, 2026 16:23+1100">2026-03-18</span>
+          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.securityrisksolutions.com">CDC / Security Risk Solutions, Inc. (SRS)</a>.  Package fhir.cdc.opioid-cds#2022.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Aug 23, 2026 19:52+1000">2026-08-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
-                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/cqframework/opioid-cds-r4/issues/new">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/cqframework/opioid-cds-r4/issues">Issues</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/security-rs/opioid-cds-r4/issues/new">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/security-rs/opioid-cds-r4/issues">Issues</a>
                 
 | <a style="color: #81BEF7" target="_blank" href="http://fhir.org/guides/cdc/opioid-cds/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->

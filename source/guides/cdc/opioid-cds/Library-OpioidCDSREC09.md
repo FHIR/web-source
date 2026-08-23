@@ -1,4 +1,4 @@
-# OpioidCDSREC09Library - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# OpioidCDSREC09Library - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -9,27 +9,11 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC09 | *Version*:2022.1.0 |
-| Active as of 2026-03-18 | *Computable Name*:OpioidCDSREC09 |
+| Active as of 2026-08-23 | *Computable Name*:OpioidCDSREC09 |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.21 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
-* * **Content: **application/elm+json: ````Encoded data (108328 characters)````: **Url: **
-  * ?: [Library - Recommendation #9 - Consider Patient's History of Controlled Substance Prescriptions](Library-OpioidCDSREC09.md)
-* * **Content: **application/elm+json: ````Encoded data (108328 characters)````: **Version: **
-  * ?: 2022.1.0
-* * **Content: **application/elm+json: ````Encoded data (108328 characters)````: **Name: **
-  * ?: OpioidCDSREC09
-* * **Content: **application/elm+json: ````Encoded data (108328 characters)````: **Title: **
-  * ?: Library - Recommendation #9 - Consider Patient's History of Controlled Substance Prescriptions
-* * **Content: **application/elm+json: ````Encoded data (108328 characters)````: **Status: **
-  * ?: active
-* * **Content: **application/elm+json: ````Encoded data (108328 characters)````: **Experimental: **
-  * ?: false
-* * **Content: **application/elm+json: ````Encoded data (108328 characters)````: **Date: **
-  * ?: 2026-03-18 16:23:26+1100
-* * **Content: **application/elm+json: ````Encoded data (108328 characters)````: **Publisher: **
-  * ?: CDC / Security Risk Solutions, Inc. (SRS)
-* * **Content: **application/elm+json: ````Encoded data (108328 characters)````: **Copyright: **
-  * ?: Centers for Disease Control and Prevention (CDC)
+**Exception parsing generated Narrative (see /tmp/liquid-02e29017-5490-4885-95c5-bd459d799b82.html): Malformed XHTML: Found "</code>" expecting "</MedicationRequest>" at line 339 column 8**
 
 
 
@@ -116,6 +100,10 @@
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC09",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.21"
+  }],
   "version" : "2022.1.0",
   "name" : "OpioidCDSREC09",
   "title" : "Library - Recommendation #9 - Consider Patient's History of Controlled Substance Prescriptions",
@@ -127,7 +115,7 @@
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{

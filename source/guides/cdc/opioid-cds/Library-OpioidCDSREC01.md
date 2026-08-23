@@ -1,4 +1,4 @@
-# OpioidCDSREC01Library - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# OpioidCDSREC01Library - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -9,27 +9,11 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC01 | *Version*:2022.1.0 |
-| Active as of 2026-03-18 | *Computable Name*:OpioidCDSREC01 |
+| Active as of 2026-08-23 | *Computable Name*:OpioidCDSREC01 |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.14 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
-* * **Content: **application/elm+json: ````Encoded data (29760 characters)````: **Url: **
-  * ?: [Library - Recommendation #1 - Nonpharmacologic and Nonopioid Pharmacologic Therapy Consideration](Library-OpioidCDSREC01.md)
-* * **Content: **application/elm+json: ````Encoded data (29760 characters)````: **Version: **
-  * ?: 2022.1.0
-* * **Content: **application/elm+json: ````Encoded data (29760 characters)````: **Name: **
-  * ?: OpioidCDSREC01
-* * **Content: **application/elm+json: ````Encoded data (29760 characters)````: **Title: **
-  * ?: Library - Recommendation #1 - Nonpharmacologic and Nonopioid Pharmacologic Therapy Consideration
-* * **Content: **application/elm+json: ````Encoded data (29760 characters)````: **Status: **
-  * ?: active
-* * **Content: **application/elm+json: ````Encoded data (29760 characters)````: **Experimental: **
-  * ?: false
-* * **Content: **application/elm+json: ````Encoded data (29760 characters)````: **Date: **
-  * ?: 2026-03-18 16:23:26+1100
-* * **Content: **application/elm+json: ````Encoded data (29760 characters)````: **Publisher: **
-  * ?: CDC / Security Risk Solutions, Inc. (SRS)
-* * **Content: **application/elm+json: ````Encoded data (29760 characters)````: **Copyright: **
-  * ?: Centers for Disease Control and Prevention (CDC)
+**Exception parsing generated Narrative (see /tmp/liquid-7a6e99ee-6799-4720-a9fe-4018a1e060e3.html): Malformed XHTML: Found "</code>" expecting "</FHIR.MedicationRequest>" at line 259 column 8**
 
 
 
@@ -110,6 +94,10 @@
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC01",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.14"
+  }],
   "version" : "2022.1.0",
   "name" : "OpioidCDSREC01",
   "title" : "Library - Recommendation #1 - Nonpharmacologic and Nonopioid Pharmacologic Therapy Consideration",
@@ -121,7 +109,7 @@
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{

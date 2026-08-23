@@ -6,7 +6,7 @@
   },
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet medicationrequest-status-active</b></p><a name=\"medicationrequest-status-active\"> </a><a name=\"hcmedicationrequest-status-active\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-executablevalueset.html\">CPGExecutableValueSet</a></p></div><p>This value set expansion contains 1 concepts.</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a name=\"medicationrequest-status-active-http://hl7.org/fhir/CodeSystem/medicationrequest-status-active\"> </a><code>http://hl7.org/fhir/CodeSystem/medicationrequest-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-medicationrequest-status.html#medicationrequest-status-active\">active</a></td><td>Active</td><td>The prescription is 'actionable', but not all actions that are implied by it have occurred yet.</td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet medicationrequest-status-active</b></p><a name=\"medicationrequest-status-active\"> </a><a name=\"hcmedicationrequest-status-active\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-executablevalueset.html\">CPGExecutableValueSet</a></p></div><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"http://hl7.org/fhir/R4/codesystem-medicationrequest-status.html\">codesystem Medicationrequest  status v4.0.1 (CodeSystem)</a></p><p>This value set contains 1 concepts</p><table class=\"codes\"><tr><td><b>System</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a name=\"medicationrequest-status-active-http://hl7.org/fhir/CodeSystem/medicationrequest-status-active\"> </a><code>http://hl7.org/fhir/CodeSystem/medicationrequest-status</code></td><td style=\"white-space:nowrap\">\u00a0\u00a0<a href=\"http://hl7.org/fhir/R4/codesystem-medicationrequest-status.html#medicationrequest-status-active\">active</a></td><td>Active</td><td>The prescription is 'actionable', but not all actions that are implied by it have occurred yet.</td></tr></table></div>"
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
@@ -21,12 +21,16 @@
     "valueString" : "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/ValueSet/medicationrequest-status-active",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.113883.4.642.40.65.48.68"
+  }],
   "version" : "0.0.1",
   "name" : "Valueset_medicationrequest_status_active",
   "title" : "ValueSet - Medication Request Status Active",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-06-22T06:59:00-06:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{
@@ -36,8 +40,27 @@
   }],
   "description" : "The prescription is 'actionable', but not all actions that are implied by it have occurred yet.",
   "copyright" : "Centers for Disease Control and Prevention (CDC)",
+  "compose" : {
+    "include" : [{
+      "system" : "http://hl7.org/fhir/CodeSystem/medicationrequest-status",
+      "concept" : [{
+        "code" : "active",
+        "display" : "Active"
+      }]
+    }]
+  },
   "expansion" : {
-    "timestamp" : "2021-05-18T13:47:55-07:00",
+    "identifier" : "urn:uuid:88276e78-6786-46cc-8060-032b59b26af6",
+    "timestamp" : "2026-06-22T12:59:00.579Z",
+    "total" : 1,
+    "parameter" : [{
+      "name" : "warning-draft",
+      "valueUri" : "http://hl7.org/fhir/CodeSystem/medicationrequest-status|4.0.1"
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/CodeSystem/medicationrequest-status|4.0.1"
+    }],
     "contains" : [{
       "system" : "http://hl7.org/fhir/CodeSystem/medicationrequest-status",
       "code" : "active",

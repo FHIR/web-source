@@ -1,4 +1,4 @@
-# OpioidCDSREC12PatientViewLibrary - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# OpioidCDSREC12PatientViewLibrary - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -9,27 +9,11 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC12PatientView | *Version*:2022.1.0 |
-| Active as of 2026-03-18 | *Computable Name*:OpioidCDSREC12PatientView |
+| Active as of 2026-08-23 | *Computable Name*:OpioidCDSREC12PatientView |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.27 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
-* * **Content: **application/elm+json: ````Encoded data (78864 characters)````: **Url: **
-  * ?: [Library - Recommendation #12 (patient-view) - Evidence-based Treatment for Patients with Opioid Use Disorder](Library-OpioidCDSREC12PatientView.md)
-* * **Content: **application/elm+json: ````Encoded data (78864 characters)````: **Version: **
-  * ?: 2022.1.0
-* * **Content: **application/elm+json: ````Encoded data (78864 characters)````: **Name: **
-  * ?: OpioidCDSREC12PatientView
-* * **Content: **application/elm+json: ````Encoded data (78864 characters)````: **Title: **
-  * ?: Library - Recommendation #12 (patient-view) - Evidence-based Treatment for Patients with Opioid Use Disorder
-* * **Content: **application/elm+json: ````Encoded data (78864 characters)````: **Status: **
-  * ?: active
-* * **Content: **application/elm+json: ````Encoded data (78864 characters)````: **Experimental: **
-  * ?: false
-* * **Content: **application/elm+json: ````Encoded data (78864 characters)````: **Date: **
-  * ?: 2026-03-18 16:23:26+1100
-* * **Content: **application/elm+json: ````Encoded data (78864 characters)````: **Publisher: **
-  * ?: CDC / Security Risk Solutions, Inc. (SRS)
-* * **Content: **application/elm+json: ````Encoded data (78864 characters)````: **Copyright: **
-  * ?: Centers for Disease Control and Prevention (CDC)
+**Exception parsing generated Narrative (see /tmp/liquid-e1af7ed7-dbba-4974-9e3a-456f97e95005.html): Malformed XHTML: Found "</code>" expecting "</DateTime>" at line 324 column 8**
 
 
 
@@ -116,6 +100,10 @@
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC12PatientView",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.27"
+  }],
   "version" : "2022.1.0",
   "name" : "OpioidCDSREC12PatientView",
   "title" : "Library - Recommendation #12 (patient-view) - Evidence-based Treatment for Patients with Opioid Use Disorder",
@@ -127,7 +115,7 @@
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{

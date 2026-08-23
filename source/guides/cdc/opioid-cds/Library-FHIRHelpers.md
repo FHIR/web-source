@@ -1,4 +1,4 @@
-# FHIRHelpers - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# FHIRHelpers - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -9,25 +9,11 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/FHIRHelpers | *Version*:4.0.1 |
-| Active as of 2026-03-18 | *Computable Name*:FHIRHelpers |
+| Active as of 2026-08-23 | *Computable Name*:FHIRHelpers |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.4 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
-* * **Content: **application/elm+json: ````Encoded data (926864 characters)````: **Url: **
-  * ?: [FHIR Helpers](Library-FHIRHelpers.md)
-* * **Content: **application/elm+json: ````Encoded data (926864 characters)````: **Version: **
-  * ?: 4.0.1
-* * **Content: **application/elm+json: ````Encoded data (926864 characters)````: **Name: **
-  * ?: FHIRHelpers
-* * **Content: **application/elm+json: ````Encoded data (926864 characters)````: **Title: **
-  * ?: FHIR Helpers
-* * **Content: **application/elm+json: ````Encoded data (926864 characters)````: **Status: **
-  * ?: active
-* * **Content: **application/elm+json: ````Encoded data (926864 characters)````: **Date: **
-  * ?: 2026-03-18 16:23:26+1100
-* * **Content: **application/elm+json: ````Encoded data (926864 characters)````: **Publisher: **
-  * ?: CDC / Security Risk Solutions, Inc. (SRS)
-* * **Content: **application/elm+json: ````Encoded data (926864 characters)````: **Copyright: **
-  * ?: Centers for Disease Control and Prevention (CDC)
+**Exception parsing generated Narrative (see /tmp/liquid-2f5cea9a-0eba-47ce-943f-03a30b82d647.html): unable to parse character reference ' quantity.unit.value '' (last text = ' ' at line 172 column 142**
 
 
 
@@ -108,6 +94,10 @@
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/FHIRHelpers",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.4"
+  }],
   "version" : "4.0.1",
   "name" : "FHIRHelpers",
   "title" : "FHIR Helpers",
@@ -118,7 +108,7 @@
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{

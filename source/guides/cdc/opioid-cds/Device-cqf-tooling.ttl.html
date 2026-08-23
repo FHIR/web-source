@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>CQFToolingDevice - TTL Representation - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0</title>
+    <title>CQFToolingDevice - TTL Representation - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -44,8 +44,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"23.130"}
-    h3,h4,h5,h6{--heading-prefix:"23.130"}</style>
+    <style type="text/css">h2{--heading-prefix:"24.130"}
+    h3,h4,h5,h6{--heading-prefix:"24.130"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <div id="hl7-nav">
@@ -61,7 +61,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">2022.1.0 - Release 2022.1
+            <span style="display:inline-block;">2022.1.1 - Release 2022.1
 
 
             </span>
@@ -93,6 +93,7 @@
   <li><a href="examples.html">Examples</a></li>
   <li><a href="documentation.html">Documentation</a></li>
   <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Changes</a></li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
       </b>
@@ -137,7 +138,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 9" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">This page is part of the 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide (v2022.1.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://fhir.org/guides/cdc/opioid-cds/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">This page is part of the 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide (v2022.1.1: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://fhir.org/guides/cdc/opioid-cds/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -196,39 +197,48 @@
   <pre class="rdf" data-fhir="generated" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 # - resource -------------------------------------------------------------------
 
- a fhir:Device ;
+&lt;http://hl7.org/fhir/Device/cqf-tooling&gt; a fhir:Device ;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
-  <a href="http://hl7.org/fhir/R4/resource.html#Device.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;cqf-tooling&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/resource.html#Device.meta">fhir:meta</a> [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-softwaresystemdevice&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-softwaresystemdevice&gt;     ] )
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/domainresource.html#Device.text">fhir:text</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Device cqf-tooling&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;cqf-tooling\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hccqf-tooling\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-softwaresystemdevice.html\&quot;&gt;CRMI Software System Device&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;manufacturer&lt;/b&gt;: CQFramework&lt;/p&gt;&lt;h3&gt;DeviceNames&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;cqf-tooling&lt;/td&gt;&lt;td&gt;Manufacturer name&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/software-system-type-codes tooling}\&quot;&gt;Tooling&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;Versions&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;3.8.0&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/device.html#Device.manufacturer">fhir:manufacturer</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;CQFramework&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/device.html#Device.deviceName">fhir:deviceName</a> ( [
-<a href="http://hl7.org/fhir/R4/device.html#Device.deviceName.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;cqf-tooling&quot; ] ;
-<a href="http://hl7.org/fhir/R4/device.html#Device.deviceName.type">fhir:type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;manufacturer-name&quot; ]
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/device.html#Device.type">fhir:type</a> [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:coding</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://terminology.hl7.org/CodeSystem/software-system-type-codes&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://terminology.hl7.org/CodeSystem/software-system-type-codes&gt;       ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;tooling&quot; ]     ] )
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/device.html#Device.version">fhir:version</a> ( [
-<a href="http://hl7.org/fhir/R4/device.html#Device.version.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;3.8.0&quot; ]
-  ] ) . # 
+  <a href="http://hl7.org/fhir/R4/resource.html#Device.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;cqf-tooling&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#Device.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-softwaresystemdevice&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-softwaresystemdevice&gt;
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#Device.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: Device cqf-tooling&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;cqf-tooling\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hccqf-tooling\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;http://hl7.org/fhir/uv/crmi/STU1/StructureDefinition-crmi-softwaresystemdevice.html\&quot;&gt;CRMI Software System Device&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;manufacturer&lt;/b&gt;: CQFramework&lt;/p&gt;&lt;h3&gt;DeviceNames&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;cqf-tooling&lt;/td&gt;&lt;td&gt;Manufacturer name&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: &lt;span title=\&quot;Codes:{http://terminology.hl7.org/CodeSystem/software-system-type-codes tooling}\&quot;&gt;Tooling&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;Versions&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\&quot;display: none\&quot;&gt;*&lt;/td&gt;&lt;td&gt;3.8.0&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/device.html#Device.manufacturer">fhir:Device.manufacturer</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;CQFramework&quot;] ;
+  <a href="http://hl7.org/fhir/R4/device.html#Device.deviceName">fhir:Device.deviceName</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/device.html#Device.deviceName.name">fhir:Device.deviceName.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;cqf-tooling&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/device.html#Device.deviceName.type">fhir:Device.deviceName.type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;manufacturer-name&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/device.html#Device.type">fhir:Device.type</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/software-system-type-codes&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;tooling&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/device.html#Device.version">fhir:Device.version</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/device.html#Device.version.value">fhir:Device.version.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;3.8.0&quot; ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/Device/cqf-tooling.ttl&gt; a owl:Ontology ;
+  owl:imports fhir:fhir.ttl ;
+  owl:versionIRI &lt;http://build.fhir.org/Device/cqf-tooling.ttl&gt; .
 
 </code></pre>
 
@@ -277,12 +287,12 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.securityrisksolutions.com">CDC / Security Risk Solutions, Inc. (SRS)</a>.  Package fhir.cdc.opioid-cds#2022.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 18, 2026 16:23+1100">2026-03-18</span>
+          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.securityrisksolutions.com">CDC / Security Risk Solutions, Inc. (SRS)</a>.  Package fhir.cdc.opioid-cds#2022.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Aug 23, 2026 19:52+1000">2026-08-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
-                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/cqframework/opioid-cds-r4/issues/new">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/cqframework/opioid-cds-r4/issues">Issues</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/security-rs/opioid-cds-r4/issues/new">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/security-rs/opioid-cds-r4/issues">Issues</a>
                 
 | <a style="color: #81BEF7" target="_blank" href="http://fhir.org/guides/cdc/opioid-cds/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->

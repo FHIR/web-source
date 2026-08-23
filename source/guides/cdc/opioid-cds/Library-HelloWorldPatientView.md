@@ -1,4 +1,4 @@
-# HelloWorldPatientView - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# HelloWorldPatientView - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -9,7 +9,8 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/HelloWorldPatientView | *Version*:1.0.0 |
-| Active as of 2026-03-18 | *Computable Name*:HelloWorldPatientView |
+| Active as of 2026-08-23 | *Computable Name*:HelloWorldPatientView |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.6 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
 * * **Content: **application/elm+json: ````Encoded data (12756 characters)````: **Url: **
@@ -21,7 +22,7 @@
 * * **Content: **application/elm+json: ````Encoded data (12756 characters)````: **Status: **
   * ?: active
 * * **Content: **application/elm+json: ````Encoded data (12756 characters)````: **Date: **
-  * ?: 2026-03-18 16:23:26+1100
+  * ?: 2026-08-23 19:52:23+1000
 * * **Content: **application/elm+json: ````Encoded data (12756 characters)````: **Publisher: **
   * ?: CDC / Security Risk Solutions, Inc. (SRS)
 * * **Content: **application/elm+json: ````Encoded data (12756 characters)````: **Copyright: **
@@ -112,6 +113,10 @@
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/HelloWorldPatientView",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.6"
+  }],
   "version" : "1.0.0",
   "name" : "HelloWorldPatientView",
   "status" : "active",
@@ -121,7 +126,7 @@
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{

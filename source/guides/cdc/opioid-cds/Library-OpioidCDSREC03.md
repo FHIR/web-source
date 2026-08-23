@@ -1,4 +1,4 @@
-# OpioidCDSREC03Library - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# OpioidCDSREC03Library - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -9,27 +9,11 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC03 | *Version*:2022.1.0 |
-| Active as of 2026-03-18 | *Computable Name*:OpioidCDSREC03 |
+| Active as of 2026-08-23 | *Computable Name*:OpioidCDSREC03 |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.16 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
-* * **Content: **application/elm+json: ````Encoded data (35080 characters)````: **Url: **
-  * ?: [Library - Recommendation #3 - Opioid Immediate Release Form When Starting Opioid Therapy](Library-OpioidCDSREC03.md)
-* * **Content: **application/elm+json: ````Encoded data (35080 characters)````: **Version: **
-  * ?: 2022.1.0
-* * **Content: **application/elm+json: ````Encoded data (35080 characters)````: **Name: **
-  * ?: OpioidCDSREC03
-* * **Content: **application/elm+json: ````Encoded data (35080 characters)````: **Title: **
-  * ?: Library - Recommendation #3 - Opioid Immediate Release Form When Starting Opioid Therapy
-* * **Content: **application/elm+json: ````Encoded data (35080 characters)````: **Status: **
-  * ?: active
-* * **Content: **application/elm+json: ````Encoded data (35080 characters)````: **Experimental: **
-  * ?: false
-* * **Content: **application/elm+json: ````Encoded data (35080 characters)````: **Date: **
-  * ?: 2026-03-18 16:23:26+1100
-* * **Content: **application/elm+json: ````Encoded data (35080 characters)````: **Publisher: **
-  * ?: CDC / Security Risk Solutions, Inc. (SRS)
-* * **Content: **application/elm+json: ````Encoded data (35080 characters)````: **Copyright: **
-  * ?: Centers for Disease Control and Prevention (CDC)
+**Exception parsing generated Narrative (see /tmp/liquid-3f537d65-af87-4517-b7f4-49f70aa5711d.html): Malformed XHTML: Found "</code>" expecting "</MedicationRequest>" at line 253 column 8**
 
 
 
@@ -116,6 +100,10 @@
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC03",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.16"
+  }],
   "version" : "2022.1.0",
   "name" : "OpioidCDSREC03",
   "title" : "Library - Recommendation #3 - Opioid Immediate Release Form When Starting Opioid Therapy",
@@ -127,7 +115,7 @@
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{

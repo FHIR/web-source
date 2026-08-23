@@ -1,0 +1,44 @@
+{
+  "resourceType" : "Observation",
+  "id" : "example-opioidcds",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation example-opioidcds</b></p><a name=\"example-opioidcds\"> </a><a name=\"hcexample-opioidcds\"> </a><blockquote><p><b>Data Date-Roller Extension</b></p><ul><li>dateLastUpdated: 2023-05-01</li><li>frequency: No display for Duration  (value: 30.0; unit: days; system: http://unitsofmeasure.org; code: d)</li></ul></blockquote><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 3779-6}\">Methamphetamine [Presence] in Urine</span></p><p><b>subject</b>: <a href=\"Patient-example-opioidcds.html\">opioidcds example  Male, DoB: 1983-01-10</a></p><p><b>effective</b>: 2023-05-01</p><p><b>performer</b>: <a href=\"PractitionerRole-oncology-specialist.html\">PractitionerRole: period = 2021-11-24 --&gt; 2023-11-24; specialty = Medical Oncology Physician</a></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation POS}\">Positive</span></p></div>"
+  },
+  "extension" : [{
+    "extension" : [{
+      "url" : "dateLastUpdated",
+      "valueDateTime" : "2023-05-01"
+    },
+    {
+      "url" : "frequency",
+      "valueDuration" : {
+        "value" : 30.0,
+        "unit" : "days",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "d"
+      }
+    }],
+    "url" : "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/dataDateRoller"
+  }],
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "3779-6"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example-opioidcds"
+  },
+  "effectiveDateTime" : "2023-05-01",
+  "performer" : [{
+    "reference" : "PractitionerRole/oncology-specialist"
+  }],
+  "interpretation" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "code" : "POS"
+    }]
+  }]
+}

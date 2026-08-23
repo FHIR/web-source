@@ -1,4 +1,4 @@
-# OpioidCDSREC04And05Library - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# OpioidCDSREC04And05Library - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -9,27 +9,11 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC04And05 | *Version*:2022.1.0 |
-| Active as of 2026-03-18 | *Computable Name*:OpioidCDSREC04And05 |
+| Active as of 2026-08-23 | *Computable Name*:OpioidCDSREC04And05 |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.17 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
-* * **Content: **application/elm+json: ````Encoded data (49484 characters)````: **Url: **
-  * ?: [Library - Recommendations #4 and #5 - Lowest Effective Dose](Library-OpioidCDSREC04And05.md)
-* * **Content: **application/elm+json: ````Encoded data (49484 characters)````: **Version: **
-  * ?: 2022.1.0
-* * **Content: **application/elm+json: ````Encoded data (49484 characters)````: **Name: **
-  * ?: OpioidCDSREC04And05
-* * **Content: **application/elm+json: ````Encoded data (49484 characters)````: **Title: **
-  * ?: Library - Recommendations #4 and #5 - Lowest Effective Dose
-* * **Content: **application/elm+json: ````Encoded data (49484 characters)````: **Status: **
-  * ?: active
-* * **Content: **application/elm+json: ````Encoded data (49484 characters)````: **Experimental: **
-  * ?: false
-* * **Content: **application/elm+json: ````Encoded data (49484 characters)````: **Date: **
-  * ?: 2026-03-18 16:23:26+1100
-* * **Content: **application/elm+json: ````Encoded data (49484 characters)````: **Publisher: **
-  * ?: CDC / Security Risk Solutions, Inc. (SRS)
-* * **Content: **application/elm+json: ````Encoded data (49484 characters)````: **Copyright: **
-  * ?: Centers for Disease Control and Prevention (CDC)
+**Exception parsing generated Narrative (see /tmp/liquid-d09dbc3f-36cf-41f4-898c-ec25243c62be.html): Unable to Parse HTML - node 'MedicationRequest' has unexpected content ' ' (last text = ' context Patient define "Taper Now": "Total MME".value >= 90 define "Consider Tapering": "Total MME".value ' at line 260 column 48**
 
 
 
@@ -116,6 +100,10 @@
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC04And05",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.17"
+  }],
   "version" : "2022.1.0",
   "name" : "OpioidCDSREC04And05",
   "title" : "Library - Recommendations #4 and #5 - Lowest Effective Dose",
@@ -127,7 +115,7 @@
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{

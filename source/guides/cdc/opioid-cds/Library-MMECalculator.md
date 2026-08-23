@@ -1,4 +1,4 @@
-# Morphine Milligram Equivalent (MME) Calculator for FHIR R4 - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# Morphine Milligram Equivalent (MME) Calculator for FHIR R4 - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -10,40 +10,14 @@
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/MMECalculator | *Version*:3.0.0 |
 | Active as of 2021-11-25 | *Computable Name*:MMECalculator |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.7 | |
 | **Usage:**Clinical Focus: Medication requested (situation), Clinical Focus: Chronic pain (finding) | |
 | **Copyright/Legal**: Copyright 2019+ Centers for Disease Control and Prevention (CDC) | |
 
  
 This library contains logic to surface the MME calculation functionality provided by the OMTKLogic library by extracting appropriate information from FHIR R4 MedicationRequest resource. 
 
-* * **Content: **application/elm+json: ````Encoded data (265228 characters)````: **Url: **
-  * ?: [Morphine Milligram Equivalent (MME) Calculator for FHIR R4](Library-MMECalculator.md)
-* * **Content: **application/elm+json: ````Encoded data (265228 characters)````: **Version: **
-  * ?: 3.0.0
-* * **Content: **application/elm+json: ````Encoded data (265228 characters)````: **Name: **
-  * ?: MMECalculator
-* * **Content: **application/elm+json: ````Encoded data (265228 characters)````: **Title: **
-  * ?: Morphine Milligram Equivalent (MME) Calculator for FHIR R4
-* * **Content: **application/elm+json: ````Encoded data (265228 characters)````: **Status: **
-  * ?: active
-* * **Content: **application/elm+json: ````Encoded data (265228 characters)````: **Experimental: **
-  * ?: false
-* * **Content: **application/elm+json: ````Encoded data (265228 characters)````: **Date: **
-  * ?: 2021-11-25 15:15:41+1100
-* * **Content: **application/elm+json: ````Encoded data (265228 characters)````: **Publisher: **
-  * ?: CDC / Security Risk Solutions, Inc. (SRS)
-* * **Content: **application/elm+json: ````Encoded data (265228 characters)````: **Description: **
-  * ?: This library contains logic to surface the MME calculation functionality provided by the OMTKLogic library by extracting appropriate information from FHIR R4 MedicationRequest resource.
-* * **Content: **application/elm+json: ````Encoded data (265228 characters)````: **Knowledge Capability: **
-  * ?: shareable computable publishable executable
-* * **Content: **application/elm+json: ````Encoded data (265228 characters)````: **Knowledge Representation Level: **
-  * ?: structured
-* * **Content: **application/elm+json: ````Encoded data (265228 characters)````: **Usage: **
-  * ?: NOTE: Do not use the calculated dose in MMEs to determine dosage for converting one opioid to another—the new opioid should be lower to avoid unintentional overdose caused by incomplete cross-tolerance and individual differences in opioid pharmacokinetics. Consult the medication label.
-* * **Content: **application/elm+json: ````Encoded data (265228 characters)````: **Copyright: **
-  * ?: Copyright 2019+ Centers for Disease Control and Prevention (CDC)
-* * **Content: **application/elm+json: ````Encoded data (265228 characters)````: **Last Review Date: **
-  * ?: 2020-09-26
+**Exception parsing generated Narrative (see /tmp/liquid-695e05a5-690a-465e-bee0-3fb6cbcec475.html): unable to parse character reference ' quantity.code.value) end /* Extracts the relevant information for prescription calculation from a list of FHIR MedicationRequest resources. This assumes a MedicationRequest that conforms to the MMEMedicationRequest profile, specifically: * 1 and only 1 dosageInstruction * 1 and only 1 doseAndRate * 1 timing with 1 repeat * frequency, frequencyMax, defaulting to 1 * period, periodUnit, defaulting to 1 '' (last text = ' ' at line 322 column 40**
 
 
 
@@ -150,6 +124,10 @@ This library contains logic to surface the MME calculation functionality provide
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/MMECalculator",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.7"
+  }],
   "version" : "3.0.0",
   "name" : "MMECalculator",
   "title" : "Morphine Milligram Equivalent (MME) Calculator for FHIR R4",

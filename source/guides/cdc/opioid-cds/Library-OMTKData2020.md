@@ -1,4 +1,4 @@
-# OpioidData2020 - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# OpioidData2020 - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -9,27 +9,11 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/OMTKData2020 | *Version*:2022.1.0 |
-| Active as of 2026-03-18 | *Computable Name*:OMTKData2020 |
+| Active as of 2026-08-23 | *Computable Name*:OMTKData2020 |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.9 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
-* * **Content: **application/elm+json: ````Encoded data (11341836 characters)````: **Url: **
-  * ?: [Library - OMTK Data (2020)](Library-OMTKData2020.md)
-* * **Content: **application/elm+json: ````Encoded data (11341836 characters)````: **Version: **
-  * ?: 2022.1.0
-* * **Content: **application/elm+json: ````Encoded data (11341836 characters)````: **Name: **
-  * ?: OMTKData2020
-* * **Content: **application/elm+json: ````Encoded data (11341836 characters)````: **Title: **
-  * ?: Library - OMTK Data (2020)
-* * **Content: **application/elm+json: ````Encoded data (11341836 characters)````: **Status: **
-  * ?: active
-* * **Content: **application/elm+json: ````Encoded data (11341836 characters)````: **Experimental: **
-  * ?: false
-* * **Content: **application/elm+json: ````Encoded data (11341836 characters)````: **Date: **
-  * ?: 2026-03-18 16:23:26+1100
-* * **Content: **application/elm+json: ````Encoded data (11341836 characters)````: **Publisher: **
-  * ?: CDC / Security Risk Solutions, Inc. (SRS)
-* * **Content: **application/elm+json: ````Encoded data (11341836 characters)````: **Copyright: **
-  * ?: Centers for Disease Control and Prevention (CDC)
+**Exception parsing generated Narrative (see /tmp/liquid-b3f64051-705c-41ea-a326-8c6c1f5bf4bf.html): Unable to Parse HTML - node 'DateTime' has unexpected content '{' (last text = '): case when start of period is null or end of period is null then null when start of period same year as end of period then case when month from start of period = month from end of period then (DaysInMonth(year from start of period, month from start of period)) D where D same day or after start of period and D same day or before end of period else (DaysInYear(year from start of period)) D where D same day or after start of period and D same day or before end of period end when difference in years between start of period and end of period = 1 then ( (DaysInYear(year from start of period)) D where D same day or after start of period and D same day or before end of period ) union ( (DaysInYear(year from end of period)) D where D same day or after start of period and D same day or before end of period ) else null // Should maybe throw, can't calculate arbitrary years, need the expand operator (1.3) end /* DrugIngredients: List' at line 226 column 8**
 
 
 
@@ -116,6 +100,10 @@
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/OMTKData2020",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.9"
+  }],
   "version" : "2022.1.0",
   "name" : "OMTKData2020",
   "title" : "Library - OMTK Data (2020)",
@@ -127,7 +115,7 @@
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{

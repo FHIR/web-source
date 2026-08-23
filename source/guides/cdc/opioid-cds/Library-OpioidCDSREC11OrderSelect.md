@@ -1,4 +1,4 @@
-# OpioidCDSREC11OrderSelectLibrary - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# OpioidCDSREC11OrderSelectLibrary - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -9,27 +9,11 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC11OrderSelect | *Version*:2022.1.0 |
-| Active as of 2026-03-18 | *Computable Name*:OpioidCDSREC11OrderSelect |
+| Active as of 2026-08-23 | *Computable Name*:OpioidCDSREC11OrderSelect |
+| *Other Identifiers:*OID:2.16.840.1.113883.4.642.40.65.28.30 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
-* * **Content: **application/elm+json: ````Encoded data (36720 characters)````: **Url: **
-  * ?: [Library - Recommendation #11 - Concurrent Use of Opioids and Benzodiazepines](Library-OpioidCDSREC11OrderSelect.md)
-* * **Content: **application/elm+json: ````Encoded data (36720 characters)````: **Version: **
-  * ?: 2022.1.0
-* * **Content: **application/elm+json: ````Encoded data (36720 characters)````: **Name: **
-  * ?: OpioidCDSREC11OrderSelect
-* * **Content: **application/elm+json: ````Encoded data (36720 characters)````: **Title: **
-  * ?: Library - Recommendation #11 - Concurrent Use of Opioids and Benzodiazepines
-* * **Content: **application/elm+json: ````Encoded data (36720 characters)````: **Status: **
-  * ?: active
-* * **Content: **application/elm+json: ````Encoded data (36720 characters)````: **Experimental: **
-  * ?: false
-* * **Content: **application/elm+json: ````Encoded data (36720 characters)````: **Date: **
-  * ?: 2026-03-18 16:23:26+1100
-* * **Content: **application/elm+json: ````Encoded data (36720 characters)````: **Publisher: **
-  * ?: CDC / Security Risk Solutions, Inc. (SRS)
-* * **Content: **application/elm+json: ````Encoded data (36720 characters)````: **Copyright: **
-  * ?: Centers for Disease Control and Prevention (CDC)
+**Exception parsing generated Narrative (see /tmp/liquid-597a3a2c-99bc-4400-8df1-690fe7ac4e84.html): Malformed XHTML: Found "</code>" expecting "</MedicationRequest>" at line 270 column 8**
 
 
 
@@ -116,6 +100,10 @@
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC11OrderSelect",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.113883.4.642.40.65.28.30"
+  }],
   "version" : "2022.1.0",
   "name" : "OpioidCDSREC11OrderSelect",
   "title" : "Library - Recommendation #11 - Concurrent Use of Opioids and Benzodiazepines",
@@ -127,7 +115,7 @@
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{

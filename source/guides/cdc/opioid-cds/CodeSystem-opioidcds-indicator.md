@@ -1,4 +1,4 @@
-# CodeSystem - CDC 2022 Opioid Indicator - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# CodeSystem - CDC 2022 Opioid Indicator - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -8,8 +8,9 @@
 
 | | |
 | :--- | :--- |
-| *Official URL*:http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-indicator | *Version*:2022.1.0 |
-| Active as of 2026-03-18 | *Computable Name*:CDC_Opioid_Indicator |
+| *Official URL*:http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-indicator | *Version*:2022.1.1 |
+| Active as of 2026-08-23 | *Computable Name*:CDC_Opioid_Indicator |
+| *Other Identifiers:*OID:2.16.840.1.114222.16.1 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
  
@@ -28,12 +29,16 @@ Indicates the urgency/importance of the recommended action
   "resourceType" : "CodeSystem",
   "id" : "opioidcds-indicator",
   "url" : "http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-indicator",
-  "version" : "2022.1.0",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.16.1"
+  }],
+  "version" : "2022.1.1",
   "name" : "CDC_Opioid_Indicator",
   "title" : "CodeSystem - CDC 2022 Opioid Indicator",
   "status" : "active",
   "experimental" : false,
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{

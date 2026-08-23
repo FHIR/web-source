@@ -1,4 +1,4 @@
-# CDCMMEClinicalConversionFactors - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# CDCMMEClinicalConversionFactors - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -9,23 +9,11 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/CDCMMEClinicalConversionFactors | *Version*:3.0.0 |
-| Active as of 2026-03-18 | *Computable Name*:CDCMMEClinicalConversionFactors |
+| Active as of 2026-08-23 | *Computable Name*:CDCMMEClinicalConversionFactors |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.1 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
-* * **Content: **application/elm+json: ````Encoded data (191752 characters)````: **Url: **
-  * ?: [CDCMMEClinicalConversionFactors](Library-CDCMMEClinicalConversionFactors.md)
-* * **Content: **application/elm+json: ````Encoded data (191752 characters)````: **Version: **
-  * ?: 3.0.0
-* * **Content: **application/elm+json: ````Encoded data (191752 characters)````: **Name: **
-  * ?: CDCMMEClinicalConversionFactors
-* * **Content: **application/elm+json: ````Encoded data (191752 characters)````: **Status: **
-  * ?: active
-* * **Content: **application/elm+json: ````Encoded data (191752 characters)````: **Date: **
-  * ?: 2026-03-18 16:23:26+1100
-* * **Content: **application/elm+json: ````Encoded data (191752 characters)````: **Publisher: **
-  * ?: CDC / Security Risk Solutions, Inc. (SRS)
-* * **Content: **application/elm+json: ````Encoded data (191752 characters)````: **Copyright: **
-  * ?: Centers for Disease Control and Prevention (CDC)
+**Exception parsing generated Narrative (see /tmp/liquid-0d03d3ab-4aa8-43ee-8998-478de3b9a805.html): Unable to read attribute on <FHIR.CodeSystem.> at line 155 column 48**
 
 
 
@@ -106,6 +94,10 @@
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/CDCMMEClinicalConversionFactors",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.1"
+  }],
   "version" : "3.0.0",
   "name" : "CDCMMEClinicalConversionFactors",
   "status" : "active",
@@ -115,7 +107,7 @@
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1" localId="0">
+   <annotation translatorVersion="3.25.0" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="Overloads" xsi:type="a:CqlToElmInfo"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="298">
+         <a:s>library OpioidCDSCommonConfig version '2022.1.0'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="OpioidCDSCommonConfig" system="http://fhir.org/guides/cdc/opioid-cds" version="2022.1.0"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localId="1" localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+   </usings>
+   <statements>
+      <def localId="208" locator="4:1-5:6" name="Age Less than 18 Years Is Enabled" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="208">
+               <a:s r="209">// CDC 2022 General Inclusion Criteria
+define &quot;Age Less than 18 Years Is Enabled&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="209" locator="5:3-5:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="212" locator="8:1-9:6" name="End-Stage Disease Criteria Enabled" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="212">
+               <a:s r="213">// CDC 2022 General Inclusion Criteria
+define &quot;End-Stage Disease Criteria Enabled&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="213" locator="9:3-9:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="216" locator="12:1-13:6" name="Sickle Cell Check Enabled" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="216">
+               <a:s r="217">// Sickle Cell
+define &quot;Sickle Cell Check Enabled&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="217" locator="13:3-13:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="220" locator="15:1-16:6" name="Sickle Cell Assumed Active" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="220">
+               <a:s r="221">define &quot;Sickle Cell Assumed Active&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="221" locator="16:3-16:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="224" locator="19:1-20:6" name="Active Cancer Treatment Encounters Condition Is Enabled" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="224">
+               <a:s r="225">// Active Cancer Treatment
+define &quot;Active Cancer Treatment Encounters Condition Is Enabled&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="225" locator="20:3-20:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="228" locator="23:1-24:6" name="Opioid Naive Prescription Condition Is Enabled" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="228">
+               <a:s r="229">// Opioid Naive
+define &quot;Opioid Naive Prescription Condition Is Enabled&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="229" locator="24:3-24:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="232" locator="27:1-28:6" name="Opioid Naive Report Condition Is Enabled" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="232">
+               <a:s r="233">// Opioid Naive
+define &quot;Opioid Naive Report Condition Is Enabled&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="233" locator="28:3-28:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="236" locator="31:1-32:6" name="Opioid Naive Dispense Condition Is Enabled" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="236">
+               <a:s r="237">// Opioid Naive
+define &quot;Opioid Naive Dispense Condition Is Enabled&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="237" locator="32:3-32:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="240" locator="35:1-36:7" name="Hospice Findings Exclusion Enabled" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="240">
+               <a:s r="241">// OpioidCDSCommon
+define &quot;Hospice Findings Exclusion Enabled&quot;:
+  false</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="241" locator="36:3-36:7" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+      </def>
+      <def localId="244" locator="39:1-40:6" name="Can the implementing EHR support queries for past medications by date range?" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="244">
+               <a:s r="245">// Subroutine 2 - Past Medications
+define &quot;Can the implementing EHR support queries for past medications by date range?&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="245" locator="40:3-40:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="248" locator="43:1-44:6" name="Opioid Treatment Plan Verification Enabled" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="248">
+               <a:s r="249">// Recommendation 2
+define &quot;Opioid Treatment Plan Verification Enabled&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="249" locator="44:3-44:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="252" locator="47:1-48:6" name="Opioid Harms &amp; Risks Discussion in Past 90 Days Criteria Enabled" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="252">
+               <a:s r="253">// Recommendation 3
+define &quot;Opioid Harms &amp; Risks Discussion in Past 90 Days Criteria Enabled&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="253" locator="48:3-48:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="256" locator="51:1-52:6" name="Order is to Treat Acute Pain Enabled" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="256">
+               <a:s r="257">// Recommendation 6
+define &quot;Order is to Treat Acute Pain Enabled&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="257" locator="52:3-52:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="260" locator="55:1-56:6" name="Evidence of Naloxone Enabled" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="260">
+               <a:s r="261">// Recommendation 8
+define &quot;Evidence of Naloxone Enabled&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="261" locator="56:3-56:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="264" locator="59:1-60:6" name="PDMP Data Not Reviewed in Past 90 Days Criteria Enabled" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="264">
+               <a:s r="265">// Recommendation 9
+define &quot;PDMP Data Not Reviewed in Past 90 Days Criteria Enabled&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="265" locator="60:3-60:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="268" locator="63:1-64:6" name="Opiate Urine Screening Check Enabled" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="268">
+               <a:s r="269">// Recommendation 10
+define &quot;Opiate Urine Screening Check Enabled&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="269" locator="64:3-64:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+      <def localId="272" locator="66:1-67:7" name="Cannabinoid Urine Screening Check Enabled" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="272">
+               <a:s r="273">define &quot;Cannabinoid Urine Screening Check Enabled&quot;:
+  false</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="273" locator="67:3-67:7" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+      </def>
+      <def localId="276" locator="69:1-70:7" name="Use Alternative UDS Lookback Period" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="276">
+               <a:s r="277">define &quot;Use Alternative UDS Lookback Period&quot;:
+  false</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="277" locator="70:3-70:7" valueType="t:Boolean" value="false" xsi:type="Literal"/>
+      </def>
+      <def localId="280" locator="72:1-73:48" name="Alternative UDS Lookback Period" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="280">
+               <a:s>define &quot;Alternative UDS Lookback Period&quot;:
+  </a:s>
+               <a:s r="295">
+                  <a:s>Interval[</a:s>
+                  <a:s r="281">
+                     <a:s r="282">
+                        <a:s r="285">
+                           <a:s>Today()</a:s>
+                        </a:s>
+                        <a:s> - </a:s>
+                        <a:s r="286">
+                           <a:s>6 months</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s> - </a:s>
+                     <a:s r="289">
+                        <a:s>1 days</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>, </a:s>
+                  <a:s r="294">
+                     <a:s>Today()</a:s>
+                  </a:s>
+                  <a:s>]</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="295" locator="73:3-73:48" lowClosed="true" highClosed="true" xsi:type="Interval">
+            <low localId="281" locator="73:12-73:38" xsi:type="Subtract">
+               <signature localId="290" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+               <signature localId="291" name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+               <operand localId="282" locator="73:12-73:29" xsi:type="Subtract">
+                  <signature localId="287" name="t:Date" xsi:type="NamedTypeSpecifier"/>
+                  <signature localId="288" name="t:Quantity" xsi:type="NamedTypeSpecifier"/>
+                  <operand localId="285" locator="73:12-73:18" xsi:type="Today"/>
+                  <operand localId="286" locator="73:22-73:29" value="6" unit="months" xsi:type="Quantity"/>
+               </operand>
+               <operand localId="289" locator="73:33-73:38" value="1" unit="days" xsi:type="Quantity"/>
+            </low>
+            <high localId="294" locator="73:41-73:47" xsi:type="Today"/>
+         </expression>
+      </def>
+      <def localId="298" locator="76:1-77:6" name="Evidence Based Treatment Criteria For Opioid Use Disorder" context="Unfiltered" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="298">
+               <a:s r="299">// Recommendation 12
+define &quot;Evidence Based Treatment Criteria For Opioid Use Disorder&quot;:
+  true</a:s>
+            </a:s>
+         </annotation>
+         <expression localId="299" locator="77:3-77:6" valueType="t:Boolean" value="true" xsi:type="Literal"/>
+      </def>
+   </statements>
+</library>

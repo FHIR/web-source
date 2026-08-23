@@ -1,4 +1,4 @@
-# OpioidCDSREC10CommonLibrary - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0
+# OpioidCDSREC10CommonLibrary - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1
 
 * [**Table of Contents**](toc.md)
 * [**Artifacts Summary**](artifacts.md)
@@ -9,23 +9,11 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC10Common | *Version*:2022.1.0 |
-| Active as of 2026-03-18 | *Computable Name*:OpioidCDSREC10Common |
+| Active as of 2026-08-23 | *Computable Name*:OpioidCDSREC10Common |
+| *Other Identifiers:*OID:2.16.840.1.114222.28.23 | |
 | **Copyright/Legal**: Centers for Disease Control and Prevention (CDC) | |
 
-* * **Content: **application/elm+json: ````Encoded data (1114016 characters)````: **Url: **
-  * ?: [OpioidCDSREC10Common](Library-OpioidCDSREC10Common.md)
-* * **Content: **application/elm+json: ````Encoded data (1114016 characters)````: **Version: **
-  * ?: 2022.1.0
-* * **Content: **application/elm+json: ````Encoded data (1114016 characters)````: **Name: **
-  * ?: OpioidCDSREC10Common
-* * **Content: **application/elm+json: ````Encoded data (1114016 characters)````: **Status: **
-  * ?: active
-* * **Content: **application/elm+json: ````Encoded data (1114016 characters)````: **Date: **
-  * ?: 2026-03-18 16:23:26+1100
-* * **Content: **application/elm+json: ````Encoded data (1114016 characters)````: **Publisher: **
-  * ?: CDC / Security Risk Solutions, Inc. (SRS)
-* * **Content: **application/elm+json: ````Encoded data (1114016 characters)````: **Copyright: **
-  * ?: Centers for Disease Control and Prevention (CDC)
+**Exception parsing generated Narrative (see /tmp/liquid-537e574f-9912-44cd-a85f-61fd836a2b5d.html): unable to parse character reference ' '' (last text = ' ' at line 707 column 28**
 
 
 
@@ -106,6 +94,10 @@
     }
   }],
   "url" : "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC10Common",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.114222.28.23"
+  }],
   "version" : "2022.1.0",
   "name" : "OpioidCDSREC10Common",
   "status" : "active",
@@ -115,7 +107,7 @@
       "code" : "logic-library"
     }]
   },
-  "date" : "2026-03-18T16:23:26+11:00",
+  "date" : "2026-08-23T19:52:23+10:00",
   "publisher" : "CDC / Security Risk Solutions, Inc. (SRS)",
   "contact" : [{
     "telecom" : [{

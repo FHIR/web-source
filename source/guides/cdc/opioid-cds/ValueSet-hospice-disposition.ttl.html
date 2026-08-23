@@ -5,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Hospice Disposition - TTL Representation - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.0</title>
+    <title>Hospice Disposition - TTL Representation - 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide v2022.1.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -44,8 +44,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"23.106"}
-    h3,h4,h5,h6{--heading-prefix:"23.106"}</style>
+    <style type="text/css">h2{--heading-prefix:"24.106"}
+    h3,h4,h5,h6{--heading-prefix:"24.106"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <div id="hl7-nav">
@@ -61,7 +61,7 @@
         <div id="ig-status">
           <p><span style="font-size:12pt;font-weight:bold">2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide</span>
             <br/>
-            <span style="display:inline-block;">2022.1.0 - Release 2022.1
+            <span style="display:inline-block;">2022.1.1 - Release 2022.1
 
 
             </span>
@@ -93,6 +93,7 @@
   <li><a href="examples.html">Examples</a></li>
   <li><a href="documentation.html">Documentation</a></li>
   <li><a href="downloads.html">Downloads</a></li>
+  <li><a href="changes.html">Changes</a></li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
       </b>
@@ -139,7 +140,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 9" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">This page is part of the 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide (v2022.1.0: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://fhir.org/guides/cdc/opioid-cds/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">This page is part of the 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide (v2022.1.1: Release) based on <a data-no-external="true" href="http://hl7.org/fhir/R4">FHIR (HL7® FHIR® Standard) R4</a>. This is the current published version.  For a full list of available versions, see the <a data-no-external="true" href="http://fhir.org/guides/cdc/opioid-cds/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -213,81 +214,92 @@
   <pre class="rdf" data-fhir="generated" style="white-space: pre; overflow: hidden"><code class="language-turtle">
 @prefix fhir: &lt;http://hl7.org/fhir/&gt; .
 @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
-@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
 # - resource -------------------------------------------------------------------
 
- a fhir:ValueSet ;
+&lt;http://hl7.org/fhir/ValueSet/hospice-disposition&gt; a fhir:ValueSet ;
   <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
-  <a href="http://hl7.org/fhir/R4/resource.html#ValueSet.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:v</a> &quot;hospice-disposition&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/resource.html#ValueSet.meta">fhir:meta</a> [
-    ( <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:profile</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:v</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:l</a> &lt;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset&gt;     ] )
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/domainresource.html#ValueSet.text">fhir:text</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;generated&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">fhir:div</a> [ <a href="http://hl7.org/fhir/R4/narrative.html#xhtml">fhir:v</a> &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet hospice-disposition&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;hospice-disposition\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hchospice-disposition\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-executablevalueset.html\&quot;&gt;CPGExecutableValueSet&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;This value set expansion contains 2 concepts.&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;System&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Version&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;hospice-disposition-http://snomed.info/sct-385763009\&quot;&gt; &lt;/a&gt;&lt;code&gt;http://snomed.info/sct&lt;/code&gt;&lt;/td&gt;&lt;td&gt;2020-09&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  &lt;a href=\&quot;http://snomed.info/id/385763009\&quot;&gt;385763009&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospice care (regime/therapy)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;hospice-disposition-http://snomed.info/sct-385765002\&quot;&gt; &lt;/a&gt;&lt;code&gt;http://snomed.info/sct&lt;/code&gt;&lt;/td&gt;&lt;td&gt;2020-09&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  &lt;a href=\&quot;http://snomed.info/id/385765002\&quot;&gt;385765002&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospice care management (procedure)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;^^rdf:XMLLiteral ]
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/domainresource.html#ValueSet.extension">fhir:extension</a> ( [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability&gt;     ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#code">a</a> fhir:Code ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;executable&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel&gt;     ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#code">a</a> fhir:Code ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;executable&quot;     ]
-  ] [
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning&gt;     ] ;
-<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:value</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">a</a> fhir:String ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion.&quot;     ]
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">fhir:url</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-disposition&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-disposition&gt;
-  ] ; # 
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">fhir:version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;2022.1.0&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">fhir:name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;HOSPICE_DISPOSITION&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">fhir:title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Hospice Disposition&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;active&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.experimental">fhir:experimental</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> false] ; # 
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">fhir:date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2023-05-25T18:08:12-06:00&quot;^^xsd:dateTime] ; # 
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">fhir:publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;CDC / Security Risk Solutions, Inc. (SRS)&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">fhir:contact</a> ( [
-    ( <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">fhir:telecom</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;url&quot; ] ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;https://www.securityrisksolutions.com&quot; ]     ] )
-  ] ) ; # 
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.description">fhir:description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:v</a> &quot;This value set contains concepts that represent patients receiving hospice care outside of a hospital or long term care facility.&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.purpose">fhir:purpose</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:v</a> &quot;This value set may use the Quality Data Model (QDM) datatype related to Procedure, Order or Intervention, Order. The intent of this value set is to identify all patients receiving hospice care outside of a hospital or long term care facility.&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.copyright">fhir:copyright</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:v</a> &quot;Centers for Disease Control and Prevention (CDC)&quot;] ; # 
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion">fhir:expansion</a> [
-<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.timestamp">fhir:timestamp</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:v</a> &quot;2021-02-08T13:47:55-07:00&quot;^^xsd:dateTime ] ;
-    ( <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.contains">fhir:contains</a> [
-<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.contains.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://snomed.info/sct&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://snomed.info/sct&gt;       ] ;
-<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.contains.version">fhir:version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;2020-09&quot; ] ;
-<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.contains.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;385763009&quot; ] ;
-<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.contains.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Hospice care (regime/therapy)&quot; ]     ] [
-<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.contains.system">fhir:system</a> [
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> &quot;http://snomed.info/sct&quot;^^xsd:anyURI ;
-<a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:l</a> &lt;http://snomed.info/sct&gt;       ] ;
-<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.contains.version">fhir:version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;2020-09&quot; ] ;
-<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.contains.code">fhir:code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> &quot;385765002&quot; ] ;
-<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.contains.display">fhir:display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> &quot;Hospice care management (procedure)&quot; ]     ] )
-  ] . # 
+  <a href="http://hl7.org/fhir/R4/resource.html#ValueSet.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#id">fhir:value</a> &quot;hospice-disposition&quot;] ;
+  <a href="http://hl7.org/fhir/R4/resource.html#ValueSet.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset&quot; ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset&gt;
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#ValueSet.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;generated&quot; ] ;
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet hospice-disposition&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;hospice-disposition\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hchospice-disposition\&quot;&gt; &lt;/a&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;/&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-executablevalueset.html\&quot;&gt;CPGExecutableValueSet&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p style=\&quot;border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\&quot;&gt;Expansion based on SNOMED CT United States edition 01-Sep 2025&lt;/p&gt;&lt;p&gt;This value set expansion contains 2 concepts.&lt;/p&gt;&lt;table class=\&quot;codes\&quot;&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;System&lt;/b&gt;&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;hospice-disposition-http://snomed.info/sct-385763009\&quot;&gt; &lt;/a&gt;&lt;code&gt;http://snomed.info/sct&lt;/code&gt;&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  &lt;a href=\&quot;http://snomed.info/id/385763009\&quot;&gt;385763009&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospice care (regime/therapy)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a name=\&quot;hospice-disposition-http://snomed.info/sct-385765002\&quot;&gt; &lt;/a&gt;&lt;code&gt;http://snomed.info/sct&lt;/code&gt;&lt;/td&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;  &lt;a href=\&quot;http://snomed.info/id/385765002\&quot;&gt;385765002&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Hospice care management (procedure)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&quot;
+  ] ;
+  <a href="http://hl7.org/fhir/R4/domainresource.html#ValueSet.extension">fhir:DomainResource.extension</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;executable&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;executable&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2 ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value_x_">fhir:Extension.valueString</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion.&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">fhir:ValueSet.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/cdc/opioid-cds/ValueSet/hospice-disposition&quot;] ;
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.identifier">fhir:ValueSet.identifier</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">fhir:Identifier.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;urn:ietf:rfc:3986&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">fhir:Identifier.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;urn:oid:2.16.840.1.114222.48.48&quot; ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">fhir:ValueSet.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;2022.1.1&quot;] ;
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">fhir:ValueSet.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;HOSPICE_DISPOSITION&quot;] ;
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">fhir:ValueSet.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Hospice Disposition&quot;] ;
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">fhir:ValueSet.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;active&quot;] ;
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.experimental">fhir:ValueSet.experimental</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;false&quot;^^xsd:boolean] ;
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">fhir:ValueSet.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2023-05-25T18:08:12-06:00&quot;^^xsd:dateTime] ;
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">fhir:ValueSet.publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;CDC / Security Risk Solutions, Inc. (SRS)&quot;] ;
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">fhir:ValueSet.contact</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">fhir:ContactDetail.telecom</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;url&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;https://www.securityrisksolutions.com&quot; ]
+     ]
+  ] ;
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.description">fhir:ValueSet.description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;This value set contains concepts that represent patients receiving hospice care outside of a hospital or long term care facility.&quot;] ;
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.purpose">fhir:ValueSet.purpose</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;This value set may use the Quality Data Model (QDM) datatype related to Procedure, Order or Intervention, Order. The intent of this value set is to identify all patients receiving hospice care outside of a hospital or long term care facility.&quot;] ;
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.copyright">fhir:ValueSet.copyright</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;Centers for Disease Control and Prevention (CDC)&quot;] ;
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion">fhir:ValueSet.expansion</a> [
+     <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.identifier">fhir:ValueSet.expansion.identifier</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;urn:uuid:6423310a-9e35-4f18-a2ed-2acb9166e5eb&quot; ] ;
+     <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.timestamp">fhir:ValueSet.expansion.timestamp</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2021-02-08T13:47:55-07:00&quot;^^xsd:dateTime ] ;
+     <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.parameter">fhir:ValueSet.expansion.parameter</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.parameter.name">fhir:ValueSet.expansion.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;used-codesystem&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.parameter.value_x_">fhir:ValueSet.expansion.parameter.valueUri</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901&quot; ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+       <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.parameter.name">fhir:ValueSet.expansion.parameter.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;version&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.parameter.value_x_">fhir:ValueSet.expansion.parameter.valueUri</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901&quot; ]
+     ] ;
+     <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.contains">fhir:ValueSet.expansion.contains</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0 ;
+       <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;385763009&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Hospice care (regime/therapy)&quot; ]
+     ], [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1 ;
+       <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.contains.system">fhir:ValueSet.expansion.contains.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://snomed.info/sct&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.contains.code">fhir:ValueSet.expansion.contains.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;385765002&quot; ] ;
+       <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.expansion.contains.display">fhir:ValueSet.expansion.contains.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Hospice care management (procedure)&quot; ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+&lt;http://hl7.org/fhir/ValueSet/hospice-disposition.ttl&gt; a owl:Ontology ;
+  owl:imports fhir:fhir.ttl ;
+  owl:versionIRI &lt;http://build.fhir.org/ValueSet/hospice-disposition.ttl&gt; .
 
 </code></pre>
 
@@ -336,12 +348,12 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.securityrisksolutions.com">CDC / Security Risk Solutions, Inc. (SRS)</a>.  Package fhir.cdc.opioid-cds#2022.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 18, 2026 16:23+1100">2026-03-18</span>
+          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.securityrisksolutions.com">CDC / Security Risk Solutions, Inc. (SRS)</a>.  Package fhir.cdc.opioid-cds#2022.1.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Aug 23, 2026 19:52+1000">2026-08-23</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
                  <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
-                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/cqframework/opioid-cds-r4/issues/new">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/cqframework/opioid-cds-r4/issues">Issues</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/security-rs/opioid-cds-r4/issues/new">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/security-rs/opioid-cds-r4/issues">Issues</a>
                 
 | <a style="color: #81BEF7" target="_blank" href="http://fhir.org/guides/cdc/opioid-cds/history.html">Version History</a> | <a style="color: #81BEF7" rel="license" href="license.html">License</a>
 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->

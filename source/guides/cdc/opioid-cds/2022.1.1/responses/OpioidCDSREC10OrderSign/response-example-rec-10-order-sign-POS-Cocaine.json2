@@ -1,0 +1,41 @@
+{
+  "cards": [
+    {
+      "summary": "Positive Cocaine or PCP in Urine Screening",
+      "indicator": "warning",
+      "detail": "Positive for Cocaine: <br/>Positive lab dates: <br/>2021-01-22<br/>2021-02-23<br/>Negative test count since last Positive: 1",
+      "source": {
+        "label": "2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain",
+        "url": "https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm"
+      },
+      "suggestions": [
+        {
+          "label": "1.",
+          "actions": [
+            {
+              "type": "create",
+              "description": "Positive for Cocaine: <br/>Positive lab dates: <br/>2021-01-22<br/>2021-02-23<br/>Negative test count since last Positive: 1",
+              "resource": {
+                "resourceType": "ServiceRequest",
+                "status": "draft",
+                "intent": "proposal",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://snomed.info/sct",
+                      "code": "310627008",
+                      "display": "Urine drug screening (procedure)"
+                    }
+                  ]
+                },
+                "subject": {
+                  "reference": "Patient/example-rec-10-patient-view-POS-Cocaine-drugs"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
