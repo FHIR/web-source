@@ -76,6 +76,9 @@ function hasVersion(varr, ver) {
 }
 
 function fv(varr) {
+  if (hasVersion(varr, "6.0")) {
+    return "R6";
+  }
   if (hasVersion(varr, "5.0")) {
     return "R5";
   }
@@ -90,12 +93,6 @@ function fv(varr) {
   }
   if (hasVersion(varr, "1.0")) {
     return "R2";
-  }
-  if (hasVersion(varr, "4.3")) {
-    return "R4B";
-  }
-  if (hasVersion(varr, "5.0")) {
-    return "R5";
   }
   return "";
 }
@@ -425,6 +422,67 @@ function sorted(obj) {
   });
 }
 
+// Country codes used by the registry, in display order, with their labels.
+// This is the single source of truth for the country filter: the dropdown
+// options and the "already known" check are both derived from it.
+var COUNTRY_NAMES = [
+  ['uv', 'All'],
+  ['eu', 'European Union'],
+  ['us', 'USA'],
+  ['at', 'Austria (Österreich)'],
+  ['au', 'Australia'],
+  ['bd', 'Bangladesh'],
+  ['be', 'Belgium (België/Belgique)'],
+  ['br', 'Brasil'],
+  ['ca', 'Canada'],
+  ['ch', 'Switzerland (Schweiz/Suisse/Svizzera)'],
+  ['cl', 'Chile'],
+  ['cr', 'Costa Rica'],
+  ['cz', 'Czeckia'],
+  ['de', 'Germany (Deutschland)'],
+  ['dk', 'Denmark (Danmark)'],
+  ['fi', 'Finland (Suomi)'],
+  ['fr', 'France'],
+  ['gb', 'Great Britain'],
+  ['in', 'India'],
+  ['it', 'Italy (Italia)'],
+  ['jp', 'Japan (日本)'],
+  ['kr', 'Korea (한국)'],
+  ['nl', 'Netherlands (Nederland)'],
+  ['no', 'Norway (Norge)'],
+  ['nz', 'New Zealand'],
+  ['pl', 'Poland (Polska)'],
+  ['es', 'Spain (Espana)'],
+  ['se', 'Sweden (Sverige)'],
+  ['tw', 'Taiwan (台灣)'],
+  ['uz', 'Uzbekistan']
+];
+
+// Turn a 2-letter ISO country code into a flag emoji, by mapping each letter to
+// its Regional Indicator Symbol (U+1F1E6 = 'A'). 'uv' is not a country - it means
+// "universal" - so it gets a globe instead.
+// NB: Chrome and Edge on Windows ship no flag glyphs and will render the two
+// letters (e.g. "CL") instead. That degrades acceptably: the label still reads.
+function countryFlag(code) {
+  if (typeof code !== 'string' || !/^[a-zA-Z]{2}$/.test(code)) {
+    return '';
+  }
+  if (code.toLowerCase() === 'uv') {
+    return '\uD83C\uDF10'; // globe
+  }
+  var upper = code.toUpperCase();
+  return String.fromCodePoint(
+    0x1F1E6 + upper.charCodeAt(0) - 65,
+    0x1F1E6 + upper.charCodeAt(1) - 65
+  );
+}
+
+// '<option>' for one country, flag first.
+function countryOption(code, label) {
+  var flag = countryFlag(code);
+  return '<option value="' + code + '">' + (flag ? flag + ' ' : '') + escapeHTML(label) + '</option>';
+}
+
 function loadRegistry() {
   fetch(url)
    .then(function(response) { return response.json() })
@@ -505,38 +563,14 @@ function loadRegistry() {
     authorityOptions += '</select>';
 
     // Predefined country options (keeping the original order for these specific countries)
-    countryOptions += '<option value="uv">All</option>';
-    countryOptions += '<option value="eu">European Union</option>';
-    countryOptions += '<option value="us">USA</option>';
-    countryOptions += '<option value="at">Austria (Österreich)</option>';
-    countryOptions += '<option value="au">Australia</option>';
-    countryOptions += '<option value="bd">Bangladesh</option>';
-    countryOptions += '<option value="be">Belgium (België/Belgique)</option>';
-    countryOptions += '<option value="br">Brasil</option>';
-    countryOptions += '<option value="ca">Canada</option>';
-    countryOptions += '<option value="ch">Switzerland (Schweiz/Suisse/Svizzera)</option>';
-    countryOptions += '<option value="cr">Costa Rica</option>';    
-    countryOptions += '<option value="cz">Czeckia</option>';    
-    countryOptions += '<option value="de">Germany (Deutschland)</option>';
-    countryOptions += '<option value="dk">Denmark (Danmark)</option>';
-    countryOptions += '<option value="fi">Finland (Suomi)</option>';
-    countryOptions += '<option value="fr">France</option>';
-    countryOptions += '<option value="gb">Great Britain</option>';
-    countryOptions += '<option value="in">India</option>';
-    countryOptions += '<option value="it">Italy (Italia)</option>';
-    countryOptions += '<option value="jp">Japan (日本)</option>';
-    countryOptions += '<option value="kr">Korea (한국)</option>';
-    countryOptions += '<option value="nl">Netherlands (Nederland)</option>';
-    countryOptions += '<option value="no">Norway (Norge)</option>';
-    countryOptions += '<option value="nz">New Zealand</option>';
-    countryOptions += '<option value="pl">Poland (Polska)</option>';
-    countryOptions += '<option value="es">Spain (Espana)</option>';
-    countryOptions += '<option value="se">Sweden (Sverige)</option>';
-    countryOptions += '<option value="tw">Taiwan (台灣)</option>';
-    countryOptions += '<option value="uz">Uzbekistan</option>';
+    var knownCountries = new Set();
+    for (var ci = 0; ci < COUNTRY_NAMES.length; ci++) {
+      var entry = COUNTRY_NAMES[ci];
+      knownCountries.add(entry[0]);
+      countryOptions += countryOption(entry[0], entry[1]);
+    }
 
     // Sort additional countries alphabetically
-    const knownCountries = new Set(['uv', 'eu', 'us', 'at', 'au', 'be', 'bd', 'br', 'ca', 'ch', 'cr', 'cz', 'de', 'dk', 'es', 'fi', 'fr', 'gb', 'in', 'it', 'jp', 'kr', 'nl', 'no', 'nz', 'pl', 'se', 'tw', 'uz']);
     var additionalCountries = [];
     for (var country in properties.countries) {
       if (properties.countries.hasOwnProperty(country) && !knownCountries.has(country)) {
@@ -546,10 +580,10 @@ function loadRegistry() {
     additionalCountries.sort(function(a, b) {
       return a.toLowerCase().localeCompare(b.toLowerCase());
     });
-    
-    // Add sorted additional countries to options
+
+    // Add sorted additional countries to options - no label for these, just the code
     for (var i = 0; i < additionalCountries.length; i++) {
-      countryOptions += '<option value="' + additionalCountries[i] + '">' + additionalCountries[i].toUpperCase() + '</option>';
+      countryOptions += countryOption(additionalCountries[i], additionalCountries[i].toUpperCase());
     }
     countryOptions += '</select>';
     
