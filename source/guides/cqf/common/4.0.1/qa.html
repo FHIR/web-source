@@ -1,0 +1,233 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- broken links = 0, errors = 0, warn = 0, info = 0 -->
+<head>
+  <title>CQFCommon : Validation Results</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+    span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
+    span.toggle  { font-size: 10px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+    function toggle(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Validation Information') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Validation Information';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Validation Information';
+      }
+    }
+  </script>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Validation Results for CQFCommon</h1>
+ <p>Generated Fri Nov 12 16:26:49 AEDT 2021, FHIR version 4.0.1 for fhir.cqf.common#4.0.1 (canonical = <a href="http://fhir.org/guides/cqf/common">http://fhir.org/guides/cqf/common</a> (<a href="http://fhir.org/guides/cqf/common/history.html">history</a>)). See <a href="c:\temp\fhir.cqf.common#4.0.1\output\qa.min.html">Errors Only</a></p>
+<table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
+ <tr><td>Publisher Version:</td><td><span style="background-color: #ffcccc">IG Publisher Version: v1.1.27-SNAPSHOT, which is out of date. The current version is v1.1.85 <a href="https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar">Download Latest</a></span></td></tr>
+ <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = fhir.cqf.common, Canonical = http://fhir.org/guides/cqf/common</td></tr>
+ <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
+ <tr><td>Version Check:</td><td>4.0.1 = ok. Step <code>active</code> in sequence <code>Release 1</code>, to be published at http://fhir.org/guides/cqf/common/4.0.1 (subdir = 4.0.1). <span stlye="color: marron; font-weight: bold">This IG does not appear to have been published yet, so should not have a version &gt;=1.0.0</span></td></tr>
+ <tr><td>Supressed Messages:</td><td><a href="#suppressed">52 Suppressed Issues</a>
+</td></tr>
+ <tr><td>Dependency Checks:</td><td><div><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of the package">Version</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR Release</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Canonical URL">Canonical</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Web Reference Base">Web Base</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Comments about this entry">Comment</span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(c:\temp\fhir.cqf.common#4.0.1\outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> fhir.cqf.common</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://fhir.org/guides/cqf/common</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(c:\temp\fhir.cqf.common#4.0.1\outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAJUlEQVR4Xu3IIQEAAAgDsHd9/w4EQIOamFnaBgAA4MMKAACAKwNp30CqZFfFmwAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.uv.cpg</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1.0.0</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/uv/cpg</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/uv/cpg/STU1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+</table><para>Templates: cqf.fhir.template#0.0.2 -&gt; fhir.base.template#0.2.2</para></div></td></tr>
+ <tr><td>Publication Rules:</td><td>Code = n/a. All OK (path - http://fhir.org/guides/cqf/common/4.0.1) <br/><br/>The copyrightYear parameter ('2019+') in the IG resource is good</td></tr>
+ <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://fhir.org/guides/cqf/common (Problem #1 with package-list.json at http://fhir.org/guides/cqf/common: http://fhir.org/guides/cqf/common/package-list.json?nocache=1636694755049)</td></tr>
+ <tr><td>Summary:</td><td> broken links = 0, errors = 0, warn = 0, info = 0</td></tr>
+</table>
+ <table class="grid">
+   <tr>
+     <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#C__temp_fhir.cqf.common_4.0.1_input_resources_library-FHIR-ModelInfo"><b>C:\temp\fhir.cqf.common#4.0.1\input\resources\library-FHIR-ModelInfo</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#C__temp_fhir.cqf.common_4.0.1_input_resources_library-FHIRCommon"><b>C:\temp\fhir.cqf.common#4.0.1\input\resources\library-FHIRCommon</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#C__temp_fhir.cqf.common_4.0.1_input_resources_library-FHIRCommonTests"><b>C:\temp\fhir.cqf.common#4.0.1\input\resources\library-FHIRCommonTests</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#C__temp_fhir.cqf.common_4.0.1_input_resources_library-FHIRHelpers"><b>C:\temp\fhir.cqf.common#4.0.1\input\resources\library-FHIRHelpers</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#C__temp_fhir.cqf.common_4.0.1_input_resources_library-FHIRHelpersTests"><b>C:\temp\fhir.cqf.common#4.0.1\input\resources\library-FHIRHelpersTests</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#C__temp_fhir.cqf.common_4.0.1_input_vocabulary_valueset_valueset-active-condition"><b>C:\temp\fhir.cqf.common#4.0.1\input\vocabulary\valueset\valueset-active-condition</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#C__temp_fhir.cqf.common_4.0.1_input_vocabulary_valueset_valueset-inactive-condition"><b>C:\temp\fhir.cqf.common#4.0.1\input\vocabulary\valueset\valueset-inactive-condition</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#c__temp_fhir.cqf.common_4.0.1_input_cqf"><b>c:\temp\fhir.cqf.common#4.0.1\input\cqf</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="internal"> </a>
+<h2><a href="">n/a</a> <span id="sv" class="toggle" onclick="toggle('v')">Show Validation Information</span> <span class="vcount" onclick="toggle('v')"></span></h2>
+ <div style="border: 1px grey solid; display: none" id="v"></div>
+ <table class="grid">
+</table>
+<hr/>
+<a name="C__temp_fhir.cqf.common_4.0.1_input_resources_library-FHIR-ModelInfo"> </a>
+<h2><a href="Library-FHIR-ModelInfo.html">C:\temp\fhir.cqf.common#4.0.1\input\resources\library-FHIR-ModelInfo.json</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(3)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi1"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a>, hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-shareablelibrary.html">CPGShareableLibrary</a> (per meta) and hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-publishablelibrary.html">CPGPublishableLibrary</a> (per meta)</li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="C__temp_fhir.cqf.common_4.0.1_input_resources_library-FHIRCommon"> </a>
+<h2><a href="Library-FHIRCommon.html">C:\temp\fhir.cqf.common#4.0.1\input\resources\library-FHIRCommon.json</a> <span id="svi2" class="toggle" onclick="toggle('vi2')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi2')">(5)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi2"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a>, hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-shareablelibrary.html">CPGShareableLibrary</a> (per meta), hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-computablelibrary.html">CPGComputableLibrary</a> (per meta), hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-publishablelibrary.html">CPGPublishableLibrary</a> (per meta) and hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-executablelibrary.html">CPGExecutableLibrary</a> (per meta)</li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="C__temp_fhir.cqf.common_4.0.1_input_resources_library-FHIRCommonTests"> </a>
+<h2><a href="Library-FHIRCommonTests.html">C:\temp\fhir.cqf.common#4.0.1\input\resources\library-FHIRCommonTests.json</a> <span id="svi3" class="toggle" onclick="toggle('vi3')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi3')">(5)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi3"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a>, hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-shareablelibrary.html">CPGShareableLibrary</a> (per meta), hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-computablelibrary.html">CPGComputableLibrary</a> (per meta), hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-publishablelibrary.html">CPGPublishableLibrary</a> (per meta) and hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-executablelibrary.html">CPGExecutableLibrary</a> (per meta)</li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="C__temp_fhir.cqf.common_4.0.1_input_resources_library-FHIRHelpers"> </a>
+<h2><a href="Library-FHIRHelpers.html">C:\temp\fhir.cqf.common#4.0.1\input\resources\library-FHIRHelpers.json</a> <span id="svi4" class="toggle" onclick="toggle('vi4')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi4')">(5)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi4"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a>, hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-shareablelibrary.html">CPGShareableLibrary</a> (per meta), hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-computablelibrary.html">CPGComputableLibrary</a> (per meta), hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-publishablelibrary.html">CPGPublishableLibrary</a> (per meta) and hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-executablelibrary.html">CPGExecutableLibrary</a> (per meta)</li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="C__temp_fhir.cqf.common_4.0.1_input_resources_library-FHIRHelpersTests"> </a>
+<h2><a href="Library-FHIRHelpersTests.html">C:\temp\fhir.cqf.common#4.0.1\input\resources\library-FHIRHelpersTests.json</a> <span id="svi5" class="toggle" onclick="toggle('vi5')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi5')">(5)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi5"><ul style="font-size: 7px"><li>Library: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/library.html">Library</a>, hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-shareablelibrary.html">CPGShareableLibrary</a> (per meta), hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-computablelibrary.html">CPGComputableLibrary</a> (per meta), hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-publishablelibrary.html">CPGPublishableLibrary</a> (per meta) and hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-executablelibrary.html">CPGExecutableLibrary</a> (per meta)</li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="C__temp_fhir.cqf.common_4.0.1_input_vocabulary_valueset_valueset-active-condition"> </a>
+<h2><a href="ValueSet-active-condition.html">C:\temp\fhir.cqf.common#4.0.1\input\vocabulary\valueset\valueset-active-condition.xml</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi6"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a> and hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-publishablevalueset.html">CPGPublishableValueSet</a> (per meta)</li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="C__temp_fhir.cqf.common_4.0.1_input_vocabulary_valueset_valueset-inactive-condition"> </a>
+<h2><a href="ValueSet-inactive-condition.html">C:\temp\fhir.cqf.common#4.0.1\input\vocabulary\valueset\valueset-inactive-condition.xml</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(2)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a> and hl7.fhir.uv.cpg.<a href="http://hl7.org/fhir/uv/cpg/STU1/StructureDefinition-cpg-publishablevalueset.html">CPGPublishableValueSet</a> (per meta)</li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<hr/>
+<a name="c__temp_fhir.cqf.common_4.0.1_input_cqf"> </a>
+<h2><a href="ImplementationGuide-fhir.cqf.common.html">C:\temp\fhir.cqf.common#4.0.1\input\cqf.xml</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(0)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi8"></div>
+ <table class="grid">
+   <tr>
+     <td>&check;</td>
+   </tr>
+</table>
+<a name="suppressed"> </a>
+<p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
+<p><b>Confirmed expected profile</b></p><ul>
+ <li>== C:\Users\Bryn\Documents\Src\CQF\cqf\input\cqf.xml ==</li>
+ <li>== C:\Users\Bryn\Documents\Src\CQF\cqf\input\resources\library-FHIR-ModelInfo.json ==</li>
+ <li>== C:\Users\Bryn\Documents\Src\CQF\cqf\input\resources\library-FHIRCommon.json ==</li>
+ <li>== C:\Users\Bryn\Documents\Src\CQF\cqf\input\resources\library-FHIRCommonTests.json ==</li>
+ <li>== C:\Users\Bryn\Documents\Src\CQF\cqf\input\resources\library-FHIRHelpers.json ==</li>
+ <li>== C:\Users\Bryn\Documents\Src\CQF\cqf\input\resources\library-FHIRHelpersTests.json ==</li>
+ <li>== C:\Users\Bryn\Documents\Src\CQF\cqf\input\vocabulary\valueset\valueset-active-condition.xml ==</li>
+ <li>== C:\Users\Bryn\Documents\Src\CQF\cqf\input\vocabulary\valueset\valueset-inactive-condition.xml ==</li>
+ <li>INFORMATION: ImplementationGuide/cqf.fhir.common: ImplementationGuide/cqf.fhir.common: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide</li>
+ <li>INFORMATION: Library/FHIR-ModelInfo: Library/FHIR-ModelInfo: Library: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Library</li>
+ <li>INFORMATION: Library/FHIR-ModelInfo: Library/FHIR-ModelInfo: Library: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablelibrary - listed in meta</li>
+ <li>INFORMATION: Library/FHIR-ModelInfo: Library/FHIR-ModelInfo: Library: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablelibrary - listed in meta</li>
+ <li>INFORMATION: Library/FHIRCommon: Library/FHIRCommon: Library: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Library</li>
+ <li>INFORMATION: Library/FHIRCommon: Library/FHIRCommon: Library: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary - listed in meta</li>
+ <li>INFORMATION: Library/FHIRCommon: Library/FHIRCommon: Library: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary - listed in meta</li>
+ <li>INFORMATION: Library/FHIRCommon: Library/FHIRCommon: Library: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablelibrary - listed in meta</li>
+ <li>INFORMATION: Library/FHIRCommon: Library/FHIRCommon: Library: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablelibrary - listed in meta</li>
+ <li>INFORMATION: Library/FHIRCommonTests: Library/FHIRCommonTests: Library: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Library</li>
+ <li>INFORMATION: Library/FHIRCommonTests: Library/FHIRCommonTests: Library: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary - listed in meta</li>
+ <li>INFORMATION: Library/FHIRCommonTests: Library/FHIRCommonTests: Library: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary - listed in meta</li>
+ <li>INFORMATION: Library/FHIRCommonTests: Library/FHIRCommonTests: Library: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablelibrary - listed in meta</li>
+ <li>INFORMATION: Library/FHIRCommonTests: Library/FHIRCommonTests: Library: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablelibrary - listed in meta</li>
+ <li>INFORMATION: Library/FHIRHelpers: Library/FHIRHelpers: Library: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Library</li>
+ <li>INFORMATION: Library/FHIRHelpers: Library/FHIRHelpers: Library: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary - listed in meta</li>
+ <li>INFORMATION: Library/FHIRHelpers: Library/FHIRHelpers: Library: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary - listed in meta</li>
+ <li>INFORMATION: Library/FHIRHelpers: Library/FHIRHelpers: Library: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablelibrary - listed in meta</li>
+ <li>INFORMATION: Library/FHIRHelpers: Library/FHIRHelpers: Library: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablelibrary - listed in meta</li>
+ <li>INFORMATION: Library/FHIRHelpersTests: Library/FHIRHelpersTests: Library: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Library</li>
+ <li>INFORMATION: Library/FHIRHelpersTests: Library/FHIRHelpersTests: Library: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary - listed in meta</li>
+ <li>INFORMATION: Library/FHIRHelpersTests: Library/FHIRHelpersTests: Library: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary - listed in meta</li>
+ <li>INFORMATION: Library/FHIRHelpersTests: Library/FHIRHelpersTests: Library: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablelibrary - listed in meta</li>
+ <li>INFORMATION: Library/FHIRHelpersTests: Library/FHIRHelpersTests: Library: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablelibrary - listed in meta</li>
+ <li>INFORMATION: ValueSet/active-condition: ValueSet/active-condition: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet</li>
+ <li>INFORMATION: ValueSet/active-condition: ValueSet/active-condition: ValueSet: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablevalueset - listed in meta</li>
+ <li>INFORMATION: ValueSet/inactive-condition: ValueSet/inactive-condition: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet</li>
+ <li>INFORMATION: ValueSet/inactive-condition: ValueSet/inactive-condition: ValueSet: Validate resource against profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablevalueset - listed in meta</li>
+</ul>
+<p><b>Confirmed these are due to the same element sliced in different profiles</b></p><ul>
+ <li>INFORMATION: Library/FHIRCommon: Library.content[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary</li>
+ <li>INFORMATION: Library/FHIRCommon: Library.content[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary</li>
+ <li>INFORMATION: Library/FHIRCommon: Library.content[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary</li>
+ <li>INFORMATION: Library/FHIRCommonTests: Library.content[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary</li>
+ <li>INFORMATION: Library/FHIRCommonTests: Library.content[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary</li>
+ <li>INFORMATION: Library/FHIRCommonTests: Library.content[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary</li>
+ <li>INFORMATION: Library/FHIRHelpers: Library.content[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary</li>
+ <li>INFORMATION: Library/FHIRHelpers: Library.content[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary</li>
+ <li>INFORMATION: Library/FHIRHelpers: Library.content[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary</li>
+ <li>INFORMATION: Library/FHIRHelpers: Library.relatedArtifact[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary</li>
+ <li>INFORMATION: Library/FHIRHelpers: Library.relatedArtifact[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary</li>
+ <li>INFORMATION: Library/FHIRHelpersTests: Library.content[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary</li>
+ <li>INFORMATION: Library/FHIRHelpersTests: Library.content[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary</li>
+ <li>INFORMATION: Library/FHIRHelpersTests: Library.content[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary</li>
+ <li>INFORMATION: Library/FHIRHelpersTests: Library.relatedArtifact[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary</li>
+ <li>INFORMATION: Library/FHIRHelpersTests: Library.relatedArtifact[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary</li>
+</ul>
+<p>No suppressed messsages</p><a name="sorted"> </a>
+<p><b>Errors sorted by type</b></p>
+</body>
+</html>

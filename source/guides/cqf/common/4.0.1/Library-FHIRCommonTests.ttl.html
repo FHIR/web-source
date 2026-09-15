@@ -1,0 +1,412 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>FHIR.CQF.COMMON\FHIR CommonTests - TTL Representation - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/cqf.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5.5"}
+    h3,h4,h5,h6{--heading-prefix:"5.5"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <div id="family-nav">
+  <a id="family-logo" no-external="true" href="https://github.com/cqframework"><img height="50" alt="Visit the CQF github organization website" src="assets/images/cqf.png"/> </a>
+</div>
+<!-- TODO: Push this into the base template -->
+<script type="text/javascript" src="cql.js"> </script>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Clinical Quality Framework Common FHIR Assets</span><br/>4.0.1 - release</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">FHIR Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://cql.hl7.org/index.html">CQL Spec</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/uv/cpg">FHIR Clinical Guidelines</a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+      <li>
+        <a href="license.html">License</a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>FHIR CommonTests</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 9" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">This page is part of the Clinical Quality Framework Common FHIR Assets (v4.0.1: Release) based on <a href="http://hl7.org/fhir/R4">FHIR R4</a>. This is the current published version in its permanent home (it will always be available at this URL).  For a full list of available versions, see the <a href="http://fhir.org/guides/cqf/common/history.html">Directory of published versions <img src="external.png" style="text-align: baseline"></a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Library-FHIRCommonTests.html">Narrative Content</a>
+  </li>
+
+
+  
+    <li>
+      <a href="Library-FHIRCommonTests.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Library-FHIRCommonTests.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: FHIR CommonTests - TTL Representation</h2>
+
+<p><a href="Library-FHIRCommonTests.ttl" no-download="true">Raw ttl</a> | <a href="Library-FHIRCommonTests.ttl" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="rdf"><code class="language-turtle">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+# - resource -------------------------------------------------------------------
+
+ a fhir:Library;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot;
+  <a href="http://hl7.org/fhir/R4/library.html#Library.id">fhir:Resource.id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;FHIRCommonTests&quot;];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.meta">fhir:Resource.meta</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">fhir:Meta.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablelibrary&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablelibrary&gt;     ], [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary&gt;     ], [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablelibrary&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablelibrary&gt;     ], [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary&gt;     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.text">fhir:DomainResource.text</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:Narrative.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;extensions&quot; ];
+     fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;\n    &lt;table class=\&quot;grid dict\&quot;&gt;\n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Id: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;FHIRCommonTests&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Url: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;http://fhir.org/guides/cqf/common/Library/FHIRCommonTests&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Version: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;4.0.1&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Name: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;FHIRCommonTests&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Title: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;FHIR CommonTests&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Status: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;active&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Experimental: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;true&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Type: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;\n                \n                    \n                        \n                        &lt;p style=\&quot;margin-bottom: 5px;\&quot;&gt;\n                            &lt;b&gt;system: &lt;/b&gt; &lt;span&gt;http://terminology.hl7.org/CodeSystem/library-type&lt;/span&gt;\n                        &lt;/p&gt;\n                        \n                        \n                        &lt;p style=\&quot;margin-bottom: 5px;\&quot;&gt;\n                            &lt;b&gt;code: &lt;/b&gt; &lt;span&gt;logic-library&lt;/span&gt;\n                        &lt;/p&gt;\n                        \n                        \n                    \n                \n                \n            &lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Date: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;2020-11-29T15:54:22-07:00&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Publisher: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;Alphora&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Description: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;This library defines test cases for the FHIRCommon library.&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n          &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Knowledge Capability: &lt;/b&gt;&lt;/th&gt;\n          &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;\n            shareable computable publishable executable \n          &lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n          &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Knowledge Representation Level: &lt;/b&gt;&lt;/th&gt;\n          &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;\n            structured\n          &lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Jurisdiction: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;001&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Copyright: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;&amp;copy; Alphora 2019+&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Approval Date: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;2021-03-12&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n            &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Last Review Date: &lt;/b&gt;&lt;/th&gt;\n            &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;2021-03-12&lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        \n        &lt;tr&gt;\n          &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Related Artifacts: &lt;/b&gt;&lt;/th&gt;\n          &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;\n            \n            \n            \n            &lt;p&gt;&lt;b&gt;Dependencies&lt;/b&gt;&lt;/p&gt;\n            &lt;ul&gt;\n              \n                &lt;li&gt;http://fhir.org/guides/cqf/common/Library/FHIR-ModelInfo|4.0.1&lt;/li&gt;\n              \n                &lt;li&gt;http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1&lt;/li&gt;\n              \n                &lt;li&gt;http://fhir.org/guides/cqf/common/Library/FHIRCommon|4.0.1&lt;/li&gt;\n              \n            &lt;/ul&gt;\n            \n            \n            \n            \n            \n          &lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n          &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Parameters: &lt;/b&gt;&lt;/th&gt;\n          &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;\n            &lt;table class=\&quot;grid-dict\&quot;&gt;\n              &lt;tr&gt;&lt;th&gt;&lt;b&gt;Name&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Min&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Max&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;In/Out&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;\n              \n                &lt;tr&gt;&lt;th&gt;Patient&lt;/th&gt;&lt;th&gt;Patient&lt;/th&gt;&lt;th&gt;0&lt;/th&gt;&lt;th&gt;1&lt;/th&gt;&lt;th&gt;out&lt;/th&gt;&lt;/tr&gt;\n              \n            &lt;/table&gt;\n          &lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        &lt;tr&gt;\n          &lt;th scope=\&quot;row\&quot;&gt;&lt;b&gt;Data Requirements:&lt;/b&gt;&lt;/th&gt;\n          &lt;td style=\&quot;padding-left: 4px;\&quot;&gt;\n            &lt;table class=\&quot;grid-dict\&quot;&gt;\n              &lt;tr&gt;&lt;th&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Profile&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;MS&lt;/b&gt;&lt;/th&gt;&lt;th&gt;&lt;b&gt;Code Filter&lt;/b&gt;&lt;/th&gt;&lt;/tr&gt;\n              \n                &lt;tr&gt;\n                  &lt;th&gt;Patient&lt;/th&gt;\n                  &lt;th&gt;http://hl7.org/fhir/StructureDefinition/Patient&lt;/th&gt;\n                  &lt;th&gt;&lt;/th&gt;\n                  &lt;th&gt;\n                    \n                  &lt;/th&gt;\n                &lt;/tr&gt;\n              \n            &lt;/table&gt;\n          &lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        \n        &lt;tr&gt;\n          &lt;td colspan=\&quot;2\&quot;&gt;\n            &lt;table&gt;\n              &lt;tr&gt;&lt;th&gt;&lt;a id=\&quot;cql-content\&quot;&gt;&lt;b&gt;Content: &lt;/b&gt;&lt;/a&gt; text/cql&lt;/th&gt;&lt;/tr&gt;\n              &lt;tr&gt;&lt;td&gt;&lt;pre&gt;&lt;code class=\&quot;language-cql\&quot;&gt;library FHIRCommonTests\r\n\r\nusing FHIR version '4.0.1'\r\n\r\ninclude FHIRHelpers version '4.0.1'\r\ninclude FHIRCommon version '4.0.1'\r\n\r\ncontext Patient\r\n\r\n/*\r\ndefine function ToInterval(choice Choice&amp;lt;FHIR.dateTime, FHIR.Period, FHIR.Timing, FHIR.instant, FHIR.string, FHIR.Age, FHIR.Range&amp;gt;):\r\ndefine function ToAbatementInterval(condition Condition):\r\ndefine function ToPrevalenceInterval(condition Condition):\r\ndefine function Extensions(domainResource DomainResource, url String):\r\ndefine function Extension(domainResource DomainResource, url String):\r\ndefine function Extensions(element Element, url String):\r\ndefine function Extension(element Element, url String):\r\ndefine function ModifierExtensions(domainResource DomainResource, url String):\r\ndefine function ModifierExtension(domainResource DomainResource, url String):\r\ndefine function ModifierExtensions(element BackboneElement, url String):\r\ndefine function ModifierExtension(element BackboneElement, url String):\r\ndefine function BaseExtensions(domainResource DomainResource, id String):\r\ndefine function BaseExtension(domainResource DomainResource, id String):\r\ndefine function BaseExtensions(element Element, id String):\r\ndefine function BaseExtension(element Element, id String):\r\ndefine function BaseModifierExtensions(domainResource DomainResource, id String):\r\ndefine function BaseModifierExtension(domainResource DomainResource, id String):\r\ndefine function BaseModifierExtensions(element BackboneElement, id String):\r\ndefine function BaseModifierExtension(element BackboneElement, id String):\r\ndefine function USExtensions(domainResource DomainResource, id String):\r\ndefine function USExtension(domainResource DomainResource, id String):\r\ndefine function USExtensions(element Element, id String):\r\ndefine function USExtension(element Element, id String):\r\ndefine function USModifierExtensions(domainResource DomainResource, id String):\r\ndefine function USModifierExtension(domainResource DomainResource, id String):\r\ndefine function USModifierExtensions(element BackboneElement, id String):\r\ndefine function USModifierExtension(element BackboneElement, id String):\r\ndefine function QIExtensions(domainResource DomainResource, id String):\r\ndefine function QIExtension(domainResource DomainResource, id String):\r\ndefine function QIExtensions(element Element, id String):\r\ndefine function QIExtension(element Element, id String):\r\ndefine function QIModifierExtensions(domainResource DomainResource, id String):\r\ndefine function QIModifierExtension(domainResource DomainResource, id String):\r\ndefine function QIModifierExtensions(element BackboneElement, id String):\r\ndefine function QIModifierExtension(element BackboneElement, id String):\r\n*/\r\n&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;\n            &lt;/table&gt;\n          &lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        \n        \n        \n        &lt;tr&gt;\n          &lt;td colspan=\&quot;2\&quot;&gt;\n            &lt;table&gt;\n              &lt;tr&gt;&lt;th&gt;&lt;b&gt;Content: &lt;/b&gt; application/elm+xml&lt;/th&gt;&lt;/tr&gt;\n              &lt;tr&gt;&lt;td&gt;&lt;pre&gt;&lt;code&gt;Encoded data (2084 characters)&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;\n            &lt;/table&gt;\n          &lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n        \n        \n        &lt;tr&gt;\n          &lt;td colspan=\&quot;2\&quot;&gt;\n            &lt;table&gt;\n              &lt;tr&gt;&lt;th&gt;&lt;b&gt;Content: &lt;/b&gt; application/elm+json&lt;/th&gt;&lt;/tr&gt;\n              &lt;tr&gt;&lt;td&gt;&lt;pre&gt;&lt;code&gt;Encoded data (2836 characters)&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;\n            &lt;/table&gt;\n          &lt;/td&gt;\n        &lt;/tr&gt;\n        \n        \n    &lt;/table&gt;\n&lt;/div&gt;&quot;
+  ];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.extension">fhir:DomainResource.extension</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability&quot; ];
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;shareable&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability&quot; ];
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;computable&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability&quot; ];
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;publishable&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 3;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability&quot; ];
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;executable&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 4;
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:Extension.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel&quot; ];
+     <a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:Extension.valueCode</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;structured&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.url">fhir:Library.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://fhir.org/guides/cqf/common/Library/FHIRCommonTests&quot;];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.version">fhir:Library.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;4.0.1&quot;];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.name">fhir:Library.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;FHIRCommonTests&quot;];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.title">fhir:Library.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;FHIR CommonTests&quot;];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.status">fhir:Library.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;active&quot;];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.experimental">fhir:Library.experimental</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:value</a> &quot;true&quot;^^xsd:boolean];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.type">fhir:Library.type</a> [
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://terminology.hl7.org/CodeSystem/library-type&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;logic-library&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.date">fhir:Library.date</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#dateTime">fhir:value</a> &quot;2020-11-29T15:54:22-07:00&quot;^^xsd:dateTime];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.publisher">fhir:Library.publisher</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Alphora&quot;];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.contact">fhir:Library.contact</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">fhir:ContactDetail.telecom</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">fhir:ContactPoint.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;url&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">fhir:ContactPoint.value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;http://alphora.com&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.description">fhir:Library.description</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;This library defines test cases for the FHIRCommon library.&quot;];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.jurisdiction">fhir:Library.jurisdiction</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">fhir:CodeableConcept.coding</a> [
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">fhir:Coding.system</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://unstats.un.org/unsd/methods/m49/m49.htm&quot; ];
+       <a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">fhir:Coding.code</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;001&quot; ]     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.copyright">fhir:Library.copyright</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#markdown">fhir:value</a> &quot;© Alphora 2019+&quot;];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.approvalDate">fhir:Library.approvalDate</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#date">fhir:value</a> &quot;2021-03-12&quot;^^xsd:date];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.lastReviewDate">fhir:Library.lastReviewDate</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#date">fhir:value</a> &quot;2021-03-12&quot;^^xsd:date];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.topic">fhir:Library.topic</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:CodeableConcept.text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;FHIR&quot; ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">fhir:CodeableConcept.text</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;CQL&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.relatedArtifact">fhir:Library.relatedArtifact</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">fhir:RelatedArtifact.type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;depends-on&quot; ];
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">fhir:RelatedArtifact.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;FHIR model information&quot; ];
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">fhir:RelatedArtifact.resource</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cqf/common/Library/FHIR-ModelInfo|4.0.1&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cqf/common/Library/FHIR-ModelInfo|4.0.1&gt;     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">fhir:RelatedArtifact.type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;depends-on&quot; ];
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">fhir:RelatedArtifact.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Library FHIRHelpers&quot; ];
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">fhir:RelatedArtifact.resource</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1&gt;     ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.type">fhir:RelatedArtifact.type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;depends-on&quot; ];
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.display">fhir:RelatedArtifact.display</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;Library FHIRCommon&quot; ];
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact#RelatedArtifact.resource">fhir:RelatedArtifact.resource</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://fhir.org/guides/cqf/common/Library/FHIRCommon|4.0.1&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://fhir.org/guides/cqf/common/Library/FHIRCommon|4.0.1&gt;     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.parameter">fhir:Library.parameter</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.name">fhir:ParameterDefinition.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;Patient&quot; ];
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.use">fhir:ParameterDefinition.use</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;out&quot; ];
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.min">fhir:ParameterDefinition.min</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#integer">fhir:value</a> &quot;0&quot;^^xsd:integer ];
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.max">fhir:ParameterDefinition.max</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;1&quot; ];
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#ParameterDefinition#ParameterDefinition.type">fhir:ParameterDefinition.type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;Patient&quot; ]
+  ];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.dataRequirement">fhir:Library.dataRequirement</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.type">fhir:DataRequirement.type</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;Patient&quot; ];
+     <a href="http://hl7.org/fhir/R4/metadatatypes.html#DataRequirement#DataRequirement.profile">fhir:DataRequirement.profile</a> [
+       <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">fhir:value</a> &quot;http://hl7.org/fhir/StructureDefinition/Patient&quot;;
+       <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+       <a href="http://hl7.org/fhir/R4/rdf.html#reference">fhir:link</a> &lt;http://hl7.org/fhir/StructureDefinition/Patient&gt;     ]
+  ];
+  <a href="http://hl7.org/fhir/R4/library.html#Library.content">fhir:Library.content</a> [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 0;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">fhir:Attachment.contentType</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;text/cql&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.data">fhir:Attachment.data</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#base64Binary">fhir:value</a> &quot;bGlicmFyeSBGSElSQ29tbW9uVGVzdHMNCg0KdXNpbmcgRkhJUiB2ZXJzaW9uICc0LjAuMScNCg0KaW5jbHVkZSBGSElSSGVscGVycyB2ZXJzaW9uICc0LjAuMScNCmluY2x1ZGUgRkhJUkNvbW1vbiB2ZXJzaW9uICc0LjAuMScNCg0KY29udGV4dCBQYXRpZW50DQoNCi8qDQpkZWZpbmUgZnVuY3Rpb24gVG9JbnRlcnZhbChjaG9pY2UgQ2hvaWNlPEZISVIuZGF0ZVRpbWUsIEZISVIuUGVyaW9kLCBGSElSLlRpbWluZywgRkhJUi5pbnN0YW50LCBGSElSLnN0cmluZywgRkhJUi5BZ2UsIEZISVIuUmFuZ2U+KToNCmRlZmluZSBmdW5jdGlvbiBUb0FiYXRlbWVudEludGVydmFsKGNvbmRpdGlvbiBDb25kaXRpb24pOg0KZGVmaW5lIGZ1bmN0aW9uIFRvUHJldmFsZW5jZUludGVydmFsKGNvbmRpdGlvbiBDb25kaXRpb24pOg0KZGVmaW5lIGZ1bmN0aW9uIEV4dGVuc2lvbnMoZG9tYWluUmVzb3VyY2UgRG9tYWluUmVzb3VyY2UsIHVybCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIEV4dGVuc2lvbihkb21haW5SZXNvdXJjZSBEb21haW5SZXNvdXJjZSwgdXJsIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gRXh0ZW5zaW9ucyhlbGVtZW50IEVsZW1lbnQsIHVybCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIEV4dGVuc2lvbihlbGVtZW50IEVsZW1lbnQsIHVybCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIE1vZGlmaWVyRXh0ZW5zaW9ucyhkb21haW5SZXNvdXJjZSBEb21haW5SZXNvdXJjZSwgdXJsIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gTW9kaWZpZXJFeHRlbnNpb24oZG9tYWluUmVzb3VyY2UgRG9tYWluUmVzb3VyY2UsIHVybCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIE1vZGlmaWVyRXh0ZW5zaW9ucyhlbGVtZW50IEJhY2tib25lRWxlbWVudCwgdXJsIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gTW9kaWZpZXJFeHRlbnNpb24oZWxlbWVudCBCYWNrYm9uZUVsZW1lbnQsIHVybCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIEJhc2VFeHRlbnNpb25zKGRvbWFpblJlc291cmNlIERvbWFpblJlc291cmNlLCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIEJhc2VFeHRlbnNpb24oZG9tYWluUmVzb3VyY2UgRG9tYWluUmVzb3VyY2UsIGlkIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gQmFzZUV4dGVuc2lvbnMoZWxlbWVudCBFbGVtZW50LCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIEJhc2VFeHRlbnNpb24oZWxlbWVudCBFbGVtZW50LCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIEJhc2VNb2RpZmllckV4dGVuc2lvbnMoZG9tYWluUmVzb3VyY2UgRG9tYWluUmVzb3VyY2UsIGlkIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gQmFzZU1vZGlmaWVyRXh0ZW5zaW9uKGRvbWFpblJlc291cmNlIERvbWFpblJlc291cmNlLCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIEJhc2VNb2RpZmllckV4dGVuc2lvbnMoZWxlbWVudCBCYWNrYm9uZUVsZW1lbnQsIGlkIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gQmFzZU1vZGlmaWVyRXh0ZW5zaW9uKGVsZW1lbnQgQmFja2JvbmVFbGVtZW50LCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIFVTRXh0ZW5zaW9ucyhkb21haW5SZXNvdXJjZSBEb21haW5SZXNvdXJjZSwgaWQgU3RyaW5nKToNCmRlZmluZSBmdW5jdGlvbiBVU0V4dGVuc2lvbihkb21haW5SZXNvdXJjZSBEb21haW5SZXNvdXJjZSwgaWQgU3RyaW5nKToNCmRlZmluZSBmdW5jdGlvbiBVU0V4dGVuc2lvbnMoZWxlbWVudCBFbGVtZW50LCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIFVTRXh0ZW5zaW9uKGVsZW1lbnQgRWxlbWVudCwgaWQgU3RyaW5nKToNCmRlZmluZSBmdW5jdGlvbiBVU01vZGlmaWVyRXh0ZW5zaW9ucyhkb21haW5SZXNvdXJjZSBEb21haW5SZXNvdXJjZSwgaWQgU3RyaW5nKToNCmRlZmluZSBmdW5jdGlvbiBVU01vZGlmaWVyRXh0ZW5zaW9uKGRvbWFpblJlc291cmNlIERvbWFpblJlc291cmNlLCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIFVTTW9kaWZpZXJFeHRlbnNpb25zKGVsZW1lbnQgQmFja2JvbmVFbGVtZW50LCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIFVTTW9kaWZpZXJFeHRlbnNpb24oZWxlbWVudCBCYWNrYm9uZUVsZW1lbnQsIGlkIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gUUlFeHRlbnNpb25zKGRvbWFpblJlc291cmNlIERvbWFpblJlc291cmNlLCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIFFJRXh0ZW5zaW9uKGRvbWFpblJlc291cmNlIERvbWFpblJlc291cmNlLCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIFFJRXh0ZW5zaW9ucyhlbGVtZW50IEVsZW1lbnQsIGlkIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gUUlFeHRlbnNpb24oZWxlbWVudCBFbGVtZW50LCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIFFJTW9kaWZpZXJFeHRlbnNpb25zKGRvbWFpblJlc291cmNlIERvbWFpblJlc291cmNlLCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIFFJTW9kaWZpZXJFeHRlbnNpb24oZG9tYWluUmVzb3VyY2UgRG9tYWluUmVzb3VyY2UsIGlkIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gUUlNb2RpZmllckV4dGVuc2lvbnMoZWxlbWVudCBCYWNrYm9uZUVsZW1lbnQsIGlkIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gUUlNb2RpZmllckV4dGVuc2lvbihlbGVtZW50IEJhY2tib25lRWxlbWVudCwgaWQgU3RyaW5nKToNCiovDQo=&quot;^^xsd:base64Binary ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 1;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">fhir:Attachment.contentType</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;application/elm+xml&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.data">fhir:Attachment.data</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#base64Binary">fhir:value</a> &quot;PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxsaWJyYXJ5IHhtbG5zPSJ1cm46aGw3LW9yZzplbG06cjEiIHhtbG5zOnQ9InVybjpobDctb3JnOmVsbS10eXBlczpyMSIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM6eHNkPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM6Zmhpcj0iaHR0cDovL2hsNy5vcmcvZmhpciIgeG1sbnM6cWRtNDM9InVybjpoZWFsdGhpdC1nb3Y6cWRtOnY0XzMiIHhtbG5zOnFkbTUzPSJ1cm46aGVhbHRoaXQtZ292OnFkbTp2NV8zIiB4bWxuczphPSJ1cm46aGw3LW9yZzpjcWwtYW5ub3RhdGlvbnM6cjEiPg0KICAgPGFubm90YXRpb24gdHJhbnNsYXRvclZlcnNpb249IjEuMyIgdHJhbnNsYXRvck9wdGlvbnM9IkVuYWJsZUxvY2F0b3JzLERpc2FibGVMaXN0RGVtb3Rpb24sRGlzYWJsZUxpc3RQcm9tb3Rpb24iIHhzaTp0eXBlPSJhOkNxbFRvRWxtSW5mbyIvPg0KICAgPGlkZW50aWZpZXIgaWQ9IkZISVJDb21tb25UZXN0cyIgc3lzdGVtPSJodHRwOi8vZmhpci5vcmcvZ3VpZGVzL2NxZi9jb21tb24iLz4NCiAgIDxzY2hlbWFJZGVudGlmaWVyIGlkPSJ1cm46aGw3LW9yZzplbG0iIHZlcnNpb249InIxIi8+DQogICA8dXNpbmdzPg0KICAgICAgPGRlZiBsb2NhbElkZW50aWZpZXI9IlN5c3RlbSIgdXJpPSJ1cm46aGw3LW9yZzplbG0tdHlwZXM6cjEiLz4NCiAgICAgIDxkZWYgbG9jYXRvcj0iMzoxLTM6MjYiIGxvY2FsSWRlbnRpZmllcj0iRkhJUiIgdXJpPSJodHRwOi8vaGw3Lm9yZy9maGlyIiB2ZXJzaW9uPSI0LjAuMSIvPg0KICAgPC91c2luZ3M+DQogICA8aW5jbHVkZXM+DQogICAgICA8ZGVmIGxvY2F0b3I9IjU6MS01OjM1IiBsb2NhbElkZW50aWZpZXI9IkZISVJIZWxwZXJzIiBwYXRoPSJodHRwOi8vZmhpci5vcmcvZ3VpZGVzL2NxZi9jb21tb24vRkhJUkhlbHBlcnMiIHZlcnNpb249IjQuMC4xIi8+DQogICAgICA8ZGVmIGxvY2F0b3I9IjY6MS02OjM0IiBsb2NhbElkZW50aWZpZXI9IkZISVJDb21tb24iIHBhdGg9Imh0dHA6Ly9maGlyLm9yZy9ndWlkZXMvY3FmL2NvbW1vbi9GSElSQ29tbW9uIiB2ZXJzaW9uPSI0LjAuMSIvPg0KICAgPC9pbmNsdWRlcz4NCiAgIDxjb250ZXh0cz4NCiAgICAgIDxkZWYgbG9jYXRvcj0iODoxLTg6MTUiIG5hbWU9IlBhdGllbnQiLz4NCiAgIDwvY29udGV4dHM+DQogICA8c3RhdGVtZW50cz4NCiAgICAgIDxkZWYgbG9jYXRvcj0iODoxLTg6MTUiIG5hbWU9IlBhdGllbnQiIGNvbnRleHQ9IlBhdGllbnQiPg0KICAgICAgICAgPGV4cHJlc3Npb24geHNpOnR5cGU9IlNpbmdsZXRvbkZyb20iPg0KICAgICAgICAgICAgPG9wZXJhbmQgbG9jYXRvcj0iODoxLTg6MTUiIGRhdGFUeXBlPSJmaGlyOlBhdGllbnQiIHRlbXBsYXRlSWQ9Imh0dHA6Ly9obDcub3JnL2ZoaXIvU3RydWN0dXJlRGVmaW5pdGlvbi9QYXRpZW50IiB4c2k6dHlwZT0iUmV0cmlldmUiLz4NCiAgICAgICAgIDwvZXhwcmVzc2lvbj4NCiAgICAgIDwvZGVmPg0KICAgPC9zdGF0ZW1lbnRzPg0KPC9saWJyYXJ5Pg0K&quot;^^xsd:base64Binary ]
+  ], [
+     <a href="http://hl7.org/fhir/R4/rdf.html#index">fhir:index</a> 2;
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.contentType">fhir:Attachment.contentType</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;application/elm+json&quot; ];
+     <a href="http://hl7.org/fhir/R4/datatypes.html#Attachment#Attachment.data">fhir:Attachment.data</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#base64Binary">fhir:value</a> &quot;ew0KICAibGlicmFyeSIgOiB7DQogICAgInR5cGUiIDogIkxpYnJhcnkiLA0KICAgICJpZGVudGlmaWVyIiA6IHsNCiAgICAgICJ0eXBlIiA6ICJWZXJzaW9uZWRJZGVudGlmaWVyIiwNCiAgICAgICJpZCIgOiAiRkhJUkNvbW1vblRlc3RzIiwNCiAgICAgICJzeXN0ZW0iIDogImh0dHA6Ly9maGlyLm9yZy9ndWlkZXMvY3FmL2NvbW1vbiINCiAgICB9LA0KICAgICJzY2hlbWFJZGVudGlmaWVyIiA6IHsNCiAgICAgICJ0eXBlIiA6ICJWZXJzaW9uZWRJZGVudGlmaWVyIiwNCiAgICAgICJpZCIgOiAidXJuOmhsNy1vcmc6ZWxtIiwNCiAgICAgICJ2ZXJzaW9uIiA6ICJyMSINCiAgICB9LA0KICAgICJ1c2luZ3MiIDogew0KICAgICAgInR5cGUiIDogIkxpYnJhcnkkVXNpbmdzIiwNCiAgICAgICJkZWYiIDogWyB7DQogICAgICAgICJ0eXBlIiA6ICJVc2luZ0RlZiIsDQogICAgICAgICJsb2NhbElkZW50aWZpZXIiIDogIlN5c3RlbSIsDQogICAgICAgICJ1cmkiIDogInVybjpobDctb3JnOmVsbS10eXBlczpyMSINCiAgICAgIH0sIHsNCiAgICAgICAgInR5cGUiIDogIlVzaW5nRGVmIiwNCiAgICAgICAgImxvY2F0b3IiIDogIjM6MS0zOjI2IiwNCiAgICAgICAgImxvY2FsSWRlbnRpZmllciIgOiAiRkhJUiIsDQogICAgICAgICJ1cmkiIDogImh0dHA6Ly9obDcub3JnL2ZoaXIiLA0KICAgICAgICAidmVyc2lvbiIgOiAiNC4wLjEiDQogICAgICB9IF0NCiAgICB9LA0KICAgICJpbmNsdWRlcyIgOiB7DQogICAgICAidHlwZSIgOiAiTGlicmFyeSRJbmNsdWRlcyIsDQogICAgICAiZGVmIiA6IFsgew0KICAgICAgICAidHlwZSIgOiAiSW5jbHVkZURlZiIsDQogICAgICAgICJsb2NhdG9yIiA6ICI1OjEtNTozNSIsDQogICAgICAgICJsb2NhbElkZW50aWZpZXIiIDogIkZISVJIZWxwZXJzIiwNCiAgICAgICAgInBhdGgiIDogImh0dHA6Ly9maGlyLm9yZy9ndWlkZXMvY3FmL2NvbW1vbi9GSElSSGVscGVycyIsDQogICAgICAgICJ2ZXJzaW9uIiA6ICI0LjAuMSINCiAgICAgIH0sIHsNCiAgICAgICAgInR5cGUiIDogIkluY2x1ZGVEZWYiLA0KICAgICAgICAibG9jYXRvciIgOiAiNjoxLTY6MzQiLA0KICAgICAgICAibG9jYWxJZGVudGlmaWVyIiA6ICJGSElSQ29tbW9uIiwNCiAgICAgICAgInBhdGgiIDogImh0dHA6Ly9maGlyLm9yZy9ndWlkZXMvY3FmL2NvbW1vbi9GSElSQ29tbW9uIiwNCiAgICAgICAgInZlcnNpb24iIDogIjQuMC4xIg0KICAgICAgfSBdDQogICAgfSwNCiAgICAiY29udGV4dHMiIDogew0KICAgICAgInR5cGUiIDogIkxpYnJhcnkkQ29udGV4dHMiLA0KICAgICAgImRlZiIgOiBbIHsNCiAgICAgICAgInR5cGUiIDogIkNvbnRleHREZWYiLA0KICAgICAgICAibG9jYXRvciIgOiAiODoxLTg6MTUiLA0KICAgICAgICAibmFtZSIgOiAiUGF0aWVudCINCiAgICAgIH0gXQ0KICAgIH0sDQogICAgInN0YXRlbWVudHMiIDogew0KICAgICAgInR5cGUiIDogIkxpYnJhcnkkU3RhdGVtZW50cyIsDQogICAgICAiZGVmIiA6IFsgew0KICAgICAgICAidHlwZSIgOiAiRXhwcmVzc2lvbkRlZiIsDQogICAgICAgICJleHByZXNzaW9uIiA6IHsNCiAgICAgICAgICAidHlwZSIgOiAiU2luZ2xldG9uRnJvbSIsDQogICAgICAgICAgIm9wZXJhbmQiIDogew0KICAgICAgICAgICAgInR5cGUiIDogIlJldHJpZXZlIiwNCiAgICAgICAgICAgICJsb2NhdG9yIiA6ICI4OjEtODoxNSIsDQogICAgICAgICAgICAiZGF0YVR5cGUiIDogIntodHRwOi8vaGw3Lm9yZy9maGlyfVBhdGllbnQiLA0KICAgICAgICAgICAgInRlbXBsYXRlSWQiIDogImh0dHA6Ly9obDcub3JnL2ZoaXIvU3RydWN0dXJlRGVmaW5pdGlvbi9QYXRpZW50Ig0KICAgICAgICAgIH0NCiAgICAgICAgfSwNCiAgICAgICAgImxvY2F0b3IiIDogIjg6MS04OjE1IiwNCiAgICAgICAgIm5hbWUiIDogIlBhdGllbnQiLA0KICAgICAgICAiY29udGV4dCIgOiAiUGF0aWVudCINCiAgICAgIH0gXQ0KICAgIH0sDQogICAgImFubm90YXRpb24iIDogWyB7DQogICAgICAidHJhbnNsYXRvclZlcnNpb24iIDogIjEuMyIsDQogICAgICAidHJhbnNsYXRvck9wdGlvbnMiIDogIkVuYWJsZUxvY2F0b3JzLERpc2FibGVMaXN0RGVtb3Rpb24sRGlzYWJsZUxpc3RQcm9tb3Rpb24iDQogICAgfSBdDQogIH0NCn0=&quot;^^xsd:base64Binary ]
+  ].
+
+# - ontology header ------------------------------------------------------------
+
+ a owl:Ontology;
+  owl:imports fhir:fhir.ttl.
+
+</code></pre>
+
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="http://alphora.com">Alphora</a>.  Package fhir.cqf.common#4.0.1 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Nov 12, 2021 16:25+1100">2021-11-12</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)"></span>
+            Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="license.html">License</a> |
+       <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+        | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/cqframework/cqf/issues/new">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/cqframework/cqf/issues">Issues</a>
+
+       | <a style="color: #81BEF7" target="_blank" href="http://fhir.org/guides/cqf/common/history.html">Version History <img alt="external" style="vertical-align: baseline" src="external.png"/></a></a> |
+       <!--<a style="color: #81BEF7" href="todo.html">Search</a> | -->
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+  
+    
+  
+
+
+  
+    
+  
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

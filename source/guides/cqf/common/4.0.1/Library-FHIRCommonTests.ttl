@@ -1,0 +1,159 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.org/guides/cqf/common/Library/FHIRCommonTests> a fhir:Library;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "FHIRCommonTests"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablelibrary";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-shareablelibrary>
+     ], [
+       fhir:value "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary";
+       fhir:index 1;
+       fhir:link <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablelibrary>
+     ], [
+       fhir:value "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablelibrary";
+       fhir:index 2;
+       fhir:link <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-publishablelibrary>
+     ], [
+       fhir:value "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary";
+       fhir:index 3;
+       fhir:link <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablelibrary>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <table class=\"grid dict\">\n        \n        <tr>\n            <th scope=\"row\"><b>Id: </b></th>\n            <td style=\"padding-left: 4px;\">FHIRCommonTests</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Url: </b></th>\n            <td style=\"padding-left: 4px;\">http://fhir.org/guides/cqf/common/Library/FHIRCommonTests</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Version: </b></th>\n            <td style=\"padding-left: 4px;\">4.0.1</td>\n        </tr>\n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Name: </b></th>\n            <td style=\"padding-left: 4px;\">FHIRCommonTests</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Title: </b></th>\n            <td style=\"padding-left: 4px;\">FHIR CommonTests</td>\n        </tr>\n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Status: </b></th>\n            <td style=\"padding-left: 4px;\">active</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Experimental: </b></th>\n            <td style=\"padding-left: 4px;\">true</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Type: </b></th>\n            <td style=\"padding-left: 4px;\">\n                \n                    \n                        \n                        <p style=\"margin-bottom: 5px;\">\n                            <b>system: </b> <span>http://terminology.hl7.org/CodeSystem/library-type</span>\n                        </p>\n                        \n                        \n                        <p style=\"margin-bottom: 5px;\">\n                            <b>code: </b> <span>logic-library</span>\n                        </p>\n                        \n                        \n                    \n                \n                \n            </td>\n        </tr>\n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Date: </b></th>\n            <td style=\"padding-left: 4px;\">2020-11-29T15:54:22-07:00</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Publisher: </b></th>\n            <td style=\"padding-left: 4px;\">Alphora</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Description: </b></th>\n            <td style=\"padding-left: 4px;\">This library defines test cases for the FHIRCommon library.</td>\n        </tr>\n        \n        \n        <tr>\n          <th scope=\"row\"><b>Knowledge Capability: </b></th>\n          <td style=\"padding-left: 4px;\">\n            shareable computable publishable executable \n          </td>\n        </tr>\n        \n        \n        <tr>\n          <th scope=\"row\"><b>Knowledge Representation Level: </b></th>\n          <td style=\"padding-left: 4px;\">\n            structured\n          </td>\n        </tr>\n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Jurisdiction: </b></th>\n            <td style=\"padding-left: 4px;\">001</td>\n        </tr>\n        \n        \n        \n        \n        <tr>\n            <th scope=\"row\"><b>Copyright: </b></th>\n            <td style=\"padding-left: 4px;\">&copy; Alphora 2019+</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Approval Date: </b></th>\n            <td style=\"padding-left: 4px;\">2021-03-12</td>\n        </tr>\n        \n        \n        <tr>\n            <th scope=\"row\"><b>Last Review Date: </b></th>\n            <td style=\"padding-left: 4px;\">2021-03-12</td>\n        </tr>\n        \n        \n        \n        <tr>\n          <th scope=\"row\"><b>Related Artifacts: </b></th>\n          <td style=\"padding-left: 4px;\">\n            \n            \n            \n            <p><b>Dependencies</b></p>\n            <ul>\n              \n                <li>http://fhir.org/guides/cqf/common/Library/FHIR-ModelInfo|4.0.1</li>\n              \n                <li>http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1</li>\n              \n                <li>http://fhir.org/guides/cqf/common/Library/FHIRCommon|4.0.1</li>\n              \n            </ul>\n            \n            \n            \n            \n            \n          </td>\n        </tr>\n        \n        \n        <tr>\n          <th scope=\"row\"><b>Parameters: </b></th>\n          <td style=\"padding-left: 4px;\">\n            <table class=\"grid-dict\">\n              <tr><th><b>Name</b></th><th><b>Type</b></th><th><b>Min</b></th><th><b>Max</b></th><th><b>In/Out</b></th></tr>\n              \n                <tr><th>Patient</th><th>Patient</th><th>0</th><th>1</th><th>out</th></tr>\n              \n            </table>\n          </td>\n        </tr>\n        \n        \n        <tr>\n          <th scope=\"row\"><b>Data Requirements:</b></th>\n          <td style=\"padding-left: 4px;\">\n            <table class=\"grid-dict\">\n              <tr><th><b>Type</b></th><th><b>Profile</b></th><th><b>MS</b></th><th><b>Code Filter</b></th></tr>\n              \n                <tr>\n                  <th>Patient</th>\n                  <th>http://hl7.org/fhir/StructureDefinition/Patient</th>\n                  <th></th>\n                  <th>\n                    \n                  </th>\n                </tr>\n              \n            </table>\n          </td>\n        </tr>\n        \n        \n        \n        <tr>\n          <td colspan=\"2\">\n            <table>\n              <tr><th><a id=\"cql-content\"><b>Content: </b></a> text/cql</th></tr>\n              <tr><td><pre><code class=\"language-cql\">library FHIRCommonTests\r\n\r\nusing FHIR version '4.0.1'\r\n\r\ninclude FHIRHelpers version '4.0.1'\r\ninclude FHIRCommon version '4.0.1'\r\n\r\ncontext Patient\r\n\r\n/*\r\ndefine function ToInterval(choice Choice&lt;FHIR.dateTime, FHIR.Period, FHIR.Timing, FHIR.instant, FHIR.string, FHIR.Age, FHIR.Range&gt;):\r\ndefine function ToAbatementInterval(condition Condition):\r\ndefine function ToPrevalenceInterval(condition Condition):\r\ndefine function Extensions(domainResource DomainResource, url String):\r\ndefine function Extension(domainResource DomainResource, url String):\r\ndefine function Extensions(element Element, url String):\r\ndefine function Extension(element Element, url String):\r\ndefine function ModifierExtensions(domainResource DomainResource, url String):\r\ndefine function ModifierExtension(domainResource DomainResource, url String):\r\ndefine function ModifierExtensions(element BackboneElement, url String):\r\ndefine function ModifierExtension(element BackboneElement, url String):\r\ndefine function BaseExtensions(domainResource DomainResource, id String):\r\ndefine function BaseExtension(domainResource DomainResource, id String):\r\ndefine function BaseExtensions(element Element, id String):\r\ndefine function BaseExtension(element Element, id String):\r\ndefine function BaseModifierExtensions(domainResource DomainResource, id String):\r\ndefine function BaseModifierExtension(domainResource DomainResource, id String):\r\ndefine function BaseModifierExtensions(element BackboneElement, id String):\r\ndefine function BaseModifierExtension(element BackboneElement, id String):\r\ndefine function USExtensions(domainResource DomainResource, id String):\r\ndefine function USExtension(domainResource DomainResource, id String):\r\ndefine function USExtensions(element Element, id String):\r\ndefine function USExtension(element Element, id String):\r\ndefine function USModifierExtensions(domainResource DomainResource, id String):\r\ndefine function USModifierExtension(domainResource DomainResource, id String):\r\ndefine function USModifierExtensions(element BackboneElement, id String):\r\ndefine function USModifierExtension(element BackboneElement, id String):\r\ndefine function QIExtensions(domainResource DomainResource, id String):\r\ndefine function QIExtension(domainResource DomainResource, id String):\r\ndefine function QIExtensions(element Element, id String):\r\ndefine function QIExtension(element Element, id String):\r\ndefine function QIModifierExtensions(domainResource DomainResource, id String):\r\ndefine function QIModifierExtension(domainResource DomainResource, id String):\r\ndefine function QIModifierExtensions(element BackboneElement, id String):\r\ndefine function QIModifierExtension(element BackboneElement, id String):\r\n*/\r\n</code></pre></td></tr>\n            </table>\n          </td>\n        </tr>\n        \n        \n        \n        \n        \n        <tr>\n          <td colspan=\"2\">\n            <table>\n              <tr><th><b>Content: </b> application/elm+xml</th></tr>\n              <tr><td><pre><code>Encoded data (2084 characters)</code></pre></td></tr>\n            </table>\n          </td>\n        </tr>\n        \n        \n        \n        \n        <tr>\n          <td colspan=\"2\">\n            <table>\n              <tr><th><b>Content: </b> application/elm+json</th></tr>\n              <tr><td><pre><code>Encoded data (2836 characters)</code></pre></td></tr>\n            </table>\n          </td>\n        </tr>\n        \n        \n    </table>\n</div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability" ];
+     fhir:Extension.valueCode [ fhir:value "shareable" ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability" ];
+     fhir:Extension.valueCode [ fhir:value "computable" ]
+  ], [
+     fhir:index 2;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability" ];
+     fhir:Extension.valueCode [ fhir:value "publishable" ]
+  ], [
+     fhir:index 3;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability" ];
+     fhir:Extension.valueCode [ fhir:value "executable" ]
+  ], [
+     fhir:index 4;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel" ];
+     fhir:Extension.valueCode [ fhir:value "structured" ]
+  ];
+  fhir:Library.url [ fhir:value "http://fhir.org/guides/cqf/common/Library/FHIRCommonTests"];
+  fhir:Library.version [ fhir:value "4.0.1"];
+  fhir:Library.name [ fhir:value "FHIRCommonTests"];
+  fhir:Library.title [ fhir:value "FHIR CommonTests"];
+  fhir:Library.status [ fhir:value "active"];
+  fhir:Library.experimental [ fhir:value "true"^^xsd:boolean];
+  fhir:Library.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/library-type" ];
+       fhir:Coding.code [ fhir:value "logic-library" ]
+     ]
+  ];
+  fhir:Library.date [ fhir:value "2020-11-29T15:54:22-07:00"^^xsd:dateTime];
+  fhir:Library.publisher [ fhir:value "Alphora"];
+  fhir:Library.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://alphora.com" ]
+     ]
+  ];
+  fhir:Library.description [ fhir:value "This library defines test cases for the FHIRCommon library."];
+  fhir:Library.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://unstats.un.org/unsd/methods/m49/m49.htm" ];
+       fhir:Coding.code [ fhir:value "001" ]
+     ]
+  ];
+  fhir:Library.copyright [ fhir:value "© Alphora 2019+"];
+  fhir:Library.approvalDate [ fhir:value "2021-03-12"^^xsd:date];
+  fhir:Library.lastReviewDate [ fhir:value "2021-03-12"^^xsd:date];
+  fhir:Library.topic [
+     fhir:index 0;
+     fhir:CodeableConcept.text [ fhir:value "FHIR" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeableConcept.text [ fhir:value "CQL" ]
+  ];
+  fhir:Library.relatedArtifact [
+     fhir:index 0;
+     fhir:RelatedArtifact.type [ fhir:value "depends-on" ];
+     fhir:RelatedArtifact.display [ fhir:value "FHIR model information" ];
+     fhir:RelatedArtifact.resource [
+       fhir:value "http://fhir.org/guides/cqf/common/Library/FHIR-ModelInfo|4.0.1";
+       fhir:link <http://fhir.org/guides/cqf/common/Library/FHIR-ModelInfo|4.0.1>
+     ]
+  ], [
+     fhir:index 1;
+     fhir:RelatedArtifact.type [ fhir:value "depends-on" ];
+     fhir:RelatedArtifact.display [ fhir:value "Library FHIRHelpers" ];
+     fhir:RelatedArtifact.resource [
+       fhir:value "http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1";
+       fhir:link <http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1>
+     ]
+  ], [
+     fhir:index 2;
+     fhir:RelatedArtifact.type [ fhir:value "depends-on" ];
+     fhir:RelatedArtifact.display [ fhir:value "Library FHIRCommon" ];
+     fhir:RelatedArtifact.resource [
+       fhir:value "http://fhir.org/guides/cqf/common/Library/FHIRCommon|4.0.1";
+       fhir:link <http://fhir.org/guides/cqf/common/Library/FHIRCommon|4.0.1>
+     ]
+  ];
+  fhir:Library.parameter [
+     fhir:index 0;
+     fhir:ParameterDefinition.name [ fhir:value "Patient" ];
+     fhir:ParameterDefinition.use [ fhir:value "out" ];
+     fhir:ParameterDefinition.min [ fhir:value "0"^^xsd:integer ];
+     fhir:ParameterDefinition.max [ fhir:value "1" ];
+     fhir:ParameterDefinition.type [ fhir:value "Patient" ]
+  ];
+  fhir:Library.dataRequirement [
+     fhir:index 0;
+     fhir:DataRequirement.type [ fhir:value "Patient" ];
+     fhir:DataRequirement.profile [
+       fhir:value "http://hl7.org/fhir/StructureDefinition/Patient";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
+     ]
+  ];
+  fhir:Library.content [
+     fhir:index 0;
+     fhir:Attachment.contentType [ fhir:value "text/cql" ];
+     fhir:Attachment.data [ fhir:value "bGlicmFyeSBGSElSQ29tbW9uVGVzdHMNCg0KdXNpbmcgRkhJUiB2ZXJzaW9uICc0LjAuMScNCg0KaW5jbHVkZSBGSElSSGVscGVycyB2ZXJzaW9uICc0LjAuMScNCmluY2x1ZGUgRkhJUkNvbW1vbiB2ZXJzaW9uICc0LjAuMScNCg0KY29udGV4dCBQYXRpZW50DQoNCi8qDQpkZWZpbmUgZnVuY3Rpb24gVG9JbnRlcnZhbChjaG9pY2UgQ2hvaWNlPEZISVIuZGF0ZVRpbWUsIEZISVIuUGVyaW9kLCBGSElSLlRpbWluZywgRkhJUi5pbnN0YW50LCBGSElSLnN0cmluZywgRkhJUi5BZ2UsIEZISVIuUmFuZ2U+KToNCmRlZmluZSBmdW5jdGlvbiBUb0FiYXRlbWVudEludGVydmFsKGNvbmRpdGlvbiBDb25kaXRpb24pOg0KZGVmaW5lIGZ1bmN0aW9uIFRvUHJldmFsZW5jZUludGVydmFsKGNvbmRpdGlvbiBDb25kaXRpb24pOg0KZGVmaW5lIGZ1bmN0aW9uIEV4dGVuc2lvbnMoZG9tYWluUmVzb3VyY2UgRG9tYWluUmVzb3VyY2UsIHVybCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIEV4dGVuc2lvbihkb21haW5SZXNvdXJjZSBEb21haW5SZXNvdXJjZSwgdXJsIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gRXh0ZW5zaW9ucyhlbGVtZW50IEVsZW1lbnQsIHVybCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIEV4dGVuc2lvbihlbGVtZW50IEVsZW1lbnQsIHVybCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIE1vZGlmaWVyRXh0ZW5zaW9ucyhkb21haW5SZXNvdXJjZSBEb21haW5SZXNvdXJjZSwgdXJsIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gTW9kaWZpZXJFeHRlbnNpb24oZG9tYWluUmVzb3VyY2UgRG9tYWluUmVzb3VyY2UsIHVybCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIE1vZGlmaWVyRXh0ZW5zaW9ucyhlbGVtZW50IEJhY2tib25lRWxlbWVudCwgdXJsIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gTW9kaWZpZXJFeHRlbnNpb24oZWxlbWVudCBCYWNrYm9uZUVsZW1lbnQsIHVybCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIEJhc2VFeHRlbnNpb25zKGRvbWFpblJlc291cmNlIERvbWFpblJlc291cmNlLCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIEJhc2VFeHRlbnNpb24oZG9tYWluUmVzb3VyY2UgRG9tYWluUmVzb3VyY2UsIGlkIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gQmFzZUV4dGVuc2lvbnMoZWxlbWVudCBFbGVtZW50LCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIEJhc2VFeHRlbnNpb24oZWxlbWVudCBFbGVtZW50LCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIEJhc2VNb2RpZmllckV4dGVuc2lvbnMoZG9tYWluUmVzb3VyY2UgRG9tYWluUmVzb3VyY2UsIGlkIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gQmFzZU1vZGlmaWVyRXh0ZW5zaW9uKGRvbWFpblJlc291cmNlIERvbWFpblJlc291cmNlLCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIEJhc2VNb2RpZmllckV4dGVuc2lvbnMoZWxlbWVudCBCYWNrYm9uZUVsZW1lbnQsIGlkIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gQmFzZU1vZGlmaWVyRXh0ZW5zaW9uKGVsZW1lbnQgQmFja2JvbmVFbGVtZW50LCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIFVTRXh0ZW5zaW9ucyhkb21haW5SZXNvdXJjZSBEb21haW5SZXNvdXJjZSwgaWQgU3RyaW5nKToNCmRlZmluZSBmdW5jdGlvbiBVU0V4dGVuc2lvbihkb21haW5SZXNvdXJjZSBEb21haW5SZXNvdXJjZSwgaWQgU3RyaW5nKToNCmRlZmluZSBmdW5jdGlvbiBVU0V4dGVuc2lvbnMoZWxlbWVudCBFbGVtZW50LCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIFVTRXh0ZW5zaW9uKGVsZW1lbnQgRWxlbWVudCwgaWQgU3RyaW5nKToNCmRlZmluZSBmdW5jdGlvbiBVU01vZGlmaWVyRXh0ZW5zaW9ucyhkb21haW5SZXNvdXJjZSBEb21haW5SZXNvdXJjZSwgaWQgU3RyaW5nKToNCmRlZmluZSBmdW5jdGlvbiBVU01vZGlmaWVyRXh0ZW5zaW9uKGRvbWFpblJlc291cmNlIERvbWFpblJlc291cmNlLCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIFVTTW9kaWZpZXJFeHRlbnNpb25zKGVsZW1lbnQgQmFja2JvbmVFbGVtZW50LCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIFVTTW9kaWZpZXJFeHRlbnNpb24oZWxlbWVudCBCYWNrYm9uZUVsZW1lbnQsIGlkIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gUUlFeHRlbnNpb25zKGRvbWFpblJlc291cmNlIERvbWFpblJlc291cmNlLCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIFFJRXh0ZW5zaW9uKGRvbWFpblJlc291cmNlIERvbWFpblJlc291cmNlLCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIFFJRXh0ZW5zaW9ucyhlbGVtZW50IEVsZW1lbnQsIGlkIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gUUlFeHRlbnNpb24oZWxlbWVudCBFbGVtZW50LCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIFFJTW9kaWZpZXJFeHRlbnNpb25zKGRvbWFpblJlc291cmNlIERvbWFpblJlc291cmNlLCBpZCBTdHJpbmcpOg0KZGVmaW5lIGZ1bmN0aW9uIFFJTW9kaWZpZXJFeHRlbnNpb24oZG9tYWluUmVzb3VyY2UgRG9tYWluUmVzb3VyY2UsIGlkIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gUUlNb2RpZmllckV4dGVuc2lvbnMoZWxlbWVudCBCYWNrYm9uZUVsZW1lbnQsIGlkIFN0cmluZyk6DQpkZWZpbmUgZnVuY3Rpb24gUUlNb2RpZmllckV4dGVuc2lvbihlbGVtZW50IEJhY2tib25lRWxlbWVudCwgaWQgU3RyaW5nKToNCiovDQo="^^xsd:base64Binary ]
+  ], [
+     fhir:index 1;
+     fhir:Attachment.contentType [ fhir:value "application/elm+xml" ];
+     fhir:Attachment.data [ fhir:value "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjxsaWJyYXJ5IHhtbG5zPSJ1cm46aGw3LW9yZzplbG06cjEiIHhtbG5zOnQ9InVybjpobDctb3JnOmVsbS10eXBlczpyMSIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeG1sbnM6eHNkPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYSIgeG1sbnM6Zmhpcj0iaHR0cDovL2hsNy5vcmcvZmhpciIgeG1sbnM6cWRtNDM9InVybjpoZWFsdGhpdC1nb3Y6cWRtOnY0XzMiIHhtbG5zOnFkbTUzPSJ1cm46aGVhbHRoaXQtZ292OnFkbTp2NV8zIiB4bWxuczphPSJ1cm46aGw3LW9yZzpjcWwtYW5ub3RhdGlvbnM6cjEiPg0KICAgPGFubm90YXRpb24gdHJhbnNsYXRvclZlcnNpb249IjEuMyIgdHJhbnNsYXRvck9wdGlvbnM9IkVuYWJsZUxvY2F0b3JzLERpc2FibGVMaXN0RGVtb3Rpb24sRGlzYWJsZUxpc3RQcm9tb3Rpb24iIHhzaTp0eXBlPSJhOkNxbFRvRWxtSW5mbyIvPg0KICAgPGlkZW50aWZpZXIgaWQ9IkZISVJDb21tb25UZXN0cyIgc3lzdGVtPSJodHRwOi8vZmhpci5vcmcvZ3VpZGVzL2NxZi9jb21tb24iLz4NCiAgIDxzY2hlbWFJZGVudGlmaWVyIGlkPSJ1cm46aGw3LW9yZzplbG0iIHZlcnNpb249InIxIi8+DQogICA8dXNpbmdzPg0KICAgICAgPGRlZiBsb2NhbElkZW50aWZpZXI9IlN5c3RlbSIgdXJpPSJ1cm46aGw3LW9yZzplbG0tdHlwZXM6cjEiLz4NCiAgICAgIDxkZWYgbG9jYXRvcj0iMzoxLTM6MjYiIGxvY2FsSWRlbnRpZmllcj0iRkhJUiIgdXJpPSJodHRwOi8vaGw3Lm9yZy9maGlyIiB2ZXJzaW9uPSI0LjAuMSIvPg0KICAgPC91c2luZ3M+DQogICA8aW5jbHVkZXM+DQogICAgICA8ZGVmIGxvY2F0b3I9IjU6MS01OjM1IiBsb2NhbElkZW50aWZpZXI9IkZISVJIZWxwZXJzIiBwYXRoPSJodHRwOi8vZmhpci5vcmcvZ3VpZGVzL2NxZi9jb21tb24vRkhJUkhlbHBlcnMiIHZlcnNpb249IjQuMC4xIi8+DQogICAgICA8ZGVmIGxvY2F0b3I9IjY6MS02OjM0IiBsb2NhbElkZW50aWZpZXI9IkZISVJDb21tb24iIHBhdGg9Imh0dHA6Ly9maGlyLm9yZy9ndWlkZXMvY3FmL2NvbW1vbi9GSElSQ29tbW9uIiB2ZXJzaW9uPSI0LjAuMSIvPg0KICAgPC9pbmNsdWRlcz4NCiAgIDxjb250ZXh0cz4NCiAgICAgIDxkZWYgbG9jYXRvcj0iODoxLTg6MTUiIG5hbWU9IlBhdGllbnQiLz4NCiAgIDwvY29udGV4dHM+DQogICA8c3RhdGVtZW50cz4NCiAgICAgIDxkZWYgbG9jYXRvcj0iODoxLTg6MTUiIG5hbWU9IlBhdGllbnQiIGNvbnRleHQ9IlBhdGllbnQiPg0KICAgICAgICAgPGV4cHJlc3Npb24geHNpOnR5cGU9IlNpbmdsZXRvbkZyb20iPg0KICAgICAgICAgICAgPG9wZXJhbmQgbG9jYXRvcj0iODoxLTg6MTUiIGRhdGFUeXBlPSJmaGlyOlBhdGllbnQiIHRlbXBsYXRlSWQ9Imh0dHA6Ly9obDcub3JnL2ZoaXIvU3RydWN0dXJlRGVmaW5pdGlvbi9QYXRpZW50IiB4c2k6dHlwZT0iUmV0cmlldmUiLz4NCiAgICAgICAgIDwvZXhwcmVzc2lvbj4NCiAgICAgIDwvZGVmPg0KICAgPC9zdGF0ZW1lbnRzPg0KPC9saWJyYXJ5Pg0K"^^xsd:base64Binary ]
+  ], [
+     fhir:index 2;
+     fhir:Attachment.contentType [ fhir:value "application/elm+json" ];
+     fhir:Attachment.data [ fhir:value "ew0KICAibGlicmFyeSIgOiB7DQogICAgInR5cGUiIDogIkxpYnJhcnkiLA0KICAgICJpZGVudGlmaWVyIiA6IHsNCiAgICAgICJ0eXBlIiA6ICJWZXJzaW9uZWRJZGVudGlmaWVyIiwNCiAgICAgICJpZCIgOiAiRkhJUkNvbW1vblRlc3RzIiwNCiAgICAgICJzeXN0ZW0iIDogImh0dHA6Ly9maGlyLm9yZy9ndWlkZXMvY3FmL2NvbW1vbiINCiAgICB9LA0KICAgICJzY2hlbWFJZGVudGlmaWVyIiA6IHsNCiAgICAgICJ0eXBlIiA6ICJWZXJzaW9uZWRJZGVudGlmaWVyIiwNCiAgICAgICJpZCIgOiAidXJuOmhsNy1vcmc6ZWxtIiwNCiAgICAgICJ2ZXJzaW9uIiA6ICJyMSINCiAgICB9LA0KICAgICJ1c2luZ3MiIDogew0KICAgICAgInR5cGUiIDogIkxpYnJhcnkkVXNpbmdzIiwNCiAgICAgICJkZWYiIDogWyB7DQogICAgICAgICJ0eXBlIiA6ICJVc2luZ0RlZiIsDQogICAgICAgICJsb2NhbElkZW50aWZpZXIiIDogIlN5c3RlbSIsDQogICAgICAgICJ1cmkiIDogInVybjpobDctb3JnOmVsbS10eXBlczpyMSINCiAgICAgIH0sIHsNCiAgICAgICAgInR5cGUiIDogIlVzaW5nRGVmIiwNCiAgICAgICAgImxvY2F0b3IiIDogIjM6MS0zOjI2IiwNCiAgICAgICAgImxvY2FsSWRlbnRpZmllciIgOiAiRkhJUiIsDQogICAgICAgICJ1cmkiIDogImh0dHA6Ly9obDcub3JnL2ZoaXIiLA0KICAgICAgICAidmVyc2lvbiIgOiAiNC4wLjEiDQogICAgICB9IF0NCiAgICB9LA0KICAgICJpbmNsdWRlcyIgOiB7DQogICAgICAidHlwZSIgOiAiTGlicmFyeSRJbmNsdWRlcyIsDQogICAgICAiZGVmIiA6IFsgew0KICAgICAgICAidHlwZSIgOiAiSW5jbHVkZURlZiIsDQogICAgICAgICJsb2NhdG9yIiA6ICI1OjEtNTozNSIsDQogICAgICAgICJsb2NhbElkZW50aWZpZXIiIDogIkZISVJIZWxwZXJzIiwNCiAgICAgICAgInBhdGgiIDogImh0dHA6Ly9maGlyLm9yZy9ndWlkZXMvY3FmL2NvbW1vbi9GSElSSGVscGVycyIsDQogICAgICAgICJ2ZXJzaW9uIiA6ICI0LjAuMSINCiAgICAgIH0sIHsNCiAgICAgICAgInR5cGUiIDogIkluY2x1ZGVEZWYiLA0KICAgICAgICAibG9jYXRvciIgOiAiNjoxLTY6MzQiLA0KICAgICAgICAibG9jYWxJZGVudGlmaWVyIiA6ICJGSElSQ29tbW9uIiwNCiAgICAgICAgInBhdGgiIDogImh0dHA6Ly9maGlyLm9yZy9ndWlkZXMvY3FmL2NvbW1vbi9GSElSQ29tbW9uIiwNCiAgICAgICAgInZlcnNpb24iIDogIjQuMC4xIg0KICAgICAgfSBdDQogICAgfSwNCiAgICAiY29udGV4dHMiIDogew0KICAgICAgInR5cGUiIDogIkxpYnJhcnkkQ29udGV4dHMiLA0KICAgICAgImRlZiIgOiBbIHsNCiAgICAgICAgInR5cGUiIDogIkNvbnRleHREZWYiLA0KICAgICAgICAibG9jYXRvciIgOiAiODoxLTg6MTUiLA0KICAgICAgICAibmFtZSIgOiAiUGF0aWVudCINCiAgICAgIH0gXQ0KICAgIH0sDQogICAgInN0YXRlbWVudHMiIDogew0KICAgICAgInR5cGUiIDogIkxpYnJhcnkkU3RhdGVtZW50cyIsDQogICAgICAiZGVmIiA6IFsgew0KICAgICAgICAidHlwZSIgOiAiRXhwcmVzc2lvbkRlZiIsDQogICAgICAgICJleHByZXNzaW9uIiA6IHsNCiAgICAgICAgICAidHlwZSIgOiAiU2luZ2xldG9uRnJvbSIsDQogICAgICAgICAgIm9wZXJhbmQiIDogew0KICAgICAgICAgICAgInR5cGUiIDogIlJldHJpZXZlIiwNCiAgICAgICAgICAgICJsb2NhdG9yIiA6ICI4OjEtODoxNSIsDQogICAgICAgICAgICAiZGF0YVR5cGUiIDogIntodHRwOi8vaGw3Lm9yZy9maGlyfVBhdGllbnQiLA0KICAgICAgICAgICAgInRlbXBsYXRlSWQiIDogImh0dHA6Ly9obDcub3JnL2ZoaXIvU3RydWN0dXJlRGVmaW5pdGlvbi9QYXRpZW50Ig0KICAgICAgICAgIH0NCiAgICAgICAgfSwNCiAgICAgICAgImxvY2F0b3IiIDogIjg6MS04OjE1IiwNCiAgICAgICAgIm5hbWUiIDogIlBhdGllbnQiLA0KICAgICAgICAiY29udGV4dCIgOiAiUGF0aWVudCINCiAgICAgIH0gXQ0KICAgIH0sDQogICAgImFubm90YXRpb24iIDogWyB7DQogICAgICAidHJhbnNsYXRvclZlcnNpb24iIDogIjEuMyIsDQogICAgICAidHJhbnNsYXRvck9wdGlvbnMiIDogIkVuYWJsZUxvY2F0b3JzLERpc2FibGVMaXN0RGVtb3Rpb24sRGlzYWJsZUxpc3RQcm9tb3Rpb24iDQogICAgfSBdDQogIH0NCn0="^^xsd:base64Binary ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.org/guides/cqf/common/Library/FHIRCommonTests.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
