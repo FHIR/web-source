@@ -451,6 +451,7 @@ var COUNTRY_NAMES = [
   ['nl', 'Netherlands (Nederland)'],
   ['no', 'Norway (Norge)'],
   ['nz', 'New Zealand'],
+  ['ph', 'Philipines'],
   ['pl', 'Poland (Polska)'],
   ['es', 'Spain (Espana)'],
   ['se', 'Sweden (Sverige)'],
